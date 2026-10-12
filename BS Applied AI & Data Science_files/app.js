@@ -12,6 +12,16 @@ const closeBtn = document.getElementById('closeBtn');
 const pdfBtn = document.getElementById('pdfBtn');
 const themeToggleBtn = document.getElementById('themeToggleBtn');
 
+function getSubjectPrefix(subjectId) {
+  const map = {
+    'itw': 'IWT',
+    'ml2': 'ML2',
+    'oop': 'OOP',
+    'bdm': 'BDM'
+  };
+  return map[subjectId] || (subjectId ? subjectId.toUpperCase() : 'SUB');
+}
+
 function init() {
   initTheme();
   renderSemesters();
@@ -42,7 +52,7 @@ function applyThemeToIframe(iframe) {
       iframe.contentDocument.documentElement.setAttribute('data-theme', currentTheme);
     }
   } catch (e) {
-    // Fallback if cross-origin
+    // Cross-origin fallback
   }
 }
 
@@ -138,6 +148,7 @@ function renderTabs(sem) {
     tab.className = `floating-tab ${s.id === activeSubjectId ? 'active' : ''}`;
     tab.textContent = s.name;
     tab.addEventListener('click', () => {
+      if (activeSubjectId === s.id) return;
       activeSubjectId = s.id;
       floatingTabs.querySelectorAll('.floating-tab').forEach(t => t.classList.remove('active'));
       tab.classList.add('active');
@@ -157,6 +168,7 @@ function renderSubject(subj) {
       btn.className = `week-btn ${idx === 0 ? 'active' : ''}`;
       btn.textContent = `Week 0${w.week}`;
       btn.addEventListener('click', () => {
+        if (currentActiveWeek && currentActiveWeek.week === w.week) return;
         weeksList.querySelectorAll('.week-btn').forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
         renderWeekContent(w);
@@ -164,25 +176,50 @@ function renderSubject(subj) {
       weeksList.appendChild(btn);
     });
 
+    // Render ONLY the first week initially
     renderWeekContent(subj.weeks[0]);
   } else {
     notesTarget.innerHTML = '<div style="padding:2rem;text-align:center;color:var(--text-muted);">No notes available for this subject yet.</div>';
     currentActiveWeek = null;
+    updatePdfButton(null);
+  }
+}
+
+function updatePdfButton(week) {
+  if (!pdfBtn) return;
+  if (week && week.pdfPath) {
+    const prefix = getSubjectPrefix(activeSubjectId);
+    const fileName = `${prefix}_Week${week.week}.pdf`;
+    pdfBtn.textContent = 'pdf ⤓';
+    pdfBtn.title = `Download ${fileName}`;
+    pdfBtn.style.display = 'inline-flex';
+  } else {
+    pdfBtn.style.display = 'none';
   }
 }
 
 function renderWeekContent(week) {
   currentActiveWeek = week;
+  updatePdfButton(week);
+
   if (week.htmlPath) {
+    const prefix = getSubjectPrefix(activeSubjectId);
     notesTarget.innerHTML = `
       <div class="note-viewer-wrapper">
-        <iframe class="notes-frame" id="activeNoteIframe" src="${week.htmlPath}" title="${week.title || 'Notes'}"></iframe>
+        <div class="note-loading-indicator" id="noteLoader">
+          <div class="loader-spinner"></div>
+          <span>Loading ${prefix} Week 0${week.week}...</span>
+        </div>
+        <iframe class="notes-frame" id="activeNoteIframe" src="${week.htmlPath}" title="${week.title || 'Notes'}" style="opacity:0; transition: opacity 0.2s ease;"></iframe>
       </div>
     `;
     const iframe = document.getElementById('activeNoteIframe');
+    const loader = document.getElementById('noteLoader');
     if (iframe) {
       iframe.addEventListener('load', () => {
         applyThemeToIframe(iframe);
+        if (loader) loader.style.display = 'none';
+        iframe.style.opacity = '1';
       });
     }
   } else if (week.content) {
@@ -193,17 +230,19 @@ function renderWeekContent(week) {
 }
 
 function handleDownloadPdf() {
-  if (currentActiveWeek && currentActiveWeek.pdfPath) {
-    const link = document.createElement('a');
-    link.href = currentActiveWeek.pdfPath;
-    link.download = currentActiveWeek.pdfPath.split('/').pop();
-    link.target = '_blank';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  } else {
+  if (!currentActiveWeek || !currentActiveWeek.pdfPath) {
     window.print();
+    return;
   }
+  const prefix = getSubjectPrefix(activeSubjectId);
+  const fileName = `${prefix}_Week${currentActiveWeek.week}.pdf`;
+
+  const link = document.createElement('a');
+  link.href = currentActiveWeek.pdfPath;
+  link.download = fileName;
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
 }
 
 function close() {

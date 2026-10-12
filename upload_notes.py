@@ -47,6 +47,14 @@ SUBJECTS = [
     }
 ]
 
+PREFIX_MAP = {
+    'itw': 'IWT',
+    'ml2': 'ML2',
+    'oop': 'OOP',
+    'bdm': 'BDM'
+}
+
+
 LIBRON_FONT_CSS = """
 <style id="libron-font-injection">
 @font-face {
@@ -336,9 +344,11 @@ def interactive_mode():
             else:
                 out_dir = os.path.join(NOTES_PDF_BASE, sub_id)
                 os.makedirs(out_dir, exist_ok=True)
-                dst_file = os.path.join(out_dir, f"week{week_num}.pdf")
+                prefix = PREFIX_MAP.get(sub_id, sub_id.upper())
+                pdf_filename = f"{prefix}_Week{week_num}.pdf"
+                dst_file = os.path.join(out_dir, pdf_filename)
                 shutil.copy2(pdf_path, dst_file)
-                pdf_rel = f"notes/pdf/sem4/{sub_id}/week{week_num}.pdf"
+                pdf_rel = f"notes/pdf/sem4/{sub_id}/{pdf_filename}"
                 updated_files.append(dst_file)
                 print(f"  ✓ Copied PDF -> {pdf_rel}")
 
@@ -417,9 +427,11 @@ def main():
             if os.path.exists(src):
                 out_dir = os.path.join(NOTES_PDF_BASE, sub_id)
                 os.makedirs(out_dir, exist_ok=True)
-                dst = os.path.join(out_dir, f"week{week_num}.pdf")
+                prefix = PREFIX_MAP.get(sub_id, sub_id.upper())
+                pdf_filename = f"{prefix}_Week{week_num}.pdf"
+                dst = os.path.join(out_dir, pdf_filename)
                 shutil.copy2(src, dst)
-                pdf_rel = f"notes/pdf/sem4/{sub_id}/week{week_num}.pdf"
+                pdf_rel = f"notes/pdf/sem4/{sub_id}/{pdf_filename}"
                 updated = True
 
         if html_rel or pdf_rel:

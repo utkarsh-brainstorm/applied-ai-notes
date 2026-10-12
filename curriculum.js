@@ -31,43 +31,43 @@ const CURRICULUM = {
               "week": 1,
               "title": "Linear Algebra Foundations",
               "htmlPath": "notes/html/sem4/ml2/week1.html",
-              "pdfPath": "notes/pdf/sem4/ml2/week1.pdf"
+              "pdfPath": "notes/pdf/sem4/ml2/ML2_Week1.pdf"
             },
             {
               "week": 2,
               "title": "Optimization Foundations",
               "htmlPath": "notes/html/sem4/ml2/week2.html",
-              "pdfPath": "notes/pdf/sem4/ml2/week2.pdf"
+              "pdfPath": "notes/pdf/sem4/ml2/ML2_Week2.pdf"
             },
             {
               "week": 3,
               "title": "Gradient Descent & Logistic Regression",
               "htmlPath": "notes/html/sem4/ml2/week3.html",
-              "pdfPath": "notes/pdf/sem4/ml2/week3.pdf"
+              "pdfPath": "notes/pdf/sem4/ml2/ML2_Week3.pdf"
             },
             {
               "week": 4,
               "title": "Gradient Descent Variants",
               "htmlPath": "notes/html/sem4/ml2/week4.html",
-              "pdfPath": "notes/pdf/sem4/ml2/week4.pdf"
+              "pdfPath": "notes/pdf/sem4/ml2/ML2_Week4.pdf"
             },
             {
               "week": 5,
               "title": "Support Vector Machines (SVM)",
               "htmlPath": "notes/html/sem4/ml2/week5.html",
-              "pdfPath": "notes/pdf/sem4/ml2/week5.pdf"
+              "pdfPath": "notes/pdf/sem4/ml2/ML2_Week5.pdf"
             },
             {
               "week": 6,
               "title": "Constrained Optimization & KKT",
               "htmlPath": "notes/html/sem4/ml2/week6.html",
-              "pdfPath": "notes/pdf/sem4/ml2/week6.pdf"
+              "pdfPath": "notes/pdf/sem4/ml2/ML2_Week6.pdf"
             },
             {
               "week": 7,
               "title": "SVM Dual Formulation & Kernel Trick",
               "htmlPath": "notes/html/sem4/ml2/week7.html",
-              "pdfPath": "notes/pdf/sem4/ml2/week7.pdf"
+              "pdfPath": "notes/pdf/sem4/ml2/ML2_Week7.pdf"
             }
           ]
         },
@@ -80,43 +80,43 @@ const CURRICULUM = {
               "week": 1,
               "title": "Foundations of OOP",
               "htmlPath": "notes/html/sem4/oop/week1.html",
-              "pdfPath": "notes/pdf/sem4/oop/week1.pdf"
+              "pdfPath": "notes/pdf/sem4/oop/OOP_Week1.pdf"
             },
             {
               "week": 2,
               "title": "Classes, Objects & Methods",
               "htmlPath": "notes/html/sem4/oop/week2.html",
-              "pdfPath": "notes/pdf/sem4/oop/week2.pdf"
+              "pdfPath": "notes/pdf/sem4/oop/OOP_Week2.pdf"
             },
             {
               "week": 3,
               "title": "Constructors & Memory Management",
               "htmlPath": "notes/html/sem4/oop/week3.html",
-              "pdfPath": "notes/pdf/sem4/oop/week3.pdf"
+              "pdfPath": "notes/pdf/sem4/oop/OOP_Week3.pdf"
             },
             {
               "week": 4,
               "title": "Inheritance & Polymorphism",
               "htmlPath": "notes/html/sem4/oop/week4.html",
-              "pdfPath": "notes/pdf/sem4/oop/week4.pdf"
+              "pdfPath": "notes/pdf/sem4/oop/OOP_Week4.pdf"
             },
             {
               "week": 5,
               "title": "Interfaces & Abstract Classes",
               "htmlPath": "notes/html/sem4/oop/week5.html",
-              "pdfPath": "notes/pdf/sem4/oop/week5.pdf"
+              "pdfPath": "notes/pdf/sem4/oop/OOP_Week5.pdf"
             },
             {
               "week": 6,
               "title": "Exception Handling",
               "htmlPath": "notes/html/sem4/oop/week6.html",
-              "pdfPath": "notes/pdf/sem4/oop/week6.pdf"
+              "pdfPath": "notes/pdf/sem4/oop/OOP_Week6.pdf"
             },
             {
               "week": 7,
               "title": "File Handling & Collections",
               "htmlPath": "notes/html/sem4/oop/week7.html",
-              "pdfPath": "notes/pdf/sem4/oop/week7.pdf"
+              "pdfPath": "notes/pdf/sem4/oop/OOP_Week7.pdf"
             }
           ]
         },
@@ -129,43 +129,43 @@ const CURRICULUM = {
               "week": 1,
               "title": "Introduction to Data Mining",
               "htmlPath": "notes/html/sem4/bdm/week1.html",
-              "pdfPath": "notes/pdf/sem4/bdm/week1.pdf"
+              "pdfPath": "notes/pdf/sem4/bdm/BDM_Week1.pdf"
             },
             {
               "week": 2,
               "title": "Data Preprocessing & Cleansing",
               "htmlPath": "notes/html/sem4/bdm/week2.html",
-              "pdfPath": "notes/pdf/sem4/bdm/week2.pdf"
+              "pdfPath": "notes/pdf/sem4/bdm/BDM_Week2.pdf"
             },
             {
               "week": 3,
               "title": "Data Attributes & Summarization",
               "htmlPath": "notes/html/sem4/bdm/week3.html",
-              "pdfPath": "notes/pdf/sem4/bdm/week3.pdf"
+              "pdfPath": "notes/pdf/sem4/bdm/BDM_Week3.pdf"
             },
             {
               "week": 4,
               "title": "Data Similarity & Dissimilarity",
               "htmlPath": "notes/html/sem4/bdm/week4.html",
-              "pdfPath": "notes/pdf/sem4/bdm/week4.pdf"
+              "pdfPath": "notes/pdf/sem4/bdm/BDM_Week4.pdf"
             },
             {
               "week": 5,
               "title": "Dimensionality Reduction",
               "htmlPath": "notes/html/sem4/bdm/week5.html",
-              "pdfPath": "notes/pdf/sem4/bdm/week5.pdf"
+              "pdfPath": "notes/pdf/sem4/bdm/BDM_Week5.pdf"
             },
             {
               "week": 6,
               "title": "Principal Component Analysis (PCA)",
               "htmlPath": "notes/html/sem4/bdm/week6.html",
-              "pdfPath": "notes/pdf/sem4/bdm/week6.pdf"
+              "pdfPath": "notes/pdf/sem4/bdm/BDM_Week6.pdf"
             },
             {
               "week": 7,
               "title": "Clustering vs Classification & K-Means",
               "htmlPath": "notes/html/sem4/bdm/week7.html",
-              "pdfPath": "notes/pdf/sem4/bdm/week7.pdf"
+              "pdfPath": "notes/pdf/sem4/bdm/BDM_Week7.pdf"
             }
           ]
         },
@@ -178,43 +178,43 @@ const CURRICULUM = {
               "week": 1,
               "title": "Web Architecture & HTML Basics",
               "htmlPath": "notes/html/sem4/itw/week1.html",
-              "pdfPath": "notes/pdf/sem4/itw/week1.pdf"
+              "pdfPath": "notes/pdf/sem4/itw/IWT_Week1.pdf"
             },
             {
               "week": 2,
               "title": "HTML Structure & Formatting",
               "htmlPath": "notes/html/sem4/itw/week2.html",
-              "pdfPath": "notes/pdf/sem4/itw/week2.pdf"
+              "pdfPath": "notes/pdf/sem4/itw/IWT_Week2.pdf"
             },
             {
               "week": 3,
               "title": "Semantic HTML & Links",
               "htmlPath": "notes/html/sem4/itw/week3.html",
-              "pdfPath": "notes/pdf/sem4/itw/week3.pdf"
+              "pdfPath": "notes/pdf/sem4/itw/IWT_Week3.pdf"
             },
             {
               "week": 4,
               "title": "HTML Structure & Semantics",
               "htmlPath": "notes/html/sem4/itw/week4.html",
-              "pdfPath": "notes/pdf/sem4/itw/week4.pdf"
+              "pdfPath": "notes/pdf/sem4/itw/IWT_Week4.pdf"
             },
             {
               "week": 5,
               "title": "Tables, Forms, Multimedia & CSS",
               "htmlPath": "notes/html/sem4/itw/week5.html",
-              "pdfPath": "notes/pdf/sem4/itw/week5.pdf"
+              "pdfPath": "notes/pdf/sem4/itw/IWT_Week5.pdf"
             },
             {
               "week": 6,
               "title": "CSS Selectors, Box Model & Styling",
               "htmlPath": "notes/html/sem4/itw/week6.html",
-              "pdfPath": "notes/pdf/sem4/itw/week6.pdf"
+              "pdfPath": "notes/pdf/sem4/itw/IWT_Week6.pdf"
             },
             {
               "week": 7,
               "title": "CSS Layouts: Flexbox & Grid",
               "htmlPath": "notes/html/sem4/itw/week7.html",
-              "pdfPath": "notes/pdf/sem4/itw/week7.pdf"
+              "pdfPath": "notes/pdf/sem4/itw/IWT_Week7.pdf"
             }
           ]
         }
