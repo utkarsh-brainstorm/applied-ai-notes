@@ -148,8 +148,8 @@ def clean_html(raw_html: str) -> str:
     lines = [line for line in raw_html.splitlines() if 'brucks' not in line.lower()]
     cleaned = '\n'.join(lines)
 
-    # Remove words enclosed in ^ like ^tg1^
-    cleaned = re.sub(r'\^[^^]+?\^', '', cleaned)
+    # Remove words enclosed in ^ like ^tg1^, ^fg1^, ^/tg1^
+    cleaned = re.sub(r'\^/?(?:tg|fg)[\w\s]*\^', '', cleaned)
 
     # Avoid duplicate font injection
     if 'id="libron-font-injection"' not in cleaned:

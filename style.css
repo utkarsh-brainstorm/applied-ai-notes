@@ -256,13 +256,13 @@ body {
 
 .subj-item {
   background: var(--card-bg);
-  padding: 1.5rem;
+  padding: 1.75rem 1.5rem;
   cursor: pointer;
   transition: background 0.15s, color 0.15s;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  min-height: 110px;
+  justify-content: center;
+  min-height: 90px;
 }
 
 .subj-item:hover {
@@ -273,17 +273,12 @@ body {
   color: var(--text-main);
 }
 
-.subj-code {
-  font-size: 0.75rem;
-  color: var(--text-muted);
-  margin-bottom: 0.5rem;
-}
-
 .subj-name {
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   color: var(--text-main);
-  opacity: 0.85;
-  line-height: 1.35;
+  opacity: 0.9;
+  line-height: 1.4;
+  font-weight: 600;
 }
 
 /* Floating Subpage Modal */

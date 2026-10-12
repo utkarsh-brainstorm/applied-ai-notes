@@ -92,7 +92,6 @@ function renderSemesters() {
           <div class="subjects-row">
             ${sem.subjects.map(s => `
               <div class="subj-item" data-sem="${sem.id}" data-id="${s.id}">
-                <div class="subj-code">${s.code}</div>
                 <div class="subj-name">${s.name}</div>
               </div>
             `).join('')}
@@ -176,7 +175,7 @@ function renderSubject(subj) {
       weeksList.appendChild(btn);
     });
 
-    // Render ONLY the first week initially
+    // Load ONLY the first week initially
     renderWeekContent(subj.weeks[0]);
   } else {
     notesTarget.innerHTML = '<div style="padding:2rem;text-align:center;color:var(--text-muted);">No notes available for this subject yet.</div>';
@@ -210,17 +209,20 @@ function renderWeekContent(week) {
           <div class="loader-spinner"></div>
           <span>Loading ${prefix} Week 0${week.week}...</span>
         </div>
-        <iframe class="notes-frame" id="activeNoteIframe" src="${week.htmlPath}" title="${week.title || 'Notes'}" style="opacity:0; transition: opacity 0.2s ease;"></iframe>
+        <iframe class="notes-frame" id="activeNoteIframe" src="${week.htmlPath}" title="${week.title || 'Notes'}"></iframe>
       </div>
     `;
     const iframe = document.getElementById('activeNoteIframe');
     const loader = document.getElementById('noteLoader');
     if (iframe) {
-      iframe.addEventListener('load', () => {
+      iframe.onload = () => {
         applyThemeToIframe(iframe);
         if (loader) loader.style.display = 'none';
-        iframe.style.opacity = '1';
-      });
+      };
+      // Safety timeout to prevent infinite loader
+      setTimeout(() => {
+        if (loader) loader.style.display = 'none';
+      }, 1500);
     }
   } else if (week.content) {
     notesTarget.innerHTML = week.content;
