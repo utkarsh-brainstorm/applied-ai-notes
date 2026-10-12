@@ -1,0 +1,2521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <style>
+  @font-face {
+  font-family: octicons-link;
+  src: url(data:font/woff;charset=utf-8;base64,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) format('woff');
+}
+
+.markdown-body .octicon {
+  display: inline-block;
+  fill: currentColor;
+  vertical-align: text-bottom;
+}
+
+.markdown-body .anchor {
+  float: left;
+  line-height: 1;
+  margin-left: -20px;
+  padding-right: 4px;
+}
+
+.markdown-body .anchor:focus {
+  outline: none;
+}
+
+.markdown-body h1 .octicon-link,
+.markdown-body h2 .octicon-link,
+.markdown-body h3 .octicon-link,
+.markdown-body h4 .octicon-link,
+.markdown-body h5 .octicon-link,
+.markdown-body h6 .octicon-link {
+  color: #1b1f23;
+  vertical-align: middle;
+  visibility: hidden;
+}
+
+.markdown-body h1:hover .anchor,
+.markdown-body h2:hover .anchor,
+.markdown-body h3:hover .anchor,
+.markdown-body h4:hover .anchor,
+.markdown-body h5:hover .anchor,
+.markdown-body h6:hover .anchor {
+  text-decoration: none;
+}
+
+.markdown-body h1:hover .anchor .octicon-link,
+.markdown-body h2:hover .anchor .octicon-link,
+.markdown-body h3:hover .anchor .octicon-link,
+.markdown-body h4:hover .anchor .octicon-link,
+.markdown-body h5:hover .anchor .octicon-link,
+.markdown-body h6:hover .anchor .octicon-link {
+  visibility: visible;
+}
+
+.markdown-body {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  color: #24292e;
+  line-height: 1.5;
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
+  font-size: 16px;
+  line-height: 1.5;
+  word-wrap: break-word;
+}
+
+.markdown-body .pl-c {
+  color: #6a737d;
+}
+
+.markdown-body .pl-c1,
+.markdown-body .pl-s .pl-v {
+  color: #005cc5;
+}
+
+.markdown-body .pl-e,
+.markdown-body .pl-en {
+  color: #6f42c1;
+}
+
+.markdown-body .pl-s .pl-s1,
+.markdown-body .pl-smi {
+  color: #24292e;
+}
+
+.markdown-body .pl-ent {
+  color: #22863a;
+}
+
+.markdown-body .pl-k {
+  color: #d73a49;
+}
+
+.markdown-body .pl-pds,
+.markdown-body .pl-s,
+.markdown-body .pl-s .pl-pse .pl-s1,
+.markdown-body .pl-sr,
+.markdown-body .pl-sr .pl-cce,
+.markdown-body .pl-sr .pl-sra,
+.markdown-body .pl-sr .pl-sre {
+  color: #032f62;
+}
+
+.markdown-body .pl-smw,
+.markdown-body .pl-v {
+  color: #e36209;
+}
+
+.markdown-body .pl-bu {
+  color: #b31d28;
+}
+
+.markdown-body .pl-ii {
+  background-color: #b31d28;
+  color: #fafbfc;
+}
+
+.markdown-body .pl-c2 {
+  background-color: #d73a49;
+  color: #fafbfc;
+}
+
+.markdown-body .pl-c2:before {
+  content: "^M";
+}
+
+.markdown-body .pl-sr .pl-cce {
+  color: #22863a;
+  font-weight: 700;
+}
+
+.markdown-body .pl-ml {
+  color: #735c0f;
+}
+
+.markdown-body .pl-mh,
+.markdown-body .pl-mh .pl-en,
+.markdown-body .pl-ms {
+  color: #005cc5;
+  font-weight: 700;
+}
+
+.markdown-body .pl-mi {
+  color: #24292e;
+  font-style: italic;
+}
+
+.markdown-body .pl-mb {
+  color: #24292e;
+  font-weight: 700;
+}
+
+.markdown-body .pl-md {
+  background-color: #ffeef0;
+  color: #b31d28;
+}
+
+.markdown-body .pl-mi1 {
+  background-color: #f0fff4;
+  color: #22863a;
+}
+
+.markdown-body .pl-mc {
+  background-color: #ffebda;
+  color: #e36209;
+}
+
+.markdown-body .pl-mi2 {
+  background-color: #005cc5;
+  color: #f6f8fa;
+}
+
+.markdown-body .pl-mdr {
+  color: #6f42c1;
+  font-weight: 700;
+}
+
+.markdown-body .pl-ba {
+  color: #586069;
+}
+
+.markdown-body .pl-sg {
+  color: #959da5;
+}
+
+.markdown-body .pl-corl {
+  color: #032f62;
+  text-decoration: underline;
+}
+
+.markdown-body details {
+  display: block;
+}
+
+.markdown-body summary {
+  display: list-item;
+}
+
+.markdown-body a {
+  background-color: transparent;
+}
+
+.markdown-body a:active,
+.markdown-body a:hover {
+  outline-width: 0;
+}
+
+.markdown-body strong {
+  font-weight: inherit;
+  font-weight: bolder;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+  margin: .67em 0;
+}
+
+.markdown-body img {
+  border-style: none;
+}
+
+.markdown-body code,
+.markdown-body kbd,
+.markdown-body pre {
+  font-family: monospace,monospace;
+  font-size: 1em;
+}
+
+.markdown-body hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+}
+
+.markdown-body input {
+  font: inherit;
+  margin: 0;
+}
+
+.markdown-body input {
+  overflow: visible;
+}
+
+.markdown-body [type=checkbox] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.markdown-body * {
+  box-sizing: border-box;
+}
+
+.markdown-body input {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.markdown-body a {
+  color: #0366d6;
+  text-decoration: none;
+}
+
+.markdown-body a:hover {
+  text-decoration: underline;
+}
+
+.markdown-body strong {
+  font-weight: 600;
+}
+
+.markdown-body hr {
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #dfe2e5;
+  height: 0;
+  margin: 15px 0;
+  overflow: hidden;
+}
+
+.markdown-body hr:before {
+  content: "";
+  display: table;
+}
+
+.markdown-body hr:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.markdown-body table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.markdown-body td,
+.markdown-body th {
+  padding: 0;
+}
+
+.markdown-body details summary {
+  cursor: pointer;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.markdown-body h1 {
+  font-size: 32px;
+}
+
+.markdown-body h1,
+.markdown-body h2 {
+  font-weight: 600;
+}
+
+.markdown-body h2 {
+  font-size: 24px;
+}
+
+.markdown-body h3 {
+  font-size: 20px;
+}
+
+.markdown-body h3,
+.markdown-body h4 {
+  font-weight: 600;
+}
+
+.markdown-body h4 {
+  font-size: 16px;
+}
+
+.markdown-body h5 {
+  font-size: 14px;
+}
+
+.markdown-body h5,
+.markdown-body h6 {
+  font-weight: 600;
+}
+
+.markdown-body h6 {
+  font-size: 12px;
+}
+
+.markdown-body p {
+  margin-bottom: 10px;
+  margin-top: 0;
+}
+
+.markdown-body blockquote {
+  margin: 0;
+}
+
+.markdown-body ol,
+.markdown-body ul {
+  margin-bottom: 0;
+  margin-top: 0;
+  padding-left: 0;
+}
+
+.markdown-body ol ol,
+.markdown-body ul ol {
+  list-style-type: lower-roman;
+}
+
+.markdown-body ol ol ol,
+.markdown-body ol ul ol,
+.markdown-body ul ol ol,
+.markdown-body ul ul ol {
+  list-style-type: lower-alpha;
+}
+
+.markdown-body dd {
+  margin-left: 0;
+}
+
+.markdown-body code,
+.markdown-body pre {
+  font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;
+  font-size: 12px;
+}
+
+.markdown-body pre {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.markdown-body input::-webkit-inner-spin-button,
+.markdown-body input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+.markdown-body .border {
+  border: 1px solid #e1e4e8!important;
+}
+
+.markdown-body .border-0 {
+  border: 0!important;
+}
+
+.markdown-body .border-bottom {
+  border-bottom: 1px solid #e1e4e8!important;
+}
+
+.markdown-body .rounded-1 {
+  border-radius: 3px!important;
+}
+
+.markdown-body .bg-white {
+  background-color: #fff!important;
+}
+
+.markdown-body .bg-gray-light {
+  background-color: #fafbfc!important;
+}
+
+.markdown-body .text-gray-light {
+  color: #6a737d!important;
+}
+
+.markdown-body .mb-0 {
+  margin-bottom: 0!important;
+}
+
+.markdown-body .my-2 {
+  margin-bottom: 8px!important;
+  margin-top: 8px!important;
+}
+
+.markdown-body .pl-0 {
+  padding-left: 0!important;
+}
+
+.markdown-body .py-0 {
+  padding-bottom: 0!important;
+  padding-top: 0!important;
+}
+
+.markdown-body .pl-1 {
+  padding-left: 4px!important;
+}
+
+.markdown-body .pl-2 {
+  padding-left: 8px!important;
+}
+
+.markdown-body .py-2 {
+  padding-bottom: 8px!important;
+  padding-top: 8px!important;
+}
+
+.markdown-body .pl-3,
+.markdown-body .px-3 {
+  padding-left: 16px!important;
+}
+
+.markdown-body .px-3 {
+  padding-right: 16px!important;
+}
+
+.markdown-body .pl-4 {
+  padding-left: 24px!important;
+}
+
+.markdown-body .pl-5 {
+  padding-left: 32px!important;
+}
+
+.markdown-body .pl-6 {
+  padding-left: 40px!important;
+}
+
+.markdown-body .f6 {
+  font-size: 12px!important;
+}
+
+.markdown-body .lh-condensed {
+  line-height: 1.25!important;
+}
+
+.markdown-body .text-bold {
+  font-weight: 600!important;
+}
+
+.markdown-body:before {
+  content: "";
+  display: table;
+}
+
+.markdown-body:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.markdown-body>:first-child {
+  margin-top: 0!important;
+}
+
+.markdown-body>:last-child {
+  margin-bottom: 0!important;
+}
+
+.markdown-body a:not([href]) {
+  color: inherit;
+  text-decoration: none;
+}
+
+.markdown-body blockquote,
+.markdown-body dl,
+.markdown-body ol,
+.markdown-body p,
+.markdown-body pre,
+.markdown-body table,
+.markdown-body ul {
+  margin-bottom: 16px;
+  margin-top: 0;
+}
+
+.markdown-body hr {
+  background-color: #e1e4e8;
+  border: 0;
+  height: .25em;
+  margin: 24px 0;
+  padding: 0;
+}
+
+.markdown-body blockquote {
+  border-left: .25em solid #dfe2e5;
+  color: #6a737d;
+  padding: 0 1em;
+}
+
+.markdown-body blockquote>:first-child {
+  margin-top: 0;
+}
+
+.markdown-body blockquote>:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body kbd {
+  background-color: #fafbfc;
+  border: 1px solid #c6cbd1;
+  border-bottom-color: #959da5;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #959da5;
+  color: #444d56;
+  display: inline-block;
+  font-size: 11px;
+  line-height: 10px;
+  padding: 3px 5px;
+  vertical-align: middle;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  font-weight: 600;
+  line-height: 1.25;
+  margin-bottom: 16px;
+  margin-top: 24px;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+}
+
+.markdown-body h1,
+.markdown-body h2 {
+  border-bottom: 1px solid #eaecef;
+  padding-bottom: .3em;
+}
+
+.markdown-body h2 {
+  font-size: 1.5em;
+}
+
+.markdown-body h3 {
+  font-size: 1.25em;
+}
+
+.markdown-body h4 {
+  font-size: 1em;
+}
+
+.markdown-body h5 {
+  font-size: .875em;
+}
+
+.markdown-body h6 {
+  color: #6a737d;
+  font-size: .85em;
+}
+
+.markdown-body ol,
+.markdown-body ul {
+  padding-left: 2em;
+}
+
+.markdown-body ol ol,
+.markdown-body ol ul,
+.markdown-body ul ol,
+.markdown-body ul ul {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.markdown-body li {
+  word-wrap: break-all;
+}
+
+.markdown-body li>p {
+  margin-top: 16px;
+}
+
+.markdown-body li+li {
+  margin-top: .25em;
+}
+
+.markdown-body dl {
+  padding: 0;
+}
+
+.markdown-body dl dt {
+  font-size: 1em;
+  font-style: italic;
+  font-weight: 600;
+  margin-top: 16px;
+  padding: 0;
+}
+
+.markdown-body dl dd {
+  margin-bottom: 16px;
+  padding: 0 16px;
+}
+
+.markdown-body table {
+  display: block;
+  overflow: auto;
+  width: 100%;
+}
+
+.markdown-body table th {
+  font-weight: 600;
+}
+
+.markdown-body table td,
+.markdown-body table th {
+  border: 1px solid #dfe2e5;
+  padding: 6px 13px;
+}
+
+.markdown-body table tr {
+  background-color: #fff;
+  border-top: 1px solid #c6cbd1;
+}
+
+.markdown-body table tr:nth-child(2n) {
+  background-color: #f6f8fa;
+}
+
+.markdown-body img {
+  background-color: #fff;
+  box-sizing: content-box;
+  max-width: 100%;
+}
+
+.markdown-body img[align=right] {
+  padding-left: 20px;
+}
+
+.markdown-body img[align=left] {
+  padding-right: 20px;
+}
+
+.markdown-body code {
+  background-color: rgba(27,31,35,.05);
+  border-radius: 3px;
+  font-size: 85%;
+  margin: 0;
+  padding: .2em .4em;
+}
+
+.markdown-body pre {
+  word-wrap: normal;
+}
+
+.markdown-body pre>code {
+  background: transparent;
+  border: 0;
+  font-size: 100%;
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  word-break: normal;
+}
+
+.markdown-body .highlight {
+  margin-bottom: 16px;
+}
+
+.markdown-body .highlight pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+
+.markdown-body .highlight pre,
+.markdown-body pre {
+  background-color: #f6f8fa;
+  border-radius: 3px;
+  font-size: 85%;
+  line-height: 1.45;
+  overflow: auto;
+  padding: 16px;
+}
+
+.markdown-body pre code {
+  background-color: transparent;
+  border: 0;
+  display: inline;
+  line-height: inherit;
+  margin: 0;
+  max-width: auto;
+  overflow: visible;
+  padding: 0;
+  word-wrap: normal;
+}
+
+.markdown-body .commit-tease-sha {
+  color: #444d56;
+  display: inline-block;
+  font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;
+  font-size: 90%;
+}
+
+.markdown-body .blob-wrapper {
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.markdown-body .blob-wrapper-embedded {
+  max-height: 240px;
+  overflow-y: auto;
+}
+
+.markdown-body .blob-num {
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  color: rgba(27,31,35,.3);
+  cursor: pointer;
+  font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;
+  font-size: 12px;
+  line-height: 20px;
+  min-width: 50px;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-align: right;
+  user-select: none;
+  vertical-align: top;
+  white-space: nowrap;
+  width: 1%;
+}
+
+.markdown-body .blob-num:hover {
+  color: rgba(27,31,35,.6);
+}
+
+.markdown-body .blob-num:before {
+  content: attr(data-line-number);
+}
+
+.markdown-body .blob-code {
+  line-height: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  position: relative;
+  vertical-align: top;
+}
+
+.markdown-body .blob-code-inner {
+  color: #24292e;
+  font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;
+  font-size: 12px;
+  overflow: visible;
+  white-space: pre;
+  word-wrap: normal;
+}
+
+.markdown-body .pl-token.active,
+.markdown-body .pl-token:hover {
+  background: #ffea7f;
+  cursor: pointer;
+}
+
+.markdown-body kbd {
+  background-color: #fafbfc;
+  border: 1px solid #d1d5da;
+  border-bottom-color: #c6cbd1;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #c6cbd1;
+  color: #444d56;
+  display: inline-block;
+  font: 11px SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;
+  line-height: 10px;
+  padding: 3px 5px;
+  vertical-align: middle;
+}
+
+.markdown-body :checked+.radio-label {
+  border-color: #0366d6;
+  position: relative;
+  z-index: 1;
+}
+
+.markdown-body .tab-size[data-tab-size="1"] {
+  -moz-tab-size: 1;
+  tab-size: 1;
+}
+
+.markdown-body .tab-size[data-tab-size="2"] {
+  -moz-tab-size: 2;
+  tab-size: 2;
+}
+
+.markdown-body .tab-size[data-tab-size="3"] {
+  -moz-tab-size: 3;
+  tab-size: 3;
+}
+
+.markdown-body .tab-size[data-tab-size="4"] {
+  -moz-tab-size: 4;
+  tab-size: 4;
+}
+
+.markdown-body .tab-size[data-tab-size="5"] {
+  -moz-tab-size: 5;
+  tab-size: 5;
+}
+
+.markdown-body .tab-size[data-tab-size="6"] {
+  -moz-tab-size: 6;
+  tab-size: 6;
+}
+
+.markdown-body .tab-size[data-tab-size="7"] {
+  -moz-tab-size: 7;
+  tab-size: 7;
+}
+
+.markdown-body .tab-size[data-tab-size="8"] {
+  -moz-tab-size: 8;
+  tab-size: 8;
+}
+
+.markdown-body .tab-size[data-tab-size="9"] {
+  -moz-tab-size: 9;
+  tab-size: 9;
+}
+
+.markdown-body .tab-size[data-tab-size="10"] {
+  -moz-tab-size: 10;
+  tab-size: 10;
+}
+
+.markdown-body .tab-size[data-tab-size="11"] {
+  -moz-tab-size: 11;
+  tab-size: 11;
+}
+
+.markdown-body .tab-size[data-tab-size="12"] {
+  -moz-tab-size: 12;
+  tab-size: 12;
+}
+
+.markdown-body .task-list-item {
+  list-style-type: none;
+}
+
+.markdown-body .task-list-item+.task-list-item {
+  margin-top: 3px;
+}
+
+.markdown-body .task-list-item input {
+  margin: 0 .2em .25em -1.6em;
+  vertical-align: middle;
+}
+
+.markdown-body hr {
+  border-bottom-color: #eee;
+}
+
+.markdown-body .pl-0 {
+  padding-left: 0!important;
+}
+
+.markdown-body .pl-1 {
+  padding-left: 4px!important;
+}
+
+.markdown-body .pl-2 {
+  padding-left: 8px!important;
+}
+
+.markdown-body .pl-3 {
+  padding-left: 16px!important;
+}
+
+.markdown-body .pl-4 {
+  padding-left: 24px!important;
+}
+
+.markdown-body .pl-5 {
+  padding-left: 32px!important;
+}
+
+.markdown-body .pl-6 {
+  padding-left: 40px!important;
+}
+
+.markdown-body .pl-7 {
+  padding-left: 48px!important;
+}
+
+.markdown-body .pl-8 {
+  padding-left: 64px!important;
+}
+
+.markdown-body .pl-9 {
+  padding-left: 80px!important;
+}
+
+.markdown-body .pl-10 {
+  padding-left: 96px!important;
+}
+
+.markdown-body .pl-11 {
+  padding-left: 112px!important;
+}
+
+.markdown-body .pl-12 {
+  padding-left: 128px!important;
+}
+
+/*# sourceURL=webpack://./node_modules/github-markdown-css/github-markdown.css */
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL25vZGVfbW9kdWxlcy9naXRodWItbWFya2Rvd24tY3NzL2dpdGh1Yi1tYXJrZG93bi5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSwwQkFBMEI7RUFDMUIsMkRBQXF0RTtBQUN2dEU7O0FBRUE7RUFDRSxxQkFBcUI7RUFDckIsa0JBQWtCO0VBQ2xCLDJCQUEyQjtBQUM3Qjs7QUFFQTtFQUNFLFdBQVc7RUFDWCxjQUFjO0VBQ2Qsa0JBQWtCO0VBQ2xCLGtCQUFrQjtBQUNwQjs7QUFFQTtFQUNFLGFBQWE7QUFDZjs7QUFFQTs7Ozs7O0VBTUUsY0FBYztFQUNkLHNCQUFzQjtFQUN0QixrQkFBa0I7QUFDcEI7O0FBRUE7Ozs7OztFQU1FLHFCQUFxQjtBQUN2Qjs7QUFFQTs7Ozs7O0VBTUUsbUJBQW1CO0FBQ3JCOztBQUVBO0VBQ0UsMEJBQTBCO0VBQzFCLDhCQUE4QjtFQUM5QixjQUFjO0VBQ2QsZ0JBQWdCO0VBQ2hCLGtJQUFrSTtFQUNsSSxlQUFlO0VBQ2YsZ0JBQWdCO0VBQ2hCLHFCQUFxQjtBQUN2Qjs7QUFFQTtFQUNFLGNBQWM7QUFDaEI7O0FBRUE7O0VBRUUsY0FBYztBQUNoQjs7QUFFQTs7RUFFRSxjQUFjO0FBQ2hCOztBQUVBOztFQUVFLGNBQWM7QUFDaEI7O0FBRUE7RUFDRSxjQUFjO0FBQ2hCOztBQUVBO0VBQ0UsY0FBYztBQUNoQjs7QUFFQTs7Ozs7OztFQU9FLGNBQWM7QUFDaEI7O0FBRUE7O0VBRUUsY0FBYztBQUNoQjs7QUFFQTtFQUNFLGNBQWM7QUFDaEI7O0FBRUE7RUFDRSx5QkFBeUI7RUFDekIsY0FBYztBQUNoQjs7QUFFQTtFQUNFLHlCQUF5QjtFQUN6QixjQUFjO0FBQ2hCOztBQUVBO0VBQ0UsYUFBYTtBQUNmOztBQUVBO0VBQ0UsY0FBYztFQUNkLGdCQUFnQjtBQUNsQjs7QUFFQTtFQUNFLGNBQWM7QUFDaEI7O0FBRUE7OztFQUdFLGNBQWM7RUFDZCxnQkFBZ0I7QUFDbEI7O0FBRUE7RUFD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 */
+  </style>
+  <style>
+  /**
+ * prism.js default theme for JavaScript, CSS and HTML
+ * Based on dabblet (http://dabblet.com)
+ * @author Lea Verou
+ */
+
+code[class*="language-"],
+pre[class*="language-"] {
+	color: black;
+	background: none;
+	text-shadow: 0 1px white;
+	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	font-size: 1em;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	line-height: 1.5;
+
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+}
+
+pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
+code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-selection {
+	text-shadow: none;
+	background: #b3d4fc;
+}
+
+pre[class*="language-"]::selection, pre[class*="language-"] ::selection,
+code[class*="language-"]::selection, code[class*="language-"] ::selection {
+	text-shadow: none;
+	background: #b3d4fc;
+}
+
+@media print {
+	code[class*="language-"],
+	pre[class*="language-"] {
+		text-shadow: none;
+	}
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+	padding: 1em;
+	margin: .5em 0;
+	overflow: auto;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+	background: #f5f2f0;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+	padding: .1em;
+	border-radius: .3em;
+	white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: slategray;
+}
+
+.token.punctuation {
+	color: #999;
+}
+
+.token.namespace {
+	opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+	color: #905;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+	color: #690;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+	color: #9a6e3a;
+	/* This background color was intended by the author of this theme. */
+	background: hsla(0, 0%, 100%, .5);
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+	color: #07a;
+}
+
+.token.function,
+.token.class-name {
+	color: #DD4A68;
+}
+
+.token.regex,
+.token.important,
+.token.variable {
+	color: #e90;
+}
+
+.token.important,
+.token.bold {
+	font-weight: bold;
+}
+.token.italic {
+	font-style: italic;
+}
+
+.token.entity {
+	cursor: help;
+}
+
+/*# sourceURL=webpack://./node_modules/prismjs/themes/prism.css */
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL25vZGVfbW9kdWxlcy9wcmlzbWpzL3RoZW1lcy9wcmlzbS5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7Ozs7RUFJRTs7QUFFRjs7Q0FFQyxZQUFZO0NBQ1osZ0JBQWdCO0NBQ2hCLHdCQUF3QjtDQUN4QixzRUFBc0U7Q0FDdEUsY0FBYztDQUNkLGdCQUFnQjtDQUNoQixnQkFBZ0I7Q0FDaEIsb0JBQW9CO0NBQ3BCLGtCQUFrQjtDQUNsQixpQkFBaUI7Q0FDakIsZ0JBQWdCOztDQUVoQixnQkFBZ0I7Q0FDaEIsY0FBYztDQUNkLFdBQVc7O0NBRVgscUJBQXFCO0NBQ3JCLGtCQUFrQjtDQUNsQixpQkFBaUI7Q0FDakIsYUFBYTtBQUNkOztBQUVBOztDQUVDLGlCQUFpQjtDQUNqQixtQkFBbUI7QUFDcEI7O0FBRUE7O0NBRUMsaUJBQWlCO0NBQ2pCLG1CQUFtQjtBQUNwQjs7QUFFQTtDQUNDOztFQUVDLGlCQUFpQjtDQUNsQjtBQUNEOztBQUVBLGdCQUFnQjtBQUNoQjtDQUNDLFlBQVk7Q0FDWixjQUFjO0NBQ2QsY0FBYztBQUNmOztBQUVBOztDQUVDLG1CQUFtQjtBQUNwQjs7QUFFQSxnQkFBZ0I7QUFDaEI7Q0FDQyxhQUFhO0NBQ2IsbUJBQW1CO0NBQ25CLG1CQUFtQjtBQUNwQjs7QUFFQTs7OztDQUlDLGdCQUFnQjtBQUNqQjs7QUFFQTtDQUNDLFdBQVc7QUFDWjs7QUFFQTtDQUNDLFdBQVc7QUFDWjs7QUFFQTs7Ozs7OztDQU9DLFdBQVc7QUFDWjs7QUFFQTs7Ozs7O0NBTUMsV0FBVztBQUNaOztBQUVBOzs7OztDQUtDLGNBQWM7Q0FDZCxvRUFBb0U7Q0FDcEUsaUNBQWlDO0FBQ2xDOztBQUVBOzs7Q0FHQyxXQUFXO0FBQ1o7O0FBRUE7O0NBRUMsY0FBYztBQUNmOztBQUVBOzs7Q0FHQyxXQUFXO0FBQ1o7O0FBRUE7O0NBRUMsaUJBQWlCO0FBQ2xCO0FBQ0E7Q0FDQyxrQkFBa0I7QUFDbkI7O0FBRUE7Q0FDQyxZQUFZO0FBQ2IiLCJzb3VyY2VSb290IjoiIn0= */
+  </style>
+  <style>
+  /* stylelint-disable font-family-no-missing-generic-family-keyword */
+@font-face {
+  font-family: 'KaTeX_AMS';
+  src: url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_AMS-Regular.73ea273a.woff2) format('woff2'), url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_AMS-Regular.d562e886.woff) format('woff'), url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_AMS-Regular.853be924.ttf) format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'KaTeX_Caligraphic';
+  src: url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_Caligraphic-Bold.a1abf90d.woff2) format('woff2'), url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_Caligraphic-Bold.d757c535.woff) format('woff'), url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_Caligraphic-Bold.7489a2fb.ttf) format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'KaTeX_Caligraphic';
+  src: url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_Caligraphic-Regular.d6484fce.woff2) format('woff2'), url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_Caligraphic-Regular.db074fa2.woff) format('woff'), url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_Caligraphic-Regular.7e873d38.ttf) format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'KaTeX_Fraktur';
+  src: url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_Fraktur-Bold.931d67ea.woff2) format('woff2'), url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_Fraktur-Bold.354501ba.woff) format('woff'), url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_Fraktur-Bold.4c761b37.ttf) format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'KaTeX_Fraktur';
+  src: url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_Fraktur-Regular.172d3529.woff2) format('woff2'), url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_Fraktur-Regular.6fdf0ac5.woff) format('woff'), url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_Fraktur-Regular.ed305b54.ttf) format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'KaTeX_Main';
+  src: url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_Main-Bold.39890742.woff2) format('woff2'), url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_Main-Bold.0c3b8929.woff) format('woff'), url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_Main-Bold.8169508b.ttf) format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'KaTeX_Main';
+  src: url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_Main-BoldItalic.20f389c4.woff2) format('woff2'), url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_Main-BoldItalic.428978dc.woff) format('woff'), url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_Main-BoldItalic.828abcb2.ttf) format('truetype');
+  font-weight: bold;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'KaTeX_Main';
+  src: url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_Main-Italic.fe2176f7.woff2) format('woff2'), url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_Main-Italic.fd947498.woff) format('woff'), url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_Main-Italic.fa675e5e.ttf) format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'KaTeX_Main';
+  src: url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_Main-Regular.f650f111.woff2) format('woff2'), url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_Main-Regular.4f35fbcc.woff) format('woff'), url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_Main-Regular.9eba1d77.ttf) format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'KaTeX_Math';
+  src: url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_Math-BoldItalic.dcbcbd93.woff2) format('woff2'), url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_Math-BoldItalic.3f07ed67.woff) format('woff'), url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_Math-BoldItalic.bf2d440b.ttf) format('truetype');
+  font-weight: bold;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'KaTeX_Math';
+  src: url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_Math-Italic.6d3d25f4.woff2) format('woff2'), url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_Math-Italic.96759856.woff) format('woff'), url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_Math-Italic.8a5f9363.ttf) format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'KaTeX_SansSerif';
+  src: url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_SansSerif-Bold.95591a92.woff2) format('woff2'), url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_SansSerif-Bold.b9cd458a.woff) format('woff'), url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_SansSerif-Bold.5b49f499.ttf) format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'KaTeX_SansSerif';
+  src: url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_SansSerif-Italic.7d393d38.woff2) format('woff2'), url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_SansSerif-Italic.8d593cfa.woff) format('woff'), url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_SansSerif-Italic.b257a18c.ttf) format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'KaTeX_SansSerif';
+  src: url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_SansSerif-Regular.cd5e231e.woff2) format('woff2'), url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_SansSerif-Regular.02271ec5.woff) format('woff'), url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_SansSerif-Regular.2f7bc363.ttf) format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'KaTeX_Script';
+  src: url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_Script-Regular.c81d1b2a.woff2) format('woff2'), url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_Script-Regular.073b3402.woff) format('woff'), url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_Script-Regular.fc9ba524.ttf) format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'KaTeX_Size1';
+  src: url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_Size1-Regular.6eec866c.woff2) format('woff2'), url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_Size1-Regular.0108e89c.woff) format('woff'), url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_Size1-Regular.6de7d4b5.ttf) format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'KaTeX_Size2';
+  src: url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_Size2-Regular.2960900c.woff2) format('woff2'), url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_Size2-Regular.3a99e70a.woff) format('woff'), url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_Size2-Regular.57f5c183.ttf) format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'KaTeX_Size3';
+  src: url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_Size3-Regular.e1951519.woff2) format('woff2'), url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_Size3-Regular.7947224e.woff) format('woff'), url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_Size3-Regular.8d6b6822.ttf) format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'KaTeX_Size4';
+  src: url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_Size4-Regular.e418bf25.woff2) format('woff2'), url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_Size4-Regular.aeffd802.woff) format('woff'), url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_Size4-Regular.4ad7c7e8.ttf) format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'KaTeX_Typewriter';
+  src: url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_Typewriter-Regular.c295e7f7.woff2) format('woff2'), url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_Typewriter-Regular.4c6b94fd.woff) format('woff'), url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_Typewriter-Regular.c5c02d76.ttf) format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+.katex {
+  font: normal 1.21em KaTeX_Main, Times New Roman, serif;
+  line-height: 1.2;
+  text-indent: 0;
+  text-rendering: auto;
+}
+.katex * {
+  -ms-high-contrast-adjust: none !important;
+  border-color: currentColor;
+}
+.katex .katex-version::after {
+  content: "0.15.2";
+}
+.katex .katex-mathml {
+  /* Accessibility hack to only show to screen readers
+         Found at: http://a11yproject.com/posts/how-to-hide-content/ */
+  position: absolute;
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0;
+  border: 0;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
+.katex .katex-html {
+  /* \newline is an empty block at top level, between .base elements */
+}
+.katex .katex-html > .newline {
+  display: block;
+}
+.katex .base {
+  position: relative;
+  display: inline-block;
+  white-space: nowrap;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+}
+.katex .strut {
+  display: inline-block;
+}
+.katex .textbf {
+  font-weight: bold;
+}
+.katex .textit {
+  font-style: italic;
+}
+.katex .textrm {
+  font-family: KaTeX_Main;
+}
+.katex .textsf {
+  font-family: KaTeX_SansSerif;
+}
+.katex .texttt {
+  font-family: KaTeX_Typewriter;
+}
+.katex .mathnormal {
+  font-family: KaTeX_Math;
+  font-style: italic;
+}
+.katex .mathit {
+  font-family: KaTeX_Main;
+  font-style: italic;
+}
+.katex .mathrm {
+  font-style: normal;
+}
+.katex .mathbf {
+  font-family: KaTeX_Main;
+  font-weight: bold;
+}
+.katex .boldsymbol {
+  font-family: KaTeX_Math;
+  font-weight: bold;
+  font-style: italic;
+}
+.katex .amsrm {
+  font-family: KaTeX_AMS;
+}
+.katex .mathbb,
+.katex .textbb {
+  font-family: KaTeX_AMS;
+}
+.katex .mathcal {
+  font-family: KaTeX_Caligraphic;
+}
+.katex .mathfrak,
+.katex .textfrak {
+  font-family: KaTeX_Fraktur;
+}
+.katex .mathtt {
+  font-family: KaTeX_Typewriter;
+}
+.katex .mathscr,
+.katex .textscr {
+  font-family: KaTeX_Script;
+}
+.katex .mathsf,
+.katex .textsf {
+  font-family: KaTeX_SansSerif;
+}
+.katex .mathboldsf,
+.katex .textboldsf {
+  font-family: KaTeX_SansSerif;
+  font-weight: bold;
+}
+.katex .mathitsf,
+.katex .textitsf {
+  font-family: KaTeX_SansSerif;
+  font-style: italic;
+}
+.katex .mainrm {
+  font-family: KaTeX_Main;
+  font-style: normal;
+}
+.katex .vlist-t {
+  display: inline-table;
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+.katex .vlist-r {
+  display: table-row;
+}
+.katex .vlist {
+  display: table-cell;
+  vertical-align: bottom;
+  position: relative;
+}
+.katex .vlist > span {
+  display: block;
+  height: 0;
+  position: relative;
+}
+.katex .vlist > span > span {
+  display: inline-block;
+}
+.katex .vlist > span > .pstrut {
+  overflow: hidden;
+  width: 0;
+}
+.katex .vlist-t2 {
+  margin-right: -2px;
+}
+.katex .vlist-s {
+  display: table-cell;
+  vertical-align: bottom;
+  font-size: 1px;
+  width: 2px;
+  min-width: 2px;
+}
+.katex .vbox {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: baseline;
+}
+.katex .hbox {
+  display: inline-flex;
+  flex-direction: row;
+  width: 100%;
+}
+.katex .thinbox {
+  display: inline-flex;
+  flex-direction: row;
+  width: 0;
+  max-width: 0;
+}
+.katex .msupsub {
+  text-align: left;
+}
+.katex .mfrac > span > span {
+  text-align: center;
+}
+.katex .mfrac .frac-line {
+  display: inline-block;
+  width: 100%;
+  border-bottom-style: solid;
+}
+.katex .mfrac .frac-line,
+.katex .overline .overline-line,
+.katex .underline .underline-line,
+.katex .hline,
+.katex .hdashline,
+.katex .rule {
+  min-height: 1px;
+}
+.katex .mspace {
+  display: inline-block;
+}
+.katex .llap,
+.katex .rlap,
+.katex .clap {
+  width: 0;
+  position: relative;
+}
+.katex .llap > .inner,
+.katex .rlap > .inner,
+.katex .clap > .inner {
+  position: absolute;
+}
+.katex .llap > .fix,
+.katex .rlap > .fix,
+.katex .clap > .fix {
+  display: inline-block;
+}
+.katex .llap > .inner {
+  right: 0;
+}
+.katex .rlap > .inner,
+.katex .clap > .inner {
+  left: 0;
+}
+.katex .clap > .inner > span {
+  margin-left: -50%;
+  margin-right: 50%;
+}
+.katex .rule {
+  display: inline-block;
+  border: solid 0;
+  position: relative;
+}
+.katex .overline .overline-line,
+.katex .underline .underline-line,
+.katex .hline {
+  display: inline-block;
+  width: 100%;
+  border-bottom-style: solid;
+}
+.katex .hdashline {
+  display: inline-block;
+  width: 100%;
+  border-bottom-style: dashed;
+}
+.katex .sqrt > .root {
+  /* These values are taken from the definition of `\r@@t`,
+             `\mkern 5mu` and `\mkern -10mu`. */
+  margin-left: 0.27777778em;
+  margin-right: -0.55555556em;
+}
+.katex .sizing.reset-size1.size1,
+.katex .fontsize-ensurer.reset-size1.size1 {
+  font-size: 1em;
+}
+.katex .sizing.reset-size1.size2,
+.katex .fontsize-ensurer.reset-size1.size2 {
+  font-size: 1.2em;
+}
+.katex .sizing.reset-size1.size3,
+.katex .fontsize-ensurer.reset-size1.size3 {
+  font-size: 1.4em;
+}
+.katex .sizing.reset-size1.size4,
+.katex .fontsize-ensurer.reset-size1.size4 {
+  font-size: 1.6em;
+}
+.katex .sizing.reset-size1.size5,
+.katex .fontsize-ensurer.reset-size1.size5 {
+  font-size: 1.8em;
+}
+.katex .sizing.reset-size1.size6,
+.katex .fontsize-ensurer.reset-size1.size6 {
+  font-size: 2em;
+}
+.katex .sizing.reset-size1.size7,
+.katex .fontsize-ensurer.reset-size1.size7 {
+  font-size: 2.4em;
+}
+.katex .sizing.reset-size1.size8,
+.katex .fontsize-ensurer.reset-size1.size8 {
+  font-size: 2.88em;
+}
+.katex .sizing.reset-size1.size9,
+.katex .fontsize-ensurer.reset-size1.size9 {
+  font-size: 3.456em;
+}
+.katex .sizing.reset-size1.size10,
+.katex .fontsize-ensurer.reset-size1.size10 {
+  font-size: 4.148em;
+}
+.katex .sizing.reset-size1.size11,
+.katex .fontsize-ensurer.reset-size1.size11 {
+  font-size: 4.976em;
+}
+.katex .sizing.reset-size2.size1,
+.katex .fontsize-ensurer.reset-size2.size1 {
+  font-size: 0.83333333em;
+}
+.katex .sizing.reset-size2.size2,
+.katex .fontsize-ensurer.reset-size2.size2 {
+  font-size: 1em;
+}
+.katex .sizing.reset-size2.size3,
+.katex .fontsize-ensurer.reset-size2.size3 {
+  font-size: 1.16666667em;
+}
+.katex .sizing.reset-size2.size4,
+.katex .fontsize-ensurer.reset-size2.size4 {
+  font-size: 1.33333333em;
+}
+.katex .sizing.reset-size2.size5,
+.katex .fontsize-ensurer.reset-size2.size5 {
+  font-size: 1.5em;
+}
+.katex .sizing.reset-size2.size6,
+.katex .fontsize-ensurer.reset-size2.size6 {
+  font-size: 1.66666667em;
+}
+.katex .sizing.reset-size2.size7,
+.katex .fontsize-ensurer.reset-size2.size7 {
+  font-size: 2em;
+}
+.katex .sizing.reset-size2.size8,
+.katex .fontsize-ensurer.reset-size2.size8 {
+  font-size: 2.4em;
+}
+.katex .sizing.reset-size2.size9,
+.katex .fontsize-ensurer.reset-size2.size9 {
+  font-size: 2.88em;
+}
+.katex .sizing.reset-size2.size10,
+.katex .fontsize-ensurer.reset-size2.size10 {
+  font-size: 3.45666667em;
+}
+.katex .sizing.reset-size2.size11,
+.katex .fontsize-ensurer.reset-size2.size11 {
+  font-size: 4.14666667em;
+}
+.katex .sizing.reset-size3.size1,
+.katex .fontsize-ensurer.reset-size3.size1 {
+  font-size: 0.71428571em;
+}
+.katex .sizing.reset-size3.size2,
+.katex .fontsize-ensurer.reset-size3.size2 {
+  font-size: 0.85714286em;
+}
+.katex .sizing.reset-size3.size3,
+.katex .fontsize-ensurer.reset-size3.size3 {
+  font-size: 1em;
+}
+.katex .sizing.reset-size3.size4,
+.katex .fontsize-ensurer.reset-size3.size4 {
+  font-size: 1.14285714em;
+}
+.katex .sizing.reset-size3.size5,
+.katex .fontsize-ensurer.reset-size3.size5 {
+  font-size: 1.28571429em;
+}
+.katex .sizing.reset-size3.size6,
+.katex .fontsize-ensurer.reset-size3.size6 {
+  font-size: 1.42857143em;
+}
+.katex .sizing.reset-size3.size7,
+.katex .fontsize-ensurer.reset-size3.size7 {
+  font-size: 1.71428571em;
+}
+.katex .sizing.reset-size3.size8,
+.katex .fontsize-ensurer.reset-size3.size8 {
+  font-size: 2.05714286em;
+}
+.katex .sizing.reset-size3.size9,
+.katex .fontsize-ensurer.reset-size3.size9 {
+  font-size: 2.46857143em;
+}
+.katex .sizing.reset-size3.size10,
+.katex .fontsize-ensurer.reset-size3.size10 {
+  font-size: 2.96285714em;
+}
+.katex .sizing.reset-size3.size11,
+.katex .fontsize-ensurer.reset-size3.size11 {
+  font-size: 3.55428571em;
+}
+.katex .sizing.reset-size4.size1,
+.katex .fontsize-ensurer.reset-size4.size1 {
+  font-size: 0.625em;
+}
+.katex .sizing.reset-size4.size2,
+.katex .fontsize-ensurer.reset-size4.size2 {
+  font-size: 0.75em;
+}
+.katex .sizing.reset-size4.size3,
+.katex .fontsize-ensurer.reset-size4.size3 {
+  font-size: 0.875em;
+}
+.katex .sizing.reset-size4.size4,
+.katex .fontsize-ensurer.reset-size4.size4 {
+  font-size: 1em;
+}
+.katex .sizing.reset-size4.size5,
+.katex .fontsize-ensurer.reset-size4.size5 {
+  font-size: 1.125em;
+}
+.katex .sizing.reset-size4.size6,
+.katex .fontsize-ensurer.reset-size4.size6 {
+  font-size: 1.25em;
+}
+.katex .sizing.reset-size4.size7,
+.katex .fontsize-ensurer.reset-size4.size7 {
+  font-size: 1.5em;
+}
+.katex .sizing.reset-size4.size8,
+.katex .fontsize-ensurer.reset-size4.size8 {
+  font-size: 1.8em;
+}
+.katex .sizing.reset-size4.size9,
+.katex .fontsize-ensurer.reset-size4.size9 {
+  font-size: 2.16em;
+}
+.katex .sizing.reset-size4.size10,
+.katex .fontsize-ensurer.reset-size4.size10 {
+  font-size: 2.5925em;
+}
+.katex .sizing.reset-size4.size11,
+.katex .fontsize-ensurer.reset-size4.size11 {
+  font-size: 3.11em;
+}
+.katex .sizing.reset-size5.size1,
+.katex .fontsize-ensurer.reset-size5.size1 {
+  font-size: 0.55555556em;
+}
+.katex .sizing.reset-size5.size2,
+.katex .fontsize-ensurer.reset-size5.size2 {
+  font-size: 0.66666667em;
+}
+.katex .sizing.reset-size5.size3,
+.katex .fontsize-ensurer.reset-size5.size3 {
+  font-size: 0.77777778em;
+}
+.katex .sizing.reset-size5.size4,
+.katex .fontsize-ensurer.reset-size5.size4 {
+  font-size: 0.88888889em;
+}
+.katex .sizing.reset-size5.size5,
+.katex .fontsize-ensurer.reset-size5.size5 {
+  font-size: 1em;
+}
+.katex .sizing.reset-size5.size6,
+.katex .fontsize-ensurer.reset-size5.size6 {
+  font-size: 1.11111111em;
+}
+.katex .sizing.reset-size5.size7,
+.katex .fontsize-ensurer.reset-size5.size7 {
+  font-size: 1.33333333em;
+}
+.katex .sizing.reset-size5.size8,
+.katex .fontsize-ensurer.reset-size5.size8 {
+  font-size: 1.6em;
+}
+.katex .sizing.reset-size5.size9,
+.katex .fontsize-ensurer.reset-size5.size9 {
+  font-size: 1.92em;
+}
+.katex .sizing.reset-size5.size10,
+.katex .fontsize-ensurer.reset-size5.size10 {
+  font-size: 2.30444444em;
+}
+.katex .sizing.reset-size5.size11,
+.katex .fontsize-ensurer.reset-size5.size11 {
+  font-size: 2.76444444em;
+}
+.katex .sizing.reset-size6.size1,
+.katex .fontsize-ensurer.reset-size6.size1 {
+  font-size: 0.5em;
+}
+.katex .sizing.reset-size6.size2,
+.katex .fontsize-ensurer.reset-size6.size2 {
+  font-size: 0.6em;
+}
+.katex .sizing.reset-size6.size3,
+.katex .fontsize-ensurer.reset-size6.size3 {
+  font-size: 0.7em;
+}
+.katex .sizing.reset-size6.size4,
+.katex .fontsize-ensurer.reset-size6.size4 {
+  font-size: 0.8em;
+}
+.katex .sizing.reset-size6.size5,
+.katex .fontsize-ensurer.reset-size6.size5 {
+  font-size: 0.9em;
+}
+.katex .sizing.reset-size6.size6,
+.katex .fontsize-ensurer.reset-size6.size6 {
+  font-size: 1em;
+}
+.katex .sizing.reset-size6.size7,
+.katex .fontsize-ensurer.reset-size6.size7 {
+  font-size: 1.2em;
+}
+.katex .sizing.reset-size6.size8,
+.katex .fontsize-ensurer.reset-size6.size8 {
+  font-size: 1.44em;
+}
+.katex .sizing.reset-size6.size9,
+.katex .fontsize-ensurer.reset-size6.size9 {
+  font-size: 1.728em;
+}
+.katex .sizing.reset-size6.size10,
+.katex .fontsize-ensurer.reset-size6.size10 {
+  font-size: 2.074em;
+}
+.katex .sizing.reset-size6.size11,
+.katex .fontsize-ensurer.reset-size6.size11 {
+  font-size: 2.488em;
+}
+.katex .sizing.reset-size7.size1,
+.katex .fontsize-ensurer.reset-size7.size1 {
+  font-size: 0.41666667em;
+}
+.katex .sizing.reset-size7.size2,
+.katex .fontsize-ensurer.reset-size7.size2 {
+  font-size: 0.5em;
+}
+.katex .sizing.reset-size7.size3,
+.katex .fontsize-ensurer.reset-size7.size3 {
+  font-size: 0.58333333em;
+}
+.katex .sizing.reset-size7.size4,
+.katex .fontsize-ensurer.reset-size7.size4 {
+  font-size: 0.66666667em;
+}
+.katex .sizing.reset-size7.size5,
+.katex .fontsize-ensurer.reset-size7.size5 {
+  font-size: 0.75em;
+}
+.katex .sizing.reset-size7.size6,
+.katex .fontsize-ensurer.reset-size7.size6 {
+  font-size: 0.83333333em;
+}
+.katex .sizing.reset-size7.size7,
+.katex .fontsize-ensurer.reset-size7.size7 {
+  font-size: 1em;
+}
+.katex .sizing.reset-size7.size8,
+.katex .fontsize-ensurer.reset-size7.size8 {
+  font-size: 1.2em;
+}
+.katex .sizing.reset-size7.size9,
+.katex .fontsize-ensurer.reset-size7.size9 {
+  font-size: 1.44em;
+}
+.katex .sizing.reset-size7.size10,
+.katex .fontsize-ensurer.reset-size7.size10 {
+  font-size: 1.72833333em;
+}
+.katex .sizing.reset-size7.size11,
+.katex .fontsize-ensurer.reset-size7.size11 {
+  font-size: 2.07333333em;
+}
+.katex .sizing.reset-size8.size1,
+.katex .fontsize-ensurer.reset-size8.size1 {
+  font-size: 0.34722222em;
+}
+.katex .sizing.reset-size8.size2,
+.katex .fontsize-ensurer.reset-size8.size2 {
+  font-size: 0.41666667em;
+}
+.katex .sizing.reset-size8.size3,
+.katex .fontsize-ensurer.reset-size8.size3 {
+  font-size: 0.48611111em;
+}
+.katex .sizing.reset-size8.size4,
+.katex .fontsize-ensurer.reset-size8.size4 {
+  font-size: 0.55555556em;
+}
+.katex .sizing.reset-size8.size5,
+.katex .fontsize-ensurer.reset-size8.size5 {
+  font-size: 0.625em;
+}
+.katex .sizing.reset-size8.size6,
+.katex .fontsize-ensurer.reset-size8.size6 {
+  font-size: 0.69444444em;
+}
+.katex .sizing.reset-size8.size7,
+.katex .fontsize-ensurer.reset-size8.size7 {
+  font-size: 0.83333333em;
+}
+.katex .sizing.reset-size8.size8,
+.katex .fontsize-ensurer.reset-size8.size8 {
+  font-size: 1em;
+}
+.katex .sizing.reset-size8.size9,
+.katex .fontsize-ensurer.reset-size8.size9 {
+  font-size: 1.2em;
+}
+.katex .sizing.reset-size8.size10,
+.katex .fontsize-ensurer.reset-size8.size10 {
+  font-size: 1.44027778em;
+}
+.katex .sizing.reset-size8.size11,
+.katex .fontsize-ensurer.reset-size8.size11 {
+  font-size: 1.72777778em;
+}
+.katex .sizing.reset-size9.size1,
+.katex .fontsize-ensurer.reset-size9.size1 {
+  font-size: 0.28935185em;
+}
+.katex .sizing.reset-size9.size2,
+.katex .fontsize-ensurer.reset-size9.size2 {
+  font-size: 0.34722222em;
+}
+.katex .sizing.reset-size9.size3,
+.katex .fontsize-ensurer.reset-size9.size3 {
+  font-size: 0.40509259em;
+}
+.katex .sizing.reset-size9.size4,
+.katex .fontsize-ensurer.reset-size9.size4 {
+  font-size: 0.46296296em;
+}
+.katex .sizing.reset-size9.size5,
+.katex .fontsize-ensurer.reset-size9.size5 {
+  font-size: 0.52083333em;
+}
+.katex .sizing.reset-size9.size6,
+.katex .fontsize-ensurer.reset-size9.size6 {
+  font-size: 0.5787037em;
+}
+.katex .sizing.reset-size9.size7,
+.katex .fontsize-ensurer.reset-size9.size7 {
+  font-size: 0.69444444em;
+}
+.katex .sizing.reset-size9.size8,
+.katex .fontsize-ensurer.reset-size9.size8 {
+  font-size: 0.83333333em;
+}
+.katex .sizing.reset-size9.size9,
+.katex .fontsize-ensurer.reset-size9.size9 {
+  font-size: 1em;
+}
+.katex .sizing.reset-size9.size10,
+.katex .fontsize-ensurer.reset-size9.size10 {
+  font-size: 1.20023148em;
+}
+.katex .sizing.reset-size9.size11,
+.katex .fontsize-ensurer.reset-size9.size11 {
+  font-size: 1.43981481em;
+}
+.katex .sizing.reset-size10.size1,
+.katex .fontsize-ensurer.reset-size10.size1 {
+  font-size: 0.24108004em;
+}
+.katex .sizing.reset-size10.size2,
+.katex .fontsize-ensurer.reset-size10.size2 {
+  font-size: 0.28929605em;
+}
+.katex .sizing.reset-size10.size3,
+.katex .fontsize-ensurer.reset-size10.size3 {
+  font-size: 0.33751205em;
+}
+.katex .sizing.reset-size10.size4,
+.katex .fontsize-ensurer.reset-size10.size4 {
+  font-size: 0.38572806em;
+}
+.katex .sizing.reset-size10.size5,
+.katex .fontsize-ensurer.reset-size10.size5 {
+  font-size: 0.43394407em;
+}
+.katex .sizing.reset-size10.size6,
+.katex .fontsize-ensurer.reset-size10.size6 {
+  font-size: 0.48216008em;
+}
+.katex .sizing.reset-size10.size7,
+.katex .fontsize-ensurer.reset-size10.size7 {
+  font-size: 0.57859209em;
+}
+.katex .sizing.reset-size10.size8,
+.katex .fontsize-ensurer.reset-size10.size8 {
+  font-size: 0.69431051em;
+}
+.katex .sizing.reset-size10.size9,
+.katex .fontsize-ensurer.reset-size10.size9 {
+  font-size: 0.83317261em;
+}
+.katex .sizing.reset-size10.size10,
+.katex .fontsize-ensurer.reset-size10.size10 {
+  font-size: 1em;
+}
+.katex .sizing.reset-size10.size11,
+.katex .fontsize-ensurer.reset-size10.size11 {
+  font-size: 1.19961427em;
+}
+.katex .sizing.reset-size11.size1,
+.katex .fontsize-ensurer.reset-size11.size1 {
+  font-size: 0.20096463em;
+}
+.katex .sizing.reset-size11.size2,
+.katex .fontsize-ensurer.reset-size11.size2 {
+  font-size: 0.24115756em;
+}
+.katex .sizing.reset-size11.size3,
+.katex .fontsize-ensurer.reset-size11.size3 {
+  font-size: 0.28135048em;
+}
+.katex .sizing.reset-size11.size4,
+.katex .fontsize-ensurer.reset-size11.size4 {
+  font-size: 0.32154341em;
+}
+.katex .sizing.reset-size11.size5,
+.katex .fontsize-ensurer.reset-size11.size5 {
+  font-size: 0.36173633em;
+}
+.katex .sizing.reset-size11.size6,
+.katex .fontsize-ensurer.reset-size11.size6 {
+  font-size: 0.40192926em;
+}
+.katex .sizing.reset-size11.size7,
+.katex .fontsize-ensurer.reset-size11.size7 {
+  font-size: 0.48231511em;
+}
+.katex .sizing.reset-size11.size8,
+.katex .fontsize-ensurer.reset-size11.size8 {
+  font-size: 0.57877814em;
+}
+.katex .sizing.reset-size11.size9,
+.katex .fontsize-ensurer.reset-size11.size9 {
+  font-size: 0.69453376em;
+}
+.katex .sizing.reset-size11.size10,
+.katex .fontsize-ensurer.reset-size11.size10 {
+  font-size: 0.83360129em;
+}
+.katex .sizing.reset-size11.size11,
+.katex .fontsize-ensurer.reset-size11.size11 {
+  font-size: 1em;
+}
+.katex .delimsizing.size1 {
+  font-family: KaTeX_Size1;
+}
+.katex .delimsizing.size2 {
+  font-family: KaTeX_Size2;
+}
+.katex .delimsizing.size3 {
+  font-family: KaTeX_Size3;
+}
+.katex .delimsizing.size4 {
+  font-family: KaTeX_Size4;
+}
+.katex .delimsizing.mult .delim-size1 > span {
+  font-family: KaTeX_Size1;
+}
+.katex .delimsizing.mult .delim-size4 > span {
+  font-family: KaTeX_Size4;
+}
+.katex .nulldelimiter {
+  display: inline-block;
+  width: 0.12em;
+}
+.katex .delimcenter {
+  position: relative;
+}
+.katex .op-symbol {
+  position: relative;
+}
+.katex .op-symbol.small-op {
+  font-family: KaTeX_Size1;
+}
+.katex .op-symbol.large-op {
+  font-family: KaTeX_Size2;
+}
+.katex .op-limits > .vlist-t {
+  text-align: center;
+}
+.katex .accent > .vlist-t {
+  text-align: center;
+}
+.katex .accent .accent-body {
+  position: relative;
+}
+.katex .accent .accent-body:not(.accent-full) {
+  width: 0;
+}
+.katex .overlay {
+  display: block;
+}
+.katex .mtable .vertical-separator {
+  display: inline-block;
+  min-width: 1px;
+}
+.katex .mtable .arraycolsep {
+  display: inline-block;
+}
+.katex .mtable .col-align-c > .vlist-t {
+  text-align: center;
+}
+.katex .mtable .col-align-l > .vlist-t {
+  text-align: left;
+}
+.katex .mtable .col-align-r > .vlist-t {
+  text-align: right;
+}
+.katex .svg-align {
+  text-align: left;
+}
+.katex svg {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: inherit;
+  fill: currentColor;
+  stroke: currentColor;
+  fill-rule: nonzero;
+  fill-opacity: 1;
+  stroke-width: 1;
+  stroke-linecap: butt;
+  stroke-linejoin: miter;
+  stroke-miterlimit: 4;
+  stroke-dasharray: none;
+  stroke-dashoffset: 0;
+  stroke-opacity: 1;
+}
+.katex svg path {
+  stroke: none;
+}
+.katex img {
+  border-style: none;
+  min-width: 0;
+  min-height: 0;
+  max-width: none;
+  max-height: none;
+}
+.katex .stretchy {
+  width: 100%;
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+.katex .stretchy::before,
+.katex .stretchy::after {
+  content: "";
+}
+.katex .hide-tail {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.katex .halfarrow-left {
+  position: absolute;
+  left: 0;
+  width: 50.2%;
+  overflow: hidden;
+}
+.katex .halfarrow-right {
+  position: absolute;
+  right: 0;
+  width: 50.2%;
+  overflow: hidden;
+}
+.katex .brace-left {
+  position: absolute;
+  left: 0;
+  width: 25.1%;
+  overflow: hidden;
+}
+.katex .brace-center {
+  position: absolute;
+  left: 25%;
+  width: 50%;
+  overflow: hidden;
+}
+.katex .brace-right {
+  position: absolute;
+  right: 0;
+  width: 25.1%;
+  overflow: hidden;
+}
+.katex .x-arrow-pad {
+  padding: 0 0.5em;
+}
+.katex .cd-arrow-pad {
+  padding: 0 0.55556em 0 0.27778em;
+}
+.katex .x-arrow,
+.katex .mover,
+.katex .munder {
+  text-align: center;
+}
+.katex .boxpad {
+  padding: 0 0.3em;
+}
+.katex .fbox,
+.katex .fcolorbox {
+  box-sizing: border-box;
+  border: 0.04em solid;
+}
+.katex .cancel-pad {
+  padding: 0 0.2em;
+}
+.katex .cancel-lap {
+  margin-left: -0.2em;
+  margin-right: -0.2em;
+}
+.katex .sout {
+  border-bottom-style: solid;
+  border-bottom-width: 0.08em;
+}
+.katex .angl {
+  box-sizing: border-box;
+  border-top: 0.049em solid;
+  border-right: 0.049em solid;
+  margin-right: 0.03889em;
+}
+.katex .anglpad {
+  padding: 0 0.03889em;
+}
+.katex .eqn-num::before {
+  counter-increment: katexEqnNo;
+  content: "(" counter(katexEqnNo) ")";
+}
+.katex .mml-eqn-num::before {
+  counter-increment: mmlEqnNo;
+  content: "(" counter(mmlEqnNo) ")";
+}
+.katex .mtr-glue {
+  width: 50%;
+}
+.katex .cd-vert-arrow {
+  display: inline-block;
+  position: relative;
+}
+.katex .cd-label-left {
+  display: inline-block;
+  position: absolute;
+  right: calc(50% + 0.3em);
+  text-align: left;
+}
+.katex .cd-label-right {
+  display: inline-block;
+  position: absolute;
+  left: calc(50% + 0.3em);
+  text-align: right;
+}
+.katex-display {
+  display: block;
+  margin: 1em 0;
+  text-align: center;
+}
+.katex-display > .katex {
+  display: block;
+  text-align: center;
+  white-space: nowrap;
+}
+.katex-display > .katex > .katex-html {
+  display: block;
+  position: relative;
+}
+.katex-display > .katex > .katex-html > .tag {
+  position: absolute;
+  right: 0;
+}
+.katex-display.leqno > .katex > .katex-html > .tag {
+  left: 0;
+  right: auto;
+}
+.katex-display.fleqn > .katex {
+  text-align: left;
+  padding-left: 2em;
+}
+body {
+  counter-reset: katexEqnNo mmlEqnNo;
+}
+
+
+/*# sourceURL=webpack://./node_modules/katex/dist/katex.css */
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL25vZGVfbW9kdWxlcy9rYXRleC9kaXN0L2thdGV4LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSxvRUFBb0U7QUFDcEU7RUFDRSx3QkFBd0I7RUFDeEIsZ0xBQThKO0VBQzlKLG1CQUFtQjtFQUNuQixrQkFBa0I7QUFDcEI7QUFDQTtFQUNFLGdDQUFnQztFQUNoQyxnTEFBNks7RUFDN0ssaUJBQWlCO0VBQ2pCLGtCQUFrQjtBQUNwQjtBQUNBO0VBQ0UsZ0NBQWdDO0VBQ2hDLGdMQUFzTDtFQUN0TCxtQkFBbUI7RUFDbkIsa0JBQWtCO0FBQ3BCO0FBQ0E7RUFDRSw0QkFBNEI7RUFDNUIsa0xBQWlLO0VBQ2pLLGlCQUFpQjtFQUNqQixrQkFBa0I7QUFDcEI7QUFDQTtFQUNFLDRCQUE0QjtFQUM1QixtTEFBMEs7RUFDMUssbUJBQW1CO0VBQ25CLGtCQUFrQjtBQUNwQjtBQUNBO0VBQ0UseUJBQXlCO0VBQ3pCLG1MQUF3SjtFQUN4SixpQkFBaUI7RUFDakIsa0JBQWtCO0FBQ3BCO0FBQ0E7RUFDRSx5QkFBeUI7RUFDekIsbUxBQTBLO0VBQzFLLGlCQUFpQjtFQUNqQixrQkFBa0I7QUFDcEI7QUFDQTtFQUNFLHlCQUF5QjtFQUN6QixtTEFBOEo7RUFDOUosbUJBQW1CO0VBQ25CLGtCQUFrQjtBQUNwQjtBQUNBO0VBQ0UseUJBQXlCO0VBQ3pCLG1MQUFpSztFQUNqSyxtQkFBbUI7RUFDbkIsa0JBQWtCO0FBQ3BCO0FBQ0E7RUFDRSx5QkFBeUI7RUFDekIsbUxBQTBLO0VBQzFLLGlCQUFpQjtFQUNqQixrQkFBa0I7QUFDcEI7QUFDQTtFQUNFLHlCQUF5QjtFQUN6QixtTEFBOEo7RUFDOUosbUJBQW1CO0VBQ25CLGtCQUFrQjtBQUNwQjtBQUNBO0VBQ0UsOEJBQThCO0VBQzlCLG1MQUF1SztFQUN2SyxpQkFBaUI7RUFDakIsa0JBQWtCO0FBQ3BCO0FBQ0E7RUFDRSw4QkFBOEI7RUFDOUIsbUxBQTZLO0VBQzdLLG1CQUFtQjtFQUNu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 */
+  </style>
+  <style>
+    .markdown-body {
+      font-family: -apple-system,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
+      box-sizing: border-box;
+      min-width: 200px;
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 45px;
+    }
+
+    @media not print {
+      .markdown-body {
+        padding: 45px;
+      }
+
+      @media (max-width: 767px) {
+        .markdown-body {
+          padding: 15px;
+        }
+      }
+    }
+
+    .hf-container {
+      color: #24292e;
+      line-height: 1.3;
+    }
+
+    .markdown-body .highlight pre,
+    .markdown-body pre {
+      white-space: pre-wrap;
+    }
+    .markdown-body table {
+      display: table;
+    }
+    .markdown-body img[data-align="center"] {
+      display: block;
+      margin: 0 auto;
+    }
+    .markdown-body img[data-align="right"] {
+      display: block;
+      margin: 0 0 0 auto;
+    }
+    .markdown-body li.task-list-item {
+      list-style-type: none;
+    }
+    .markdown-body li > [type=checkbox] {
+      margin: 0 0 0 -1.3em;
+    }
+    .markdown-body input[type="checkbox"] ~ p {
+      margin-top: 0;
+      display: inline-block;
+    }
+    .markdown-body ol ol,
+    .markdown-body ul ol {
+      list-style-type: decimal;
+    }
+    .markdown-body ol ol ol,
+    .markdown-body ol ul ol,
+    .markdown-body ul ol ol,
+    .markdown-body ul ul ol {
+      list-style-type: decimal;
+    }
+  </style>
+  <style>.markdown-body a.footnote-ref {
+  text-decoration: none;
+}
+
+.footnotes {
+  font-size: .85em;
+  opacity: .8;
+}
+
+.footnotes li[role="doc-endnote"] {
+  position: relative;
+}
+
+.footnotes .footnote-back {
+  position: absolute;
+  font-family: initial;
+  top: .2em;
+  right: 1em;
+  text-decoration: none;
+}
+
+.inline-math.invalid,
+.multiple-math.invalid {
+  color: rgb(255, 105, 105);
+}
+
+.toc-container {
+  width: 100%;
+}
+
+.toc-container .toc-title {
+  font-weight: 700;
+  font-size: 1.2em;
+  margin-bottom: 0;
+}
+
+.toc-container li,
+.toc-container ul,
+.toc-container ul li {
+  list-style: none !important;
+}
+
+.toc-container > ul {
+  padding-left: 0;
+}
+
+.toc-container ul li span {
+  display : flex;
+}
+
+.toc-container ul li span a {
+  color: inherit;
+  text-decoration: none;
+}
+.toc-container ul li span a:hover {
+  color: inherit;
+  text-decoration: none;
+}
+
+.toc-container ul li span span.dots {
+  flex: 1;
+  height: 0.65em;
+  margin: 0 10px;
+  border-bottom: 2px dotted black;
+}
+
+/*# sourceURL=webpack://./src/muya/lib/assets/styles/exportStyle.css */
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9tdXlhL2xpYi9hc3NldHMvc3R5bGVzL2V4cG9ydFN0eWxlLmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLHFCQUFxQjtBQUN2Qjs7QUFFQTtFQUNFLGdCQUFnQjtFQUNoQixXQUFXO0FBQ2I7O0FBRUE7RUFDRSxrQkFBa0I7QUFDcEI7O0FBRUE7RUFDRSxrQkFBa0I7RUFDbEIsb0JBQW9CO0VBQ3BCLFNBQVM7RUFDVCxVQUFVO0VBQ1YscUJBQXFCO0FBQ3ZCOztBQUVBOztFQUVFLHlCQUF5QjtBQUMzQjs7QUFFQTtFQUNFLFdBQVc7QUFDYjs7QUFFQTtFQUNFLGdCQUFnQjtFQUNoQixnQkFBZ0I7RUFDaEIsZ0JBQWdCO0FBQ2xCOztBQUVBOzs7RUFHRSwyQkFBMkI7QUFDN0I7O0FBRUE7RUFDRSxlQUFlO0FBQ2pCOztBQUVBO0VBQ0UsY0FBYztBQUNoQjs7QUFFQTtFQUNFLGNBQWM7RUFDZCxxQkFBcUI7QUFDdkI7QUFDQTtFQUNFLGNBQWM7RUFDZCxxQkFBcUI7QUFDdkI7O0FBRUE7RUFDRSxPQUFPO0VBQ1AsY0FBYztFQUNkLGNBQWM7RUFDZCwrQkFBK0I7QUFDakMiLCJzb3VyY2VSb290IjoiIn0= */</style>
+  <style>.markdown-body{}pre.front-matter{display:none!important;}</style>
+</head>
+<body>
+  <article class="markdown-body"><h1 class="atx" id="basics-of-data-mining">Basics of Data Mining</h1>
+<h3 class="atx" id="subject--week-1-lecture-2-data-mining-vs-machine-learning-vs-statistics">Subject — Week 1, Lecture 2: Data Mining vs. Machine Learning vs. Statistics</h3>
+<h2 class="atx" id="index">Index</h2>
+<ul>
+<li><a href="#three-overlapping-cousins">Three Overlapping Cousins</a> — Data Mining, ML, and Statistics walk into a bar, and nobody can agree who's paying (i.e., who "owns" the problem).</li>
+<li><a href="#the-statistics-angle-mean-marks-and-the-sample-population-trap">The Statistics Angle: Mean Marks and the Sample-Population Trap</a> — Why "what's the average?" is secretly one of the hardest questions you can ask.</li>
+<li><a href="#the-data-mining-angle-patterns-rules-clusters-and-anomalies">The Data Mining Angle: Patterns, Rules, Clusters, and Anomalies</a> — Where "something weird is going on" gets a mathematical passport.</li>
+<li><a href="#statistics-as-the-foundation">Statistics as the Foundation</a> — The unglamorous plumbing that keeps ML and DM from collapsing.</li>
+<li><a href="#worked-example-the-hospital-with-a-million-records">Worked Example: The Hospital with a Million Records</a> — Same dataset, three completely different questions, three completely different disciplines.</li>
+<li><a href="#worked-example-the-streaming-service">Worked Example: The Streaming Service</a> — Percentages are easy; knowing if they <em>mean</em> anything is the actual job.</li>
+<li><a href="#four-fundamental-questions-about-data">Four Fundamental Questions About Data</a> — The four questions you should be quietly asking yourself for the rest of this course.</li>
+<li><a href="#think-about-it">Think About It</a> — Five questions to keep you up at night (in a good way).</li>
+</ul>
+<hr>
+<h2 class="atx" id="three-overlapping-cousins">Three Overlapping Cousins</h2>
+<p>Before diving into techniques, it's worth pausing on a bit of terminology hygiene. Three terms get thrown around constantly, often interchangeably, even though they are not the same thing: <strong>Data Mining</strong>, <strong>Machine Learning (ML)</strong>, and <strong>Statistics</strong>. There is a lot of genuine overlap between them, and people will use them loosely in conversation — but it helps to know what each one is fundamentally <em>about</em> before we start blurring the lines ourselves.</p>
+<p>The cleanest way to separate them is to start with the most mathematically well-defined of the three: <strong>Statistics</strong>.</p>
+<ul>
+<li><strong>Statistics</strong> is fundamentally about probability distributions and everything derived from them — <span class="katex"><span class="katex-mathml"></span><span aria-hidden="true" class="katex-html"><span class="base"><span style="height:1em;vertical-align:-0.25em;" class="strut"></span><span style="margin-right:0.13889em;" class="mord mathnormal">P</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mclose">)</span></span></span></span>, <span class="katex"><span class="katex-mathml"></span><span aria-hidden="true" class="katex-html"><span class="base"><span style="height:1em;vertical-align:-0.25em;" class="strut"></span><span style="margin-right:0.13889em;" class="mord mathnormal">P</span><span class="mopen">(</span><span style="margin-right:0.03588em;" class="mord mathnormal">y</span><span style="margin-right:0.2778em;" class="mspace"></span><span class="mrel">∣</span><span style="margin-right:0.2778em;" class="mspace"></span></span><span class="base"><span style="height:1em;vertical-align:-0.25em;" class="strut"></span><span class="mord mathnormal">x</span><span class="mclose">)</span></span></span></span>, conditional probability, Bayes' rule, and so on. If a question can be phrased as "model the process that generated this data," you're in statistics territory.</li>
+<li><strong>Machine Learning</strong> is, at a high level, <strong>function approximation</strong>. You are trying to learn some function <span class="katex"><span class="katex-mathml"></span><span aria-hidden="true" class="katex-html"><span class="base"><span style="height:0.8889em;vertical-align:-0.1944em;" class="strut"></span><span class="mord"><span style="margin-right:0.10764em;" class="mord mathnormal">f</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span style="height:0.3361em;" class="vlist"><span style="top:-2.55em;margin-left:-0.1076em;margin-right:0.05em;"><span style="height:2.7em;" class="pstrut"></span><span class="sizing reset-size6 size3 mtight"><span style="margin-right:0.02778em;" class="mord mathnormal mtight">θ</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span style="height:0.15em;" class="vlist"><span></span></span></span></span></span></span></span></span></span> that maps inputs to outputs, i.e. <span class="katex"><span class="katex-mathml"></span><span aria-hidden="true" class="katex-html"><span class="base"><span style="height:0.8889em;vertical-align:-0.1944em;" class="strut"></span><span class="mord"><span style="margin-right:0.10764em;" class="mord mathnormal">f</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span style="height:0.3361em;" class="vlist"><span style="top:-2.55em;margin-left:-0.1076em;margin-right:0.05em;"><span style="height:2.7em;" class="pstrut"></span><span class="sizing reset-size6 size3 mtight"><span style="margin-right:0.02778em;" class="mord mathnormal mtight">θ</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span style="height:0.15em;" class="vlist"><span></span></span></span></span></span></span><span style="margin-right:0.2778em;" class="mspace"></span><span class="mrel">:</span><span style="margin-right:0.2778em;" class="mspace"></span></span><span class="base"><span style="height:0.4306em;" class="strut"></span><span class="mord mathnormal">x</span><span style="margin-right:0.2778em;" class="mspace"></span><span class="mrel">→</span><span style="margin-right:0.2778em;" class="mspace"></span></span><span class="base"><span style="height:0.625em;vertical-align:-0.1944em;" class="strut"></span><span style="margin-right:0.03588em;" class="mord mathnormal">y</span></span></span></span>. It's not really about <em>why</em> the data looks the way it does — it's about finding the function that minimizes prediction error.</li>
+<li><strong>Data Mining</strong> doesn't come with its own clean mathematical machinery — it's a much broader, more descriptive term. But by definition, it always starts from a dataset (call it <span class="katex"><span class="katex-mathml"></span><span aria-hidden="true" class="katex-html"><span class="base"><span style="height:0.6833em;" class="strut"></span><span style="margin-right:0.02778em;" class="mord mathnormal">D</span></span></span></span>), and the central question is: <em>what useful structure or pattern exists in <span class="katex"><span class="katex-mathml"></span><span aria-hidden="true" class="katex-html"><span class="base"><span style="height:0.6833em;" class="strut"></span><span style="margin-right:0.02778em;" class="mord mathnormal">D</span></span></span></span>?</em></li>
+</ul>
+<p>None of these are truly independent. Machine learning uses datasets (<span class="katex"><span class="katex-mathml"></span><span aria-hidden="true" class="katex-html"><span class="base"><span style="height:0.6833em;" class="strut"></span><span style="margin-right:0.02778em;" class="mord mathnormal">D</span></span></span></span>) for training, data mining leans on statistical measures to validate what it finds, and statistics underlies both. Think of it less as three isolated boxes and more as three different <em>lenses</em> pointed at data.</p>
+<div class="plantuml"><img src="https://www.plantuml.com/plantuml/svg/~1U5vraTrg6q4CHk_dARuaDmtOUG13VWYclKcWa8jI20HvH-iLp6WMZQQnM_BkPRs1E0cv4tmwHoFDJNKoRpc5az5ecmc9zgKvQcOdfP2uTtY1oNPmH37kN8g6C1MasyGuVN1ogIvTVTHltqlJI5FF-IceeZfvnTdTnF_cbChpCRec9zoBYcuVTOrB_DizoSi1ZFcLkasDZvbxwWPHnXsJpM3_v0CxhR33yWhx0vxJA_x3c3M4-HtBM9vrUJN9LsWQsKRH-Y7CwLqOCouEwrzCqXNA7xP4Omr1YpCsnRrab7vUDVoqig6D9F4zebGtsRJf77KHkg9HffeInhUsHRYbFLTOIxo0QC_6sd5WZPX6V1eKS_WraADLxbj2TMkTD-DG32Eviobu9zKhHB6-_jgKqspgcnx-5LbKilpb6dnWZCPHve3DYXsRRbXZo-a_1SJCem"></div>
+<p>Breaking each discipline down further into its "core ingredients":</p>
+<table>
+<thead>
+<tr>
+<th>Discipline</th>
+<th>Core Question</th>
+<th>Typical Outputs</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Data Mining</strong></td>
+<td>What useful structure or pattern exists in <span class="katex"><span class="katex-mathml"></span><span aria-hidden="true" class="katex-html"><span class="base"><span style="height:0.6833em;" class="strut"></span><span style="margin-right:0.02778em;" class="mord mathnormal">D</span></span></span></span>?</td>
+<td>Association rules, clusters, summaries</td>
+</tr>
+<tr>
+<td><strong>Machine Learning</strong></td>
+<td>What function <span class="katex"><span class="katex-mathml"></span><span aria-hidden="true" class="katex-html"><span class="base"><span style="height:0.8889em;vertical-align:-0.1944em;" class="strut"></span><span style="margin-right:0.10764em;" class="mord mathnormal">f</span></span></span></span> minimizes the prediction error?</td>
+<td>Predictors, classifiers</td>
+</tr>
+<tr>
+<td><strong>Statistics</strong></td>
+<td>How is the data actually generated (modeling the data-generation process)?</td>
+<td>Parameter estimates, inferences</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p><strong>Note for Review:</strong> Don't lose sleep memorizing this table. The instructor is explicit that this isn't something you'll be quizzed on verbatim — the real point is to develop the instinct to ask *"which flavor of question am I actually asking?"* before you pick a technique. The same dataset can support a statistics question, an ML question, and a data mining question simultaneously.</p>
+</blockquote>
+<p>Concretely, this leads to the following associations:</p>
+<ul>
+<li><strong>Data Mining</strong> → structure/patterns → <strong>association rules</strong>, <strong>clustering</strong>, <strong>summaries</strong>.</li>
+<li><strong>Machine Learning</strong> → minimizing prediction error → designing a <strong>predictor</strong> or <strong>classifier</strong>.</li>
+<li><strong>Statistics</strong> → modeling the data-generation process → <strong>parameter estimation</strong> and <strong>inference</strong>.</li>
+</ul>
+<p>brucks</p>
+<hr>
+<h2 class="atx" id="the-statistics-angle-mean-marks-and-the-sample-population-trap">The Statistics Angle: Mean Marks and the Sample-Population Trap</h2>
+<p>Here's a deceptively simple question, the kind that predates both machine learning and data mining as named disciplines:</p>
+<blockquote>
+<p><strong>How are the mean marks distributed?</strong></p>
+</blockquote>
+<p>Imagine you have several courses, and for each course you compute the class mean:</p>
+<ul>
+<li>Course <span class="katex"><span class="katex-mathml"></span><span aria-hidden="true" class="katex-html"><span class="base"><span style="height:0.8333em;vertical-align:-0.15em;" class="strut"></span><span class="mord"><span style="margin-right:0.07153em;" class="mord mathnormal">C</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span style="height:0.3011em;" class="vlist"><span style="top:-2.55em;margin-left:-0.0715em;margin-right:0.05em;"><span style="height:2.7em;" class="pstrut"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span style="height:0.15em;" class="vlist"><span></span></span></span></span></span></span></span></span></span>: mean <span class="katex"><span class="katex-mathml"></span><span aria-hidden="true" class="katex-html"><span class="base"><span style="height:0.3669em;" class="strut"></span><span class="mrel">=</span><span style="margin-right:0.2778em;" class="mspace"></span></span><span class="base"><span style="height:0.6444em;" class="strut"></span><span class="mord">57.9</span></span></span></span></li>
+<li>Course <span class="katex"><span class="katex-mathml"></span><span aria-hidden="true" class="katex-html"><span class="base"><span style="height:0.8333em;vertical-align:-0.15em;" class="strut"></span><span class="mord"><span style="margin-right:0.07153em;" class="mord mathnormal">C</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span style="height:0.3011em;" class="vlist"><span style="top:-2.55em;margin-left:-0.0715em;margin-right:0.05em;"><span style="height:2.7em;" class="pstrut"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span style="height:0.15em;" class="vlist"><span></span></span></span></span></span></span></span></span></span>: mean <span class="katex"><span class="katex-mathml"></span><span aria-hidden="true" class="katex-html"><span class="base"><span style="height:0.3669em;" class="strut"></span><span class="mrel">=</span><span style="margin-right:0.2778em;" class="mspace"></span></span><span class="base"><span style="height:0.6444em;" class="strut"></span><span class="mord">65.74</span></span></span></span></li>
+<li>Course <span class="katex"><span class="katex-mathml"></span><span aria-hidden="true" class="katex-html"><span class="base"><span style="height:0.8333em;vertical-align:-0.15em;" class="strut"></span><span class="mord"><span style="margin-right:0.07153em;" class="mord mathnormal">C</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span style="height:0.3011em;" class="vlist"><span style="top:-2.55em;margin-left:-0.0715em;margin-right:0.05em;"><span style="height:2.7em;" class="pstrut"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">3</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span style="height:0.15em;" class="vlist"><span></span></span></span></span></span></span></span></span></span>: mean <span class="katex"><span class="katex-mathml"></span><span aria-hidden="true" class="katex-html"><span class="base"><span style="height:0.3669em;" class="strut"></span><span class="mrel">=</span><span style="margin-right:0.2778em;" class="mspace"></span></span><span class="base"><span style="height:0.6444em;" class="strut"></span><span class="mord">47.49</span></span></span></span></li>
+<li>… and so on for every course.</li>
+</ul>
+<p>You could ask how these means are distributed relative to one another, or how an individual student's average sits relative to their peers. This looks harmless, but there's a catch hiding in plain sight: <strong>the question never specifies <em>which</em> students.</strong> Mean marks of whom? Online BSc students only? On-campus students? Students from other universities entirely? The question, as posed, is wide open.</p>
+<p>This is exactly where the concept of <strong>sample vs. population</strong> enters. You typically only have access to a <strong>sample</strong> — say, one batch of students — but the goal is usually to draw a conclusion about the <strong>population</strong> at large (students in general). That leap from sample to population is called <strong>inference</strong> (or inferential modeling), and it is one of the oldest and most central ideas in statistics.</p>
+<div class="plantuml"><img src="https://www.plantuml.com/plantuml/svg/~1U5vDpJqAma0G1U1-Jp76EXUma60ZWeNW2ORDIroO_M5djl3saYMetJputfj9ZQkrAEvGAg-HIVYTcv5662TsWiN8CjMmlepcKE4jvEIQmhE2XYV78XY8bRIVTBnlzY8DF_N8fGblpIxBD-xwMe7aze6nFnlF_-n4jxIW8dcu2MbkKJucMqF2"></div>
+<blockquote>
+<p><strong>Note for Review:</strong> Whenever a question sounds like "what is the average/typical value of X?", your first instinct should be to ask *"average over which population, and is my sample actually representative of it?"* This single habit prevents a huge fraction of bad conclusions in data analysis.</p>
+</blockquote>
+<hr>
+<h2 class="atx" id="the-data-mining-angle-patterns-rules-clusters-and-anomalies">The Data Mining Angle: Patterns, Rules, Clusters, and Anomalies</h2>
+<p>Now consider the same flavor of exercise from the data mining side. Suppose you have a dataset <span class="katex"><span class="katex-mathml"></span><span aria-hidden="true" class="katex-html"><span class="base"><span style="height:0.6833em;" class="strut"></span><span style="margin-right:0.02778em;" class="mord mathnormal">D</span></span></span></span> consisting of <span class="katex"><span class="katex-mathml"></span><span aria-hidden="true" class="katex-html"><span class="base"><span style="height:0.4306em;" class="strut"></span><span class="mord mathnormal">n</span></span></span></span> data points (possibly large vectors):</p>
+<span class="katex-display"><span class="katex"><span class="katex-mathml"></span><span aria-hidden="true" class="katex-html"><span class="base"><span style="height:0.6833em;" class="strut"></span><span style="margin-right:0.02778em;" class="mord mathnormal">D</span><span style="margin-right:0.2778em;" class="mspace"></span><span class="mrel">=</span><span style="margin-right:0.2778em;" class="mspace"></span></span><span class="base"><span style="height:1em;vertical-align:-0.25em;" class="strut"></span><span class="mopen">{</span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span style="height:0.3117em;" class="vlist"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span style="height:2.7em;" class="pstrut"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span style="height:0.15em;" class="vlist"><span></span></span></span></span></span></span><span class="mclose"><span class="mclose">}</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span style="height:0.7144em;" class="vlist"><span style="top:-2.453em;margin-left:0em;margin-right:0.05em;"><span style="height:2.7em;" class="pstrut"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">i</span><span class="mrel mtight">=</span><span class="mord mtight">1</span></span></span></span><span style="top:-3.113em;margin-right:0.05em;"><span style="height:2.7em;" class="pstrut"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">n</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span style="height:0.247em;" class="vlist"><span></span></span></span></span></span></span></span></span></span></span><p>The goal of data mining is to extract <strong>useful patterns</strong> from <span class="katex"><span class="katex-mathml"></span><span aria-hidden="true" class="katex-html"><span class="base"><span style="height:0.6833em;" class="strut"></span><span style="margin-right:0.02778em;" class="mord mathnormal">D</span></span></span></span>. This typically shows up in a few recurring forms:</p>
+<p><strong>1. Association Rules</strong> — relating one object or event to another, e.g., <span class="katex"><span class="katex-mathml"></span><span aria-hidden="true" class="katex-html"><span class="base"><span style="height:0.6833em;" class="strut"></span><span class="mord mathnormal">A</span><span style="margin-right:0.2778em;" class="mspace"></span><span class="mrel">→</span><span style="margin-right:0.2778em;" class="mspace"></span></span><span class="base"><span style="height:0.6833em;" class="strut"></span><span style="margin-right:0.05017em;" class="mord mathnormal">B</span></span></span></span>. The classic example is market-basket analysis: if customers who buy product <span class="katex"><span class="katex-mathml"></span><span aria-hidden="true" class="katex-html"><span class="base"><span style="height:0.6833em;" class="strut"></span><span class="mord mathnormal">A</span></span></span></span> also tend to buy product <span class="katex"><span class="katex-mathml"></span><span aria-hidden="true" class="katex-html"><span class="base"><span style="height:0.6833em;" class="strut"></span><span style="margin-right:0.05017em;" class="mord mathnormal">B</span></span></span></span>, that association can directly inform sales strategy (e.g., bundling or shelf placement).</p>
+<div class="plantuml"><img src="https://www.plantuml.com/plantuml/svg/~1U5vjpZiEmZ0G1D0-fnX20qKkG85YrnGS8CrYBuabVv1tBPJR8rDHK8qqUjBCB4fLMuh3uLLfJOH8UsaAIQoKQOZyL6X13UkcyA6oqr3oq9Fo6XdZlHRVdCAC8871yTQjZOt_AVjLzbSPJDCL5XUGI761-W9gYxpaaskY9N4LlBU2HzjXbanH2fIpxzTwPy_3pDct53z3UqXr"></div>
+<p><strong>2. Clustering</strong> — grouping the observations in <span class="katex"><span class="katex-mathml"></span><span aria-hidden="true" class="katex-html"><span class="base"><span style="height:0.6833em;" class="strut"></span><span style="margin-right:0.02778em;" class="mord mathnormal">D</span></span></span></span> into subsets that share internal characteristics:</p>
+<span class="katex-display"><span class="katex"><span class="katex-mathml"></span><span aria-hidden="true" class="katex-html"><span class="base"><span style="height:0.6833em;" class="strut"></span><span style="margin-right:0.02778em;" class="mord mathnormal">D</span><span style="margin-right:0.2778em;" class="mspace"></span><span class="mrel">=</span><span style="margin-right:0.2778em;" class="mspace"></span></span><span class="base"><span style="height:0.8333em;vertical-align:-0.15em;" class="strut"></span><span class="mord"><span style="margin-right:0.07153em;" class="mord mathnormal">C</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span style="height:0.3011em;" class="vlist"><span style="top:-2.55em;margin-left:-0.0715em;margin-right:0.05em;"><span style="height:2.7em;" class="pstrut"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span style="height:0.15em;" class="vlist"><span></span></span></span></span></span></span><span style="margin-right:0.2222em;" class="mspace"></span><span class="mbin">∪</span><span style="margin-right:0.2222em;" class="mspace"></span></span><span class="base"><span style="height:0.8333em;vertical-align:-0.15em;" class="strut"></span><span class="mord"><span style="margin-right:0.07153em;" class="mord mathnormal">C</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span style="height:0.3011em;" class="vlist"><span style="top:-2.55em;margin-left:-0.0715em;margin-right:0.05em;"><span style="height:2.7em;" class="pstrut"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span style="height:0.15em;" class="vlist"><span></span></span></span></span></span></span><span style="margin-right:0.2222em;" class="mspace"></span><span class="mbin">∪</span><span style="margin-right:0.2222em;" class="mspace"></span></span><span class="base"><span style="height:0.8333em;vertical-align:-0.15em;" class="strut"></span><span class="mord"><span style="margin-right:0.07153em;" class="mord mathnormal">C</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span style="height:0.3011em;" class="vlist"><span style="top:-2.55em;margin-left:-0.0715em;margin-right:0.05em;"><span style="height:2.7em;" class="pstrut"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">3</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span style="height:0.15em;" class="vlist"><span></span></span></span></span></span></span></span></span></span></span><p>Even if you have thousands of raw data points, clustering might reveal that they really fall into just a handful of distinct groups, each with its own story (e.g., three different customer behavior patterns hiding inside one month of sales data). Note that clustering is fundamentally an <strong>unsupervised</strong> task — there are no pre-assigned labels; the structure has to emerge from the data itself.</p>
+<div class="plantuml"><img src="https://www.plantuml.com/plantuml/svg/~1U5w5oZ4EWa0GHk5-J_6BDGNG6-9kOkCb9Z0YoUnYTcOBRsyGB4nChDuhlbwDifKexl38D4M2q7Cf1eribCW9tmos8C_JtJ3EcGURb-JMKfg4KGKoKZQ42gG8E5vNUvR2hYWFf8pAIr7Z3D-yaMzsTSdCwGThDzR-OTt6kYyMKDSd-CRjqtwcSpsdiKHv0MttJey"></div>
+<p><strong>3. Anomaly Detection</strong> — flagging observations that are unusual relative to the rest of the data (e.g., a sudden, unexplained spike in sales for one product). On its own, "anomaly detection" is just an English phrase — it carries no mathematical content until it's pinned down. A more rigorous formulation looks like this:</p>
+<blockquote>
+<p>Find <span class="katex"><span class="katex-mathml"></span><span aria-hidden="true" class="katex-html"><span class="base"><span style="height:0.5806em;vertical-align:-0.15em;" class="strut"></span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span style="height:0.3117em;" class="vlist"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span style="height:2.7em;" class="pstrut"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span style="height:0.15em;" class="vlist"><span></span></span></span></span></span></span></span></span></span> whose <strong>probability</strong> is low, or whose <strong>distance</strong> to other data points is unusually large or small relative to the rest of the dataset.</p>
+</blockquote>
+<p>brucks</p>
+<p>This is the crucial move: probability can be defined precisely, distance can be defined precisely (Euclidean distance, etc.), and "large/small" can be operationalized with a threshold (e.g., flag anything with distance below 0.1 as anomalous). Only once "anomaly" is translated into probability and distance does it become something you can actually <em>compute</em>.</p>
+<div class="plantuml"><img src="https://www.plantuml.com/plantuml/svg/~1U5vLZijgmq0CHVVp5MgoII6X-ovA2dri2eLcLJ0KnLPiWKPZHXfSz-kB7uLcTHT7klSSpJ5xYH9k-enjH10SKt6mI8wAGUZYu0aojvr3mvbgvwHXIjHM23QFcYBA24_a2wnqzwoji7NWbECUD454xsutW0Qqekq99LutlR0syFt5C7J92FgSpdXcOHyhPGD9mnxUFrRQi3bgJJCgMgoWo0Y2kQKxYoWopqt3i7sRz5ypqPNvoT7Pd6khT7T9HHkS_1TFStHRFpz990qX_BaV3WzByVqS5D6vHgcqxZ1ZxPJvPwuAIyk_-w8DvPxLmf6qAL5-0LlrYx4"></div>
+<h3 class="atx" id="statistics-as-the-foundation">Statistics as the Foundation</h3>
+<p>This naturally leads to a broader point worth internalizing:</p>
+<blockquote>
+<p><strong>Statistics is the foundation of both machine learning and data mining</strong> — and of plenty of other fields too, from communication systems to signal processing to robotics. Anywhere you need to <em>quantify</em> uncertainty or structure, statistics is doing the heavy lifting underneath.</p>
+</blockquote>
+<p>Practically, this means: if your statistics fundamentals feel shaky, now is the ideal time to shore them up, since every advanced technique in this course eventually falls back on probability and distributions.</p>
+<hr>
+<h2 class="atx" id="worked-example-the-hospital-with-a-million-records">Worked Example: The Hospital with a Million Records</h2>
+<p>Consider a hospital with roughly 1 million patient records — call this dataset <span class="katex"><span class="katex-mathml"></span><span aria-hidden="true" class="katex-html"><span class="base"><span style="height:0.6833em;" class="strut"></span><span style="margin-right:0.02778em;" class="mord mathnormal">D</span></span></span></span>. The exact same dataset can support three structurally different kinds of questions, one from each discipline.</p>
+<h3 class="atx" id="question-1-statistics-is-blood-pressure-associated-with-stroke-risk">Question 1 (Statistics): Is blood pressure associated with stroke risk?</h3>
+<p>At face value, this sounds like a plain yes/no question. But mathematically, it should be translated into estimating a <strong>conditional probability</strong>:</p>
+<span class="katex-display"><span class="katex"><span class="katex-mathml"></span><span aria-hidden="true" class="katex-html"><span class="base"><span style="height:1em;vertical-align:-0.25em;" class="strut"></span><span style="margin-right:0.13889em;" class="mord mathnormal">P</span><span class="mopen">(</span><span class="mord text"><span class="mord">Stroke</span></span><span style="margin-right:0.2778em;" class="mspace"></span><span class="mrel">∣</span><span style="margin-right:0.2778em;" class="mspace"></span></span><span class="base"><span style="height:1em;vertical-align:-0.25em;" class="strut"></span><span class="mord text"><span class="mord">BP</span></span><span class="mclose">)</span></span></span></span></span><p>and this in turn gets addressed with <strong>hypothesis testing</strong>, which we'll cover briefly later in the course. Crucially, this question is <em>generic</em> — it isn't asking "does this particular dataset show BP linked to stroke," it's asking whether the relationship holds <strong>beyond</strong> this one sample, i.e., a claim about the broader patient population (even though 1 million patients is nowhere close to "everyone"). Any honest answer will come with some associated uncertainty rather than a flat "yes" or "no."</p>
+<h3 class="atx" id="question-2-machine-learning-given-a-patientand39s-features-will-they-have-a-stroke">Question 2 (Machine Learning): Given a patient's features, will they have a stroke?</h3>
+<p>Here the task shifts. Using the dataset <span class="katex"><span class="katex-mathml"></span><span aria-hidden="true" class="katex-html"><span class="base"><span style="height:0.6833em;" class="strut"></span><span style="margin-right:0.02778em;" class="mord mathnormal">D</span></span></span></span>, the patient features (BP, age, illness history, treatment, medication, etc.) are used to train a model — a predictor or classifier — so that given a <strong>new</strong> patient (one not in <span class="katex"><span class="katex-mathml"></span><span aria-hidden="true" class="katex-html"><span class="base"><span style="height:0.6833em;" class="strut"></span><span style="margin-right:0.02778em;" class="mord mathnormal">D</span></span></span></span>), the model outputs a prediction:</p>
+<span class="katex-display"><span class="katex"><span class="katex-mathml"></span><span aria-hidden="true" class="katex-html"><span class="base"><span style="height:1em;vertical-align:-0.25em;" class="strut"></span><span style="margin-right:0.10764em;" class="mord mathnormal">f</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mclose">)</span><span style="margin-right:0.2778em;" class="mspace"></span><span class="mrel">→</span><span style="margin-right:0.2778em;" class="mspace"></span></span><span class="base"><span style="height:1em;vertical-align:-0.25em;" class="strut"></span><span class="mopen">{</span><span class="mord text"><span class="mord">stroke</span></span><span class="mpunct">,</span><span style="margin-right:0.1667em;" class="mspace"></span><span class="mord text"><span class="mord">no&nbsp;stroke</span></span><span class="mclose">}</span></span></span></span></span><p>This is a binary classification problem. The key word here is <strong>generalization</strong>: the whole point is to say something useful about a patient who is <em>not</em> already in the training data (if the patient were already in <span class="katex"><span class="katex-mathml"></span><span aria-hidden="true" class="katex-html"><span class="base"><span style="height:0.6833em;" class="strut"></span><span style="margin-right:0.02778em;" class="mord mathnormal">D</span></span></span></span>, there'd be nothing to predict — you'd already know the outcome). Generalization is really just inference wearing an ML hat — under the hood, you're still leaning heavily on statistics.</p>
+<h3 class="atx" id="question-3-data-mining-what-unexpected-or-new-pattern-emerges-from-the-data">Question 3 (Data Mining): What unexpected or new pattern emerges from the data?</h3>
+<p>This is the widest and vaguest of the three: no mention of stroke, BP, age, or any specific variable. Just: look at the data, look at correlations across features, and tell me if anything interesting or unexpected shows up. This falls squarely under <strong>knowledge discovery</strong>, and it is naturally viewed from an <strong>unsupervised</strong> perspective (as opposed to ML, which — in this framing — is more supervised, though ML absolutely can be unsupervised too; the boundaries aren't rigid).</p>
+<div class="plantuml"><img src="https://www.plantuml.com/plantuml/svg/~1U5vbqKrh6q4C1k3x_egtoSK6Ry3sRGzf28OSya623w6m5sL7tXMTrQndj7PCs_zU9dPeJ6-2aHvUQMwIKRInzyMt8LBR4pmTmcX8FHif5HO6MC1RC0izd4HkJ88MHIv8My-uM95HOiEgriaSlNWlGJ6G2QiXSXEYIzCBKC8Abm_ITdRhHpupNkOLraOcoQH9jJvFrXR3JyPlt3vFltyCR-UdwH_iVTX_ZV2ogF18JIVAU62AAjhMkfcyJr5UurVwi6RGW6FvvmWkJk1TPDOpRraXhuL7ELAl7HcKztajuwZWdcFBwPHiYSir-JuVPeMolCvPAwI16zb8CwkrEmp1EawIIXTbn_hPjq258RAJncJ7iretJ3P6BjyeiVliMg82lmy-HB8G3xDQHqtZm74dkQlGO8oOBukmmNPUF56COS_9i1qvvI-xAfwONSA_9B3yekrLmUgGYV-WPV4gxbovrx3tx5g6azI47SV3L-26rOsz_mkU_ixH"></div>
+<p>The takeaway: all three questions rely on probability and statistics somewhere under the hood, but they differ enormously in <strong>scope</strong> — from a narrow, specific hypothesis (Q1), to a feature-driven prediction task (Q2), to a fully open-ended exploratory search (Q3).</p>
+<p>brucks</p>
+<hr>
+<h2 class="atx" id="worked-example-the-streaming-service">Worked Example: The Streaming Service</h2>
+<p>Consider a streaming platform (think Netflix, Spotify, Amazon-style services) and viewers who either watched a <strong>science documentary</strong> or didn't, and separately, either watched an <strong>AI documentary</strong> or didn't. The raw counts look like this:</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Watched AI documentary</th>
+<th>Did not watch AI documentary</th>
+<th>Total</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Watched Science documentary</strong></td>
+<td>300</td>
+<td>700</td>
+<td>1000</td>
+</tr>
+<tr>
+<td><strong>Did not watch Science documentary</strong></td>
+<td>1200</td>
+<td>3800</td>
+<td>5000</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td>1500</td>
+<td>4500</td>
+<td>6000</td>
+</tr>
+</tbody></table>
+<p>From this contingency table, two simple percentages fall out immediately:</p>
+<ul>
+<li>Among science-documentary viewers, the fraction who also watched an AI documentary: <span class="katex"><span class="katex-mathml"></span><span aria-hidden="true" class="katex-html"><span class="base"><span style="height:2.0074em;vertical-align:-0.686em;" class="strut"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span style="height:1.3214em;" class="vlist"><span style="top:-2.314em;"><span style="height:3em;" class="pstrut"></span><span class="mord"><span class="mord">1000</span></span></span><span style="top:-3.23em;"><span style="height:3em;" class="pstrut"></span><span style="border-bottom-width:0.04em;" class="frac-line"></span></span><span style="top:-3.677em;"><span style="height:3em;" class="pstrut"></span><span class="mord"><span class="mord">300</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span style="height:0.686em;" class="vlist"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span style="margin-right:0.2778em;" class="mspace"></span><span class="mrel">=</span><span style="margin-right:0.2778em;" class="mspace"></span></span><span class="base"><span style="height:0.8056em;vertical-align:-0.0556em;" class="strut"></span><span class="mord">30%</span></span></span></span></li>
+<li>Among viewers who did <strong>not</strong> watch a science documentary, the fraction who still watched an AI documentary: <span class="katex"><span class="katex-mathml"></span><span aria-hidden="true" class="katex-html"><span class="base"><span style="height:2.0074em;vertical-align:-0.686em;" class="strut"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span style="height:1.3214em;" class="vlist"><span style="top:-2.314em;"><span style="height:3em;" class="pstrut"></span><span class="mord"><span class="mord">5000</span></span></span><span style="top:-3.23em;"><span style="height:3em;" class="pstrut"></span><span style="border-bottom-width:0.04em;" class="frac-line"></span></span><span style="top:-3.677em;"><span style="height:3em;" class="pstrut"></span><span class="mord"><span class="mord">1200</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span style="height:0.686em;" class="vlist"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span style="margin-right:0.2778em;" class="mspace"></span><span class="mrel">=</span><span style="margin-right:0.2778em;" class="mspace"></span></span><span class="base"><span style="height:0.8056em;vertical-align:-0.0556em;" class="strut"></span><span class="mord">24%</span></span></span></span></li>
+</ul>
+<div class="vega-lite vega-embed" role="graphics-document" aria-roledescription="visualization" aria-label="Percentage watching AI documentary, by science documentary viewing status" style="cursor: default;"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="marks" width="405" height="320" viewBox="0 0 405 320" style="background-color: rgb(255, 255, 255);"><g fill="none" stroke-miterlimit="10" transform="translate(50,29)"><g class="mark-group role-frame root" role="graphics-object" aria-roledescription="group mark container"><g transform="translate(0,0)"><path class="background" aria-hidden="true" d="M0.5,0.5h350v250h-350Z" fill="transparent" stroke="#ddd"></path><g><g class="mark-group role-axis" aria-hidden="true"><g transform="translate(0.5,0.5)"><path class="background" aria-hidden="true" d="M0,0h0v0h0Z" pointer-events="none"></path><g><g class="mark-rule role-axis-grid" pointer-events="none"><line transform="translate(0,250)" x2="350" y2="0" stroke="#ddd" stroke-width="1" opacity="1"></line><line transform="translate(0,208)" x2="350" y2="0" stroke="#ddd" stroke-width="1" opacity="1"></line><line transform="translate(0,167)" x2="350" y2="0" stroke="#ddd" stroke-width="1" opacity="1"></line><line transform="translate(0,125)" x2="350" y2="0" stroke="#ddd" stroke-width="1" opacity="1"></line><line transform="translate(0,83)" x2="350" y2="0" stroke="#ddd" stroke-width="1" opacity="1"></line><line transform="translate(0,42)" x2="350" y2="0" stroke="#ddd" stroke-width="1" opacity="1"></line><line transform="translate(0,0)" x2="350" y2="0" stroke="#ddd" stroke-width="1" opacity="1"></line></g></g><path class="foreground" aria-hidden="true" d="" pointer-events="none" display="none"></path></g></g><g class="mark-group role-axis" role="graphics-symbol" aria-roledescription="axis" aria-label="X-axis titled 'Viewer Group' for a discrete scale with 2 values: Did Not Watch Science Doc, Watched Science Doc"><g transform="translate(0.5,250.5)"><path class="background" aria-hidden="true" d="M0,0h0v0h0Z" pointer-events="none"></path><g><g class="mark-rule role-axis-tick" pointer-events="none"><line transform="translate(87,0)" x2="0" y2="3" stroke="#888" stroke-width="1" opacity="1"></line><line transform="translate(262,0)" x2="0" y2="3" stroke="#888" stroke-width="1" opacity="1"></line></g><g class="mark-text role-axis-label" pointer-events="none"><text text-anchor="middle" transform="translate(87,16)" font-family="Benton Gothic, sans-serif" font-size="11.5px" font-weight="normal" fill="#000" opacity="1">Did Not Watch Science Doc</text><text text-anchor="middle" transform="translate(262,16)" font-family="Benton Gothic, sans-serif" font-size="11.5px" font-weight="normal" fill="#000" opacity="1">Watched Science Doc</text></g><g class="mark-rule role-axis-domain" pointer-events="none"><line transform="translate(0,0)" x2="350" y2="0" stroke="#888" stroke-width="1" opacity="1"></line></g><g class="mark-text role-axis-title" pointer-events="none"><text text-anchor="middle" transform="translate(175,32.5)" font-family="Benton Gothic Bold, sans-serif" font-size="13px" font-weight="normal" fill="#000" opacity="1">Viewer Group</text></g></g><path class="foreground" aria-hidden="true" d="" pointer-events="none" display="none"></path></g></g><g class="mark-group role-axis" role="graphics-symbol" aria-roledescription="axis" aria-label="Y-axis titled '% Who Watched AI Documentary' for a linear scale with values from 0 to 30"><g transform="translate(0.5,0.5)"><path class="background" aria-hidden="true" d="M0,0h0v0h0Z" pointer-events="none"></path><g><g class="mark-rule role-axis-tick" pointer-events="none"><line transform="translate(0,250)" x2="-2" y2="0" stroke="#888" stroke-width="1" opacity="1"></line><line transform="translate(0,208)" x2="-2" y2="0" stroke="#888" stroke-width="1" opacity="1"></line><line transform="translate(0,167)" x2="-2" y2="0" stroke="#888" stroke-width="1" opacity="1"></line><line transform="translate(0,125)" x2="-2" y2="0" stroke="#888" stroke-width="1" opacity="1"></line><line transform="translate(0,83)" x2="-2" y2="0" stroke="#888" stroke-width="1" opacity="1"></line><line transform="translate(0,42)" x2="-2" y2="0" stroke="#888" stroke-width="1" opacity="1"></line><line transform="translate(0,0)" x2="-2" y2="0" stroke="#888" stroke-width="1" opacity="1"></line></g><g class="mark-text role-axis-label" pointer-events="none"><text text-anchor="end" transform="translate(-4,253)" font-family="Benton Gothic, sans-serif" font-size="11.5px" font-weight="normal" fill="#000" opacity="1">0</text><text text-anchor="end" transform="translate(-4,211.33333333333334)" font-family="Benton Gothic, sans-serif" font-size="11.5px" font-weight="normal" fill="#000" opacity="1">5</text><text text-anchor="end" transform="translate(-4,169.66666666666669)" font-family="Benton Gothic, sans-serif" font-size="11.5px" font-weight="normal" fill="#000" opacity="1">10</text><text text-anchor="end" transform="translate(-4,128)" font-family="Benton Gothic, sans-serif" font-size="11.5px" font-weight="normal" fill="#000" opacity="1">15</text><text text-anchor="end" transform="translate(-4,86.33333333333334)" font-family="Benton Gothic, sans-serif" font-size="11.5px" font-weight="normal" fill="#000" opacity="1">20</text><text text-anchor="end" transform="translate(-4,44.66666666666666)" font-family="Benton Gothic, sans-serif" font-size="11.5px" font-weight="normal" fill="#000" opacity="1">25</text><text text-anchor="end" transform="translate(-4,3)" font-family="Benton Gothic, sans-serif" font-size="11.5px" font-weight="normal" fill="#000" opacity="1">30</text></g><g class="mark-rule role-axis-domain" pointer-events="none"><line transform="translate(0,250)" x2="0" y2="-250" stroke="#888" stroke-width="1" opacity="1"></line></g><g class="mark-text role-axis-title" pointer-events="none"><text text-anchor="start" transform="translate(-45,-14)" font-family="Benton Gothic Bold, sans-serif" font-size="13px" font-weight="normal" fill="#000" opacity="1">% Who Watched AI Documentary</text></g></g><path class="foreground" aria-hidden="true" d="" pointer-events="none" display="none"></path></g></g><g class="mark-rect role-mark marks" role="graphics-object" aria-roledescription="rect mark container"><path aria-label="Viewer Group: Watched Science Doc; % Who Watched AI Documentary: 30; group: Watched Science Doc" role="graphics-symbol" aria-roledescription="bar" d="M183.75,0h157.5v250h-157.5Z" fill="#F59E0B"></path><path aria-label="Viewer Group: Did Not Watch Science Doc; % Who Watched AI Documentary: 24; group: Did Not Watch Science Doc" role="graphics-symbol" aria-roledescription="bar" d="M8.75,49.999999999999986h157.5v200h-157.5Z" fill="#8B5CF6"></path></g></g><path class="foreground" aria-hidden="true" d="" display="none"></path></g></g></g></svg><form class="vega-bindings"></form></div>
+<p>Computing those two percentages is a genuinely trivial exercise in data mining — it's literally just division. And this is exactly where a common mistake creeps in: <strong>stopping here</strong>. Reporting "30% did X, 24% did Y" is a number, but on its own it isn't very <em>informative</em>. The far more interesting follow-up question is:</p>
+<blockquote>
+<p><strong>Is the observed pattern (30% vs. 24%) random, or systematic?</strong></p>
+</blockquote>
+<p>"Random" and "systematic" sound like everyday English words, but in this context they have precise mathematical meanings rooted in probability. This is where you'd bring in a <strong>statistical (hypothesis) test</strong>: you treat "watching the science documentary" as the potential <em>cause</em>, and "watching (or not watching) the AI documentary" as the <em>effect</em>, and you use a test statistic and its distribution to judge whether the 6-point gap (30% vs. 24%) is big enough to reflect a genuine relationship, or small enough to plausibly be noise.</p>
+<blockquote>
+<p><strong>Note for Review:</strong> This is a great mini-template for real-world data mining work: (1) extract the simple descriptive pattern first (percentages, counts, means — the easy part), then (2) test whether that pattern is statistically meaningful before you act on it. Skipping step 2 is how "insights" decks end up full of noise dressed up as signal.</p>
+</blockquote>
+<hr>
+<h2 class="atx" id="four-fundamental-questions-about-data">Four Fundamental Questions About Data</h2>
+<p>Stepping back from specific examples, before applying any data mining technique to a dataset, there are four questions worth asking about the data itself. These aren't deeply conceptual on their own — they're mostly matters of definition and discipline — but they recur constantly and will structure much of the course going forward.</p>
+<ol>
+<li><strong>What are the attributes or features of the data?</strong></li>
+<li><strong>How do you summarize the data?</strong> (The way you choose to summarize directly shapes what conclusions you can later draw — this is not a neutral step.)</li>
+<li><strong>Is the raw data appropriate for data mining?</strong> (Do you need preprocessing — handling noise, missing values, cleaning — before applying any technique at all?)</li>
+<li><strong>Is the data telling a story or conclusion <em>beyond itself</em>?</strong> (i.e., can you generalize beyond the specific dataset you have?)</li>
+</ol>
+<div class="plantuml"><img src="https://www.plantuml.com/plantuml/svg/~1U5vrZxrgmq0GX7iznSIkdQ2VIeLZWY49f34fGa3Dsbh91tUtqjqUHddw4A721gVQOTdvPdONbO8cPxE78L3l29OcIOheMCbJfZ901KTH5OVM13wf4P_zJVAzPQpsfBG2HRIaXFM7wS_wOXDVtnpo6bzdKb1Ww9aRJwh179DoVEgOD0MEppDbp1V6Qs2-2JeKDTxaWbOmIMfyJCvHC3yCeukt-DTRrdYF27IPQpQUXY7840mfevFG-BczCzxuVe6L2-oRhPNBpJjLZRrmX54eMmj2L0bJuuyyYMzXDBBj5aw5zITP9pxBvf3DPeinlzB5bIwlT9MDEHuVjnWhr32-iudzYMCs5lVNvTtrZdsRdFq5k-IZgG"></div>
+<p>Question 4 is by far the hardest, and it is the one most directly tied to <strong>generalization</strong> — the same idea that showed up earlier with the hospital's ML classifier predicting stroke risk for a <em>new</em> patient. Questions 1–3 are relatively independent of each other, but Question 4 depends on all of them: how you define attributes, how you summarize, and how (or whether) you clean the data will all shape whether any conclusion you draw actually holds up beyond the dataset in front of you.</p>
+<p>These four questions won't be fully answered in a single lecture — they form the backbone of the discussions to come across the next several lectures, and it's worth keeping them in mind (and revisiting/refining them) as the course progresses.</p>
+<p>brucks</p>
+<hr>
+<h2 class="atx" id="think-about-it">Think About It</h2>
+<p>A few questions to chew on before the next lecture — these aren't recall questions, they're meant to make you reason a bit:</p>
+<ol>
+<li><p>Suppose a retailer finds that "customers who buy sunscreen also buy sunglasses" (an association rule, A → B) with high confidence. Why might this rule be far less "actionable" for a business decision than it first appears, and what statistical check would you want to run before trusting it enough to act on it (e.g., changing store layout or promotions)?</p>
+</li>
+<li><p>The hospital example split one dataset into three questions of increasing "width" (BP-stroke association → per-patient stroke prediction → open-ended pattern discovery). If you only had resources to pursue <em>one</em> of these three lines of analysis for a hospital trying to reduce stroke incidents, which would you prioritize, and what would you be giving up by not pursuing the other two?</p>
+</li>
+<li><p>In the streaming service example, a 30% vs. 24% gap was called out as needing a test for "random vs. systematic." Construct a scenario where a <em>much larger</em> percentage gap (say 60% vs. 10%) could still plausibly be "random noise," and a scenario where a <em>much smaller</em> gap (say 31% vs. 30%) could still be strongly systematic. What property of the data (beyond the raw percentages) is doing the real work in each case?</p>
+</li>
+<li><p>The lecture argues that "anomaly detection" is meaningless without translating it into probability or distance. Pick a real-world anomaly detection scenario (e.g., credit card fraud, a factory sensor reading, a sudden traffic spike on a website) and propose two <em>different</em> mathematical formalizations of "anomaly" for it. Would the two formalizations flag the same events as anomalous, or could they disagree — and why?</p>
+</li>
+<li><p>Question 4 ("Is the data telling a story beyond itself?") was called the hardest of the four fundamental questions, and it was said to depend on Questions 1–3. Construct a concrete example where a poor choice made in Question 2 (how you summarize the data) would cause you to draw a conclusion in Question 4 that does <em>not</em> actually generalize beyond your specific dataset — i.e., show how a summarization choice can quietly manufacture a false "story."</p>
+</li>
+</ol>
+</article>
+</body>
+</html>

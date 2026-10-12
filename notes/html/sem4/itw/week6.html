@@ -1,0 +1,629 @@
+
+<style id="libron-font-injection">
+@font-face {
+  font-family: 'Libron';
+  src: url('../../../../Libron_Web/Libron-Regular.woff2') format('woff2'),
+       url('../../../../Libron_Web/Libron-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Libron';
+  src: url('../../../../Libron_Web/Libron-Bold.woff2') format('woff2'),
+       url('../../../../Libron_Web/Libron-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Libron';
+  src: url('../../../../Libron_Web/Libron-Italic.woff2') format('woff2'),
+       url('../../../../Libron_Web/Libron-Italic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Libron';
+  src: url('../../../../Libron_Web/Libron-BoldItalic.woff2') format('woff2'),
+       url('../../../../Libron_Web/Libron-BoldItalic.ttf') format('truetype');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+html, body, .markdown-body, h1, h2, h3, h4, h5, h6, p, span, li, a, td, th {
+  font-family: 'Libron', serif, -apple-system, BlinkMacSystemFont !important;
+}
+
+body {
+  padding: 1.5rem 2rem !important;
+  max-width: 900px !important;
+  margin: 0 auto !important;
+}
+
+/* Dark mode theme styles inside iframe */
+[data-theme="dark"] html,
+[data-theme="dark"] body,
+[data-theme="dark"] .markdown-body {
+  background-color: #0a0a0a !important;
+  color: #ededed !important;
+}
+[data-theme="dark"] .markdown-body table tr {
+  background-color: #121212 !important;
+  border-color: #262626 !important;
+}
+[data-theme="dark"] .markdown-body table tr:nth-child(2n) {
+  background-color: #181818 !important;
+}
+[data-theme="dark"] .markdown-body table th,
+[data-theme="dark"] .markdown-body table td {
+  border-color: #2e2e2e !important;
+}
+[data-theme="dark"] .markdown-body pre,
+[data-theme="dark"] .markdown-body code {
+  background-color: #141414 !important;
+  color: #f0f0f0 !important;
+  border-color: #2a2a2a !important;
+}
+[data-theme="dark"] .markdown-body blockquote {
+  color: #999999 !important;
+  border-left-color: #444444 !important;
+}
+[data-theme="dark"] .markdown-body a {
+  color: #58a6ff !important;
+}
+[data-theme="dark"] .markdown-body hr {
+  background-color: #262626 !important;
+}
+</style>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <style>
+  @font-face {
+  font-family: octicons-link;
+  src: url(data:font/woff;charset=utf-8;base64,d09GRgABAAAAAAZwABAAAAAACFQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABEU0lHAAAGaAAAAAgAAAAIAAAAAUdTVUIAAAZcAAAACgAAAAoAAQAAT1MvMgAAAyQAAABJAAAAYFYEU3RjbWFwAAADcAAAAEUAAACAAJThvmN2dCAAAATkAAAABAAAAAQAAAAAZnBnbQAAA7gAAACyAAABCUM+8IhnYXNwAAAGTAAAABAAAAAQABoAI2dseWYAAAFsAAABPAAAAZwcEq9taGVhZAAAAsgAAAA0AAAANgh4a91oaGVhAAADCAAAABoAAAAkCA8DRGhtdHgAAAL8AAAADAAAAAwGAACfbG9jYQAAAsAAAAAIAAAACABiATBtYXhwAAACqAAAABgAAAAgAA8ASm5hbWUAAAToAAABQgAAAlXu73sOcG9zdAAABiwAAAAeAAAAME3QpOBwcmVwAAAEbAAAAHYAAAB/aFGpk3jaTY6xa8JAGMW/O62BDi0tJLYQincXEypYIiGJjSgHniQ6umTsUEyLm5BV6NDBP8Tpts6F0v+k/0an2i+itHDw3v2+9+DBKTzsJNnWJNTgHEy4BgG3EMI9DCEDOGEXzDADU5hBKMIgNPZqoD3SilVaXZCER3/I7AtxEJLtzzuZfI+VVkprxTlXShWKb3TBecG11rwoNlmmn1P2WYcJczl32etSpKnziC7lQyWe1smVPy/Lt7Kc+0vWY/gAgIIEqAN9we0pwKXreiMasxvabDQMM4riO+qxM2ogwDGOZTXxwxDiycQIcoYFBLj5K3EIaSctAq2kTYiw+ymhce7vwM9jSqO8JyVd5RH9gyTt2+J/yUmYlIR0s04n6+7Vm1ozezUeLEaUjhaDSuXHwVRgvLJn1tQ7xiuVv/ocTRF42mNgZGBgYGbwZOBiAAFGJBIMAAizAFoAAABiAGIAznjaY2BkYGAA4in8zwXi+W2+MjCzMIDApSwvXzC97Z4Ig8N/BxYGZgcgl52BCSQKAA3jCV8CAABfAAAAAAQAAEB42mNgZGBg4f3vACQZQABIMjKgAmYAKEgBXgAAeNpjYGY6wTiBgZWBg2kmUxoDA4MPhGZMYzBi1AHygVLYQUCaawqDA4PChxhmh/8ODDEsvAwHgMKMIDnGL0x7gJQCAwMAJd4MFwAAAHjaY2BgYGaA4DAGRgYQkAHyGMF8NgYrIM3JIAGVYYDT+AEjAwuDFpBmA9KMDEwMCh9i/v8H8sH0/4dQc1iAmAkALaUKLgAAAHjaTY9LDsIgEIbtgqHUPpDi3gPoBVyRTmTddOmqTXThEXqrob2gQ1FjwpDvfwCBdmdXC5AVKFu3e5MfNFJ29KTQT48Ob9/lqYwOGZxeUelN2U2R6+cArgtCJpauW7UQBqnFkUsjAY/kOU1cP+DAgvxwn1chZDwUbd6CFimGXwzwF6tPbFIcjEl+vvmM/byA48e6tWrKArm4ZJlCbdsrxksL1AwWn/yBSJKpYbq8AXaaTb8AAHja28jAwOC00ZrBeQNDQOWO//sdBBgYGRiYWYAEELEwMTE4uzo5Zzo5b2BxdnFOcALxNjA6b2ByTswC8jYwg0VlNuoCTWAMqNzMzsoK1rEhNqByEyerg5PMJlYuVueETKcd/89uBpnpvIEVomeHLoMsAAe1Id4AAAAAAAB42oWQT07CQBTGv0JBhagk7HQzKxca2sJCE1hDt4QF+9JOS0nbaaYDCQfwCJ7Au3AHj+LO13FMmm6cl7785vven0kBjHCBhfpYuNa5Ph1c0e2Xu3jEvWG7UdPDLZ4N92nOm+EBXuAbHmIMSRMs+4aUEd4Nd3CHD8NdvOLTsA2GL8M9PODbcL+hD7C1xoaHeLJSEao0FEW14ckxC+TU8TxvsY6X0eLPmRhry2WVioLpkrbp84LLQPGI7c6sOiUzpWIWS5GzlSgUzzLBSikOPFTOXqly7rqx0Z1Q5BAIoZBSFihQYQOOBEdkCOgXTOHA07HAGjGWiIjaPZNW13/+lm6S9FT7rLHFJ6fQbkATOG1j2OFMucKJJsxIVfQORl+9Jyda6Sl1dUYhSCm1dyClfoeDve4qMYdLEbfqHf3O/AdDumsjAAB42mNgYoAAZQYjBmyAGYQZmdhL8zLdDEydARfoAqIAAAABAAMABwAKABMAB///AA8AAQAAAAAAAAAAAAAAAAABAAAAAA==) format('woff');
+}
+
+.markdown-body .octicon {
+  display: inline-block;
+  fill: currentColor;
+  vertical-align: text-bottom;
+}
+
+.markdown-body .anchor {
+  float: left;
+  line-height: 1;
+  margin-left: -20px;
+  padding-right: 4px;
+}
+
+.markdown-body .anchor:focus {
+  outline: none;
+}
+
+.markdown-body h1 .octicon-link,
+.markdown-body h2 .octicon-link,
+.markdown-body h3 .octicon-link,
+.markdown-body h4 .octicon-link,
+.markdown-body h5 .octicon-link,
+.markdown-body h6 .octicon-link {
+  color: #1b1f23;
+  vertical-align: middle;
+  visibility: hidden;
+}
+
+.markdown-body h1:hover .anchor,
+.markdown-body h2:hover .anchor,
+.markdown-body h3:hover .anchor,
+.markdown-body h4:hover .anchor,
+.markdown-body h5:hover .anchor,
+.markdown-body h6:hover .anchor {
+  text-decoration: none;
+}
+
+.markdown-body h1:hover .anchor .octicon-link,
+.markdown-body h2:hover .anchor .octicon-link,
+.markdown-body h3:hover .anchor .octicon-link,
+.markdown-body h4:hover .anchor .octicon-link,
+.markdown-body h5:hover .anchor .octicon-link,
+.markdown-body h6:hover .anchor .octicon-link {
+  visibility: visible;
+}
+
+.markdown-body {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  color: #24292e;
+  line-height: 1.5;
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
+  font-size: 16px;
+  line-height: 1.5;
+  word-wrap: break-word;
+}
+
+.markdown-body .pl-c {
+  color: #6a737d;
+}
+
+.markdown-body .pl-c1,
+.markdown-body .pl-s .pl-v {
+  color: #005cc5;
+}
+
+.markdown-body .pl-e,
+.markdown-body .pl-en {
+  color: #6f42c1;
+}
+
+.markdown-body .pl-s .pl-s1,
+.markdown-body .pl-smi {
+  color: #24292e;
+}
+
+.markdown-body .pl-ent {
+  color: #22863a;
+}
+
+.markdown-body .pl-k {
+  color: #d73a49;
+}
+
+.markdown-body .pl-pds,
+.markdown-body .pl-s,
+.markdown-body .pl-s .pl-pse .pl-s1,
+.markdown-body .pl-sr,
+.markdown-body .pl-sr .pl-cce,
+.markdown-body .pl-sr .pl-sra,
+.markdown-body .pl-sr .pl-sre {
+  color: #032f62;
+}
+
+.markdown-body .pl-smw,
+.markdown-body .pl-v {
+  color: #e36209;
+}
+
+.markdown-body .pl-bu {
+  color: #b31d28;
+}
+
+.markdown-body .pl-ii {
+  background-color: #b31d28;
+  color: #fafbfc;
+}
+
+.markdown-body .pl-c2 {
+  background-color: #d73a49;
+  color: #fafbfc;
+}
+
+.markdown-body .pl-c2:before {
+  content: "=]</code></td>
+<td>A specific attribute whose value <strong>begins with</strong> a specified value</td>
+<td><code>a[href=</code>, <code>$=</code>. Memory hook: <code>~</code> = whole <strong>word</strong> in a list, <code>*</code> = <strong>anywhere</strong> inside, <code>^</code> = <strong>starts</strong> (caret points to the front), <code>$</code> = <strong>ends</strong> (as in regular expressions).</p>
+</blockquote>
+<h3 class="atx" id="94-contextual-selectors-combinators">9.4 Contextual Selectors (Combinators)</h3>
+<p>A <strong>contextual selector</strong> (in CSS3 also called <strong>combinators</strong>) lets you select elements based on their <strong>ancestors, descendants, or siblings</strong> in the document tree. It was added later, but it gives a lot of flexibility.</p>
+<table>
+<thead>
+<tr>
+<th>Selector</th>
+<th>Matches</th>
+<th>Example</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Descendant</strong></td>
+<td>A specified element contained somewhere within another specified element</td>
+<td><code>div p</code></td>
+<td>a <code>&lt;p&gt;</code> contained somewhere within a <code>&lt;div&gt;</code>; it can be any descendant, not just a child</td>
+</tr>
+<tr>
+<td><strong>Child</strong></td>
+<td>A specified element that is a direct child of the specified element</td>
+<td><code>div&gt;h2</code></td>
+<td>an <code>&lt;h2&gt;</code> that is a child of a <code>&lt;div&gt;</code></td>
+</tr>
+<tr>
+<td><strong>Adjacent sibling</strong></td>
+<td>A specified element that is the next sibling (comes directly after)</td>
+<td><code>h3+p</code></td>
+<td>the <strong>first</strong> <code>&lt;p&gt;</code> after any <code>&lt;h3&gt;</code></td>
+</tr>
+<tr>
+<td><strong>General sibling</strong></td>
+<td>All following elements that share the same parent as the specified element</td>
+<td><code>h3~p</code></td>
+<td><strong>all</strong> <code>&lt;p&gt;</code> elements after an <code>&lt;h3&gt;</code> that share the same parent as the <code>&lt;h3&gt;</code></td>
+</tr>
+</tbody></table>
+<p>In short: <code>div p { }</code> matches any <code>&lt;p&gt;</code> inside a <code>&lt;div&gt;</code>; <code>div &gt; p { }</code> matches <strong>only direct children</strong>.</p>
+<div class="plantuml"><img src="https://www.plantuml.com/plantuml/svg/~1U5vbZJ4EmZ0CHVUSmfG5XWxj0H1YOU42I2nMRDf8JXeb3eZRexOPYjY-_9_VFsV5fCMBsSM4WqSG_4n58NjM36Y4dmewGNB3g40kiLKt1MFcW64GXeRSgm7CGB2_pTX52c_x-0Y7zHFiw8IE2nsxYbyJSzZoUTrOgCosOdSMcTv_NkR82OYpvK0OjChx7xaXQDiJnAw6pDRCvkNOcpC7Abw-ShnQCm"></div>
+<ul>
+<li><code>div p</code> selects <strong>both</strong> <code>p</code> elements: any element in the rooted sub-tree under the <code>div</code> is a descendant, however long the chain of parent-child links to reach it.</li>
+<li><code>div &gt; p</code> selects <strong>only the first</strong> <code>p</code>: it must be a direct child, one level below.</li>
+</ul>
+<p>For siblings, consider the tree under <code>body</code>: an <code>h3</code> followed immediately by a <code>p</code> makes them <strong>adjacent</strong> siblings (<code>h3+p</code> hits that <code>p</code>). A <code>p</code> that comes later under the same parent, but with other elements in between, is not adjacent, yet it is still a <strong>general</strong> sibling of the <code>h3</code> (<code>h3~p</code> hits it). Likewise <code>h2</code> and <code>p</code> under the same parent are general siblings, not adjacent ones.</p>
+<table>
+<thead>
+<tr>
+<th>Selector</th>
+<th>Picks</th>
+<th>Needs same parent?</th>
+<th>Needs to be directly next?</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>div p</code></td>
+<td>any descendant <code>p</code></td>
+<td>no</td>
+<td>no</td>
+</tr>
+<tr>
+<td><code>div&gt;p</code></td>
+<td>direct child <code>p</code> only</td>
+<td>yes (the div)</td>
+<td>no</td>
+</tr>
+<tr>
+<td><code>h3+p</code></td>
+<td>the first <code>p</code> right after <code>h3</code></td>
+<td>yes</td>
+<td><strong>yes</strong></td>
+</tr>
+<tr>
+<td><code>h3~p</code></td>
+<td>every later <code>p</code> sibling</td>
+<td>yes</td>
+<td>no</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 class="atx" id="10-when-rules-conflict-cascade-decides">10. When Rules Conflict, Cascade Decides</h2>
+<p>Sooner or later two rules will tell the same element to look different. The <strong>"Cascade"</strong> in CSS refers to <strong>how conflicting rules are handled</strong>. This priority order is set by the W3C.</p>
+<h3 class="atx" id="101-three-sources-of-style">10.1 Three Sources of Style</h3>
+<table>
+<thead>
+<tr>
+<th>Source</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Author-created style</strong></td>
+<td>CSS written by the web developer to style their site; it is what most people mean when they say "CSS".</td>
+</tr>
+<tr>
+<td><strong>User style sheets</strong></td>
+<td>Custom CSS a visitor applies in their own browser (client side) to override how sites look for them, e.g. for <strong>accessibility or preference</strong>.</td>
+</tr>
+<tr>
+<td><strong>Browser style sheets</strong></td>
+<td>The default styles a browser applies to HTML elements when no other CSS is given (also called <strong>"user agent styles"</strong>).</td>
+</tr>
+</tbody></table>
+<p>CSS uses three cascade principles to deal with conflicts: <strong>inheritance</strong>, <strong>specificity</strong>, and <strong>location</strong>.</p>
+<div class="plantuml"><img src="https://www.plantuml.com/plantuml/svg/~1U5vLZy5gmq0CHE_x5MfoIG_vXHBQGodabaCfv2BMiYsGjKQIMVptnHjJqjC8CNgQkNYWnJ99UfaDXmb1S2rBW4yKg9Y4-e0eO3oC0HqRvU2YAMq3wY04Xu-YlN0ErW5i4V83e4E6umrbAlfi_TAHZ0CrqrrFTSI0Nafrw4fLY94WZEYr0HYEr-thkopqpBZDbBddpB7UzJIM2hDHPgTsxoIKenYmFp2-OpwDw5-MQycuTMb1o0XGEs25bgfOHmRLE8Bq0P8Tz4CYfJud-cRLhRp7AjIyzUyfhYbbE9_VW7VrNILnszVakygk5z9kcUGNPkcBs0"></div>
+<h3 class="atx" id="102-inheritance">10.2 Inheritance</h3>
+<p>Some properties flow <strong>down</strong> from an element to its descendants; others do not.</p>
+<ul>
+<li><strong>Inheritable:</strong> font, color, list and text properties.</li>
+<li><strong>Not inheritable:</strong> layout, sizing, border, background and spacing properties.</li>
+</ul>
+<p>Apply a rule to an ancestor and the inheritable properties follow automatically to every descendant. Consider this rule on <code>div</code>:</p>
+<pre><code class="fenced-code-block language-css"><span class="token selector">div</span> <span class="token punctuation">{</span>
+  <span class="token property">font-weight</span><span class="token punctuation">:</span> bold<span class="token punctuation">;</span>    <span class="token comment">/* inherited */</span>
+  <span class="token property">margin</span><span class="token punctuation">:</span> 50px<span class="token punctuation">;</span>         <span class="token comment">/* not inherited */</span>
+  <span class="token property">border</span><span class="token punctuation">:</span> 1pt solid green<span class="token punctuation">;</span>   <span class="token comment">/* not inherited */</span>
+<span class="token punctuation">}</span></code></pre>
+<p>The <code>p</code> elements inside the <code>div</code> <strong>inherit the font weight</strong> but <strong>not the margin and not the border</strong>.</p>
+<div class="plantuml"><img src="https://www.plantuml.com/plantuml/svg/~1U5wDb3rl6p4CXdV-2ZQP7LGwTF5G15swjEZGrOjSodS2g0_SyUpwtnUIN9-2G4as4dn8lZgIzxo8cMNr39_IR4PlaCqrheABjsA20ROdGOaukt4I93VRF-9Y0CY62IDRV9Z4ymEQ1RE1Zpyo-erN-uAnXYfZ3NMOOwHhORBHORAimcIZmuWJjWKgLa-HgdfKBwvhN7VYQttpsdinkn9drsjm1teTfg4g63eAKWcdNltwdKmlVClkDITtFeHJ3BAxs3pGFHuZqo5uCuykxF7Bv_Jt48vn9ZllKIN19R8Z76ThG-bC2Xz_6_Onj8jGsvAwo_wU4rf2dA_J8oMtbxzYxbN-otz5a3lN8leD5VeZAlHxAdJgghXzvDu45s-uhj7Yso53kQJTxcivbytBXm7bWd8idy3cbLs7SZebKJMstkoLOQsbsQdDR8XfsEYa8Ab2cwPUQcXIG9N8CuKosEf94sWJD92kYCu9UGRLaoRG9AG1qb2GnGE4AFRsDugdslDNu2isguedZfS5ALx24_mi-uec4DPbnKNC5MD0cIoIEp-13OIvB3pRGAldVyNqdtG"></div>
+<p><strong>Forcing inheritance with the keyword <code>inherit</code>.</strong> A non-inheritable property can still be copied from the parent if you ask explicitly:</p>
+<pre><code class="fenced-code-block language-css"><span class="token selector">div</span> <span class="token punctuation">{</span>
+  <span class="token property">font-weight</span><span class="token punctuation">:</span> bold<span class="token punctuation">;</span>
+  <span class="token property">margin</span><span class="token punctuation">:</span> 50px<span class="token punctuation">;</span>
+  <span class="token property">border</span><span class="token punctuation">:</span> 1pt solid green<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">p</span> <span class="token punctuation">{</span>
+  <span class="token property">border</span><span class="token punctuation">:</span> inherit<span class="token punctuation">;</span>
+  <span class="token property">margin</span><span class="token punctuation">:</span> inherit<span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<pre><code class="fenced-code-block language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h3</span><span class="token punctuation">&gt;</span></span>Reviews<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h3</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>By Ricardo on <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>time</span><span class="token punctuation">&gt;</span></span>2016-05-23<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>time</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>Easy on the HDR buddy.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>hr</span><span class="token punctuation">/&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>By Susan on <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>time</span><span class="token punctuation">&gt;</span></span>2016-11-18<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>time</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>I love Central Park.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>hr</span><span class="token punctuation">/&gt;</span></span></code></pre>
+<p>Now each <code>p</code> copies the <code>div</code>'s <code>border</code> (1pt solid green) and <code>margin</code> (50px). In the rendered page every paragraph appears in its own green-bordered box, nested inside the <code>div</code>'s larger green box with extra spacing.</p>
+<blockquote>
+<p><strong>Note for Review</strong>
+Pro-Tip: Exam favourite — "which of these properties is inherited?" Rule of thumb: anything about the <strong>text itself</strong> (font, colour, list, text) is inherited; anything about the <strong>box around it</strong> (layout, size, border, background, spacing) is not. A box belongs to one element; text style is naturally shared by its children.</p>
+</blockquote>
+<h3 class="atx" id="103-specificity">10.3 Specificity</h3>
+<p>Inheritance says what <em>flows down</em>. Specificity says what <em>wins</em> when several rules directly target the same element. The nearest, most precise rule takes the style.</p>
+<p><strong>Worked example.</strong> Here is a portion of an HTML file (just a fragment, not the entire document) with its style sheet:</p>
+<pre><code class="fenced-code-block language-css"><span class="token selector">body</span> <span class="token punctuation">{</span>
+  <span class="token property">font-weight</span><span class="token punctuation">:</span> bold<span class="token punctuation">;</span>
+  <span class="token property">color</span><span class="token punctuation">:</span> red<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">div</span> <span class="token punctuation">{</span>
+  <span class="token property">font-weight</span><span class="token punctuation">:</span> normal<span class="token punctuation">;</span>
+  <span class="token property">color</span><span class="token punctuation">:</span> magenta<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">p</span> <span class="token punctuation">{</span>
+  <span class="token property">color</span><span class="token punctuation">:</span> green<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.last</span> <span class="token punctuation">{</span>
+  <span class="token property">color</span><span class="token punctuation">:</span> blue<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">#verylast</span> <span class="token punctuation">{</span>
+  <span class="token property">color</span><span class="token punctuation">:</span> orange<span class="token punctuation">;</span>
+  <span class="token property">font-size</span><span class="token punctuation">:</span> 16pt<span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<pre><code class="fenced-code-block language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">&gt;</span></span>
+  This text is not within a p element.
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>Reviews<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>By Ricardo on <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>time</span><span class="token punctuation">&gt;</span></span>2016-05-23<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>time</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>Easy on the HDR buddy.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+    This text is not within a p element.
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>hr</span><span class="token punctuation">/&gt;</span></span>
+
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>By Susan on <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>time</span><span class="token punctuation">&gt;</span></span>2016-11-18<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>time</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>I love Central Park.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>hr</span><span class="token punctuation">/&gt;</span></span>
+
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>last<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>By Dave on <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>time</span><span class="token punctuation">&gt;</span></span>2016-11-24<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>time</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>last<span class="token punctuation">"</span></span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>verylast<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Thanks for posting.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>hr</span><span class="token punctuation">/&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span></code></pre>
+<p>Since font and colour are inheritable, <code>body</code>'s bold red might be expected everywhere — but it is not, because more specific rules exist closer to each element:</p>
+<table>
+<thead>
+<tr>
+<th>Text</th>
+<th>Colour</th>
+<th>Weight</th>
+<th>Why</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>"This text is not within a p element." (directly in <code>body</code>)</td>
+<td><strong>red</strong></td>
+<td>bold</td>
+<td>only the <code>body</code> rule applies</td>
+</tr>
+<tr>
+<td>"Reviews" (<code>p</code> under <code>body</code>)</td>
+<td><strong>green</strong></td>
+<td>bold</td>
+<td><code>p { color: green }</code> beats the inherited red; weight is still inherited from <code>body</code></td>
+</tr>
+<tr>
+<td>Ricardo's and Susan's <code>p</code> lines</td>
+<td><strong>green</strong></td>
+<td>normal</td>
+<td><code>p</code> rule sets the colour; <code>div</code> supplies <code>normal</code> weight</td>
+</tr>
+<tr>
+<td>"This text is not within a p element." (inside the <code>div</code>)</td>
+<td><strong>magenta</strong></td>
+<td>normal</td>
+<td>not a <code>p</code>, so the <code>div</code> rule applies</td>
+</tr>
+<tr>
+<td>"By Dave on ..." (<code>class="last"</code>)</td>
+<td><strong>blue</strong></td>
+<td>normal</td>
+<td><code>.last</code> beats <code>p</code></td>
+</tr>
+<tr>
+<td>"Thanks for posting." (<code>class="last"</code> and <code>id="verylast"</code>)</td>
+<td><strong>orange</strong>, 16pt</td>
+<td>normal</td>
+<td><code>#verylast</code> beats <code>.last</code></td>
+</tr>
+</tbody></table>
+<p>The guiding idea: <strong>whatever is local, whatever is nearest and most precise, wins.</strong> A <code>p</code> inside a <code>div</code> inherits the <code>div</code>'s properties, but a rule written specifically for <code>p</code> overrides it. The class <code>last</code> makes text blue, but an element that also carries a very specific <code>id</code> is overridden by the id rule.</p>
+<p><strong>Specificity values.</strong> Each kind of selector carries a weight. A higher specificity value overrides a lower one.</p>
+<table>
+<thead>
+<tr>
+<th>Rank</th>
+<th>Selector type</th>
+<th>Example</th>
+<th>Specificity value</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1 (strongest)</td>
+<td>Inline style attribute</td>
+<td><code>&lt;div style="color: red;"&gt;</code></td>
+<td>1000</td>
+</tr>
+<tr>
+<td>2</td>
+<td>id + additional selectors</td>
+<td><code>div #firstExample { color: grey; }</code></td>
+<td>0101</td>
+</tr>
+<tr>
+<td>3</td>
+<td>id selector</td>
+<td><code>#firstExample { color: magenta; }</code></td>
+<td>0100</td>
+</tr>
+<tr>
+<td>4</td>
+<td>class and attribute selectors</td>
+<td><code>.example { color: blue; }</code> and <code>a[href$=".pdf"] { color: blue; }</code></td>
+<td>0010</td>
+</tr>
+<tr>
+<td>5</td>
+<td>descendant selector (elements only)</td>
+<td><code>div form { color: orange; }</code></td>
+<td>0002</td>
+</tr>
+<tr>
+<td>6 (weakest)</td>
+<td>element selector</td>
+<td><code>div { color: green; }</code></td>
+<td>0001</td>
+</tr>
+</tbody></table>
+<p>Each row overrides every row below it: inline overrides id + additional selectors, which overrides a lone id, which overrides class and attribute selectors, which override descendant selectors, which override a plain element selector.</p>
+<p>Think of the four digits as four columns <span class="katex"><span class="katex-mathml"></span><span aria-hidden="true" class="katex-html"><span class="base"><span style="height:1em;vertical-align:-0.25em;" class="strut"></span><span class="mopen">(</span><span class="mord mathnormal">a</span><span class="mpunct">,</span><span style="margin-right:0.1667em;" class="mspace"></span><span class="mord mathnormal">b</span><span class="mpunct">,</span><span style="margin-right:0.1667em;" class="mspace"></span><span class="mord mathnormal">c</span><span class="mpunct">,</span><span style="margin-right:0.1667em;" class="mspace"></span><span class="mord mathnormal">d</span><span class="mclose">)</span></span></span></span>:</p>
+<span class="katex-display"><span class="katex"><span class="katex-mathml"></span><span aria-hidden="true" class="katex-html"><span class="base"><span style="height:0.6833em;" class="strut"></span><span style="margin-right:0.05764em;" class="mord mathnormal">S</span><span style="margin-right:0.2778em;" class="mspace"></span><span class="mrel">=</span><span style="margin-right:0.2778em;" class="mspace"></span></span><span class="base"><span style="height:0.7278em;vertical-align:-0.0833em;" class="strut"></span><span class="mord">1000</span><span style="margin-right:0.1667em;" class="mspace"></span><span class="mord mathnormal">a</span><span style="margin-right:0.2222em;" class="mspace"></span><span class="mbin">+</span><span style="margin-right:0.2222em;" class="mspace"></span></span><span class="base"><span style="height:0.7778em;vertical-align:-0.0833em;" class="strut"></span><span class="mord">100</span><span style="margin-right:0.1667em;" class="mspace"></span><span class="mord mathnormal">b</span><span style="margin-right:0.2222em;" class="mspace"></span><span class="mbin">+</span><span style="margin-right:0.2222em;" class="mspace"></span></span><span class="base"><span style="height:0.7278em;vertical-align:-0.0833em;" class="strut"></span><span class="mord">10</span><span style="margin-right:0.1667em;" class="mspace"></span><span class="mord mathnormal">c</span><span style="margin-right:0.2222em;" class="mspace"></span><span class="mbin">+</span><span style="margin-right:0.2222em;" class="mspace"></span></span><span class="base"><span style="height:0.6944em;" class="strut"></span><span class="mord mathnormal">d</span></span></span></span></span><p>where <span class="katex"><span class="katex-mathml"></span><span aria-hidden="true" class="katex-html"><span class="base"><span style="height:0.4306em;" class="strut"></span><span class="mord mathnormal">a</span></span></span></span> = 1 if the rule is an inline style, <span class="katex"><span class="katex-mathml"></span><span aria-hidden="true" class="katex-html"><span class="base"><span style="height:0.6944em;" class="strut"></span><span class="mord mathnormal">b</span></span></span></span> = number of id selectors, <span class="katex"><span class="katex-mathml"></span><span aria-hidden="true" class="katex-html"><span class="base"><span style="height:0.4306em;" class="strut"></span><span class="mord mathnormal">c</span></span></span></span> = number of class and attribute selectors, and <span class="katex"><span class="katex-mathml"></span><span aria-hidden="true" class="katex-html"><span class="base"><span style="height:0.6944em;" class="strut"></span><span class="mord mathnormal">d</span></span></span></span> = number of element selectors.</p>
+<p>Check against the table:</p>
+<span class="katex-display"><span class="katex"><span class="katex-mathml"></span><span aria-hidden="true" class="katex-html"><span class="base"><span style="height:0.8333em;vertical-align:-0.2222em;" class="strut"></span><span class="mord text"><span class="mord texttt">div&nbsp;#firstExample</span></span><span style="margin-right:0.2778em;" class="mspace"></span><span class="mrel">:</span><span style="margin-right:0.2778em;" class="mspace"></span><span style="margin-right:0.2778em;" class="mspace"></span></span><span class="base"><span style="height:0.6944em;" class="strut"></span><span class="mord mathnormal">b</span><span style="margin-right:0.2778em;" class="mspace"></span><span class="mrel">=</span><span style="margin-right:0.2778em;" class="mspace"></span></span><span class="base"><span style="height:0.8889em;vertical-align:-0.1944em;" class="strut"></span><span class="mord">1</span><span class="mpunct">,</span><span style="margin-right:0.2778em;" class="mspace"></span><span style="margin-right:0.1667em;" class="mspace"></span><span class="mord mathnormal">d</span><span style="margin-right:0.2778em;" class="mspace"></span><span class="mrel">=</span><span style="margin-right:0.2778em;" class="mspace"></span></span><span class="base"><span style="height:0.6444em;" class="strut"></span><span class="mord">1</span><span style="margin-right:0.2778em;" class="mspace"></span><span style="margin-right:0.2778em;" class="mspace"></span><span class="mrel">⇒</span><span style="margin-right:0.2778em;" class="mspace"></span><span style="margin-right:0.2778em;" class="mspace"></span></span><span class="base"><span style="height:0.6833em;" class="strut"></span><span style="margin-right:0.05764em;" class="mord mathnormal">S</span><span style="margin-right:0.2778em;" class="mspace"></span><span class="mrel">=</span><span style="margin-right:0.2778em;" class="mspace"></span></span><span class="base"><span style="height:0.7278em;vertical-align:-0.0833em;" class="strut"></span><span class="mord">100</span><span style="margin-right:0.2222em;" class="mspace"></span><span class="mbin">+</span><span style="margin-right:0.2222em;" class="mspace"></span></span><span class="base"><span style="height:0.6444em;" class="strut"></span><span class="mord">1</span><span style="margin-right:0.2778em;" class="mspace"></span><span class="mrel">=</span><span style="margin-right:0.2778em;" class="mspace"></span></span><span class="base"><span style="height:0.6444em;" class="strut"></span><span class="mord">101</span></span></span></span></span><span class="katex-display"><span class="katex"><span class="katex-mathml"></span><span aria-hidden="true" class="katex-html"><span class="base"><span style="height:0.6111em;" class="strut"></span><span class="mord text"><span class="mord texttt">div&nbsp;form</span></span><span style="margin-right:0.2778em;" class="mspace"></span><span class="mrel">:</span><span style="margin-right:0.2778em;" class="mspace"></span><span style="margin-right:0.2778em;" class="mspace"></span></span><span class="base"><span style="height:0.6944em;" class="strut"></span><span class="mord mathnormal">d</span><span style="margin-right:0.2778em;" class="mspace"></span><span class="mrel">=</span><span style="margin-right:0.2778em;" class="mspace"></span></span><span class="base"><span style="height:0.6444em;" class="strut"></span><span class="mord">2</span><span style="margin-right:0.2778em;" class="mspace"></span><span style="margin-right:0.2778em;" class="mspace"></span><span class="mrel">⇒</span><span style="margin-right:0.2778em;" class="mspace"></span><span style="margin-right:0.2778em;" class="mspace"></span></span><span class="base"><span style="height:0.6833em;" class="strut"></span><span style="margin-right:0.05764em;" class="mord mathnormal">S</span><span style="margin-right:0.2778em;" class="mspace"></span><span class="mrel">=</span><span style="margin-right:0.2778em;" class="mspace"></span></span><span class="base"><span style="height:0.6444em;" class="strut"></span><span class="mord">2</span></span></span></span></span><span class="katex-display"><span class="katex"><span class="katex-mathml"></span><span aria-hidden="true" class="katex-html"><span class="base"><span style="height:0.8333em;vertical-align:-0.2222em;" class="strut"></span><span class="mord text"><span class="mord texttt">.example</span></span><span style="margin-right:0.2778em;" class="mspace"></span><span class="mrel">:</span><span style="margin-right:0.2778em;" class="mspace"></span><span style="margin-right:0.2778em;" class="mspace"></span></span><span class="base"><span style="height:0.4306em;" class="strut"></span><span class="mord mathnormal">c</span><span style="margin-right:0.2778em;" class="mspace"></span><span class="mrel">=</span><span style="margin-right:0.2778em;" class="mspace"></span></span><span class="base"><span style="height:0.6444em;" class="strut"></span><span class="mord">1</span><span style="margin-right:0.2778em;" class="mspace"></span><span style="margin-right:0.2778em;" class="mspace"></span><span class="mrel">⇒</span><span style="margin-right:0.2778em;" class="mspace"></span><span style="margin-right:0.2778em;" class="mspace"></span></span><span class="base"><span style="height:0.6833em;" class="strut"></span><span style="margin-right:0.05764em;" class="mord mathnormal">S</span><span style="margin-right:0.2778em;" class="mspace"></span><span class="mrel">=</span><span style="margin-right:0.2778em;" class="mspace"></span></span><span class="base"><span style="height:0.6444em;" class="strut"></span><span class="mord">10</span></span></span></span></span><div class="vega-lite vega-embed" role="graphics-document" aria-roledescription="visualization" aria-label="Specificity value of each selector type (symlog scale so small values stay visible)" style="cursor: default;"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="marks" width="530" height="266" viewBox="0 0 530 266" style="background-color: rgb(255, 255, 255);"><g fill="none" stroke-miterlimit="10" transform="translate(136,5)"><g class="mark-group role-frame root" role="graphics-object" aria-roledescription="group mark container"><g transform="translate(0,0)"><path class="background" aria-hidden="true" d="M0.5,0.5h360v220h-360Z" fill="transparent" stroke="#ddd"></path><g><g class="mark-group role-axis" aria-hidden="true"><g transform="translate(0.5,220.5)"><path class="background" aria-hidden="true" d="M0,0h0v0h0Z" pointer-events="none"></path><g><g class="mark-rule role-axis-grid" pointer-events="none"><line transform="translate(0,0)" x2="0" y2="-220" stroke="#ddd" stroke-width="1" opacity="1"></line><line transform="translate(240,0)" x2="0" y2="-220" stroke="#ddd" stroke-width="1" opacity="1"></line><line transform="translate(276,0)" x2="0" y2="-220" stroke="#ddd" stroke-width="1" opacity="1"></line><line transform="translate(297,0)" x2="0" y2="-220" stroke="#ddd" stroke-width="1" opacity="1"></line><line transform="translate(312,0)" x2="0" y2="-220" stroke="#ddd" stroke-width="1" opacity="1"></line><line transform="translate(324,0)" x2="0" y2="-220" stroke="#ddd" stroke-width="1" opacity="1"></line><line transform="translate(333,0)" x2="0" y2="-220" stroke="#ddd" stroke-width="1" opacity="1"></line><line transform="translate(341,0)" x2="0" y2="-220" stroke="#ddd" stroke-width="1" opacity="1"></line><line transform="translate(348,0)" x2="0" y2="-220" stroke="#ddd" stroke-width="1" opacity="1"></line><line transform="translate(355,0)" x2="0" y2="-220" stroke="#ddd" stroke-width="1" opacity="1"></line><line transform="translate(360,0)" x2="0" y2="-220" stroke="#ddd" stroke-width="1" opacity="1"></line></g></g><path class="foreground" aria-hidden="true" d="" pointer-events="none" display="none"></path></g></g><g class="mark-group role-axis" role="graphics-symbol" aria-roledescription="axis" aria-label="X-axis titled 'Specificity value (symlog scale)' for a symlog scale with values from 0 to 1,000"><g transform="translate(0.5,220.5)"><path class="background" aria-hidden="true" d="M0,0h0v0h0Z" pointer-events="none"></path><g><g class="mark-rule role-axis-tick" pointer-events="none"><line transform="translate(0,0)" x2="0" y2="3" stroke="#888" stroke-width="1" opacity="1"></line><line transform="translate(240,0)" x2="0" y2="3" stroke="#888" stroke-width="1" opacity="1"></line><line transform="translate(276,0)" x2="0" y2="3" stroke="#888" stroke-width="1" opacity="1"></line><line transform="translate(297,0)" x2="0" y2="3" stroke="#888" stroke-width="1" opacity="1"></line><line transform="translate(312,0)" x2="0" y2="3" stroke="#888" stroke-width="1" opacity="1"></line><line transform="translate(324,0)" x2="0" y2="3" stroke="#888" stroke-width="1" opacity="1"></line><line transform="translate(333,0)" x2="0" y2="3" stroke="#888" stroke-width="1" opacity="1"></line><line transform="translate(341,0)" x2="0" y2="3" stroke="#888" stroke-width="1" opacity="1"></line><line transform="translate(348,0)" x2="0" y2="3" stroke="#888" stroke-width="1" opacity="1"></line><line transform="translate(355,0)" x2="0" y2="3" stroke="#888" stroke-width="1" opacity="1"></line><line transform="translate(360,0)" x2="0" y2="3" stroke="#888" stroke-width="1" opacity="1"></line></g><g class="mark-text role-axis-label" pointer-events="none"><text text-anchor="start" transform="translate(0,16)" font-family="Benton Gothic, sans-serif" font-size="11.5px" font-weight="normal" fill="#000" opacity="1">0</text><text text-anchor="middle" transform="translate(240.48376865787841,16)" font-family="Benton Gothic, sans-serif" font-size="11.5px" font-weight="normal" fill="#000" opacity="1">100</text><text text-anchor="middle" transform="translate(276.343542054405,16)" font-family="Benton Gothic, sans-serif" font-size="11.5px" font-weight="normal" fill="#000" opacity="1">200</text><text text-anchor="middle" transform="translate(297.3849501014188,16)" font-family="Benton Gothic, sans-serif" font-size="11.5px" font-weight="normal" fill="#000" opacity="1">300</text><text text-anchor="middle" transform="translate(312.3321325994789,16)" font-family="Benton Gothic, sans-serif" font-size="11.5px" font-weight="normal" fill="#000" opacity="0">400</text><text text-anchor="middle" transform="translate(323.93365633573325,16)" font-family="Benton Gothic, sans-serif" font-size="11.5px" font-weight="normal" fill="#000" opacity="1">500</text><text text-anchor="middle" transform="translate(333.4166937476672,16)" font-family="Benton Gothic, sans-serif" font-size="11.5px" font-weight="normal" fill="#000" opacity="0">600</text><text text-anchor="middle" transform="translate(341.43675882012724,16)" font-family="Benton Gothic, sans-serif" font-size="11.5px" font-weight="normal" fill="#000" opacity="0">700</text><text text-anchor="middle" transform="translate(348.38549316454055,16)" font-family="Benton Gothic, sans-serif" font-size="11.5px" font-weight="normal" fill="#000" opacity="1">800</text><text text-anchor="middle" transform="translate(354.51567916002466,16)" font-family="Benton Gothic, sans-serif" font-size="11.5px" font-weight="normal" fill="#000" opacity="0">900</text><text text-anchor="end" transform="translate(360,16)" font-family="Benton Gothic, sans-serif" font-size="11.5px" font-weight="normal" fill="#000" opacity="0">1,000</text></g><g class="mark-rule role-axis-domain" pointer-events="none"><line transform="translate(0,0)" x2="360" y2="0" stroke="#888" stroke-width="1" opacity="1"></line></g><g class="mark-text role-axis-title" pointer-events="none"><text text-anchor="middle" transform="translate(180,32.5)" font-family="Benton Gothic Bold, sans-serif" font-size="13px" font-weight="normal" fill="#000" opacity="1">Specificity value (symlog scale)</text></g></g><path class="foreground" aria-hidden="true" d="" pointer-events="none" display="none"></path></g></g><g class="mark-group role-axis" role="graphics-symbol" aria-roledescription="axis" aria-label="Y-axis for a discrete scale with 6 values: Inline style, id + additional, id, class / attribute, descendant (2 elements), element"><g transform="translate(0.5,0.5)"><path class="background" aria-hidden="true" d="M0,0h0v0h0Z" pointer-events="none"></path><g><g class="mark-rule role-axis-tick" pointer-events="none"><line transform="translate(0,18)" x2="-2" y2="0" stroke="#888" stroke-width="1" opacity="1"></line><line transform="translate(0,54)" x2="-2" y2="0" stroke="#888" stroke-width="1" opacity="1"></line><line transform="translate(0,91)" x2="-2" y2="0" stroke="#888" stroke-width="1" opacity="1"></line><line transform="translate(0,128)" x2="-2" y2="0" stroke="#888" stroke-width="1" opacity="1"></line><line transform="translate(0,165)" x2="-2" y2="0" stroke="#888" stroke-width="1" opacity="1"></line><line transform="translate(0,201)" x2="-2" y2="0" stroke="#888" stroke-width="1" opacity="1"></line></g><g class="mark-text role-axis-label" pointer-events="none"><text text-anchor="end" transform="translate(-4,20.83333333333333)" font-family="Benton Gothic, sans-serif" font-size="11.5px" font-weight="normal" fill="#000" opacity="1">Inline style</text><text text-anchor="end" transform="translate(-4,57.49999999999999)" font-family="Benton Gothic, sans-serif" font-size="11.5px" font-weight="normal" fill="#000" opacity="1">id + additional</text><text text-anchor="end" transform="translate(-4,94.16666666666666)" font-family="Benton Gothic, sans-serif" font-size="11.5px" font-weight="normal" fill="#000" opacity="1">id</text><text text-anchor="end" transform="translate(-4,130.83333333333331)" font-family="Benton Gothic, sans-serif" font-size="11.5px" font-weight="normal" fill="#000" opacity="1">class / attribute</text><text text-anchor="end" transform="translate(-4,167.5)" font-family="Benton Gothic, sans-serif" font-size="11.5px" font-weight="normal" fill="#000" opacity="1">descendant (2 elements)</text><text text-anchor="end" transform="translate(-4,204.16666666666663)" font-family="Benton Gothic, sans-serif" font-size="11.5px" font-weight="normal" fill="#000" opacity="1">element</text></g><g class="mark-rule role-axis-domain" pointer-events="none"><line transform="translate(0,0)" x2="0" y2="220" stroke="#888" stroke-width="1" opacity="1"></line></g></g><path class="foreground" aria-hidden="true" d="" pointer-events="none" display="none"></path></g></g><g class="mark-rect role-mark layer_0_marks" role="graphics-object" aria-roledescription="rect mark container"><path aria-label="Specificity value (symlog scale): 1000; selector: Inline style" role="graphics-symbol" aria-roledescription="bar" d="M0,1.8333333333333286h360v33h-360Z" fill="#8B5CF6"></path><path aria-label="Specificity value (symlog scale): 101; selector: id + additional" role="graphics-symbol" aria-roledescription="bar" d="M0,38.49999999999999h240.99715013294588v33h-240.99715013294588Z" fill="#8B5CF6"></path><path aria-label="Specificity value (symlog scale): 100; selector: id" role="graphics-symbol" aria-roledescription="bar" d="M0,75.16666666666666h240.48376865787841v33h-240.48376865787841Z" fill="#8B5CF6"></path><path aria-label="Specificity value (symlog scale): 10; selector: class / attribute" role="graphics-symbol" aria-roledescription="bar" d="M0,111.83333333333333h124.94904303043971v33h-124.94904303043971Z" fill="#8B5CF6"></path><path aria-label="Specificity value (symlog scale): 2; selector: descendant (2 elements)" role="graphics-symbol" aria-roledescription="bar" d="M0,148.5h57.2462674611995v33h-57.2462674611995Z" fill="#8B5CF6"></path><path aria-label="Specificity value (symlog scale): 1; selector: element" role="graphics-symbol" aria-roledescription="bar" d="M0,185.16666666666663h36.11837342218035v33h-36.11837342218035Z" fill="#8B5CF6"></path></g><g class="mark-text role-mark layer_1_marks" role="graphics-object" aria-roledescription="text mark container"><text aria-label="Specificity value (symlog scale): 1000; selector: Inline style; label: 1000" role="graphics-symbol" aria-roledescription="text mark" text-anchor="start" transform="translate(364,21.33333333333333)" font-family="sans-serif" font-size="11px" fill="black">1000</text><text aria-label="Specificity value (symlog scale): 101; selector: id + additional; label: 0101" role="graphics-symbol" aria-roledescription="text mark" text-anchor="start" transform="translate(244.99715013294588,57.99999999999999)" font-family="sans-serif" font-size="11px" fill="black">0101</text><text aria-label="Specificity value (symlog scale): 100; selector: id; label: 0100" role="graphics-symbol" aria-roledescription="text mark" text-anchor="start" transform="translate(244.48376865787841,94.66666666666666)" font-family="sans-serif" font-size="11px" fill="black">0100</text><text aria-label="Specificity value (symlog scale): 10; selector: class / attribute; label: 0010" role="graphics-symbol" aria-roledescription="text mark" text-anchor="start" transform="translate(128.94904303043973,131.33333333333331)" font-family="sans-serif" font-size="11px" fill="black">0010</text><text aria-label="Specificity value (symlog scale): 2; selector: descendant (2 elements); label: 0002" role="graphics-symbol" aria-roledescription="text mark" text-anchor="start" transform="translate(61.2462674611995,168)" font-family="sans-serif" font-size="11px" fill="black">0002</text><text aria-label="Specificity value (symlog scale): 1; selector: element; label: 0001" role="graphics-symbol" aria-roledescription="text mark" text-anchor="start" transform="translate(40.11837342218035,204.66666666666663)" font-family="sans-serif" font-size="11px" fill="black">0001</text></g></g><path class="foreground" aria-hidden="true" d="" display="none"></path></g></g></g></svg><form class="vega-bindings"></form></div>
+<blockquote>
+<p><strong>Note for Review</strong>
+Pro-Tip: The slide's decimal-looking scale is a teaching device. Real browsers compare the columns <strong>left to right</strong> like a tuple, not as one carried number — so even eleven class selectors can never beat one id. Also remember: when specificity ties, <strong>location</strong> (the later rule) decides.</p>
+</blockquote>
+<h3 class="atx" id="104-location--who-overrides-whom">10.4 Location — Who Overrides Whom</h3>
+<p>When specificity ties or sources differ, <strong>where the style comes from, and in what order it is written</strong>, settles the matter. The figure below runs from weakest to strongest:</p>
+<div class="plantuml"><img src="https://www.plantuml.com/plantuml/svg/~1U5vjaJ5l6p4CXNVzYjVpaWukuav5Z1I9boujKA13KS0BPT5dmHJFeAIwHf7_NkZERWp48_cUFZvIJxcGbPh4lJiOzOaWT1fgGKvSICa9RmlA08lzhY14uqs9WpgNzr4FP9JGMgIzCFuw0FXE8KJjiVWubj_8-gXOt4zLr9Xg-Xb3sM7nwTwzEFSAw5Os73CR0c-fIa4k9-7SWJ8yPbzRY2z6f-idDRFD9z-7JPwyzUnTIULhxsHxRhwrplWFfKEBZSqWWpsWDsPTucLaqFzvpFeMiceGt4dKFGVGjh3X-VqjgfVA5wX_tU8M5Lw6pHvt4wxi68sVRs878-rvUScUg6SjT1cKBuD-iSXmlCuVLQBoT5fGAHPzBRpMiV6uxix7C0xBTJUU8gfWzeCajO_tcCy_e-81tV2RpM88hF2dpjLHeHiAZOhtJH9gkxMzS8oQE-SdOhvIENaEWGEi2fzjURArB6z7Fx66ckGVb2ZncW"></div>
+<p>The numbered rules in the lecture figure, in plain words:</p>
+<table>
+<thead>
+<tr>
+<th>No.</th>
+<th>Rule</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>The user's own <code>.css</code> file overrides the browser's default style settings.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>An <strong>inline</strong> style overrides an external author style sheet or an embedded style sheet.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Styles in external author sheet X override those in external sheet Y <strong>if X's <code>&lt;link&gt;</code> element comes after Y's</strong> in the HTML document. Whichever is last is the one that sustains.</td>
+</tr>
+<tr>
+<td>4</td>
+<td>An <strong>embedded</strong> style overrides an <strong>equally specific</strong> rule defined in an external author style sheet <strong>if it appears after</strong> the external sheet's <code>&lt;link&gt;</code> element.</td>
+</tr>
+<tr>
+<td>5</td>
+<td>When the <strong>same property is defined multiple times within a single declaration block, the last one takes precedence.</strong> (Magenta overrides orange.)</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Finally, the inline <code>style="color: red;"</code> on the paragraph overrides all of the above, so the sample text is red.</td>
+</tr>
+</tbody></table>
+<p>Putting it all together on the final example:</p>
+<pre><code class="fenced-code-block language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>stylesA.css<span class="token punctuation">"</span></span> <span class="token punctuation">/&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>stylesB.css<span class="token punctuation">"</span></span> <span class="token punctuation">/&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span><span class="token punctuation">&gt;</span></span><span class="token style"><span class="token language-css">
+    <span class="token selector">#example</span> <span class="token punctuation">{</span>
+      <span class="token property">color</span><span class="token punctuation">:</span> orange<span class="token punctuation">;</span>
+      <span class="token property">color</span><span class="token punctuation">:</span> magenta<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>example<span class="token punctuation">"</span></span> <span class="token special-attr"><span class="token attr-name">style</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token value css language-css"><span class="token property">color</span><span class="token punctuation">:</span> red<span class="token punctuation">;</span></span><span class="token punctuation">"</span></span></span><span class="token punctuation">&gt;</span></span>
+    sample text
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span></code></pre>
+<table>
+<thead>
+<tr>
+<th>Step</th>
+<th>Competing declarations</th>
+<th>Winner</th>
+<th>Reason</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td><code>stylesA.css</code> green vs <code>stylesB.css</code> blue</td>
+<td>blue</td>
+<td>same specificity; B is linked later</td>
+</tr>
+<tr>
+<td>2</td>
+<td>blue (external) vs the <code>&lt;style&gt;</code> block</td>
+<td>block value</td>
+<td>same specificity; embedded appears after the links</td>
+</tr>
+<tr>
+<td>3</td>
+<td><code>orange</code> vs <code>magenta</code> in one block</td>
+<td>magenta</td>
+<td>last declaration in a block wins</td>
+</tr>
+<tr>
+<td>4</td>
+<td>magenta vs inline <code>red</code></td>
+<td><strong>red</strong></td>
+<td>inline style (1000) beats the id rule</td>
+</tr>
+</tbody></table>
+<p>So whether a rule is internal, external, inline, user-defined or browser-defined, whether it is nearer in proximity, or whether it is simply repeated (the last one persists) — if you know these priorities, you can design a document so that multiple elements take multiple stylings predictably.</p>
+<blockquote>
+<p><strong>Note for Review</strong>
+Pro-Tip: In the standard cascade, ordinary <strong>author</strong> styles beat <strong>user</strong> styles, and both beat browser defaults (the <code>!important</code> flag reverses author vs user). The lecture figure only uses user styles to show they beat the browser default, so do not read it as "user always beats author". For exams, the safest summary is: <strong>specificity first, then source/location order (later wins).</strong></p>
+</blockquote>
+<hr>
+<h2 class="atx" id="11-practice-questions">11. Practice Questions</h2>
+<ol>
+<li><p><strong>The stubborn paragraph.</strong> A page has this element and stylesheet:</p>
+<pre><code class="fenced-code-block language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>intro<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>lead note<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Welcome<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span></code></pre>
+<pre><code class="fenced-code-block language-css"><span class="token selector">p</span> <span class="token punctuation">{</span> <span class="token property">color</span><span class="token punctuation">:</span> green<span class="token punctuation">;</span> <span class="token punctuation">}</span>
+<span class="token selector">.lead</span> <span class="token punctuation">{</span> <span class="token property">color</span><span class="token punctuation">:</span> blue<span class="token punctuation">;</span> <span class="token punctuation">}</span>
+<span class="token selector">.note</span> <span class="token punctuation">{</span> <span class="token property">color</span><span class="token punctuation">:</span> purple<span class="token punctuation">;</span> <span class="token punctuation">}</span>
+<span class="token selector">div p</span> <span class="token punctuation">{</span> <span class="token property">color</span><span class="token punctuation">:</span> orange<span class="token punctuation">;</span> <span class="token punctuation">}</span></code></pre>
+<p>The <code>p</code> sits directly inside <code>body</code>. (a) Compute the specificity value of each rule and decide the final colour. (b) Swap the order of <code>.lead</code> and <code>.note</code> — does anything change? (c) Now the <code>p</code> is moved into a <code>div</code>. Does <code>div p</code> win, and why or why not? (d) Which minimal single change would make the text orange <em>without</em> touching any existing rule?</p>
+</li>
+<li><p><strong>Forty pages, one client.</strong> A school website has 40 pages. The client wants every <code>h1</code> navy on all pages, except the admission page, whose <code>h1</code> must be dark red, and a single <code>h1</code> on the home page must be green for one week only. Choose a location (inline, internal, external) for each requirement, justify the scope you need, and explain what ordering of <code>&lt;link&gt;</code> and <code>&lt;style&gt;</code> you would use so that the exceptions win without raising specificity wildly.</p>
+</li>
+<li><p><strong>The missing border.</strong> Given</p>
+<pre><code class="fenced-code-block language-css"><span class="token selector">div</span> <span class="token punctuation">{</span> <span class="token property">font-weight</span><span class="token punctuation">:</span> bold<span class="token punctuation">;</span> <span class="token property">margin</span><span class="token punctuation">:</span> 50px<span class="token punctuation">;</span> <span class="token property">border</span><span class="token punctuation">:</span> 1pt solid green<span class="token punctuation">;</span> <span class="token punctuation">}</span></code></pre>
+<p>with two <code>p</code> children, predict exactly what each <code>p</code> receives. Then add <code>p { border: inherit; margin: inherit; }</code>. What changes visually, why does the layout now look "doubled", and why was <code>font-weight</code> never part of the problem?</p>
+</li>
+<li><p><strong>Who gets picked?</strong> For the HTML below, list which of the paragraphs A to E are selected by each selector: <code>h3+p</code>, <code>h3~p</code>, <code>div p</code>, <code>div&gt;p</code>, <code>body&gt;p</code>. Explain any selector that picks nothing different from another.</p>
+<pre><code class="fenced-code-block language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h3</span><span class="token punctuation">&gt;</span></span>T<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h3</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>A<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>B<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>C<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>section</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>D<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>section</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h3</span><span class="token punctuation">&gt;</span></span>U<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h3</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>E<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span></code></pre>
+</li>
+<li><p><strong>Units under pressure.</strong> The root font size is <span class="katex"><span class="katex-mathml"></span><span aria-hidden="true" class="katex-html"><span class="base"><span style="height:0.8389em;vertical-align:-0.1944em;" class="strut"></span><span class="mord">16</span><span style="margin-right:0.1667em;" class="mspace"></span><span class="mord text"><span class="mord">px</span></span></span></span></span>. A parent box has <code>font-size: 20px</code> and <code>width: 600px</code>. Inside it, a child has <code>font-size: 1.5em; padding: 2em; width: 50%;</code>. (a) Compute the child's font size, padding and width in pixels. (b) Rewrite the font size and padding using <code>rem</code> and recompute. (c) Which version stays stable if someone nests the child one level deeper inside another element with <code>font-size: 30px</code>, and why? (d) Convert <code>rgb(255,105,180)</code> to hexadecimal by hand to show how a designer could write the same colour another way.</p>
+</li>
+</ol>
+</article>
+</body>
+</html>

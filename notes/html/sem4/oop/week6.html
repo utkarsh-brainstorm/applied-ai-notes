@@ -1,0 +1,1867 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <style>
+  @font-face {
+  font-family: octicons-link;
+  src: url(data:font/woff;charset=utf-8;base64,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) format('woff');
+}
+
+.markdown-body .octicon {
+  display: inline-block;
+  fill: currentColor;
+  vertical-align: text-bottom;
+}
+
+.markdown-body .anchor {
+  float: left;
+  line-height: 1;
+  margin-left: -20px;
+  padding-right: 4px;
+}
+
+.markdown-body .anchor:focus {
+  outline: none;
+}
+
+.markdown-body h1 .octicon-link,
+.markdown-body h2 .octicon-link,
+.markdown-body h3 .octicon-link,
+.markdown-body h4 .octicon-link,
+.markdown-body h5 .octicon-link,
+.markdown-body h6 .octicon-link {
+  color: #1b1f23;
+  vertical-align: middle;
+  visibility: hidden;
+}
+
+.markdown-body h1:hover .anchor,
+.markdown-body h2:hover .anchor,
+.markdown-body h3:hover .anchor,
+.markdown-body h4:hover .anchor,
+.markdown-body h5:hover .anchor,
+.markdown-body h6:hover .anchor {
+  text-decoration: none;
+}
+
+.markdown-body h1:hover .anchor .octicon-link,
+.markdown-body h2:hover .anchor .octicon-link,
+.markdown-body h3:hover .anchor .octicon-link,
+.markdown-body h4:hover .anchor .octicon-link,
+.markdown-body h5:hover .anchor .octicon-link,
+.markdown-body h6:hover .anchor .octicon-link {
+  visibility: visible;
+}
+
+.markdown-body {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  color: #24292e;
+  line-height: 1.5;
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
+  font-size: 16px;
+  line-height: 1.5;
+  word-wrap: break-word;
+}
+
+.markdown-body .pl-c {
+  color: #6a737d;
+}
+
+.markdown-body .pl-c1,
+.markdown-body .pl-s .pl-v {
+  color: #005cc5;
+}
+
+.markdown-body .pl-e,
+.markdown-body .pl-en {
+  color: #6f42c1;
+}
+
+.markdown-body .pl-s .pl-s1,
+.markdown-body .pl-smi {
+  color: #24292e;
+}
+
+.markdown-body .pl-ent {
+  color: #22863a;
+}
+
+.markdown-body .pl-k {
+  color: #d73a49;
+}
+
+.markdown-body .pl-pds,
+.markdown-body .pl-s,
+.markdown-body .pl-s .pl-pse .pl-s1,
+.markdown-body .pl-sr,
+.markdown-body .pl-sr .pl-cce,
+.markdown-body .pl-sr .pl-sra,
+.markdown-body .pl-sr .pl-sre {
+  color: #032f62;
+}
+
+.markdown-body .pl-smw,
+.markdown-body .pl-v {
+  color: #e36209;
+}
+
+.markdown-body .pl-bu {
+  color: #b31d28;
+}
+
+.markdown-body .pl-ii {
+  background-color: #b31d28;
+  color: #fafbfc;
+}
+
+.markdown-body .pl-c2 {
+  background-color: #d73a49;
+  color: #fafbfc;
+}
+
+.markdown-body .pl-c2:before {
+  content: "^M";
+}
+
+.markdown-body .pl-sr .pl-cce {
+  color: #22863a;
+  font-weight: 700;
+}
+
+.markdown-body .pl-ml {
+  color: #735c0f;
+}
+
+.markdown-body .pl-mh,
+.markdown-body .pl-mh .pl-en,
+.markdown-body .pl-ms {
+  color: #005cc5;
+  font-weight: 700;
+}
+
+.markdown-body .pl-mi {
+  color: #24292e;
+  font-style: italic;
+}
+
+.markdown-body .pl-mb {
+  color: #24292e;
+  font-weight: 700;
+}
+
+.markdown-body .pl-md {
+  background-color: #ffeef0;
+  color: #b31d28;
+}
+
+.markdown-body .pl-mi1 {
+  background-color: #f0fff4;
+  color: #22863a;
+}
+
+.markdown-body .pl-mc {
+  background-color: #ffebda;
+  color: #e36209;
+}
+
+.markdown-body .pl-mi2 {
+  background-color: #005cc5;
+  color: #f6f8fa;
+}
+
+.markdown-body .pl-mdr {
+  color: #6f42c1;
+  font-weight: 700;
+}
+
+.markdown-body .pl-ba {
+  color: #586069;
+}
+
+.markdown-body .pl-sg {
+  color: #959da5;
+}
+
+.markdown-body .pl-corl {
+  color: #032f62;
+  text-decoration: underline;
+}
+
+.markdown-body details {
+  display: block;
+}
+
+.markdown-body summary {
+  display: list-item;
+}
+
+.markdown-body a {
+  background-color: transparent;
+}
+
+.markdown-body a:active,
+.markdown-body a:hover {
+  outline-width: 0;
+}
+
+.markdown-body strong {
+  font-weight: inherit;
+  font-weight: bolder;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+  margin: .67em 0;
+}
+
+.markdown-body img {
+  border-style: none;
+}
+
+.markdown-body code,
+.markdown-body kbd,
+.markdown-body pre {
+  font-family: monospace,monospace;
+  font-size: 1em;
+}
+
+.markdown-body hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+}
+
+.markdown-body input {
+  font: inherit;
+  margin: 0;
+}
+
+.markdown-body input {
+  overflow: visible;
+}
+
+.markdown-body [type=checkbox] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.markdown-body * {
+  box-sizing: border-box;
+}
+
+.markdown-body input {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.markdown-body a {
+  color: #0366d6;
+  text-decoration: none;
+}
+
+.markdown-body a:hover {
+  text-decoration: underline;
+}
+
+.markdown-body strong {
+  font-weight: 600;
+}
+
+.markdown-body hr {
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #dfe2e5;
+  height: 0;
+  margin: 15px 0;
+  overflow: hidden;
+}
+
+.markdown-body hr:before {
+  content: "";
+  display: table;
+}
+
+.markdown-body hr:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.markdown-body table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.markdown-body td,
+.markdown-body th {
+  padding: 0;
+}
+
+.markdown-body details summary {
+  cursor: pointer;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.markdown-body h1 {
+  font-size: 32px;
+}
+
+.markdown-body h1,
+.markdown-body h2 {
+  font-weight: 600;
+}
+
+.markdown-body h2 {
+  font-size: 24px;
+}
+
+.markdown-body h3 {
+  font-size: 20px;
+}
+
+.markdown-body h3,
+.markdown-body h4 {
+  font-weight: 600;
+}
+
+.markdown-body h4 {
+  font-size: 16px;
+}
+
+.markdown-body h5 {
+  font-size: 14px;
+}
+
+.markdown-body h5,
+.markdown-body h6 {
+  font-weight: 600;
+}
+
+.markdown-body h6 {
+  font-size: 12px;
+}
+
+.markdown-body p {
+  margin-bottom: 10px;
+  margin-top: 0;
+}
+
+.markdown-body blockquote {
+  margin: 0;
+}
+
+.markdown-body ol,
+.markdown-body ul {
+  margin-bottom: 0;
+  margin-top: 0;
+  padding-left: 0;
+}
+
+.markdown-body ol ol,
+.markdown-body ul ol {
+  list-style-type: lower-roman;
+}
+
+.markdown-body ol ol ol,
+.markdown-body ol ul ol,
+.markdown-body ul ol ol,
+.markdown-body ul ul ol {
+  list-style-type: lower-alpha;
+}
+
+.markdown-body dd {
+  margin-left: 0;
+}
+
+.markdown-body code,
+.markdown-body pre {
+  font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;
+  font-size: 12px;
+}
+
+.markdown-body pre {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.markdown-body input::-webkit-inner-spin-button,
+.markdown-body input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+.markdown-body .border {
+  border: 1px solid #e1e4e8!important;
+}
+
+.markdown-body .border-0 {
+  border: 0!important;
+}
+
+.markdown-body .border-bottom {
+  border-bottom: 1px solid #e1e4e8!important;
+}
+
+.markdown-body .rounded-1 {
+  border-radius: 3px!important;
+}
+
+.markdown-body .bg-white {
+  background-color: #fff!important;
+}
+
+.markdown-body .bg-gray-light {
+  background-color: #fafbfc!important;
+}
+
+.markdown-body .text-gray-light {
+  color: #6a737d!important;
+}
+
+.markdown-body .mb-0 {
+  margin-bottom: 0!important;
+}
+
+.markdown-body .my-2 {
+  margin-bottom: 8px!important;
+  margin-top: 8px!important;
+}
+
+.markdown-body .pl-0 {
+  padding-left: 0!important;
+}
+
+.markdown-body .py-0 {
+  padding-bottom: 0!important;
+  padding-top: 0!important;
+}
+
+.markdown-body .pl-1 {
+  padding-left: 4px!important;
+}
+
+.markdown-body .pl-2 {
+  padding-left: 8px!important;
+}
+
+.markdown-body .py-2 {
+  padding-bottom: 8px!important;
+  padding-top: 8px!important;
+}
+
+.markdown-body .pl-3,
+.markdown-body .px-3 {
+  padding-left: 16px!important;
+}
+
+.markdown-body .px-3 {
+  padding-right: 16px!important;
+}
+
+.markdown-body .pl-4 {
+  padding-left: 24px!important;
+}
+
+.markdown-body .pl-5 {
+  padding-left: 32px!important;
+}
+
+.markdown-body .pl-6 {
+  padding-left: 40px!important;
+}
+
+.markdown-body .f6 {
+  font-size: 12px!important;
+}
+
+.markdown-body .lh-condensed {
+  line-height: 1.25!important;
+}
+
+.markdown-body .text-bold {
+  font-weight: 600!important;
+}
+
+.markdown-body:before {
+  content: "";
+  display: table;
+}
+
+.markdown-body:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.markdown-body>:first-child {
+  margin-top: 0!important;
+}
+
+.markdown-body>:last-child {
+  margin-bottom: 0!important;
+}
+
+.markdown-body a:not([href]) {
+  color: inherit;
+  text-decoration: none;
+}
+
+.markdown-body blockquote,
+.markdown-body dl,
+.markdown-body ol,
+.markdown-body p,
+.markdown-body pre,
+.markdown-body table,
+.markdown-body ul {
+  margin-bottom: 16px;
+  margin-top: 0;
+}
+
+.markdown-body hr {
+  background-color: #e1e4e8;
+  border: 0;
+  height: .25em;
+  margin: 24px 0;
+  padding: 0;
+}
+
+.markdown-body blockquote {
+  border-left: .25em solid #dfe2e5;
+  color: #6a737d;
+  padding: 0 1em;
+}
+
+.markdown-body blockquote>:first-child {
+  margin-top: 0;
+}
+
+.markdown-body blockquote>:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body kbd {
+  background-color: #fafbfc;
+  border: 1px solid #c6cbd1;
+  border-bottom-color: #959da5;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #959da5;
+  color: #444d56;
+  display: inline-block;
+  font-size: 11px;
+  line-height: 10px;
+  padding: 3px 5px;
+  vertical-align: middle;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  font-weight: 600;
+  line-height: 1.25;
+  margin-bottom: 16px;
+  margin-top: 24px;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+}
+
+.markdown-body h1,
+.markdown-body h2 {
+  border-bottom: 1px solid #eaecef;
+  padding-bottom: .3em;
+}
+
+.markdown-body h2 {
+  font-size: 1.5em;
+}
+
+.markdown-body h3 {
+  font-size: 1.25em;
+}
+
+.markdown-body h4 {
+  font-size: 1em;
+}
+
+.markdown-body h5 {
+  font-size: .875em;
+}
+
+.markdown-body h6 {
+  color: #6a737d;
+  font-size: .85em;
+}
+
+.markdown-body ol,
+.markdown-body ul {
+  padding-left: 2em;
+}
+
+.markdown-body ol ol,
+.markdown-body ol ul,
+.markdown-body ul ol,
+.markdown-body ul ul {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.markdown-body li {
+  word-wrap: break-all;
+}
+
+.markdown-body li>p {
+  margin-top: 16px;
+}
+
+.markdown-body li+li {
+  margin-top: .25em;
+}
+
+.markdown-body dl {
+  padding: 0;
+}
+
+.markdown-body dl dt {
+  font-size: 1em;
+  font-style: italic;
+  font-weight: 600;
+  margin-top: 16px;
+  padding: 0;
+}
+
+.markdown-body dl dd {
+  margin-bottom: 16px;
+  padding: 0 16px;
+}
+
+.markdown-body table {
+  display: block;
+  overflow: auto;
+  width: 100%;
+}
+
+.markdown-body table th {
+  font-weight: 600;
+}
+
+.markdown-body table td,
+.markdown-body table th {
+  border: 1px solid #dfe2e5;
+  padding: 6px 13px;
+}
+
+.markdown-body table tr {
+  background-color: #fff;
+  border-top: 1px solid #c6cbd1;
+}
+
+.markdown-body table tr:nth-child(2n) {
+  background-color: #f6f8fa;
+}
+
+.markdown-body img {
+  background-color: #fff;
+  box-sizing: content-box;
+  max-width: 100%;
+}
+
+.markdown-body img[align=right] {
+  padding-left: 20px;
+}
+
+.markdown-body img[align=left] {
+  padding-right: 20px;
+}
+
+.markdown-body code {
+  background-color: rgba(27,31,35,.05);
+  border-radius: 3px;
+  font-size: 85%;
+  margin: 0;
+  padding: .2em .4em;
+}
+
+.markdown-body pre {
+  word-wrap: normal;
+}
+
+.markdown-body pre>code {
+  background: transparent;
+  border: 0;
+  font-size: 100%;
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  word-break: normal;
+}
+
+.markdown-body .highlight {
+  margin-bottom: 16px;
+}
+
+.markdown-body .highlight pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+
+.markdown-body .highlight pre,
+.markdown-body pre {
+  background-color: #f6f8fa;
+  border-radius: 3px;
+  font-size: 85%;
+  line-height: 1.45;
+  overflow: auto;
+  padding: 16px;
+}
+
+.markdown-body pre code {
+  background-color: transparent;
+  border: 0;
+  display: inline;
+  line-height: inherit;
+  margin: 0;
+  max-width: auto;
+  overflow: visible;
+  padding: 0;
+  word-wrap: normal;
+}
+
+.markdown-body .commit-tease-sha {
+  color: #444d56;
+  display: inline-block;
+  font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;
+  font-size: 90%;
+}
+
+.markdown-body .blob-wrapper {
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.markdown-body .blob-wrapper-embedded {
+  max-height: 240px;
+  overflow-y: auto;
+}
+
+.markdown-body .blob-num {
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  color: rgba(27,31,35,.3);
+  cursor: pointer;
+  font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;
+  font-size: 12px;
+  line-height: 20px;
+  min-width: 50px;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-align: right;
+  user-select: none;
+  vertical-align: top;
+  white-space: nowrap;
+  width: 1%;
+}
+
+.markdown-body .blob-num:hover {
+  color: rgba(27,31,35,.6);
+}
+
+.markdown-body .blob-num:before {
+  content: attr(data-line-number);
+}
+
+.markdown-body .blob-code {
+  line-height: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  position: relative;
+  vertical-align: top;
+}
+
+.markdown-body .blob-code-inner {
+  color: #24292e;
+  font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;
+  font-size: 12px;
+  overflow: visible;
+  white-space: pre;
+  word-wrap: normal;
+}
+
+.markdown-body .pl-token.active,
+.markdown-body .pl-token:hover {
+  background: #ffea7f;
+  cursor: pointer;
+}
+
+.markdown-body kbd {
+  background-color: #fafbfc;
+  border: 1px solid #d1d5da;
+  border-bottom-color: #c6cbd1;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #c6cbd1;
+  color: #444d56;
+  display: inline-block;
+  font: 11px SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;
+  line-height: 10px;
+  padding: 3px 5px;
+  vertical-align: middle;
+}
+
+.markdown-body :checked+.radio-label {
+  border-color: #0366d6;
+  position: relative;
+  z-index: 1;
+}
+
+.markdown-body .tab-size[data-tab-size="1"] {
+  -moz-tab-size: 1;
+  tab-size: 1;
+}
+
+.markdown-body .tab-size[data-tab-size="2"] {
+  -moz-tab-size: 2;
+  tab-size: 2;
+}
+
+.markdown-body .tab-size[data-tab-size="3"] {
+  -moz-tab-size: 3;
+  tab-size: 3;
+}
+
+.markdown-body .tab-size[data-tab-size="4"] {
+  -moz-tab-size: 4;
+  tab-size: 4;
+}
+
+.markdown-body .tab-size[data-tab-size="5"] {
+  -moz-tab-size: 5;
+  tab-size: 5;
+}
+
+.markdown-body .tab-size[data-tab-size="6"] {
+  -moz-tab-size: 6;
+  tab-size: 6;
+}
+
+.markdown-body .tab-size[data-tab-size="7"] {
+  -moz-tab-size: 7;
+  tab-size: 7;
+}
+
+.markdown-body .tab-size[data-tab-size="8"] {
+  -moz-tab-size: 8;
+  tab-size: 8;
+}
+
+.markdown-body .tab-size[data-tab-size="9"] {
+  -moz-tab-size: 9;
+  tab-size: 9;
+}
+
+.markdown-body .tab-size[data-tab-size="10"] {
+  -moz-tab-size: 10;
+  tab-size: 10;
+}
+
+.markdown-body .tab-size[data-tab-size="11"] {
+  -moz-tab-size: 11;
+  tab-size: 11;
+}
+
+.markdown-body .tab-size[data-tab-size="12"] {
+  -moz-tab-size: 12;
+  tab-size: 12;
+}
+
+.markdown-body .task-list-item {
+  list-style-type: none;
+}
+
+.markdown-body .task-list-item+.task-list-item {
+  margin-top: 3px;
+}
+
+.markdown-body .task-list-item input {
+  margin: 0 .2em .25em -1.6em;
+  vertical-align: middle;
+}
+
+.markdown-body hr {
+  border-bottom-color: #eee;
+}
+
+.markdown-body .pl-0 {
+  padding-left: 0!important;
+}
+
+.markdown-body .pl-1 {
+  padding-left: 4px!important;
+}
+
+.markdown-body .pl-2 {
+  padding-left: 8px!important;
+}
+
+.markdown-body .pl-3 {
+  padding-left: 16px!important;
+}
+
+.markdown-body .pl-4 {
+  padding-left: 24px!important;
+}
+
+.markdown-body .pl-5 {
+  padding-left: 32px!important;
+}
+
+.markdown-body .pl-6 {
+  padding-left: 40px!important;
+}
+
+.markdown-body .pl-7 {
+  padding-left: 48px!important;
+}
+
+.markdown-body .pl-8 {
+  padding-left: 64px!important;
+}
+
+.markdown-body .pl-9 {
+  padding-left: 80px!important;
+}
+
+.markdown-body .pl-10 {
+  padding-left: 96px!important;
+}
+
+.markdown-body .pl-11 {
+  padding-left: 112px!important;
+}
+
+.markdown-body .pl-12 {
+  padding-left: 128px!important;
+}
+
+/*# sourceURL=webpack://./node_modules/github-markdown-css/github-markdown.css */
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL25vZGVfbW9kdWxlcy9naXRodWItbWFya2Rvd24tY3NzL2dpdGh1Yi1tYXJrZG93bi5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSwwQkFBMEI7RUFDMUIsMkRBQXF0RTtBQUN2dEU7O0FBRUE7RUFDRSxxQkFBcUI7RUFDckIsa0JBQWtCO0VBQ2xCLDJCQUEyQjtBQUM3Qjs7QUFFQTtFQUNFLFdBQVc7RUFDWCxjQUFjO0VBQ2Qsa0JBQWtCO0VBQ2xCLGtCQUFrQjtBQUNwQjs7QUFFQTtFQUNFLGFBQWE7QUFDZjs7QUFFQTs7Ozs7O0VBTUUsY0FBYztFQUNkLHNCQUFzQjtFQUN0QixrQkFBa0I7QUFDcEI7O0FBRUE7Ozs7OztFQU1FLHFCQUFxQjtBQUN2Qjs7QUFFQTs7Ozs7O0VBTUUsbUJBQW1CO0FBQ3JCOztBQUVBO0VBQ0UsMEJBQTBCO0VBQzFCLDhCQUE4QjtFQUM5QixjQUFjO0VBQ2QsZ0JBQWdCO0VBQ2hCLGtJQUFrSTtFQUNsSSxlQUFlO0VBQ2YsZ0JBQWdCO0VBQ2hCLHFCQUFxQjtBQUN2Qjs7QUFFQTtFQUNFLGNBQWM7QUFDaEI7O0FBRUE7O0VBRUUsY0FBYztBQUNoQjs7QUFFQTs7RUFFRSxjQUFjO0FBQ2hCOztBQUVBOztFQUVFLGNBQWM7QUFDaEI7O0FBRUE7RUFDRSxjQUFjO0FBQ2hCOztBQUVBO0VBQ0UsY0FBYztBQUNoQjs7QUFFQTs7Ozs7OztFQU9FLGNBQWM7QUFDaEI7O0FBRUE7O0VBRUUsY0FBYztBQUNoQjs7QUFFQTtFQUNFLGNBQWM7QUFDaEI7O0FBRUE7RUFDRSx5QkFBeUI7RUFDekIsY0FBYztBQUNoQjs7QUFFQTtFQUNFLHlCQUF5QjtFQUN6QixjQUFjO0FBQ2hCOztBQUVBO0VBQ0UsYUFBYTtBQUNmOztBQUVBO0VBQ0UsY0FBYztFQUNkLGdCQUFnQjtBQUNsQjs7QUFFQTtFQUNFLGNBQWM7QUFDaEI7O0FBRUE7OztFQUdFLGNBQWM7RUFDZCxnQkFBZ0I7QUFDbEI7O0FBRUE7RUFD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 */
+  </style>
+  <style>
+  /**
+ * prism.js default theme for JavaScript, CSS and HTML
+ * Based on dabblet (http://dabblet.com)
+ * @author Lea Verou
+ */
+
+code[class*="language-"],
+pre[class*="language-"] {
+	color: black;
+	background: none;
+	text-shadow: 0 1px white;
+	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	font-size: 1em;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	line-height: 1.5;
+
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+}
+
+pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
+code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-selection {
+	text-shadow: none;
+	background: #b3d4fc;
+}
+
+pre[class*="language-"]::selection, pre[class*="language-"] ::selection,
+code[class*="language-"]::selection, code[class*="language-"] ::selection {
+	text-shadow: none;
+	background: #b3d4fc;
+}
+
+@media print {
+	code[class*="language-"],
+	pre[class*="language-"] {
+		text-shadow: none;
+	}
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+	padding: 1em;
+	margin: .5em 0;
+	overflow: auto;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+	background: #f5f2f0;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+	padding: .1em;
+	border-radius: .3em;
+	white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: slategray;
+}
+
+.token.punctuation {
+	color: #999;
+}
+
+.token.namespace {
+	opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+	color: #905;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+	color: #690;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+	color: #9a6e3a;
+	/* This background color was intended by the author of this theme. */
+	background: hsla(0, 0%, 100%, .5);
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+	color: #07a;
+}
+
+.token.function,
+.token.class-name {
+	color: #DD4A68;
+}
+
+.token.regex,
+.token.important,
+.token.variable {
+	color: #e90;
+}
+
+.token.important,
+.token.bold {
+	font-weight: bold;
+}
+.token.italic {
+	font-style: italic;
+}
+
+.token.entity {
+	cursor: help;
+}
+
+/*# sourceURL=webpack://./node_modules/prismjs/themes/prism.css */
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL25vZGVfbW9kdWxlcy9wcmlzbWpzL3RoZW1lcy9wcmlzbS5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7Ozs7RUFJRTs7QUFFRjs7Q0FFQyxZQUFZO0NBQ1osZ0JBQWdCO0NBQ2hCLHdCQUF3QjtDQUN4QixzRUFBc0U7Q0FDdEUsY0FBYztDQUNkLGdCQUFnQjtDQUNoQixnQkFBZ0I7Q0FDaEIsb0JBQW9CO0NBQ3BCLGtCQUFrQjtDQUNsQixpQkFBaUI7Q0FDakIsZ0JBQWdCOztDQUVoQixnQkFBZ0I7Q0FDaEIsY0FBYztDQUNkLFdBQVc7O0NBRVgscUJBQXFCO0NBQ3JCLGtCQUFrQjtDQUNsQixpQkFBaUI7Q0FDakIsYUFBYTtBQUNkOztBQUVBOztDQUVDLGlCQUFpQjtDQUNqQixtQkFBbUI7QUFDcEI7O0FBRUE7O0NBRUMsaUJBQWlCO0NBQ2pCLG1CQUFtQjtBQUNwQjs7QUFFQTtDQUNDOztFQUVDLGlCQUFpQjtDQUNsQjtBQUNEOztBQUVBLGdCQUFnQjtBQUNoQjtDQUNDLFlBQVk7Q0FDWixjQUFjO0NBQ2QsY0FBYztBQUNmOztBQUVBOztDQUVDLG1CQUFtQjtBQUNwQjs7QUFFQSxnQkFBZ0I7QUFDaEI7Q0FDQyxhQUFhO0NBQ2IsbUJBQW1CO0NBQ25CLG1CQUFtQjtBQUNwQjs7QUFFQTs7OztDQUlDLGdCQUFnQjtBQUNqQjs7QUFFQTtDQUNDLFdBQVc7QUFDWjs7QUFFQTtDQUNDLFdBQVc7QUFDWjs7QUFFQTs7Ozs7OztDQU9DLFdBQVc7QUFDWjs7QUFFQTs7Ozs7O0NBTUMsV0FBVztBQUNaOztBQUVBOzs7OztDQUtDLGNBQWM7Q0FDZCxvRUFBb0U7Q0FDcEUsaUNBQWlDO0FBQ2xDOztBQUVBOzs7Q0FHQyxXQUFXO0FBQ1o7O0FBRUE7O0NBRUMsY0FBYztBQUNmOztBQUVBOzs7Q0FHQyxXQUFXO0FBQ1o7O0FBRUE7O0NBRUMsaUJBQWlCO0FBQ2xCO0FBQ0E7Q0FDQyxrQkFBa0I7QUFDbkI7O0FBRUE7Q0FDQyxZQUFZO0FBQ2IiLCJzb3VyY2VSb290IjoiIn0= */
+  </style>
+  <style>
+  
+  </style>
+  <style>
+    .markdown-body {
+      font-family: -apple-system,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
+      box-sizing: border-box;
+      min-width: 200px;
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 45px;
+    }
+
+    @media not print {
+      .markdown-body {
+        padding: 45px;
+      }
+
+      @media (max-width: 767px) {
+        .markdown-body {
+          padding: 15px;
+        }
+      }
+    }
+
+    .hf-container {
+      color: #24292e;
+      line-height: 1.3;
+    }
+
+    .markdown-body .highlight pre,
+    .markdown-body pre {
+      white-space: pre-wrap;
+    }
+    .markdown-body table {
+      display: table;
+    }
+    .markdown-body img[data-align="center"] {
+      display: block;
+      margin: 0 auto;
+    }
+    .markdown-body img[data-align="right"] {
+      display: block;
+      margin: 0 0 0 auto;
+    }
+    .markdown-body li.task-list-item {
+      list-style-type: none;
+    }
+    .markdown-body li > [type=checkbox] {
+      margin: 0 0 0 -1.3em;
+    }
+    .markdown-body input[type="checkbox"] ~ p {
+      margin-top: 0;
+      display: inline-block;
+    }
+    .markdown-body ol ol,
+    .markdown-body ul ol {
+      list-style-type: decimal;
+    }
+    .markdown-body ol ol ol,
+    .markdown-body ol ul ol,
+    .markdown-body ul ol ol,
+    .markdown-body ul ul ol {
+      list-style-type: decimal;
+    }
+  </style>
+  <style>.markdown-body a.footnote-ref {
+  text-decoration: none;
+}
+
+.footnotes {
+  font-size: .85em;
+  opacity: .8;
+}
+
+.footnotes li[role="doc-endnote"] {
+  position: relative;
+}
+
+.footnotes .footnote-back {
+  position: absolute;
+  font-family: initial;
+  top: .2em;
+  right: 1em;
+  text-decoration: none;
+}
+
+.inline-math.invalid,
+.multiple-math.invalid {
+  color: rgb(255, 105, 105);
+}
+
+.toc-container {
+  width: 100%;
+}
+
+.toc-container .toc-title {
+  font-weight: 700;
+  font-size: 1.2em;
+  margin-bottom: 0;
+}
+
+.toc-container li,
+.toc-container ul,
+.toc-container ul li {
+  list-style: none !important;
+}
+
+.toc-container > ul {
+  padding-left: 0;
+}
+
+.toc-container ul li span {
+  display : flex;
+}
+
+.toc-container ul li span a {
+  color: inherit;
+  text-decoration: none;
+}
+.toc-container ul li span a:hover {
+  color: inherit;
+  text-decoration: none;
+}
+
+.toc-container ul li span span.dots {
+  flex: 1;
+  height: 0.65em;
+  margin: 0 10px;
+  border-bottom: 2px dotted black;
+}
+
+/*# sourceURL=webpack://./src/muya/lib/assets/styles/exportStyle.css */
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9tdXlhL2xpYi9hc3NldHMvc3R5bGVzL2V4cG9ydFN0eWxlLmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLHFCQUFxQjtBQUN2Qjs7QUFFQTtFQUNFLGdCQUFnQjtFQUNoQixXQUFXO0FBQ2I7O0FBRUE7RUFDRSxrQkFBa0I7QUFDcEI7O0FBRUE7RUFDRSxrQkFBa0I7RUFDbEIsb0JBQW9CO0VBQ3BCLFNBQVM7RUFDVCxVQUFVO0VBQ1YscUJBQXFCO0FBQ3ZCOztBQUVBOztFQUVFLHlCQUF5QjtBQUMzQjs7QUFFQTtFQUNFLFdBQVc7QUFDYjs7QUFFQTtFQUNFLGdCQUFnQjtFQUNoQixnQkFBZ0I7RUFDaEIsZ0JBQWdCO0FBQ2xCOztBQUVBOzs7RUFHRSwyQkFBMkI7QUFDN0I7O0FBRUE7RUFDRSxlQUFlO0FBQ2pCOztBQUVBO0VBQ0UsY0FBYztBQUNoQjs7QUFFQTtFQUNFLGNBQWM7RUFDZCxxQkFBcUI7QUFDdkI7QUFDQTtFQUNFLGNBQWM7RUFDZCxxQkFBcUI7QUFDdkI7O0FBRUE7RUFDRSxPQUFPO0VBQ1AsY0FBYztFQUNkLGNBQWM7RUFDZCwrQkFBK0I7QUFDakMiLCJzb3VyY2VSb290IjoiIn0= */</style>
+  <style>.markdown-body{}pre.front-matter{display:none!important;}</style>
+
+<style id="libron-font-injection">
+@font-face {
+  font-family: 'Libron';
+  src: url('../../../../Libron_Web/Libron-Regular.woff2') format('woff2'),
+       url('../../../../Libron_Web/Libron-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Libron';
+  src: url('../../../../Libron_Web/Libron-Bold.woff2') format('woff2'),
+       url('../../../../Libron_Web/Libron-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Libron';
+  src: url('../../../../Libron_Web/Libron-Italic.woff2') format('woff2'),
+       url('../../../../Libron_Web/Libron-Italic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Libron';
+  src: url('../../../../Libron_Web/Libron-BoldItalic.woff2') format('woff2'),
+       url('../../../../Libron_Web/Libron-BoldItalic.ttf') format('truetype');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+html, body, .markdown-body, h1, h2, h3, h4, h5, h6, p, span, li, a, td, th {
+  font-family: 'Libron', serif, -apple-system, BlinkMacSystemFont !important;
+}
+
+body {
+  padding: 1.5rem 2rem !important;
+  max-width: 900px !important;
+  margin: 0 auto !important;
+}
+
+/* Dark mode theme styles inside iframe */
+[data-theme="dark"] html,
+[data-theme="dark"] body,
+[data-theme="dark"] .markdown-body {
+  background-color: #0a0a0a !important;
+  color: #ededed !important;
+}
+[data-theme="dark"] .markdown-body table tr {
+  background-color: #121212 !important;
+  border-color: #262626 !important;
+}
+[data-theme="dark"] .markdown-body table tr:nth-child(2n) {
+  background-color: #181818 !important;
+}
+[data-theme="dark"] .markdown-body table th,
+[data-theme="dark"] .markdown-body table td {
+  border-color: #2e2e2e !important;
+}
+[data-theme="dark"] .markdown-body pre,
+[data-theme="dark"] .markdown-body code {
+  background-color: #141414 !important;
+  color: #f0f0f0 !important;
+  border-color: #2a2a2a !important;
+}
+[data-theme="dark"] .markdown-body blockquote {
+  color: #999999 !important;
+  border-left-color: #444444 !important;
+}
+[data-theme="dark"] .markdown-body a {
+  color: #58a6ff !important;
+}
+[data-theme="dark"] .markdown-body hr {
+  background-color: #262626 !important;
+}
+</style>
+
+</head>
+<body>
+  <article class="markdown-body"><h1 class="atx" id="oop-week-6---exception-handling-in-java">OOP Week 6 - Exception Handling in Java</h1>
+<h3 class="atx" id="object-oriented-programming-with-java--week-6">Object Oriented Programming with Java — Week 6</h3>
+<blockquote>
+<p><strong>The story in one line:</strong> Every program is a delivery driver. Most days the roads are clear, but sometimes there is a roadblock. Exception handling is the driver's plan for what to do when the road is closed, instead of abandoning the van in the middle of the highway.</p>
+</blockquote>
+<h2 class="atx" id="index">Index</h2>
+<ul>
+<li><a href="#1-what-is-an-exception">1. What Is an Exception?</a> — <em>When your program stops being a polite guest and throws a tantrum.</em></li>
+<li><a href="#2-life-without-exception-handling">2. Life Without Exception Handling</a> — <em>A crash course, quite literally.</em></li>
+<li><a href="#3-why-handle-exceptions-at-all">3. Why Handle Exceptions at All?</a> — <em>Four good reasons to stop crashing.</em></li>
+<li><a href="#4-types-of-exceptions-in-java">4. Types of Exceptions in Java</a> — <em>Checked, unchecked and errors: the three kinds of trouble.</em></li>
+<li><a href="#5-the-exception-hierarchy">5. The Exception Hierarchy</a> — <em>The family tree, with Throwable as grandparent.</em></li>
+<li><a href="#6-try-catch-and-finally">6. try, catch and finally</a> — <em>Attempt, rescue, clean up.</em></li>
+<li><a href="#7-multiple-catch-blocks">7. Multiple catch Blocks</a> — <em>One try, many safety nets.</em></li>
+<li><a href="#8-nested-try-blocks">8. Nested try Blocks</a> — <em>Safety nets inside safety nets.</em></li>
+<li><a href="#9-the-throw-keyword">9. The throw Keyword</a> — <em>Raising the alarm on purpose.</em></li>
+<li><a href="#10-the-throws-keyword">10. The throws Keyword</a> — <em>Putting a warning label on a method.</em></li>
+<li><a href="#11-throw-vs-throws">11. throw vs throws</a> — <em>Two letters, two very different jobs.</em></li>
+<li><a href="#12-user-defined-custom-exceptions">12. User-Defined (Custom) Exceptions</a> — <em>Invent your own kind of trouble.</em></li>
+<li><a href="#13-summary">13. Summary</a> — <em>The whole chapter in five bullets.</em></li>
+<li><a href="#14-practice-exercises">14. Practice Exercises</a> — <em>Your homework, with hints.</em></li>
+<li><a href="#15-think-it-through-questions">15. Think-It-Through Questions</a> — <em>Five questions that will not let you coast.</em></li>
+</ul>
+<h2 class="atx" id="learning-objectives">Learning Objectives</h2>
+<p>This chapter covers the first four objectives. The remaining three (file handling with streams, text and binary files, serialization) are covered in the next lecture on file I/O. Exceptions come first because file operations are one of the most common sources of exceptions: files go missing, disks fill up, and permissions are denied.</p>
+<p>The same three-step idea (<code>try</code>, <code>catch</code>, <code>finally</code>) exists in other object oriented languages such as C++ and C#, so the concepts transfer directly.</p>
+<h2 class="atx" id="1-what-is-an-exception">1. What Is an Exception?</h2>
+<p>Up to now, every program in this course has followed a <em>normal flow</em>: we created classes, created objects, and used inheritance, polymorphism and abstract classes, and the program ran from the first line to the last.</p>
+<blockquote>
+<p><strong>An exception is an abnormal condition or unexpected event that occurs during program execution and disrupts the normal flow of a program.</strong></p>
+</blockquote>
+<p>It is called <em>abnormal</em> precisely because it breaks the normal flow.</p>
+<h3 class="atx" id="typical-examples">Typical Examples</h3>
+<ul>
+<li>Dividing a number by zero</li>
+<li>Accessing an invalid array index (for example <code>a[0], a[1], a[2], a[3]</code> exist but you ask for <code>a[10]</code>)</li>
+<li>Opening a file that does not exist</li>
+<li>Invalid user input (the program expects an <code>int</code> and the user types something else)</li>
+</ul>
+<p>Mathematically, division by zero is undefined. In a program there is no sensible number to return, so Java signals an error instead.</p>
+<h3 class="atx" id="the-big-picture">The Big Picture</h3>
+<p>When the program meets one of these situations there are exactly two outcomes:</p>
+<table>
+<thead>
+<tr>
+<th>Situation</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>No exception</td>
+<td>The code runs properly and successfully, as the client requirement intended</td>
+</tr>
+<tr>
+<td>Exception occurs</td>
+<td>We must <em>handle</em> it through an implementation, otherwise the program dies</td>
+</tr>
+</tbody></table>
+<p>Handling the exception is done with three blocks: <strong>try</strong> (the risky code), <strong>catch</strong> (the exception type and its handler) and <strong>finally</strong> (the clean-up code).</p>
+<h2 class="atx" id="2-life-without-exception-handling">2. Life Without Exception Handling</h2>
+<p>Here is a program with no protection at all:</p>
+<pre><code class="fenced-code-block language-java"><span class="token keyword">class</span> <span class="token class-name">Demo</span> <span class="token punctuation">{</span>
+  <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span> args<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">int</span> a <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
+    <span class="token keyword">int</span> b <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">int</span> result <span class="token operator">=</span> a <span class="token operator">/</span> b<span class="token punctuation">;</span>
+
+    <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<p><strong>Output</strong></p>
+<pre><code class="fenced-code-block language-text">Exception in thread "main" java.lang.ArithmeticException: / by zero
+Program terminates unexpectedly.</code></pre>
+<p>What happened, line by line:</p>
+<ol>
+<li><code>a</code> and <code>b</code> are initialised without trouble.</li>
+<li><code>a / b</code> is <code>10 / 0</code>, which is illegal for integers. Java creates an <code>ArithmeticException</code> and the normal flow stops there.</li>
+<li><code>System.out.println(result);</code> is <strong>never executed</strong>. The program is terminated unexpectedly.</li>
+</ol>
+<p>The program was syntactically correct. It compiled fine and failed only while running. That is why we need a mechanism that deals with <em>runtime errors</em>.</p>
+<h2 class="atx" id="3-why-handle-exceptions-at-all">3. Why Handle Exceptions at All?</h2>
+<blockquote>
+<p><strong>Exception handling allows a program to handle runtime errors gracefully and continue execution.</strong></p>
+</blockquote>
+<p>We add exception handling as an extra feature on top of our normal program. The advantages are:</p>
+<table>
+<thead>
+<tr>
+<th>Advantage</th>
+<th>What it means in practice</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Prevents abnormal program termination</td>
+<td>A problem in the middle of execution no longer kills the whole program</td>
+</tr>
+<tr>
+<td>Separates error-handling code from normal logic</td>
+<td>The normal code and the error-handling code live in different blocks, so each stays readable</td>
+</tr>
+<tr>
+<td>Improves program reliability</td>
+<td>The program behaves predictably even when something goes wrong</td>
+</tr>
+<tr>
+<td>Provides meaningful error messages</td>
+<td>The user sees "Cannot divide by zero" or "Invalid array index" instead of a cryptic crash dump</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p><strong>Note for Review:</strong> <em>Graceful</em> does not mean the error disappears. It means the error is <strong>noticed, reported and contained</strong>, and the program decides what happens next.</p>
+</blockquote>
+<h2 class="atx" id="4-types-of-exceptions-in-java">4. Types of Exceptions in Java</h2>
+<p>Java divides trouble into three main categories:</p>
+<ul>
+<li><strong>Checked Exceptions</strong></li>
+<li><strong>Unchecked Exceptions</strong></li>
+<li><strong>Errors</strong></li>
+</ul>
+<h3 class="atx" id="41-checked-exceptions">4.1 Checked Exceptions</h3>
+<p>Checked exceptions are checked by the compiler during compilation. The programmer <strong>must</strong> handle them using <code>try-catch</code>, or declare them using <code>throws</code>. If you do neither, the code does not compile.</p>
+<p><strong>Examples</strong></p>
+<ul>
+<li><code>IOException</code></li>
+<li><code>SQLException</code></li>
+<li><code>FileNotFoundException</code></li>
+<li><code>ClassNotFoundException</code></li>
+</ul>
+<p><strong>Example program</strong></p>
+<pre><code class="fenced-code-block language-java"><span class="token keyword">import</span> <span class="token namespace">java<span class="token punctuation">.</span>io<span class="token punctuation">.</span></span><span class="token operator">*</span><span class="token punctuation">;</span>
+
+<span class="token keyword">class</span> <span class="token class-name">Demo</span> <span class="token punctuation">{</span>
+  <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span> args<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">try</span> <span class="token punctuation">{</span>
+      <span class="token class-name">FileReader</span> file <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">FileReader</span><span class="token punctuation">(</span><span class="token string">"data.txt"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">catch</span><span class="token punctuation">(</span><span class="token class-name">FileNotFoundException</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"File not found"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<p>How to read this program:</p>
+<ul>
+<li><code>import java.io.*;</code> imports every class of the input/output package. It is needed because <code>FileReader</code> and <code>FileNotFoundException</code> live there.</li>
+<li><code>FileReader</code> is a predefined class. We create an object of it for the file <code>data.txt</code>.</li>
+<li>If <code>data.txt</code> does not exist, a <code>FileNotFoundException</code> is raised and the <code>catch</code> block prints <code>File not found</code>.</li>
+<li>Because the compiler forced us to deal with this possibility, <code>FileNotFoundException</code> is a <strong>checked</strong> exception.</li>
+</ul>
+<h3 class="atx" id="42-unchecked-exceptions">4.2 Unchecked Exceptions</h3>
+<p>Unchecked exceptions occur <strong>during runtime</strong> and are subclasses of <code>RuntimeException</code>. The compiler does not force you to handle them.</p>
+<p><strong>Examples</strong></p>
+<ul>
+<li><code>ArithmeticException</code></li>
+<li><code>NullPointerException</code></li>
+<li><code>ArrayIndexOutOfBoundsException</code></li>
+<li><code>NumberFormatException</code></li>
+</ul>
+<h4 class="atx" id="example-arithmeticexception">Example: ArithmeticException</h4>
+<pre><code class="fenced-code-block language-java"><span class="token keyword">class</span> <span class="token class-name">Demo</span> <span class="token punctuation">{</span>
+  <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span> args<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">int</span> a <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
+    <span class="token keyword">int</span> b <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+
+    <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>a<span class="token operator">/</span>b<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<p>Something divided by zero raises an <code>ArithmeticException</code>.</p>
+<h4 class="atx" id="example-arrayindexoutofboundsexception">Example: ArrayIndexOutOfBoundsException</h4>
+<pre><code class="fenced-code-block language-java"><span class="token keyword">class</span> <span class="token class-name">Demo</span> <span class="token punctuation">{</span>
+  <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span> args<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">int</span> arr<span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token number">10</span><span class="token punctuation">,</span><span class="token number">20</span><span class="token punctuation">,</span><span class="token number">30</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+    <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>arr<span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<p>The array has three elements (valid indices are <code>0</code>, <code>1</code>, <code>2</code>), but the program asks for <code>arr[5]</code>. That index is out of bounds, so Java raises an <code>ArrayIndexOutOfBoundsException</code>.</p>
+<blockquote>
+<p><strong>Note for Review:</strong> Both programs compile perfectly. The compiler cannot know that <code>b</code> will be zero or that index <code>5</code> is invalid. These problems appear only when the program runs. That is exactly what "unchecked" means.</p>
+</blockquote>
+<h3 class="atx" id="43-errors">4.3 Errors</h3>
+<p>Errors represent <strong>serious problems that usually cannot be handled by applications</strong>.</p>
+<p><strong>Examples</strong></p>
+<ul>
+<li><code>OutOfMemoryError</code> (for example <code>java.lang.OutOfMemoryError</code>)</li>
+<li><code>StackOverflowError</code></li>
+</ul>
+<p>An <code>OutOfMemoryError</code> occurs when memory is exhausted. A <code>StackOverflowError</code> occurs when the call stack becomes too deep, typically because of runaway recursion. These problems live in the JVM or system environment, not in your business logic, so a <code>catch</code> block rarely helps.</p>
+<h3 class="atx" id="44-side-by-side-comparison">4.4 Side-by-Side Comparison</h3>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Checked</th>
+<th>Unchecked</th>
+<th>Error</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>When detected</td>
+<td>Compile time</td>
+<td>Runtime</td>
+<td>Runtime</td>
+</tr>
+<tr>
+<td>Must handle or declare?</td>
+<td>Yes</td>
+<td>No</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Superclass</td>
+<td><code>Exception</code> (not <code>RuntimeException</code>)</td>
+<td><code>RuntimeException</code></td>
+<td><code>Error</code></td>
+</tr>
+<tr>
+<td>Typical example</td>
+<td><code>FileNotFoundException</code></td>
+<td><code>ArithmeticException</code></td>
+<td><code>OutOfMemoryError</code></td>
+</tr>
+<tr>
+<td>Can the app recover?</td>
+<td>Usually yes</td>
+<td>Usually yes</td>
+<td>Usually no</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p><strong>Pro-Tip:</strong> Exams love the question "What is the difference between checked and unchecked exceptions?" The one-line answer is that the compiler <strong>forces</strong> you to deal with checked ones and does <strong>not</strong> force you to deal with unchecked ones.</p>
+</blockquote>
+<h2 class="atx" id="5-the-exception-hierarchy">5. The Exception Hierarchy</h2>
+<p>Everything that can be thrown in Java descends from <code>Object</code>, and then from <code>Throwable</code>. <code>Throwable</code> splits into <code>Error</code> and <code>Exception</code>. <code>Exception</code> in turn splits into the run-time group and the compile-time group.</p>
+<div class="plantuml"><img src="https://www.plantuml.com/plantuml/svg/~1U5vraCjEmp0GHVVp5KEppgBz05HHeMwGGAY8jJCPnIv-H9En27-FdF1mKTaTZO-kP-v-KYEQWuURKSmG37hpaRBY55XDDA1fH4tO9TKKi7V2f2v5W08c3fvnyzYTcNI3PiBKdR5vS8FLep37sZfPIU-cyxo8QWMRO_9zhToB95cUMUGhvyvdld1cuh6ii7ep_UCzvzYUN5X_4yNcoUTG1nrI69tdNuckI2-HBDCRzqjCtcBpQfrUBFH7sLrH3bK6sMy1IbbjUrkwWD97OPQAPu9oO9cB_Y0fb7hAD6z1TAKTq4fa0VOS-npy9wQUdEi"></div>
+<p>Reading the tree:</p>
+<ul>
+<li><strong>Error</strong> is unchecked.</li>
+<li><strong>Exception → Run-Time</strong> is unchecked.</li>
+<li><strong>Exception → Compile-Time</strong> is checked.</li>
+</ul>
+<blockquote>
+<p><strong>Note for Review:</strong> "Compile-Time" in this diagram is shorthand for "checked at compile time". The exception itself still occurs while the program runs. What happens at compile time is the compiler's <em>check</em> that you have handled or declared it.</p>
+</blockquote>
+<h2 class="atx" id="6-try-catch-and-finally">6. try, catch and finally</h2>
+<h3 class="atx" id="61-the-three-blocks">6.1 The Three Blocks</h3>
+<table>
+<thead>
+<tr>
+<th>Block</th>
+<th>Job</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>try</code></td>
+<td>Contains the code that <strong>may generate</strong> an exception</td>
+</tr>
+<tr>
+<td><code>catch</code></td>
+<td><strong>Handles</strong> the exception (you name the exception type it can handle)</td>
+</tr>
+<tr>
+<td><code>finally</code></td>
+<td><strong>Executes always</strong>, whether an exception occurs or not (clean-up code)</td>
+</tr>
+</tbody></table>
+<p><strong>An analogy.</strong> <code>try</code> is attempting a risky recipe. <code>catch</code> is the fire extinguisher you use if the pan catches fire. <code>finally</code> is washing the dishes: you do it whether or not the kitchen caught fire.</p>
+<h3 class="atx" id="62-the-decision-flow">6.2 The Decision Flow</h3>
+<p>When the Java program runs, there are two questions to ask: was an exception encountered, and if so, was it handled? In <em>every</em> case the <code>finally</code> block runs.</p>
+<div class="plantuml"><img src="https://www.plantuml.com/plantuml/svg/~1U5vzphrEmq0C0E3zdiAKkKCoTe0AL85GLNMjbCNSEU64p-vTV43V7YKKL0d1vh_FzdeqB5OJkwjZmI4XC9wq6eo930KTKszW2YKEBmOX5l8MLPoR0fI12HPF-8QmBpeKJ9tSQw05u0ZpQhZUJlAEArsIpOUduxIeauruhM9KADpEBZTdT21cVV-3FQ84_Y7jFuHyDUgaZuBC9tXczQ_peJxAcJqK8d7kw-FbyWPout8pHzFG2dRwdUSMLd2WqUNsel-hi5FdrYIX9lu4Y7Lso0"></div>
+<ul>
+<li><strong>No exception:</strong> straight to <code>finally</code>.</li>
+<li><strong>Exception, handled:</strong> the <code>catch</code> block runs, then <code>finally</code>.</li>
+<li><strong>Exception, not handled:</strong> <code>finally</code> still runs. (The exception then continues to propagate upward, which is why unhandled exceptions can still crash the program, but only after <code>finally</code> has done its clean-up.)</li>
+</ul>
+<h3 class="atx" id="63-without-exception-vs-with-exception">6.3 Without Exception vs With Exception</h3>
+<p><strong>Without an exception</strong>, the <code>catch</code> block is skipped entirely. Control goes from <code>try</code> directly to <code>finally</code>, then to the next line of code. The <code>catch</code> block is not needed for this path to work.</p>
+<div class="plantuml"><img src="https://www.plantuml.com/plantuml/svg/~1U5vLZx5g0p4GH7jznSHkxCBw01V6f4aJqgP9iqYhE-6zrQ7R0n_1_suid73kbk6z6VOy6LMR1t5lOwLk80WjPJPC0nifEU5ai8AQkzuGS-LWkQXpZuEq4yR6we9VUEznsu0c6BQV3_oZCkiQ36IXnyvxl_yJVdGtNV8uSjmtD_oxjApLb9L4NdVIatsNcTVi5ryDafKHIkHMgzX-zzdOESFXS4B24Lh0ry1Z-yVW_GcXnGPMuyhHfGQhSsVME0zo1mu-OTS"></div>
+<p><strong>With an exception</strong>, control moves from <code>try</code> to <code>catch</code>, then to <code>finally</code>, then to the next line of code.</p>
+<div class="plantuml"><img src="https://www.plantuml.com/plantuml/svg/~1U5vLZh5gmq0GHFlzYedLE8Nl0r8OupgaSH5IBgSzwM1lpvnMs2RatuE42xcQWNapp6boRZuNfRThuw4mb1zrTan5d8r99JcyekLXTFIvIVHSZMWnR8CATjuU-4K80Nyxy0H7Ts4jrRPGP8yZzY64znSueljSjdz4jTwsZPIDLL-dqvC-wonRzalk3iqcYBMNzOMX-nwp2v7ZS3WYuWDoZt9T_iF7Lcz6SOqIfLMDw2JMpqN_0JPxMXO"></div>
+<h3 class="atx" id="64-a-complete-example">6.4 A Complete Example</h3>
+<pre><code class="fenced-code-block language-java"><span class="token keyword">class</span> <span class="token class-name">Demo</span> <span class="token punctuation">{</span>
+  <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span> args<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">try</span> <span class="token punctuation">{</span>
+      <span class="token keyword">int</span> result <span class="token operator">=</span> <span class="token number">10</span><span class="token operator">/</span><span class="token number">0</span><span class="token punctuation">;</span>
+      <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">catch</span><span class="token punctuation">(</span><span class="token class-name">ArithmeticException</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Cannot divide by zero"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">finally</span> <span class="token punctuation">{</span>
+      <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Program Completed"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<p><strong>Output</strong></p>
+<pre><code class="fenced-code-block language-text">Cannot divide by zero
+Program Completed</code></pre>
+<p><strong>Step-by-step trace</strong></p>
+<ol>
+<li>The <code>try</code> block starts. <code>10/0</code> raises an <code>ArithmeticException</code>.</li>
+<li><code>System.out.println(result);</code> inside <code>try</code> is skipped. Control jumps straight out of <code>try</code>.</li>
+<li>Java looks for a matching <code>catch</code>. <code>catch(ArithmeticException e)</code> matches, so <code>Cannot divide by zero</code> is printed. The variable <code>e</code> is the reference to the exception object.</li>
+<li>The <code>finally</code> block runs and prints <code>Program Completed</code>.</li>
+</ol>
+<p>If the division had been <code>10/2</code>, the output would be <code>5</code> followed by <code>Program Completed</code>. The <code>catch</code> block would be skipped but <code>finally</code> would still run.</p>
+<blockquote>
+<p><strong>Pro-Tip:</strong> In assignments and exams on exception handling, the expected structure is <code>try</code> + <code>catch</code> + <code>finally</code>. Always include <code>finally</code>, and remember it runs with or without an exception.</p>
+</blockquote>
+<h2 class="atx" id="7-multiple-catch-blocks">7. Multiple Catch Blocks</h2>
+<p>A single <code>try</code> block can contain several statements that raise <strong>different</strong> exceptions. For that we attach multiple <code>catch</code> blocks to one <code>try</code>. Each <code>catch</code> handles one exception type.</p>
+<pre><code class="fenced-code-block language-java"><span class="token keyword">class</span> <span class="token class-name">Demo</span> <span class="token punctuation">{</span>
+  <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span> args<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">try</span> <span class="token punctuation">{</span>
+      <span class="token keyword">int</span> arr<span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+      arr<span class="token punctuation">[</span><span class="token number">10</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">100</span><span class="token punctuation">;</span>
+      <span class="token keyword">int</span> x <span class="token operator">=</span> <span class="token number">10</span><span class="token operator">/</span><span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">catch</span><span class="token punctuation">(</span><span class="token class-name">ArrayIndexOutOfBoundsException</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Invalid array index"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">catch</span><span class="token punctuation">(</span><span class="token class-name">ArithmeticException</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Division error"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<ul>
+<li>The array has size 5 (valid indices <code>0</code> to <code>4</code>), but we write to <code>arr[10]</code>, which gives an <code>ArrayIndexOutOfBoundsException</code>.</li>
+<li><code>10/0</code> would give an <code>ArithmeticException</code>.</li>
+<li>The first <code>catch</code> handles the array error and the second handles the arithmetic error.</li>
+</ul>
+<p>The same idea extends to three, four or more <code>catch</code> blocks: one catch per exception type.</p>
+<blockquote>
+<p><strong>Note for Review:</strong> Only <strong>one</strong> catch block runs for a single exception. In the program above, the exception at <code>arr[10] = 100;</code> jumps out of <code>try</code> immediately, so <code>10/0</code> is <strong>never reached</strong>. The output is only <code>Invalid array index</code>. To see <code>Division error</code> you would have to trigger it separately (for example by removing the array line). Also, when exception types are related by inheritance, place the <strong>more specific</strong> catch before the <strong>more general</strong> one (for example <code>ArithmeticException</code> before <code>Exception</code>), otherwise the code will not compile.</p>
+</blockquote>
+<h2 class="atx" id="8-nested-try-blocks">8. Nested try Blocks</h2>
+<p>A <strong>try block inside another try block</strong> is a nested try.</p>
+<pre><code class="fenced-code-block language-java"><span class="token keyword">class</span> <span class="token class-name">Demo</span> <span class="token punctuation">{</span>
+  <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span> args<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">try</span> <span class="token punctuation">{</span>
+      <span class="token keyword">try</span> <span class="token punctuation">{</span>
+        <span class="token keyword">int</span> x <span class="token operator">=</span> <span class="token number">10</span><span class="token operator">/</span><span class="token number">0</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+      <span class="token keyword">catch</span><span class="token punctuation">(</span><span class="token class-name">ArithmeticException</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Inner Exception"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">catch</span><span class="token punctuation">(</span><span class="token class-name">Exception</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Outer Exception"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<ul>
+<li>The inner <code>try</code> has its own inner <code>catch(ArithmeticException e)</code>, which handles the known error <code>10/0</code>.</li>
+<li>The outer <code>try</code> has its own outer <code>catch(Exception e)</code>. Because the outer one catches the general <code>Exception</code>, it acts as a safety net for anything unexpected that is not handled by the inner block.</li>
+</ul>
+<p><strong>Output</strong></p>
+<pre><code class="fenced-code-block language-text">Inner Exception</code></pre>
+<div class="plantuml"><img src="https://www.plantuml.com/plantuml/svg/~1U5vja45B0q4CXU_pAvxjHG-jzQfOgY0Y21uy2Rs4sUnk89Cfirbi4V-xJDU2gBT0tlVoNZQ3K_4nQJZR5UeIGUcGHyUGsCaeABSEpoZIzOv62aUNR27KWQnJnknbT2xmSfY11cJ7_BcgxtLaV0JWX_J9R99kJSonnoskLfUhcoCfZlahQShs7nJ9Ox-ryxiYtYTsYG_xoBkQvcB2u_VXny9iuVDln9F5Bp2Vm3TMpUyXY6EnM5V3Q_HaZNA3dWkZbJ9ua8ZbSerSrzdq06aXns8jYGxrNHCLmeQj6PD-0TXzURy"></div>
+<p>The rule is that a thrown exception is offered to the nearest enclosing <code>catch</code> first. If that block cannot handle it, the exception moves outward to the next <code>catch</code>. Each <code>try</code> needs its own <code>catch</code> (or <code>finally</code>).</p>
+<h2 class="atx" id="9-the-throw-keyword">9. The throw Keyword</h2>
+<p>So far Java raised exceptions <em>for</em> us. The <code>throw</code> keyword lets <strong>us</strong> raise an exception explicitly.</p>
+<p><strong>Syntax</strong></p>
+<pre><code class="fenced-code-block language-java"><span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">ExceptionType</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<p><strong>Example: age eligibility</strong></p>
+<pre><code class="fenced-code-block language-java"><span class="token keyword">class</span> <span class="token class-name">Demo</span> <span class="token punctuation">{</span>
+  <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">checkAge</span><span class="token punctuation">(</span><span class="token keyword">int</span> age<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>age <span class="token operator">&lt;</span> <span class="token number">18</span><span class="token punctuation">)</span>
+      <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">ArithmeticException</span><span class="token punctuation">(</span><span class="token string">"Not eligible"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">else</span>
+      <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Eligible"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span> args<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">checkAge</span><span class="token punctuation">(</span><span class="token number">15</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<p><strong>Output</strong></p>
+<pre><code class="fenced-code-block language-text">Exception in thread "main" java.lang.ArithmeticException: Not eligible</code></pre>
+<p>Explanation:</p>
+<ul>
+<li><code>checkAge(15)</code> is called, and since <code>15 &lt; 18</code> the <code>if</code> condition is true.</li>
+<li>The program creates an <code>ArithmeticException</code> object carrying the message <code>Not eligible</code> and throws it.</li>
+<li>Nothing catches it, so the program terminates and prints the standard message.</li>
+<li>If we called <code>checkAge(20)</code>, the condition is false, the <code>else</code> branch runs, and the output is simply <code>Eligible</code>.</li>
+</ul>
+<p>The same pattern fits any eligibility rule: voting age, minimum balance, minimum marks, and so on. (<code>static</code> is used so <code>main</code> can call <code>checkAge</code> without creating an object.)</p>
+<h2 class="atx" id="10-the-throws-keyword">10. The throws Keyword</h2>
+<p>The <code>throws</code> keyword <strong>declares the exceptions that a method may generate</strong>. It is a warning label on the method signature that tells callers "this method might fail in this way, so be ready."</p>
+<pre><code class="fenced-code-block language-java"><span class="token keyword">import</span> <span class="token namespace">java<span class="token punctuation">.</span>io<span class="token punctuation">.</span></span><span class="token operator">*</span><span class="token punctuation">;</span>
+
+<span class="token keyword">class</span> <span class="token class-name">Demo</span> <span class="token punctuation">{</span>
+  <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">readFile</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">throws</span> <span class="token class-name">IOException</span> <span class="token punctuation">{</span>
+    <span class="token class-name">FileReader</span> f <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">FileReader</span><span class="token punctuation">(</span><span class="token string">"data.txt"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span> args<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">try</span> <span class="token punctuation">{</span>
+      <span class="token function">readFile</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">catch</span><span class="token punctuation">(</span><span class="token class-name">IOException</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"File Error"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<ul>
+<li><code>readFile()</code> does not handle the problem itself. It declares <code>throws IOException</code>.</li>
+<li><code>main</code> calls <code>readFile()</code> inside a <code>try</code> block and handles the problem in <code>catch(IOException e)</code>.</li>
+<li>If <code>data.txt</code> cannot be read, the output is <code>File Error</code>.</li>
+</ul>
+<p>The responsibility for the exception is passed from the method to its caller. This is the other legal option for a checked exception: <strong>handle it with try-catch, or declare it with throws</strong>.</p>
+<h2 class="atx" id="11-throw-vs-throws">11. throw vs throws</h2>
+<table>
+<thead>
+<tr>
+<th><code>throw</code></th>
+<th><code>throws</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Used to explicitly throw an exception</td>
+<td>Used to declare exceptions</td>
+</tr>
+<tr>
+<td>Used inside the method body</td>
+<td>Used with the method signature</td>
+</tr>
+<tr>
+<td>Throws one exception</td>
+<td>Can declare multiple exceptions</td>
+</tr>
+</tbody></table>
+<p>Example of declaring multiple exceptions:</p>
+<pre><code class="fenced-code-block language-java"><span class="token keyword">void</span> <span class="token function">test</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">throws</span> <span class="token class-name">IOException</span><span class="token punctuation">,</span> <span class="token class-name">SQLException</span> <span class="token punctuation">{</span>
+  <span class="token comment">// method body</span>
+<span class="token punctuation">}</span></code></pre>
+<blockquote>
+<p><strong>Pro-Tip:</strong> A memory trick: <strong>throw</strong> is the <em>action</em> (one throw at a time, in the body). <strong>throws</strong> is the <em>announcement</em> (a list, in the signature).</p>
+</blockquote>
+<h2 class="atx" id="12-user-defined-custom-exceptions">12. User-Defined (Custom) Exceptions</h2>
+<p>Java already provides many exceptions, but your application may have its own kind of problem, such as an invalid age or an insufficient balance. Java allows programmers to create custom exceptions <strong>by extending the <code>Exception</code> class</strong>. The name is up to you and should reflect your requirement.</p>
+<h3 class="atx" id="example-invalidageexception">Example: InvalidAgeException</h3>
+<pre><code class="fenced-code-block language-java"><span class="token keyword">class</span> <span class="token class-name">InvalidAgeException</span> <span class="token keyword">extends</span> <span class="token class-name">Exception</span> <span class="token punctuation">{</span>
+  <span class="token class-name">InvalidAgeException</span><span class="token punctuation">(</span><span class="token class-name">String</span> message<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">super</span><span class="token punctuation">(</span>message<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">class</span> <span class="token class-name">Voting</span> <span class="token punctuation">{</span>
+  <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">checkAge</span><span class="token punctuation">(</span><span class="token keyword">int</span> age<span class="token punctuation">)</span> <span class="token keyword">throws</span> <span class="token class-name">InvalidAgeException</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>age <span class="token operator">&lt;</span> <span class="token number">18</span><span class="token punctuation">)</span>
+      <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">InvalidAgeException</span><span class="token punctuation">(</span><span class="token string">"Not eligible for voting"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">else</span>
+      <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Eligible for voting"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span> args<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">try</span> <span class="token punctuation">{</span>
+      <span class="token function">checkAge</span><span class="token punctuation">(</span><span class="token number">16</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">catch</span><span class="token punctuation">(</span><span class="token class-name">InvalidAgeException</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>e<span class="token punctuation">.</span><span class="token function">getMessage</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<p><strong>Output</strong></p>
+<pre><code class="fenced-code-block language-text">Not eligible for voting</code></pre>
+<h3 class="atx" id="how-the-pieces-fit-together">How the Pieces Fit Together</h3>
+<ol>
+<li><strong>Create the exception class.</strong> <code>InvalidAgeException extends Exception</code> makes it a new kind of checked exception. Its constructor takes a <code>String message</code> and passes it to the parent with <code>super(message)</code>.</li>
+<li><strong>Declare it.</strong> <code>checkAge(int age) throws InvalidAgeException</code> warns callers that this method can raise it.</li>
+<li><strong>Throw it.</strong> If <code>age &lt; 18</code> the method executes <code>throw new InvalidAgeException("Not eligible for voting")</code>.</li>
+<li><strong>Catch it.</strong> <code>main</code> calls <code>checkAge(16)</code> inside <code>try</code>. The <code>throw</code> fires, control jumps to <code>catch(InvalidAgeException e)</code>, and <code>e.getMessage()</code> returns the stored text, which is printed.</li>
+</ol>
+<div class="plantuml"><img src="https://www.plantuml.com/plantuml/svg/~1U5vjZrrBmq0GHT_tLrpZImfQZ8Y8Ilq04S62u8C8VHatqysItKdPdLX5-jybKR62ZtEOS-VEPLPAsiTWTbQ9N2G4UkzwHOwi96G2BnNQ8NdNA6gVsAhln9ZSUbbHeeW1aRZ0-300y41rxSMXEXh7EINd1TN1r-J5npu--LeR71uUc8qnlm5592_bP26Qtl41sx1jhnoNrV7a39i2b16nUpzqkGuzRvlRkmiXnpX7TOABKRBVqZE7qAstDMrIjuRmUY5tyah1rrUERzuihuOtovZTP4nGx3vIY9tykKbgc_8V3pnPo2fvKV3KiSuvPt9SVcMrtsrk4xCO4x6_FuF5AGfB8HJ6Za07eAddmkW8sW7mJpLeebSE6Izasy6PJcU8mygIGkOzZESpRe9t_YLmOIvPwZw6JxYZeZG"></div>
+<blockquote>
+<p><strong>Pro-Tip:</strong> The recipe for <em>any</em> custom exception is the same three parts: (1) a class that extends <code>Exception</code> with a message constructor, (2) a method that declares <code>throws</code> and uses <code>throw</code> under some condition, (3) a caller with <code>try</code>/<code>catch</code>. Only the name and the condition change.</p>
+</blockquote>
+<h2 class="atx" id="13-summary">13. Summary</h2>
+<p>After completing this module, students should be able to:</p>
+<ul>
+<li>Identify checked, unchecked, and error types in Java.</li>
+<li>Handle runtime errors using exception handling mechanisms.</li>
+<li>Use <code>try</code>, <code>catch</code>, <code>finally</code>, <code>throw</code>, and <code>throws</code>.</li>
+<li>Create custom exception classes.</li>
+</ul>
+<h2 class="atx" id="14-practice-exercises">14. Practice Exercises</h2>
+<p>Write the <strong>complete</strong> program for each (imports if needed, class, <code>main</code>, and the blocks), then compile it with <code>javac</code> and run it with <code>java</code>. A free JDK (Java Development Kit) is enough to run everything. You may write the logic directly inside <code>main</code> or in separate methods that <code>main</code> calls.</p>
+<ol>
+<li><p><strong>Write a Java program to handle division by zero using exception handling.</strong>
+<em>Hint:</em> <code>try</code> holds the division, <code>catch(ArithmeticException e)</code> prints a message, and <code>finally</code> prints a completion message.</p>
+</li>
+<li><p><strong>Create a program that handles invalid array indexing exceptions.</strong>
+<em>Hint:</em> Same structure as above, with <code>ArrayIndexOutOfBoundsException</code>.</p>
+</li>
+<li><p><strong>Implement multiple catch blocks for different exception types.</strong>
+<em>Hint:</em> Put two or three risky statements in one <code>try</code> and give each exception type its own <code>catch</code> (for example catch 1 for the array index, catch 2 for division by zero, catch 3 for a third type). <code>finally</code> still runs whether or not an exception occurs.</p>
+</li>
+<li><p><strong>Create a user-defined exception <code>InsufficientBalanceException</code> for a banking application.</strong>
+<em>Hint:</em> Follow the <code>InvalidAgeException</code> pattern exactly:</p>
+<ul>
+<li>Create <code>InsufficientBalanceException extends Exception</code> with a message constructor.</li>
+<li>Create a banking method that takes the <strong>balance</strong> (rather than the age) as its parameter and declares <code>throws InsufficientBalanceException</code>.</li>
+<li>Choose a threshold (for example 5000). If the balance is below it, <code>throw</code> the exception, otherwise print that the balance is sufficient.</li>
+<li>In <code>main</code>, call the method in a <code>try</code> block and print <code>e.getMessage()</code> in the <code>catch</code> block.</li>
+</ul>
+</li>
+</ol>
+<h2 class="atx" id="15-think-it-through-questions">15. Think-It-Through Questions</h2>
+<ol>
+<li><p>In the program below, predict the exact output and explain, step by step, why each line appears (or does not appear). Then explain what would change if the <code>catch</code> were moved to a <code>catch(Exception e)</code> placed <em>before</em> the <code>ArithmeticException</code> catch.</p>
+<pre><code class="fenced-code-block language-java"><span class="token keyword">try</span> <span class="token punctuation">{</span>
+  <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"A"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">int</span> x <span class="token operator">=</span> <span class="token number">10</span> <span class="token operator">/</span> <span class="token number">0</span><span class="token punctuation">;</span>
+  <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"B"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">catch</span><span class="token punctuation">(</span><span class="token class-name">ArithmeticException</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"C"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">finally</span> <span class="token punctuation">{</span>
+  <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"D"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"E"</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+</li>
+<li><p>A teammate says: "Our <code>readFile()</code> method declares <code>throws IOException</code>, so exceptions in it can never crash the program." Is that correct? Describe exactly who is responsible for the exception after the declaration, and what happens if nobody in the call chain catches it. Does <code>finally</code> still run in that scenario?</p>
+</li>
+<li><p><code>ArrayIndexOutOfBoundsException</code> and <code>FileNotFoundException</code> are both exceptions, yet the compiler treats them completely differently. Explain the reason for this design choice. What would programming be like if <em>every</em> exception were checked, and what if <em>none</em> were?</p>
+</li>
+<li><p>You are designing the <code>InsufficientBalanceException</code> for a bank. Should it extend <code>Exception</code> or <code>RuntimeException</code>? Argue for one choice by describing what the compiler will force callers to do, and what could go wrong in a real banking system under each choice.</p>
+</li>
+<li><p>In a nested <code>try</code> structure, the inner <code>catch</code> handles <code>ArithmeticException</code> and the outer <code>catch</code> handles <code>Exception</code>. Suppose the inner <code>try</code> instead throws an <code>ArrayIndexOutOfBoundsException</code>. Trace which <code>catch</code> blocks run, in what order, and whether any <code>finally</code> blocks (one on each level) execute before the program continues. Then explain why a <code>StackOverflowError</code> is a poor candidate for the same safety net.</p>
+</li>
+</ol>
+</article>
+</body>
+</html>

@@ -1,0 +1,480 @@
+/* Libron Font Family */
+@font-face {
+  font-family: 'Libron';
+  src: url('./Libron_Web/Libron-Regular.woff2') format('woff2'),
+       url('./Libron_Web/Libron-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Libron';
+  src: url('./Libron_Web/Libron-Bold.woff2') format('woff2'),
+       url('./Libron_Web/Libron-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Libron';
+  src: url('./Libron_Web/Libron-Italic.woff2') format('woff2'),
+       url('./Libron_Web/Libron-Italic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Libron';
+  src: url('./Libron_Web/Libron-BoldItalic.woff2') format('woff2'),
+       url('./Libron_Web/Libron-BoldItalic.ttf') format('truetype');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+:root {
+  --bg: #fafafa;
+  --surface: #f2f2f2;
+  --card-bg: #ffffff;
+  --sidebar-bg: #fafafa;
+  --border: #e5e5e5;
+  --border-strong: #111111;
+  --text-main: #111111;
+  --text-muted: #777777;
+  --code-bg: #f5f5f5;
+  --modal-overlay: rgba(250, 250, 250, 0.94);
+  --shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+
+  --font-serif: 'Libron', Georgia, serif;
+  --font-mono: 'Libron', serif;
+  --font-main: 'Libron', serif;
+}
+
+[data-theme="dark"] {
+  --bg: #050505;
+  --surface: #0e0e0e;
+  --card-bg: #0a0a0a;
+  --sidebar-bg: #080808;
+  --border: #1a1a1a;
+  --border-strong: #333333;
+  --text-main: #f0f0f0;
+  --text-muted: #555555;
+  --code-bg: #000000;
+  --modal-overlay: rgba(0, 0, 0, 0.92);
+  --shadow: 0 25px 60px rgba(0, 0, 0, 0.8);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  background: var(--bg);
+  color: var(--text-main);
+  font-family: var(--font-main);
+}
+
+body {
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--text-main);
+  overflow-x: hidden;
+  line-height: 1.5;
+  font-family: var(--font-main);
+  -webkit-font-smoothing: antialiased;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+::selection {
+  background: var(--text-main);
+  color: var(--bg);
+}
+
+/* Minimal top-left theme switch button */
+.theme-toggle-btn {
+  position: fixed;
+  top: 1.5rem;
+  left: 1.5rem;
+  z-index: 50;
+  background: none;
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  font-family: var(--font-main);
+  font-size: 0.72rem;
+  padding: 0.35rem 0.65rem;
+  cursor: pointer;
+  letter-spacing: 0.05em;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.theme-toggle-btn:hover {
+  color: var(--text-main);
+  border-color: var(--text-main);
+}
+
+.wrap {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Header & Manifesto */
+.hero {
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 6rem 0 3rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.manifesto {
+  font-family: var(--font-main);
+  font-size: clamp(1.4rem, 4vw, 2.4rem);
+  font-weight: 400;
+  line-height: 1.35;
+  letter-spacing: -0.02em;
+  color: var(--text-main);
+  max-width: 780px;
+}
+
+/* Stylised Red Big Font UN RESERVED */
+.unreserved-stylised {
+  color: #e53e3e;
+  font-size: 1.35em;
+  font-weight: 800;
+  font-style: italic;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  display: inline-block;
+  text-decoration: underline;
+  text-decoration-color: rgba(229, 62, 62, 0.45);
+  text-underline-offset: 4px;
+}
+
+/* Semesters Accordion */
+.catalog {
+  padding: 3rem 0 8rem;
+}
+
+.semester-block {
+  border-bottom: 1px solid var(--border);
+}
+
+.sem-btn {
+  width: 100%;
+  background: none;
+  border: none;
+  color: var(--text-main);
+  font-family: var(--font-main);
+  padding: 2.2rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  cursor: pointer;
+  text-align: left;
+  transition: opacity 0.2s;
+}
+
+.sem-btn:hover {
+  opacity: 0.5;
+}
+
+.sem-title {
+  font-family: var(--font-main);
+  font-size: 1.4rem;
+  letter-spacing: -0.01em;
+}
+
+.sem-num {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.sem-body {
+  display: none;
+  padding-bottom: 2rem;
+}
+
+.semester-block.open .sem-body {
+  display: block;
+}
+
+/* Empty Semester Message for Sem 1-3 */
+.empty-sem-container {
+  padding: 2.5rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+}
+
+.empty-sem-text {
+  font-family: var(--font-main);
+  font-size: clamp(1.4rem, 3.2vw, 2.2rem);
+  font-weight: 700;
+  color: #e53e3e;
+  letter-spacing: 0.04em;
+  text-shadow: 0 0 1px rgba(229, 62, 62, 0.35);
+  user-select: none;
+}
+
+.subjects-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+}
+
+.subj-item {
+  background: var(--card-bg);
+  padding: 1.5rem;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 110px;
+}
+
+.subj-item:hover {
+  background: var(--surface);
+}
+
+.subj-item:hover .subj-name {
+  color: var(--text-main);
+}
+
+.subj-code {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-bottom: 0.5rem;
+}
+
+.subj-name {
+  font-size: 0.9rem;
+  color: var(--text-main);
+  opacity: 0.85;
+  line-height: 1.35;
+}
+
+/* Floating Subpage Modal */
+.floating-subpage {
+  position: fixed;
+  inset: 0;
+  background: var(--modal-overlay);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 100;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+.floating-subpage.active {
+  display: flex;
+}
+
+.floating-card {
+  width: 100%;
+  max-width: min(1200px, 96vw);
+  height: 90vh;
+  background: var(--card-bg);
+  border: 1px solid var(--border-strong);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.floating-header {
+  padding: 1rem 1.75rem;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--card-bg);
+}
+
+.floating-actions {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.action-btn {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  font-family: var(--font-main);
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: color 0.15s;
+  padding: 0;
+}
+
+.action-btn:hover {
+  color: var(--text-main);
+}
+
+.action-btn#pdfBtn {
+  font-size: 0.8rem;
+  padding: 0.3rem 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background: var(--surface);
+  color: var(--text-main);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  transition: all 0.15s ease;
+}
+
+.action-btn#pdfBtn:hover {
+  border-color: var(--text-main);
+  background: var(--card-bg);
+}
+
+.close-btn {
+  font-size: 1.1rem;
+}
+
+/* Floating 4 subjects switcher */
+.floating-tabs {
+  display: flex;
+  border-bottom: 1px solid var(--border);
+  overflow-x: auto;
+  background: var(--card-bg);
+}
+
+.floating-tab {
+  flex: 1;
+  padding: 0.9rem 1.25rem;
+  background: none;
+  border: none;
+  border-right: 1px solid var(--border);
+  color: var(--text-muted);
+  font-family: var(--font-main);
+  font-size: 0.78rem;
+  text-align: left;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.floating-tab:last-child {
+  border-right: none;
+}
+
+.floating-tab:hover {
+  color: var(--text-main);
+}
+
+.floating-tab.active {
+  color: var(--text-main);
+  background: var(--surface);
+  font-weight: 700;
+}
+
+/* Content layout */
+.floating-body {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+  background: var(--card-bg);
+}
+
+.floating-sidebar {
+  width: 220px;
+  border-right: 1px solid var(--border);
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  background: var(--sidebar-bg);
+}
+
+.week-btn {
+  padding: 1rem 1.5rem;
+  background: none;
+  border: none;
+  border-bottom: 1px solid var(--border);
+  color: var(--text-muted);
+  font-family: var(--font-main);
+  font-size: 0.8rem;
+  text-align: left;
+  cursor: pointer;
+  transition: color 0.15s, background 0.15s;
+}
+
+.week-btn:hover {
+  color: var(--text-main);
+  background: var(--surface);
+}
+
+.week-btn.active {
+  color: var(--text-main);
+  background: var(--card-bg);
+  font-weight: 700;
+}
+
+.floating-content {
+  flex: 1;
+  overflow: hidden;
+  padding: 0;
+  background: var(--card-bg);
+  display: flex;
+  flex-direction: column;
+}
+
+.plain-html-content {
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.note-viewer-wrapper {
+  width: 100%;
+  height: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.notes-frame {
+  width: 100%;
+  height: 100%;
+  flex: 1;
+  border: none;
+  background: var(--card-bg);
+  display: block;
+}
+
+@media (max-width: 700px) {
+  .theme-toggle-btn {
+    top: 1rem;
+    left: 1rem;
+  }
+  .floating-body {
+    flex-direction: column;
+  }
+  .floating-sidebar {
+    width: 100%;
+    max-height: 120px;
+    border-right: none;
+  }
+  .subjects-row {
+    grid-template-columns: 1fr;
+  }
+}

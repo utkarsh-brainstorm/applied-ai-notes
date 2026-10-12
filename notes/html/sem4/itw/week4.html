@@ -1,0 +1,3160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <style>
+  @font-face {
+  font-family: octicons-link;
+  src: url(data:font/woff;charset=utf-8;base64,d09GRgABAAAAAAZwABAAAAAACFQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABEU0lHAAAGaAAAAAgAAAAIAAAAAUdTVUIAAAZcAAAACgAAAAoAAQAAT1MvMgAAAyQAAABJAAAAYFYEU3RjbWFwAAADcAAAAEUAAACAAJThvmN2dCAAAATkAAAABAAAAAQAAAAAZnBnbQAAA7gAAACyAAABCUM+8IhnYXNwAAAGTAAAABAAAAAQABoAI2dseWYAAAFsAAABPAAAAZwcEq9taGVhZAAAAsgAAAA0AAAANgh4a91oaGVhAAADCAAAABoAAAAkCA8DRGhtdHgAAAL8AAAADAAAAAwGAACfbG9jYQAAAsAAAAAIAAAACABiATBtYXhwAAACqAAAABgAAAAgAA8ASm5hbWUAAAToAAABQgAAAlXu73sOcG9zdAAABiwAAAAeAAAAME3QpOBwcmVwAAAEbAAAAHYAAAB/aFGpk3jaTY6xa8JAGMW/O62BDi0tJLYQincXEypYIiGJjSgHniQ6umTsUEyLm5BV6NDBP8Tpts6F0v+k/0an2i+itHDw3v2+9+DBKTzsJNnWJNTgHEy4BgG3EMI9DCEDOGEXzDADU5hBKMIgNPZqoD3SilVaXZCER3/I7AtxEJLtzzuZfI+VVkprxTlXShWKb3TBecG11rwoNlmmn1P2WYcJczl32etSpKnziC7lQyWe1smVPy/Lt7Kc+0vWY/gAgIIEqAN9we0pwKXreiMasxvabDQMM4riO+qxM2ogwDGOZTXxwxDiycQIcoYFBLj5K3EIaSctAq2kTYiw+ymhce7vwM9jSqO8JyVd5RH9gyTt2+J/yUmYlIR0s04n6+7Vm1ozezUeLEaUjhaDSuXHwVRgvLJn1tQ7xiuVv/ocTRF42mNgZGBgYGbwZOBiAAFGJBIMAAizAFoAAABiAGIAznjaY2BkYGAA4in8zwXi+W2+MjCzMIDApSwvXzC97Z4Ig8N/BxYGZgcgl52BCSQKAA3jCV8CAABfAAAAAAQAAEB42mNgZGBg4f3vACQZQABIMjKgAmYAKEgBXgAAeNpjYGY6wTiBgZWBg2kmUxoDA4MPhGZMYzBi1AHygVLYQUCaawqDA4PChxhmh/8ODDEsvAwHgMKMIDnGL0x7gJQCAwMAJd4MFwAAAHjaY2BgYGaA4DAGRgYQkAHyGMF8NgYrIM3JIAGVYYDT+AEjAwuDFpBmA9KMDEwMCh9i/v8H8sH0/4dQc1iAmAkALaUKLgAAAHjaTY9LDsIgEIbtgqHUPpDi3gPoBVyRTmTddOmqTXThEXqrob2gQ1FjwpDvfwCBdmdXC5AVKFu3e5MfNFJ29KTQT48Ob9/lqYwOGZxeUelN2U2R6+cArgtCJpauW7UQBqnFkUsjAY/kOU1cP+DAgvxwn1chZDwUbd6CFimGXwzwF6tPbFIcjEl+vvmM/byA48e6tWrKArm4ZJlCbdsrxksL1AwWn/yBSJKpYbq8AXaaTb8AAHja28jAwOC00ZrBeQNDQOWO//sdBBgYGRiYWYAEELEwMTE4uzo5Zzo5b2BxdnFOcALxNjA6b2ByTswC8jYwg0VlNuoCTWAMqNzMzsoK1rEhNqByEyerg5PMJlYuVueETKcd/89uBpnpvIEVomeHLoMsAAe1Id4AAAAAAAB42oWQT07CQBTGv0JBhagk7HQzKxca2sJCE1hDt4QF+9JOS0nbaaYDCQfwCJ7Au3AHj+LO13FMmm6cl7785vven0kBjHCBhfpYuNa5Ph1c0e2Xu3jEvWG7UdPDLZ4N92nOm+EBXuAbHmIMSRMs+4aUEd4Nd3CHD8NdvOLTsA2GL8M9PODbcL+hD7C1xoaHeLJSEao0FEW14ckxC+TU8TxvsY6X0eLPmRhry2WVioLpkrbp84LLQPGI7c6sOiUzpWIWS5GzlSgUzzLBSikOPFTOXqly7rqx0Z1Q5BAIoZBSFihQYQOOBEdkCOgXTOHA07HAGjGWiIjaPZNW13/+lm6S9FT7rLHFJ6fQbkATOG1j2OFMucKJJsxIVfQORl+9Jyda6Sl1dUYhSCm1dyClfoeDve4qMYdLEbfqHf3O/AdDumsjAAB42mNgYoAAZQYjBmyAGYQZmdhL8zLdDEydARfoAqIAAAABAAMABwAKABMAB///AA8AAQAAAAAAAAAAAAAAAAABAAAAAA==) format('woff');
+}
+
+.markdown-body .octicon {
+  display: inline-block;
+  fill: currentColor;
+  vertical-align: text-bottom;
+}
+
+.markdown-body .anchor {
+  float: left;
+  line-height: 1;
+  margin-left: -20px;
+  padding-right: 4px;
+}
+
+.markdown-body .anchor:focus {
+  outline: none;
+}
+
+.markdown-body h1 .octicon-link,
+.markdown-body h2 .octicon-link,
+.markdown-body h3 .octicon-link,
+.markdown-body h4 .octicon-link,
+.markdown-body h5 .octicon-link,
+.markdown-body h6 .octicon-link {
+  color: #1b1f23;
+  vertical-align: middle;
+  visibility: hidden;
+}
+
+.markdown-body h1:hover .anchor,
+.markdown-body h2:hover .anchor,
+.markdown-body h3:hover .anchor,
+.markdown-body h4:hover .anchor,
+.markdown-body h5:hover .anchor,
+.markdown-body h6:hover .anchor {
+  text-decoration: none;
+}
+
+.markdown-body h1:hover .anchor .octicon-link,
+.markdown-body h2:hover .anchor .octicon-link,
+.markdown-body h3:hover .anchor .octicon-link,
+.markdown-body h4:hover .anchor .octicon-link,
+.markdown-body h5:hover .anchor .octicon-link,
+.markdown-body h6:hover .anchor .octicon-link {
+  visibility: visible;
+}
+
+.markdown-body {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  color: #24292e;
+  line-height: 1.5;
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
+  font-size: 16px;
+  line-height: 1.5;
+  word-wrap: break-word;
+}
+
+.markdown-body .pl-c {
+  color: #6a737d;
+}
+
+.markdown-body .pl-c1,
+.markdown-body .pl-s .pl-v {
+  color: #005cc5;
+}
+
+.markdown-body .pl-e,
+.markdown-body .pl-en {
+  color: #6f42c1;
+}
+
+.markdown-body .pl-s .pl-s1,
+.markdown-body .pl-smi {
+  color: #24292e;
+}
+
+.markdown-body .pl-ent {
+  color: #22863a;
+}
+
+.markdown-body .pl-k {
+  color: #d73a49;
+}
+
+.markdown-body .pl-pds,
+.markdown-body .pl-s,
+.markdown-body .pl-s .pl-pse .pl-s1,
+.markdown-body .pl-sr,
+.markdown-body .pl-sr .pl-cce,
+.markdown-body .pl-sr .pl-sra,
+.markdown-body .pl-sr .pl-sre {
+  color: #032f62;
+}
+
+.markdown-body .pl-smw,
+.markdown-body .pl-v {
+  color: #e36209;
+}
+
+.markdown-body .pl-bu {
+  color: #b31d28;
+}
+
+.markdown-body .pl-ii {
+  background-color: #b31d28;
+  color: #fafbfc;
+}
+
+.markdown-body .pl-c2 {
+  background-color: #d73a49;
+  color: #fafbfc;
+}
+
+.markdown-body .pl-c2:before {
+  content: "^M";
+}
+
+.markdown-body .pl-sr .pl-cce {
+  color: #22863a;
+  font-weight: 700;
+}
+
+.markdown-body .pl-ml {
+  color: #735c0f;
+}
+
+.markdown-body .pl-mh,
+.markdown-body .pl-mh .pl-en,
+.markdown-body .pl-ms {
+  color: #005cc5;
+  font-weight: 700;
+}
+
+.markdown-body .pl-mi {
+  color: #24292e;
+  font-style: italic;
+}
+
+.markdown-body .pl-mb {
+  color: #24292e;
+  font-weight: 700;
+}
+
+.markdown-body .pl-md {
+  background-color: #ffeef0;
+  color: #b31d28;
+}
+
+.markdown-body .pl-mi1 {
+  background-color: #f0fff4;
+  color: #22863a;
+}
+
+.markdown-body .pl-mc {
+  background-color: #ffebda;
+  color: #e36209;
+}
+
+.markdown-body .pl-mi2 {
+  background-color: #005cc5;
+  color: #f6f8fa;
+}
+
+.markdown-body .pl-mdr {
+  color: #6f42c1;
+  font-weight: 700;
+}
+
+.markdown-body .pl-ba {
+  color: #586069;
+}
+
+.markdown-body .pl-sg {
+  color: #959da5;
+}
+
+.markdown-body .pl-corl {
+  color: #032f62;
+  text-decoration: underline;
+}
+
+.markdown-body details {
+  display: block;
+}
+
+.markdown-body summary {
+  display: list-item;
+}
+
+.markdown-body a {
+  background-color: transparent;
+}
+
+.markdown-body a:active,
+.markdown-body a:hover {
+  outline-width: 0;
+}
+
+.markdown-body strong {
+  font-weight: inherit;
+  font-weight: bolder;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+  margin: .67em 0;
+}
+
+.markdown-body img {
+  border-style: none;
+}
+
+.markdown-body code,
+.markdown-body kbd,
+.markdown-body pre {
+  font-family: monospace,monospace;
+  font-size: 1em;
+}
+
+.markdown-body hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+}
+
+.markdown-body input {
+  font: inherit;
+  margin: 0;
+}
+
+.markdown-body input {
+  overflow: visible;
+}
+
+.markdown-body [type=checkbox] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.markdown-body * {
+  box-sizing: border-box;
+}
+
+.markdown-body input {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.markdown-body a {
+  color: #0366d6;
+  text-decoration: none;
+}
+
+.markdown-body a:hover {
+  text-decoration: underline;
+}
+
+.markdown-body strong {
+  font-weight: 600;
+}
+
+.markdown-body hr {
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #dfe2e5;
+  height: 0;
+  margin: 15px 0;
+  overflow: hidden;
+}
+
+.markdown-body hr:before {
+  content: "";
+  display: table;
+}
+
+.markdown-body hr:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.markdown-body table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.markdown-body td,
+.markdown-body th {
+  padding: 0;
+}
+
+.markdown-body details summary {
+  cursor: pointer;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.markdown-body h1 {
+  font-size: 32px;
+}
+
+.markdown-body h1,
+.markdown-body h2 {
+  font-weight: 600;
+}
+
+.markdown-body h2 {
+  font-size: 24px;
+}
+
+.markdown-body h3 {
+  font-size: 20px;
+}
+
+.markdown-body h3,
+.markdown-body h4 {
+  font-weight: 600;
+}
+
+.markdown-body h4 {
+  font-size: 16px;
+}
+
+.markdown-body h5 {
+  font-size: 14px;
+}
+
+.markdown-body h5,
+.markdown-body h6 {
+  font-weight: 600;
+}
+
+.markdown-body h6 {
+  font-size: 12px;
+}
+
+.markdown-body p {
+  margin-bottom: 10px;
+  margin-top: 0;
+}
+
+.markdown-body blockquote {
+  margin: 0;
+}
+
+.markdown-body ol,
+.markdown-body ul {
+  margin-bottom: 0;
+  margin-top: 0;
+  padding-left: 0;
+}
+
+.markdown-body ol ol,
+.markdown-body ul ol {
+  list-style-type: lower-roman;
+}
+
+.markdown-body ol ol ol,
+.markdown-body ol ul ol,
+.markdown-body ul ol ol,
+.markdown-body ul ul ol {
+  list-style-type: lower-alpha;
+}
+
+.markdown-body dd {
+  margin-left: 0;
+}
+
+.markdown-body code,
+.markdown-body pre {
+  font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;
+  font-size: 12px;
+}
+
+.markdown-body pre {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.markdown-body input::-webkit-inner-spin-button,
+.markdown-body input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+.markdown-body .border {
+  border: 1px solid #e1e4e8!important;
+}
+
+.markdown-body .border-0 {
+  border: 0!important;
+}
+
+.markdown-body .border-bottom {
+  border-bottom: 1px solid #e1e4e8!important;
+}
+
+.markdown-body .rounded-1 {
+  border-radius: 3px!important;
+}
+
+.markdown-body .bg-white {
+  background-color: #fff!important;
+}
+
+.markdown-body .bg-gray-light {
+  background-color: #fafbfc!important;
+}
+
+.markdown-body .text-gray-light {
+  color: #6a737d!important;
+}
+
+.markdown-body .mb-0 {
+  margin-bottom: 0!important;
+}
+
+.markdown-body .my-2 {
+  margin-bottom: 8px!important;
+  margin-top: 8px!important;
+}
+
+.markdown-body .pl-0 {
+  padding-left: 0!important;
+}
+
+.markdown-body .py-0 {
+  padding-bottom: 0!important;
+  padding-top: 0!important;
+}
+
+.markdown-body .pl-1 {
+  padding-left: 4px!important;
+}
+
+.markdown-body .pl-2 {
+  padding-left: 8px!important;
+}
+
+.markdown-body .py-2 {
+  padding-bottom: 8px!important;
+  padding-top: 8px!important;
+}
+
+.markdown-body .pl-3,
+.markdown-body .px-3 {
+  padding-left: 16px!important;
+}
+
+.markdown-body .px-3 {
+  padding-right: 16px!important;
+}
+
+.markdown-body .pl-4 {
+  padding-left: 24px!important;
+}
+
+.markdown-body .pl-5 {
+  padding-left: 32px!important;
+}
+
+.markdown-body .pl-6 {
+  padding-left: 40px!important;
+}
+
+.markdown-body .f6 {
+  font-size: 12px!important;
+}
+
+.markdown-body .lh-condensed {
+  line-height: 1.25!important;
+}
+
+.markdown-body .text-bold {
+  font-weight: 600!important;
+}
+
+.markdown-body:before {
+  content: "";
+  display: table;
+}
+
+.markdown-body:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.markdown-body>:first-child {
+  margin-top: 0!important;
+}
+
+.markdown-body>:last-child {
+  margin-bottom: 0!important;
+}
+
+.markdown-body a:not([href]) {
+  color: inherit;
+  text-decoration: none;
+}
+
+.markdown-body blockquote,
+.markdown-body dl,
+.markdown-body ol,
+.markdown-body p,
+.markdown-body pre,
+.markdown-body table,
+.markdown-body ul {
+  margin-bottom: 16px;
+  margin-top: 0;
+}
+
+.markdown-body hr {
+  background-color: #e1e4e8;
+  border: 0;
+  height: .25em;
+  margin: 24px 0;
+  padding: 0;
+}
+
+.markdown-body blockquote {
+  border-left: .25em solid #dfe2e5;
+  color: #6a737d;
+  padding: 0 1em;
+}
+
+.markdown-body blockquote>:first-child {
+  margin-top: 0;
+}
+
+.markdown-body blockquote>:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body kbd {
+  background-color: #fafbfc;
+  border: 1px solid #c6cbd1;
+  border-bottom-color: #959da5;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #959da5;
+  color: #444d56;
+  display: inline-block;
+  font-size: 11px;
+  line-height: 10px;
+  padding: 3px 5px;
+  vertical-align: middle;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  font-weight: 600;
+  line-height: 1.25;
+  margin-bottom: 16px;
+  margin-top: 24px;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+}
+
+.markdown-body h1,
+.markdown-body h2 {
+  border-bottom: 1px solid #eaecef;
+  padding-bottom: .3em;
+}
+
+.markdown-body h2 {
+  font-size: 1.5em;
+}
+
+.markdown-body h3 {
+  font-size: 1.25em;
+}
+
+.markdown-body h4 {
+  font-size: 1em;
+}
+
+.markdown-body h5 {
+  font-size: .875em;
+}
+
+.markdown-body h6 {
+  color: #6a737d;
+  font-size: .85em;
+}
+
+.markdown-body ol,
+.markdown-body ul {
+  padding-left: 2em;
+}
+
+.markdown-body ol ol,
+.markdown-body ol ul,
+.markdown-body ul ol,
+.markdown-body ul ul {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.markdown-body li {
+  word-wrap: break-all;
+}
+
+.markdown-body li>p {
+  margin-top: 16px;
+}
+
+.markdown-body li+li {
+  margin-top: .25em;
+}
+
+.markdown-body dl {
+  padding: 0;
+}
+
+.markdown-body dl dt {
+  font-size: 1em;
+  font-style: italic;
+  font-weight: 600;
+  margin-top: 16px;
+  padding: 0;
+}
+
+.markdown-body dl dd {
+  margin-bottom: 16px;
+  padding: 0 16px;
+}
+
+.markdown-body table {
+  display: block;
+  overflow: auto;
+  width: 100%;
+}
+
+.markdown-body table th {
+  font-weight: 600;
+}
+
+.markdown-body table td,
+.markdown-body table th {
+  border: 1px solid #dfe2e5;
+  padding: 6px 13px;
+}
+
+.markdown-body table tr {
+  background-color: #fff;
+  border-top: 1px solid #c6cbd1;
+}
+
+.markdown-body table tr:nth-child(2n) {
+  background-color: #f6f8fa;
+}
+
+.markdown-body img {
+  background-color: #fff;
+  box-sizing: content-box;
+  max-width: 100%;
+}
+
+.markdown-body img[align=right] {
+  padding-left: 20px;
+}
+
+.markdown-body img[align=left] {
+  padding-right: 20px;
+}
+
+.markdown-body code {
+  background-color: rgba(27,31,35,.05);
+  border-radius: 3px;
+  font-size: 85%;
+  margin: 0;
+  padding: .2em .4em;
+}
+
+.markdown-body pre {
+  word-wrap: normal;
+}
+
+.markdown-body pre>code {
+  background: transparent;
+  border: 0;
+  font-size: 100%;
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  word-break: normal;
+}
+
+.markdown-body .highlight {
+  margin-bottom: 16px;
+}
+
+.markdown-body .highlight pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+
+.markdown-body .highlight pre,
+.markdown-body pre {
+  background-color: #f6f8fa;
+  border-radius: 3px;
+  font-size: 85%;
+  line-height: 1.45;
+  overflow: auto;
+  padding: 16px;
+}
+
+.markdown-body pre code {
+  background-color: transparent;
+  border: 0;
+  display: inline;
+  line-height: inherit;
+  margin: 0;
+  max-width: auto;
+  overflow: visible;
+  padding: 0;
+  word-wrap: normal;
+}
+
+.markdown-body .commit-tease-sha {
+  color: #444d56;
+  display: inline-block;
+  font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;
+  font-size: 90%;
+}
+
+.markdown-body .blob-wrapper {
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.markdown-body .blob-wrapper-embedded {
+  max-height: 240px;
+  overflow-y: auto;
+}
+
+.markdown-body .blob-num {
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  color: rgba(27,31,35,.3);
+  cursor: pointer;
+  font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;
+  font-size: 12px;
+  line-height: 20px;
+  min-width: 50px;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-align: right;
+  user-select: none;
+  vertical-align: top;
+  white-space: nowrap;
+  width: 1%;
+}
+
+.markdown-body .blob-num:hover {
+  color: rgba(27,31,35,.6);
+}
+
+.markdown-body .blob-num:before {
+  content: attr(data-line-number);
+}
+
+.markdown-body .blob-code {
+  line-height: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  position: relative;
+  vertical-align: top;
+}
+
+.markdown-body .blob-code-inner {
+  color: #24292e;
+  font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;
+  font-size: 12px;
+  overflow: visible;
+  white-space: pre;
+  word-wrap: normal;
+}
+
+.markdown-body .pl-token.active,
+.markdown-body .pl-token:hover {
+  background: #ffea7f;
+  cursor: pointer;
+}
+
+.markdown-body kbd {
+  background-color: #fafbfc;
+  border: 1px solid #d1d5da;
+  border-bottom-color: #c6cbd1;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #c6cbd1;
+  color: #444d56;
+  display: inline-block;
+  font: 11px SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;
+  line-height: 10px;
+  padding: 3px 5px;
+  vertical-align: middle;
+}
+
+.markdown-body :checked+.radio-label {
+  border-color: #0366d6;
+  position: relative;
+  z-index: 1;
+}
+
+.markdown-body .tab-size[data-tab-size="1"] {
+  -moz-tab-size: 1;
+  tab-size: 1;
+}
+
+.markdown-body .tab-size[data-tab-size="2"] {
+  -moz-tab-size: 2;
+  tab-size: 2;
+}
+
+.markdown-body .tab-size[data-tab-size="3"] {
+  -moz-tab-size: 3;
+  tab-size: 3;
+}
+
+.markdown-body .tab-size[data-tab-size="4"] {
+  -moz-tab-size: 4;
+  tab-size: 4;
+}
+
+.markdown-body .tab-size[data-tab-size="5"] {
+  -moz-tab-size: 5;
+  tab-size: 5;
+}
+
+.markdown-body .tab-size[data-tab-size="6"] {
+  -moz-tab-size: 6;
+  tab-size: 6;
+}
+
+.markdown-body .tab-size[data-tab-size="7"] {
+  -moz-tab-size: 7;
+  tab-size: 7;
+}
+
+.markdown-body .tab-size[data-tab-size="8"] {
+  -moz-tab-size: 8;
+  tab-size: 8;
+}
+
+.markdown-body .tab-size[data-tab-size="9"] {
+  -moz-tab-size: 9;
+  tab-size: 9;
+}
+
+.markdown-body .tab-size[data-tab-size="10"] {
+  -moz-tab-size: 10;
+  tab-size: 10;
+}
+
+.markdown-body .tab-size[data-tab-size="11"] {
+  -moz-tab-size: 11;
+  tab-size: 11;
+}
+
+.markdown-body .tab-size[data-tab-size="12"] {
+  -moz-tab-size: 12;
+  tab-size: 12;
+}
+
+.markdown-body .task-list-item {
+  list-style-type: none;
+}
+
+.markdown-body .task-list-item+.task-list-item {
+  margin-top: 3px;
+}
+
+.markdown-body .task-list-item input {
+  margin: 0 .2em .25em -1.6em;
+  vertical-align: middle;
+}
+
+.markdown-body hr {
+  border-bottom-color: #eee;
+}
+
+.markdown-body .pl-0 {
+  padding-left: 0!important;
+}
+
+.markdown-body .pl-1 {
+  padding-left: 4px!important;
+}
+
+.markdown-body .pl-2 {
+  padding-left: 8px!important;
+}
+
+.markdown-body .pl-3 {
+  padding-left: 16px!important;
+}
+
+.markdown-body .pl-4 {
+  padding-left: 24px!important;
+}
+
+.markdown-body .pl-5 {
+  padding-left: 32px!important;
+}
+
+.markdown-body .pl-6 {
+  padding-left: 40px!important;
+}
+
+.markdown-body .pl-7 {
+  padding-left: 48px!important;
+}
+
+.markdown-body .pl-8 {
+  padding-left: 64px!important;
+}
+
+.markdown-body .pl-9 {
+  padding-left: 80px!important;
+}
+
+.markdown-body .pl-10 {
+  padding-left: 96px!important;
+}
+
+.markdown-body .pl-11 {
+  padding-left: 112px!important;
+}
+
+.markdown-body .pl-12 {
+  padding-left: 128px!important;
+}
+
+/*# sourceURL=webpack://./node_modules/github-markdown-css/github-markdown.css */
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL25vZGVfbW9kdWxlcy9naXRodWItbWFya2Rvd24tY3NzL2dpdGh1Yi1tYXJrZG93bi5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSwwQkFBMEI7RUFDMUIsMkRBQXF0RTtBQUN2dEU7O0FBRUE7RUFDRSxxQkFBcUI7RUFDckIsa0JBQWtCO0VBQ2xCLDJCQUEyQjtBQUM3Qjs7QUFFQTtFQUNFLFdBQVc7RUFDWCxjQUFjO0VBQ2Qsa0JBQWtCO0VBQ2xCLGtCQUFrQjtBQUNwQjs7QUFFQTtFQUNFLGFBQWE7QUFDZjs7QUFFQTs7Ozs7O0VBTUUsY0FBYztFQUNkLHNCQUFzQjtFQUN0QixrQkFBa0I7QUFDcEI7O0FBRUE7Ozs7OztFQU1FLHFCQUFxQjtBQUN2Qjs7QUFFQTs7Ozs7O0VBTUUsbUJBQW1CO0FBQ3JCOztBQUVBO0VBQ0UsMEJBQTBCO0VBQzFCLDhCQUE4QjtFQUM5QixjQUFjO0VBQ2QsZ0JBQWdCO0VBQ2hCLGtJQUFrSTtFQUNsSSxlQUFlO0VBQ2YsZ0JBQWdCO0VBQ2hCLHFCQUFxQjtBQUN2Qjs7QUFFQTtFQUNFLGNBQWM7QUFDaEI7O0FBRUE7O0VBRUUsY0FBYztBQUNoQjs7QUFFQTs7RUFFRSxjQUFjO0FBQ2hCOztBQUVBOztFQUVFLGNBQWM7QUFDaEI7O0FBRUE7RUFDRSxjQUFjO0FBQ2hCOztBQUVBO0VBQ0UsY0FBYztBQUNoQjs7QUFFQTs7Ozs7OztFQU9FLGNBQWM7QUFDaEI7O0FBRUE7O0VBRUUsY0FBYztBQUNoQjs7QUFFQTtFQUNFLGNBQWM7QUFDaEI7O0FBRUE7RUFDRSx5QkFBeUI7RUFDekIsY0FBYztBQUNoQjs7QUFFQTtFQUNFLHlCQUF5QjtFQUN6QixjQUFjO0FBQ2hCOztBQUVBO0VBQ0UsYUFBYTtBQUNmOztBQUVBO0VBQ0UsY0FBYztFQUNkLGdCQUFnQjtBQUNsQjs7QUFFQTtFQUNFLGNBQWM7QUFDaEI7O0FBRUE7OztFQUdFLGNBQWM7RUFDZCxnQkFBZ0I7QUFDbEI7O0FBRUE7RUFD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 */
+  </style>
+  <style>
+  /**
+ * prism.js default theme for JavaScript, CSS and HTML
+ * Based on dabblet (http://dabblet.com)
+ * @author Lea Verou
+ */
+
+code[class*="language-"],
+pre[class*="language-"] {
+	color: black;
+	background: none;
+	text-shadow: 0 1px white;
+	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	font-size: 1em;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	line-height: 1.5;
+
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+}
+
+pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
+code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-selection {
+	text-shadow: none;
+	background: #b3d4fc;
+}
+
+pre[class*="language-"]::selection, pre[class*="language-"] ::selection,
+code[class*="language-"]::selection, code[class*="language-"] ::selection {
+	text-shadow: none;
+	background: #b3d4fc;
+}
+
+@media print {
+	code[class*="language-"],
+	pre[class*="language-"] {
+		text-shadow: none;
+	}
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+	padding: 1em;
+	margin: .5em 0;
+	overflow: auto;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+	background: #f5f2f0;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+	padding: .1em;
+	border-radius: .3em;
+	white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: slategray;
+}
+
+.token.punctuation {
+	color: #999;
+}
+
+.token.namespace {
+	opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+	color: #905;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+	color: #690;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+	color: #9a6e3a;
+	/* This background color was intended by the author of this theme. */
+	background: hsla(0, 0%, 100%, .5);
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+	color: #07a;
+}
+
+.token.function,
+.token.class-name {
+	color: #DD4A68;
+}
+
+.token.regex,
+.token.important,
+.token.variable {
+	color: #e90;
+}
+
+.token.important,
+.token.bold {
+	font-weight: bold;
+}
+.token.italic {
+	font-style: italic;
+}
+
+.token.entity {
+	cursor: help;
+}
+
+/*# sourceURL=webpack://./node_modules/prismjs/themes/prism.css */
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL25vZGVfbW9kdWxlcy9wcmlzbWpzL3RoZW1lcy9wcmlzbS5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7Ozs7RUFJRTs7QUFFRjs7Q0FFQyxZQUFZO0NBQ1osZ0JBQWdCO0NBQ2hCLHdCQUF3QjtDQUN4QixzRUFBc0U7Q0FDdEUsY0FBYztDQUNkLGdCQUFnQjtDQUNoQixnQkFBZ0I7Q0FDaEIsb0JBQW9CO0NBQ3BCLGtCQUFrQjtDQUNsQixpQkFBaUI7Q0FDakIsZ0JBQWdCOztDQUVoQixnQkFBZ0I7Q0FDaEIsY0FBYztDQUNkLFdBQVc7O0NBRVgscUJBQXFCO0NBQ3JCLGtCQUFrQjtDQUNsQixpQkFBaUI7Q0FDakIsYUFBYTtBQUNkOztBQUVBOztDQUVDLGlCQUFpQjtDQUNqQixtQkFBbUI7QUFDcEI7O0FBRUE7O0NBRUMsaUJBQWlCO0NBQ2pCLG1CQUFtQjtBQUNwQjs7QUFFQTtDQUNDOztFQUVDLGlCQUFpQjtDQUNsQjtBQUNEOztBQUVBLGdCQUFnQjtBQUNoQjtDQUNDLFlBQVk7Q0FDWixjQUFjO0NBQ2QsY0FBYztBQUNmOztBQUVBOztDQUVDLG1CQUFtQjtBQUNwQjs7QUFFQSxnQkFBZ0I7QUFDaEI7Q0FDQyxhQUFhO0NBQ2IsbUJBQW1CO0NBQ25CLG1CQUFtQjtBQUNwQjs7QUFFQTs7OztDQUlDLGdCQUFnQjtBQUNqQjs7QUFFQTtDQUNDLFdBQVc7QUFDWjs7QUFFQTtDQUNDLFdBQVc7QUFDWjs7QUFFQTs7Ozs7OztDQU9DLFdBQVc7QUFDWjs7QUFFQTs7Ozs7O0NBTUMsV0FBVztBQUNaOztBQUVBOzs7OztDQUtDLGNBQWM7Q0FDZCxvRUFBb0U7Q0FDcEUsaUNBQWlDO0FBQ2xDOztBQUVBOzs7Q0FHQyxXQUFXO0FBQ1o7O0FBRUE7O0NBRUMsY0FBYztBQUNmOztBQUVBOzs7Q0FHQyxXQUFXO0FBQ1o7O0FBRUE7O0NBRUMsaUJBQWlCO0FBQ2xCO0FBQ0E7Q0FDQyxrQkFBa0I7QUFDbkI7O0FBRUE7Q0FDQyxZQUFZO0FBQ2IiLCJzb3VyY2VSb290IjoiIn0= */
+  </style>
+  <style>
+  /* stylelint-disable font-family-no-missing-generic-family-keyword */
+@font-face {
+  font-family: 'KaTeX_AMS';
+  src: url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_AMS-Regular.73ea273a.woff2) format('woff2'), url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_AMS-Regular.d562e886.woff) format('woff'), url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_AMS-Regular.853be924.ttf) format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'KaTeX_Caligraphic';
+  src: url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_Caligraphic-Bold.a1abf90d.woff2) format('woff2'), url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_Caligraphic-Bold.d757c535.woff) format('woff'), url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_Caligraphic-Bold.7489a2fb.ttf) format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'KaTeX_Caligraphic';
+  src: url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_Caligraphic-Regular.d6484fce.woff2) format('woff2'), url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_Caligraphic-Regular.db074fa2.woff) format('woff'), url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_Caligraphic-Regular.7e873d38.ttf) format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'KaTeX_Fraktur';
+  src: url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_Fraktur-Bold.931d67ea.woff2) format('woff2'), url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_Fraktur-Bold.354501ba.woff) format('woff'), url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_Fraktur-Bold.4c761b37.ttf) format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'KaTeX_Fraktur';
+  src: url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_Fraktur-Regular.172d3529.woff2) format('woff2'), url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_Fraktur-Regular.6fdf0ac5.woff) format('woff'), url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_Fraktur-Regular.ed305b54.ttf) format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'KaTeX_Main';
+  src: url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_Main-Bold.39890742.woff2) format('woff2'), url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_Main-Bold.0c3b8929.woff) format('woff'), url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_Main-Bold.8169508b.ttf) format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'KaTeX_Main';
+  src: url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_Main-BoldItalic.20f389c4.woff2) format('woff2'), url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_Main-BoldItalic.428978dc.woff) format('woff'), url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_Main-BoldItalic.828abcb2.ttf) format('truetype');
+  font-weight: bold;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'KaTeX_Main';
+  src: url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_Main-Italic.fe2176f7.woff2) format('woff2'), url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_Main-Italic.fd947498.woff) format('woff'), url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_Main-Italic.fa675e5e.ttf) format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'KaTeX_Main';
+  src: url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_Main-Regular.f650f111.woff2) format('woff2'), url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_Main-Regular.4f35fbcc.woff) format('woff'), url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_Main-Regular.9eba1d77.ttf) format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'KaTeX_Math';
+  src: url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_Math-BoldItalic.dcbcbd93.woff2) format('woff2'), url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_Math-BoldItalic.3f07ed67.woff) format('woff'), url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_Math-BoldItalic.bf2d440b.ttf) format('truetype');
+  font-weight: bold;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'KaTeX_Math';
+  src: url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_Math-Italic.6d3d25f4.woff2) format('woff2'), url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_Math-Italic.96759856.woff) format('woff'), url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_Math-Italic.8a5f9363.ttf) format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'KaTeX_SansSerif';
+  src: url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_SansSerif-Bold.95591a92.woff2) format('woff2'), url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_SansSerif-Bold.b9cd458a.woff) format('woff'), url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_SansSerif-Bold.5b49f499.ttf) format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'KaTeX_SansSerif';
+  src: url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_SansSerif-Italic.7d393d38.woff2) format('woff2'), url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_SansSerif-Italic.8d593cfa.woff) format('woff'), url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_SansSerif-Italic.b257a18c.ttf) format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'KaTeX_SansSerif';
+  src: url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_SansSerif-Regular.cd5e231e.woff2) format('woff2'), url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_SansSerif-Regular.02271ec5.woff) format('woff'), url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_SansSerif-Regular.2f7bc363.ttf) format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'KaTeX_Script';
+  src: url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_Script-Regular.c81d1b2a.woff2) format('woff2'), url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_Script-Regular.073b3402.woff) format('woff'), url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_Script-Regular.fc9ba524.ttf) format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'KaTeX_Size1';
+  src: url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_Size1-Regular.6eec866c.woff2) format('woff2'), url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_Size1-Regular.0108e89c.woff) format('woff'), url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_Size1-Regular.6de7d4b5.ttf) format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'KaTeX_Size2';
+  src: url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_Size2-Regular.2960900c.woff2) format('woff2'), url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_Size2-Regular.3a99e70a.woff) format('woff'), url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_Size2-Regular.57f5c183.ttf) format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'KaTeX_Size3';
+  src: url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_Size3-Regular.e1951519.woff2) format('woff2'), url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_Size3-Regular.7947224e.woff) format('woff'), url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_Size3-Regular.8d6b6822.ttf) format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'KaTeX_Size4';
+  src: url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_Size4-Regular.e418bf25.woff2) format('woff2'), url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_Size4-Regular.aeffd802.woff) format('woff'), url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_Size4-Regular.4ad7c7e8.ttf) format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'KaTeX_Typewriter';
+  src: url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_Typewriter-Regular.c295e7f7.woff2) format('woff2'), url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_Typewriter-Regular.4c6b94fd.woff) format('woff'), url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_Typewriter-Regular.c5c02d76.ttf) format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+.katex {
+  font: normal 1.21em KaTeX_Main, Times New Roman, serif;
+  line-height: 1.2;
+  text-indent: 0;
+  text-rendering: auto;
+}
+.katex * {
+  -ms-high-contrast-adjust: none !important;
+  border-color: currentColor;
+}
+.katex .katex-version::after {
+  content: "0.15.2";
+}
+.katex .katex-mathml {
+  /* Accessibility hack to only show to screen readers
+         Found at: http://a11yproject.com/posts/how-to-hide-content/ */
+  position: absolute;
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0;
+  border: 0;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
+.katex .katex-html {
+  /* \newline is an empty block at top level, between .base elements */
+}
+.katex .katex-html > .newline {
+  display: block;
+}
+.katex .base {
+  position: relative;
+  display: inline-block;
+  white-space: nowrap;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+}
+.katex .strut {
+  display: inline-block;
+}
+.katex .textbf {
+  font-weight: bold;
+}
+.katex .textit {
+  font-style: italic;
+}
+.katex .textrm {
+  font-family: KaTeX_Main;
+}
+.katex .textsf {
+  font-family: KaTeX_SansSerif;
+}
+.katex .texttt {
+  font-family: KaTeX_Typewriter;
+}
+.katex .mathnormal {
+  font-family: KaTeX_Math;
+  font-style: italic;
+}
+.katex .mathit {
+  font-family: KaTeX_Main;
+  font-style: italic;
+}
+.katex .mathrm {
+  font-style: normal;
+}
+.katex .mathbf {
+  font-family: KaTeX_Main;
+  font-weight: bold;
+}
+.katex .boldsymbol {
+  font-family: KaTeX_Math;
+  font-weight: bold;
+  font-style: italic;
+}
+.katex .amsrm {
+  font-family: KaTeX_AMS;
+}
+.katex .mathbb,
+.katex .textbb {
+  font-family: KaTeX_AMS;
+}
+.katex .mathcal {
+  font-family: KaTeX_Caligraphic;
+}
+.katex .mathfrak,
+.katex .textfrak {
+  font-family: KaTeX_Fraktur;
+}
+.katex .mathtt {
+  font-family: KaTeX_Typewriter;
+}
+.katex .mathscr,
+.katex .textscr {
+  font-family: KaTeX_Script;
+}
+.katex .mathsf,
+.katex .textsf {
+  font-family: KaTeX_SansSerif;
+}
+.katex .mathboldsf,
+.katex .textboldsf {
+  font-family: KaTeX_SansSerif;
+  font-weight: bold;
+}
+.katex .mathitsf,
+.katex .textitsf {
+  font-family: KaTeX_SansSerif;
+  font-style: italic;
+}
+.katex .mainrm {
+  font-family: KaTeX_Main;
+  font-style: normal;
+}
+.katex .vlist-t {
+  display: inline-table;
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+.katex .vlist-r {
+  display: table-row;
+}
+.katex .vlist {
+  display: table-cell;
+  vertical-align: bottom;
+  position: relative;
+}
+.katex .vlist > span {
+  display: block;
+  height: 0;
+  position: relative;
+}
+.katex .vlist > span > span {
+  display: inline-block;
+}
+.katex .vlist > span > .pstrut {
+  overflow: hidden;
+  width: 0;
+}
+.katex .vlist-t2 {
+  margin-right: -2px;
+}
+.katex .vlist-s {
+  display: table-cell;
+  vertical-align: bottom;
+  font-size: 1px;
+  width: 2px;
+  min-width: 2px;
+}
+.katex .vbox {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: baseline;
+}
+.katex .hbox {
+  display: inline-flex;
+  flex-direction: row;
+  width: 100%;
+}
+.katex .thinbox {
+  display: inline-flex;
+  flex-direction: row;
+  width: 0;
+  max-width: 0;
+}
+.katex .msupsub {
+  text-align: left;
+}
+.katex .mfrac > span > span {
+  text-align: center;
+}
+.katex .mfrac .frac-line {
+  display: inline-block;
+  width: 100%;
+  border-bottom-style: solid;
+}
+.katex .mfrac .frac-line,
+.katex .overline .overline-line,
+.katex .underline .underline-line,
+.katex .hline,
+.katex .hdashline,
+.katex .rule {
+  min-height: 1px;
+}
+.katex .mspace {
+  display: inline-block;
+}
+.katex .llap,
+.katex .rlap,
+.katex .clap {
+  width: 0;
+  position: relative;
+}
+.katex .llap > .inner,
+.katex .rlap > .inner,
+.katex .clap > .inner {
+  position: absolute;
+}
+.katex .llap > .fix,
+.katex .rlap > .fix,
+.katex .clap > .fix {
+  display: inline-block;
+}
+.katex .llap > .inner {
+  right: 0;
+}
+.katex .rlap > .inner,
+.katex .clap > .inner {
+  left: 0;
+}
+.katex .clap > .inner > span {
+  margin-left: -50%;
+  margin-right: 50%;
+}
+.katex .rule {
+  display: inline-block;
+  border: solid 0;
+  position: relative;
+}
+.katex .overline .overline-line,
+.katex .underline .underline-line,
+.katex .hline {
+  display: inline-block;
+  width: 100%;
+  border-bottom-style: solid;
+}
+.katex .hdashline {
+  display: inline-block;
+  width: 100%;
+  border-bottom-style: dashed;
+}
+.katex .sqrt > .root {
+  /* These values are taken from the definition of `\r@@t`,
+             `\mkern 5mu` and `\mkern -10mu`. */
+  margin-left: 0.27777778em;
+  margin-right: -0.55555556em;
+}
+.katex .sizing.reset-size1.size1,
+.katex .fontsize-ensurer.reset-size1.size1 {
+  font-size: 1em;
+}
+.katex .sizing.reset-size1.size2,
+.katex .fontsize-ensurer.reset-size1.size2 {
+  font-size: 1.2em;
+}
+.katex .sizing.reset-size1.size3,
+.katex .fontsize-ensurer.reset-size1.size3 {
+  font-size: 1.4em;
+}
+.katex .sizing.reset-size1.size4,
+.katex .fontsize-ensurer.reset-size1.size4 {
+  font-size: 1.6em;
+}
+.katex .sizing.reset-size1.size5,
+.katex .fontsize-ensurer.reset-size1.size5 {
+  font-size: 1.8em;
+}
+.katex .sizing.reset-size1.size6,
+.katex .fontsize-ensurer.reset-size1.size6 {
+  font-size: 2em;
+}
+.katex .sizing.reset-size1.size7,
+.katex .fontsize-ensurer.reset-size1.size7 {
+  font-size: 2.4em;
+}
+.katex .sizing.reset-size1.size8,
+.katex .fontsize-ensurer.reset-size1.size8 {
+  font-size: 2.88em;
+}
+.katex .sizing.reset-size1.size9,
+.katex .fontsize-ensurer.reset-size1.size9 {
+  font-size: 3.456em;
+}
+.katex .sizing.reset-size1.size10,
+.katex .fontsize-ensurer.reset-size1.size10 {
+  font-size: 4.148em;
+}
+.katex .sizing.reset-size1.size11,
+.katex .fontsize-ensurer.reset-size1.size11 {
+  font-size: 4.976em;
+}
+.katex .sizing.reset-size2.size1,
+.katex .fontsize-ensurer.reset-size2.size1 {
+  font-size: 0.83333333em;
+}
+.katex .sizing.reset-size2.size2,
+.katex .fontsize-ensurer.reset-size2.size2 {
+  font-size: 1em;
+}
+.katex .sizing.reset-size2.size3,
+.katex .fontsize-ensurer.reset-size2.size3 {
+  font-size: 1.16666667em;
+}
+.katex .sizing.reset-size2.size4,
+.katex .fontsize-ensurer.reset-size2.size4 {
+  font-size: 1.33333333em;
+}
+.katex .sizing.reset-size2.size5,
+.katex .fontsize-ensurer.reset-size2.size5 {
+  font-size: 1.5em;
+}
+.katex .sizing.reset-size2.size6,
+.katex .fontsize-ensurer.reset-size2.size6 {
+  font-size: 1.66666667em;
+}
+.katex .sizing.reset-size2.size7,
+.katex .fontsize-ensurer.reset-size2.size7 {
+  font-size: 2em;
+}
+.katex .sizing.reset-size2.size8,
+.katex .fontsize-ensurer.reset-size2.size8 {
+  font-size: 2.4em;
+}
+.katex .sizing.reset-size2.size9,
+.katex .fontsize-ensurer.reset-size2.size9 {
+  font-size: 2.88em;
+}
+.katex .sizing.reset-size2.size10,
+.katex .fontsize-ensurer.reset-size2.size10 {
+  font-size: 3.45666667em;
+}
+.katex .sizing.reset-size2.size11,
+.katex .fontsize-ensurer.reset-size2.size11 {
+  font-size: 4.14666667em;
+}
+.katex .sizing.reset-size3.size1,
+.katex .fontsize-ensurer.reset-size3.size1 {
+  font-size: 0.71428571em;
+}
+.katex .sizing.reset-size3.size2,
+.katex .fontsize-ensurer.reset-size3.size2 {
+  font-size: 0.85714286em;
+}
+.katex .sizing.reset-size3.size3,
+.katex .fontsize-ensurer.reset-size3.size3 {
+  font-size: 1em;
+}
+.katex .sizing.reset-size3.size4,
+.katex .fontsize-ensurer.reset-size3.size4 {
+  font-size: 1.14285714em;
+}
+.katex .sizing.reset-size3.size5,
+.katex .fontsize-ensurer.reset-size3.size5 {
+  font-size: 1.28571429em;
+}
+.katex .sizing.reset-size3.size6,
+.katex .fontsize-ensurer.reset-size3.size6 {
+  font-size: 1.42857143em;
+}
+.katex .sizing.reset-size3.size7,
+.katex .fontsize-ensurer.reset-size3.size7 {
+  font-size: 1.71428571em;
+}
+.katex .sizing.reset-size3.size8,
+.katex .fontsize-ensurer.reset-size3.size8 {
+  font-size: 2.05714286em;
+}
+.katex .sizing.reset-size3.size9,
+.katex .fontsize-ensurer.reset-size3.size9 {
+  font-size: 2.46857143em;
+}
+.katex .sizing.reset-size3.size10,
+.katex .fontsize-ensurer.reset-size3.size10 {
+  font-size: 2.96285714em;
+}
+.katex .sizing.reset-size3.size11,
+.katex .fontsize-ensurer.reset-size3.size11 {
+  font-size: 3.55428571em;
+}
+.katex .sizing.reset-size4.size1,
+.katex .fontsize-ensurer.reset-size4.size1 {
+  font-size: 0.625em;
+}
+.katex .sizing.reset-size4.size2,
+.katex .fontsize-ensurer.reset-size4.size2 {
+  font-size: 0.75em;
+}
+.katex .sizing.reset-size4.size3,
+.katex .fontsize-ensurer.reset-size4.size3 {
+  font-size: 0.875em;
+}
+.katex .sizing.reset-size4.size4,
+.katex .fontsize-ensurer.reset-size4.size4 {
+  font-size: 1em;
+}
+.katex .sizing.reset-size4.size5,
+.katex .fontsize-ensurer.reset-size4.size5 {
+  font-size: 1.125em;
+}
+.katex .sizing.reset-size4.size6,
+.katex .fontsize-ensurer.reset-size4.size6 {
+  font-size: 1.25em;
+}
+.katex .sizing.reset-size4.size7,
+.katex .fontsize-ensurer.reset-size4.size7 {
+  font-size: 1.5em;
+}
+.katex .sizing.reset-size4.size8,
+.katex .fontsize-ensurer.reset-size4.size8 {
+  font-size: 1.8em;
+}
+.katex .sizing.reset-size4.size9,
+.katex .fontsize-ensurer.reset-size4.size9 {
+  font-size: 2.16em;
+}
+.katex .sizing.reset-size4.size10,
+.katex .fontsize-ensurer.reset-size4.size10 {
+  font-size: 2.5925em;
+}
+.katex .sizing.reset-size4.size11,
+.katex .fontsize-ensurer.reset-size4.size11 {
+  font-size: 3.11em;
+}
+.katex .sizing.reset-size5.size1,
+.katex .fontsize-ensurer.reset-size5.size1 {
+  font-size: 0.55555556em;
+}
+.katex .sizing.reset-size5.size2,
+.katex .fontsize-ensurer.reset-size5.size2 {
+  font-size: 0.66666667em;
+}
+.katex .sizing.reset-size5.size3,
+.katex .fontsize-ensurer.reset-size5.size3 {
+  font-size: 0.77777778em;
+}
+.katex .sizing.reset-size5.size4,
+.katex .fontsize-ensurer.reset-size5.size4 {
+  font-size: 0.88888889em;
+}
+.katex .sizing.reset-size5.size5,
+.katex .fontsize-ensurer.reset-size5.size5 {
+  font-size: 1em;
+}
+.katex .sizing.reset-size5.size6,
+.katex .fontsize-ensurer.reset-size5.size6 {
+  font-size: 1.11111111em;
+}
+.katex .sizing.reset-size5.size7,
+.katex .fontsize-ensurer.reset-size5.size7 {
+  font-size: 1.33333333em;
+}
+.katex .sizing.reset-size5.size8,
+.katex .fontsize-ensurer.reset-size5.size8 {
+  font-size: 1.6em;
+}
+.katex .sizing.reset-size5.size9,
+.katex .fontsize-ensurer.reset-size5.size9 {
+  font-size: 1.92em;
+}
+.katex .sizing.reset-size5.size10,
+.katex .fontsize-ensurer.reset-size5.size10 {
+  font-size: 2.30444444em;
+}
+.katex .sizing.reset-size5.size11,
+.katex .fontsize-ensurer.reset-size5.size11 {
+  font-size: 2.76444444em;
+}
+.katex .sizing.reset-size6.size1,
+.katex .fontsize-ensurer.reset-size6.size1 {
+  font-size: 0.5em;
+}
+.katex .sizing.reset-size6.size2,
+.katex .fontsize-ensurer.reset-size6.size2 {
+  font-size: 0.6em;
+}
+.katex .sizing.reset-size6.size3,
+.katex .fontsize-ensurer.reset-size6.size3 {
+  font-size: 0.7em;
+}
+.katex .sizing.reset-size6.size4,
+.katex .fontsize-ensurer.reset-size6.size4 {
+  font-size: 0.8em;
+}
+.katex .sizing.reset-size6.size5,
+.katex .fontsize-ensurer.reset-size6.size5 {
+  font-size: 0.9em;
+}
+.katex .sizing.reset-size6.size6,
+.katex .fontsize-ensurer.reset-size6.size6 {
+  font-size: 1em;
+}
+.katex .sizing.reset-size6.size7,
+.katex .fontsize-ensurer.reset-size6.size7 {
+  font-size: 1.2em;
+}
+.katex .sizing.reset-size6.size8,
+.katex .fontsize-ensurer.reset-size6.size8 {
+  font-size: 1.44em;
+}
+.katex .sizing.reset-size6.size9,
+.katex .fontsize-ensurer.reset-size6.size9 {
+  font-size: 1.728em;
+}
+.katex .sizing.reset-size6.size10,
+.katex .fontsize-ensurer.reset-size6.size10 {
+  font-size: 2.074em;
+}
+.katex .sizing.reset-size6.size11,
+.katex .fontsize-ensurer.reset-size6.size11 {
+  font-size: 2.488em;
+}
+.katex .sizing.reset-size7.size1,
+.katex .fontsize-ensurer.reset-size7.size1 {
+  font-size: 0.41666667em;
+}
+.katex .sizing.reset-size7.size2,
+.katex .fontsize-ensurer.reset-size7.size2 {
+  font-size: 0.5em;
+}
+.katex .sizing.reset-size7.size3,
+.katex .fontsize-ensurer.reset-size7.size3 {
+  font-size: 0.58333333em;
+}
+.katex .sizing.reset-size7.size4,
+.katex .fontsize-ensurer.reset-size7.size4 {
+  font-size: 0.66666667em;
+}
+.katex .sizing.reset-size7.size5,
+.katex .fontsize-ensurer.reset-size7.size5 {
+  font-size: 0.75em;
+}
+.katex .sizing.reset-size7.size6,
+.katex .fontsize-ensurer.reset-size7.size6 {
+  font-size: 0.83333333em;
+}
+.katex .sizing.reset-size7.size7,
+.katex .fontsize-ensurer.reset-size7.size7 {
+  font-size: 1em;
+}
+.katex .sizing.reset-size7.size8,
+.katex .fontsize-ensurer.reset-size7.size8 {
+  font-size: 1.2em;
+}
+.katex .sizing.reset-size7.size9,
+.katex .fontsize-ensurer.reset-size7.size9 {
+  font-size: 1.44em;
+}
+.katex .sizing.reset-size7.size10,
+.katex .fontsize-ensurer.reset-size7.size10 {
+  font-size: 1.72833333em;
+}
+.katex .sizing.reset-size7.size11,
+.katex .fontsize-ensurer.reset-size7.size11 {
+  font-size: 2.07333333em;
+}
+.katex .sizing.reset-size8.size1,
+.katex .fontsize-ensurer.reset-size8.size1 {
+  font-size: 0.34722222em;
+}
+.katex .sizing.reset-size8.size2,
+.katex .fontsize-ensurer.reset-size8.size2 {
+  font-size: 0.41666667em;
+}
+.katex .sizing.reset-size8.size3,
+.katex .fontsize-ensurer.reset-size8.size3 {
+  font-size: 0.48611111em;
+}
+.katex .sizing.reset-size8.size4,
+.katex .fontsize-ensurer.reset-size8.size4 {
+  font-size: 0.55555556em;
+}
+.katex .sizing.reset-size8.size5,
+.katex .fontsize-ensurer.reset-size8.size5 {
+  font-size: 0.625em;
+}
+.katex .sizing.reset-size8.size6,
+.katex .fontsize-ensurer.reset-size8.size6 {
+  font-size: 0.69444444em;
+}
+.katex .sizing.reset-size8.size7,
+.katex .fontsize-ensurer.reset-size8.size7 {
+  font-size: 0.83333333em;
+}
+.katex .sizing.reset-size8.size8,
+.katex .fontsize-ensurer.reset-size8.size8 {
+  font-size: 1em;
+}
+.katex .sizing.reset-size8.size9,
+.katex .fontsize-ensurer.reset-size8.size9 {
+  font-size: 1.2em;
+}
+.katex .sizing.reset-size8.size10,
+.katex .fontsize-ensurer.reset-size8.size10 {
+  font-size: 1.44027778em;
+}
+.katex .sizing.reset-size8.size11,
+.katex .fontsize-ensurer.reset-size8.size11 {
+  font-size: 1.72777778em;
+}
+.katex .sizing.reset-size9.size1,
+.katex .fontsize-ensurer.reset-size9.size1 {
+  font-size: 0.28935185em;
+}
+.katex .sizing.reset-size9.size2,
+.katex .fontsize-ensurer.reset-size9.size2 {
+  font-size: 0.34722222em;
+}
+.katex .sizing.reset-size9.size3,
+.katex .fontsize-ensurer.reset-size9.size3 {
+  font-size: 0.40509259em;
+}
+.katex .sizing.reset-size9.size4,
+.katex .fontsize-ensurer.reset-size9.size4 {
+  font-size: 0.46296296em;
+}
+.katex .sizing.reset-size9.size5,
+.katex .fontsize-ensurer.reset-size9.size5 {
+  font-size: 0.52083333em;
+}
+.katex .sizing.reset-size9.size6,
+.katex .fontsize-ensurer.reset-size9.size6 {
+  font-size: 0.5787037em;
+}
+.katex .sizing.reset-size9.size7,
+.katex .fontsize-ensurer.reset-size9.size7 {
+  font-size: 0.69444444em;
+}
+.katex .sizing.reset-size9.size8,
+.katex .fontsize-ensurer.reset-size9.size8 {
+  font-size: 0.83333333em;
+}
+.katex .sizing.reset-size9.size9,
+.katex .fontsize-ensurer.reset-size9.size9 {
+  font-size: 1em;
+}
+.katex .sizing.reset-size9.size10,
+.katex .fontsize-ensurer.reset-size9.size10 {
+  font-size: 1.20023148em;
+}
+.katex .sizing.reset-size9.size11,
+.katex .fontsize-ensurer.reset-size9.size11 {
+  font-size: 1.43981481em;
+}
+.katex .sizing.reset-size10.size1,
+.katex .fontsize-ensurer.reset-size10.size1 {
+  font-size: 0.24108004em;
+}
+.katex .sizing.reset-size10.size2,
+.katex .fontsize-ensurer.reset-size10.size2 {
+  font-size: 0.28929605em;
+}
+.katex .sizing.reset-size10.size3,
+.katex .fontsize-ensurer.reset-size10.size3 {
+  font-size: 0.33751205em;
+}
+.katex .sizing.reset-size10.size4,
+.katex .fontsize-ensurer.reset-size10.size4 {
+  font-size: 0.38572806em;
+}
+.katex .sizing.reset-size10.size5,
+.katex .fontsize-ensurer.reset-size10.size5 {
+  font-size: 0.43394407em;
+}
+.katex .sizing.reset-size10.size6,
+.katex .fontsize-ensurer.reset-size10.size6 {
+  font-size: 0.48216008em;
+}
+.katex .sizing.reset-size10.size7,
+.katex .fontsize-ensurer.reset-size10.size7 {
+  font-size: 0.57859209em;
+}
+.katex .sizing.reset-size10.size8,
+.katex .fontsize-ensurer.reset-size10.size8 {
+  font-size: 0.69431051em;
+}
+.katex .sizing.reset-size10.size9,
+.katex .fontsize-ensurer.reset-size10.size9 {
+  font-size: 0.83317261em;
+}
+.katex .sizing.reset-size10.size10,
+.katex .fontsize-ensurer.reset-size10.size10 {
+  font-size: 1em;
+}
+.katex .sizing.reset-size10.size11,
+.katex .fontsize-ensurer.reset-size10.size11 {
+  font-size: 1.19961427em;
+}
+.katex .sizing.reset-size11.size1,
+.katex .fontsize-ensurer.reset-size11.size1 {
+  font-size: 0.20096463em;
+}
+.katex .sizing.reset-size11.size2,
+.katex .fontsize-ensurer.reset-size11.size2 {
+  font-size: 0.24115756em;
+}
+.katex .sizing.reset-size11.size3,
+.katex .fontsize-ensurer.reset-size11.size3 {
+  font-size: 0.28135048em;
+}
+.katex .sizing.reset-size11.size4,
+.katex .fontsize-ensurer.reset-size11.size4 {
+  font-size: 0.32154341em;
+}
+.katex .sizing.reset-size11.size5,
+.katex .fontsize-ensurer.reset-size11.size5 {
+  font-size: 0.36173633em;
+}
+.katex .sizing.reset-size11.size6,
+.katex .fontsize-ensurer.reset-size11.size6 {
+  font-size: 0.40192926em;
+}
+.katex .sizing.reset-size11.size7,
+.katex .fontsize-ensurer.reset-size11.size7 {
+  font-size: 0.48231511em;
+}
+.katex .sizing.reset-size11.size8,
+.katex .fontsize-ensurer.reset-size11.size8 {
+  font-size: 0.57877814em;
+}
+.katex .sizing.reset-size11.size9,
+.katex .fontsize-ensurer.reset-size11.size9 {
+  font-size: 0.69453376em;
+}
+.katex .sizing.reset-size11.size10,
+.katex .fontsize-ensurer.reset-size11.size10 {
+  font-size: 0.83360129em;
+}
+.katex .sizing.reset-size11.size11,
+.katex .fontsize-ensurer.reset-size11.size11 {
+  font-size: 1em;
+}
+.katex .delimsizing.size1 {
+  font-family: KaTeX_Size1;
+}
+.katex .delimsizing.size2 {
+  font-family: KaTeX_Size2;
+}
+.katex .delimsizing.size3 {
+  font-family: KaTeX_Size3;
+}
+.katex .delimsizing.size4 {
+  font-family: KaTeX_Size4;
+}
+.katex .delimsizing.mult .delim-size1 > span {
+  font-family: KaTeX_Size1;
+}
+.katex .delimsizing.mult .delim-size4 > span {
+  font-family: KaTeX_Size4;
+}
+.katex .nulldelimiter {
+  display: inline-block;
+  width: 0.12em;
+}
+.katex .delimcenter {
+  position: relative;
+}
+.katex .op-symbol {
+  position: relative;
+}
+.katex .op-symbol.small-op {
+  font-family: KaTeX_Size1;
+}
+.katex .op-symbol.large-op {
+  font-family: KaTeX_Size2;
+}
+.katex .op-limits > .vlist-t {
+  text-align: center;
+}
+.katex .accent > .vlist-t {
+  text-align: center;
+}
+.katex .accent .accent-body {
+  position: relative;
+}
+.katex .accent .accent-body:not(.accent-full) {
+  width: 0;
+}
+.katex .overlay {
+  display: block;
+}
+.katex .mtable .vertical-separator {
+  display: inline-block;
+  min-width: 1px;
+}
+.katex .mtable .arraycolsep {
+  display: inline-block;
+}
+.katex .mtable .col-align-c > .vlist-t {
+  text-align: center;
+}
+.katex .mtable .col-align-l > .vlist-t {
+  text-align: left;
+}
+.katex .mtable .col-align-r > .vlist-t {
+  text-align: right;
+}
+.katex .svg-align {
+  text-align: left;
+}
+.katex svg {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: inherit;
+  fill: currentColor;
+  stroke: currentColor;
+  fill-rule: nonzero;
+  fill-opacity: 1;
+  stroke-width: 1;
+  stroke-linecap: butt;
+  stroke-linejoin: miter;
+  stroke-miterlimit: 4;
+  stroke-dasharray: none;
+  stroke-dashoffset: 0;
+  stroke-opacity: 1;
+}
+.katex svg path {
+  stroke: none;
+}
+.katex img {
+  border-style: none;
+  min-width: 0;
+  min-height: 0;
+  max-width: none;
+  max-height: none;
+}
+.katex .stretchy {
+  width: 100%;
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+.katex .stretchy::before,
+.katex .stretchy::after {
+  content: "";
+}
+.katex .hide-tail {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.katex .halfarrow-left {
+  position: absolute;
+  left: 0;
+  width: 50.2%;
+  overflow: hidden;
+}
+.katex .halfarrow-right {
+  position: absolute;
+  right: 0;
+  width: 50.2%;
+  overflow: hidden;
+}
+.katex .brace-left {
+  position: absolute;
+  left: 0;
+  width: 25.1%;
+  overflow: hidden;
+}
+.katex .brace-center {
+  position: absolute;
+  left: 25%;
+  width: 50%;
+  overflow: hidden;
+}
+.katex .brace-right {
+  position: absolute;
+  right: 0;
+  width: 25.1%;
+  overflow: hidden;
+}
+.katex .x-arrow-pad {
+  padding: 0 0.5em;
+}
+.katex .cd-arrow-pad {
+  padding: 0 0.55556em 0 0.27778em;
+}
+.katex .x-arrow,
+.katex .mover,
+.katex .munder {
+  text-align: center;
+}
+.katex .boxpad {
+  padding: 0 0.3em;
+}
+.katex .fbox,
+.katex .fcolorbox {
+  box-sizing: border-box;
+  border: 0.04em solid;
+}
+.katex .cancel-pad {
+  padding: 0 0.2em;
+}
+.katex .cancel-lap {
+  margin-left: -0.2em;
+  margin-right: -0.2em;
+}
+.katex .sout {
+  border-bottom-style: solid;
+  border-bottom-width: 0.08em;
+}
+.katex .angl {
+  box-sizing: border-box;
+  border-top: 0.049em solid;
+  border-right: 0.049em solid;
+  margin-right: 0.03889em;
+}
+.katex .anglpad {
+  padding: 0 0.03889em;
+}
+.katex .eqn-num::before {
+  counter-increment: katexEqnNo;
+  content: "(" counter(katexEqnNo) ")";
+}
+.katex .mml-eqn-num::before {
+  counter-increment: mmlEqnNo;
+  content: "(" counter(mmlEqnNo) ")";
+}
+.katex .mtr-glue {
+  width: 50%;
+}
+.katex .cd-vert-arrow {
+  display: inline-block;
+  position: relative;
+}
+.katex .cd-label-left {
+  display: inline-block;
+  position: absolute;
+  right: calc(50% + 0.3em);
+  text-align: left;
+}
+.katex .cd-label-right {
+  display: inline-block;
+  position: absolute;
+  left: calc(50% + 0.3em);
+  text-align: right;
+}
+.katex-display {
+  display: block;
+  margin: 1em 0;
+  text-align: center;
+}
+.katex-display > .katex {
+  display: block;
+  text-align: center;
+  white-space: nowrap;
+}
+.katex-display > .katex > .katex-html {
+  display: block;
+  position: relative;
+}
+.katex-display > .katex > .katex-html > .tag {
+  position: absolute;
+  right: 0;
+}
+.katex-display.leqno > .katex > .katex-html > .tag {
+  left: 0;
+  right: auto;
+}
+.katex-display.fleqn > .katex {
+  text-align: left;
+  padding-left: 2em;
+}
+body {
+  counter-reset: katexEqnNo mmlEqnNo;
+}
+
+
+/*# sourceURL=webpack://./node_modules/katex/dist/katex.css */
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL25vZGVfbW9kdWxlcy9rYXRleC9kaXN0L2thdGV4LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSxvRUFBb0U7QUFDcEU7RUFDRSx3QkFBd0I7RUFDeEIsZ0xBQThKO0VBQzlKLG1CQUFtQjtFQUNuQixrQkFBa0I7QUFDcEI7QUFDQTtFQUNFLGdDQUFnQztFQUNoQyxnTEFBNks7RUFDN0ssaUJBQWlCO0VBQ2pCLGtCQUFrQjtBQUNwQjtBQUNBO0VBQ0UsZ0NBQWdDO0VBQ2hDLGdMQUFzTDtFQUN0TCxtQkFBbUI7RUFDbkIsa0JBQWtCO0FBQ3BCO0FBQ0E7RUFDRSw0QkFBNEI7RUFDNUIsa0xBQWlLO0VBQ2pLLGlCQUFpQjtFQUNqQixrQkFBa0I7QUFDcEI7QUFDQTtFQUNFLDRCQUE0QjtFQUM1QixtTEFBMEs7RUFDMUssbUJBQW1CO0VBQ25CLGtCQUFrQjtBQUNwQjtBQUNBO0VBQ0UseUJBQXlCO0VBQ3pCLG1MQUF3SjtFQUN4SixpQkFBaUI7RUFDakIsa0JBQWtCO0FBQ3BCO0FBQ0E7RUFDRSx5QkFBeUI7RUFDekIsbUxBQTBLO0VBQzFLLGlCQUFpQjtFQUNqQixrQkFBa0I7QUFDcEI7QUFDQTtFQUNFLHlCQUF5QjtFQUN6QixtTEFBOEo7RUFDOUosbUJBQW1CO0VBQ25CLGtCQUFrQjtBQUNwQjtBQUNBO0VBQ0UseUJBQXlCO0VBQ3pCLG1MQUFpSztFQUNqSyxtQkFBbUI7RUFDbkIsa0JBQWtCO0FBQ3BCO0FBQ0E7RUFDRSx5QkFBeUI7RUFDekIsbUxBQTBLO0VBQzFLLGlCQUFpQjtFQUNqQixrQkFBa0I7QUFDcEI7QUFDQTtFQUNFLHlCQUF5QjtFQUN6QixtTEFBOEo7RUFDOUosbUJBQW1CO0VBQ25CLGtCQUFrQjtBQUNwQjtBQUNBO0VBQ0UsOEJBQThCO0VBQzlCLG1MQUF1SztFQUN2SyxpQkFBaUI7RUFDakIsa0JBQWtCO0FBQ3BCO0FBQ0E7RUFDRSw4QkFBOEI7RUFDOUIsbUxBQTZLO0VBQzdLLG1CQUFtQjtFQUNu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 */
+  </style>
+  <style>
+    .markdown-body {
+      font-family: -apple-system,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
+      box-sizing: border-box;
+      min-width: 200px;
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 45px;
+    }
+
+    @media not print {
+      .markdown-body {
+        padding: 45px;
+      }
+
+      @media (max-width: 767px) {
+        .markdown-body {
+          padding: 15px;
+        }
+      }
+    }
+
+    .hf-container {
+      color: #24292e;
+      line-height: 1.3;
+    }
+
+    .markdown-body .highlight pre,
+    .markdown-body pre {
+      white-space: pre-wrap;
+    }
+    .markdown-body table {
+      display: table;
+    }
+    .markdown-body img[data-align="center"] {
+      display: block;
+      margin: 0 auto;
+    }
+    .markdown-body img[data-align="right"] {
+      display: block;
+      margin: 0 0 0 auto;
+    }
+    .markdown-body li.task-list-item {
+      list-style-type: none;
+    }
+    .markdown-body li > [type=checkbox] {
+      margin: 0 0 0 -1.3em;
+    }
+    .markdown-body input[type="checkbox"] ~ p {
+      margin-top: 0;
+      display: inline-block;
+    }
+    .markdown-body ol ol,
+    .markdown-body ul ol {
+      list-style-type: decimal;
+    }
+    .markdown-body ol ol ol,
+    .markdown-body ol ul ol,
+    .markdown-body ul ol ol,
+    .markdown-body ul ul ol {
+      list-style-type: decimal;
+    }
+  </style>
+  <style>.markdown-body a.footnote-ref {
+  text-decoration: none;
+}
+
+.footnotes {
+  font-size: .85em;
+  opacity: .8;
+}
+
+.footnotes li[role="doc-endnote"] {
+  position: relative;
+}
+
+.footnotes .footnote-back {
+  position: absolute;
+  font-family: initial;
+  top: .2em;
+  right: 1em;
+  text-decoration: none;
+}
+
+.inline-math.invalid,
+.multiple-math.invalid {
+  color: rgb(255, 105, 105);
+}
+
+.toc-container {
+  width: 100%;
+}
+
+.toc-container .toc-title {
+  font-weight: 700;
+  font-size: 1.2em;
+  margin-bottom: 0;
+}
+
+.toc-container li,
+.toc-container ul,
+.toc-container ul li {
+  list-style: none !important;
+}
+
+.toc-container > ul {
+  padding-left: 0;
+}
+
+.toc-container ul li span {
+  display : flex;
+}
+
+.toc-container ul li span a {
+  color: inherit;
+  text-decoration: none;
+}
+.toc-container ul li span a:hover {
+  color: inherit;
+  text-decoration: none;
+}
+
+.toc-container ul li span span.dots {
+  flex: 1;
+  height: 0.65em;
+  margin: 0 10px;
+  border-bottom: 2px dotted black;
+}
+
+/*# sourceURL=webpack://./src/muya/lib/assets/styles/exportStyle.css */
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9tdXlhL2xpYi9hc3NldHMvc3R5bGVzL2V4cG9ydFN0eWxlLmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLHFCQUFxQjtBQUN2Qjs7QUFFQTtFQUNFLGdCQUFnQjtFQUNoQixXQUFXO0FBQ2I7O0FBRUE7RUFDRSxrQkFBa0I7QUFDcEI7O0FBRUE7RUFDRSxrQkFBa0I7RUFDbEIsb0JBQW9CO0VBQ3BCLFNBQVM7RUFDVCxVQUFVO0VBQ1YscUJBQXFCO0FBQ3ZCOztBQUVBOztFQUVFLHlCQUF5QjtBQUMzQjs7QUFFQTtFQUNFLFdBQVc7QUFDYjs7QUFFQTtFQUNFLGdCQUFnQjtFQUNoQixnQkFBZ0I7RUFDaEIsZ0JBQWdCO0FBQ2xCOztBQUVBOzs7RUFHRSwyQkFBMkI7QUFDN0I7O0FBRUE7RUFDRSxlQUFlO0FBQ2pCOztBQUVBO0VBQ0UsY0FBYztBQUNoQjs7QUFFQTtFQUNFLGNBQWM7RUFDZCxxQkFBcUI7QUFDdkI7QUFDQTtFQUNFLGNBQWM7RUFDZCxxQkFBcUI7QUFDdkI7O0FBRUE7RUFDRSxPQUFPO0VBQ1AsY0FBYztFQUNkLGNBQWM7RUFDZCwrQkFBK0I7QUFDakMiLCJzb3VyY2VSb290IjoiIn0= */</style>
+  <style>.markdown-body{}pre.front-matter{display:none!important;}</style>
+
+<style id="libron-font-injection">
+@font-face {
+  font-family: 'Libron';
+  src: url('../../../../Libron_Web/Libron-Regular.woff2') format('woff2'),
+       url('../../../../Libron_Web/Libron-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Libron';
+  src: url('../../../../Libron_Web/Libron-Bold.woff2') format('woff2'),
+       url('../../../../Libron_Web/Libron-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Libron';
+  src: url('../../../../Libron_Web/Libron-Italic.woff2') format('woff2'),
+       url('../../../../Libron_Web/Libron-Italic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Libron';
+  src: url('../../../../Libron_Web/Libron-BoldItalic.woff2') format('woff2'),
+       url('../../../../Libron_Web/Libron-BoldItalic.ttf') format('truetype');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+html, body, .markdown-body, h1, h2, h3, h4, h5, h6, p, span, li, a, td, th {
+  font-family: 'Libron', serif, -apple-system, BlinkMacSystemFont !important;
+}
+
+body {
+  padding: 1.5rem 2rem !important;
+  max-width: 900px !important;
+  margin: 0 auto !important;
+}
+
+/* Dark mode theme styles inside iframe */
+[data-theme="dark"] html,
+[data-theme="dark"] body,
+[data-theme="dark"] .markdown-body {
+  background-color: #0a0a0a !important;
+  color: #ededed !important;
+}
+[data-theme="dark"] .markdown-body table tr {
+  background-color: #121212 !important;
+  border-color: #262626 !important;
+}
+[data-theme="dark"] .markdown-body table tr:nth-child(2n) {
+  background-color: #181818 !important;
+}
+[data-theme="dark"] .markdown-body table th,
+[data-theme="dark"] .markdown-body table td {
+  border-color: #2e2e2e !important;
+}
+[data-theme="dark"] .markdown-body pre,
+[data-theme="dark"] .markdown-body code {
+  background-color: #141414 !important;
+  color: #f0f0f0 !important;
+  border-color: #2a2a2a !important;
+}
+[data-theme="dark"] .markdown-body blockquote {
+  color: #999999 !important;
+  border-left-color: #444444 !important;
+}
+[data-theme="dark"] .markdown-body a {
+  color: #58a6ff !important;
+}
+[data-theme="dark"] .markdown-body hr {
+  background-color: #262626 !important;
+}
+</style>
+
+</head>
+<body>
+  <article class="markdown-body"><h1 class="atx" id="html-structure-and-semantics--from-a-blank-page-to-a-web-page">HTML Structure and Semantics — From a Blank Page to a Web Page</h1>
+<h3 class="atx" id="introduction-to-web-technology--week-2-module-2">Introduction to Web Technology — Week 2 (Module 2)</h3>
+<h2 class="atx" id="index">Index</h2>
+<ul>
+<li><a href="#1-from-blank-page-to-web-page">1. From Blank Page to Web Page</a> — the pep talk: what this module promises and why a white page is scarier than it looks.</li>
+<li><a href="#2-html-the-universal-mother-tongue">2. HTML The Universal Mother Tongue</a> — how one language got every browser on Earth to (mostly) agree.</li>
+<li><a href="#3-a-guided-tour-of-a-real-page">3. A Guided Tour of a Real Page</a> — peeking under the hood with DevTools, no mechanic's licence needed.</li>
+<li><a href="#4-anatomy-of-an-element">4. Anatomy of an Element</a> — tags, attributes and content: the atoms of every page.</li>
+<li><a href="#5-the-family-tree-of-a-document">5. The Family Tree of a Document</a> — parents, children, siblings; the drama of nested tags.</li>
+<li><a href="#6-semantic-tags-carry-meaning">6. Semantic Tags Carry Meaning</a> — why <code>&lt;header&gt;</code> beats a <code>&lt;div&gt;</code> wearing a name badge.</li>
+<li><a href="#7-the-skeleton-every-page-shares">7. The Skeleton Every Page Shares</a> — the boilerplate you will type a thousand times.</li>
+<li><a href="#8-headings-and-paragraphs">8. Headings and Paragraphs</a> — giving your text an outline instead of a wall of words.</li>
+<li><a href="#9-lists">9. Lists</a> — bullets, numbers, and the lesser-known definition list.</li>
+<li><a href="#10-links">10. Links</a> — the "hyper" in hypertext: teleporting across pages, sites and sections.</li>
+<li><a href="#11-cheat-sheet">11. Cheat Sheet</a> — one table to rule them all.</li>
+<li><a href="#12-practice-questions">12. Practice Questions</a> — five brain-benders to make sure it stuck.</li>
+</ul>
+<hr>
+<h2 class="atx" id="1-from-blank-page-to-web-page">1. From Blank Page to Web Page</h2>
+<h3 class="atx" id="the-story-so-far">The Story So Far</h3>
+<p>Imagine you open your favourite newspaper portal. The page you get is not one neat block of text. It has headlines, dozens of images, advertisements, tables, columns, and maybe a login box. On a social media site you can even <em>upload</em> data (a photo, a post) back to the server, and that too happens through a web page. Also remember from earlier that all of this content need not come from a <strong>single server</strong>; the browser assembles it from several places.</p>
+<p>So the fundamental question of this module is:</p>
+<blockquote>
+<p>How do we turn a <strong>blank white page</strong> into a <strong>structured, styled, responsive page</strong> that any browser can render?</p>
+</blockquote>
+<h3 class="atx" id="what-this-module-covers">What This Module Covers</h3>
+<table>
+<thead>
+<tr>
+<th>Topic</th>
+<th>What you will learn</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>HTML structure and semantics</strong></td>
+<td>How a document is built, and why the tags you pick matter</td>
+</tr>
+<tr>
+<td><strong>CSS fundamentals</strong></td>
+<td>Syntax, selectors, and how conflicting rules actually get resolved</td>
+</tr>
+<tr>
+<td><strong>The box model</strong></td>
+<td>The four layers that determine an element's real size on the page</td>
+</tr>
+<tr>
+<td><strong>Layout and responsive design</strong></td>
+<td>Positioning basics, then Flexbox and Grid</td>
+</tr>
+</tbody></table>
+<p>A few words on the second and third rows, since they explain <em>why</em> this module is ordered the way it is:</p>
+<ul>
+<li>Some styles are <strong>browser defaults</strong>, while users and developers can define <strong>their own</strong> styles. When they conflict, a set of resolution rules (the <em>cascade</em>) decides who wins.</li>
+<li>Screens differ in size and resolution from device to device. The box model tells us the <em>real</em> size an element occupies, which affects how the user experiences the content.</li>
+</ul>
+<h3 class="atx" id="learning-objectives">Learning Objectives</h3>
+<table>
+<thead>
+<tr>
+<th>Objective</th>
+<th>Goal</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>HTML Structure</strong></td>
+<td>Structure a page correctly with semantic HTML5 elements</td>
+</tr>
+<tr>
+<td><strong>Tables, Forms, Media</strong></td>
+<td>Build tables and forms, and embed images, audio, and video</td>
+</tr>
+<tr>
+<td><strong>CSS and Box Model</strong></td>
+<td>Style with selectors, the cascade, and the box model</td>
+</tr>
+<tr>
+<td><strong>Flexbox and Grid</strong></td>
+<td>Lay out a responsive page with Flexbox and Grid</td>
+</tr>
+</tbody></table>
+<p>HTML has far more detail than one module can exhaustively cover. The aim here is to give you the fundamentals and plenty of pointers; real fluency in HTML and CSS comes from <strong>hands-on practice</strong>, which your lab experiments will provide.</p>
+<blockquote>
+<p><strong>Note for Review</strong>
+Think of a web page as a house. <strong>HTML</strong> is the walls, rooms and doors (structure), <strong>CSS</strong> is the paint and furniture (style), and <strong>JavaScript</strong> is the electricity (behaviour). This module starts with the walls.</p>
+</blockquote>
+<hr>
+<h2 class="atx" id="2-html-the-universal-mother-tongue">2. HTML The Universal Mother Tongue</h2>
+<h3 class="atx" id="why-we-need-one-language">Why We Need One Language</h3>
+<p>Delivering information globally requires a <strong>universally understood language</strong>. Here "language" does not mean English versus French or Spanish. It means: once the content is fixed (say, in English), how do we make it show up <em>the same way</em> on very different platforms?</p>
+<ul>
+<li>a small mobile phone, an 11 or 13 inch laptop, or a big desktop workstation,</li>
+<li>Linux, Windows or another operating system,</li>
+<li>any of the many web browsers.</li>
+</ul>
+<p>Despite this heterogeneity, we want the <strong>presentation</strong> of the information to be broadly consistent for every client. HTML is that shared publishing language.</p>
+<p>The slide puts it this way:</p>
+<blockquote>
+<p>*"To publish information for global distribution, one needs a universally understood language, a kind of publishing mother tongue that all computers may potentially understand. The publishing language used by the World Wide Web is HTML (from HyperText Markup Language)."*
+In 1998 the W3C froze the HTML specification at version 4.01.</p>
+</blockquote>
+<p>Notice the word <strong>Markup</strong>. HTML works by <em>marking up</em> content with <strong>tags</strong> that tell the browser how a piece of content is to be treated: is this a heading, a paragraph, an image?</p>
+<h3 class="atx" id="timeline-of-html">Timeline of HTML</h3>
+<table>
+<thead>
+<tr>
+<th>Year</th>
+<th>Milestone</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1991</td>
+<td>HTML Specification</td>
+</tr>
+<tr>
+<td>1995</td>
+<td>HTML 2</td>
+</tr>
+<tr>
+<td>1997</td>
+<td>HTML 3.2</td>
+</tr>
+<tr>
+<td>1999</td>
+<td>HTML 4 (W3C froze it at 4.01 in 1998, as quoted above)</td>
+</tr>
+<tr>
+<td>2000</td>
+<td>XHTML 1</td>
+</tr>
+<tr>
+<td>2009 to 2014</td>
+<td>HTML 5</td>
+</tr>
+<tr>
+<td>2016</td>
+<td>HTML 5.1</td>
+</tr>
+<tr>
+<td>2017</td>
+<td>HTML 5.2</td>
+</tr>
+<tr>
+<td>?</td>
+<td>HTML 5.3</td>
+</tr>
+</tbody></table>
+<div class="plantuml"><img src="https://www.plantuml.com/plantuml/svg/~1U5w5q3rlmo0GWE7zViKrdHtnQSTB6tL9XdHgXmvUa4DSInX762FrtrVcibHHdObNuk44xATeGfm71q_NOBh1e3C_unnn6cmqte2pbuXnnD1ttn7FVR1jx4SFosfyvonkZf_l9_oushQ_zArPTXlFwvflq4oO63wVbhDlRhPtfqIMcYHVat9BjY8hrgpAiYOf_v5V-TgyyO8nHbIj3TLPrWLNXFKD7uArzz-XjtaoBmcN3x38-FQswW6MZN-biRi_CZ4iYXTC71Ad4f04bOGagHGaHQKXQQeIKabLGQgeTh2t_ZmFxXUskAK6"></div>
+<p>Each version reflected growing interest, changing requirements and a growing set of applications. The W3C (World Wide Web Consortium) standardised HTML 4 around 1998, and from there the language kept evolving towards HTML5 and beyond, aiming at more capability and robustness.</p>
+<h3 class="atx" id="what-html5-set-out-to-do">What HTML5 Set Out To Do</h3>
+<ol>
+<li><strong>Specify unambiguously how browsers should deal with invalid markup.</strong> Markup is simply the set of tags. If a page contains something the browser does not expect, the browser must not behave in a random, vendor-specific way; HTML5 defines how such errors are handled and reported so that all browsers react alike.</li>
+<li><strong>Provide an open, non-proprietary programming framework</strong> (via JavaScript) for creating rich web applications. This encourages <strong>reuse of code</strong>: you do not build an application from scratch, you can port and reuse existing components.</li>
+<li><strong>Be backward compatible with the existing web.</strong> Older pages and applications cannot simply be scrapped, so new features must coexist with old content.</li>
+</ol>
+<h3 class="atx" id="the-golden-rule-html-describes-structure-css-describes-looks">The Golden Rule: HTML Describes Structure, CSS Describes Looks</h3>
+<blockquote>
+<p>HTML only describes the <strong>structural semantics</strong> (the meaning) of the document. Information about how the content should <em>look</em> when displayed in the browser is best left to <strong>CSS (Cascading Style Sheets)</strong>.</p>
+</blockquote>
+<p>Two jobs, two tools:</p>
+<table>
+<thead>
+<tr>
+<th>Job</th>
+<th>Tool</th>
+<th>Examples</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Structure and meaning: where things go, what they are</td>
+<td><strong>HTML</strong></td>
+<td>this is a heading; this is the body; here comes an image, a table, an upload form</td>
+</tr>
+<tr>
+<td>Presentation: how things look</td>
+<td><strong>CSS</strong></td>
+<td>bold or not, font size, colour, beautification</td>
+</tr>
+</tbody></table>
+<p>HTML lays out the <em>template</em> of the page: the heading portion, the body portion, where the text goes, where the image comes, and how a form should send a <strong>file</strong> versus <strong>free text</strong> back to the server. It handles all sorts of content: text, images, video, audio and tables.</p>
+<blockquote>
+<p><strong>Note for Review</strong>
+Pro-Tip: This often appears on exams regarding <em>HTML vs CSS</em>. Remember that HTML answers "<strong>what is this piece of content?</strong>" while CSS answers "<strong>how should it look?</strong>". Even <code>&lt;strong&gt;</code> and <code>&lt;em&gt;</code> are about <em>meaning</em> (importance, emphasis); that they usually render bold and italic is only a default appearance.</p>
+</blockquote>
+<hr>
+<h2 class="atx" id="3-a-guided-tour-of-a-real-page">3. A Guided Tour of a Real Page</h2>
+<p>Before studying the details, let us look at a typical page. The lecture uses a single self-contained demo file called <em>HTML Basics Demo</em> ("a one-page tour of the tags every web page starts with").</p>
+<h3 class="atx" id="opening-it">Opening It</h3>
+<ul>
+<li>It is a plain <code>.html</code> file. Double-clicking it opens it in a browser (Edge, Chrome or any other). No server, no internet connection and no extra files are needed.</li>
+<li>The address bar shows the <strong>path</strong> to the file on the local disk (for example, on the C drive with several levels of directories), ending in the <code>.html</code> file. On real websites you are constantly opening <code>.html</code> resources in the same way.</li>
+</ul>
+<h3 class="atx" id="viewing-the-code">Viewing the Code</h3>
+<p>Any browser lets you see the code behind the page:</p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>How</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Developer Tools</td>
+<td>Press <code>Ctrl + Shift + I</code>, or use the browser menu; select the HTML to see the whole code</td>
+</tr>
+<tr>
+<td>View Page Source</td>
+<td>Right click and choose <em>View page source</em>, or press <code>Ctrl + U</code> (<code>Cmd + U</code> on a Mac)</td>
+</tr>
+</tbody></table>
+<p>The DevTools panel shows an <strong>Elements</strong> tab with the document tree, and a <strong>Styles</strong> tab listing the CSS rules that apply to the selected element. In the Styles tab you will notice rules such as <code>box-sizing: border-box</code> and default rules labelled as coming from the <strong>user agent stylesheet</strong> (the browser's built-in defaults, for instance <code>html { display: block; }</code>). That is exactly the "browser defaults versus your own styles" idea from the introduction; we return to it in the CSS part of the module.</p>
+<h3 class="atx" id="what-the-demo-page-contains">What the Demo Page Contains</h3>
+<p>The page has a coloured header with a <strong>navigation bar</strong> (Headings, Lists, Table, Media, Form). These are <strong>hyperlinks</strong> that jump to the corresponding section of the <em>same page</em>, so you do not have to scroll. Below it:</p>
+<table>
+<thead>
+<tr>
+<th>Section</th>
+<th>What it demonstrates</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Headings and Paragraphs</td>
+<td><code>&lt;h1&gt;</code>, <code>&lt;h2&gt;</code>, <code>&lt;h3&gt;</code>, <code>&lt;p&gt;</code>; <strong>bold and important</strong> text with <code>&lt;strong&gt;</code>, <em>emphasised</em> text with <code>&lt;em&gt;</code>; a line break inside a paragraph with <code>&lt;br&gt;</code>; a horizontal rule with <code>&lt;hr&gt;</code> to separate ideas</td>
+</tr>
+<tr>
+<td>Lists</td>
+<td>Unordered list (<code>&lt;ul&gt;</code>) for items with no particular order; ordered list (<code>&lt;ol&gt;</code>) for sequential steps; description list (<code>&lt;dl&gt;</code>) for term and definition pairs</td>
+</tr>
+<tr>
+<td>Table</td>
+<td><code>&lt;table&gt;</code> the whole table, <code>&lt;tr&gt;</code> a table row, <code>&lt;th&gt;</code> a header cell, <code>&lt;td&gt;</code> a regular data cell</td>
+</tr>
+<tr>
+<td>Images</td>
+<td>An image with a caption; in the demo the image is drawn from a tiny inline SVG so it works offline, but in a real project you write <code>&lt;img src="photo.jpg" alt="..."&gt;</code> pointing at a real image file</td>
+</tr>
+<tr>
+<td>Form</td>
+<td>A simple form you fill in and submit, which uploads the data</td>
+</tr>
+<tr>
+<td>Quick Reference sidebar</td>
+<td>Written with the semantic <code>&lt;aside&gt;</code> tag: content related to, but separate from, the main flow of the page</td>
+</tr>
+</tbody></table>
+<p>The demo also shows the standard sequence for building a page:</p>
+<ol>
+<li>Write the HTML (<strong>structure</strong>).</li>
+<li>Style it with CSS (<strong>style</strong>).</li>
+<li>Make it interactive with JavaScript (<strong>behaviour</strong>).</li>
+</ol>
+<p>The DevTools view shows the overall shape of the demo file, which matches the skeleton we study in Section 7:</p>
+<div class="plantuml"><img src="https://www.plantuml.com/plantuml/svg/~1U5vzZp4EmZ0CHVUSmfG5XXu1LB6mS0cNk6canAvIP-ZjKT9AXQ5i_zjFtz_Th9Wqns1EKq8N4G8kaXNcI8gCHcK25UX5LI9Od-YjNjYO8f1T86X6ZG4k0Td13OYl3U0CTNX-UJVg8sJwuGdjoX3Q0wONkrIcY3yvbDOacpRecOZu-rf4pvKfuWWQH7IB6lGtojHFslPUw-wk53ErNTtPj9joQNU39jCHsnp31_xGUtq"></div>
+<blockquote>
+<p>The developer left a comment at the top of the file describing it as a single self-contained page for classroom demonstration. Comments like this are written between <code>&lt;!--</code> and <code>--&gt;</code> and are ignored by the browser.</p>
+</blockquote>
+<p>The takeaway: HTML gives you <strong>structural semantics</strong>, meaning how a page is organised for different types of data (text, lists, tables, images, forms).</p>
+<hr>
+<h2 class="atx" id="4-anatomy-of-an-element">4. Anatomy of an Element</h2>
+<h3 class="atx" id="tags-braces-and-scope">Tags, Braces and Scope</h3>
+<p>A <strong>tag</strong> is written inside angle brackets. In any programming language some keywords have a fixed, special meaning that the compiler or interpreter recognises; HTML tags play that role for the browser.</p>
+<p>Every HTML file starts with this line, which declares it as an HTML5 document:</p>
+<pre><code class="fenced-code-block language-html"><span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">html</span><span class="token punctuation">&gt;</span></span></code></pre>
+<p>This is an exclamation mark, the word <code>DOCTYPE</code> in capitals, and <code>html</code> in lowercase, all inside angle brackets.</p>
+<p>Think of C or C++ braces: an opening <code>{</code> and a closing <code>}</code> define the <strong>scope</strong> of what lies between them. HTML tags do the same job, in symmetric pairs:</p>
+<ul>
+<li><code>&lt;html&gt;</code> ... <code>&lt;/html&gt;</code></li>
+<li><code>&lt;head&gt;</code> ... <code>&lt;/head&gt;</code></li>
+<li><code>&lt;body&gt;</code> ... <code>&lt;/body&gt;</code></li>
+</ul>
+<p>The <strong>closing tag always has a forward slash</strong> <code>/</code> after the opening angle bracket. Anything written between the pair belongs to that element.</p>
+<h3 class="atx" id="the-parts-of-an-element">The Parts of an Element</h3>
+<pre><code class="fenced-code-block language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>http://www.centralpark.com<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Central Park<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span></code></pre>
+<table>
+<thead>
+<tr>
+<th>Part</th>
+<th>In the example above</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Opening tag</strong></td>
+<td><code>&lt;a href="http://www.centralpark.com"&gt;</code></td>
+</tr>
+<tr>
+<td><strong>Element name</strong></td>
+<td><code>a</code></td>
+</tr>
+<tr>
+<td><strong>Attribute</strong></td>
+<td><code>href="http://www.centralpark.com"</code></td>
+</tr>
+<tr>
+<td><strong>Content</strong> (may be text or other HTML elements)</td>
+<td><code>Central Park</code></td>
+</tr>
+<tr>
+<td><strong>Closing tag</strong></td>
+<td><code>&lt;/a&gt;</code></td>
+</tr>
+</tbody></table>
+<div class="plantuml"><img src="https://www.plantuml.com/plantuml/svg/~1U5vrZa5gGa4GHFTpYexP689N298WRWGluARphOm3FTqoKmF9xOFw9MwoUujwl5ftQkEebfxEJNDLCVs9GUaLLDTa-A8mf9LyeXnBmyGIdj85rBD15Xj3XNCXsWKcpxlBzjq67aVxCxnu5ce--DArGbv5oLO-1z5VhdPmjhSDy4Vz8vnm7dn9V5EYIV249hYrPt_wtxVeS_vQcku_RwK4azNgJO9tclx8qXf-7DL-0GLuPme"></div>
+<h3 class="atx" id="empty-elements">Empty Elements</h3>
+<p>Some elements have no content and therefore no closing tag. Example of an <strong>empty element</strong>:</p>
+<pre><code class="fenced-code-block language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>file.gif<span class="token punctuation">"</span></span> <span class="token attr-name">alt</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>something<span class="token punctuation">"</span></span> <span class="token punctuation">/&gt;</span></span></code></pre>
+<p>It has an element name (<code>img</code>), attributes (<code>src</code>, <code>alt</code>), and an <strong>optional trailing slash</strong> at the end.</p>
+<blockquote>
+<p><strong>Note for Review</strong>
+Pro-Tip: A frequent exam point is the difference between a <strong>tag</strong> and an <strong>element</strong>. A <em>tag</em> is just the keyword in angle brackets. An <em>element</em> is the opening tag, its content and its closing tag <strong>together</strong>. (The demo page's description list says exactly this.)</p>
+</blockquote>
+<hr>
+<h2 class="atx" id="5-the-family-tree-of-a-document">5. The Family Tree of a Document</h2>
+<p>HTML is always structured <strong>hierarchically</strong>, so we borrow family vocabulary to describe how elements relate. Consider this fragment:</p>
+<pre><code class="fenced-code-block language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>This is some <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>strong</span><span class="token punctuation">&gt;</span></span>text<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>strong</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span><span class="token punctuation">&gt;</span></span>Title goes here<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>This is <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span><span class="token punctuation">&gt;</span></span>important<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span></code></pre>
+<div class="plantuml"><img src="https://www.plantuml.com/plantuml/svg/~1U5vrZpqEWp0CHlUSmeMP8HoWGbqwj5jFO9eeYPeVAp6Lk7r5e183R9_ydYr_Gs7CF0KlBfJH10IFSveOIj2C4GKd0aum9kOKGBcit-nI568968tNq8n9pGrWWH7QfpEMRtxIUu4g9RdXUzOwxhcLLR2dWdBVQgYp2uLpYgOw1Tg7nOyxUA0_G8Kmhdi4xGjzMCgDq7LN8Ba5-mzAaAoe2BKglQ1-dP0OT5HJy3-29cmh"></div>
+<table>
+<thead>
+<tr>
+<th>Term</th>
+<th>Meaning</th>
+<th>Example from the fragment</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Parent</strong></td>
+<td>The element directly one level above</td>
+<td><code>body</code> is the parent of <code>p</code>, <code>h1</code> and <code>div</code></td>
+</tr>
+<tr>
+<td><strong>Child</strong></td>
+<td>An element directly one level below</td>
+<td><code>p</code>, <code>h1</code> and <code>div</code> are children of <code>body</code></td>
+</tr>
+<tr>
+<td><strong>Siblings</strong></td>
+<td>Elements sharing the same parent</td>
+<td><code>p</code>, <code>h1</code> and <code>div</code> are siblings</td>
+</tr>
+<tr>
+<td><strong>Descendants</strong></td>
+<td>Everything nested below, at any depth</td>
+<td><code>strong</code>, the inner <code>p</code> and <code>span</code> are descendants of <code>body</code></td>
+</tr>
+<tr>
+<td><strong>Ancestors</strong></td>
+<td>Everything above, at any depth, up to the root</td>
+<td>the <code>span</code>'s ancestors are the inner <code>p</code>, <code>div</code> and <code>body</code></td>
+</tr>
+</tbody></table>
+<p>The <strong>scope</strong> of an element runs from its opening tag to its closing tag. Whatever sits between <code>&lt;h1&gt;</code> and <code>&lt;/h1&gt;</code> (say, a <code>&lt;span&gt;</code>) is one level down, in the subtree of the <code>&lt;h1&gt;</code>.</p>
+<h3 class="atx" id="generalising-a-tree-of-numbered-nodes">Generalising: A Tree of Numbered Nodes</h3>
+<p>The lecture generalises the idea using a tree with numbered nodes. Let node 1 be the root. Its children are nodes 2 and 3. Node 2 has children 4, 5 and 6. Node 4 has children 8 and 9. Node 3 has child 7.</p>
+<div class="plantuml"><img src="https://www.plantuml.com/plantuml/svg/~1U5vrphyAma0Cn_4zJn7RkKF_juk8YuDkFa6qHrkyoqcR3hwzIEIeKBSl-V2376QXIHPdOVUSg7U4bbv-4PoT4M82yKyKZpSluXrsusJkCde6-0HnRmr6QOGq8wSONyP-aADTp9epvUpBfyaONdkkdl_pGht0-3pGOrnFIwLoWogbQeDgfNg36gK6uojPvt_-RDNQOC0f9iaUEGkL0sTwAqALeIhWNBK6BhIQK2qS37UBis-ZwNdN"></div>
+<p>Writing <span class="katex"><span class="katex-mathml"></span><span aria-hidden="true" class="katex-html"><span class="base"><span style="height:1em;vertical-align:-0.25em;" class="strut"></span><span style="margin-right:0.10903em;" class="mord mathnormal">N</span><span class="mopen">(</span><span style="margin-right:0.03148em;" class="mord mathnormal">k</span><span class="mclose">)</span></span></span></span> for "node <span class="katex"><span class="katex-mathml"></span><span aria-hidden="true" class="katex-html"><span class="base"><span style="height:0.6944em;" class="strut"></span><span style="margin-right:0.03148em;" class="mord mathnormal">k</span></span></span></span>", the relations are:</p>
+<span class="katex-display"><span class="katex"><span class="katex-mathml"></span><span aria-hidden="true" class="katex-html"><span class="base"><span style="height:1em;vertical-align:-0.25em;" class="strut"></span><span style="margin-right:0.10903em;" class="mord mathnormal">N</span><span class="mopen">(</span><span class="mord">2</span><span class="mclose">)</span><span style="margin-right:0.2778em;" class="mspace"></span><span class="mrel">=</span><span style="margin-right:0.2778em;" class="mspace"></span></span><span class="base"><span style="height:1em;vertical-align:-0.25em;" class="strut"></span><span class="mord text"><span class="mord">Child</span></span><span class="mopen">[</span><span style="margin-right:0.10903em;" class="mord mathnormal">N</span><span class="mopen">(</span><span class="mord">1</span><span class="mclose">)]</span><span style="margin-right:2em;" class="mspace"></span><span style="margin-right:0.10903em;" class="mord mathnormal">N</span><span class="mopen">(</span><span class="mord">2</span><span class="mclose">)</span><span style="margin-right:0.2778em;" class="mspace"></span><span class="mrel">=</span><span style="margin-right:0.2778em;" class="mspace"></span></span><span class="base"><span style="height:1em;vertical-align:-0.25em;" class="strut"></span><span class="mord text"><span class="mord">Parent</span></span><span class="mopen">[</span><span style="margin-right:0.10903em;" class="mord mathnormal">N</span><span class="mopen">(</span><span class="mord">4</span><span class="mclose">)]</span></span></span></span></span><p>The <strong>descendants</strong> of a node are everything in its subtree:</p>
+<span class="katex-display"><span class="katex"><span class="katex-mathml"></span><span aria-hidden="true" class="katex-html"><span class="base"><span style="height:1em;vertical-align:-0.25em;" class="strut"></span><span class="mord text"><span class="mord">Desc</span></span><span class="mopen">(</span><span style="margin-right:0.10903em;" class="mord mathnormal">N</span><span class="mopen">(</span><span class="mord">2</span><span class="mclose">))</span><span style="margin-right:0.2778em;" class="mspace"></span><span class="mrel">=</span><span style="margin-right:0.2778em;" class="mspace"></span></span><span class="base"><span style="height:1em;vertical-align:-0.25em;" class="strut"></span><span class="mopen">{</span><span style="margin-right:0.10903em;" class="mord mathnormal">N</span><span class="mopen">(</span><span class="mord">4</span><span class="mclose">)</span><span class="mpunct">,</span><span style="margin-right:0.1667em;" class="mspace"></span><span style="margin-right:0.10903em;" class="mord mathnormal">N</span><span class="mopen">(</span><span class="mord">5</span><span class="mclose">)</span><span class="mpunct">,</span><span style="margin-right:0.1667em;" class="mspace"></span><span style="margin-right:0.10903em;" class="mord mathnormal">N</span><span class="mopen">(</span><span class="mord">6</span><span class="mclose">)</span><span class="mpunct">,</span><span style="margin-right:0.1667em;" class="mspace"></span><span style="margin-right:0.10903em;" class="mord mathnormal">N</span><span class="mopen">(</span><span class="mord">8</span><span class="mclose">)</span><span class="mpunct">,</span><span style="margin-right:0.1667em;" class="mspace"></span><span style="margin-right:0.10903em;" class="mord mathnormal">N</span><span class="mopen">(</span><span class="mord">9</span><span class="mclose">)}</span><span style="margin-right:2em;" class="mspace"></span><span class="mord text"><span class="mord">Desc</span></span><span class="mopen">(</span><span style="margin-right:0.10903em;" class="mord mathnormal">N</span><span class="mopen">(</span><span class="mord">4</span><span class="mclose">))</span><span style="margin-right:0.2778em;" class="mspace"></span><span class="mrel">=</span><span style="margin-right:0.2778em;" class="mspace"></span></span><span class="base"><span style="height:1em;vertical-align:-0.25em;" class="strut"></span><span class="mopen">{</span><span style="margin-right:0.10903em;" class="mord mathnormal">N</span><span class="mopen">(</span><span class="mord">8</span><span class="mclose">)</span><span class="mpunct">,</span><span style="margin-right:0.1667em;" class="mspace"></span><span style="margin-right:0.10903em;" class="mord mathnormal">N</span><span class="mopen">(</span><span class="mord">9</span><span class="mclose">)}</span></span></span></span></span><p>and the <strong>ancestors</strong> of a node are everything on its path up to the root:</p>
+<span class="katex-display"><span class="katex"><span class="katex-mathml"></span><span aria-hidden="true" class="katex-html"><span class="base"><span style="height:1em;vertical-align:-0.25em;" class="strut"></span><span class="mord text"><span class="mord">Anc</span></span><span class="mopen">(</span><span style="margin-right:0.10903em;" class="mord mathnormal">N</span><span class="mopen">(</span><span class="mord">8</span><span class="mclose">))</span><span style="margin-right:0.2778em;" class="mspace"></span><span class="mrel">=</span><span style="margin-right:0.2778em;" class="mspace"></span></span><span class="base"><span style="height:1em;vertical-align:-0.25em;" class="strut"></span><span class="mopen">{</span><span style="margin-right:0.10903em;" class="mord mathnormal">N</span><span class="mopen">(</span><span class="mord">4</span><span class="mclose">)</span><span class="mpunct">,</span><span style="margin-right:0.1667em;" class="mspace"></span><span style="margin-right:0.10903em;" class="mord mathnormal">N</span><span class="mopen">(</span><span class="mord">2</span><span class="mclose">)</span><span class="mpunct">,</span><span style="margin-right:0.1667em;" class="mspace"></span><span style="margin-right:0.10903em;" class="mord mathnormal">N</span><span class="mopen">(</span><span class="mord">1</span><span class="mclose">)}</span></span></span></span></span><p>Why does this matter? <strong>Scoping is crucial for styling.</strong> How the document is organised decides how we select elements later, and where we should limit the reach of a style rule.</p>
+<blockquote>
+<p><strong>Note for Review</strong>
+Pro-Tip: This often appears on exams regarding <em>relationships in the DOM tree</em>. Remember that "child" means <strong>one level</strong> down but "descendant" means <strong>any depth</strong> down; every child is a descendant, but not every descendant is a child. The same goes for parent versus ancestor.</p>
+</blockquote>
+<hr>
+<h2 class="atx" id="6-semantic-tags-carry-meaning">6. Semantic Tags Carry Meaning</h2>
+<p>It would be wrong to think of HTML tags as just a collection of boxes. Tags such as <code>&lt;header&gt;</code> and <code>&lt;footer&gt;</code> carry <strong>specific meaning</strong> about their role on the page.</p>
+<h3 class="atx" id="the-same-page-two-naming-schemes">The Same Page, Two Naming Schemes</h3>
+<table>
+<thead>
+<tr>
+<th>How you might name it</th>
+<th>What it actually means</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>&lt;div class="header"&gt;</code></td>
+<td><code>&lt;header&gt;</code></td>
+</tr>
+<tr>
+<td><code>&lt;div class="nav"&gt;</code></td>
+<td><code>&lt;nav&gt;</code></td>
+</tr>
+<tr>
+<td><code>&lt;div class="main"&gt;</code></td>
+<td><code>&lt;main&gt;</code> or <code>&lt;article&gt;</code></td>
+</tr>
+<tr>
+<td><code>&lt;div class="footer"&gt;</code></td>
+<td><code>&lt;footer&gt;</code></td>
+</tr>
+</tbody></table>
+<p>The visual page is <strong>identical</strong> in both cases, but only the right-hand column is meaningful to <strong>browsers, screen readers, and search engines</strong>.</p>
+<div class="plantuml"><img src="https://www.plantuml.com/plantuml/svg/~1U5vrpJ4EWp0CXU4zft3fZ7g32dNfqaiun918iOs2KudRew8CT63wt_19RrWDYrNExhOKd1aXuwRLO6Ko57Ic2vY2LpDb2AdGQ4d5kTz0cJD1vpLi7U0A7kwVD4TxvKfd40a3bOF4Hjw5ICv6y7i0kGACIU01M2oDcGxBLtPIjNOu_HddeU-V45kbbLidDv24oda7DbLSBG"></div>
+<h3 class="atx" id="what-each-semantic-tag-says">What Each Semantic Tag Says</h3>
+<ul>
+<li><strong><code>&lt;header&gt;</code></strong> is the heading portion of a page and has a very specific meaning; so does <strong><code>&lt;footer&gt;</code></strong>.</li>
+<li><strong><code>&lt;nav&gt;</code></strong> is the navigation section: links to other pages, or links that jump to sections of the current page.</li>
+<li><strong><code>&lt;main&gt;</code> / <code>&lt;article&gt;</code></strong> hold the primary content.</li>
+<li><strong><code>&lt;aside&gt;</code></strong> holds content related to, but separate from, the main flow (like the Quick Reference sidebar in the demo).</li>
+</ul>
+<h3 class="atx" id="why-navigation-matters-usability">Why Navigation Matters: Usability</h3>
+<p>How a page renders is directly tied to how the <strong>user experiences</strong> it. Two objective measures are the <strong>number of clicks</strong> and the <strong>number of scrolls</strong> needed to get something done. A very long page that forces endless scrolling is poor design. A navigation bar at the top that jumps straight to a section reduces the effort and the latency to complete a task, so the page feels richer and more interactive.</p>
+<h3 class="atx" id="the-div-and-the-class-handle">The <code>div</code> and the Class Handle</h3>
+<p>A <code>&lt;div&gt;</code> is a generic HTML element that <strong>divides the page into segments</strong> (scopes). By itself it carries no meaning. To make it useful we give it a <code>class</code> attribute:</p>
+<pre><code class="fenced-code-block language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>header<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span> ... <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span></code></pre>
+<p>The class name is a <strong>handle</strong>. Later, a style sheet uses that handle to pick out this particular box and give it its own styling. If the header contains several elements, or the navigation bar has several parts, and each should look different, we need such handles to reach each one distinctly.</p>
+<blockquote>
+<p><strong>Note for Review</strong>
+Pro-Tip: This often appears on exams regarding <em>class versus id</em>. A <code>class</code> name can be shared by many elements (that is the point: "style all of these alike"), whereas an <code>id</code> must be <strong>unique</strong> within a page. Use classes to group, ids to single out. And whenever a semantic tag exists (<code>header</code>, <code>nav</code>, <code>main</code>, <code>footer</code>), prefer it over a <code>div</code> with a class of the same name.</p>
+</blockquote>
+<hr>
+<h2 class="atx" id="7-the-skeleton-every-page-shares">7. The Skeleton Every Page Shares</h2>
+<p>Every HTML document follows the same template:</p>
+<pre><code class="fenced-code-block language-html"><span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">html</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>en<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>utf-8<span class="token punctuation">"</span></span> <span class="token punctuation">/&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">&gt;</span></span>Share Your Travels -- New York - Central Park<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>css/main.css<span class="token punctuation">"</span></span> <span class="token punctuation">/&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>js/html5shiv.js<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span><span class="token punctuation">&gt;</span></span>Main heading goes here<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">&gt;</span></span>
+    ...
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">&gt;</span></span></code></pre>
+<table>
+<thead>
+<tr>
+<th>No.</th>
+<th>Part</th>
+<th>Role</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td><code>&lt;!DOCTYPE html&gt;</code></td>
+<td>Declares the document as HTML5; always the first line</td>
+</tr>
+<tr>
+<td>2</td>
+<td><code>&lt;html lang="en"&gt;</code></td>
+<td>The root element; the <code>lang</code> attribute states the language</td>
+</tr>
+<tr>
+<td>3</td>
+<td><code>&lt;head&gt;</code></td>
+<td>Information <em>about</em> the page (not shown as page content)</td>
+</tr>
+<tr>
+<td>4</td>
+<td><code>&lt;body&gt;</code></td>
+<td>The visible content of the page</td>
+</tr>
+<tr>
+<td>5</td>
+<td><code>&lt;meta charset="utf-8" /&gt;</code></td>
+<td>Standardises how text characters are represented</td>
+</tr>
+<tr>
+<td>6</td>
+<td><code>&lt;link rel="stylesheet" href="css/main.css" /&gt;</code></td>
+<td>Connects the page to its CSS file</td>
+</tr>
+<tr>
+<td>7</td>
+<td><code>&lt;script src="js/html5shiv.js"&gt;&lt;/script&gt;</code></td>
+<td>Loads a JavaScript file when the page loads</td>
+</tr>
+</tbody></table>
+<div class="plantuml"><img src="https://www.plantuml.com/plantuml/svg/~1U5vra35kmp0CHNUTWaqMTuW1jsapjGYwT6YFu8Mn24k8H1aIFVZsXQGKJj5auoSVFpvvJ89HPk_KmnHnz0WEbp0B94-2Z4h211BW54I21sqZ3M83AvKBvD4HR8nu1mvvV2FkkNbwt00cADtjjnsDVBYP_YmGwfwRvmj8g2_WPoJYQ_8KzD9piwzaLlV8d1S6Wp6HzDoyr8tItNuPFDjhMx7Yg02bka4uosT8iZXAXehZQtKiW_-EQOXsojYXObNV04q7RTl245Y8fNwg--LKUTfkzmw6KAyg7wvogypoKQig5wmovrjLZQ7Auufjfux4UlRk1xBQfpa"></div>
+<p>The important structural point: <code>head</code> and <code>body</code> are <strong>two distinct portions at the same level</strong>. Their common parent is <code>html</code>, so they are <strong>siblings</strong>, both children of <code>html</code>. Inside <code>head</code> we can have several things: the character set, the title, links to other resources (such as the stylesheet), and scripts. Because we want the page to be <strong>dynamic and interactive</strong>, a script can be loaded here so it executes when the file loads; JavaScript code can also be embedded directly in the page, which we will see later.</p>
+<blockquote>
+<p><strong>Note for Review</strong>
+Pro-Tip: This often appears on exams regarding <em>head vs body</em>. Remember that <code>&lt;head&gt;</code> holds <strong>metadata and resources</strong> (title, charset, stylesheet links, scripts) and <code>&lt;body&gt;</code> holds what the user <strong>sees</strong>. The page title appears in the browser tab, not on the page itself.</p>
+</blockquote>
+<hr>
+<h2 class="atx" id="8-headings-and-paragraphs">8. Headings and Paragraphs</h2>
+<p>Headings and paragraphs give text its <strong>outline</strong>.</p>
+<ul>
+<li><strong>Six heading levels</strong> exist: <code>&lt;h1&gt;</code> through <code>&lt;h6&gt;</code>. Use them <strong>in order</strong>, and resist skipping from <code>&lt;h2&gt;</code> straight to <code>&lt;h4&gt;</code> just to get a smaller font. (Try <code>&lt;h1&gt;</code> versus <code>&lt;h3&gt;</code> in your hands-on session and see how each looks.)</li>
+<li><strong><code>&lt;p&gt;</code></strong> marks a paragraph, used whenever you write free text. Browsers already add space above and below it automatically.</li>
+<li><strong>Extra spaces and line breaks</strong> in your source collapse to a single space once the browser renders the page.</li>
+<li><strong><code>&lt;strong&gt;</code> and <code>&lt;em&gt;</code></strong> signal real <strong>importance</strong> or <strong>emphasis</strong> to screen readers, not just bold or italic styling.</li>
+</ul>
+<p>Why the last point matters: browsers can carry their own settings for styling content, which is one reason the experience differs slightly between browsers, even though our goal is a consistent experience everywhere. So <code>&lt;strong&gt;</code> and <code>&lt;em&gt;</code> are not merely "make it bold" or "make it italic"; they tell the renderer <em>how to treat</em> that part of the text.</p>
+<table>
+<thead>
+<tr>
+<th>Tag</th>
+<th>Purpose</th>
+<th>Note</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code></td>
+<td>Heading levels</td>
+<td>Use in order; do not pick a level for its font size</td>
+</tr>
+<tr>
+<td><code>&lt;p&gt;</code></td>
+<td>Paragraph</td>
+<td>Spacing above and below is automatic</td>
+</tr>
+<tr>
+<td><code>&lt;strong&gt;</code></td>
+<td>Strong importance</td>
+<td>Usually displayed bold</td>
+</tr>
+<tr>
+<td><code>&lt;em&gt;</code></td>
+<td>Emphasis</td>
+<td>Usually displayed italic</td>
+</tr>
+<tr>
+<td><code>&lt;br&gt;</code></td>
+<td>Line break inside a paragraph</td>
+<td>New line without a new paragraph</td>
+</tr>
+<tr>
+<td><code>&lt;hr&gt;</code></td>
+<td>Horizontal rule</td>
+<td>A line separating ideas or sections</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p><strong>Note for Review</strong>
+Pro-Tip: This often appears on exams regarding <em>whitespace in HTML</em>. Remember that pressing Enter five times in your source file does <strong>not</strong> create five blank lines. To force a new line use <code>&lt;br&gt;</code>, and to get real separation between blocks use separate <code>&lt;p&gt;</code> elements (and, later, CSS margins).</p>
+</blockquote>
+<hr>
+<h2 class="atx" id="9-lists">9. Lists</h2>
+<p>Lists organise related items. There are three kinds.</p>
+<table>
+<thead>
+<tr>
+<th>Kind</th>
+<th>Tag</th>
+<th>Marker</th>
+<th>Use it for</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Unordered list</strong></td>
+<td><code>&lt;ul&gt;</code></td>
+<td>Bullets</td>
+<td>Items with no particular order</td>
+</tr>
+<tr>
+<td><strong>Ordered list</strong></td>
+<td><code>&lt;ol&gt;</code></td>
+<td>Numbers</td>
+<td>Sequential steps</td>
+</tr>
+<tr>
+<td><strong>Description list</strong></td>
+<td><code>&lt;dl&gt;</code></td>
+<td>Neither bullets nor numbers</td>
+<td>Term and definition pairs</td>
+</tr>
+</tbody></table>
+<p>Every item in <code>&lt;ul&gt;</code> and <code>&lt;ol&gt;</code> is written with <code>&lt;li&gt;</code>.</p>
+<h3 class="atx" id="unordered-list">Unordered List</h3>
+<pre><code class="fenced-code-block language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>index.html<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Home<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">&gt;</span></span>About Us<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">&gt;</span></span>Products<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">&gt;</span></span>Contact Us<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ul</span><span class="token punctuation">&gt;</span></span></code></pre>
+<p>Browsers show this as a bulleted list, with <em>Home</em> as a clickable link. Notice that a <strong>list item can contain other HTML elements</strong> (here, a link).</p>
+<h3 class="atx" id="ordered-list-with-a-nested-list">Ordered List, with a Nested List</h3>
+<pre><code class="fenced-code-block language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ol</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">&gt;</span></span>Introduction<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">&gt;</span></span>Background<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">&gt;</span></span>My Solution
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ol</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">&gt;</span></span>Methodology<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">&gt;</span></span>Results<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">&gt;</span></span>Discussion<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ol</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">&gt;</span></span>Conclusion<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ol</span><span class="token punctuation">&gt;</span></span></code></pre>
+<p>Rendered result: 1 Introduction, 2 Background, 3 My Solution (with sub-items 1 Methodology, 2 Results, 3 Discussion), 4 Conclusion. The inner list is <em>inside</em> the third <code>&lt;li&gt;</code>, which is why it appears indented under "My Solution" and does not disturb the outer numbering.</p>
+<h3 class="atx" id="description-list">Description List</h3>
+<p>A description list starts with <code>&lt;dl&gt;</code>. Each entry uses <strong><code>&lt;dt&gt;</code></strong> (description term, the first part) and <strong><code>&lt;dd&gt;</code></strong> (description details, the second part):</p>
+<pre><code class="fenced-code-block language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dl</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dt</span><span class="token punctuation">&gt;</span></span>Tag<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dt</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dd</span><span class="token punctuation">&gt;</span></span>A keyword in angle brackets, like p<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dd</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dt</span><span class="token punctuation">&gt;</span></span>Element<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dt</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dd</span><span class="token punctuation">&gt;</span></span>An opening tag, its content, and its closing tag together<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dd</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dl</span><span class="token punctuation">&gt;</span></span></code></pre>
+<p>It is still a list, but neither of the unordered nor the ordered type.</p>
+<blockquote>
+<p><strong>Note for Review</strong>
+Pro-Tip: This often appears on exams regarding <em>nested lists</em>. Remember that a nested <code>&lt;ul&gt;</code> or <code>&lt;ol&gt;</code> must be placed <strong>inside an <code>&lt;li&gt;</code></strong> of the parent list, not between two <code>&lt;li&gt;</code> elements. Otherwise you get an unintended empty item and broken numbering.</p>
+</blockquote>
+<hr>
+<h2 class="atx" id="10-links">10. Links</h2>
+<p>The <strong>anchor element</strong> <code>&lt;a&gt;</code> creates hyperlinks. It has a <strong>destination</strong> (the <code>href</code> attribute) and a <strong>label</strong> (its content), which can be text or an image.</p>
+<h3 class="atx" id="label-text-or-image">Label: Text or Image</h3>
+<pre><code class="fenced-code-block language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>http://www.centralpark.com<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Central Park<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>index.html<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>logo.gif<span class="token punctuation">"</span></span> <span class="token attr-name">alt</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>logo<span class="token punctuation">"</span></span> <span class="token punctuation">/&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span></code></pre>
+<ul>
+<li>In the first, the destination is the URL and the label is text.</li>
+<li>In the second, the label is an <strong>image</strong>. Clicking it takes you to <code>index.html</code>. This is the familiar pattern of clicking the logo at the top-left corner of an institute or company site to return to its home page.</li>
+</ul>
+<h3 class="atx" id="where-can-a-link-point">Where Can a Link Point?</h3>
+<table>
+<thead>
+<tr>
+<th>Target</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Another site (external)</td>
+<td><code>&lt;a href="http://www.centralpark.com"&gt;Central Park&lt;/a&gt;</code></td>
+</tr>
+<tr>
+<td>A <strong>resource</strong> on an external site</td>
+<td><code>&lt;a href="http://www.centralpark.com/logo.gif"&gt;Central Park&lt;/a&gt;</code></td>
+</tr>
+<tr>
+<td>Another page on the <strong>same site</strong></td>
+<td><code>&lt;a href="index.html"&gt;Home&lt;/a&gt;</code></td>
+</tr>
+<tr>
+<td>Another place on the <strong>same page</strong></td>
+<td><code>&lt;a href="#top"&gt;Go to Top of Document&lt;/a&gt;</code></td>
+</tr>
+<tr>
+<td>A specific place on <strong>another page</strong></td>
+<td><code>&lt;a href="productX.html#reviews"&gt;Reviews for product X&lt;/a&gt;</code></td>
+</tr>
+</tbody></table>
+<div class="plantuml"><img src="https://www.plantuml.com/plantuml/svg/~1U5vraB5gmq0GH7jznSHg78WBoNrm0Y65NOIuLRDOQ-dmtPwvtOFaxyCfTYn8qYp3y8OPTgD6oNBmrTqvqH08dZvZDcXW8w7Ayz5W4SaDew5tYG_cebHL4II3Pom8O-BZ0gGWrBj2FllCS-JbmpW9UQWpdaXkBkXhOfOv-yuQSpemedJ2luFjVy4dYJPomfa6VkX4AV2jJnlKsv5ERbwrBqZ1ErdMhh-Vbcdx1_dcQLe4-YxffCImBFUMNAFUam_bFuJLwX7SN4Lx4NfrzCTPLnkMFWV_1HYGWbi"></div>
+<h3 class="atx" id="reading-a-url-carefully">Reading a URL Carefully</h3>
+<p>In <code>http://www.centralpark.com/logo.gif</code> the parts are:</p>
+<ul>
+<li><code>www.centralpark.com</code> is the <strong>server address</strong> (resolved via DNS, from Module 1),</li>
+<li><code>/logo.gif</code> is the <strong>path</strong> of the particular resource on that server.</li>
+</ul>
+<p>So a link can point to the website itself, or to an <em>exact resource</em> on it, which the browser then fetches into your page.</p>
+<h3 class="atx" id="jumping-within-a-page">Jumping Within a Page</h3>
+<p>To jump to a spot on the same page you need <strong>two things</strong>:</p>
+<ol>
+<li>A <strong>destination marker</strong>: an element with an <code>id</code>, for example <code>&lt;a id="top"&gt;&lt;/a&gt;</code>, which defines the <strong>anchor</strong> for a link to another place on the same page.</li>
+<li>A <strong>link</strong> to it: <code>href="#top"</code>, where the hash <code>#</code> is followed by that id.</li>
+</ol>
+<p>Without a matching label (the <code>id</code>), the link has nowhere to go. To link to a section of <em>another</em> page, append the hash and id to the page name, as in <code>productX.html#reviews</code>. This is exactly how the navigation bar in the demo page jumps to sections. Get into the habit of reading the URLs you see while browsing: you will spot such <code>#</code> fragments and resource paths everywhere.</p>
+<blockquote>
+<p><strong>Note for Review</strong>
+Pro-Tip: This often appears on exams regarding <em>relative versus absolute links</em>. Remember that <code>index.html</code> (no domain) is resolved <strong>relative to the current page's location</strong>, while <code>http://www.centralpark.com/...</code> is a full, absolute address. A <code>#</code> fragment never triggers a fresh page fetch when it points within the current page; it only scrolls to the target.</p>
+</blockquote>
+<hr>
+<h2 class="atx" id="11-cheat-sheet">11. Cheat Sheet</h2>
+<table>
+<thead>
+<tr>
+<th>Idea</th>
+<th>Remember</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>HTML's job</td>
+<td>Structure and meaning (<strong>structural semantics</strong>)</td>
+</tr>
+<tr>
+<td>CSS's job</td>
+<td>Presentation: colour, font, size, look and feel</td>
+</tr>
+<tr>
+<td>Element</td>
+<td>Opening tag + content + closing tag</td>
+</tr>
+<tr>
+<td>Empty element</td>
+<td>No content, no closing tag (for example <code>&lt;img /&gt;</code>)</td>
+</tr>
+<tr>
+<td>Scope</td>
+<td>Everything between the opening and closing tag</td>
+</tr>
+<tr>
+<td>Tree vocabulary</td>
+<td>Parent, child, sibling, ancestor, descendant</td>
+</tr>
+<tr>
+<td>First line</td>
+<td><code>&lt;!DOCTYPE html&gt;</code></td>
+</tr>
+<tr>
+<td>Two children of <code>html</code></td>
+<td><code>head</code> (about the page) and <code>body</code> (the visible page)</td>
+</tr>
+<tr>
+<td>Semantic tags</td>
+<td><code>header</code>, <code>nav</code>, <code>main</code>, <code>article</code>, <code>aside</code>, <code>footer</code></td>
+</tr>
+<tr>
+<td>Headings</td>
+<td><code>h1</code> to <code>h6</code>, in order, never for font size alone</td>
+</tr>
+<tr>
+<td>Whitespace</td>
+<td>Collapses to one space when rendered</td>
+</tr>
+<tr>
+<td>Lists</td>
+<td><code>ul</code> (bullets), <code>ol</code> (numbers), <code>dl</code> with <code>dt</code> and <code>dd</code></td>
+</tr>
+<tr>
+<td>Links</td>
+<td><code>&lt;a href="..."&gt;label&lt;/a&gt;</code>; <code>#id</code> jumps to a place</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 class="atx" id="12-practice-questions">12. Practice Questions</h2>
+<p>Try to answer these in your own words before checking your understanding against the notes.</p>
+<ol>
+<li><p><strong>The invisible difference.</strong> Two developers build visually identical pages. One uses <code>&lt;div class="nav"&gt;</code>, <code>&lt;div class="main"&gt;</code> and <code>&lt;div class="footer"&gt;</code>; the other uses <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code> and <code>&lt;footer&gt;</code>. A visually impaired user browsing with a screen reader can jump straight to the main content on one page but not on the other. Which page is which, and what exactly is the reader using that the other page fails to provide? Would a search engine treat the two pages equally? Justify your answer using the idea of "meaning, not just boxes".</p>
+</li>
+<li><p><strong>Reading the tree.</strong> Given the fragment below, list the parent, children, siblings, ancestors and descendants of the <code>&lt;em&gt;</code> element. Then suppose a style is meant to apply only to text inside the <em>second</em> <code>&lt;section&gt;</code>. Explain how the tree structure lets you limit the reach of that style, and what would go wrong if the second <code>&lt;section&gt;</code> were accidentally moved one level up, outside <code>&lt;main&gt;</code>.</p>
+<pre><code class="fenced-code-block language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>main</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>section</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>One<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>section</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>section</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>Two <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>strong</span><span class="token punctuation">&gt;</span></span>three <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>em</span><span class="token punctuation">&gt;</span></span>four<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>em</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>strong</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>section</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>main</span><span class="token punctuation">&gt;</span></span></code></pre>
+</li>
+<li><p><strong>The broken menu.</strong> A student writes the following nested list and complains that the numbering shows 1, 2, 3, then an unexpected blank number, then the sub-items, then 5 for "Conclusion". Predict exactly what the browser displays, explain which rule of nesting was violated, and rewrite the code so that "Methodology" and "Results" appear indented beneath "My Solution".</p>
+<pre><code class="fenced-code-block language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ol</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">&gt;</span></span>Introduction<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">&gt;</span></span>Background<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">&gt;</span></span>My Solution<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ol</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">&gt;</span></span>Methodology<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">&gt;</span></span>Results<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ol</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">&gt;</span></span>Conclusion<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ol</span><span class="token punctuation">&gt;</span></span></code></pre>
+</li>
+<li><p><strong>The 400-line page.</strong> You are asked to build a single long tutorial page with 12 sections, plus a separate <code>glossary.html</code> page. Design the navigation so that (a) a reader can reach any section in one click from the top, (b) a reader on the glossary page can land directly on section 7 of the tutorial, and (c) every section has a "back to top" link. Write the <code>href</code> and <code>id</code> values you would use. Then explain what happens for the reader, and why, if one <code>id</code> is misspelled.</p>
+</li>
+<li><p><strong>Trading accessibility for looks.</strong> A designer wants smaller text in the middle of an article and does this: an <code>&lt;h1&gt;</code> for the title, then an <code>&lt;h4&gt;</code> for each subsection, uses <code>&lt;br&gt;&lt;br&gt;</code> between blocks of text in place of paragraphs, and writes important warnings in plain text made large. Identify at least three problems from the standpoint of structure and meaning, explain what each costs a screen reader user and a search engine, and propose the refactored structure. Which part of the fix belongs to HTML and which part must be delegated to CSS, and why?</p>
+</li>
+</ol>
+</article>
+</body>
+</html>

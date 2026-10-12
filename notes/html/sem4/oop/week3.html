@@ -1,0 +1,1672 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <style>
+  @font-face {
+  font-family: octicons-link;
+  src: url(data:font/woff;charset=utf-8;base64,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) format('woff');
+}
+
+.markdown-body .octicon {
+  display: inline-block;
+  fill: currentColor;
+  vertical-align: text-bottom;
+}
+
+.markdown-body .anchor {
+  float: left;
+  line-height: 1;
+  margin-left: -20px;
+  padding-right: 4px;
+}
+
+.markdown-body .anchor:focus {
+  outline: none;
+}
+
+.markdown-body h1 .octicon-link,
+.markdown-body h2 .octicon-link,
+.markdown-body h3 .octicon-link,
+.markdown-body h4 .octicon-link,
+.markdown-body h5 .octicon-link,
+.markdown-body h6 .octicon-link {
+  color: #1b1f23;
+  vertical-align: middle;
+  visibility: hidden;
+}
+
+.markdown-body h1:hover .anchor,
+.markdown-body h2:hover .anchor,
+.markdown-body h3:hover .anchor,
+.markdown-body h4:hover .anchor,
+.markdown-body h5:hover .anchor,
+.markdown-body h6:hover .anchor {
+  text-decoration: none;
+}
+
+.markdown-body h1:hover .anchor .octicon-link,
+.markdown-body h2:hover .anchor .octicon-link,
+.markdown-body h3:hover .anchor .octicon-link,
+.markdown-body h4:hover .anchor .octicon-link,
+.markdown-body h5:hover .anchor .octicon-link,
+.markdown-body h6:hover .anchor .octicon-link {
+  visibility: visible;
+}
+
+.markdown-body {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  color: #24292e;
+  line-height: 1.5;
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
+  font-size: 16px;
+  line-height: 1.5;
+  word-wrap: break-word;
+}
+
+.markdown-body .pl-c {
+  color: #6a737d;
+}
+
+.markdown-body .pl-c1,
+.markdown-body .pl-s .pl-v {
+  color: #005cc5;
+}
+
+.markdown-body .pl-e,
+.markdown-body .pl-en {
+  color: #6f42c1;
+}
+
+.markdown-body .pl-s .pl-s1,
+.markdown-body .pl-smi {
+  color: #24292e;
+}
+
+.markdown-body .pl-ent {
+  color: #22863a;
+}
+
+.markdown-body .pl-k {
+  color: #d73a49;
+}
+
+.markdown-body .pl-pds,
+.markdown-body .pl-s,
+.markdown-body .pl-s .pl-pse .pl-s1,
+.markdown-body .pl-sr,
+.markdown-body .pl-sr .pl-cce,
+.markdown-body .pl-sr .pl-sra,
+.markdown-body .pl-sr .pl-sre {
+  color: #032f62;
+}
+
+.markdown-body .pl-smw,
+.markdown-body .pl-v {
+  color: #e36209;
+}
+
+.markdown-body .pl-bu {
+  color: #b31d28;
+}
+
+.markdown-body .pl-ii {
+  background-color: #b31d28;
+  color: #fafbfc;
+}
+
+.markdown-body .pl-c2 {
+  background-color: #d73a49;
+  color: #fafbfc;
+}
+
+.markdown-body .pl-c2:before {
+  content: "^M";
+}
+
+.markdown-body .pl-sr .pl-cce {
+  color: #22863a;
+  font-weight: 700;
+}
+
+.markdown-body .pl-ml {
+  color: #735c0f;
+}
+
+.markdown-body .pl-mh,
+.markdown-body .pl-mh .pl-en,
+.markdown-body .pl-ms {
+  color: #005cc5;
+  font-weight: 700;
+}
+
+.markdown-body .pl-mi {
+  color: #24292e;
+  font-style: italic;
+}
+
+.markdown-body .pl-mb {
+  color: #24292e;
+  font-weight: 700;
+}
+
+.markdown-body .pl-md {
+  background-color: #ffeef0;
+  color: #b31d28;
+}
+
+.markdown-body .pl-mi1 {
+  background-color: #f0fff4;
+  color: #22863a;
+}
+
+.markdown-body .pl-mc {
+  background-color: #ffebda;
+  color: #e36209;
+}
+
+.markdown-body .pl-mi2 {
+  background-color: #005cc5;
+  color: #f6f8fa;
+}
+
+.markdown-body .pl-mdr {
+  color: #6f42c1;
+  font-weight: 700;
+}
+
+.markdown-body .pl-ba {
+  color: #586069;
+}
+
+.markdown-body .pl-sg {
+  color: #959da5;
+}
+
+.markdown-body .pl-corl {
+  color: #032f62;
+  text-decoration: underline;
+}
+
+.markdown-body details {
+  display: block;
+}
+
+.markdown-body summary {
+  display: list-item;
+}
+
+.markdown-body a {
+  background-color: transparent;
+}
+
+.markdown-body a:active,
+.markdown-body a:hover {
+  outline-width: 0;
+}
+
+.markdown-body strong {
+  font-weight: inherit;
+  font-weight: bolder;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+  margin: .67em 0;
+}
+
+.markdown-body img {
+  border-style: none;
+}
+
+.markdown-body code,
+.markdown-body kbd,
+.markdown-body pre {
+  font-family: monospace,monospace;
+  font-size: 1em;
+}
+
+.markdown-body hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+}
+
+.markdown-body input {
+  font: inherit;
+  margin: 0;
+}
+
+.markdown-body input {
+  overflow: visible;
+}
+
+.markdown-body [type=checkbox] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.markdown-body * {
+  box-sizing: border-box;
+}
+
+.markdown-body input {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.markdown-body a {
+  color: #0366d6;
+  text-decoration: none;
+}
+
+.markdown-body a:hover {
+  text-decoration: underline;
+}
+
+.markdown-body strong {
+  font-weight: 600;
+}
+
+.markdown-body hr {
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #dfe2e5;
+  height: 0;
+  margin: 15px 0;
+  overflow: hidden;
+}
+
+.markdown-body hr:before {
+  content: "";
+  display: table;
+}
+
+.markdown-body hr:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.markdown-body table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.markdown-body td,
+.markdown-body th {
+  padding: 0;
+}
+
+.markdown-body details summary {
+  cursor: pointer;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.markdown-body h1 {
+  font-size: 32px;
+}
+
+.markdown-body h1,
+.markdown-body h2 {
+  font-weight: 600;
+}
+
+.markdown-body h2 {
+  font-size: 24px;
+}
+
+.markdown-body h3 {
+  font-size: 20px;
+}
+
+.markdown-body h3,
+.markdown-body h4 {
+  font-weight: 600;
+}
+
+.markdown-body h4 {
+  font-size: 16px;
+}
+
+.markdown-body h5 {
+  font-size: 14px;
+}
+
+.markdown-body h5,
+.markdown-body h6 {
+  font-weight: 600;
+}
+
+.markdown-body h6 {
+  font-size: 12px;
+}
+
+.markdown-body p {
+  margin-bottom: 10px;
+  margin-top: 0;
+}
+
+.markdown-body blockquote {
+  margin: 0;
+}
+
+.markdown-body ol,
+.markdown-body ul {
+  margin-bottom: 0;
+  margin-top: 0;
+  padding-left: 0;
+}
+
+.markdown-body ol ol,
+.markdown-body ul ol {
+  list-style-type: lower-roman;
+}
+
+.markdown-body ol ol ol,
+.markdown-body ol ul ol,
+.markdown-body ul ol ol,
+.markdown-body ul ul ol {
+  list-style-type: lower-alpha;
+}
+
+.markdown-body dd {
+  margin-left: 0;
+}
+
+.markdown-body code,
+.markdown-body pre {
+  font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;
+  font-size: 12px;
+}
+
+.markdown-body pre {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.markdown-body input::-webkit-inner-spin-button,
+.markdown-body input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+.markdown-body .border {
+  border: 1px solid #e1e4e8!important;
+}
+
+.markdown-body .border-0 {
+  border: 0!important;
+}
+
+.markdown-body .border-bottom {
+  border-bottom: 1px solid #e1e4e8!important;
+}
+
+.markdown-body .rounded-1 {
+  border-radius: 3px!important;
+}
+
+.markdown-body .bg-white {
+  background-color: #fff!important;
+}
+
+.markdown-body .bg-gray-light {
+  background-color: #fafbfc!important;
+}
+
+.markdown-body .text-gray-light {
+  color: #6a737d!important;
+}
+
+.markdown-body .mb-0 {
+  margin-bottom: 0!important;
+}
+
+.markdown-body .my-2 {
+  margin-bottom: 8px!important;
+  margin-top: 8px!important;
+}
+
+.markdown-body .pl-0 {
+  padding-left: 0!important;
+}
+
+.markdown-body .py-0 {
+  padding-bottom: 0!important;
+  padding-top: 0!important;
+}
+
+.markdown-body .pl-1 {
+  padding-left: 4px!important;
+}
+
+.markdown-body .pl-2 {
+  padding-left: 8px!important;
+}
+
+.markdown-body .py-2 {
+  padding-bottom: 8px!important;
+  padding-top: 8px!important;
+}
+
+.markdown-body .pl-3,
+.markdown-body .px-3 {
+  padding-left: 16px!important;
+}
+
+.markdown-body .px-3 {
+  padding-right: 16px!important;
+}
+
+.markdown-body .pl-4 {
+  padding-left: 24px!important;
+}
+
+.markdown-body .pl-5 {
+  padding-left: 32px!important;
+}
+
+.markdown-body .pl-6 {
+  padding-left: 40px!important;
+}
+
+.markdown-body .f6 {
+  font-size: 12px!important;
+}
+
+.markdown-body .lh-condensed {
+  line-height: 1.25!important;
+}
+
+.markdown-body .text-bold {
+  font-weight: 600!important;
+}
+
+.markdown-body:before {
+  content: "";
+  display: table;
+}
+
+.markdown-body:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.markdown-body>:first-child {
+  margin-top: 0!important;
+}
+
+.markdown-body>:last-child {
+  margin-bottom: 0!important;
+}
+
+.markdown-body a:not([href]) {
+  color: inherit;
+  text-decoration: none;
+}
+
+.markdown-body blockquote,
+.markdown-body dl,
+.markdown-body ol,
+.markdown-body p,
+.markdown-body pre,
+.markdown-body table,
+.markdown-body ul {
+  margin-bottom: 16px;
+  margin-top: 0;
+}
+
+.markdown-body hr {
+  background-color: #e1e4e8;
+  border: 0;
+  height: .25em;
+  margin: 24px 0;
+  padding: 0;
+}
+
+.markdown-body blockquote {
+  border-left: .25em solid #dfe2e5;
+  color: #6a737d;
+  padding: 0 1em;
+}
+
+.markdown-body blockquote>:first-child {
+  margin-top: 0;
+}
+
+.markdown-body blockquote>:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body kbd {
+  background-color: #fafbfc;
+  border: 1px solid #c6cbd1;
+  border-bottom-color: #959da5;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #959da5;
+  color: #444d56;
+  display: inline-block;
+  font-size: 11px;
+  line-height: 10px;
+  padding: 3px 5px;
+  vertical-align: middle;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  font-weight: 600;
+  line-height: 1.25;
+  margin-bottom: 16px;
+  margin-top: 24px;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+}
+
+.markdown-body h1,
+.markdown-body h2 {
+  border-bottom: 1px solid #eaecef;
+  padding-bottom: .3em;
+}
+
+.markdown-body h2 {
+  font-size: 1.5em;
+}
+
+.markdown-body h3 {
+  font-size: 1.25em;
+}
+
+.markdown-body h4 {
+  font-size: 1em;
+}
+
+.markdown-body h5 {
+  font-size: .875em;
+}
+
+.markdown-body h6 {
+  color: #6a737d;
+  font-size: .85em;
+}
+
+.markdown-body ol,
+.markdown-body ul {
+  padding-left: 2em;
+}
+
+.markdown-body ol ol,
+.markdown-body ol ul,
+.markdown-body ul ol,
+.markdown-body ul ul {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.markdown-body li {
+  word-wrap: break-all;
+}
+
+.markdown-body li>p {
+  margin-top: 16px;
+}
+
+.markdown-body li+li {
+  margin-top: .25em;
+}
+
+.markdown-body dl {
+  padding: 0;
+}
+
+.markdown-body dl dt {
+  font-size: 1em;
+  font-style: italic;
+  font-weight: 600;
+  margin-top: 16px;
+  padding: 0;
+}
+
+.markdown-body dl dd {
+  margin-bottom: 16px;
+  padding: 0 16px;
+}
+
+.markdown-body table {
+  display: block;
+  overflow: auto;
+  width: 100%;
+}
+
+.markdown-body table th {
+  font-weight: 600;
+}
+
+.markdown-body table td,
+.markdown-body table th {
+  border: 1px solid #dfe2e5;
+  padding: 6px 13px;
+}
+
+.markdown-body table tr {
+  background-color: #fff;
+  border-top: 1px solid #c6cbd1;
+}
+
+.markdown-body table tr:nth-child(2n) {
+  background-color: #f6f8fa;
+}
+
+.markdown-body img {
+  background-color: #fff;
+  box-sizing: content-box;
+  max-width: 100%;
+}
+
+.markdown-body img[align=right] {
+  padding-left: 20px;
+}
+
+.markdown-body img[align=left] {
+  padding-right: 20px;
+}
+
+.markdown-body code {
+  background-color: rgba(27,31,35,.05);
+  border-radius: 3px;
+  font-size: 85%;
+  margin: 0;
+  padding: .2em .4em;
+}
+
+.markdown-body pre {
+  word-wrap: normal;
+}
+
+.markdown-body pre>code {
+  background: transparent;
+  border: 0;
+  font-size: 100%;
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  word-break: normal;
+}
+
+.markdown-body .highlight {
+  margin-bottom: 16px;
+}
+
+.markdown-body .highlight pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+
+.markdown-body .highlight pre,
+.markdown-body pre {
+  background-color: #f6f8fa;
+  border-radius: 3px;
+  font-size: 85%;
+  line-height: 1.45;
+  overflow: auto;
+  padding: 16px;
+}
+
+.markdown-body pre code {
+  background-color: transparent;
+  border: 0;
+  display: inline;
+  line-height: inherit;
+  margin: 0;
+  max-width: auto;
+  overflow: visible;
+  padding: 0;
+  word-wrap: normal;
+}
+
+.markdown-body .commit-tease-sha {
+  color: #444d56;
+  display: inline-block;
+  font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;
+  font-size: 90%;
+}
+
+.markdown-body .blob-wrapper {
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.markdown-body .blob-wrapper-embedded {
+  max-height: 240px;
+  overflow-y: auto;
+}
+
+.markdown-body .blob-num {
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  color: rgba(27,31,35,.3);
+  cursor: pointer;
+  font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;
+  font-size: 12px;
+  line-height: 20px;
+  min-width: 50px;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-align: right;
+  user-select: none;
+  vertical-align: top;
+  white-space: nowrap;
+  width: 1%;
+}
+
+.markdown-body .blob-num:hover {
+  color: rgba(27,31,35,.6);
+}
+
+.markdown-body .blob-num:before {
+  content: attr(data-line-number);
+}
+
+.markdown-body .blob-code {
+  line-height: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  position: relative;
+  vertical-align: top;
+}
+
+.markdown-body .blob-code-inner {
+  color: #24292e;
+  font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;
+  font-size: 12px;
+  overflow: visible;
+  white-space: pre;
+  word-wrap: normal;
+}
+
+.markdown-body .pl-token.active,
+.markdown-body .pl-token:hover {
+  background: #ffea7f;
+  cursor: pointer;
+}
+
+.markdown-body kbd {
+  background-color: #fafbfc;
+  border: 1px solid #d1d5da;
+  border-bottom-color: #c6cbd1;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #c6cbd1;
+  color: #444d56;
+  display: inline-block;
+  font: 11px SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;
+  line-height: 10px;
+  padding: 3px 5px;
+  vertical-align: middle;
+}
+
+.markdown-body :checked+.radio-label {
+  border-color: #0366d6;
+  position: relative;
+  z-index: 1;
+}
+
+.markdown-body .tab-size[data-tab-size="1"] {
+  -moz-tab-size: 1;
+  tab-size: 1;
+}
+
+.markdown-body .tab-size[data-tab-size="2"] {
+  -moz-tab-size: 2;
+  tab-size: 2;
+}
+
+.markdown-body .tab-size[data-tab-size="3"] {
+  -moz-tab-size: 3;
+  tab-size: 3;
+}
+
+.markdown-body .tab-size[data-tab-size="4"] {
+  -moz-tab-size: 4;
+  tab-size: 4;
+}
+
+.markdown-body .tab-size[data-tab-size="5"] {
+  -moz-tab-size: 5;
+  tab-size: 5;
+}
+
+.markdown-body .tab-size[data-tab-size="6"] {
+  -moz-tab-size: 6;
+  tab-size: 6;
+}
+
+.markdown-body .tab-size[data-tab-size="7"] {
+  -moz-tab-size: 7;
+  tab-size: 7;
+}
+
+.markdown-body .tab-size[data-tab-size="8"] {
+  -moz-tab-size: 8;
+  tab-size: 8;
+}
+
+.markdown-body .tab-size[data-tab-size="9"] {
+  -moz-tab-size: 9;
+  tab-size: 9;
+}
+
+.markdown-body .tab-size[data-tab-size="10"] {
+  -moz-tab-size: 10;
+  tab-size: 10;
+}
+
+.markdown-body .tab-size[data-tab-size="11"] {
+  -moz-tab-size: 11;
+  tab-size: 11;
+}
+
+.markdown-body .tab-size[data-tab-size="12"] {
+  -moz-tab-size: 12;
+  tab-size: 12;
+}
+
+.markdown-body .task-list-item {
+  list-style-type: none;
+}
+
+.markdown-body .task-list-item+.task-list-item {
+  margin-top: 3px;
+}
+
+.markdown-body .task-list-item input {
+  margin: 0 .2em .25em -1.6em;
+  vertical-align: middle;
+}
+
+.markdown-body hr {
+  border-bottom-color: #eee;
+}
+
+.markdown-body .pl-0 {
+  padding-left: 0!important;
+}
+
+.markdown-body .pl-1 {
+  padding-left: 4px!important;
+}
+
+.markdown-body .pl-2 {
+  padding-left: 8px!important;
+}
+
+.markdown-body .pl-3 {
+  padding-left: 16px!important;
+}
+
+.markdown-body .pl-4 {
+  padding-left: 24px!important;
+}
+
+.markdown-body .pl-5 {
+  padding-left: 32px!important;
+}
+
+.markdown-body .pl-6 {
+  padding-left: 40px!important;
+}
+
+.markdown-body .pl-7 {
+  padding-left: 48px!important;
+}
+
+.markdown-body .pl-8 {
+  padding-left: 64px!important;
+}
+
+.markdown-body .pl-9 {
+  padding-left: 80px!important;
+}
+
+.markdown-body .pl-10 {
+  padding-left: 96px!important;
+}
+
+.markdown-body .pl-11 {
+  padding-left: 112px!important;
+}
+
+.markdown-body .pl-12 {
+  padding-left: 128px!important;
+}
+
+/*# sourceURL=webpack://./node_modules/github-markdown-css/github-markdown.css */
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL25vZGVfbW9kdWxlcy9naXRodWItbWFya2Rvd24tY3NzL2dpdGh1Yi1tYXJrZG93bi5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSwwQkFBMEI7RUFDMUIsMkRBQXF0RTtBQUN2dEU7O0FBRUE7RUFDRSxxQkFBcUI7RUFDckIsa0JBQWtCO0VBQ2xCLDJCQUEyQjtBQUM3Qjs7QUFFQTtFQUNFLFdBQVc7RUFDWCxjQUFjO0VBQ2Qsa0JBQWtCO0VBQ2xCLGtCQUFrQjtBQUNwQjs7QUFFQTtFQUNFLGFBQWE7QUFDZjs7QUFFQTs7Ozs7O0VBTUUsY0FBYztFQUNkLHNCQUFzQjtFQUN0QixrQkFBa0I7QUFDcEI7O0FBRUE7Ozs7OztFQU1FLHFCQUFxQjtBQUN2Qjs7QUFFQTs7Ozs7O0VBTUUsbUJBQW1CO0FBQ3JCOztBQUVBO0VBQ0UsMEJBQTBCO0VBQzFCLDhCQUE4QjtFQUM5QixjQUFjO0VBQ2QsZ0JBQWdCO0VBQ2hCLGtJQUFrSTtFQUNsSSxlQUFlO0VBQ2YsZ0JBQWdCO0VBQ2hCLHFCQUFxQjtBQUN2Qjs7QUFFQTtFQUNFLGNBQWM7QUFDaEI7O0FBRUE7O0VBRUUsY0FBYztBQUNoQjs7QUFFQTs7RUFFRSxjQUFjO0FBQ2hCOztBQUVBOztFQUVFLGNBQWM7QUFDaEI7O0FBRUE7RUFDRSxjQUFjO0FBQ2hCOztBQUVBO0VBQ0UsY0FBYztBQUNoQjs7QUFFQTs7Ozs7OztFQU9FLGNBQWM7QUFDaEI7O0FBRUE7O0VBRUUsY0FBYztBQUNoQjs7QUFFQTtFQUNFLGNBQWM7QUFDaEI7O0FBRUE7RUFDRSx5QkFBeUI7RUFDekIsY0FBYztBQUNoQjs7QUFFQTtFQUNFLHlCQUF5QjtFQUN6QixjQUFjO0FBQ2hCOztBQUVBO0VBQ0UsYUFBYTtBQUNmOztBQUVBO0VBQ0UsY0FBYztFQUNkLGdCQUFnQjtBQUNsQjs7QUFFQTtFQUNFLGNBQWM7QUFDaEI7O0FBRUE7OztFQUdFLGNBQWM7RUFDZCxnQkFBZ0I7QUFDbEI7O0FBRUE7RUFD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 */
+  </style>
+  <style>
+  /**
+ * prism.js default theme for JavaScript, CSS and HTML
+ * Based on dabblet (http://dabblet.com)
+ * @author Lea Verou
+ */
+
+code[class*="language-"],
+pre[class*="language-"] {
+	color: black;
+	background: none;
+	text-shadow: 0 1px white;
+	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	font-size: 1em;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	line-height: 1.5;
+
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+}
+
+pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
+code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-selection {
+	text-shadow: none;
+	background: #b3d4fc;
+}
+
+pre[class*="language-"]::selection, pre[class*="language-"] ::selection,
+code[class*="language-"]::selection, code[class*="language-"] ::selection {
+	text-shadow: none;
+	background: #b3d4fc;
+}
+
+@media print {
+	code[class*="language-"],
+	pre[class*="language-"] {
+		text-shadow: none;
+	}
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+	padding: 1em;
+	margin: .5em 0;
+	overflow: auto;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+	background: #f5f2f0;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+	padding: .1em;
+	border-radius: .3em;
+	white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: slategray;
+}
+
+.token.punctuation {
+	color: #999;
+}
+
+.token.namespace {
+	opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+	color: #905;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+	color: #690;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+	color: #9a6e3a;
+	/* This background color was intended by the author of this theme. */
+	background: hsla(0, 0%, 100%, .5);
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+	color: #07a;
+}
+
+.token.function,
+.token.class-name {
+	color: #DD4A68;
+}
+
+.token.regex,
+.token.important,
+.token.variable {
+	color: #e90;
+}
+
+.token.important,
+.token.bold {
+	font-weight: bold;
+}
+.token.italic {
+	font-style: italic;
+}
+
+.token.entity {
+	cursor: help;
+}
+
+/*# sourceURL=webpack://./node_modules/prismjs/themes/prism.css */
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL25vZGVfbW9kdWxlcy9wcmlzbWpzL3RoZW1lcy9wcmlzbS5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7Ozs7RUFJRTs7QUFFRjs7Q0FFQyxZQUFZO0NBQ1osZ0JBQWdCO0NBQ2hCLHdCQUF3QjtDQUN4QixzRUFBc0U7Q0FDdEUsY0FBYztDQUNkLGdCQUFnQjtDQUNoQixnQkFBZ0I7Q0FDaEIsb0JBQW9CO0NBQ3BCLGtCQUFrQjtDQUNsQixpQkFBaUI7Q0FDakIsZ0JBQWdCOztDQUVoQixnQkFBZ0I7Q0FDaEIsY0FBYztDQUNkLFdBQVc7O0NBRVgscUJBQXFCO0NBQ3JCLGtCQUFrQjtDQUNsQixpQkFBaUI7Q0FDakIsYUFBYTtBQUNkOztBQUVBOztDQUVDLGlCQUFpQjtDQUNqQixtQkFBbUI7QUFDcEI7O0FBRUE7O0NBRUMsaUJBQWlCO0NBQ2pCLG1CQUFtQjtBQUNwQjs7QUFFQTtDQUNDOztFQUVDLGlCQUFpQjtDQUNsQjtBQUNEOztBQUVBLGdCQUFnQjtBQUNoQjtDQUNDLFlBQVk7Q0FDWixjQUFjO0NBQ2QsY0FBYztBQUNmOztBQUVBOztDQUVDLG1CQUFtQjtBQUNwQjs7QUFFQSxnQkFBZ0I7QUFDaEI7Q0FDQyxhQUFhO0NBQ2IsbUJBQW1CO0NBQ25CLG1CQUFtQjtBQUNwQjs7QUFFQTs7OztDQUlDLGdCQUFnQjtBQUNqQjs7QUFFQTtDQUNDLFdBQVc7QUFDWjs7QUFFQTtDQUNDLFdBQVc7QUFDWjs7QUFFQTs7Ozs7OztDQU9DLFdBQVc7QUFDWjs7QUFFQTs7Ozs7O0NBTUMsV0FBVztBQUNaOztBQUVBOzs7OztDQUtDLGNBQWM7Q0FDZCxvRUFBb0U7Q0FDcEUsaUNBQWlDO0FBQ2xDOztBQUVBOzs7Q0FHQyxXQUFXO0FBQ1o7O0FBRUE7O0NBRUMsY0FBYztBQUNmOztBQUVBOzs7Q0FHQyxXQUFXO0FBQ1o7O0FBRUE7O0NBRUMsaUJBQWlCO0FBQ2xCO0FBQ0E7Q0FDQyxrQkFBa0I7QUFDbkI7O0FBRUE7Q0FDQyxZQUFZO0FBQ2IiLCJzb3VyY2VSb290IjoiIn0= */
+  </style>
+  <style>
+  
+  </style>
+  <style>
+    .markdown-body {
+      font-family: -apple-system,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
+      box-sizing: border-box;
+      min-width: 200px;
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 45px;
+    }
+
+    @media not print {
+      .markdown-body {
+        padding: 45px;
+      }
+
+      @media (max-width: 767px) {
+        .markdown-body {
+          padding: 15px;
+        }
+      }
+    }
+
+    .hf-container {
+      color: #24292e;
+      line-height: 1.3;
+    }
+
+    .markdown-body .highlight pre,
+    .markdown-body pre {
+      white-space: pre-wrap;
+    }
+    .markdown-body table {
+      display: table;
+    }
+    .markdown-body img[data-align="center"] {
+      display: block;
+      margin: 0 auto;
+    }
+    .markdown-body img[data-align="right"] {
+      display: block;
+      margin: 0 0 0 auto;
+    }
+    .markdown-body li.task-list-item {
+      list-style-type: none;
+    }
+    .markdown-body li > [type=checkbox] {
+      margin: 0 0 0 -1.3em;
+    }
+    .markdown-body input[type="checkbox"] ~ p {
+      margin-top: 0;
+      display: inline-block;
+    }
+    .markdown-body ol ol,
+    .markdown-body ul ol {
+      list-style-type: decimal;
+    }
+    .markdown-body ol ol ol,
+    .markdown-body ol ul ol,
+    .markdown-body ul ol ol,
+    .markdown-body ul ul ol {
+      list-style-type: decimal;
+    }
+  </style>
+  <style>.markdown-body a.footnote-ref {
+  text-decoration: none;
+}
+
+.footnotes {
+  font-size: .85em;
+  opacity: .8;
+}
+
+.footnotes li[role="doc-endnote"] {
+  position: relative;
+}
+
+.footnotes .footnote-back {
+  position: absolute;
+  font-family: initial;
+  top: .2em;
+  right: 1em;
+  text-decoration: none;
+}
+
+.inline-math.invalid,
+.multiple-math.invalid {
+  color: rgb(255, 105, 105);
+}
+
+.toc-container {
+  width: 100%;
+}
+
+.toc-container .toc-title {
+  font-weight: 700;
+  font-size: 1.2em;
+  margin-bottom: 0;
+}
+
+.toc-container li,
+.toc-container ul,
+.toc-container ul li {
+  list-style: none !important;
+}
+
+.toc-container > ul {
+  padding-left: 0;
+}
+
+.toc-container ul li span {
+  display : flex;
+}
+
+.toc-container ul li span a {
+  color: inherit;
+  text-decoration: none;
+}
+.toc-container ul li span a:hover {
+  color: inherit;
+  text-decoration: none;
+}
+
+.toc-container ul li span span.dots {
+  flex: 1;
+  height: 0.65em;
+  margin: 0 10px;
+  border-bottom: 2px dotted black;
+}
+
+/*# sourceURL=webpack://./src/muya/lib/assets/styles/exportStyle.css */
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9tdXlhL2xpYi9hc3NldHMvc3R5bGVzL2V4cG9ydFN0eWxlLmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLHFCQUFxQjtBQUN2Qjs7QUFFQTtFQUNFLGdCQUFnQjtFQUNoQixXQUFXO0FBQ2I7O0FBRUE7RUFDRSxrQkFBa0I7QUFDcEI7O0FBRUE7RUFDRSxrQkFBa0I7RUFDbEIsb0JBQW9CO0VBQ3BCLFNBQVM7RUFDVCxVQUFVO0VBQ1YscUJBQXFCO0FBQ3ZCOztBQUVBOztFQUVFLHlCQUF5QjtBQUMzQjs7QUFFQTtFQUNFLFdBQVc7QUFDYjs7QUFFQTtFQUNFLGdCQUFnQjtFQUNoQixnQkFBZ0I7RUFDaEIsZ0JBQWdCO0FBQ2xCOztBQUVBOzs7RUFHRSwyQkFBMkI7QUFDN0I7O0FBRUE7RUFDRSxlQUFlO0FBQ2pCOztBQUVBO0VBQ0UsY0FBYztBQUNoQjs7QUFFQTtFQUNFLGNBQWM7RUFDZCxxQkFBcUI7QUFDdkI7QUFDQTtFQUNFLGNBQWM7RUFDZCxxQkFBcUI7QUFDdkI7O0FBRUE7RUFDRSxPQUFPO0VBQ1AsY0FBYztFQUNkLGNBQWM7RUFDZCwrQkFBK0I7QUFDakMiLCJzb3VyY2VSb290IjoiIn0= */</style>
+  <style>.markdown-body{}pre.front-matter{display:none!important;}</style>
+
+<style id="libron-font-injection">
+@font-face {
+  font-family: 'Libron';
+  src: url('../../../../Libron_Web/Libron-Regular.woff2') format('woff2'),
+       url('../../../../Libron_Web/Libron-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Libron';
+  src: url('../../../../Libron_Web/Libron-Bold.woff2') format('woff2'),
+       url('../../../../Libron_Web/Libron-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Libron';
+  src: url('../../../../Libron_Web/Libron-Italic.woff2') format('woff2'),
+       url('../../../../Libron_Web/Libron-Italic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Libron';
+  src: url('../../../../Libron_Web/Libron-BoldItalic.woff2') format('woff2'),
+       url('../../../../Libron_Web/Libron-BoldItalic.ttf') format('truetype');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+html, body, .markdown-body, h1, h2, h3, h4, h5, h6, p, span, li, a, td, th {
+  font-family: 'Libron', serif, -apple-system, BlinkMacSystemFont !important;
+}
+
+body {
+  padding: 1.5rem 2rem !important;
+  max-width: 900px !important;
+  margin: 0 auto !important;
+}
+
+/* Dark mode theme styles inside iframe */
+[data-theme="dark"] html,
+[data-theme="dark"] body,
+[data-theme="dark"] .markdown-body {
+  background-color: #0a0a0a !important;
+  color: #ededed !important;
+}
+[data-theme="dark"] .markdown-body table tr {
+  background-color: #121212 !important;
+  border-color: #262626 !important;
+}
+[data-theme="dark"] .markdown-body table tr:nth-child(2n) {
+  background-color: #181818 !important;
+}
+[data-theme="dark"] .markdown-body table th,
+[data-theme="dark"] .markdown-body table td {
+  border-color: #2e2e2e !important;
+}
+[data-theme="dark"] .markdown-body pre,
+[data-theme="dark"] .markdown-body code {
+  background-color: #141414 !important;
+  color: #f0f0f0 !important;
+  border-color: #2a2a2a !important;
+}
+[data-theme="dark"] .markdown-body blockquote {
+  color: #999999 !important;
+  border-left-color: #444444 !important;
+}
+[data-theme="dark"] .markdown-body a {
+  color: #58a6ff !important;
+}
+[data-theme="dark"] .markdown-body hr {
+  background-color: #262626 !important;
+}
+</style>
+
+</head>
+<body>
+  <article class="markdown-body"><h1 class="atx" id="object-oriented-programming--week-3">Object-Oriented Programming — Week 3</h1>
+<h3 class="atx" id="formatted-by-heisenberg-😎">Formatted by: Heisenberg 😎</h3>
+<hr>
+<h2 class="atx" id="index">Index</h2>
+<ul>
+<li><a href="#where-we-left-off">Where We Left Off</a> — a quick "previously on OOP" recap so nobody feels lost.</li>
+<li><a href="#the-real-world-problem-bicycle-tracking">The Real-World Problem: Bicycle Tracking</a> — because apparently every CS course needs a vehicle at some point.</li>
+<li><a href="#defining-and-using-a-class">Defining and Using a Class</a> — meet <code>Bicycle</code>, the class that owns nothing but an owner's name.</li>
+<li><a href="#the-sample-program-bicycleregistration">The Sample Program: BicycleRegistration</a> — two classes, one campus full of bikes.</li>
+<li><a href="#program-output-and-dependency-diagram">Program Output and Dependency Diagram</a> — who's calling whom, and who gets to say "I own a bicycle."</li>
+<li><a href="#defining-your-own-classes">Defining Your Own Classes</a> — the paperwork behind making a class official.</li>
+<li><a href="#the-bicycle-class-in-detail">The Bicycle Class in Detail</a> — constructor, getter, setter: the holy trinity of a simple class.</li>
+<li><a href="#data-member-declaration">Data Member Declaration</a> — naming your variables like a responsible adult.</li>
+<li><a href="#accessibility-visibility-modifiers">Accessibility (Visibility) Modifiers</a> — <code>private</code> vs <code>public</code>, or "who's allowed in the clubhouse."</li>
+<li><a href="#void-methods">Void Methods</a> — methods that do the work and ask for nothing in return.</li>
+<li><a href="#single-class-vs-multiple-classes">Single Class vs Multiple Classes</a> — the "main character" of your program.</li>
+<li><a href="#constructors-default-vs-parameterized">Constructors: Default vs Parameterized</a> — initializing objects with either nothing or something.</li>
+<li><a href="#practice-questions">Practice Questions</a> — five questions to make sure this actually stuck.</li>
+</ul>
+<hr>
+<h2 class="atx" id="where-we-left-off">Where We Left Off</h2>
+<p>This session continues directly from the previous class on object-oriented programming. So far, the course has covered the <strong>class hierarchy</strong> and the broad features that sit inside it: <strong>inheritance</strong>, <strong>overriding</strong>, <strong>polymorphism</strong>, and <strong>abstract classes</strong>. On the conceptual side, the course has already introduced <strong>objects</strong> and <strong>classes</strong> — distinguishing between <strong>predefined classes</strong> (the ones Java ships with) and <strong>user-defined classes</strong> (the ones we write ourselves) — along with the core pillars of OOP: inheritance, polymorphism, abstraction, and encapsulation.</p>
+<p>Until now, every example has used a <strong>single class</strong> containing its own data members and methods. This session's focus is the natural next step: what happens when a real program needs <strong>multiple classes</strong>, each with its own members and methods, working together.</p>
+<div class="plantuml"><img src="https://www.plantuml.com/plantuml/svg/~1U5vLZx5kmp0CH7Tz1Pkf7Op-GP2YwD2XQ9PkNIY9iMHGb27IW_y-i50NpgGxF1rvlAXXiwMmUveRZWM1SQsBWHOo57HCDmEhqFAO369k52nNSTkBCZB1wTjF5Em4g53zT2JlZAg_ydnj5EcMXIAymezI6_xiIqy5rcFgYopLg1qLidHadvAePKC9r7cM1tojl9RQvfIrT3vNNe_vDw_Mi9_GEVg7rHyISDQ5yVy3IN2k-Wc6uToB1jQkUxFTR3LstLVkPfk_wstKXIGkXU_lBt-h"></div>
+<blockquote>
+<p><strong>Note for Review:</strong> Every OOP topic from here on builds on three ingredients — <strong>object</strong>, <strong>class</strong>, and <strong>method</strong>. Whenever a new concept (inheritance, polymorphism, abstract classes) feels overwhelming, ground yourself by asking: "which of these three is changing here?"</p>
+</blockquote>
+<hr>
+<h2 class="atx" id="the-real-world-problem-bicycle-tracking">The Real-World Problem: Bicycle Tracking</h2>
+<p>Good class design should map to a <strong>real-life application</strong> — a program is only as useful as the problem it solves. The example chosen here is deliberately close to home: on a residential campus (like IIT Jodhpur), the most economical and efficient means of on-campus transportation is, without doubt, a bicycle, and students use bicycles constantly to get around.</p>
+<p><strong>Problem statement:</strong> design a program that <em>tracks</em> bicycles by assigning each one some form of <strong>identification number</strong>, along with relevant information such as the <strong>owner's name</strong> and <strong>phone number</strong>.</p>
+<p>To build this in Java, we need to design several different kinds of objects — not just one. A working application typically needs objects to handle:</p>
+<ul>
+<li><strong>Input</strong></li>
+<li><strong>Output</strong></li>
+<li><strong>Data storage</strong></li>
+<li>Other <strong>computational tasks</strong> (e.g., counting how many bicycles are parked in a given stand)</li>
+</ul>
+<p>Among all these necessary objects, this lecture focuses on designing <strong>one class that models a bicycle itself</strong>. There is no <code>Bicycle</code> class among Java's standard classes — it isn't predefined — so we must define it ourselves. A class we define ourselves (as opposed to one built into Java) is called a <strong>programmer-defined class</strong> (also referred to as a <strong>user-defined class</strong>).</p>
+<p>The analogy used in class: registering a bicycle is conceptually the same as registering a car or a bike with an RTO (Regional Transport Office) — you get an identification number, and that number is linked to an owner's name. This is exactly the relationship the two classes in this example will model.</p>
+<hr>
+<h2 class="atx" id="defining-and-using-a-class">Defining and Using a Class</h2>
+<p>We'll start with a very simple <code>Bicycle</code> class. Using this first version, we can only <strong>assign</strong> and <strong>retrieve</strong> the owner's name — nothing more. Before looking inside the <code>Bicycle</code> class itself, it helps to see how it's <em>used</em> in a program, since that usage pattern is the same for every class you'll ever write.</p>
+<div class="plantuml"><img src="https://www.plantuml.com/plantuml/svg/~1U5vjYp4EmZ0CHVUSmdH0PQ07O40LHs1cCSblY4XSP3j3Ru-wCJ0zFJszsPpLUwlXy57EZQdojdOdQt0M3XMBaw-a9R-SKb54Bwk4dIovWePRYLkik2CNS-KzFsHiN8HYPRFJG6oao7-cXupTeEU4fGZIx_0iRmH5fccwqYvqeQXWXz6Hki7234czrI-yM4NB"></div>
+<p>For this sample program, two classes are created:</p>
+<ul>
+<li><strong><code>BicycleRegistration</code></strong> — the <strong>main class</strong>, because it contains the <code>main</code> method.</li>
+<li><strong><code>Bicycle</code></strong> — a supporting class that does <strong>not</strong> contain <code>main</code>.</li>
+</ul>
+<p>Since Java conventionally uses one class definition per file, named after the class itself, this means two separate source files:</p>
+<ul>
+<li><code>BicycleRegistration.java</code></li>
+<li><code>Bicycle.java</code></li>
+</ul>
+<h3 class="atx" id="the-sample-program-bicycleregistration">The Sample Program: BicycleRegistration</h3>
+<pre><code class="fenced-code-block language-java"><span class="token keyword">class</span> <span class="token class-name">BicycleRegistration</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">Bicycle</span> bike1<span class="token punctuation">,</span> bike2<span class="token punctuation">;</span>
+        <span class="token class-name">String</span> owner1<span class="token punctuation">,</span> owner2<span class="token punctuation">;</span>
+
+        bike1 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Bicycle</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>   <span class="token comment">// Create and assign values to bike1</span>
+        bike1<span class="token punctuation">.</span><span class="token function">setOwnerName</span><span class="token punctuation">(</span><span class="token string">"Adam Smith"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        bike2 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Bicycle</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>   <span class="token comment">// Create and assign values to bike2</span>
+        bike2<span class="token punctuation">.</span><span class="token function">setOwnerName</span><span class="token punctuation">(</span><span class="token string">"Ben Jones"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token comment">// Output the information</span>
+        owner1 <span class="token operator">=</span> bike1<span class="token punctuation">.</span><span class="token function">getOwnerName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        owner2 <span class="token operator">=</span> bike2<span class="token punctuation">.</span><span class="token function">getOwnerName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>owner1 <span class="token operator">+</span> <span class="token string">" owns a bicycle."</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>owner2 <span class="token operator">+</span> <span class="token string">" also owns a bicycle."</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<p>Walking through what happens here, framed as a registration process (just like registering a real bike or car and getting a number plate):</p>
+<ol>
+<li>Two <code>Bicycle</code>-type variables (<code>bike1</code>, <code>bike2</code>) and two <code>String</code> variables (<code>owner1</code>, <code>owner2</code>) are declared.</li>
+<li><code>bike1 = new Bicycle();</code> <strong>creates a new object</strong> belonging to the <code>Bicycle</code> class — in OOP, before you can do anything with a class, you must instantiate an <strong>object</strong> from it.</li>
+<li><code>bike1.setOwnerName("Adam Smith");</code> assigns an owner's name to that specific bicycle object — this is the "registration" step, analogous to linking a person's name to a specific vehicle number.</li>
+<li>The same two steps repeat for <code>bike2</code>, registered to "Ben Jones."</li>
+<li><code>getOwnerName()</code> is then used to <strong>retrieve</strong> each owner's name back out of the object and store it in a <code>String</code> variable, so it can be displayed.</li>
+<li>Finally, <code>System.out.println</code> displays which person owns which bicycle.</li>
+</ol>
+<p>This is the essential registration pattern: create an object → set its data → get its data back out → display it.</p>
+<h3 class="atx" id="the-bicycle-class-definition">The <code>Bicycle</code> Class Definition</h3>
+<pre><code class="fenced-code-block language-java"><span class="token keyword">class</span> <span class="token class-name">Bicycle</span> <span class="token punctuation">{</span>
+    <span class="token comment">// Data Member</span>
+    <span class="token keyword">private</span> <span class="token class-name">String</span> ownerName<span class="token punctuation">;</span>
+
+    <span class="token comment">// Constructor: Initializes the data member</span>
+    <span class="token keyword">public</span> <span class="token class-name">Bicycle</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        ownerName <span class="token operator">=</span> <span class="token string">"Unknown"</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">// Returns the name of this bicycle's owner</span>
+    <span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">getOwnerName</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> ownerName<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">// Assigns the name of this bicycle's owner</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">setOwnerName</span><span class="token punctuation">(</span><span class="token class-name">String</span> name<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        ownerName <span class="token operator">=</span> name<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<p>Here, <code>Bicycle()</code> — a special function sharing the exact same name as the class — is the <strong>constructor</strong>. This particular constructor takes <strong>no arguments</strong>, and its only job is to initialize the data member <code>ownerName</code> to <code>"Unknown"</code> whenever no name has been given yet.</p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>Bicycle</code></td>
+<td>None</td>
+<td>Initializes the owner's name to <code>Unknown</code>.</td>
+</tr>
+<tr>
+<td><code>getOwnerName</code></td>
+<td>None</td>
+<td>Returns the owner's name.</td>
+</tr>
+<tr>
+<td><code>setOwnerName</code></td>
+<td>Name of the owner (string)</td>
+<td>Assigns the bicycle owner's name to the passed value.</td>
+</tr>
+</tbody></table>
+<p><em>Table: The three methods of the <code>Bicycle</code> class. The first method listed is the constructor.</em></p>
+<hr>
+<h2 class="atx" id="program-output-and-dependency-diagram">Program Output and Dependency Diagram</h2>
+<p>The relationship between the two classes can be visualized as a simple dependency: <code>BicycleRegistration</code> depends on <code>Bicycle</code> (it creates and uses <code>Bicycle</code> objects), but <code>Bicycle</code> does not need to know anything about <code>BicycleRegistration</code>.</p>
+<div class="plantuml"><img src="https://www.plantuml.com/plantuml/svg/~1U5vjYi4DmZ0CHU-Pmkq07G5LZC069lqO2oT1ZdFezgZqsjFJqtjh3_OOnTBqTPR2PBot4TGBWYidmoie6hdAEsXJHmvjDHtaAWQQxvhtR7X0j8VpaMVYJWwvsFxfgHyaXz2ot4vPKRTHx0Vio3D2"></div>
+<p>Conceptually: every bicycle must first be "registered" through <code>BicycleRegistration</code> (the class holding <code>main</code>), and it is <code>BicycleRegistration</code> that calls into the <code>Bicycle</code> class to <code>set</code> and <code>get</code> values.</p>
+<p>When the program runs, it produces the following output on the standard output window:</p>
+<pre><code class="fenced-code-block">Adam Smith owns a bicycle.
+Ben Jones also owns a bicycle.</code></pre>
+<p>Both output lines come from the same underlying pattern: a name was <strong>set</strong> via <code>setOwnerName()</code> (defined in the <code>Bicycle</code> class) and then <strong>retrieved</strong> via <code>getOwnerName()</code> — the method that returns the value stored in that object.</p>
+<p><strong>Multiple objects, one class:</strong> Note that two separate <code>Bicycle</code> objects (<code>bike1</code> and <code>bike2</code>) were created from the <em>same</em> <code>Bicycle</code> class — this is exactly the point of a class: it's a reusable blueprint, and you can create as many bicycles (objects) from it as your campus actually has.</p>
+<h3 class="atx" id="memory-state-after-object-creation">Memory State After Object Creation</h3>
+<p>Each object created from a class gets its <strong>own independent copy</strong> of the class's instance variables. After both bicycles are created and assigned their names, the memory looks like this:</p>
+<div class="plantuml"><img src="https://www.plantuml.com/plantuml/svg/~1U5wDph4EWa0C1k3zdgBUpW2ZYGOP7LnSMNfGuFIkP-vA36zlE3GnJavD-xTVMYV1ABDtQlU8E7e4XqkO1P8dGKRbQ12G0D6Eaq1l8tLY0wkr8e-EG1jxfr839Z1bfE4xsZUsMpf7BOSdKxoW9pX0gqyzUhXwArEhtvV1t7xHQekgFz666Cw1ANtCQZLLVWgAuWYcN0VPs_gyK1FtitSlEBPP80"></div>
+<p><code>bike1</code> and <code>bike2</code> are reference variables pointing to two <strong>separate</strong> <code>Bicycle</code> objects in memory, each carrying its own value of <code>ownerName</code>. This is exactly what makes <code>ownerName</code> an <strong>instance variable</strong>: it's a data member associated with an individual instance, and its value can change independently from object to object over time. (Class-level variables shared across <em>all</em> instances — as opposed to instance variables — will be covered later in the course.)</p>
+<hr>
+<h2 class="atx" id="defining-your-own-classes">Defining Your Own Classes</h2>
+<p>Structurally, using a programmer-defined class like <code>Bicycle</code> looks exactly the same as using any standard Java class — that's the whole point of OOP: once defined, a class behaves like a first-class citizen of the language.</p>
+<ul>
+<li><p>Create an object: <code>bike2 = new Bicycle();</code></p>
+</li>
+<li><p>Call a method to store data: <code>bike2.setOwnerName("Ben Jones");</code></p>
+</li>
+<li><p>Call a method to retrieve data: <code>bike2.getOwnerName();</code></p>
+</li>
+<li><p>Store the returned value: </p>
+<pre><code class="fenced-code-block language-java"><span class="token class-name">String</span> owner2<span class="token punctuation">;</span>
+<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+owner2 <span class="token operator">=</span> bike2<span class="token punctuation">.</span><span class="token function">getOwnerName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+</li>
+</ul>
+<p>By convention (not a strict requirement), Java saves <strong>one class definition per file</strong>, and the file is named after the class with a <code>.java</code> suffix — hence <code>Bicycle.java</code> for the <code>Bicycle</code> class.</p>
+<h3 class="atx" id="general-template-for-a-class">General Template for a Class</h3>
+<pre><code class="fenced-code-block language-java"><span class="token keyword">class</span> <span class="token class-name">Bicycle</span> <span class="token punctuation">{</span>
+    <span class="token comment">// data members</span>
+
+    <span class="token comment">// methods</span>
+<span class="token punctuation">}</span></code></pre>
+<h3 class="atx" id="the-bicycle-class-in-detail">The <code>Bicycle</code> Class in Detail</h3>
+<p>Before writing method definitions, we must decide the <strong>data members</strong> — the data values associated with the class or its instances (compare: the current balance of an <code>Account</code> object). For <code>Bicycle</code>, we only need to track one thing per object: the <strong>owner's name</strong>. Data members are declared inside the class declaration:</p>
+<pre><code class="fenced-code-block language-java"><span class="token keyword">class</span> <span class="token class-name">Bicycle</span> <span class="token punctuation">{</span>
+    <span class="token keyword">private</span> <span class="token class-name">String</span> ownerName<span class="token punctuation">;</span>
+
+    <span class="token comment">// definitions for the constructor,</span>
+    <span class="token comment">// getOwnerName, and setOwnerName methods come here</span>
+<span class="token punctuation">}</span></code></pre>
+<p><code>ownerName</code> here is an <strong>instance variable</strong>: every object created from the class gets its own independent copy of it, and that value can change over the object's lifetime (as opposed to class constants or class variables, covered in a later chapter).</p>
+<hr>
+<h2 class="atx" id="data-member-declaration">Data Member Declaration</h2>
+<p>The general syntax for declaring a data member is:</p>
+<pre><code class="fenced-code-block">&lt;modifier-list&gt; &lt;data type&gt; &lt;name&gt;;</code></pre>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>&lt;modifier-list&gt;</code></td>
+<td>Designates different characteristics of the data member (e.g., accessibility)</td>
+</tr>
+<tr>
+<td><code>&lt;data type&gt;</code></td>
+<td>A class name or a primitive data type</td>
+</tr>
+<tr>
+<td><code>&lt;name&gt;</code></td>
+<td>The name of the data member</td>
+</tr>
+</tbody></table>
+<p>Applied to our example:</p>
+<div class="plantuml"><img src="https://www.plantuml.com/plantuml/svg/~1U5vLop4EmZ0C1T0zfp3TUm8ar1EmC2862viqKkn4ZWFgxL73KXP_wR_lfJcQTydXL0sZ86JSIdTemewA8VFBmGjOYgi39UEdfw9XJzIO6QPgwOtE4s03ANIacrlIECItoaSg7sMxeZ2SXoiA1oa4ytrDHAoF-V9xsizVEwOBAtN9NqhfG_y"></div>
+<pre><code class="fenced-code-block language-java"><span class="token keyword">private</span> <span class="token class-name">String</span> ownerName<span class="token punctuation">;</span></code></pre>
+<p>Here, <code>private</code> is the <strong>modifier</strong>, <code>String</code> is the <strong>data type</strong>, and <code>ownerName</code> is the <strong>name</strong>.</p>
+<hr>
+<h2 class="atx" id="accessibility-visibility-modifiers">Accessibility (Visibility) Modifiers</h2>
+<p>The modifier <code>private</code> used above is an example of an <strong>accessibility modifier</strong> (also called a <strong>visibility modifier</strong>). It restricts <em>who</em> can directly access a data member.</p>
+<ul>
+<li><strong><code>private</code></strong> — only the methods <strong>defined inside that same class</strong> can access the member directly. No outside class or program can touch it.</li>
+<li><strong><code>public</code></strong> — accessible from <strong>anywhere</strong>, including programs and classes outside the one that defines it.</li>
+</ul>
+<p>As a rule of thumb followed throughout this course: <strong>data members are almost always declared <code>private</code></strong>, to keep an object's internal state protected from direct outside interference — this is the essence of <strong>encapsulation</strong>.</p>
+<p>Recall the <code>setOwnerName</code> method:</p>
+<pre><code class="fenced-code-block language-java"><span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">setOwnerName</span><span class="token punctuation">(</span><span class="token class-name">String</span> name<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    ownerName <span class="token operator">=</span> name<span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<p>The general syntax for defining <em>any</em> method is:</p>
+<pre><code class="fenced-code-block">&lt;modifiers&gt; &lt;return type&gt; &lt;method name&gt; ( &lt;parameters&gt; ) {
+    &lt;statements&gt;
+}</code></pre>
+<p>Mapped onto <code>setOwnerName</code>:</p>
+<table>
+<thead>
+<tr>
+<th>Syntax component</th>
+<th>Value in this method</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Modifier</td>
+<td><code>public</code></td>
+</tr>
+<tr>
+<td>Return type</td>
+<td><code>void</code></td>
+</tr>
+<tr>
+<td>Method name</td>
+<td><code>setOwnerName</code></td>
+</tr>
+<tr>
+<td>Parameter</td>
+<td><code>String name</code></td>
+</tr>
+<tr>
+<td>Statement</td>
+<td><code>ownerName = name;</code></td>
+</tr>
+</tbody></table>
+<p>Inside the body, <code>ownerName</code> refers to the <strong>instance variable</strong>, while <code>name</code> refers to the <strong>parameter</strong> passed in. Keeping this distinction clear — instance variable vs. parameter — is exactly why the naming convention (different names, or use of <code>this.ownerName</code>) matters.</p>
+<blockquote>
+<p><strong>Pro-Tip:</strong> This distinction between "the class's own variable" and "the parameter with a similar name" is a classic exam trap. When you see <code>ownerName = name;</code> inside <code>setOwnerName(String name)</code>, remember: the left-hand side is the object's permanent state; the right-hand side is a temporary value handed in by whoever called the method.</p>
+</blockquote>
+<hr>
+<h2 class="atx" id="void-methods">Void Methods</h2>
+<p>A method may or may not return a value. A method that does <strong>not</strong> return anything — like <code>setOwnerName</code> — is declared with the return type <code>void</code>, and is called a <strong>void method</strong>. Its entire job is to <em>do</em> something (here, update the internal state), not to hand back a result.</p>
+<pre><code class="fenced-code-block language-java"><span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">setOwnerName</span><span class="token punctuation">(</span><span class="token class-name">String</span> name<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    ownerName <span class="token operator">=</span> name<span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<p>The accessibility modifier for <code>setOwnerName</code> is <code>public</code>, meaning any program using the <code>Bicycle</code> class can call it directly. Methods <em>can</em> also be declared <code>private</code> — a private method cannot be called from outside the class at all; it can only be called by <strong>other methods within the same class</strong>. This lecture deliberately limits itself to <code>public</code> methods for now, since we specifically want external programs (like <code>BicycleRegistration</code>) to be able to call them; private methods will be covered later in the course.</p>
+<h3 class="atx" id="contrast-a-method-that-does-return-a-value">Contrast: A Method That <em>Does</em> Return a Value</h3>
+<pre><code class="fenced-code-block language-java"><span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">getOwnerName</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> ownerName<span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<table>
+<thead>
+<tr>
+<th>Syntax component</th>
+<th>Value in this method</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Modifier</td>
+<td><code>public</code></td>
+</tr>
+<tr>
+<td>Return type</td>
+<td><code>String</code></td>
+</tr>
+<tr>
+<td>Method name</td>
+<td><code>getOwnerName</code></td>
+</tr>
+<tr>
+<td>Parameters</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Statement</td>
+<td><code>return ownerName;</code></td>
+</tr>
+</tbody></table>
+<p>Here, <code>ownerName</code> inside the method body again refers to the instance variable, and the method sends that value back out to whoever called it (<code>return ownerName;</code>) — the opposite job of a void method.</p>
+<hr>
+<h2 class="atx" id="single-class-vs-multiple-classes">Single Class vs Multiple Classes</h2>
+<p>Up to this point in the course, only <strong>single-class</strong> programs had been written. This lecture's core shift is to <strong>multiple classes</strong>, where:</p>
+<ul>
+<li>A program may be split across several class files, but</li>
+<li><strong>Only one class contains the <code>main</code> method</strong> — this is the class from which the program actually starts executing, and it is informally called the <strong>main class</strong>.</li>
+<li>Every other class does <em>not</em> contain <code>main</code>; it exists to be <strong>used</strong> by the main class (or by other classes) — objects and values are created from it, retrieved from it, and passed around, but execution doesn't <em>start</em> there.</li>
+</ul>
+<p>In this example:</p>
+<ul>
+<li><code>BicycleRegistration</code> → contains <code>main</code> → <strong>the main class</strong>.</li>
+<li><code>Bicycle</code> → does not contain <code>main</code> → a supporting, user-defined class used by the main class.</li>
+</ul>
+<div class="plantuml"><img src="https://www.plantuml.com/plantuml/svg/~1U5vjZBiEmZ0CHVTyXIbBaQZO6L35miB4tCMa9WGvJXKxG_yUbOV4m7IlT7HEhuR5QcAtcWg6XC0uvsgWYGm57TFDm3AK6Eu6OopaBMPnow849cYEqS-UwK8XgXLSy22jps8OHI5Xb4q3-7wmFY-b8rVwqnYabVnZQ9scNEmZdGgHk5UbwmxmXNlmXT188LyVv4stWtXaLb2oNI1pFSbO4py15E5LI0"></div>
+<p>Every object-oriented program, regardless of size, is ultimately built from the same three ingredients: <strong>objects</strong>, <strong>classes</strong>, and <strong>methods</strong>.</p>
+<hr>
+<h2 class="atx" id="constructors-default-vs-parameterized">Constructors: Default vs Parameterized</h2>
+<p>For initializing an object's data when it's first created, Java uses <strong>constructors</strong> — a special method sharing the class's exact name, with no return type at all (not even <code>void</code>).</p>
+<p>Two flavors were introduced:</p>
+<ul>
+<li><strong>Default constructor</strong> — takes <strong>no arguments</strong>. Used when there's no specific starting value to assign, so the data member is initialized to a placeholder like <code>"Unknown"</code>. This is exactly what <code>Bicycle()</code> does in this example.</li>
+<li><strong>Parameterized constructor</strong> — takes one or more <strong>arguments</strong>, and uses those passed-in values to initialize the data member(s) directly at creation time, instead of relying on a separate <code>set</code> call afterward.</li>
+</ul>
+<div class="plantuml"><img src="https://www.plantuml.com/plantuml/svg/~1U5vrpRrk0Z4G1E3UJx4XpL4SZu1E42aD1LBQQrRsOApOwzDwNP2dH_mKrwIQOZJVJCrOhPViFXRbM9WotsetQWN6mYxZOcILDCMhKKWARwcAUoHBpA3DiKepxTwgReWR-NNvXGltRBCCKearzWAnjfq5kxYZG_8tdp5idyD0dwV7pI5th8qpAnSODFqXp38O_wBzZ_sO9eaaNF1obxVxhO0uvsaSznJUkRW94dh9TmhvN4C"></div>
+<p>This distinction — default vs. parameterized construction — becomes especially relevant later when the course covers <strong>method overriding</strong> and <strong>dynamic method dispatch</strong>, both of which rely on a solid understanding of how objects are constructed and initialized across multiple, related classes.</p>
+<hr>
+<h2 class="atx" id="practice-questions">Practice Questions</h2>
+<ol>
+<li><p>In the <code>Bicycle</code> class, <code>ownerName</code> is declared <code>private</code>, but <code>getOwnerName()</code> and <code>setOwnerName()</code> are declared <code>public</code>. If you changed <code>ownerName</code> itself to <code>public</code> and deleted both the getter and setter, would the program in <code>BicycleRegistration</code> still behave identically? What would you lose by making that change, even if the output stayed the same?</p>
+</li>
+<li><p>Suppose <code>BicycleRegistration</code> tried to call <code>bike1.ownerName = "Adam Smith";</code> directly instead of using <code>setOwnerName("Adam Smith")</code>. Under the current class design, would this compile? Explain <em>why</em> the accessibility modifier is the deciding factor here, not the fact that a value is simply being assigned.</p>
+</li>
+<li><p>The default constructor <code>Bicycle()</code> initializes <code>ownerName</code> to <code>"Unknown"</code>. Design (in words or code) a <strong>parameterized constructor</strong> <code>Bicycle(String name)</code> that initializes <code>ownerName</code> directly from an argument. Then explain: once you add this parameterized constructor, does the original no-argument <code>new Bicycle()</code> call in <code>BicycleRegistration</code> still work without any other change? Why or why not?</p>
+</li>
+<li><p><code>BicycleRegistration</code> is the "main class" because it contains <code>main</code>, while <code>Bicycle</code> is not. If a school wanted to track not just bicycles but also <em>scooters</em> and <em>skateboards</em> on campus, would you add a <code>main</code> method to each new vehicle class, or keep a single main class? Justify your answer in terms of how many entry points a Java program is allowed to actually use when it runs.</p>
+</li>
+<li><p>Two objects, <code>bike1</code> and <code>bike2</code>, are created from the same <code>Bicycle</code> class and each stores a different <code>ownerName</code>. If you wrote <code>bike2 = bike1;</code> right after both objects were set up (instead of creating <code>bike2</code> with <code>new Bicycle()</code>), what would happen to <code>bike2</code>'s original owner data, and how many <em>distinct</em> <code>Bicycle</code> objects would actually exist in memory afterward? Use the earlier memory-state diagram of <code>bike1</code>/<code>bike2</code> as reference for your reasoning.</p>
+</li>
+</ol>
+<hr>
+<h2 class="atx" id="references">References</h2>
+<ol>
+<li><em>A Comprehensive Introduction to Object-Oriented Programming With Java</em> by C. Thomas Wu — ISBN-13: 978-0071285858</li>
+<li><em>Java: The Complete Reference</em>, 13th Edition, by Herbert Schildt — ISBN-13: 978-9355326478</li>
+</ol>
+</article>
+</body>
+</html>

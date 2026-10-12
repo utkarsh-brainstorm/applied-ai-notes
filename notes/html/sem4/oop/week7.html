@@ -1,0 +1,1374 @@
+
+<style id="libron-font-injection">
+@font-face {
+  font-family: 'Libron';
+  src: url('../../../../Libron_Web/Libron-Regular.woff2') format('woff2'),
+       url('../../../../Libron_Web/Libron-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Libron';
+  src: url('../../../../Libron_Web/Libron-Bold.woff2') format('woff2'),
+       url('../../../../Libron_Web/Libron-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Libron';
+  src: url('../../../../Libron_Web/Libron-Italic.woff2') format('woff2'),
+       url('../../../../Libron_Web/Libron-Italic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Libron';
+  src: url('../../../../Libron_Web/Libron-BoldItalic.woff2') format('woff2'),
+       url('../../../../Libron_Web/Libron-BoldItalic.ttf') format('truetype');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+html, body, .markdown-body, h1, h2, h3, h4, h5, h6, p, span, li, a, td, th {
+  font-family: 'Libron', serif, -apple-system, BlinkMacSystemFont !important;
+}
+
+body {
+  padding: 1.5rem 2rem !important;
+  max-width: 900px !important;
+  margin: 0 auto !important;
+}
+
+/* Dark mode theme styles inside iframe */
+[data-theme="dark"] html,
+[data-theme="dark"] body,
+[data-theme="dark"] .markdown-body {
+  background-color: #0a0a0a !important;
+  color: #ededed !important;
+}
+[data-theme="dark"] .markdown-body table tr {
+  background-color: #121212 !important;
+  border-color: #262626 !important;
+}
+[data-theme="dark"] .markdown-body table tr:nth-child(2n) {
+  background-color: #181818 !important;
+}
+[data-theme="dark"] .markdown-body table th,
+[data-theme="dark"] .markdown-body table td {
+  border-color: #2e2e2e !important;
+}
+[data-theme="dark"] .markdown-body pre,
+[data-theme="dark"] .markdown-body code {
+  background-color: #141414 !important;
+  color: #f0f0f0 !important;
+  border-color: #2a2a2a !important;
+}
+[data-theme="dark"] .markdown-body blockquote {
+  color: #999999 !important;
+  border-left-color: #444444 !important;
+}
+[data-theme="dark"] .markdown-body a {
+  color: #58a6ff !important;
+}
+[data-theme="dark"] .markdown-body hr {
+  background-color: #262626 !important;
+}
+</style>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <style>
+  @font-face {
+  font-family: octicons-link;
+  src: url(data:font/woff;charset=utf-8;base64,d09GRgABAAAAAAZwABAAAAAACFQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABEU0lHAAAGaAAAAAgAAAAIAAAAAUdTVUIAAAZcAAAACgAAAAoAAQAAT1MvMgAAAyQAAABJAAAAYFYEU3RjbWFwAAADcAAAAEUAAACAAJThvmN2dCAAAATkAAAABAAAAAQAAAAAZnBnbQAAA7gAAACyAAABCUM+8IhnYXNwAAAGTAAAABAAAAAQABoAI2dseWYAAAFsAAABPAAAAZwcEq9taGVhZAAAAsgAAAA0AAAANgh4a91oaGVhAAADCAAAABoAAAAkCA8DRGhtdHgAAAL8AAAADAAAAAwGAACfbG9jYQAAAsAAAAAIAAAACABiATBtYXhwAAACqAAAABgAAAAgAA8ASm5hbWUAAAToAAABQgAAAlXu73sOcG9zdAAABiwAAAAeAAAAME3QpOBwcmVwAAAEbAAAAHYAAAB/aFGpk3jaTY6xa8JAGMW/O62BDi0tJLYQincXEypYIiGJjSgHniQ6umTsUEyLm5BV6NDBP8Tpts6F0v+k/0an2i+itHDw3v2+9+DBKTzsJNnWJNTgHEy4BgG3EMI9DCEDOGEXzDADU5hBKMIgNPZqoD3SilVaXZCER3/I7AtxEJLtzzuZfI+VVkprxTlXShWKb3TBecG11rwoNlmmn1P2WYcJczl32etSpKnziC7lQyWe1smVPy/Lt7Kc+0vWY/gAgIIEqAN9we0pwKXreiMasxvabDQMM4riO+qxM2ogwDGOZTXxwxDiycQIcoYFBLj5K3EIaSctAq2kTYiw+ymhce7vwM9jSqO8JyVd5RH9gyTt2+J/yUmYlIR0s04n6+7Vm1ozezUeLEaUjhaDSuXHwVRgvLJn1tQ7xiuVv/ocTRF42mNgZGBgYGbwZOBiAAFGJBIMAAizAFoAAABiAGIAznjaY2BkYGAA4in8zwXi+W2+MjCzMIDApSwvXzC97Z4Ig8N/BxYGZgcgl52BCSQKAA3jCV8CAABfAAAAAAQAAEB42mNgZGBg4f3vACQZQABIMjKgAmYAKEgBXgAAeNpjYGY6wTiBgZWBg2kmUxoDA4MPhGZMYzBi1AHygVLYQUCaawqDA4PChxhmh/8ODDEsvAwHgMKMIDnGL0x7gJQCAwMAJd4MFwAAAHjaY2BgYGaA4DAGRgYQkAHyGMF8NgYrIM3JIAGVYYDT+AEjAwuDFpBmA9KMDEwMCh9i/v8H8sH0/4dQc1iAmAkALaUKLgAAAHjaTY9LDsIgEIbtgqHUPpDi3gPoBVyRTmTddOmqTXThEXqrob2gQ1FjwpDvfwCBdmdXC5AVKFu3e5MfNFJ29KTQT48Ob9/lqYwOGZxeUelN2U2R6+cArgtCJpauW7UQBqnFkUsjAY/kOU1cP+DAgvxwn1chZDwUbd6CFimGXwzwF6tPbFIcjEl+vvmM/byA48e6tWrKArm4ZJlCbdsrxksL1AwWn/yBSJKpYbq8AXaaTb8AAHja28jAwOC00ZrBeQNDQOWO//sdBBgYGRiYWYAEELEwMTE4uzo5Zzo5b2BxdnFOcALxNjA6b2ByTswC8jYwg0VlNuoCTWAMqNzMzsoK1rEhNqByEyerg5PMJlYuVueETKcd/89uBpnpvIEVomeHLoMsAAe1Id4AAAAAAAB42oWQT07CQBTGv0JBhagk7HQzKxca2sJCE1hDt4QF+9JOS0nbaaYDCQfwCJ7Au3AHj+LO13FMmm6cl7785vven0kBjHCBhfpYuNa5Ph1c0e2Xu3jEvWG7UdPDLZ4N92nOm+EBXuAbHmIMSRMs+4aUEd4Nd3CHD8NdvOLTsA2GL8M9PODbcL+hD7C1xoaHeLJSEao0FEW14ckxC+TU8TxvsY6X0eLPmRhry2WVioLpkrbp84LLQPGI7c6sOiUzpWIWS5GzlSgUzzLBSikOPFTOXqly7rqx0Z1Q5BAIoZBSFihQYQOOBEdkCOgXTOHA07HAGjGWiIjaPZNW13/+lm6S9FT7rLHFJ6fQbkATOG1j2OFMucKJJsxIVfQORl+9Jyda6Sl1dUYhSCm1dyClfoeDve4qMYdLEbfqHf3O/AdDumsjAAB42mNgYoAAZQYjBmyAGYQZmdhL8zLdDEydARfoAqIAAAABAAMABwAKABMAB///AA8AAQAAAAAAAAAAAAAAAAABAAAAAA==) format('woff');
+}
+
+.markdown-body .octicon {
+  display: inline-block;
+  fill: currentColor;
+  vertical-align: text-bottom;
+}
+
+.markdown-body .anchor {
+  float: left;
+  line-height: 1;
+  margin-left: -20px;
+  padding-right: 4px;
+}
+
+.markdown-body .anchor:focus {
+  outline: none;
+}
+
+.markdown-body h1 .octicon-link,
+.markdown-body h2 .octicon-link,
+.markdown-body h3 .octicon-link,
+.markdown-body h4 .octicon-link,
+.markdown-body h5 .octicon-link,
+.markdown-body h6 .octicon-link {
+  color: #1b1f23;
+  vertical-align: middle;
+  visibility: hidden;
+}
+
+.markdown-body h1:hover .anchor,
+.markdown-body h2:hover .anchor,
+.markdown-body h3:hover .anchor,
+.markdown-body h4:hover .anchor,
+.markdown-body h5:hover .anchor,
+.markdown-body h6:hover .anchor {
+  text-decoration: none;
+}
+
+.markdown-body h1:hover .anchor .octicon-link,
+.markdown-body h2:hover .anchor .octicon-link,
+.markdown-body h3:hover .anchor .octicon-link,
+.markdown-body h4:hover .anchor .octicon-link,
+.markdown-body h5:hover .anchor .octicon-link,
+.markdown-body h6:hover .anchor .octicon-link {
+  visibility: visible;
+}
+
+.markdown-body {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  color: #24292e;
+  line-height: 1.5;
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
+  font-size: 16px;
+  line-height: 1.5;
+  word-wrap: break-word;
+}
+
+.markdown-body .pl-c {
+  color: #6a737d;
+}
+
+.markdown-body .pl-c1,
+.markdown-body .pl-s .pl-v {
+  color: #005cc5;
+}
+
+.markdown-body .pl-e,
+.markdown-body .pl-en {
+  color: #6f42c1;
+}
+
+.markdown-body .pl-s .pl-s1,
+.markdown-body .pl-smi {
+  color: #24292e;
+}
+
+.markdown-body .pl-ent {
+  color: #22863a;
+}
+
+.markdown-body .pl-k {
+  color: #d73a49;
+}
+
+.markdown-body .pl-pds,
+.markdown-body .pl-s,
+.markdown-body .pl-s .pl-pse .pl-s1,
+.markdown-body .pl-sr,
+.markdown-body .pl-sr .pl-cce,
+.markdown-body .pl-sr .pl-sra,
+.markdown-body .pl-sr .pl-sre {
+  color: #032f62;
+}
+
+.markdown-body .pl-smw,
+.markdown-body .pl-v {
+  color: #e36209;
+}
+
+.markdown-body .pl-bu {
+  color: #b31d28;
+}
+
+.markdown-body .pl-ii {
+  background-color: #b31d28;
+  color: #fafbfc;
+}
+
+.markdown-body .pl-c2 {
+  background-color: #d73a49;
+  color: #fafbfc;
+}
+
+.markdown-body .pl-c2:before {
+  content: "tg1/tg1fg1/fg1tg2/tg2fg2/fg2tg3/tg3fg3/fg3tg4/tg4fg4/fg4tg5/tg5fg5/fg5tg6  </p>
+<pre><code class="fenced-code-block language-java"><span class="token keyword">import</span> <span class="token namespace">java<span class="token punctuation">.</span>io<span class="token punctuation">.</span></span><span class="token operator">*</span><span class="token punctuation">;</span>
+
+<span class="token keyword">class</span> <span class="token class-name">WriteWithFinally</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span> args<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">FileWriter</span> fw <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+        <span class="token keyword">try</span> <span class="token punctuation">{</span>
+            fw <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">FileWriter</span><span class="token punctuation">(</span><span class="token string">"data.txt"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            fw<span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span><span class="token string">"Java File Handling"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">IOException</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">finally</span> <span class="token punctuation">{</span>
+            <span class="token keyword">try</span> <span class="token punctuation">{</span>
+                <span class="token keyword">if</span> <span class="token punctuation">(</span>fw <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                    fw<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+            <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">IOException</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<p></p>
+<hr>
+<h2 class="atx" id="6-reading-text-files-with-filereader">6. Reading Text Files with FileReader</h2>
+<h3 class="atx" id="the-problem-2">The problem</h3>
+<p> The text saved in <code>data.txt</code> must come back into the program. <code>FileReader</code> fetches it <strong>character by character</strong>.</p>
+<h3 class="atx" id="the-example-1">The example</h3>
+<pre><code class="fenced-code-block language-java"><span class="token keyword">import</span> <span class="token namespace">java<span class="token punctuation">.</span>io<span class="token punctuation">.</span></span><span class="token operator">*</span><span class="token punctuation">;</span>
+
+<span class="token keyword">class</span> <span class="token class-name">ReadFile</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span> args<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">try</span> <span class="token punctuation">{</span>
+            <span class="token class-name">FileReader</span> fr <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">FileReader</span><span class="token punctuation">(</span><span class="token string">"data.txt"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">int</span> ch<span class="token punctuation">;</span>
+            <span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>ch <span class="token operator">=</span> fr<span class="token punctuation">.</span><span class="token function">read</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">!=</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token keyword">char</span><span class="token punctuation">)</span> ch<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            fr<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">IOException</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<p>Output (when <code>data.txt</code> holds the text written earlier):</p>
+<pre><code class="fenced-code-block">Java File Handling</code></pre>
+<p> </p>
+<h3 class="atx" id="syntax-breakdown-1">Syntax breakdown</h3>
+<table>
+<thead>
+<tr>
+<th>Part</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>new FileReader("data.txt")</code></td>
+<td>Opens <code>data.txt</code> for reading and returns a reader object stored in <code>fr</code></td>
+</tr>
+<tr>
+<td><code>int ch;</code></td>
+<td>A variable that holds each value returned by <code>read()</code></td>
+</tr>
+<tr>
+<td><code>fr.read()</code></td>
+<td>Reads <strong>one</strong> character and returns its numeric (Unicode) value, or <code>-1</code> when the file has ended</td>
+</tr>
+<tr>
+<td><code>(ch = fr.read()) != -1</code></td>
+<td><strong>Assigns first, then compares.</strong> The parentheses force the assignment to happen before <code>!=</code> is evaluated</td>
+</tr>
+<tr>
+<td><code>(char) ch</code></td>
+<td>A <strong>cast</strong> that turns the number back into a character</td>
+</tr>
+<tr>
+<td><code>System.out.print</code></td>
+<td>Prints without a newline, so characters appear side by side</td>
+</tr>
+</tbody></table>
+<p></p>
+<h3 class="atx" id="why-int-and-not-char">Why <code>int</code> and not <code>char</code>?</h3>
+<p><code>read()</code> must be able to return <strong>every</strong> valid character <em>and</em> a special end-of-file signal. A <code>char</code> has no room for a "none left" value, so <code>read()</code> returns an <code>int</code>: <code>0</code> to <code>65535</code> for characters, <code>-1</code> for the end.</p>
+<p> </p>
+<h3 class="atx" id="execution-trace-1">Execution trace</h3>
+<table>
+<thead>
+<tr>
+<th>Iteration</th>
+<th><code>fr.read()</code> returns</th>
+<th><code>(char) ch</code> printed</th>
+<th>Loop continues?</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>74</td>
+<td><code>J</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td>2</td>
+<td>97</td>
+<td><code>a</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td>3</td>
+<td>118</td>
+<td><code>v</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td>4</td>
+<td>97</td>
+<td><code>a</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+</tr>
+<tr>
+<td>last</td>
+<td>-1</td>
+<td>(nothing)</td>
+<td><strong>no</strong>, loop ends</td>
+</tr>
+</tbody></table>
+<p> </p>
+<h3 class="atx" id="common-mistakes-1">Common mistakes</h3>
+<ul>
+<li><strong>Declaring <code>char ch</code> instead of <code>int ch</code>.</strong> Without a cast the code does not compile (an <code>int</code> cannot be stored in a <code>char</code> without a cast). With a cast, <code>-1</code> becomes <code>65535</code>, the <code>!= -1</code> test is always true, and the loop <strong>never ends</strong>.</li>
+<li><strong>Forgetting <code>close()</code>.</strong></li>
+<li><strong>Wrong file name or location.</strong> If <code>data.txt</code> does not exist, the constructor throws <code>FileNotFoundException</code> (a subclass of <code>IOException</code>), so the <code>catch (IOException e)</code> block handles it.</li>
+</ul>
+<p></p>
+<h3 class="atx" id="filewriter-versus-filereader">FileWriter versus FileReader</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th><code>FileWriter</code></th>
+<th><code>FileReader</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Direction</td>
+<td>Program → file</td>
+<td>File → program</td>
+</tr>
+<tr>
+<td>Main method</td>
+<td><code>write(...)</code></td>
+<td><code>read()</code></td>
+</tr>
+<tr>
+<td>Effect on the file</td>
+<td>Creates or replaces its contents</td>
+<td>Leaves the file unchanged</td>
+</tr>
+<tr>
+<td>Stream family</td>
+<td>Character stream</td>
+<td>Character stream</td>
+</tr>
+</tbody></table>
+<p></p>
+<hr>
+<h2 class="atx" id="7-buffered-streams">7. Buffered Streams</h2>
+<h3 class="atx" id="the-problem-3">The problem</h3>
+<p>Reading one character at a time means the program keeps asking the disk for tiny pieces of data. Disk access is slow, so this wastes time.</p>
+<h3 class="atx" id="the-idea-and-the-analogy-1">The idea and the analogy</h3>
+<p>Carrying groceries from the car to the kitchen <strong>one item per trip</strong> is slow. Using a bag to carry many items per trip is faster. A <strong>buffer</strong> is that bag: an area of memory that collects data so the disk is accessed less often.</p>
+<blockquote>
+<p>The analogy stops at the "bag size": a buffer has a fixed capacity and is filled and emptied automatically, so you never manage individual items yourself.</p>
+</blockquote>
+<h3 class="atx" id="the-formal-concept-1">The formal concept</h3>
+<p><strong>Buffered streams</strong> improve performance by reducing direct disk access. The classes are:</p>
+<ul>
+<li><strong><code>BufferedReader</code></strong> (instead of reading directly with <code>FileReader</code>)</li>
+<li><strong><code>BufferedWriter</code></strong> (instead of writing directly with <code>FileWriter</code>)</li>
+</ul>
+<h3 class="atx" id="the-example-bufferedreader">The example: BufferedReader</h3>
+<p></p>
+<pre><code class="fenced-code-block language-java"><span class="token keyword">import</span> <span class="token namespace">java<span class="token punctuation">.</span>io<span class="token punctuation">.</span></span><span class="token operator">*</span><span class="token punctuation">;</span>
+
+<span class="token keyword">class</span> <span class="token class-name">Demo</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span> args<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token keyword">throws</span> <span class="token class-name">IOException</span> <span class="token punctuation">{</span>
+        <span class="token class-name">BufferedReader</span> br <span class="token operator">=</span>
+            <span class="token keyword">new</span> <span class="token class-name">BufferedReader</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">FileReader</span><span class="token punctuation">(</span><span class="token string">"data.txt"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">String</span> line<span class="token punctuation">;</span>
+        <span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>line <span class="token operator">=</span> br<span class="token punctuation">.</span><span class="token function">readLine</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>line<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        br<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<p>Output (for a file containing <code>Java File Handling</code>):</p>
+<pre><code class="fenced-code-block">Java File Handling</code></pre>
+<p> </p>
+<h3 class="atx" id="syntax-breakdown-2">Syntax breakdown</h3>
+<table>
+<thead>
+<tr>
+<th>Part</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>new BufferedReader(new FileReader("data.txt"))</code></td>
+<td><strong>Wrapping.</strong> The inner <code>FileReader</code> opens the file; the outer <code>BufferedReader</code> adds a buffer on top of it</td>
+</tr>
+<tr>
+<td><code>String line;</code></td>
+<td>Holds one full line of text</td>
+</tr>
+<tr>
+<td><code>br.readLine()</code></td>
+<td>Reads an entire line (without the line-ending characters) and returns it as a <code>String</code></td>
+</tr>
+<tr>
+<td><code>!= null</code></td>
+<td><code>readLine()</code> returns <code>null</code> when there are no more lines</td>
+</tr>
+<tr>
+<td><code>System.out.println(line)</code></td>
+<td>Prints the line and moves to the next one</td>
+</tr>
+</tbody></table>
+<p> </p>
+<h3 class="atx" id="read-versus-readline"><code>read()</code> versus <code>readLine()</code></h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th><code>read()</code> (FileReader)</th>
+<th><code>readLine()</code> (BufferedReader)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Returns</td>
+<td><code>int</code> (one character)</td>
+<td><code>String</code> (one line)</td>
+</tr>
+<tr>
+<td>End of file signalled by</td>
+<td><code>-1</code></td>
+<td><code>null</code></td>
+</tr>
+<tr>
+<td>Loop condition</td>
+<td><code>!= -1</code></td>
+<td><code>!= null</code></td>
+</tr>
+</tbody></table>
+<p> </p>
+<h3 class="atx" id="try-catch-versus-throws"><code>try-catch</code> versus <code>throws</code></h3>
+<p>This program uses <code>throws IOException</code> on <code>main</code> instead of a <code>try-catch</code> block.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th><code>try-catch</code></th>
+<th><code>throws IOException</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Who handles the problem</td>
+<td>The method itself</td>
+<td>The caller (for <code>main</code>, the JVM)</td>
+</tr>
+<tr>
+<td>If an <code>IOException</code> happens</td>
+<td>The <code>catch</code> block runs and the program can continue</td>
+<td>The program stops and reports the exception</td>
+</tr>
+<tr>
+<td>Code size</td>
+<td>Longer</td>
+<td>Shorter</td>
+</tr>
+</tbody></table>
+<p></p>
+<h3 class="atx" id="supplementary-bufferedwriter">Supplementary: BufferedWriter</h3>
+<pre><code class="fenced-code-block language-java"><span class="token keyword">import</span> <span class="token namespace">java<span class="token punctuation">.</span>io<span class="token punctuation">.</span></span><span class="token operator">*</span><span class="token punctuation">;</span>
+
+<span class="token keyword">class</span> <span class="token class-name">BufferedWrite</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span> args<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token keyword">throws</span> <span class="token class-name">IOException</span> <span class="token punctuation">{</span>
+        <span class="token class-name">BufferedWriter</span> bw <span class="token operator">=</span>
+            <span class="token keyword">new</span> <span class="token class-name">BufferedWriter</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">FileWriter</span><span class="token punctuation">(</span><span class="token string">"data.txt"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        bw<span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span><span class="token string">"Java File Handling"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        bw<span class="token punctuation">.</span><span class="token function">newLine</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        bw<span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span><span class="token string">"Buffered streams"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        bw<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<p><code>newLine()</code> writes a line separator appropriate to the operating system. <code>close()</code> also empties the buffer into the file.</p>
+<hr>
+<h2 class="atx" id="8-reading-and-writing-binary-files">8. Reading and Writing Binary Files</h2>
+<h3 class="atx" id="the-problem-4">The problem</h3>
+<p>Not all data is text. Images, videos, and audio files are sequences of <strong>bytes</strong>, not characters. We need streams that move bytes without interpreting them.</p>
+<h3 class="atx" id="the-formal-concept-2">The formal concept</h3>
+<p><strong>Binary files store data in byte format.</strong> The classes are:</p>
+<ul>
+<li><strong><code>FileOutputStream</code></strong> for writing</li>
+<li><strong><code>FileInputStream</code></strong> for reading</li>
+</ul>
+<h3 class="atx" id="writing-binary-data">Writing binary data</h3>
+<p></p>
+<pre><code class="fenced-code-block language-java"><span class="token keyword">import</span> <span class="token namespace">java<span class="token punctuation">.</span>io<span class="token punctuation">.</span></span><span class="token operator">*</span><span class="token punctuation">;</span>
+
+<span class="token keyword">class</span> <span class="token class-name">BinaryWrite</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span> args<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token keyword">throws</span> <span class="token class-name">IOException</span> <span class="token punctuation">{</span>
+        <span class="token class-name">FileOutputStream</span> fos <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">FileOutputStream</span><span class="token punctuation">(</span><span class="token string">"data.dat"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">String</span> text <span class="token operator">=</span> <span class="token string">"Java"</span><span class="token punctuation">;</span>
+        <span class="token keyword">byte</span> b<span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token operator">=</span> text<span class="token punctuation">.</span><span class="token function">getBytes</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        fos<span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span>b<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        fos<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<p> </p>
+<table>
+<thead>
+<tr>
+<th>Part</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>throws IOException</code></td>
+<td>Declares that this method may throw <code>IOException</code> instead of catching it</td>
+</tr>
+<tr>
+<td><code>new FileOutputStream("data.dat")</code></td>
+<td>Opens (or creates) the file <code>data.dat</code> for writing bytes</td>
+</tr>
+<tr>
+<td><code>text.getBytes()</code></td>
+<td>Converts the <code>String</code> into an <strong>array of bytes</strong></td>
+</tr>
+<tr>
+<td><code>byte b[]</code></td>
+<td>An array variable that holds those bytes</td>
+</tr>
+<tr>
+<td><code>fos.write(b)</code></td>
+<td>Writes the whole byte array to the file</td>
+</tr>
+<tr>
+<td><code>fos.close()</code></td>
+<td>Releases the file</td>
+</tr>
+</tbody></table>
+<p>The four characters become four bytes:</p>
+<table>
+<thead>
+<tr>
+<th>Character</th>
+<th><code>J</code></th>
+<th><code>a</code></th>
+<th><code>v</code></th>
+<th><code>a</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Byte value</td>
+<td>74</td>
+<td>97</td>
+<td>118</td>
+<td>97</td>
+</tr>
+<tr>
+<td>Binary</td>
+<td>01001010</td>
+<td>01100001</td>
+<td>01110110</td>
+<td>01100001</td>
+</tr>
+</tbody></table>
+<p></p>
+<h3 class="atx" id="reading-binary-data">Reading binary data</h3>
+<p></p>
+<pre><code class="fenced-code-block language-java"><span class="token keyword">import</span> <span class="token namespace">java<span class="token punctuation">.</span>io<span class="token punctuation">.</span></span><span class="token operator">*</span><span class="token punctuation">;</span>
+
+<span class="token keyword">class</span> <span class="token class-name">BinaryRead</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span> args<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token keyword">throws</span> <span class="token class-name">IOException</span> <span class="token punctuation">{</span>
+        <span class="token class-name">FileInputStream</span> fis <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">FileInputStream</span><span class="token punctuation">(</span><span class="token string">"data.dat"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">int</span> i<span class="token punctuation">;</span>
+        <span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>i <span class="token operator">=</span> fis<span class="token punctuation">.</span><span class="token function">read</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">!=</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token keyword">char</span><span class="token punctuation">)</span> i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        fis<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<p></p>
+<p>Output:</p>
+<pre><code class="fenced-code-block">Java</code></pre>
+<p><code>fis.read()</code> returns one <strong>byte</strong> as an <code>int</code> from <code>0</code> to <code>255</code>, or <code>-1</code> at the end of the file. The loop is the same pattern as <code>FileReader</code>, but here the values are raw bytes.</p>
+<blockquote>
+<p><strong>Note for Review:</strong> The lecture's printed output reads <code>JAVA</code>, but the file contains <code>Java</code> (written by <code>BinaryWrite</code>), so the program prints <code>Java</code>. <code>JAVA</code> would appear only if the stored text were uppercase.</p>
+</blockquote>
+<blockquote>
+<p><strong>Note for Review:</strong> Casting each byte with <code>(char)</code> reproduces the text only for single-byte characters such as ASCII. Characters that need several bytes would be printed incorrectly byte by byte. That is a good reason to use character streams for text.</p>
+</blockquote>
+<p></p>
+<h3 class="atx" id="text-files-versus-binary-files">Text files versus binary files</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Text file</th>
+<th>Binary file</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Classes</td>
+<td><code>FileReader</code>, <code>FileWriter</code></td>
+<td><code>FileInputStream</code>, <code>FileOutputStream</code></td>
+</tr>
+<tr>
+<td>Data unit</td>
+<td>Characters</td>
+<td>Bytes</td>
+</tr>
+<tr>
+<td>Typical contents</td>
+<td><code>.txt</code>, source code</td>
+<td>Images, video, audio</td>
+</tr>
+<tr>
+<td><code>read()</code> returns</td>
+<td>Character value, <code>-1</code> at end</td>
+<td>Byte value (0–255), <code>-1</code> at end</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 class="atx" id="9-serialization">9. Serialization</h2>
+<h3 class="atx" id="the-problem-5">The problem</h3>
+<p>A <code>Student</code> object has an <code>id</code> and a <code>name</code>. Writing each field to a file separately, and rebuilding the object by hand when reading it back, is tedious and error-prone. We want to save the <strong>whole object</strong> in one step. </p>
+<h3 class="atx" id="the-idea-and-the-analogy-2">The idea and the analogy</h3>
+<p>Flat-pack furniture is taken apart into pieces, stored or shipped in a box, and later assembled again. <strong>Serialization</strong> takes an object apart into a sequence of bytes. <strong>Deserialization</strong> assembles it again.</p>
+<blockquote>
+<p>The analogy has one important limit: assembling creates a <strong>new, separate object</strong> with the same data. It is a copy, not the original object.</p>
+</blockquote>
+<h3 class="atx" id="the-formal-concept-3">The formal concept</h3>
+<p><strong>Serialization</strong> is the process of converting an object into a byte stream so that it can be:</p>
+<ul>
+<li>stored in a file,</li>
+<li>sent over a network,</li>
+<li>reconstructed later.</li>
+</ul>
+<p>The reverse process is <strong>deserialization</strong>.</p>
+<h3 class="atx" id="the-serializable-interface">The Serializable interface</h3>
+<p>Java provides <code>java.io.Serializable</code>. It is a <strong>marker interface</strong>: it has <strong>no methods</strong>. Implementing it simply tags the class, telling Java "objects of this class may be serialized."   </p>
+<div class="plantuml"><img src="https://www.plantuml.com/plantuml/svg/~1U5vza4rh0a4CXk_pArAzMAYbUXGiqaDBeI3KKs4lqOaQEpDPPZA8_VLbTXVTjjXRlfuaxxj8Yb6pT-QcZhZp20vFaXMI9yM0HgK65LYBgdYm76cZBC6O4c3OEOB1IhEbe23h0ssq2YEsC8V9m-GE0dg2ERpZFhlR0M0gGp1yuzrUdroc_ffbWo-prbbN6Wbz5OwHbTh6gECbTVm7EIV7_ePdTjJdcuFRVu3KVdwVA5PXj3uf9P00bjDdUstBZc2uGkSb_Bxq6iwFThFNFsibz8WgH4BxKnbVv_zO72cfHBAmaVfqTdRQMVCIYO8nnUln-1544imWKMHq_4McvALUh9b18zkKkAcn8zF8RhDajjnsX2_J9MvgwyCKPc3fidn1mMRllW7R2j01"></div>
+<p></p>
+<h3 class="atx" id="creating-a-serializable-class">Creating a serializable class</h3>
+<p></p>
+<pre><code class="fenced-code-block language-java"><span class="token keyword">import</span> <span class="token namespace">java<span class="token punctuation">.</span>io<span class="token punctuation">.</span></span><span class="token operator">*</span><span class="token punctuation">;</span>
+
+<span class="token keyword">class</span> <span class="token class-name">Student</span> <span class="token keyword">implements</span> <span class="token class-name">Serializable</span> <span class="token punctuation">{</span>
+    <span class="token keyword">int</span> id<span class="token punctuation">;</span>
+    <span class="token class-name">String</span> name<span class="token punctuation">;</span>
+
+    <span class="token class-name">Student</span><span class="token punctuation">(</span><span class="token keyword">int</span> id<span class="token punctuation">,</span> <span class="token class-name">String</span> name<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>id <span class="token operator">=</span> id<span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> name<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<p>  </p>
+<table>
+<thead>
+<tr>
+<th>Part</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>implements Serializable</code></td>
+<td>The class <strong>implements an interface</strong>. (<code>extends</code> is for inheriting from a class; <code>implements</code> is for interfaces.) Because the interface has no methods, nothing else must be written</td>
+</tr>
+<tr>
+<td><code>int id; String name;</code></td>
+<td><strong>Fields</strong>: the state stored in each object</td>
+</tr>
+<tr>
+<td><code>Student(int id, String name)</code></td>
+<td>A <strong>constructor</strong>: same name as the class, <strong>no return type</strong>, runs when <code>new Student(...)</code> is executed. It takes two parameters</td>
+</tr>
+<tr>
+<td><code>this.id = id;</code></td>
+<td>Left side <code>this.id</code> is the <strong>field</strong>; right side <code>id</code> is the <strong>parameter</strong>. <code>this</code> removes the ambiguity when they share a name</td>
+</tr>
+</tbody></table>
+<p><code>import java.io.*;</code> already covers <code>Serializable</code>, so no extra import is needed. </p>
+<h3 class="atx" id="writing-an-object-to-a-file">Writing an object to a file</h3>
+<p></p>
+<pre><code class="fenced-code-block language-java"><span class="token keyword">class</span> <span class="token class-name">SerializeDemo</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span> args<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token keyword">throws</span> <span class="token class-name">Exception</span> <span class="token punctuation">{</span>
+        <span class="token class-name">Student</span> s <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Student</span><span class="token punctuation">(</span><span class="token number">101</span><span class="token punctuation">,</span> <span class="token string">"Rahul"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token class-name">FileOutputStream</span> fos <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">FileOutputStream</span><span class="token punctuation">(</span><span class="token string">"student.ser"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">ObjectOutputStream</span> out <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ObjectOutputStream</span><span class="token punctuation">(</span>fos<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        out<span class="token punctuation">.</span><span class="token function">writeObject</span><span class="token punctuation">(</span>s<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        out<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        fos<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Object Saved"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<p>(<code>import java.io.*;</code> is needed at the top of the file, as in the <code>Student</code> listing above.)   </p>
+<table>
+<thead>
+<tr>
+<th>Part</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>new Student(101, "Rahul")</code></td>
+<td>Creates the object; the constructor sets <code>id</code> and <code>name</code>; <code>s</code> refers to it</td>
+</tr>
+<tr>
+<td><code>new FileOutputStream("student.ser")</code></td>
+<td>A byte stream connected to the file <code>student.ser</code> (<code>.ser</code> is the usual extension, not a rule)</td>
+</tr>
+<tr>
+<td><code>new ObjectOutputStream(fos)</code></td>
+<td><strong>Wraps</strong> the byte stream with a layer that knows how to turn an object into bytes</td>
+</tr>
+<tr>
+<td><code>out.writeObject(s)</code></td>
+<td>Serializes <code>s</code> and sends the bytes into the file</td>
+</tr>
+<tr>
+<td><code>out.close(); fos.close();</code></td>
+<td>Closes the streams, the outer one first</td>
+</tr>
+<tr>
+<td><code>throws Exception</code></td>
+<td>The common form used in this program so the exceptions need not be caught individually</td>
+</tr>
+</tbody></table>
+<p></p>
+<p>Output:</p>
+<pre><code class="fenced-code-block">Object Saved</code></pre>
+<table>
+<thead>
+<tr>
+<th>Step</th>
+<th>Operation</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td><code>new Student(101, "Rahul")</code></td>
+<td>Object created with <code>id = 101</code>, <code>name = "Rahul"</code></td>
+</tr>
+<tr>
+<td>2</td>
+<td><code>new FileOutputStream("student.ser")</code></td>
+<td>File opened for writing bytes</td>
+</tr>
+<tr>
+<td>3</td>
+<td><code>new ObjectOutputStream(fos)</code></td>
+<td>Object-writing layer attached to the file stream</td>
+</tr>
+<tr>
+<td>4</td>
+<td><code>out.writeObject(s)</code></td>
+<td>Object converted to bytes and written</td>
+</tr>
+<tr>
+<td>5</td>
+<td><code>out.close()</code>, <code>fos.close()</code></td>
+<td>Streams closed</td>
+</tr>
+<tr>
+<td>6</td>
+<td><code>println("Object Saved")</code></td>
+<td>Message printed</td>
+</tr>
+</tbody></table>
+<h3 class="atx" id="reading-an-object-from-a-file">Reading an object from a file</h3>
+<p></p>
+<pre><code class="fenced-code-block language-java"><span class="token keyword">import</span> <span class="token namespace">java<span class="token punctuation">.</span>io<span class="token punctuation">.</span></span><span class="token operator">*</span><span class="token punctuation">;</span>
+
+<span class="token keyword">class</span> <span class="token class-name">DeserializeDemo</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span> args<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token keyword">throws</span> <span class="token class-name">Exception</span> <span class="token punctuation">{</span>
+        <span class="token class-name">ObjectInputStream</span> in <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ObjectInputStream</span><span class="token punctuation">(</span>
+            <span class="token keyword">new</span> <span class="token class-name">FileInputStream</span><span class="token punctuation">(</span><span class="token string">"student.ser"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token class-name">Student</span> s <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token class-name">Student</span><span class="token punctuation">)</span> in<span class="token punctuation">.</span><span class="token function">readObject</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>s<span class="token punctuation">.</span>id<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>s<span class="token punctuation">.</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        in<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<p>Output:</p>
+<pre><code class="fenced-code-block">101
+Rahul</code></pre>
+<p>  </p>
+<table>
+<thead>
+<tr>
+<th>Part</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>new ObjectInputStream(new FileInputStream("student.ser"))</code></td>
+<td>A byte stream from the file, wrapped by a layer that rebuilds objects</td>
+</tr>
+<tr>
+<td><code>in.readObject()</code></td>
+<td>Reads the bytes and reconstructs the object</td>
+</tr>
+<tr>
+<td><code>(Student)</code></td>
+<td>A <strong>cast</strong>. <code>readObject()</code> is declared to return <code>Object</code> (the compile-time type), while the object it actually returns is a <code>Student</code> (the runtime type). The cast tells the compiler to treat it as a <code>Student</code></td>
+</tr>
+<tr>
+<td><code>s.id</code>, <code>s.name</code></td>
+<td>The restored values</td>
+</tr>
+</tbody></table>
+<p></p>
+<blockquote>
+<p><strong>Note for Review:</strong> <code>throws Exception</code> is used because reading an object can throw <code>IOException</code> <em>and</em> <code>ClassNotFoundException</code>. <code>Exception</code> is the parent of both, so one declaration covers them.</p>
+</blockquote>
+<blockquote>
+<p><strong>Note for Review:</strong> During deserialization the <code>Student</code> constructor is <strong>not</strong> run. The object is rebuilt directly from the stored bytes. Also, a class that does not implement <code>Serializable</code> cannot be written: <code>writeObject</code> throws <code>NotSerializableException</code>.</p>
+</blockquote>
+<hr>
+<h2 class="atx" id="10-the-transient-keyword">10. The transient Keyword</h2>
+<h3 class="atx" id="the-problem-6">The problem</h3>
+<p>A <code>Student</code> object might hold a <code>password</code>. Saving it in a file is a security risk. We need a way to say "serialize everything <strong>except</strong> this field."</p>
+<h3 class="atx" id="the-formal-concept-4">The formal concept</h3>
+<p>The <strong><code>transient</code></strong> keyword prevents a variable from being serialized.</p>
+<pre><code class="fenced-code-block language-java"><span class="token keyword">class</span> <span class="token class-name">Student</span> <span class="token keyword">implements</span> <span class="token class-name">Serializable</span> <span class="token punctuation">{</span>
+    <span class="token keyword">int</span> id<span class="token punctuation">;</span>
+    <span class="token keyword">transient</span> <span class="token class-name">String</span> password<span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<p><code>password</code> will <strong>not</strong> be stored.</p>
+<h3 class="atx" id="syntax">Syntax</h3>
+<pre><code class="fenced-code-block language-java"><span class="token keyword">transient</span> dataType variableName<span class="token punctuation">;</span></code></pre>
+<p><code>transient</code> is a <strong>modifier</strong> placed before the type of the field.</p>
+<h3 class="atx" id="what-happens-on-reading-back">What happens on reading back</h3>
+<p> A transient field is not in the file, so after deserialization it receives its <strong>default value</strong>: <code>null</code> for object references such as <code>String</code>, <code>0</code> for numbers, <code>false</code> for <code>boolean</code>.</p>
+<p>Example variation (the same write and read programs as before, with this class and a constructor <code>Student(int id, String password)</code>):</p>
+<pre><code class="fenced-code-block language-java"><span class="token keyword">class</span> <span class="token class-name">Student</span> <span class="token keyword">implements</span> <span class="token class-name">Serializable</span> <span class="token punctuation">{</span>
+    <span class="token keyword">int</span> id<span class="token punctuation">;</span>
+    <span class="token keyword">transient</span> <span class="token class-name">String</span> password<span class="token punctuation">;</span>
+
+    <span class="token class-name">Student</span><span class="token punctuation">(</span><span class="token keyword">int</span> id<span class="token punctuation">,</span> <span class="token class-name">String</span> password<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>id <span class="token operator">=</span> id<span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>password <span class="token operator">=</span> password<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<p>  If <code>new Student(101, "secret123")</code> is written and then read back, printing the fields gives:</p>
+<pre><code class="fenced-code-block">101
+null</code></pre>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Before writing</th>
+<th>After reading back</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>id</code></td>
+<td>101</td>
+<td>101</td>
+</tr>
+<tr>
+<td><code>password</code> (transient)</td>
+<td><code>"secret123"</code></td>
+<td><code>null</code></td>
+</tr>
+</tbody></table>
+<p></p>
+<hr>
+<h2 class="atx" id="11-file-handling-summary-and-exercises">11. File Handling Summary and Exercises</h2>
+<h3 class="atx" id="summary">Summary</h3>
+<ul>
+<li>Perform file operations using Java I/O streams.</li>
+<li>Read and write text and binary files.</li>
+<li>Serialize and deserialize Java objects.</li>
+</ul>
+<h3 class="atx" id="class-cheat-sheet">Class cheat sheet</h3>
+<table>
+<thead>
+<tr>
+<th>Kind</th>
+<th>Reads</th>
+<th>Writes</th>
+<th>Used for</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Character stream</td>
+<td><code>FileReader</code></td>
+<td><code>FileWriter</code></td>
+<td>Text</td>
+</tr>
+<tr>
+<td>Buffered character stream</td>
+<td><code>BufferedReader</code></td>
+<td><code>BufferedWriter</code></td>
+<td>Text, with fewer disk accesses</td>
+</tr>
+<tr>
+<td>Byte stream</td>
+<td><code>FileInputStream</code></td>
+<td><code>FileOutputStream</code></td>
+<td>Binary data</td>
+</tr>
+<tr>
+<td>Object stream</td>
+<td><code>ObjectInputStream</code></td>
+<td><code>ObjectOutputStream</code></td>
+<td>Whole objects (serialization)</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p><strong>Note for Review:</strong> Three habits appear in every program above: import <code>java.io.*</code>, handle or declare <code>IOException</code>, and <strong>close</strong> what you opened.</p>
+</blockquote>
+<h3 class="atx" id="exercises-assigned-in-the-lecture">Exercises assigned in the lecture</h3>
+<p>Work through the example programs first, then try these:</p>
+<ul>
+<li>Write a program to copy content from one text file to another.</li>
+<li>Create a program to store and retrieve student records using binary files.</li>
+<li>Develop a serialization program to save and restore employee objects.</li>
+<li>Demonstrate the use of the <code>finally</code> block for resource cleanup.</li>
+<li>Implement a file-based student management system using Java I/O.</li>
+</ul>
+<hr>
+<h1 class="atx" id="part-b--collections-and-generics">Part B — Collections and Generics</h1>
+<h2 class="atx" id="12-why-we-need-collections">12. Why We Need Collections</h2>
+<h3 class="atx" id="the-problem-7">The problem</h3>
+<p>A college registration program must store student records, but nobody knows in advance how many students will register. Before the Collections Framework, the tool was the array:</p>
+<pre><code class="fenced-code-block language-java"><span class="token keyword">int</span> arr<span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token number">100</span><span class="token punctuation">]</span><span class="token punctuation">;</span></code></pre>
+<p>An array like this has three problems:</p>
+<table>
+<thead>
+<tr>
+<th>Problem</th>
+<th>What it means</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Fixed size</strong></td>
+<td>The size is set at creation. If 150 students register, 100 slots are not enough</td>
+</tr>
+<tr>
+<td><strong>One type only</strong></td>
+<td>This array stores only <code>int</code> values. It cannot hold objects of different types</td>
+</tr>
+<tr>
+<td><strong>No built-in searching or sorting methods</strong></td>
+<td>The array itself offers no ready-made operations for adding, removing, or searching</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p><strong>Note for Review:</strong> Arrays <em>can</em> hold objects (for example <code>String[]</code>) and the <code>java.util.Arrays</code> helper class offers some sorting and searching, so "cannot store different object types" refers to this typed array: each array is fixed to one element type. The central problem is that an array has a fixed size and no built-in data-structure behaviour.</p>
+</blockquote>
+<h3 class="atx" id="the-idea-and-the-analogy-3">The idea and the analogy</h3>
+<p>An array is a <strong>notebook with exactly 100 pages</strong>: when it is full, you cannot add a page. A collection is a <strong>ring binder</strong>: you add or remove pages freely.</p>
+<h3 class="atx" id="the-solution">The solution</h3>
+<p>Collections solve these problems by providing:</p>
+<ul>
+<li><strong>Dynamic size:</strong> they grow and shrink as needed.</li>
+<li><strong>Ready-made data structures:</strong> lists, sets, queues, and maps are already written.</li>
+<li><strong>Efficient operations:</strong> adding, removing, and searching are built in.</li>
+</ul>
+<hr>
+<h2 class="atx" id="13-java-collections-framework">13. Java Collections Framework</h2>
+<p>The <strong>Java Collections Framework (JCF)</strong> is a <strong>unified architecture for storing and manipulating groups of objects</strong>. It provides:</p>
+<ul>
+<li><strong>Interfaces:</strong> the <em>contracts</em> (which operations a kind of collection supports),</li>
+<li><strong>Implementation classes:</strong> the actual working code,</li>
+<li><strong>Algorithms:</strong> ready-made operations such as sorting and searching.</li>
+</ul>
+<p>It lives in the <strong><code>java.util</code></strong> package:</p>
+<pre><code class="fenced-code-block language-java"><span class="token keyword">import</span> <span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span><span class="token operator">*</span><span class="token punctuation">;</span></code></pre>
+<h3 class="atx" id="interface-versus-class">Interface versus class</h3>
+<p>An <strong>interface</strong> says <em>what</em> a collection can do. A <strong>class</strong> says <em>how</em> it does it. For example, <code>List</code> is an interface; <code>ArrayList</code> is a class that implements it.</p>
+<h3 class="atx" id="reading-the-architecture-diagrams">Reading the architecture diagrams</h3>
+<ul>
+<li><strong>Green</strong> boxes are <strong>interfaces</strong>; <strong>orange</strong> boxes are <strong>classes</strong>.</li>
+<li>A <strong>solid</strong> arrow means <strong>extends</strong> (inheritance between interfaces, or between classes).</li>
+<li>A <strong>dotted</strong> arrow means <strong>implements</strong> (a class implementing an interface).</li>
+</ul>
+<h3 class="atx" id="the-collection-side">The Collection side</h3>
+<div class="plantuml"><img src="https://www.plantuml.com/plantuml/svg/~1U5vjaZ5Fmp0GXVVx5OUOQo4615A7GcW5KWTG4BkRNAbLEoxsPOZK7uzgcyHjFUQzyxrtdxBmB1ttHiFDmSaV8r7BmVQCtX3BJWBR0xB5ZMMs1blbg65bEzYfbf3CWGSqP3RaF83gcDnMDeJlJ4vkDE5jzRXyg9uogx9Qnnq5Swqy5-JFdlhIhffAqw_qMvwsZgdDtq2ZfVVux9mSOlHgjRnxkK_wMdLxQWl6DpLitSLqpRBPNsWVJbcdU4W7d6qFgQdhcV4c_IwqB9GfUr-EA7y18__vSJR32Jbaz8DrEkvA36slr9eOuXtXPMWEfzJmMV_31GZ0vaSX9h2PDa7Dn0WK4jUuy8Hp31G2prX213Ubn3gPckN4aa9WefTQ2u5nQ9J77oHC9wgmeAxjZVu38hK8k0"></div>
+<h3 class="atx" id="the-map-side-a-separate-hierarchy">The Map side (a separate hierarchy)</h3>
+<p><code>Map</code> does <strong>not</strong> extend <code>Collection</code>. It stores <strong>key-value pairs</strong>, so it forms its own hierarchy.</p>
+<div class="plantuml"><img src="https://www.plantuml.com/plantuml/svg/~1U5vjZx4Ama0CXlSyHSIv8WwYu22Aug2Jla3QYtfukIjtwL3muQMbQYkE-VxaIx9EIb4hSJ0g8zs4q54TAiKahEG9D9Ie0VEW6WIDZLoe3HxkrZ2ob5gZiEGS4u3rol5A1UE9IXnl5xlvTjcZvn2LJJ-3mb5AUA1qR_5-lvjkPXqzMlzWypzhg5Bk-6Vc4fdx9cYArNCoUU_uWe5-sDUQEvHb-BaRlX-qpcuRhDcRIjmBlYXioG"></div>
+<blockquote>
+<p><strong>Note for Review:</strong> The lecture's diagram simplifies two relationships. In real Java, <code>LinkedHashSet</code> extends <code>HashSet</code> and <code>LinkedHashMap</code> extends <code>HashMap</code>, so each is attached to its parent class rather than directly to the interface. The diagrams here follow the lecture's simplification.</p>
+</blockquote>
+<h3 class="atx" id="the-architecture-at-a-glance">The architecture at a glance</h3>
+<table>
+<thead>
+<tr>
+<th>Interface</th>
+<th>Key classes</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>Iterable</code> → <code>Collection</code></td>
+<td>The common root of all collections except <code>Map</code></td>
+</tr>
+<tr>
+<td><code>List</code></td>
+<td><code>ArrayList</code>, <code>LinkedList</code>, <code>Vector</code>, <code>Stack</code></td>
+</tr>
+<tr>
+<td><code>Set</code></td>
+<td><code>HashSet</code>, <code>LinkedHashSet</code>, <code>SortedSet</code> → <code>TreeSet</code></td>
+</tr>
+<tr>
+<td><code>Queue</code></td>
+<td><code>PriorityQueue</code>, <code>Deque</code> → <code>ArrayDeque</code>, <code>LinkedList</code></td>
+</tr>
+<tr>
+<td><code>Map</code></td>
+<td><code>HashMap</code>, <code>LinkedHashMap</code>, <code>Hashtable</code>, <code>SortedMap</code> → <code>TreeMap</code></td>
+</tr>
+</tbody></table>
+<p><code>LinkedList</code> appears under both <code>List</code> and <code>Queue</code>/<code>Deque</code> because it implements both.</p>
+<p>The simpler picture used earlier in the lecture shows the same idea in miniature: <code>Collection</code> splits into <code>Set</code> (with <code>HashSet</code>) and <code>List</code> (with <code>ArrayList</code> and <code>LinkedList</code>), while <code>Map</code> has <code>HashMap</code> and <code>TreeMap</code>.</p>
+<hr>
+<h2 class="atx" id="14-the-four-main-interfaces">14. The Four Main Interfaces</h2>
+<p>Everything in the framework rests on four interfaces: <strong>List, Set, Queue, and Map</strong>.</p>
+<h3 class="atx" id="the-list-interface">The List interface</h3>
+<p>A list is like an <strong>attendance register</strong>: entries appear in the order written, the same value may appear twice, and you can ask for "entry number 3".</p>
+<p>A <code>List</code>:</p>
+<ul>
+<li><strong>maintains insertion order,</strong></li>
+<li><strong>allows duplicate elements,</strong></li>
+<li><strong>allows index-based access.</strong></li>
+</ul>
+<p>Examples: <code>ArrayList</code>, <code>LinkedList</code>, <code>Vector</code>, <code>Stack</code>.</p>
+<h3 class="atx" id="the-set-interface">The Set interface</h3>
+<p>A set is like the <strong>collection of registered roll numbers</strong>: every roll number must be unique.</p>
+<p>A <code>Set</code>:</p>
+<ul>
+<li><strong>does not allow duplicate elements,</strong></li>
+<li><strong>does not maintain insertion order</strong> (except <code>LinkedHashSet</code>),</li>
+<li>is useful for <strong>unique collections</strong>.</li>
+</ul>
+<p>Examples: <code>HashSet</code>, <code>TreeSet</code>.</p>
+<blockquote>
+<p><strong>Note for Review:</strong> <code>TreeSet</code> keeps its elements in <em>sorted</em> order, which is different from insertion order. <code>HashSet</code> makes no ordering promise at all.</p>
+</blockquote>
+<h3 class="atx" id="the-queue-interface">The Queue interface</h3>
+<p>A queue is the <strong>fee-payment counter</strong>: the first student to arrive is the first to be served.</p>
+<p>A <code>Queue</code> follows <strong>FIFO (First In First Out)</strong>.</p>
+<p>Examples: <code>PriorityQueue</code>, <code>LinkedList</code> (and the double-ended <code>Deque</code> family such as <code>ArrayDeque</code>).</p>
+<p>Used in:</p>
+<ul>
+<li><strong>Scheduling,</strong></li>
+<li><strong>Resource management.</strong></li>
+</ul>
+<blockquote>
+<p><strong>Note for Review:</strong> <code>PriorityQueue</code> serves elements by <strong>priority</strong>, not strictly by arrival. FIFO is the general rule of the interface; <code>PriorityQueue</code> is the special case where the "front" is the highest-priority element.</p>
+</blockquote>
+<h3 class="atx" id="the-map-interface">The Map interface</h3>
+<p> A map is like a <strong>register of roll numbers and names</strong>: you look up a student by roll number.</p>
+<p>A <code>Map</code> stores data as <strong>Key → Value</strong> pairs, written <code>(Key, Value)</code>:</p>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>A</td>
+</tr>
+<tr>
+<td>2</td>
+<td>B</td>
+</tr>
+<tr>
+<td>3</td>
+<td>C</td>
+</tr>
+</tbody></table>
+<p>  </p>
+<p>Properties:</p>
+<ul>
+<li><strong>Keys must be unique.</strong></li>
+<li><strong>Values can be duplicated.</strong></li>
+</ul>
+<p>Examples: <code>HashMap</code>, <code>TreeMap</code>.</p>
+<blockquote>
+<p><strong>Note for Review:</strong> Roll numbers (keys) must be unique, but two students may share the same name (values). <code>List</code>, <code>Set</code>, and <code>Queue</code> hold single values; only <code>Map</code> holds key-value pairs.</p>
+</blockquote>
+<p></p>
+<h3 class="atx" id="comparison">Comparison</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Order</th>
+<th>Duplicates</th>
+<th>Accessed by</th>
+<th>Examples</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>List</strong></td>
+<td>Insertion order kept</td>
+<td>Allowed</td>
+<td>Index</td>
+<td><code>ArrayList</code>, <code>LinkedList</code>, <code>Vector</code>, <code>Stack</code></td>
+</tr>
+<tr>
+<td><strong>Set</strong></td>
+<td>Not kept (<code>LinkedHashSet</code> keeps it)</td>
+<td>Not allowed</td>
+<td>Membership</td>
+<td><code>HashSet</code>, <code>TreeSet</code></td>
+</tr>
+<tr>
+<td><strong>Queue</strong></td>
+<td>FIFO (or priority)</td>
+<td>Allowed</td>
+<td>Head of the queue</td>
+<td><code>PriorityQueue</code>, <code>LinkedList</code></td>
+</tr>
+<tr>
+<td><strong>Map</strong></td>
+<td>Depends on class</td>
+<td>Keys unique, values may repeat</td>
+<td>Key</td>
+<td><code>HashMap</code>, <code>TreeMap</code></td>
+</tr>
+</tbody></table>
+<h3 class="atx" id="supplementary-declaration-syntax-preview">Supplementary: declaration syntax preview</h3>
+<pre><code class="fenced-code-block language-java"><span class="token keyword">import</span> <span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span><span class="token operator">*</span><span class="token punctuation">;</span>
+
+<span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">&gt;</span></span> names <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name">Set</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Integer</span><span class="token punctuation">&gt;</span></span> rollNumbers <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">HashSet</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Integer</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name">Queue</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">&gt;</span></span> feeCounter <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">LinkedList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name">Map</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Integer</span><span class="token punctuation">,</span> <span class="token class-name">String</span><span class="token punctuation">&gt;</span></span> students <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">HashMap</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Integer</span><span class="token punctuation">,</span> <span class="token class-name">String</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<p>Pattern: <code>InterfaceType&lt;ElementType&gt; variable = new ImplementationClass&lt;ElementType&gt;();</code></p>
+<ul>
+<li>The <strong>left side</strong> names the interface: what we want the collection to do.</li>
+<li>The <strong>right side</strong> names the class that does it, so changing from <code>ArrayList</code> to <code>LinkedList</code> changes only one word.</li>
+<li>The part in angle brackets is the <strong>generic type</strong>, explained next.</li>
+</ul>
+<hr>
+<h2 class="atx" id="15-generics">15. Generics</h2>
+<h3 class="atx" id="the-problem-8">The problem</h3>
+<p>Consider an <code>ArrayList</code> that is meant to hold only cars. Without any restriction it accepts <strong>anything</strong>: a car, a football, a scooter, a fish. Everything that goes in comes out as a plain <code>Object</code>, and the programmer must remember what each item really is.</p>
+<h3 class="atx" id="the-lectureand39s-picture">The lecture's picture</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Without generics</th>
+<th>With generics</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Going in</strong></td>
+<td>References to <code>Car</code>, <code>Football</code>, <code>Scooter</code>, <code>Fish</code> objects</td>
+<td>References to <strong>only</strong> <code>Car</code> objects</td>
+</tr>
+<tr>
+<td><strong>Coming out</strong></td>
+<td>References of type <code>Object</code></td>
+<td>References of type <code>Car</code></td>
+</tr>
+<tr>
+<td><strong>Declaration</strong></td>
+<td><code>ArrayList</code></td>
+<td><code>ArrayList&lt;Car&gt;</code></td>
+</tr>
+</tbody></table>
+<h3 class="atx" id="the-idea-and-the-analogy-4">The idea and the analogy</h3>
+<p>A generic collection is a <strong>labelled bin</strong>. A bin labelled "Cars" refuses a football at the door, and everything you pull out is guaranteed to be a car.</p>
+<h3 class="atx" id="without-generics">Without generics</h3>
+<pre><code class="fenced-code-block language-java"><span class="token keyword">import</span> <span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span><span class="token operator">*</span><span class="token punctuation">;</span>
+
+<span class="token keyword">class</span> <span class="token class-name">Car</span> <span class="token punctuation">{</span> <span class="token punctuation">}</span>
+<span class="token keyword">class</span> <span class="token class-name">Football</span> <span class="token punctuation">{</span> <span class="token punctuation">}</span>
+
+<span class="token keyword">class</span> <span class="token class-name">WithoutGenerics</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span> args<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">ArrayList</span> garage <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ArrayList</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        garage<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Car</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        garage<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Football</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token class-name">Car</span> first <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token class-name">Car</span><span class="token punctuation">)</span> garage<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">Car</span> second <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token class-name">Car</span><span class="token punctuation">)</span> garage<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<p>This <strong>compiles</strong> (with a warning about unchecked use), but the last line <strong>fails at runtime</strong> with a <code>ClassCastException</code>, because element <code>1</code> is a <code>Football</code>. The error is found only when the program runs.</p>
+<h3 class="atx" id="with-generics">With generics</h3>
+<p>General syntax:</p>
+<pre><code class="fenced-code-block language-java"><span class="token class-name">ClassName</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Type</span><span class="token punctuation">&gt;</span></span> variable <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ClassName</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Type</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<pre><code class="fenced-code-block language-java"><span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Car</span><span class="token punctuation">&gt;</span></span> cars <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Car</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+cars<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Car</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+cars<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Football</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>   <span class="token comment">// INVALID: compile-time error</span>
+<span class="token class-name">Car</span> first <span class="token operator">=</span> cars<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token comment">// no cast needed</span></code></pre>
+<p>The invalid line is rejected <strong>before the program runs</strong>, because a <code>Football</code> is not a <code>Car</code>. And <code>get(0)</code> already returns a <code>Car</code>, so no cast is required.</p>
+<p>(<code>add(...)</code> places an element in the list; <code>get(index)</code> fetches the element at a position, using the index-based access that <code>List</code> provides.)</p>
+<h3 class="atx" id="what-generics-give-you">What generics give you</h3>
+<table>
+<thead>
+<tr>
+<th>Benefit</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Type safety</strong></td>
+<td>Wrong types are caught at compile time instead of crashing at runtime</td>
+</tr>
+<tr>
+<td><strong>No casting</strong></td>
+<td>Elements come out already typed</td>
+</tr>
+<tr>
+<td><strong>Code reuse</strong></td>
+<td>The same <code>ArrayList</code> class works for <code>Car</code>, <code>String</code>, <code>Student</code>, and so on, by changing the type in angle brackets</td>
+</tr>
+</tbody></table>
+<h3 class="atx" id="generics-and-primitive-types">Generics and primitive types</h3>
+<p>The type in angle brackets must be a <strong>class</strong>, not a primitive type:</p>
+<pre><code class="fenced-code-block language-java"><span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token keyword">int</span><span class="token punctuation">&gt;</span></span> marks <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token keyword">int</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>         <span class="token comment">// INVALID</span>
+<span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Integer</span><span class="token punctuation">&gt;</span></span> marks <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Integer</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// valid</span></code></pre>
+<p>Each primitive has a matching <strong>wrapper class</strong> (for example <code>int</code> ↔ <code>Integer</code>, <code>double</code> ↔ <code>Double</code>). Wrapper classes are how primitive data is handled inside collections, and they are one of the module's stated objectives.</p>
+<hr>
+<h2 class="atx" id="16-collections-and-generics-summary">16. Collections and Generics Summary</h2>
+<ul>
+<li>The Java Collections Framework is a <strong>unified architecture</strong> of interfaces, implementation classes, and algorithms, found in <strong><code>java.util</code></strong>.</li>
+<li>Collections give <strong>dynamic size</strong>, <strong>ready-made data structures</strong>, and <strong>efficient operations</strong>, which fixed-size arrays do not.</li>
+<li>The four main interfaces are <strong>List</strong> (ordered, duplicates, index), <strong>Set</strong> (unique), <strong>Queue</strong> (FIFO), and <strong>Map</strong> (key → value).</li>
+<li><strong>Generics</strong> make collections type-safe and reusable.</li>
+</ul>
+<h3 class="atx" id="which-collection-for-which-job">Which collection for which job?</h3>
+<table>
+<thead>
+<tr>
+<th>If you need...</th>
+<th>Use</th>
+<th>Typical class</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Ordered items, duplicates allowed, access by position</td>
+<td><code>List</code></td>
+<td><code>ArrayList</code></td>
+</tr>
+<tr>
+<td>Only unique items</td>
+<td><code>Set</code></td>
+<td><code>HashSet</code> (or <code>TreeSet</code> for sorted)</td>
+</tr>
+<tr>
+<td>Items processed in arrival order (scheduling, resource management)</td>
+<td><code>Queue</code></td>
+<td><code>LinkedList</code>, <code>PriorityQueue</code></td>
+</tr>
+<tr>
+<td>Look up a value using a unique key</td>
+<td><code>Map</code></td>
+<td><code>HashMap</code> (or <code>TreeMap</code> for sorted keys)</td>
+</tr>
+</tbody></table>
+<h3 class="atx" id="package-map">Package map</h3>
+<table>
+<thead>
+<tr>
+<th>Package</th>
+<th>Used for</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>java.io</code></td>
+<td>Input and output</td>
+</tr>
+<tr>
+<td><code>java.lang</code></td>
+<td>Core language</td>
+</tr>
+<tr>
+<td><code>java.util</code></td>
+<td>Collections Framework</td>
+</tr>
+</tbody></table>
+<h3 class="atx" id="where-to-read-more">Where to read more</h3>
+<ul>
+<li><em>A Comprehensive Introduction to Object-Oriented Programming with Java</em></li>
+<li><em>Java: The Complete Reference</em></li>
+<li>NPTEL course material and open course material from universities; solve the exercises at the end of the relevant chapters.</li>
+</ul>
+<hr>
+<h2 class="atx" id="practice-questions">Practice Questions</h2>
+<ol>
+<li><p><strong>Find and fix the defects.</strong> The following program is meant to copy <code>source.txt</code> into <code>backup.txt</code>.</p>
+<pre><code class="fenced-code-block language-java"><span class="token keyword">import</span> <span class="token namespace">java<span class="token punctuation">.</span>io<span class="token punctuation">.</span></span><span class="token operator">*</span><span class="token punctuation">;</span>
+
+<span class="token keyword">class</span> <span class="token class-name">CopyFile</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span> args<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">FileReader</span> fr <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">FileReader</span><span class="token punctuation">(</span><span class="token string">"source.txt"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">FileWriter</span> fw <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">FileWriter</span><span class="token punctuation">(</span><span class="token string">"backup.txt"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">char</span> ch<span class="token punctuation">;</span>
+        <span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>ch <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">char</span><span class="token punctuation">)</span> fr<span class="token punctuation">.</span><span class="token function">read</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">!=</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            fw<span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span>ch<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<p>Identify every defect, classify each as a compile-time error, a runtime problem, or a logical problem, and explain what Java would do. Then write a corrected version that still copies the file character by character.</p>
+</li>
+<li><p><strong>Trace the object state.</strong> Study this class and program.</p>
+<pre><code class="fenced-code-block language-java"><span class="token keyword">class</span> <span class="token class-name">Employee</span> <span class="token keyword">implements</span> <span class="token class-name">Serializable</span> <span class="token punctuation">{</span>
+    <span class="token keyword">int</span> empId<span class="token punctuation">;</span>
+    <span class="token class-name">String</span> name<span class="token punctuation">;</span>
+    <span class="token keyword">transient</span> <span class="token keyword">double</span> bonus<span class="token punctuation">;</span>
+    <span class="token keyword">transient</span> <span class="token class-name">String</span> pin<span class="token punctuation">;</span>
+
+    <span class="token class-name">Employee</span><span class="token punctuation">(</span><span class="token keyword">int</span> empId<span class="token punctuation">,</span> <span class="token class-name">String</span> name<span class="token punctuation">,</span> <span class="token keyword">double</span> bonus<span class="token punctuation">,</span> <span class="token class-name">String</span> pin<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>empId <span class="token operator">=</span> empId<span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> name<span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>bonus <span class="token operator">=</span> bonus<span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>pin <span class="token operator">=</span> pin<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<p>An <code>Employee</code> created as <code>new Employee(7, "Meera", 5000.0, "4321")</code> is written to <code>emp.ser</code> with <code>ObjectOutputStream</code> and then read back with <code>ObjectInputStream</code>. Predict the values of all four fields after reading, and explain why. Then explain what happens, and at which stage, if <code>implements Serializable</code> is removed from the class.</p>
+</li>
+<li><p><strong>Bytes in, bytes out.</strong> A program writes the text <code>"Hi!"</code> to <code>msg.dat</code> using <code>FileOutputStream</code> and <code>getBytes()</code>. A second program reads the file with <code>FileInputStream</code> and, for each byte read, prints the <code>int</code> value followed by the <code>(char)</code> cast on one line. Predict the exact output and the size of the file in bytes. Then explain why printing <code>(char)</code> for each byte could fail to reproduce the original text if the text contained a character that needs more than one byte, and which stream family you would use instead.</p>
+</li>
+<li><p><strong>Choose the right container.</strong> A college system needs: (a) enrolment numbers that can never be repeated; (b) students waiting at the fee counter, served in the order they arrive; (c) a way to find a student's name quickly from a roll number; (d) a list of exam marks where the same mark may occur many times and any mark can be fetched by its position. For each requirement, name the interface and one suitable implementation class, justify your choice from the properties of the interface, and write the generic declaration of the variable. Which requirement would make <code>ArrayList</code> a poor choice, and why?</p>
+</li>
+<li><p><strong>Raw list versus generic list.</strong> Examine this code.</p>
+<pre><code class="fenced-code-block language-java"><span class="token class-name">ArrayList</span> marks <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ArrayList</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+marks<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token number">72.5</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+marks<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token number">88.0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+marks<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token string">"91"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">double</span> total <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token class-name">Double</span><span class="token punctuation">)</span> marks<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span>
+             <span class="token operator">+</span> <span class="token punctuation">(</span><span class="token class-name">Double</span><span class="token punctuation">)</span> marks<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span>
+             <span class="token operator">+</span> <span class="token punctuation">(</span><span class="token class-name">Double</span><span class="token punctuation">)</span> marks<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<p>State whether the problem is detected at compile time or at runtime, which line causes it, and why. Rewrite the declaration using generics and explain exactly what changes about when and where the mistake is reported. Finally, explain why <code>ArrayList&lt;double&gt;</code> is not a valid alternative and what must be used instead.</p>
+</li>
+</ol>
+</article>
+</body>
+</html>

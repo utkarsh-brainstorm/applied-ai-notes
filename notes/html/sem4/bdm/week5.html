@@ -1,0 +1,539 @@
+
+<style id="libron-font-injection">
+@font-face {
+  font-family: 'Libron';
+  src: url('../../../../Libron_Web/Libron-Regular.woff2') format('woff2'),
+       url('../../../../Libron_Web/Libron-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Libron';
+  src: url('../../../../Libron_Web/Libron-Bold.woff2') format('woff2'),
+       url('../../../../Libron_Web/Libron-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Libron';
+  src: url('../../../../Libron_Web/Libron-Italic.woff2') format('woff2'),
+       url('../../../../Libron_Web/Libron-Italic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Libron';
+  src: url('../../../../Libron_Web/Libron-BoldItalic.woff2') format('woff2'),
+       url('../../../../Libron_Web/Libron-BoldItalic.ttf') format('truetype');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+html, body, .markdown-body, h1, h2, h3, h4, h5, h6, p, span, li, a, td, th {
+  font-family: 'Libron', serif, -apple-system, BlinkMacSystemFont !important;
+}
+
+body {
+  padding: 1.5rem 2rem !important;
+  max-width: 900px !important;
+  margin: 0 auto !important;
+}
+
+/* Dark mode theme styles inside iframe */
+[data-theme="dark"] html,
+[data-theme="dark"] body,
+[data-theme="dark"] .markdown-body {
+  background-color: #0a0a0a !important;
+  color: #ededed !important;
+}
+[data-theme="dark"] .markdown-body table tr {
+  background-color: #121212 !important;
+  border-color: #262626 !important;
+}
+[data-theme="dark"] .markdown-body table tr:nth-child(2n) {
+  background-color: #181818 !important;
+}
+[data-theme="dark"] .markdown-body table th,
+[data-theme="dark"] .markdown-body table td {
+  border-color: #2e2e2e !important;
+}
+[data-theme="dark"] .markdown-body pre,
+[data-theme="dark"] .markdown-body code {
+  background-color: #141414 !important;
+  color: #f0f0f0 !important;
+  border-color: #2a2a2a !important;
+}
+[data-theme="dark"] .markdown-body blockquote {
+  color: #999999 !important;
+  border-left-color: #444444 !important;
+}
+[data-theme="dark"] .markdown-body a {
+  color: #58a6ff !important;
+}
+[data-theme="dark"] .markdown-body hr {
+  background-color: #262626 !important;
+}
+</style>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <style>
+  @font-face {
+  font-family: octicons-link;
+  src: url(data:font/woff;charset=utf-8;base64,d09GRgABAAAAAAZwABAAAAAACFQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABEU0lHAAAGaAAAAAgAAAAIAAAAAUdTVUIAAAZcAAAACgAAAAoAAQAAT1MvMgAAAyQAAABJAAAAYFYEU3RjbWFwAAADcAAAAEUAAACAAJThvmN2dCAAAATkAAAABAAAAAQAAAAAZnBnbQAAA7gAAACyAAABCUM+8IhnYXNwAAAGTAAAABAAAAAQABoAI2dseWYAAAFsAAABPAAAAZwcEq9taGVhZAAAAsgAAAA0AAAANgh4a91oaGVhAAADCAAAABoAAAAkCA8DRGhtdHgAAAL8AAAADAAAAAwGAACfbG9jYQAAAsAAAAAIAAAACABiATBtYXhwAAACqAAAABgAAAAgAA8ASm5hbWUAAAToAAABQgAAAlXu73sOcG9zdAAABiwAAAAeAAAAME3QpOBwcmVwAAAEbAAAAHYAAAB/aFGpk3jaTY6xa8JAGMW/O62BDi0tJLYQincXEypYIiGJjSgHniQ6umTsUEyLm5BV6NDBP8Tpts6F0v+k/0an2i+itHDw3v2+9+DBKTzsJNnWJNTgHEy4BgG3EMI9DCEDOGEXzDADU5hBKMIgNPZqoD3SilVaXZCER3/I7AtxEJLtzzuZfI+VVkprxTlXShWKb3TBecG11rwoNlmmn1P2WYcJczl32etSpKnziC7lQyWe1smVPy/Lt7Kc+0vWY/gAgIIEqAN9we0pwKXreiMasxvabDQMM4riO+qxM2ogwDGOZTXxwxDiycQIcoYFBLj5K3EIaSctAq2kTYiw+ymhce7vwM9jSqO8JyVd5RH9gyTt2+J/yUmYlIR0s04n6+7Vm1ozezUeLEaUjhaDSuXHwVRgvLJn1tQ7xiuVv/ocTRF42mNgZGBgYGbwZOBiAAFGJBIMAAizAFoAAABiAGIAznjaY2BkYGAA4in8zwXi+W2+MjCzMIDApSwvXzC97Z4Ig8N/BxYGZgcgl52BCSQKAA3jCV8CAABfAAAAAAQAAEB42mNgZGBg4f3vACQZQABIMjKgAmYAKEgBXgAAeNpjYGY6wTiBgZWBg2kmUxoDA4MPhGZMYzBi1AHygVLYQUCaawqDA4PChxhmh/8ODDEsvAwHgMKMIDnGL0x7gJQCAwMAJd4MFwAAAHjaY2BgYGaA4DAGRgYQkAHyGMF8NgYrIM3JIAGVYYDT+AEjAwuDFpBmA9KMDEwMCh9i/v8H8sH0/4dQc1iAmAkALaUKLgAAAHjaTY9LDsIgEIbtgqHUPpDi3gPoBVyRTmTddOmqTXThEXqrob2gQ1FjwpDvfwCBdmdXC5AVKFu3e5MfNFJ29KTQT48Ob9/lqYwOGZxeUelN2U2R6+cArgtCJpauW7UQBqnFkUsjAY/kOU1cP+DAgvxwn1chZDwUbd6CFimGXwzwF6tPbFIcjEl+vvmM/byA48e6tWrKArm4ZJlCbdsrxksL1AwWn/yBSJKpYbq8AXaaTb8AAHja28jAwOC00ZrBeQNDQOWO//sdBBgYGRiYWYAEELEwMTE4uzo5Zzo5b2BxdnFOcALxNjA6b2ByTswC8jYwg0VlNuoCTWAMqNzMzsoK1rEhNqByEyerg5PMJlYuVueETKcd/89uBpnpvIEVomeHLoMsAAe1Id4AAAAAAAB42oWQT07CQBTGv0JBhagk7HQzKxca2sJCE1hDt4QF+9JOS0nbaaYDCQfwCJ7Au3AHj+LO13FMmm6cl7785vven0kBjHCBhfpYuNa5Ph1c0e2Xu3jEvWG7UdPDLZ4N92nOm+EBXuAbHmIMSRMs+4aUEd4Nd3CHD8NdvOLTsA2GL8M9PODbcL+hD7C1xoaHeLJSEao0FEW14ckxC+TU8TxvsY6X0eLPmRhry2WVioLpkrbp84LLQPGI7c6sOiUzpWIWS5GzlSgUzzLBSikOPFTOXqly7rqx0Z1Q5BAIoZBSFihQYQOOBEdkCOgXTOHA07HAGjGWiIjaPZNW13/+lm6S9FT7rLHFJ6fQbkATOG1j2OFMucKJJsxIVfQORl+9Jyda6Sl1dUYhSCm1dyClfoeDve4qMYdLEbfqHf3O/AdDumsjAAB42mNgYoAAZQYjBmyAGYQZmdhL8zLdDEydARfoAqIAAAABAAMABwAKABMAB///AA8AAQAAAAAAAAAAAAAAAAABAAAAAA==) format('woff');
+}
+
+.markdown-body .octicon {
+  display: inline-block;
+  fill: currentColor;
+  vertical-align: text-bottom;
+}
+
+.markdown-body .anchor {
+  float: left;
+  line-height: 1;
+  margin-left: -20px;
+  padding-right: 4px;
+}
+
+.markdown-body .anchor:focus {
+  outline: none;
+}
+
+.markdown-body h1 .octicon-link,
+.markdown-body h2 .octicon-link,
+.markdown-body h3 .octicon-link,
+.markdown-body h4 .octicon-link,
+.markdown-body h5 .octicon-link,
+.markdown-body h6 .octicon-link {
+  color: #1b1f23;
+  vertical-align: middle;
+  visibility: hidden;
+}
+
+.markdown-body h1:hover .anchor,
+.markdown-body h2:hover .anchor,
+.markdown-body h3:hover .anchor,
+.markdown-body h4:hover .anchor,
+.markdown-body h5:hover .anchor,
+.markdown-body h6:hover .anchor {
+  text-decoration: none;
+}
+
+.markdown-body h1:hover .anchor .octicon-link,
+.markdown-body h2:hover .anchor .octicon-link,
+.markdown-body h3:hover .anchor .octicon-link,
+.markdown-body h4:hover .anchor .octicon-link,
+.markdown-body h5:hover .anchor .octicon-link,
+.markdown-body h6:hover .anchor .octicon-link {
+  visibility: visible;
+}
+
+.markdown-body {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  color: #24292e;
+  line-height: 1.5;
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
+  font-size: 16px;
+  line-height: 1.5;
+  word-wrap: break-word;
+}
+
+.markdown-body .pl-c {
+  color: #6a737d;
+}
+
+.markdown-body .pl-c1,
+.markdown-body .pl-s .pl-v {
+  color: #005cc5;
+}
+
+.markdown-body .pl-e,
+.markdown-body .pl-en {
+  color: #6f42c1;
+}
+
+.markdown-body .pl-s .pl-s1,
+.markdown-body .pl-smi {
+  color: #24292e;
+}
+
+.markdown-body .pl-ent {
+  color: #22863a;
+}
+
+.markdown-body .pl-k {
+  color: #d73a49;
+}
+
+.markdown-body .pl-pds,
+.markdown-body .pl-s,
+.markdown-body .pl-s .pl-pse .pl-s1,
+.markdown-body .pl-sr,
+.markdown-body .pl-sr .pl-cce,
+.markdown-body .pl-sr .pl-sra,
+.markdown-body .pl-sr .pl-sre {
+  color: #032f62;
+}
+
+.markdown-body .pl-smw,
+.markdown-body .pl-v {
+  color: #e36209;
+}
+
+.markdown-body .pl-bu {
+  color: #b31d28;
+}
+
+.markdown-body .pl-ii {
+  background-color: #b31d28;
+  color: #fafbfc;
+}
+
+.markdown-body .pl-c2 {
+  background-color: #d73a49;
+  color: #fafbfc;
+}
+
+.markdown-body .pl-c2:before {
+  content: "</span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mclose">)</span><span style="margin-right:0.2778em;" class="mspace"></span><span class="mrel">=</span><span style="margin-right:0.2778em;" class="mspace"></span></span><span class="base"><span style="height:3.1304em;vertical-align:-1.3021em;" class="strut"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span style="height:1.8283em;" class="vlist"><span style="top:-1.8479em;margin-left:0em;"><span style="height:3.05em;" class="pstrut"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span style="margin-right:0.03148em;" class="mord mathnormal mtight">k</span><span class="mrel mtight">=</span><span class="mord mtight">0</span></span></span></span><span style="top:-3.05em;"><span style="height:3.05em;" class="pstrut"></span><span><span class="mop op-symbol large-op">∑</span></span></span><span style="top:-4.3em;margin-left:0em;"><span style="height:3.05em;" class="pstrut"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span style="margin-right:0.10903em;" class="mord mathnormal mtight">N</span><span class="mbin mtight">−</span><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span style="height:1.3021em;" class="vlist"><span></span></span></span></span></span><span style="margin-right:0.1667em;" class="mspace"></span><span style="margin-right:0.07847em;" class="mord mathnormal">X</span><span class="mopen">(</span><span style="margin-right:0.03148em;" class="mord mathnormal">k</span><span class="mclose">)</span><span style="margin-right:0.1667em;" class="mspace"></span><span class="mord"><span class="mord mathnormal">e</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span style="height:0.938em;" class="vlist"><span style="top:-3.113em;margin-right:0.05em;"><span style="height:2.7em;" class="pstrut"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span style="margin-right:0.1952em;" class="mspace mtight"></span><span class="mord mathnormal mtight">i</span><span style="margin-right:0.1952em;" class="mspace mtight"></span><span class="mord mtight">2</span><span style="margin-right:0.03148em;" class="mord mathnormal mtight">πnk</span><span class="mord mtight">/</span><span style="margin-right:0.10903em;" class="mord mathnormal mtight">N</span></span></span></span></span></span></span></span></span></span></span></span></span><p>Normally this sum would run over all <span class="katex"><span class="katex-mathml"></span><span aria-hidden="true" class="katex-html"><span class="base"><span style="height:0.6833em;" class="strut"></span><span style="margin-right:0.10903em;" class="mord mathnormal">N</span><span style="margin-right:0.2778em;" class="mspace"></span><span class="mrel">=</span><span style="margin-right:0.2778em;" class="mspace"></span></span><span class="base"><span style="height:0.6444em;" class="strut"></span><span class="mord">8</span></span></span></span> values of <span class="katex"><span class="katex-mathml"></span><span aria-hidden="true" class="katex-html"><span class="base"><span style="height:0.6944em;" class="strut"></span><span style="margin-right:0.03148em;" class="mord mathnormal">k</span></span></span></span>. But since only <span class="katex"><span class="katex-mathml"></span><span aria-hidden="true" class="katex-html"><span class="base"><span style="height:1em;vertical-align:-0.25em;" class="strut"></span><span style="margin-right:0.07847em;" class="mord mathnormal">X</span><span class="mopen">(</span><span class="mord">0</span><span class="mclose">)</span></span></span></span>, <span class="katex"><span class="katex-mathml"></span><span aria-hidden="true" class="katex-html"><span class="base"><span style="height:1em;vertical-align:-0.25em;" class="strut"></span><span style="margin-right:0.07847em;" class="mord mathnormal">X</span><span class="mopen">(</span><span class="mord">1</span><span class="mclose">)</span></span></span></span>, and <span class="katex"><span class="katex-mathml"></span><span aria-hidden="true" class="katex-html"><span class="base"><span style="height:1em;vertical-align:-0.25em;" class="strut"></span><span style="margin-right:0.07847em;" class="mord mathnormal">X</span><span class="mopen">(</span><span class="mord">7</span><span class="mclose">)</span></span></span></span> were stored, the sum is <strong>truncated</strong> — it uses only those coefficients (the "<span class="katex"><span class="katex-mathml"></span><span aria-hidden="true" class="katex-html"><span class="base"><span style="height:0.6944em;" class="strut"></span><span style="margin-right:0.03148em;" class="mord mathnormal">k</span><span style="margin-right:0.2778em;" class="mspace"></span><span class="mrel">=</span><span style="margin-right:0.2778em;" class="mspace"></span></span><span class="base"><span style="height:0.6444em;" class="strut"></span><span class="mord">1</span></span></span></span>" term automatically covers its conjugate partner <span class="katex"><span class="katex-mathml"></span><span aria-hidden="true" class="katex-html"><span class="base"><span style="height:0.6944em;" class="strut"></span><span style="margin-right:0.03148em;" class="mord mathnormal">k</span><span style="margin-right:0.2778em;" class="mspace"></span><span class="mrel">=</span><span style="margin-right:0.2778em;" class="mspace"></span></span><span class="base"><span style="height:0.6444em;" class="strut"></span><span class="mord">7</span></span></span></span> through the symmetry relation). The reconstruction is denoted <span class="katex"><span class="katex-mathml"></span><span aria-hidden="true" class="katex-html"><span class="base"><span style="height:1em;vertical-align:-0.25em;" class="strut"></span><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span style="height:0.6944em;" class="vlist"><span style="top:-3em;"><span style="height:3em;" class="pstrut"></span><span class="mord mathnormal">x</span></span><span style="top:-3em;"><span style="height:3em;" class="pstrut"></span><span style="left:-0.2222em;" class="accent-body"><span class="mord"></span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mclose">)</span><span style="margin-right:0.2778em;" class="mspace"></span><span class="mrel">=</span><span style="margin-right:0.2778em;" class="mspace"></span></span><span class="base"><span style="height:1em;vertical-align:-0.25em;" class="strut"></span><span class="mopen">{</span><span class="mord">2.1</span><span class="mpunct">,</span><span class="mspace">&nbsp;</span><span style="margin-right:0.1667em;" class="mspace"></span><span class="mord">2.9</span><span class="mpunct">,</span><span class="mspace">&nbsp;</span><span style="margin-right:0.1667em;" class="mspace"></span><span class="mord">3.8</span><span class="mpunct">,</span><span class="mspace">&nbsp;</span><span style="margin-right:0.1667em;" class="mspace"></span><span class="mord">4.0</span><span class="mpunct">,</span><span class="mspace">&nbsp;</span><span style="margin-right:0.1667em;" class="mspace"></span><span class="mord">3.1</span><span class="mpunct">,</span><span class="mspace">&nbsp;</span><span style="margin-right:0.1667em;" class="mspace"></span><span class="mord">2.0</span><span class="mpunct">,</span><span class="mspace">&nbsp;</span><span style="margin-right:0.1667em;" class="mspace"></span><span class="mord">1.1</span><span class="mpunct">,</span><span class="mspace">&nbsp;</span><span style="margin-right:0.1667em;" class="mspace"></span><span class="mord">0.9</span><span class="mclose">}</span></span></span></span></span><p>Compare this side by side with the true original signal:</p>
+<table>
+<thead>
+<tr>
+<th>Index <span class="katex"><span class="katex-mathml"></span><span aria-hidden="true" class="katex-html"><span class="base"><span style="height:0.4306em;" class="strut"></span><span class="mord mathnormal">n</span></span></span></span></th>
+<th>Original <span class="katex"><span class="katex-mathml"></span><span aria-hidden="true" class="katex-html"><span class="base"><span style="height:1em;vertical-align:-0.25em;" class="strut"></span><span class="mord mathnormal">x</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mclose">)</span></span></span></span></th>
+<th>Reconstructed <span class="katex"><span class="katex-mathml"></span><span aria-hidden="true" class="katex-html"><span class="base"><span style="height:1em;vertical-align:-0.25em;" class="strut"></span><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span style="height:0.6944em;" class="vlist"><span style="top:-3em;"><span style="height:3em;" class="pstrut"></span><span class="mord mathnormal">x</span></span><span style="top:-3em;"><span style="height:3em;" class="pstrut"></span><span style="left:-0.2222em;" class="accent-body"><span class="mord"></span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mclose">)</span></span></span></span> in the table above is the cost.</p>
+<p>This produces a fundamental <strong>trade-off</strong>:</p>
+<span class="katex-display"><span class="katex"><span class="katex-mathml"></span><span aria-hidden="true" class="katex-html"><span class="base"><span style="height:0.8889em;vertical-align:-0.1944em;" class="strut"></span><span class="mord text"><span class="mord">Accuracy&nbsp;of&nbsp;Reconstruction</span></span><span style="margin-right:1em;" class="mspace"></span><span style="margin-right:0.2778em;" class="mspace"></span><span class="mrel">⟺</span><span style="margin-right:1em;" class="mspace"></span><span style="margin-right:0.2778em;" class="mspace"></span></span><span class="base"><span style="height:1em;vertical-align:-0.25em;" class="strut"></span><span class="mord text"><span class="mord">Storage&nbsp;/&nbsp;Data&nbsp;Reduction</span></span></span></span></span></span><p>There is no universal rule dictating exactly how many coefficients to keep. Keeping more coefficients (e.g., adding <span class="katex"><span class="katex-mathml"></span><span aria-hidden="true" class="katex-html"><span class="base"><span style="height:1em;vertical-align:-0.25em;" class="strut"></span><span style="margin-right:0.07847em;" class="mord mathnormal">X</span><span class="mopen">(</span><span class="mord">2</span><span class="mclose">)</span></span></span></span> and <span class="katex"><span class="katex-mathml"></span><span aria-hidden="true" class="katex-html"><span class="base"><span style="height:1em;vertical-align:-0.25em;" class="strut"></span><span style="margin-right:0.07847em;" class="mord mathnormal">X</span><span class="mopen">(</span><span class="mord">6</span><span class="mclose">)</span></span></span></span>, which would cost 2 more numbers since <span class="katex"><span class="katex-mathml"></span><span aria-hidden="true" class="katex-html"><span class="base"><span style="height:1em;vertical-align:-0.25em;" class="strut"></span><span style="margin-right:0.07847em;" class="mord mathnormal">X</span><span class="mopen">(</span><span class="mord">2</span><span class="mclose">)</span></span></span></span> is complex) reduces the reconstruction error but also reduces the compression ratio — moving from 3 numbers to 5 numbers, for instance, gives a smaller error but a smaller percentage saving. The decision boils down to a practical question: <em>how much error can be tolerated?</em> If 10% error is acceptable, one might settle for 3 numbers; if higher fidelity is required, more coefficients must be retained.</p>
+<div class="plantuml"><img src="https://www.plantuml.com/plantuml/svg/~1U5vbpx5g0p4CWE7TJw5UbXOka5nfkvNGfO7UbiL35k7J-GosTSXoIz--v18AlKv2m_yX7OgYQ4tHtCs2FY54_EQgK18fPZIHHWLbaE0dXI48EGsSpMLYzf6W-I2QuH4SqpW65oXhEUTxksl1xbkmBmyDO06TX0Ws_SLvYvN-2Kzh0OS1RDU2VRuAO_Zy0zH23Wj1Smn-8W77QHOg9N0-vnx5am29i2mrLzt3veGnSJQ_QSzVw_AKCCPrsjqkVnUYRCprcUtsTM7DSjbjwyo1yb1J_07ELtSo"></div>
+<hr>
+<h2 class="atx" id="7-when-not-to-use-lossy-reduction--the-medical-data-warning">7. When NOT to Use Lossy Reduction — The Medical Data Warning</h2>
+<p>This is the most important caveat of the whole DFT-based approach: <strong>it is a lossy method</strong>, and lossy methods are dangerous when applied carelessly to sensitive data.</p>
+<p>Consider a patient represented as a data object:</p>
+<span class="katex-display"><span class="katex"><span class="katex-mathml"></span><span aria-hidden="true" class="katex-html"><span class="base"><span style="height:0.6833em;" class="strut"></span><span class="mord text"><span class="mord">Patient</span></span><span style="margin-right:0.2778em;" class="mspace"></span><span class="mrel">→</span><span style="margin-right:0.2778em;" class="mspace"></span></span><span class="base"><span style="height:1em;vertical-align:-0.25em;" class="strut"></span><span class="mord mathnormal">x</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mclose">)</span><span style="margin-right:0.2778em;" class="mspace"></span><span class="mrel">=</span><span style="margin-right:0.2778em;" class="mspace"></span></span><span class="base"><span style="height:1em;vertical-align:-0.25em;" class="strut"></span><span class="mopen">{</span><span class="mord text"><span class="mord">BP</span></span><span class="mpunct">,</span><span class="mspace">&nbsp;</span><span style="margin-right:0.1667em;" class="mspace"></span><span class="mord text"><span class="mord">HbA1c</span></span><span class="mpunct">,</span><span class="mspace">&nbsp;</span><span style="margin-right:0.1667em;" class="mspace"></span><span class="mord text"><span class="mord">Weight</span></span><span class="mpunct">,</span><span class="mspace">&nbsp;</span><span style="margin-right:0.1667em;" class="mspace"></span><span class="mord text"><span class="mord">Height</span></span><span class="mpunct">,</span><span style="margin-right:0.1667em;" class="mspace"></span><span class="minner">…</span><span style="margin-right:0.1667em;" class="mspace"></span><span class="mclose">}</span></span></span></span></span><p>Suppose this vector has 15 numbers describing the patient's vitals and lab values, and the goal is to reduce storage. Applying a DFT here and keeping only the top few coefficients might introduce something like a 10% error.</p>
+<div class="plantuml"><img src="https://www.plantuml.com/plantuml/svg/~1U5vDZy5An40CXk_p5B55w4Ats8D7PLr4zk2XgE2bb-nCMWTdCijC1bn4drqwsuEd_84lNv9T4eoIlLDNfuYpHt1u3baWUH9aL8uc0GaGxVmXO6maBJQmGYqXGZMWM6Af01ESBbaj2FBi2AglXZTm1z_xeON3yQ7NxSZljAXQEAorwxgVaPl-5ZZx8yMqAJQ3Wb0_B-pUPVflVNnw6xbn8QNpoau2zIiw7rZbH1eJGVL29cioHJHoyzlVN0F56E9bPdco7Yn_AhKU3jljVQ5LsLswIPIPfEIGHUs8JVRk3opoPhu"></div>
+<p>A 10% error on a blood pressure reading or an HbA1c level is not a harmless rounding artifact — it can distort downstream <strong>medical diagnosis</strong>. Therefore:</p>
+<blockquote>
+<p><strong>Rule of thumb:</strong> Do <strong>not</strong> apply DFT — or <em>any</em> lossy data reduction method — to sensitive data such as medical records. If storage reduction is genuinely required for such data, only <strong>lossless</strong> methods should be considered (though these typically achieve far lower compression efficiency, which is why they are not the focus of this discussion).</p>
+</blockquote>
+<p>The broader lesson: before reducing any dataset, first <strong>decide whether reduction is even appropriate</strong> for that data, and only then choose a method.</p>
+<div class="plantuml"><img src="https://www.plantuml.com/plantuml/svg/~1U5vLZq5Bmq0GXU_xAvxfHQ7HUm_QOb64KWLx4NAP9cEok3kRximA-VUIu46F3xxtFTvMZRAL6DpLcAcFX41JAWQDR2Ja0dyQB27xVZ1qFdDhFeahoYqfetfHT6G4PL5l_fll6XbyFzHgzCNwK84K5pVtIFh0gFO9nzSJQ1p3r4X8gXCoTsKHBxWahDufn2H_UuV_P2FN-wVJ6c-FkpNOsjkRHY9DE3EeRNaqEWTUT1ChLeVvm7Dc5kSkgElxUMM33zRVE5CR79FRidGbXX_Ncs3B"></div>
+<blockquote>
+<p><strong>Note for Review:</strong> Exam questions often test <em>judgment</em>, not just formulas — expect a scenario question asking "should you apply DFT here?" The correct instinct is always: check whether losing information is acceptable for that domain before reaching for a compression technique.</p>
+</blockquote>
+<hr>
+<h2 class="atx" id="8-enter-pca--the-height-andamp-weight-story">8. Enter PCA — The Height &amp; Weight Story</h2>
+<p>Having seen one method (DFT) that reduces data by exploiting <em>frequency-domain energy concentration</em>, the lecture now introduces a second, conceptually different method: <strong>Principal Component Analysis (PCA)</strong>.</p>
+<span class="katex-display"><span class="katex"><span class="katex-mathml"></span><span aria-hidden="true" class="katex-html"><span class="base"><span style="height:1em;vertical-align:-0.25em;" class="strut"></span><span class="mord text"><span class="mord">Principal&nbsp;Component&nbsp;Analysis&nbsp;(PCA)</span></span><span style="margin-right:0.2778em;" class="mspace"></span><span class="mrel">⟶</span><span style="margin-right:0.2778em;" class="mspace"></span></span><span class="base"><span style="height:0.6944em;" class="strut"></span><span class="mord text"><span class="mord">Data&nbsp;Reduction</span></span></span></span></span></span><p>To build intuition, consider a toy dataset of six people, each described by two (deliberately vague, adjective-based) variables — height and weight:</p>
+<table>
+<thead>
+<tr>
+<th>Person</th>
+<th>Height</th>
+<th>Weight</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>A</td>
+<td>Short</td>
+<td>Light</td>
+</tr>
+<tr>
+<td>B</td>
+<td>Short</td>
+<td>Light</td>
+</tr>
+<tr>
+<td>C</td>
+<td>Medium</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>D</td>
+<td>Medium</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>E</td>
+<td>Tall</td>
+<td>Heavy</td>
+</tr>
+<tr>
+<td>F</td>
+<td>Tall</td>
+<td>Heavy</td>
+</tr>
+</tbody></table>
+<p>If this data were plotted with height on one axis and weight on the other, a clear pattern emerges: as height increases, weight increases too. All six people line up roughly along a <strong>diagonal direction</strong> in this 2D space.</p>
+<div class="vega-lite vega-embed" role="graphics-document" aria-roledescription="visualization" aria-label="Height vs Weight showing the direction of maximum variation" style="cursor: default;"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="marks" width="377" height="330" viewBox="0 0 377 330" style="background-color: rgb(255, 255, 255);"><g fill="none" stroke-miterlimit="10" transform="translate(50,29)"><g class="mark-group role-frame root" role="graphics-object" aria-roledescription="group mark container"><g transform="translate(0,0)"><path class="background" aria-hidden="true" d="M0.5,0.5h320v260h-320Z" fill="transparent" stroke="#ddd"></path><g><g class="mark-group role-axis" aria-hidden="true"><g transform="translate(0.5,260.5)"><path class="background" aria-hidden="true" d="M0,0h0v0h0Z" pointer-events="none"></path><g><g class="mark-rule role-axis-grid" pointer-events="none"><line transform="translate(0,-260)" x2="0" y2="260" stroke="#ddd" stroke-width="1" opacity="1"></line><line transform="translate(32,-260)" x2="0" y2="260" stroke="#ddd" stroke-width="1" opacity="1"></line><line transform="translate(64,-260)" x2="0" y2="260" stroke="#ddd" stroke-width="1" opacity="1"></line><line transform="translate(96,-260)" x2="0" y2="260" stroke="#ddd" stroke-width="1" opacity="1"></line><line transform="translate(128,-260)" x2="0" y2="260" stroke="#ddd" stroke-width="1" opacity="1"></line><line transform="translate(160,-260)" x2="0" y2="260" stroke="#ddd" stroke-width="1" opacity="1"></line><line transform="translate(192,-260)" x2="0" y2="260" stroke="#ddd" stroke-width="1" opacity="1"></line><line transform="translate(224,-260)" x2="0" y2="260" stroke="#ddd" stroke-width="1" opacity="1"></line><line transform="translate(256,-260)" x2="0" y2="260" stroke="#ddd" stroke-width="1" opacity="1"></line><line transform="translate(288,-260)" x2="0" y2="260" stroke="#ddd" stroke-width="1" opacity="1"></line><line transform="translate(320,-260)" x2="0" y2="260" stroke="#ddd" stroke-width="1" opacity="1"></line></g></g><path class="foreground" aria-hidden="true" d="" pointer-events="none" display="none"></path></g></g><g class="mark-group role-axis" aria-hidden="true"><g transform="translate(0.5,0.5)"><path class="background" aria-hidden="true" d="M0,0h0v0h0Z" pointer-events="none"></path><g><g class="mark-rule role-axis-grid" pointer-events="none"><line transform="translate(0,260)" x2="320" y2="0" stroke="#ddd" stroke-width="1" opacity="1"></line><line transform="translate(0,208)" x2="320" y2="0" stroke="#ddd" stroke-width="1" opacity="1"></line><line transform="translate(0,156)" x2="320" y2="0" stroke="#ddd" stroke-width="1" opacity="1"></line><line transform="translate(0,104)" x2="320" y2="0" stroke="#ddd" stroke-width="1" opacity="1"></line><line transform="translate(0,52)" x2="320" y2="0" stroke="#ddd" stroke-width="1" opacity="1"></line><line transform="translate(0,0)" x2="320" y2="0" stroke="#ddd" stroke-width="1" opacity="1"></line></g></g><path class="foreground" aria-hidden="true" d="" pointer-events="none" display="none"></path></g></g><g class="mark-group role-axis" role="graphics-symbol" aria-roledescription="axis" aria-label="X-axis titled 'Height' for a linear scale with values from 0 to 5"><g transform="translate(0.5,260.5)"><path class="background" aria-hidden="true" d="M0,0h0v0h0Z" pointer-events="none"></path><g><g class="mark-rule role-axis-tick" pointer-events="none"><line transform="translate(0,0)" x2="0" y2="3" stroke="#888" stroke-width="1" opacity="1"></line><line transform="translate(32,0)" x2="0" y2="3" stroke="#888" stroke-width="1" opacity="1"></line><line transform="translate(64,0)" x2="0" y2="3" stroke="#888" stroke-width="1" opacity="1"></line><line transform="translate(96,0)" x2="0" y2="3" stroke="#888" stroke-width="1" opacity="1"></line><line transform="translate(128,0)" x2="0" y2="3" stroke="#888" stroke-width="1" opacity="1"></line><line transform="translate(160,0)" x2="0" y2="3" stroke="#888" stroke-width="1" opacity="1"></line><line transform="translate(192,0)" x2="0" y2="3" stroke="#888" stroke-width="1" opacity="1"></line><line transform="translate(224,0)" x2="0" y2="3" stroke="#888" stroke-width="1" opacity="1"></line><line transform="translate(256,0)" x2="0" y2="3" stroke="#888" stroke-width="1" opacity="1"></line><line transform="translate(288,0)" x2="0" y2="3" stroke="#888" stroke-width="1" opacity="1"></line><line transform="translate(320,0)" x2="0" y2="3" stroke="#888" stroke-width="1" opacity="1"></line></g><g class="mark-text role-axis-label" pointer-events="none"><text text-anchor="start" transform="translate(0,16)" font-family="Benton Gothic, sans-serif" font-size="11.5px" font-weight="normal" fill="#000" opacity="1">0.0</text><text text-anchor="middle" transform="translate(32,16)" font-family="Benton Gothic, sans-serif" font-size="11.5px" font-weight="normal" fill="#000" opacity="1">0.5</text><text text-anchor="middle" transform="translate(64,16)" font-family="Benton Gothic, sans-serif" font-size="11.5px" font-weight="normal" fill="#000" opacity="1">1.0</text><text text-anchor="middle" transform="translate(96,16)" font-family="Benton Gothic, sans-serif" font-size="11.5px" font-weight="normal" fill="#000" opacity="1">1.5</text><text text-anchor="middle" transform="translate(128,16)" font-family="Benton Gothic, sans-serif" font-size="11.5px" font-weight="normal" fill="#000" opacity="1">2.0</text><text text-anchor="middle" transform="translate(160,16)" font-family="Benton Gothic, sans-serif" font-size="11.5px" font-weight="normal" fill="#000" opacity="1">2.5</text><text text-anchor="middle" transform="translate(192,16)" font-family="Benton Gothic, sans-serif" font-size="11.5px" font-weight="normal" fill="#000" opacity="1">3.0</text><text text-anchor="middle" transform="translate(224,16)" font-family="Benton Gothic, sans-serif" font-size="11.5px" font-weight="normal" fill="#000" opacity="1">3.5</text><text text-anchor="middle" transform="translate(256,16)" font-family="Benton Gothic, sans-serif" font-size="11.5px" font-weight="normal" fill="#000" opacity="1">4.0</text><text text-anchor="middle" transform="translate(288,16)" font-family="Benton Gothic, sans-serif" font-size="11.5px" font-weight="normal" fill="#000" opacity="1">4.5</text><text text-anchor="end" transform="translate(320,16)" font-family="Benton Gothic, sans-serif" font-size="11.5px" font-weight="normal" fill="#000" opacity="1">5.0</text></g><g class="mark-rule role-axis-domain" pointer-events="none"><line transform="translate(0,0)" x2="320" y2="0" stroke="#888" stroke-width="1" opacity="1"></line></g><g class="mark-text role-axis-title" pointer-events="none"><text text-anchor="middle" transform="translate(160,32.5)" font-family="Benton Gothic Bold, sans-serif" font-size="13px" font-weight="normal" fill="#000" opacity="1">Height</text></g></g><path class="foreground" aria-hidden="true" d="" pointer-events="none" display="none"></path></g></g><g class="mark-group role-axis" role="graphics-symbol" aria-roledescription="axis" aria-label="Y-axis titled 'Weight' for a linear scale with values from 0 to 5"><g transform="translate(0.5,0.5)"><path class="background" aria-hidden="true" d="M0,0h0v0h0Z" pointer-events="none"></path><g><g class="mark-rule role-axis-tick" pointer-events="none"><line transform="translate(0,260)" x2="-2" y2="0" stroke="#888" stroke-width="1" opacity="1"></line><line transform="translate(0,208)" x2="-2" y2="0" stroke="#888" stroke-width="1" opacity="1"></line><line transform="translate(0,156)" x2="-2" y2="0" stroke="#888" stroke-width="1" opacity="1"></line><line transform="translate(0,104)" x2="-2" y2="0" stroke="#888" stroke-width="1" opacity="1"></line><line transform="translate(0,52)" x2="-2" y2="0" stroke="#888" stroke-width="1" opacity="1"></line><line transform="translate(0,0)" x2="-2" y2="0" stroke="#888" stroke-width="1" opacity="1"></line></g><g class="mark-text role-axis-label" pointer-events="none"><text text-anchor="end" transform="translate(-4,263)" font-family="Benton Gothic, sans-serif" font-size="11.5px" font-weight="normal" fill="#000" opacity="1">0</text><text text-anchor="end" transform="translate(-4,211)" font-family="Benton Gothic, sans-serif" font-size="11.5px" font-weight="normal" fill="#000" opacity="1">1</text><text text-anchor="end" transform="translate(-4,159)" font-family="Benton Gothic, sans-serif" font-size="11.5px" font-weight="normal" fill="#000" opacity="1">2</text><text text-anchor="end" transform="translate(-4,107)" font-family="Benton Gothic, sans-serif" font-size="11.5px" font-weight="normal" fill="#000" opacity="1">3</text><text text-anchor="end" transform="translate(-4,54.999999999999986)" font-family="Benton Gothic, sans-serif" font-size="11.5px" font-weight="normal" fill="#000" opacity="1">4</text><text text-anchor="end" transform="translate(-4,3)" font-family="Benton Gothic, sans-serif" font-size="11.5px" font-weight="normal" fill="#000" opacity="1">5</text></g><g class="mark-rule role-axis-domain" pointer-events="none"><line transform="translate(0,260)" x2="0" y2="-260" stroke="#888" stroke-width="1" opacity="1"></line></g><g class="mark-text role-axis-title" pointer-events="none"><text text-anchor="start" transform="translate(-45,-14)" font-family="Benton Gothic Bold, sans-serif" font-size="13px" font-weight="normal" fill="#000" opacity="1">Weight</text></g></g><path class="foreground" aria-hidden="true" d="" pointer-events="none" display="none"></path></g></g><g class="mark-symbol role-mark layer_0_marks" role="graphics-object" aria-roledescription="symbol mark container"><path aria-label="Height: 1; Weight: 1" role="graphics-symbol" aria-roledescription="point" transform="translate(64,208)" d="M4.743416490252569,0A4.743416490252569,4.743416490252569,0,1,1,-4.743416490252569,0A4.743416490252569,4.743416490252569,0,1,1,4.743416490252569,0" fill="#8B5CF6" stroke-width="2" opacity="0.7"></path><path aria-label="Height: 1.3; Weight: 1.3" role="graphics-symbol" aria-roledescription="point" transform="translate(83.2,192.4)" d="M4.743416490252569,0A4.743416490252569,4.743416490252569,0,1,1,-4.743416490252569,0A4.743416490252569,4.743416490252569,0,1,1,4.743416490252569,0" fill="#8B5CF6" stroke-width="2" opacity="0.7"></path><path aria-label="Height: 2.5; Weight: 2.5" role="graphics-symbol" aria-roledescription="point" transform="translate(160,130)" d="M4.743416490252569,0A4.743416490252569,4.743416490252569,0,1,1,-4.743416490252569,0A4.743416490252569,4.743416490252569,0,1,1,4.743416490252569,0" fill="#8B5CF6" stroke-width="2" opacity="0.7"></path><path aria-label="Height: 2.8; Weight: 2.8" role="graphics-symbol" aria-roledescription="point" transform="translate(179.2,114.40000000000002)" d="M4.743416490252569,0A4.743416490252569,4.743416490252569,0,1,1,-4.743416490252569,0A4.743416490252569,4.743416490252569,0,1,1,4.743416490252569,0" fill="#8B5CF6" stroke-width="2" opacity="0.7"></path><path aria-label="Height: 4.2; Weight: 4.2" role="graphics-symbol" aria-roledescription="point" transform="translate(268.8,41.59999999999998)" d="M4.743416490252569,0A4.743416490252569,4.743416490252569,0,1,1,-4.743416490252569,0A4.743416490252569,4.743416490252569,0,1,1,4.743416490252569,0" fill="#8B5CF6" stroke-width="2" opacity="0.7"></path><path aria-label="Height: 4.5; Weight: 4.5" role="graphics-symbol" aria-roledescription="point" transform="translate(288,25.999999999999993)" d="M4.743416490252569,0A4.743416490252569,4.743416490252569,0,1,1,-4.743416490252569,0A4.743416490252569,4.743416490252569,0,1,1,4.743416490252569,0" fill="#8B5CF6" stroke-width="2" opacity="0.7"></path></g><g class="mark-line role-mark layer_1_marks" role="graphics-object" aria-roledescription="line mark container"><path aria-label="x: 0.5; y: 0.5" role="graphics-symbol" aria-roledescription="line mark" d="M32,234L320,0" stroke="#EF4444" stroke-width="2" stroke-dasharray="4,2"></path></g></g><path class="foreground" aria-hidden="true" d="" display="none"></path></g></g></g></svg><form class="vega-bindings"></form></div>
+<p>Since height and weight move together — they are <strong>correlated</strong> — there is redundancy in keeping them as two separate variables. Physically, it makes sense to combine them into a single derived quantity, something like an <strong>"overall body size"</strong> score. Instead of storing two numbers per person, only one is needed.</p>
+<p>That diagonal direction along which the points line up is not just a visual curiosity — it is the most important idea in PCA:</p>
+<blockquote>
+<p><strong>PCA essentially tries to find the direction along which the data varies (the direction of maximum variance).</strong></p>
+</blockquote>
+<p>The reasoning: moving from person A to person B to person C, <em>something</em> is changing — that change is what statisticians call <strong>variance</strong>. The direction along which this change is largest is the direction that best distinguishes the data points from one another. Find that direction, and you have found the most informative "summary axis" of the data.</p>
+<hr>
+<h2 class="atx" id="9-what-pca-actually-does">9. What PCA Actually Does</h2>
+<p>Putting it precisely:</p>
+<blockquote>
+<p><strong>PCA combines <em>correlated</em> variables into new variables called principal components.</strong></p>
+</blockquote>
+<p>In the height/weight example, the two original variables (height, weight) are combined into one new variable (overall body size) — this new variable is called a <strong>principal component</strong>. In general, a dataset with many variables might be reducible to a smaller number of principal components: for example, 5 original variables might be reduced to just 3 principal components.</p>
+<div class="plantuml"><img src="https://www.plantuml.com/plantuml/svg/~1U5vjZR4Ama0GHFlxYZKsMbZOMeXeeOMWO65ZirpMv61lB-pj6UBNIqJGmcgOcSVC9XkgbSXkqYas4O5nICKWHp8KT4nt0qkWeMaDwg3aBIHnew8qJ50TQEmgm0mjJ8-ZsNAXN-JwHVfVf6Joc0cgquCKcM6RwW4kuKatcPqrY0yTCknIx9AG62pdxv_EBpypUoKIvrfOBDRlU0K-gHAZKUtw__66f2wHN_M_LWu"></div>
+<p>The critical pre-condition: <strong>PCA only works if variables are correlated.</strong> If two variables move independently of each other (uncorrelated), there is no redundancy to exploit, and PCA will not usefully compress them.</p>
+<hr>
+<h2 class="atx" id="10-worked-example--maths-andamp-physics-marks">10. Worked Example — Maths &amp; Physics Marks</h2>
+<p>To make the mechanics concrete, consider four students (A, B, C, D) with (deliberately extreme) marks in Maths and Physics:</p>
+<table>
+<thead>
+<tr>
+<th>Student</th>
+<th>Maths</th>
+<th>Physics</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>A</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+<td>B</td>
+<td>3</td>
+<td>3</td>
+</tr>
+<tr>
+<td>C</td>
+<td>4</td>
+<td>4</td>
+</tr>
+<tr>
+<td>D</td>
+<td>5</td>
+<td>5</td>
+</tr>
+</tbody></table>
+<p>This data is intentionally trivial — Maths and Physics marks are <em>identical</em> for every student, i.e., perfectly correlated — so the PCA procedure and its outcome are easy to verify by hand.</p>
+<h3 class="atx" id="step-1--collect-the-data-points">Step 1 — Collect the Data Points</h3>
+<p>Treat each student as a 2D data point:</p>
+<span class="katex-display"><span class="katex"><span class="katex-mathml"></span><span aria-hidden="true" class="katex-html"><span class="base"><span style="height:1em;vertical-align:-0.25em;" class="strut"></span><span class="mopen">(</span><span class="mord">2</span><span class="mpunct">,</span><span style="margin-right:0.1667em;" class="mspace"></span><span class="mord">2</span><span class="mclose">)</span><span class="mpunct">,</span><span class="mspace">&nbsp;</span><span style="margin-right:0.1667em;" class="mspace"></span><span class="mopen">(</span><span class="mord">3</span><span class="mpunct">,</span><span style="margin-right:0.1667em;" class="mspace"></span><span class="mord">3</span><span class="mclose">)</span><span class="mpunct">,</span><span class="mspace">&nbsp;</span><span style="margin-right:0.1667em;" class="mspace"></span><span class="mopen">(</span><span class="mord">4</span><span class="mpunct">,</span><span style="margin-right:0.1667em;" class="mspace"></span><span class="mord">4</span><span class="mclose">)</span><span class="mpunct">,</span><span class="mspace">&nbsp;</span><span style="margin-right:0.1667em;" class="mspace"></span><span class="mopen">(</span><span class="mord">5</span><span class="mpunct">,</span><span style="margin-right:0.1667em;" class="mspace"></span><span class="mord">5</span><span class="mclose">)</span></span></span></span></span><h3 class="atx" id="step-2--mean-computation">Step 2 — Mean Computation</h3>
+<p>Compute the mean of each variable across all students:</p>
+<span class="katex-display"><span class="katex"><span class="katex-mathml"></span><span aria-hidden="true" class="katex-html"><span class="base"><span style="height:1em;vertical-align:-0.25em;" class="strut"></span><span class="mord text"><span class="mord">Mean(Maths)</span></span><span style="margin-right:0.2778em;" class="mspace"></span><span class="mrel">=</span><span style="margin-right:0.2778em;" class="mspace"></span></span><span class="base"><span style="height:2.0074em;vertical-align:-0.686em;" class="strut"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span style="height:1.3214em;" class="vlist"><span style="top:-2.314em;"><span style="height:3em;" class="pstrut"></span><span class="mord"><span class="mord">4</span></span></span><span style="top:-3.23em;"><span style="height:3em;" class="pstrut"></span><span style="border-bottom-width:0.04em;" class="frac-line"></span></span><span style="top:-3.677em;"><span style="height:3em;" class="pstrut"></span><span class="mord"><span class="mord">2</span><span style="margin-right:0.2222em;" class="mspace"></span><span class="mbin">+</span><span style="margin-right:0.2222em;" class="mspace"></span><span class="mord">3</span><span style="margin-right:0.2222em;" class="mspace"></span><span class="mbin">+</span><span style="margin-right:0.2222em;" class="mspace"></span><span class="mord">4</span><span style="margin-right:0.2222em;" class="mspace"></span><span class="mbin">+</span><span style="margin-right:0.2222em;" class="mspace"></span><span class="mord">5</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span style="height:0.686em;" class="vlist"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span style="margin-right:0.2778em;" class="mspace"></span><span class="mrel">=</span><span style="margin-right:0.2778em;" class="mspace"></span></span><span class="base"><span style="height:0.6444em;" class="strut"></span><span class="mord">3.5</span></span></span></span></span><span class="katex-display"><span class="katex"><span class="katex-mathml"></span><span aria-hidden="true" class="katex-html"><span class="base"><span style="height:1em;vertical-align:-0.25em;" class="strut"></span><span class="mord text"><span class="mord">Mean(Physics)</span></span><span style="margin-right:0.2778em;" class="mspace"></span><span class="mrel">=</span><span style="margin-right:0.2778em;" class="mspace"></span></span><span class="base"><span style="height:2.0074em;vertical-align:-0.686em;" class="strut"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span style="height:1.3214em;" class="vlist"><span style="top:-2.314em;"><span style="height:3em;" class="pstrut"></span><span class="mord"><span class="mord">4</span></span></span><span style="top:-3.23em;"><span style="height:3em;" class="pstrut"></span><span style="border-bottom-width:0.04em;" class="frac-line"></span></span><span style="top:-3.677em;"><span style="height:3em;" class="pstrut"></span><span class="mord"><span class="mord">2</span><span style="margin-right:0.2222em;" class="mspace"></span><span class="mbin">+</span><span style="margin-right:0.2222em;" class="mspace"></span><span class="mord">3</span><span style="margin-right:0.2222em;" class="mspace"></span><span class="mbin">+</span><span style="margin-right:0.2222em;" class="mspace"></span><span class="mord">4</span><span style="margin-right:0.2222em;" class="mspace"></span><span class="mbin">+</span><span style="margin-right:0.2222em;" class="mspace"></span><span class="mord">5</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span style="height:0.686em;" class="vlist"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span style="margin-right:0.2778em;" class="mspace"></span><span class="mrel">=</span><span style="margin-right:0.2778em;" class="mspace"></span></span><span class="base"><span style="height:0.6444em;" class="strut"></span><span class="mord">3.5</span></span></span></span></span><p>(In general the two means need not be equal — they coincide here only because the data was chosen to be perfectly symmetric.)</p>
+<h3 class="atx" id="step-3--mean-centering">Step 3 — Mean Centering</h3>
+<p>Subtract the corresponding mean from every data point. This step is <strong>not optional</strong> — skipping it gives incorrect results.</p>
+<table>
+<thead>
+<tr>
+<th>Student</th>
+<th>Original <span class="katex"><span class="katex-mathml"></span><span aria-hidden="true" class="katex-html"><span class="base"><span style="height:1em;vertical-align:-0.25em;" class="strut"></span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mpunct">,</span><span style="margin-right:0.1667em;" class="mspace"></span><span style="margin-right:0.03588em;" class="mord mathnormal">y</span><span class="mclose">)</span></span></span></span></th>
+<th>Mean-Centered</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>A</td>
+<td>(2, 2)</td>
+<td><span class="katex"><span class="katex-mathml"></span><span aria-hidden="true" class="katex-html"><span class="base"><span style="height:1em;vertical-align:-0.25em;" class="strut"></span><span class="mopen">(</span><span class="mord">2</span><span style="margin-right:0.2222em;" class="mspace"></span><span class="mbin">−</span><span style="margin-right:0.2222em;" class="mspace"></span></span><span class="base"><span style="height:0.8389em;vertical-align:-0.1944em;" class="strut"></span><span class="mord">3.5</span><span class="mpunct">,</span><span class="mspace">&nbsp;</span><span style="margin-right:0.1667em;" class="mspace"></span><span class="mord">2</span><span style="margin-right:0.2222em;" class="mspace"></span><span class="mbin">−</span><span style="margin-right:0.2222em;" class="mspace"></span></span><span class="base"><span style="height:1em;vertical-align:-0.25em;" class="strut"></span><span class="mord">3.5</span><span class="mclose">)</span><span style="margin-right:0.2778em;" class="mspace"></span><span class="mrel">=</span><span style="margin-right:0.2778em;" class="mspace"></span></span><span class="base"><span style="height:1em;vertical-align:-0.25em;" class="strut"></span><span class="mopen">(</span><span class="mord">−</span><span class="mord">1.5</span><span class="mpunct">,</span><span style="margin-right:0.1667em;" class="mspace"></span><span class="mord">−</span><span class="mord">1.5</span><span class="mclose">)</span></span></span></span></td>
+</tr>
+<tr>
+<td>B</td>
+<td>(3, 3)</td>
+<td><span class="katex"><span class="katex-mathml"></span><span aria-hidden="true" class="katex-html"><span class="base"><span style="height:1em;vertical-align:-0.25em;" class="strut"></span><span class="mopen">(</span><span class="mord">3</span><span style="margin-right:0.2222em;" class="mspace"></span><span class="mbin">−</span><span style="margin-right:0.2222em;" class="mspace"></span></span><span class="base"><span style="height:0.8389em;vertical-align:-0.1944em;" class="strut"></span><span class="mord">3.5</span><span class="mpunct">,</span><span class="mspace">&nbsp;</span><span style="margin-right:0.1667em;" class="mspace"></span><span class="mord">3</span><span style="margin-right:0.2222em;" class="mspace"></span><span class="mbin">−</span><span style="margin-right:0.2222em;" class="mspace"></span></span><span class="base"><span style="height:1em;vertical-align:-0.25em;" class="strut"></span><span class="mord">3.5</span><span class="mclose">)</span><span style="margin-right:0.2778em;" class="mspace"></span><span class="mrel">=</span><span style="margin-right:0.2778em;" class="mspace"></span></span><span class="base"><span style="height:1em;vertical-align:-0.25em;" class="strut"></span><span class="mopen">(</span><span class="mord">−</span><span class="mord">0.5</span><span class="mpunct">,</span><span style="margin-right:0.1667em;" class="mspace"></span><span class="mord">−</span><span class="mord">0.5</span><span class="mclose">)</span></span></span></span></td>
+</tr>
+<tr>
+<td>C</td>
+<td>(4, 4)</td>
+<td><span class="katex"><span class="katex-mathml"></span><span aria-hidden="true" class="katex-html"><span class="base"><span style="height:1em;vertical-align:-0.25em;" class="strut"></span><span class="mopen">(</span><span class="mord">4</span><span style="margin-right:0.2222em;" class="mspace"></span><span class="mbin">−</span><span style="margin-right:0.2222em;" class="mspace"></span></span><span class="base"><span style="height:0.8389em;vertical-align:-0.1944em;" class="strut"></span><span class="mord">3.5</span><span class="mpunct">,</span><span class="mspace">&nbsp;</span><span style="margin-right:0.1667em;" class="mspace"></span><span class="mord">4</span><span style="margin-right:0.2222em;" class="mspace"></span><span class="mbin">−</span><span style="margin-right:0.2222em;" class="mspace"></span></span><span class="base"><span style="height:1em;vertical-align:-0.25em;" class="strut"></span><span class="mord">3.5</span><span class="mclose">)</span><span style="margin-right:0.2778em;" class="mspace"></span><span class="mrel">=</span><span style="margin-right:0.2778em;" class="mspace"></span></span><span class="base"><span style="height:1em;vertical-align:-0.25em;" class="strut"></span><span class="mopen">(</span><span class="mord">0.5</span><span class="mpunct">,</span><span style="margin-right:0.1667em;" class="mspace"></span><span class="mord">0.5</span><span class="mclose">)</span></span></span></span></td>
+</tr>
+<tr>
+<td>D</td>
+<td>(5, 5)</td>
+<td><span class="katex"><span class="katex-mathml"></span><span aria-hidden="true" class="katex-html"><span class="base"><span style="height:1em;vertical-align:-0.25em;" class="strut"></span><span class="mopen">(</span><span class="mord">5</span><span style="margin-right:0.2222em;" class="mspace"></span><span class="mbin">−</span><span style="margin-right:0.2222em;" class="mspace"></span></span><span class="base"><span style="height:0.8389em;vertical-align:-0.1944em;" class="strut"></span><span class="mord">3.5</span><span class="mpunct">,</span><span class="mspace">&nbsp;</span><span style="margin-right:0.1667em;" class="mspace"></span><span class="mord">5</span><span style="margin-right:0.2222em;" class="mspace"></span><span class="mbin">−</span><span style="margin-right:0.2222em;" class="mspace"></span></span><span class="base"><span style="height:1em;vertical-align:-0.25em;" class="strut"></span><span class="mord">3.5</span><span class="mclose">)</span><span style="margin-right:0.2778em;" class="mspace"></span><span class="mrel">=</span><span style="margin-right:0.2778em;" class="mspace"></span></span><span class="base"><span style="height:1em;vertical-align:-0.25em;" class="strut"></span><span class="mopen">(</span><span class="mord">1.5</span><span class="mpunct">,</span><span style="margin-right:0.1667em;" class="mspace"></span><span class="mord">1.5</span><span class="mclose">)</span></span></span></span></td>
+</tr>
+</tbody></table>
+<h3 class="atx" id="step-4a--find-the-direction-of-maximum-variance">Step 4a — Find the Direction of Maximum Variance</h3>
+<p>The central question PCA asks is:</p>
+<blockquote>
+<p><strong>Along which direction does the centered data spread/vary the most?</strong></p>
+</blockquote>
+<p>Plotting <span class="katex"><span class="katex-mathml"></span><span aria-hidden="true" class="katex-html"><span class="base"><span style="height:1em;vertical-align:-0.25em;" class="strut"></span><span class="mopen">(</span><span class="mord">−</span><span class="mord">1.5</span><span class="mpunct">,</span><span style="margin-right:0.1667em;" class="mspace"></span><span class="mord">−</span><span class="mord">1.5</span><span class="mclose">)</span></span></span></span>, <span class="katex"><span class="katex-mathml"></span><span aria-hidden="true" class="katex-html"><span class="base"><span style="height:1em;vertical-align:-0.25em;" class="strut"></span><span class="mopen">(</span><span class="mord">−</span><span class="mord">0.5</span><span class="mpunct">,</span><span style="margin-right:0.1667em;" class="mspace"></span><span class="mord">−</span><span class="mord">0.5</span><span class="mclose">)</span></span></span></span>, <span class="katex"><span class="katex-mathml"></span><span aria-hidden="true" class="katex-html"><span class="base"><span style="height:1em;vertical-align:-0.25em;" class="strut"></span><span class="mopen">(</span><span class="mord">0.5</span><span class="mpunct">,</span><span style="margin-right:0.1667em;" class="mspace"></span><span class="mord">0.5</span><span class="mclose">)</span></span></span></span>, <span class="katex"><span class="katex-mathml"></span><span aria-hidden="true" class="katex-html"><span class="base"><span style="height:1em;vertical-align:-0.25em;" class="strut"></span><span class="mopen">(</span><span class="mord">1.5</span><span class="mpunct">,</span><span style="margin-right:0.1667em;" class="mspace"></span><span class="mord">1.5</span><span class="mclose">)</span></span></span></span> shows they all fall exactly on the <strong>diagonal line</strong> <span class="katex"><span class="katex-mathml"></span><span aria-hidden="true" class="katex-html"><span class="base"><span style="height:0.625em;vertical-align:-0.1944em;" class="strut"></span><span style="margin-right:0.03588em;" class="mord mathnormal">y</span><span style="margin-right:0.2778em;" class="mspace"></span><span class="mrel">=</span><span style="margin-right:0.2778em;" class="mspace"></span></span><span class="base"><span style="height:0.4306em;" class="strut"></span><span class="mord mathnormal">x</span></span></span></span>. (In real datasets this direction is almost never visually obvious — it must be computed mathematically, typically via eigenvectors of the covariance matrix — but here it can be read off directly, which is exactly why this toy example is useful for building intuition.)</p>
+<p>A <strong>unit vector</strong> (magnitude 1) is defined along this diagonal direction and called the <strong>first principal component</strong>, <span class="katex"><span class="katex-mathml"></span><span aria-hidden="true" class="katex-html"><span class="base"><span style="height:0.6833em;" class="strut"></span><span style="margin-right:0.07153em;" class="mord mathnormal">PC</span><span class="mord">1</span></span></span></span>:</p>
+<span class="katex-display"><span class="katex"><span class="katex-mathml"></span><span aria-hidden="true" class="katex-html"><span class="base"><span style="height:0.6833em;" class="strut"></span><span style="margin-right:0.07153em;" class="mord mathnormal">PC</span><span class="mord">1</span><span style="margin-right:0.2778em;" class="mspace"></span><span class="mrel">=</span><span style="margin-right:0.2778em;" class="mspace"></span></span><span class="base"><span style="height:2.4em;vertical-align:-0.95em;" class="strut"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span style="height:1.3214em;" class="vlist"><span style="top:-2.2028em;"><span style="height:3em;" class="pstrut"></span><span class="mord"><span class="mord sqrt"><span class="vlist-t vlist-t2"><span class="vlist-r"><span style="height:0.9072em;" class="vlist"><span style="top:-3em;" class="svg-align"><span style="height:3em;" class="pstrut"></span><span style="padding-left:0.833em;" class="mord"><span class="mord">2</span></span></span><span style="top:-2.8672em;"><span style="height:3em;" class="pstrut"></span><span style="min-width:0.853em;height:1.08em;" class="hide-tail"><svg preserveAspectRatio="xMinYMin slice" viewBox="0 0 400000 1080" height="1.08em" width="400em" xmlns="http://www.w3.org/2000/svg"><path d="M95,702
+c-2.7,0,-7.17,-2.7,-13.5,-8c-5.8,-5.3,-9.5,-10,-9.5,-14
+c0,-2,0.3,-3.3,1,-4c1.3,-2.7,23.83,-20.7,67.5,-54
+c44.2,-33.3,65.8,-50.3,66.5,-51c1.3,-1.3,3,-2,5,-2c4.7,0,8.7,3.3,12,10
+s173,378,173,378c0.7,0,35.3,-71,104,-213c68.7,-142,137.5,-285,206.5,-429
+c69,-144,104.5,-217.7,106.5,-221
+l0 -0
+c5.3,-9.3,12,-14,20,-14
+H400000v40H845.2724
+s-225.272,467,-225.272,467s-235,486,-235,486c-2.7,4.7,-9,7,-19,7
+c-6,0,-10,-1,-12,-3s-194,-422,-194,-422s-65,47,-65,47z
+M834 80h400000v40h-400000z"></path></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span style="height:0.1328em;" class="vlist"><span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span style="height:3em;" class="pstrut"></span><span style="border-bottom-width:0.04em;" class="frac-line"></span></span><span style="top:-3.677em;"><span style="height:3em;" class="pstrut"></span><span class="mord"><span class="mord">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span style="height:0.93em;" class="vlist"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span style="margin-right:0.1667em;" class="mspace"></span><span class="minner"><span style="top:0em;" class="mopen delimcenter"><span class="delimsizing size3">(</span></span><span class="mord"><span class="mtable"><span class="col-align-c"><span class="vlist-t vlist-t2"><span class="vlist-r"><span style="height:1.45em;" class="vlist"><span style="top:-3.61em;"><span style="height:3em;" class="pstrut"></span><span class="mord"><span class="mord">1</span></span></span><span style="top:-2.41em;"><span style="height:3em;" class="pstrut"></span><span class="mord"><span class="mord">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span style="height:0.95em;" class="vlist"><span></span></span></span></span></span></span></span><span style="top:0em;" class="mclose delimcenter"><span class="delimsizing size3">)</span></span></span></span></span></span></span><p>The <span class="katex"><span class="katex-mathml"></span><span aria-hidden="true" class="katex-html"><span class="base"><span style="height:1.3831em;vertical-align:-0.538em;" class="strut"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span style="height:0.8451em;" class="vlist"><span style="top:-2.551em;"><span style="height:3em;" class="pstrut"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord sqrt mtight"><span class="vlist-t vlist-t2"><span class="vlist-r"><span style="height:0.9128em;" class="vlist"><span style="top:-3em;" class="svg-align"><span style="height:3em;" class="pstrut"></span><span style="padding-left:0.833em;" class="mord mtight"><span class="mord mtight">2</span></span></span><span style="top:-2.8728em;"><span style="height:3em;" class="pstrut"></span><span style="min-width:0.853em;height:1.08em;" class="hide-tail mtight"><svg preserveAspectRatio="xMinYMin slice" viewBox="0 0 400000 1080" height="1.08em" width="400em" xmlns="http://www.w3.org/2000/svg"><path d="M95,702
+c-2.7,0,-7.17,-2.7,-13.5,-8c-5.8,-5.3,-9.5,-10,-9.5,-14
+c0,-2,0.3,-3.3,1,-4c1.3,-2.7,23.83,-20.7,67.5,-54
+c44.2,-33.3,65.8,-50.3,66.5,-51c1.3,-1.3,3,-2,5,-2c4.7,0,8.7,3.3,12,10
+s173,378,173,378c0.7,0,35.3,-71,104,-213c68.7,-142,137.5,-285,206.5,-429
+c69,-144,104.5,-217.7,106.5,-221
+l0 -0
+c5.3,-9.3,12,-14,20,-14
+H400000v40H845.2724
+s-225.272,467,-225.272,467s-235,486,-235,486c-2.7,4.7,-9,7,-19,7
+c-6,0,-10,-1,-12,-3s-194,-422,-194,-422s-65,47,-65,47z
+M834 80h400000v40h-400000z"></path></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span style="height:0.1272em;" class="vlist"><span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span style="height:3em;" class="pstrut"></span><span style="border-bottom-width:0.04em;" class="frac-line"></span></span><span style="top:-3.394em;"><span style="height:3em;" class="pstrut"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span style="height:0.538em;" class="vlist"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span> factor normalizes the vector so its length is exactly 1: <span class="katex"><span class="katex-mathml"></span><span aria-hidden="true" class="katex-html"><span class="base"><span style="height:2.004em;vertical-align:-0.65em;" class="strut"></span><span class="minner"><span class="minner"><span style="top:0em;" class="mopen delimcenter"><span class="delimsizing size2">(</span></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span style="height:0.8451em;" class="vlist"><span style="top:-2.551em;"><span style="height:3em;" class="pstrut"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord sqrt mtight"><span class="vlist-t vlist-t2"><span class="vlist-r"><span style="height:0.9128em;" class="vlist"><span style="top:-3em;" class="svg-align"><span style="height:3em;" class="pstrut"></span><span style="padding-left:0.833em;" class="mord mtight"><span class="mord mtight">2</span></span></span><span style="top:-2.8728em;"><span style="height:3em;" class="pstrut"></span><span style="min-width:0.853em;height:1.08em;" class="hide-tail mtight"><svg preserveAspectRatio="xMinYMin slice" viewBox="0 0 400000 1080" height="1.08em" width="400em" xmlns="http://www.w3.org/2000/svg"><path d="M95,702
+c-2.7,0,-7.17,-2.7,-13.5,-8c-5.8,-5.3,-9.5,-10,-9.5,-14
+c0,-2,0.3,-3.3,1,-4c1.3,-2.7,23.83,-20.7,67.5,-54
+c44.2,-33.3,65.8,-50.3,66.5,-51c1.3,-1.3,3,-2,5,-2c4.7,0,8.7,3.3,12,10
+s173,378,173,378c0.7,0,35.3,-71,104,-213c68.7,-142,137.5,-285,206.5,-429
+c69,-144,104.5,-217.7,106.5,-221
+l0 -0
+c5.3,-9.3,12,-14,20,-14
+H400000v40H845.2724
+s-225.272,467,-225.272,467s-235,486,-235,486c-2.7,4.7,-9,7,-19,7
+c-6,0,-10,-1,-12,-3s-194,-422,-194,-422s-65,47,-65,47z
+M834 80h400000v40h-400000z"></path></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span style="height:0.1272em;" class="vlist"><span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span style="height:3em;" class="pstrut"></span><span style="border-bottom-width:0.04em;" class="frac-line"></span></span><span style="top:-3.394em;"><span style="height:3em;" class="pstrut"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span style="height:0.538em;" class="vlist"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span style="top:0em;" class="mclose delimcenter"><span class="delimsizing size2">)</span></span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span style="height:1.354em;" class="vlist"><span style="top:-3.6029em;margin-right:0.05em;"><span style="height:2.7em;" class="pstrut"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span style="margin-right:0.2222em;" class="mspace"></span><span class="mbin">+</span><span style="margin-right:0.2222em;" class="mspace"></span></span><span class="base"><span style="height:2.004em;vertical-align:-0.65em;" class="strut"></span><span class="minner"><span class="minner"><span style="top:0em;" class="mopen delimcenter"><span class="delimsizing size2">(</span></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span style="height:0.8451em;" class="vlist"><span style="top:-2.551em;"><span style="height:3em;" class="pstrut"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord sqrt mtight"><span class="vlist-t vlist-t2"><span class="vlist-r"><span style="height:0.9128em;" class="vlist"><span style="top:-3em;" class="svg-align"><span style="height:3em;" class="pstrut"></span><span style="padding-left:0.833em;" class="mord mtight"><span class="mord mtight">2</span></span></span><span style="top:-2.8728em;"><span style="height:3em;" class="pstrut"></span><span style="min-width:0.853em;height:1.08em;" class="hide-tail mtight"><svg preserveAspectRatio="xMinYMin slice" viewBox="0 0 400000 1080" height="1.08em" width="400em" xmlns="http://www.w3.org/2000/svg"><path d="M95,702
+c-2.7,0,-7.17,-2.7,-13.5,-8c-5.8,-5.3,-9.5,-10,-9.5,-14
+c0,-2,0.3,-3.3,1,-4c1.3,-2.7,23.83,-20.7,67.5,-54
+c44.2,-33.3,65.8,-50.3,66.5,-51c1.3,-1.3,3,-2,5,-2c4.7,0,8.7,3.3,12,10
+s173,378,173,378c0.7,0,35.3,-71,104,-213c68.7,-142,137.5,-285,206.5,-429
+c69,-144,104.5,-217.7,106.5,-221
+l0 -0
+c5.3,-9.3,12,-14,20,-14
+H400000v40H845.2724
+s-225.272,467,-225.272,467s-235,486,-235,486c-2.7,4.7,-9,7,-19,7
+c-6,0,-10,-1,-12,-3s-194,-422,-194,-422s-65,47,-65,47z
+M834 80h400000v40h-400000z"></path></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span style="height:0.1272em;" class="vlist"><span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span style="height:3em;" class="pstrut"></span><span style="border-bottom-width:0.04em;" class="frac-line"></span></span><span style="top:-3.394em;"><span style="height:3em;" class="pstrut"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span style="height:0.538em;" class="vlist"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span style="top:0em;" class="mclose delimcenter"><span class="delimsizing size2">)</span></span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span style="height:1.354em;" class="vlist"><span style="top:-3.6029em;margin-right:0.05em;"><span style="height:2.7em;" class="pstrut"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span style="margin-right:0.2778em;" class="mspace"></span><span class="mrel">=</span><span style="margin-right:0.2778em;" class="mspace"></span></span><span class="base"><span style="height:1.1901em;vertical-align:-0.345em;" class="strut"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span style="height:0.8451em;" class="vlist"><span style="top:-2.655em;"><span style="height:3em;" class="pstrut"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span><span style="top:-3.23em;"><span style="height:3em;" class="pstrut"></span><span style="border-bottom-width:0.04em;" class="frac-line"></span></span><span style="top:-3.394em;"><span style="height:3em;" class="pstrut"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span style="height:0.345em;" class="vlist"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span style="margin-right:0.2222em;" class="mspace"></span><span class="mbin">+</span><span style="margin-right:0.2222em;" class="mspace"></span></span><span class="base"><span style="height:1.1901em;vertical-align:-0.345em;" class="strut"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span style="height:0.8451em;" class="vlist"><span style="top:-2.655em;"><span style="height:3em;" class="pstrut"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span><span style="top:-3.23em;"><span style="height:3em;" class="pstrut"></span><span style="border-bottom-width:0.04em;" class="frac-line"></span></span><span style="top:-3.394em;"><span style="height:3em;" class="pstrut"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span style="height:0.345em;" class="vlist"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span style="margin-right:0.2778em;" class="mspace"></span><span class="mrel">=</span><span style="margin-right:0.2778em;" class="mspace"></span></span><span class="base"><span style="height:0.6444em;" class="strut"></span><span class="mord">1</span></span></span></span>.</p>
+<div class="vega-lite vega-embed" role="graphics-document" aria-roledescription="visualization" aria-label="Mean-centered maths/physics data with PC1 direction" style="cursor: default;"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="marks" width="377" height="330" viewBox="0 0 377 330" style="background-color: rgb(255, 255, 255);"><g fill="none" stroke-miterlimit="10" transform="translate(50,29)"><g class="mark-group role-frame root" role="graphics-object" aria-roledescription="group mark container"><g transform="translate(0,0)"><path class="background" aria-hidden="true" d="M0.5,0.5h320v260h-320Z" fill="transparent" stroke="#ddd"></path><g><g class="mark-group role-axis" aria-hidden="true"><g transform="translate(0.5,260.5)"><path class="background" aria-hidden="true" d="M0,0h0v0h0Z" pointer-events="none"></path><g><g class="mark-rule role-axis-grid" pointer-events="none"><line transform="translate(0,-260)" x2="0" y2="260" stroke="#ddd" stroke-width="1" opacity="1"></line><line transform="translate(40,-260)" x2="0" y2="260" stroke="#ddd" stroke-width="1" opacity="1"></line><line transform="translate(80,-260)" x2="0" y2="260" stroke="#ddd" stroke-width="1" opacity="1"></line><line transform="translate(120,-260)" x2="0" y2="260" stroke="#ddd" stroke-width="1" opacity="1"></line><line transform="translate(160,-260)" x2="0" y2="260" stroke="#ddd" stroke-width="1" opacity="1"></line><line transform="translate(200,-260)" x2="0" y2="260" stroke="#ddd" stroke-width="1" opacity="1"></line><line transform="translate(240,-260)" x2="0" y2="260" stroke="#ddd" stroke-width="1" opacity="1"></line><line transform="translate(280,-260)" x2="0" y2="260" stroke="#ddd" stroke-width="1" opacity="1"></line><line transform="translate(320,-260)" x2="0" y2="260" stroke="#ddd" stroke-width="1" opacity="1"></line></g></g><path class="foreground" aria-hidden="true" d="" pointer-events="none" display="none"></path></g></g><g class="mark-group role-axis" aria-hidden="true"><g transform="translate(0.5,0.5)"><path class="background" aria-hidden="true" d="M0,0h0v0h0Z" pointer-events="none"></path><g><g class="mark-rule role-axis-grid" pointer-events="none"><line transform="translate(0,260)" x2="320" y2="0" stroke="#ddd" stroke-width="1" opacity="1"></line><line transform="translate(0,228)" x2="320" y2="0" stroke="#ddd" stroke-width="1" opacity="1"></line><line transform="translate(0,195)" x2="320" y2="0" stroke="#ddd" stroke-width="1" opacity="1"></line><line transform="translate(0,163)" x2="320" y2="0" stroke="#ddd" stroke-width="1" opacity="1"></line><line transform="translate(0,130)" x2="320" y2="0" stroke="#ddd" stroke-width="1" opacity="1"></line><line transform="translate(0,98)" x2="320" y2="0" stroke="#ddd" stroke-width="1" opacity="1"></line><line transform="translate(0,65)" x2="320" y2="0" stroke="#ddd" stroke-width="1" opacity="1"></line><line transform="translate(0,33)" x2="320" y2="0" stroke="#ddd" stroke-width="1" opacity="1"></line><line transform="translate(0,0)" x2="320" y2="0" stroke="#ddd" stroke-width="1" opacity="1"></line></g></g><path class="foreground" aria-hidden="true" d="" pointer-events="none" display="none"></path></g></g><g class="mark-group role-axis" role="graphics-symbol" aria-roledescription="axis" aria-label="X-axis titled 'Maths (centered)' for a linear scale with values from −2 to 2"><g transform="translate(0.5,260.5)"><path class="background" aria-hidden="true" d="M0,0h0v0h0Z" pointer-events="none"></path><g><g class="mark-rule role-axis-tick" pointer-events="none"><line transform="translate(0,0)" x2="0" y2="3" stroke="#888" stroke-width="1" opacity="1"></line><line transform="translate(40,0)" x2="0" y2="3" stroke="#888" stroke-width="1" opacity="1"></line><line transform="translate(80,0)" x2="0" y2="3" stroke="#888" stroke-width="1" opacity="1"></line><line transform="translate(120,0)" x2="0" y2="3" stroke="#888" stroke-width="1" opacity="1"></line><line transform="translate(160,0)" x2="0" y2="3" stroke="#888" stroke-width="1" opacity="1"></line><line transform="translate(200,0)" x2="0" y2="3" stroke="#888" stroke-width="1" opacity="1"></line><line transform="translate(240,0)" x2="0" y2="3" stroke="#888" stroke-width="1" opacity="1"></line><line transform="translate(280,0)" x2="0" y2="3" stroke="#888" stroke-width="1" opacity="1"></line><line transform="translate(320,0)" x2="0" y2="3" stroke="#888" stroke-width="1" opacity="1"></line></g><g class="mark-text role-axis-label" pointer-events="none"><text text-anchor="start" transform="translate(0,16)" font-family="Benton Gothic, sans-serif" font-size="11.5px" font-weight="normal" fill="#000" opacity="1">−2.0</text><text text-anchor="middle" transform="translate(40,16)" font-family="Benton Gothic, sans-serif" font-size="11.5px" font-weight="normal" fill="#000" opacity="1">−1.5</text><text text-anchor="middle" transform="translate(80,16)" font-family="Benton Gothic, sans-serif" font-size="11.5px" font-weight="normal" fill="#000" opacity="1">−1.0</text><text text-anchor="middle" transform="translate(120,16)" font-family="Benton Gothic, sans-serif" font-size="11.5px" font-weight="normal" fill="#000" opacity="1">−0.5</text><text text-anchor="middle" transform="translate(160,16)" font-family="Benton Gothic, sans-serif" font-size="11.5px" font-weight="normal" fill="#000" opacity="1">0.0</text><text text-anchor="middle" transform="translate(200,16)" font-family="Benton Gothic, sans-serif" font-size="11.5px" font-weight="normal" fill="#000" opacity="1">0.5</text><text text-anchor="middle" transform="translate(240,16)" font-family="Benton Gothic, sans-serif" font-size="11.5px" font-weight="normal" fill="#000" opacity="1">1.0</text><text text-anchor="middle" transform="translate(280,16)" font-family="Benton Gothic, sans-serif" font-size="11.5px" font-weight="normal" fill="#000" opacity="1">1.5</text><text text-anchor="end" transform="translate(320,16)" font-family="Benton Gothic, sans-serif" font-size="11.5px" font-weight="normal" fill="#000" opacity="1">2.0</text></g><g class="mark-rule role-axis-domain" pointer-events="none"><line transform="translate(0,0)" x2="320" y2="0" stroke="#888" stroke-width="1" opacity="1"></line></g><g class="mark-text role-axis-title" pointer-events="none"><text text-anchor="middle" transform="translate(160,32.5)" font-family="Benton Gothic Bold, sans-serif" font-size="13px" font-weight="normal" fill="#000" opacity="1">Maths (centered)</text></g></g><path class="foreground" aria-hidden="true" d="" pointer-events="none" display="none"></path></g></g><g class="mark-group role-axis" role="graphics-symbol" aria-roledescription="axis" aria-label="Y-axis titled 'Physics (centered)' for a linear scale with values from −2 to 2"><g transform="translate(0.5,0.5)"><path class="background" aria-hidden="true" d="M0,0h0v0h0Z" pointer-events="none"></path><g><g class="mark-rule role-axis-tick" pointer-events="none"><line transform="translate(0,260)" x2="-2" y2="0" stroke="#888" stroke-width="1" opacity="1"></line><line transform="translate(0,228)" x2="-2" y2="0" stroke="#888" stroke-width="1" opacity="1"></line><line transform="translate(0,195)" x2="-2" y2="0" stroke="#888" stroke-width="1" opacity="1"></line><line transform="translate(0,163)" x2="-2" y2="0" stroke="#888" stroke-width="1" opacity="1"></line><line transform="translate(0,130)" x2="-2" y2="0" stroke="#888" stroke-width="1" opacity="1"></line><line transform="translate(0,98)" x2="-2" y2="0" stroke="#888" stroke-width="1" opacity="1"></line><line transform="translate(0,65)" x2="-2" y2="0" stroke="#888" stroke-width="1" opacity="1"></line><line transform="translate(0,33)" x2="-2" y2="0" stroke="#888" stroke-width="1" opacity="1"></line><line transform="translate(0,0)" x2="-2" y2="0" stroke="#888" stroke-width="1" opacity="1"></line></g><g class="mark-text role-axis-label" pointer-events="none"><text text-anchor="end" transform="translate(-4,263)" font-family="Benton Gothic, sans-serif" font-size="11.5px" font-weight="normal" fill="#000" opacity="1">−2.0</text><text text-anchor="end" transform="translate(-4,230.5)" font-family="Benton Gothic, sans-serif" font-size="11.5px" font-weight="normal" fill="#000" opacity="1">−1.5</text><text text-anchor="end" transform="translate(-4,198)" font-family="Benton Gothic, sans-serif" font-size="11.5px" font-weight="normal" fill="#000" opacity="1">−1.0</text><text text-anchor="end" transform="translate(-4,165.5)" font-family="Benton Gothic, sans-serif" font-size="11.5px" font-weight="normal" fill="#000" opacity="1">−0.5</text><text text-anchor="end" transform="translate(-4,133)" font-family="Benton Gothic, sans-serif" font-size="11.5px" font-weight="normal" fill="#000" opacity="1">0.0</text><text text-anchor="end" transform="translate(-4,100.5)" font-family="Benton Gothic, sans-serif" font-size="11.5px" font-weight="normal" fill="#000" opacity="1">0.5</text><text text-anchor="end" transform="translate(-4,68)" font-family="Benton Gothic, sans-serif" font-size="11.5px" font-weight="normal" fill="#000" opacity="1">1.0</text><text text-anchor="end" transform="translate(-4,35.5)" font-family="Benton Gothic, sans-serif" font-size="11.5px" font-weight="normal" fill="#000" opacity="1">1.5</text><text text-anchor="end" transform="translate(-4,3)" font-family="Benton Gothic, sans-serif" font-size="11.5px" font-weight="normal" fill="#000" opacity="1">2.0</text></g><g class="mark-rule role-axis-domain" pointer-events="none"><line transform="translate(0,260)" x2="0" y2="-260" stroke="#888" stroke-width="1" opacity="1"></line></g><g class="mark-text role-axis-title" pointer-events="none"><text text-anchor="start" transform="translate(-45,-14)" font-family="Benton Gothic Bold, sans-serif" font-size="13px" font-weight="normal" fill="#000" opacity="1">Physics (centered)</text></g></g><path class="foreground" aria-hidden="true" d="" pointer-events="none" display="none"></path></g></g><g class="mark-symbol role-mark layer_0_marks" role="graphics-object" aria-roledescription="symbol mark container"><path aria-label="Maths (centered): −1.5; Physics (centered): −1.5" role="graphics-symbol" aria-roledescription="point" transform="translate(40,227.5)" d="M5,0A5,5,0,1,1,-5,0A5,5,0,1,1,5,0" fill="#8B5CF6" stroke-width="2" opacity="0.7"></path><path aria-label="Maths (centered): −0.5; Physics (centered): −0.5" role="graphics-symbol" aria-roledescription="point" transform="translate(120,162.5)" d="M5,0A5,5,0,1,1,-5,0A5,5,0,1,1,5,0" fill="#8B5CF6" stroke-width="2" opacity="0.7"></path><path aria-label="Maths (centered): 0.5; Physics (centered): 0.5" role="graphics-symbol" aria-roledescription="point" transform="translate(200,97.5)" d="M5,0A5,5,0,1,1,-5,0A5,5,0,1,1,5,0" fill="#8B5CF6" stroke-width="2" opacity="0.7"></path><path aria-label="Maths (centered): 1.5; Physics (centered): 1.5" role="graphics-symbol" aria-roledescription="point" transform="translate(280,32.5)" d="M5,0A5,5,0,1,1,-5,0A5,5,0,1,1,5,0" fill="#8B5CF6" stroke-width="2" opacity="0.7"></path></g><g class="mark-line role-mark layer_1_marks" role="graphics-object" aria-roledescription="line mark container"><path aria-label="x: −2; y: −2" role="graphics-symbol" aria-roledescription="line mark" d="M0,260L320,0" stroke="#EF4444" stroke-width="2" stroke-dasharray="4,2"></path></g></g><path class="foreground" aria-hidden="true" d="" display="none"></path></g></g></g></svg><form class="vega-bindings"></form></div>
+<h3 class="atx" id="step-4b--project-the-centered-data-onto-pc1">Step 4b — Project the Centered Data onto PC1</h3>
+<p>"Projecting" onto <span class="katex"><span class="katex-mathml"></span><span aria-hidden="true" class="katex-html"><span class="base"><span style="height:0.6833em;" class="strut"></span><span style="margin-right:0.07153em;" class="mord mathnormal">PC</span><span class="mord">1</span></span></span></span> means taking the <strong>dot product</strong> of each centered data point with the <span class="katex"><span class="katex-mathml"></span><span aria-hidden="true" class="katex-html"><span class="base"><span style="height:0.6833em;" class="strut"></span><span style="margin-right:0.07153em;" class="mord mathnormal">PC</span><span class="mord">1</span></span></span></span> vector — this collapses each 2D point into a single number, the <strong>PC1 score</strong>.</p>
+<p>For student A, with centered point <span class="katex"><span class="katex-mathml"></span><span aria-hidden="true" class="katex-html"><span class="base"><span style="height:1em;vertical-align:-0.25em;" class="strut"></span><span class="mopen">(</span><span class="mord">−</span><span class="mord">1.5</span><span class="mpunct">,</span><span style="margin-right:0.1667em;" class="mspace"></span><span class="mord">−</span><span class="mord">1.5</span><span class="mclose">)</span></span></span></span>:</p>
+<span class="katex-display"><span class="katex"><span class="katex-mathml"></span><span aria-hidden="true" class="katex-html"><span class="base"><span style="height:0.8333em;vertical-align:-0.15em;" class="strut"></span><span class="mord"><span class="mord text"><span class="mord">PC1&nbsp;score</span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span style="height:0.3283em;" class="vlist"><span style="top:-2.55em;margin-right:0.05em;"><span style="height:2.7em;" class="pstrut"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">A</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span style="height:0.15em;" class="vlist"><span></span></span></span></span></span></span><span style="margin-right:0.2778em;" class="mspace"></span><span class="mrel">=</span><span style="margin-right:0.2778em;" class="mspace"></span></span><span class="base"><span style="height:2.4em;vertical-align:-0.95em;" class="strut"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span style="height:1.3214em;" class="vlist"><span style="top:-2.2028em;"><span style="height:3em;" class="pstrut"></span><span class="mord"><span class="mord sqrt"><span class="vlist-t vlist-t2"><span class="vlist-r"><span style="height:0.9072em;" class="vlist"><span style="top:-3em;" class="svg-align"><span style="height:3em;" class="pstrut"></span><span style="padding-left:0.833em;" class="mord"><span class="mord">2</span></span></span><span style="top:-2.8672em;"><span style="height:3em;" class="pstrut"></span><span style="min-width:0.853em;height:1.08em;" class="hide-tail"><svg preserveAspectRatio="xMinYMin slice" viewBox="0 0 400000 1080" height="1.08em" width="400em" xmlns="http://www.w3.org/2000/svg"><path d="M95,702
+c-2.7,0,-7.17,-2.7,-13.5,-8c-5.8,-5.3,-9.5,-10,-9.5,-14
+c0,-2,0.3,-3.3,1,-4c1.3,-2.7,23.83,-20.7,67.5,-54
+c44.2,-33.3,65.8,-50.3,66.5,-51c1.3,-1.3,3,-2,5,-2c4.7,0,8.7,3.3,12,10
+s173,378,173,378c0.7,0,35.3,-71,104,-213c68.7,-142,137.5,-285,206.5,-429
+c69,-144,104.5,-217.7,106.5,-221
+l0 -0
+c5.3,-9.3,12,-14,20,-14
+H400000v40H845.2724
+s-225.272,467,-225.272,467s-235,486,-235,486c-2.7,4.7,-9,7,-19,7
+c-6,0,-10,-1,-12,-3s-194,-422,-194,-422s-65,47,-65,47z
+M834 80h400000v40h-400000z"></path></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span style="height:0.1328em;" class="vlist"><span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span style="height:3em;" class="pstrut"></span><span style="border-bottom-width:0.04em;" class="frac-line"></span></span><span style="top:-3.677em;"><span style="height:3em;" class="pstrut"></span><span class="mord"><span class="mord">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span style="height:0.93em;" class="vlist"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span style="margin-right:0.1667em;" class="mspace"></span><span class="minner"><span style="top:0em;" class="mopen delimcenter"><span class="delimsizing size3">(</span></span><span class="mord"><span class="mtable"><span class="col-align-c"><span class="vlist-t vlist-t2"><span class="vlist-r"><span style="height:1.45em;" class="vlist"><span style="top:-3.61em;"><span style="height:3em;" class="pstrut"></span><span class="mord"><span class="mord">1</span></span></span><span style="top:-2.41em;"><span style="height:3em;" class="pstrut"></span><span class="mord"><span class="mord">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span style="height:0.95em;" class="vlist"><span></span></span></span></span></span></span></span><span style="top:0em;" class="mclose delimcenter"><span class="delimsizing size3">)</span></span></span><span style="margin-right:0.2222em;" class="mspace"></span><span class="mbin">⋅</span><span style="margin-right:0.2222em;" class="mspace"></span></span><span class="base"><span style="height:2.4em;vertical-align:-0.95em;" class="strut"></span><span class="minner"><span style="top:0em;" class="mopen delimcenter"><span class="delimsizing size3">(</span></span><span class="mord"><span class="mtable"><span class="col-align-c"><span class="vlist-t vlist-t2"><span class="vlist-r"><span style="height:1.45em;" class="vlist"><span style="top:-3.61em;"><span style="height:3em;" class="pstrut"></span><span class="mord"><span class="mord">−</span><span class="mord">1.5</span></span></span><span style="top:-2.41em;"><span style="height:3em;" class="pstrut"></span><span class="mord"><span class="mord">−</span><span class="mord">1.5</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span style="height:0.95em;" class="vlist"><span></span></span></span></span></span></span></span><span style="top:0em;" class="mclose delimcenter"><span class="delimsizing size3">)</span></span></span><span style="margin-right:0.2778em;" class="mspace"></span><span class="mrel">=</span><span style="margin-right:0.2778em;" class="mspace"></span></span><span class="base"><span style="height:2.2514em;vertical-align:-0.93em;" class="strut"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span style="height:1.3214em;" class="vlist"><span style="top:-2.2028em;"><span style="height:3em;" class="pstrut"></span><span class="mord"><span class="mord sqrt"><span class="vlist-t vlist-t2"><span class="vlist-r"><span style="height:0.9072em;" class="vlist"><span style="top:-3em;" class="svg-align"><span style="height:3em;" class="pstrut"></span><span style="padding-left:0.833em;" class="mord"><span class="mord">2</span></span></span><span style="top:-2.8672em;"><span style="height:3em;" class="pstrut"></span><span style="min-width:0.853em;height:1.08em;" class="hide-tail"><svg preserveAspectRatio="xMinYMin slice" viewBox="0 0 400000 1080" height="1.08em" width="400em" xmlns="http://www.w3.org/2000/svg"><path d="M95,702
+c-2.7,0,-7.17,-2.7,-13.5,-8c-5.8,-5.3,-9.5,-10,-9.5,-14
+c0,-2,0.3,-3.3,1,-4c1.3,-2.7,23.83,-20.7,67.5,-54
+c44.2,-33.3,65.8,-50.3,66.5,-51c1.3,-1.3,3,-2,5,-2c4.7,0,8.7,3.3,12,10
+s173,378,173,378c0.7,0,35.3,-71,104,-213c68.7,-142,137.5,-285,206.5,-429
+c69,-144,104.5,-217.7,106.5,-221
+l0 -0
+c5.3,-9.3,12,-14,20,-14
+H400000v40H845.2724
+s-225.272,467,-225.272,467s-235,486,-235,486c-2.7,4.7,-9,7,-19,7
+c-6,0,-10,-1,-12,-3s-194,-422,-194,-422s-65,47,-65,47z
+M834 80h400000v40h-400000z"></path></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span style="height:0.1328em;" class="vlist"><span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span style="height:3em;" class="pstrut"></span><span style="border-bottom-width:0.04em;" class="frac-line"></span></span><span style="top:-3.677em;"><span style="height:3em;" class="pstrut"></span><span class="mord"><span class="mord">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span style="height:0.93em;" class="vlist"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mord"><span class="delimsizing size1">[</span></span><span class="mopen">(</span><span class="mord">1</span><span class="mclose">)</span><span class="mopen">(</span><span class="mord">−</span><span class="mord">1.5</span><span class="mclose">)</span><span style="margin-right:0.2222em;" class="mspace"></span><span class="mbin">+</span><span style="margin-right:0.2222em;" class="mspace"></span></span><span class="base"><span style="height:1.2em;vertical-align:-0.35em;" class="strut"></span><span class="mopen">(</span><span class="mord">1</span><span class="mclose">)</span><span class="mopen">(</span><span class="mord">−</span><span class="mord">1.5</span><span class="mclose">)</span><span class="mord"><span class="delimsizing size1">]</span></span><span style="margin-right:0.2778em;" class="mspace"></span><span class="mrel">=</span><span style="margin-right:0.2778em;" class="mspace"></span></span><span class="base"><span style="height:2.2514em;vertical-align:-0.93em;" class="strut"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span style="height:1.3214em;" class="vlist"><span style="top:-2.2028em;"><span style="height:3em;" class="pstrut"></span><span class="mord"><span class="mord sqrt"><span class="vlist-t vlist-t2"><span class="vlist-r"><span style="height:0.9072em;" class="vlist"><span style="top:-3em;" class="svg-align"><span style="height:3em;" class="pstrut"></span><span style="padding-left:0.833em;" class="mord"><span class="mord">2</span></span></span><span style="top:-2.8672em;"><span style="height:3em;" class="pstrut"></span><span style="min-width:0.853em;height:1.08em;" class="hide-tail"><svg preserveAspectRatio="xMinYMin slice" viewBox="0 0 400000 1080" height="1.08em" width="400em" xmlns="http://www.w3.org/2000/svg"><path d="M95,702
+c-2.7,0,-7.17,-2.7,-13.5,-8c-5.8,-5.3,-9.5,-10,-9.5,-14
+c0,-2,0.3,-3.3,1,-4c1.3,-2.7,23.83,-20.7,67.5,-54
+c44.2,-33.3,65.8,-50.3,66.5,-51c1.3,-1.3,3,-2,5,-2c4.7,0,8.7,3.3,12,10
+s173,378,173,378c0.7,0,35.3,-71,104,-213c68.7,-142,137.5,-285,206.5,-429
+c69,-144,104.5,-217.7,106.5,-221
+l0 -0
+c5.3,-9.3,12,-14,20,-14
+H400000v40H845.2724
+s-225.272,467,-225.272,467s-235,486,-235,486c-2.7,4.7,-9,7,-19,7
+c-6,0,-10,-1,-12,-3s-194,-422,-194,-422s-65,47,-65,47z
+M834 80h400000v40h-400000z"></path></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span style="height:0.1328em;" class="vlist"><span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span style="height:3em;" class="pstrut"></span><span style="border-bottom-width:0.04em;" class="frac-line"></span></span><span style="top:-3.677em;"><span style="height:3em;" class="pstrut"></span><span class="mord"><span class="mord">−</span><span class="mord">3</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span style="height:0.93em;" class="vlist"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span style="margin-right:0.2778em;" class="mspace"></span><span class="mrel">≈</span><span style="margin-right:0.2778em;" class="mspace"></span></span><span class="base"><span style="height:0.7278em;vertical-align:-0.0833em;" class="strut"></span><span class="mord">−</span><span class="mord">2.12</span></span></span></span></span><p>Repeating this dot product for every student gives:</p>
+<table>
+<thead>
+<tr>
+<th>Student</th>
+<th>Original Data</th>
+<th>Mean-Centered</th>
+<th>PC1 Score</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>A</td>
+<td>(2, 2)</td>
+<td>(-1.5, -1.5)</td>
+<td><strong>-2.12</strong></td>
+</tr>
+<tr>
+<td>B</td>
+<td>(3, 3)</td>
+<td>(-0.5, -0.5)</td>
+<td><strong>-0.71</strong></td>
+</tr>
+<tr>
+<td>C</td>
+<td>(4, 4)</td>
+<td>(0.5, 0.5)</td>
+<td><strong>0.71</strong></td>
+</tr>
+<tr>
+<td>D</td>
+<td>(5, 5)</td>
+<td>(1.5, 1.5)</td>
+<td><strong>2.12</strong></td>
+</tr>
+</tbody></table>
+<h3 class="atx" id="the-result-10-numbers-→-5-numbers">The Result: 10 Numbers → 5 Numbers</h3>
+<p>Originally, each of the 4 students required <strong>2 numbers</strong> (Maths mark, Physics mark) — <strong>8 numbers total</strong>, or 10 if you count the fact that in general each variable also needs its own stored mean value for reconstruction later (2 means + 8 data values = 10). PCA replaces the two correlated variables with a <strong>single PC1 score per student</strong>:</p>
+<span class="katex-display"><span class="katex"><span class="katex-mathml"></span><span aria-hidden="true" class="katex-html"><span class="base"><span style="height:1em;vertical-align:-0.25em;" class="strut"></span><span class="mord text"><span class="mord">Total&nbsp;numbers&nbsp;required&nbsp;(with&nbsp;PC1)</span></span><span style="margin-right:0.2778em;" class="mspace"></span><span class="mrel">=</span><span style="margin-right:0.2778em;" class="mspace"></span></span><span class="base"><span style="height:0.7278em;vertical-align:-0.0833em;" class="strut"></span><span class="mord">4</span><span class="mord text"><span class="mord">&nbsp;scores</span></span><span style="margin-right:0.2222em;" class="mspace"></span><span class="mbin">+</span><span style="margin-right:0.2222em;" class="mspace"></span></span><span class="base"><span style="height:0.8889em;vertical-align:-0.1944em;" class="strut"></span><span class="mord">1</span><span class="mord text"><span class="mord">&nbsp;direction&nbsp;vector’s&nbsp;worth&nbsp;of&nbsp;bookkeeping</span></span><span style="margin-right:0.2778em;" class="mspace"></span><span class="mrel">≈</span><span style="margin-right:0.2778em;" class="mspace"></span></span><span class="base"><span style="height:0.6944em;" class="strut"></span><span class="mord">5</span><span class="mord text"><span class="mord">&nbsp;numbers</span></span></span></span></span></span><p>That is a <strong>50% reduction</strong> — and, just as with the DFT example, this compression is not free: reconstructing the original marks from the PC1 score alone would reintroduce some error, exactly the same accuracy-vs-storage trade-off seen earlier.</p>
+<p>The scores also carry meaning: student D's score (+2.12) is higher than student A's (-2.12), correctly reflecting that D scored better in both subjects than A — the single PC1 number still preserves the <em>ranking</em> information of the original two variables.</p>
+<blockquote>
+<p><strong>Note for Review:</strong> The reason this example works so cleanly is that Maths and Physics marks are <em>perfectly</em> correlated (identical, in fact). In real data, correlation is rarely perfect, so the "diagonal direction" won't be exactly 45°, and it must be found using eigen-decomposition of the covariance matrix rather than by eyeballing a scatter plot. The takeaway concept — project onto the direction of maximum variance — remains exactly the same.</p>
+</blockquote>
+<h3 class="atx" id="dft-vs-pca--a-quick-contrast">DFT vs. PCA — A Quick Contrast</h3>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>DFT</th>
+<th>PCA</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Domain of operation</td>
+<td>Time → Frequency (uses complex exponentials)</td>
+<td>Original variable space → New "component" space</td>
+</tr>
+<tr>
+<td>What it exploits</td>
+<td>Energy concentration in a few frequency coefficients</td>
+<td>Correlation between variables</td>
+</tr>
+<tr>
+<td>Core mathematical tool</td>
+<td>Complex exponentials, conjugate symmetry</td>
+<td>Mean centering, direction of maximum variance (later: eigenvectors)</td>
+</tr>
+<tr>
+<td>Requires correlated input?</td>
+<td>No</td>
+<td><strong>Yes</strong> — without correlation, PCA gives no benefit</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 class="atx" id="11-practice-questions">11. Practice Questions</h2>
+<ol>
+<li><p>Suppose a new 8-point signal has DFT magnitudes that are <strong>all exactly equal</strong> (no energy compaction at all). What would this imply about the effectiveness of discarding "small" coefficients, and would keeping just 3 coefficients still be a reasonable strategy? Justify your reasoning.</p>
+</li>
+<li><p>In the medical data example, imagine that instead of blood pressure and HbA1c, the 15 numbers included things like "patient ID" and "zip code." Would your earlier objection to using DFT still apply to <em>these</em> particular variables? What distinguishes data where lossy compression is dangerous from data where it might be tolerable?</p>
+</li>
+<li><p>If a dataset has three variables — two of which are strongly correlated and one of which is completely independent of the other two — what would you expect PCA to do with the independent variable? Would you expect to gain any storage reduction from it, and why?</p>
+</li>
+<li><p>In the Maths/Physics example, the reduction went from 2 variables to 1 principal component. If a third subject, say Chemistry, were added with marks that are also perfectly identical to Maths and Physics for every student, how many principal components would you expect to be needed to fully capture the data, and why?</p>
+</li>
+<li><p>The lecture states that DFT exploits energy compaction in the <em>frequency</em> domain, while PCA exploits correlation in the <em>variable</em> domain. Construct a short argument for why a dataset could respond well to PCA but poorly to a DFT-based reduction (or vice versa) — think about what kind of "structure" each method is actually looking for.</p>
+</li>
+</ol>
+</article>
+</body>
+</html>

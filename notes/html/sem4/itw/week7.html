@@ -1,0 +1,828 @@
+
+<style id="libron-font-injection">
+@font-face {
+  font-family: 'Libron';
+  src: url('../../../../Libron_Web/Libron-Regular.woff2') format('woff2'),
+       url('../../../../Libron_Web/Libron-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Libron';
+  src: url('../../../../Libron_Web/Libron-Bold.woff2') format('woff2'),
+       url('../../../../Libron_Web/Libron-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Libron';
+  src: url('../../../../Libron_Web/Libron-Italic.woff2') format('woff2'),
+       url('../../../../Libron_Web/Libron-Italic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Libron';
+  src: url('../../../../Libron_Web/Libron-BoldItalic.woff2') format('woff2'),
+       url('../../../../Libron_Web/Libron-BoldItalic.ttf') format('truetype');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+html, body, .markdown-body, h1, h2, h3, h4, h5, h6, p, span, li, a, td, th {
+  font-family: 'Libron', serif, -apple-system, BlinkMacSystemFont !important;
+}
+
+body {
+  padding: 1.5rem 2rem !important;
+  max-width: 900px !important;
+  margin: 0 auto !important;
+}
+
+/* Dark mode theme styles inside iframe */
+[data-theme="dark"] html,
+[data-theme="dark"] body,
+[data-theme="dark"] .markdown-body {
+  background-color: #0a0a0a !important;
+  color: #ededed !important;
+}
+[data-theme="dark"] .markdown-body table tr {
+  background-color: #121212 !important;
+  border-color: #262626 !important;
+}
+[data-theme="dark"] .markdown-body table tr:nth-child(2n) {
+  background-color: #181818 !important;
+}
+[data-theme="dark"] .markdown-body table th,
+[data-theme="dark"] .markdown-body table td {
+  border-color: #2e2e2e !important;
+}
+[data-theme="dark"] .markdown-body pre,
+[data-theme="dark"] .markdown-body code {
+  background-color: #141414 !important;
+  color: #f0f0f0 !important;
+  border-color: #2a2a2a !important;
+}
+[data-theme="dark"] .markdown-body blockquote {
+  color: #999999 !important;
+  border-left-color: #444444 !important;
+}
+[data-theme="dark"] .markdown-body a {
+  color: #58a6ff !important;
+}
+[data-theme="dark"] .markdown-body hr {
+  background-color: #262626 !important;
+}
+</style>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <style>
+  @font-face {
+  font-family: octicons-link;
+  src: url(data:font/woff;charset=utf-8;base64,d09GRgABAAAAAAZwABAAAAAACFQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABEU0lHAAAGaAAAAAgAAAAIAAAAAUdTVUIAAAZcAAAACgAAAAoAAQAAT1MvMgAAAyQAAABJAAAAYFYEU3RjbWFwAAADcAAAAEUAAACAAJThvmN2dCAAAATkAAAABAAAAAQAAAAAZnBnbQAAA7gAAACyAAABCUM+8IhnYXNwAAAGTAAAABAAAAAQABoAI2dseWYAAAFsAAABPAAAAZwcEq9taGVhZAAAAsgAAAA0AAAANgh4a91oaGVhAAADCAAAABoAAAAkCA8DRGhtdHgAAAL8AAAADAAAAAwGAACfbG9jYQAAAsAAAAAIAAAACABiATBtYXhwAAACqAAAABgAAAAgAA8ASm5hbWUAAAToAAABQgAAAlXu73sOcG9zdAAABiwAAAAeAAAAME3QpOBwcmVwAAAEbAAAAHYAAAB/aFGpk3jaTY6xa8JAGMW/O62BDi0tJLYQincXEypYIiGJjSgHniQ6umTsUEyLm5BV6NDBP8Tpts6F0v+k/0an2i+itHDw3v2+9+DBKTzsJNnWJNTgHEy4BgG3EMI9DCEDOGEXzDADU5hBKMIgNPZqoD3SilVaXZCER3/I7AtxEJLtzzuZfI+VVkprxTlXShWKb3TBecG11rwoNlmmn1P2WYcJczl32etSpKnziC7lQyWe1smVPy/Lt7Kc+0vWY/gAgIIEqAN9we0pwKXreiMasxvabDQMM4riO+qxM2ogwDGOZTXxwxDiycQIcoYFBLj5K3EIaSctAq2kTYiw+ymhce7vwM9jSqO8JyVd5RH9gyTt2+J/yUmYlIR0s04n6+7Vm1ozezUeLEaUjhaDSuXHwVRgvLJn1tQ7xiuVv/ocTRF42mNgZGBgYGbwZOBiAAFGJBIMAAizAFoAAABiAGIAznjaY2BkYGAA4in8zwXi+W2+MjCzMIDApSwvXzC97Z4Ig8N/BxYGZgcgl52BCSQKAA3jCV8CAABfAAAAAAQAAEB42mNgZGBg4f3vACQZQABIMjKgAmYAKEgBXgAAeNpjYGY6wTiBgZWBg2kmUxoDA4MPhGZMYzBi1AHygVLYQUCaawqDA4PChxhmh/8ODDEsvAwHgMKMIDnGL0x7gJQCAwMAJd4MFwAAAHjaY2BgYGaA4DAGRgYQkAHyGMF8NgYrIM3JIAGVYYDT+AEjAwuDFpBmA9KMDEwMCh9i/v8H8sH0/4dQc1iAmAkALaUKLgAAAHjaTY9LDsIgEIbtgqHUPpDi3gPoBVyRTmTddOmqTXThEXqrob2gQ1FjwpDvfwCBdmdXC5AVKFu3e5MfNFJ29KTQT48Ob9/lqYwOGZxeUelN2U2R6+cArgtCJpauW7UQBqnFkUsjAY/kOU1cP+DAgvxwn1chZDwUbd6CFimGXwzwF6tPbFIcjEl+vvmM/byA48e6tWrKArm4ZJlCbdsrxksL1AwWn/yBSJKpYbq8AXaaTb8AAHja28jAwOC00ZrBeQNDQOWO//sdBBgYGRiYWYAEELEwMTE4uzo5Zzo5b2BxdnFOcALxNjA6b2ByTswC8jYwg0VlNuoCTWAMqNzMzsoK1rEhNqByEyerg5PMJlYuVueETKcd/89uBpnpvIEVomeHLoMsAAe1Id4AAAAAAAB42oWQT07CQBTGv0JBhagk7HQzKxca2sJCE1hDt4QF+9JOS0nbaaYDCQfwCJ7Au3AHj+LO13FMmm6cl7785vven0kBjHCBhfpYuNa5Ph1c0e2Xu3jEvWG7UdPDLZ4N92nOm+EBXuAbHmIMSRMs+4aUEd4Nd3CHD8NdvOLTsA2GL8M9PODbcL+hD7C1xoaHeLJSEao0FEW14ckxC+TU8TxvsY6X0eLPmRhry2WVioLpkrbp84LLQPGI7c6sOiUzpWIWS5GzlSgUzzLBSikOPFTOXqly7rqx0Z1Q5BAIoZBSFihQYQOOBEdkCOgXTOHA07HAGjGWiIjaPZNW13/+lm6S9FT7rLHFJ6fQbkATOG1j2OFMucKJJsxIVfQORl+9Jyda6Sl1dUYhSCm1dyClfoeDve4qMYdLEbfqHf3O/AdDumsjAAB42mNgYoAAZQYjBmyAGYQZmdhL8zLdDEydARfoAqIAAAABAAMABwAKABMAB///AA8AAQAAAAAAAAAAAAAAAAABAAAAAA==) format('woff');
+}
+
+.markdown-body .octicon {
+  display: inline-block;
+  fill: currentColor;
+  vertical-align: text-bottom;
+}
+
+.markdown-body .anchor {
+  float: left;
+  line-height: 1;
+  margin-left: -20px;
+  padding-right: 4px;
+}
+
+.markdown-body .anchor:focus {
+  outline: none;
+}
+
+.markdown-body h1 .octicon-link,
+.markdown-body h2 .octicon-link,
+.markdown-body h3 .octicon-link,
+.markdown-body h4 .octicon-link,
+.markdown-body h5 .octicon-link,
+.markdown-body h6 .octicon-link {
+  color: #1b1f23;
+  vertical-align: middle;
+  visibility: hidden;
+}
+
+.markdown-body h1:hover .anchor,
+.markdown-body h2:hover .anchor,
+.markdown-body h3:hover .anchor,
+.markdown-body h4:hover .anchor,
+.markdown-body h5:hover .anchor,
+.markdown-body h6:hover .anchor {
+  text-decoration: none;
+}
+
+.markdown-body h1:hover .anchor .octicon-link,
+.markdown-body h2:hover .anchor .octicon-link,
+.markdown-body h3:hover .anchor .octicon-link,
+.markdown-body h4:hover .anchor .octicon-link,
+.markdown-body h5:hover .anchor .octicon-link,
+.markdown-body h6:hover .anchor .octicon-link {
+  visibility: visible;
+}
+
+.markdown-body {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  color: #24292e;
+  line-height: 1.5;
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
+  font-size: 16px;
+  line-height: 1.5;
+  word-wrap: break-word;
+}
+
+.markdown-body .pl-c {
+  color: #6a737d;
+}
+
+.markdown-body .pl-c1,
+.markdown-body .pl-s .pl-v {
+  color: #005cc5;
+}
+
+.markdown-body .pl-e,
+.markdown-body .pl-en {
+  color: #6f42c1;
+}
+
+.markdown-body .pl-s .pl-s1,
+.markdown-body .pl-smi {
+  color: #24292e;
+}
+
+.markdown-body .pl-ent {
+  color: #22863a;
+}
+
+.markdown-body .pl-k {
+  color: #d73a49;
+}
+
+.markdown-body .pl-pds,
+.markdown-body .pl-s,
+.markdown-body .pl-s .pl-pse .pl-s1,
+.markdown-body .pl-sr,
+.markdown-body .pl-sr .pl-cce,
+.markdown-body .pl-sr .pl-sra,
+.markdown-body .pl-sr .pl-sre {
+  color: #032f62;
+}
+
+.markdown-body .pl-smw,
+.markdown-body .pl-v {
+  color: #e36209;
+}
+
+.markdown-body .pl-bu {
+  color: #b31d28;
+}
+
+.markdown-body .pl-ii {
+  background-color: #b31d28;
+  color: #fafbfc;
+}
+
+.markdown-body .pl-c2 {
+  background-color: #d73a49;
+  color: #fafbfc;
+}
+
+.markdown-body .pl-c2:before {
+  content: "tg1/tg1^</p>
+<div class="plantuml"><img src="https://www.plantuml.com/plantuml/svg/~1U5vrph4EWZ0GWE7zdkB4MGpCX11dNwBQXZQvjXUuQ-BR6q2C3cp_y0t_C8kPH2F1YISpHeDaNba5v-Z490EI6INZ8ulaY3PCxYaX9u0bJ1h9OTNvfiUwhh6x-gQlqCpe6ppVm-ZbHkh-hD9kbJQhT6HjA3jUSjMs76dUBM-I-KZwzllRVdxRNmk-mSkbHoLGMiiMi6KjPc1UoxSmk6GrqXl5RMFG"></div>
+<p></p>
+<hr>
+<h2 class="atx" id="4-background">4. Background</h2>
+<p>Just as space organization matters, so does the background. Using CSS you can place an image as the background and control how it behaves, much like inserting images into a PowerPoint slide or a document. </p>
+<table>
+<thead>
+<tr>
+<th>Goal</th>
+<th>CSS</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Single image at top-left corner, not repeated</td>
+<td><code>background-image: url(checkers.png);</code> <code>background-repeat: no-repeat;</code></td>
+</tr>
+<tr>
+<td>Place the image at an offset (300px from left, 50px from top)</td>
+<td><code>background-image: url(checkers.png) no-repeat;</code> <code>background-position: 300px 50px;</code></td>
+</tr>
+<tr>
+<td>Tile the image across the entire area</td>
+<td><code>background-repeat: repeat;</code></td>
+</tr>
+<tr>
+<td>Tile only vertically</td>
+<td><code>background-repeat: repeat-y;</code></td>
+</tr>
+<tr>
+<td>Tile only horizontally</td>
+<td><code>background-repeat: repeat-x;</code></td>
+</tr>
+<tr>
+<td>Scale image to <strong>cover</strong> the whole box (may crop)</td>
+<td><code>background-size: cover;</code></td>
+</tr>
+<tr>
+<td>Scale image to <strong>fit entirely inside</strong> the box</td>
+<td><code>background-size: contain;</code></td>
+</tr>
+<tr>
+<td>Explicit size</td>
+<td><code>background-size: 200px 100px;</code></td>
+</tr>
+</tbody></table>
+<p> <strong>Choosing the area the background is drawn in</strong> with <code>background-origin</code>:</p>
+<pre><code class="fenced-code-block language-css"><span class="token comment">/* background starts at the outer edge of the border */</span>
+<span class="token property">background-origin</span><span class="token punctuation">:</span> border-box<span class="token punctuation">;</span>
+<span class="token property">background-size</span><span class="token punctuation">:</span> cover<span class="token punctuation">;</span>
+<span class="token property">border-size</span><span class="token punctuation">:</span> 5px<span class="token punctuation">;</span>
+<span class="token property">border-color</span><span class="token punctuation">:</span> <span class="token function">rgba</span><span class="token punctuation">(</span>242<span class="token punctuation">,</span>112<span class="token punctuation">,</span>90<span class="token punctuation">,</span>0.5<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">/* background starts inside the padding */</span>
+<span class="token property">background-origin</span><span class="token punctuation">:</span> padding-box<span class="token punctuation">;</span>
+
+<span class="token comment">/* background starts inside the content area */</span>
+<span class="token property">background-origin</span><span class="token punctuation">:</span> content-box<span class="token punctuation">;</span>
+<span class="token property">padding</span><span class="token punctuation">:</span> 10px<span class="token punctuation">;</span></code></pre>
+<p></p>
+<blockquote>
+<p><strong>Note for Review</strong>
+Pro-Tip: <code>background-position</code> and <code>repeat</code> work together. <code>no-repeat</code> + <code>300px 50px</code> places <strong>one</strong> copy 300px from the left and 50px from the top of the frame of reference. Also, the slide writes <code>border-size</code>; the standard property name is <code>border-width</code>.</p>
+</blockquote>
+<hr>
+<h2 class="atx" id="5-borders">5. Borders</h2>
+<p>Borders can be dotted, straight, dashed, curved at corners, and so on.</p>
+<table>
+<thead>
+<tr>
+<th>Effect</th>
+<th>CSS</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Solid line</td>
+<td><code>border-style: solid;</code></td>
+</tr>
+<tr>
+<td>Dotted line</td>
+<td><code>border-style: dotted;</code></td>
+</tr>
+<tr>
+<td>Dashed line</td>
+<td><code>border-style: dashed;</code></td>
+</tr>
+<tr>
+<td>No border</td>
+<td><code>border-width: 0;</code></td>
+</tr>
+<tr>
+<td>Thin border</td>
+<td><code>border-width: 1px;</code></td>
+</tr>
+<tr>
+<td>Different width per side (top right bottom left)</td>
+<td><code>border-width: 1px 2px 0 1px;</code></td>
+</tr>
+<tr>
+<td>Shorthand: style, width, color</td>
+<td><code>border: solid 2px gold;</code></td>
+</tr>
+<tr>
+<td>Rounded corners with a border</td>
+<td><code>border-radius: 3px;</code> <code>border-width: 1px;</code></td>
+</tr>
+<tr>
+<td>Rounded corners, no border</td>
+<td><code>border-radius: 3px;</code> <code>border-width: 0;</code></td>
+</tr>
+<tr>
+<td>Shadow offset right/down</td>
+<td><code>box-shadow: 2px 2px gray;</code></td>
+</tr>
+<tr>
+<td>Blurred shadow around all sides</td>
+<td><code>box-shadow: 2px 2px 2px 2px gray;</code></td>
+</tr>
+</tbody></table>
+<blockquote>
+<p><strong>Note for Review</strong>
+Pro-Tip: For multi-value <code>border-width</code>, remember <strong>T-R-B-L</strong>: clockwise starting from the top. So <code>1px 2px 0 1px</code> means top 1, right 2, bottom 0, left 1.</p>
+</blockquote>
+<hr>
+<h2 class="atx" id="6-controlling-layout-flow-and-positioning">6. Controlling Layout: Flow and Positioning</h2>
+<p>Layout is about <strong>flow</strong> and <strong>positioning</strong>.</p>
+<ul>
+<li>In <strong>normal flow</strong>, <strong>block elements stack vertically</strong> (one under the other) and <strong>inline elements flow left to right</strong>.</li>
+<li><code>display</code> — switches an element's flow behaviour: <code>block</code>, <code>inline</code>, <code>inline-block</code>, <code>flex</code>, <code>grid</code>, <code>none</code>. It decides <em>how the element flows on the page</em>.</li>
+<li><code>position</code> — <strong>static by default</strong>; <code>relative</code>, <code>absolute</code>, <code>fixed</code> and <code>sticky</code> each anchor the element differently.</li>
+<li><code>float</code> <strong>predates Flexbox and Grid</strong> — you will still run into it for <strong>wrapping text around an image</strong>. </li>
+</ul>
+<div class="plantuml"><img src="https://www.plantuml.com/plantuml/svg/~1U5vrpZ4EmZ0C1T0zfp2mmC0L469XuG98B5Rhj95SEt8S5MwFKYh4mlOj--dxN1pDwyHXams72O7nfTMXJEGe69YYWojO6aQ7FXbrdbH2Q05bO8BjRI5RmD8qx6xjziALVe_wL3BZwo7xKMT83f5rBeT5jTtAhaOalovhIQtn8Vjv9AD6KRfHRSLPopyRMT4RDCpWz7H0qohzfpMoh_1Ep3g7qBu_7a_BFzyXQ_dco1xE97sT-0t62cqn"></div>
+<p></p>
+<hr>
+<h2 class="atx" id="7-css-layouts-columns-floats-and-position-values">7. CSS Layouts: Columns, Floats and Position Values</h2>
+<p>Complex <strong>multi-column layouts</strong> can be created with <strong>floats and/or positioning</strong>. A typical dashboard shows:</p>
+<ul>
+<li>a <strong>two-column layout</strong> (heading column + content column),</li>
+<li>a <strong>three-column layout</strong>: the <strong>left column</strong> holds the <strong>navigation</strong>, the <strong>middle</strong> is the main page where the data and visualizations appear, and the <strong>right</strong> is a control area where the user provides input (mostly form elements),</li>
+<li><strong>nested column layouts within a column</strong> (cards, charts inside the middle column).</li>
+</ul>
+<h3 class="atx" id="floating-elements">Floating Elements</h3>
+<p>Consider this HTML:</p>
+<pre><code class="fenced-code-block language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span><span class="token punctuation">&gt;</span></span>Float example<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>A wonderful serenity has taken ...<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>figure</span><span class="token punctuation">&gt;</span></span>
+   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>images/828.jpg<span class="token punctuation">"</span></span> <span class="token attr-name">alt</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>...<span class="token punctuation">"</span></span> <span class="token punctuation">/&gt;</span></span>
+   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>figcaption</span><span class="token punctuation">&gt;</span></span>British Museum<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>figcaption</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>figure</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>When, while the lovely valley ...<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span></code></pre>
+<p> Without float, the page shows paragraph, then the figure (image + caption), then the next paragraph, with a lot of <strong>white space</strong> beside the image. The style sheet (not part of the HTML) styles the figure:</p>
+<pre><code class="fenced-code-block language-css"><span class="token selector">figure</span> <span class="token punctuation">{</span>
+   <span class="token property">border</span><span class="token punctuation">:</span> 1pt solid #A8A8A8<span class="token punctuation">;</span>
+   <span class="token property">background-color</span><span class="token punctuation">:</span> #EDEDDD<span class="token punctuation">;</span>
+   <span class="token property">margin</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+   <span class="token property">padding</span><span class="token punctuation">:</span> 5px<span class="token punctuation">;</span>
+   <span class="token property">width</span><span class="token punctuation">:</span> 150px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<p>To place the figure and paragraph <strong>side by side</strong>, add <code>float</code> on top of the existing rules:</p>
+<pre><code class="fenced-code-block language-css"><span class="token selector">figure</span> <span class="token punctuation">{</span>
+   ...
+   <span class="token property">width</span><span class="token punctuation">:</span> 150px<span class="token punctuation">;</span>
+   <span class="token property">float</span><span class="token punctuation">:</span> left<span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<p> The text now wraps around the image, removing the empty space. Note that <strong>a floated block-level element should have a width specified</strong>.</p>
+<h3 class="atx" id="position-values">Position Values</h3>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>absolute</code></td>
+<td>Removed from normal flow and positioned <strong>relative to its nearest positioned ancestor</strong></td>
+</tr>
+<tr>
+<td><code>fixed</code></td>
+<td>Fixed at a specific position <strong>in the window</strong>, even when the document is scrolled</td>
+</tr>
+<tr>
+<td><code>relative</code></td>
+<td>Moved <strong>relative to where it would be in the normal flow</strong></td>
+</tr>
+<tr>
+<td><code>static</code></td>
+<td>Positioned according to the normal flow. <strong>This is the default</strong></td>
+</tr>
+<tr>
+<td><code>sticky</code></td>
+<td>Positioned per normal flow, then offset relative to its <strong>nearest scrolling ancestor</strong>; lets an item scroll and then <strong>stay fixed</strong> once its scroll position is reached</td>
+</tr>
+</tbody></table>
+<p>Together with offsets like <code>top</code>, <code>right</code>, <code>left</code>, you dictate where an element sits. Rather than memorizing definitions, <strong>experience them through hands-on assignments</strong>; they become clear only when you try them.</p>
+<blockquote>
+<p><strong>Note for Review</strong>
+Pro-Tip: Common mix-up: <code>fixed</code> is pinned to the <strong>viewport</strong> (it stays while you scroll), while <code>absolute</code> is pinned to the nearest <strong>positioned ancestor</strong>. <code>relative</code> shifts the element from its <em>own</em> normal spot and is also how you turn a parent into the anchor for <code>absolute</code> children.</p>
+</blockquote>
+<hr>
+<h2 class="atx" id="8-flexbox-vs-grid">8. Flexbox vs Grid</h2>
+<p>Take a container with five child <code>div</code>s labeled A to E: </p>
+<pre><code class="fenced-code-block language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>container<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">&gt;</span></span>A<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">&gt;</span></span>B<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">&gt;</span></span>C<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">&gt;</span></span>D<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">&gt;</span></span>E<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span></code></pre>
+<pre><code class="fenced-code-block language-css"><span class="token selector">.container</span> <span class="token punctuation">{</span>
+   <span class="token property">background-color</span><span class="token punctuation">:</span> #4AB2D6<span class="token punctuation">;</span>
+   <span class="token property">width</span><span class="token punctuation">:</span> 600px<span class="token punctuation">;</span>
+   <span class="token property">margin</span><span class="token punctuation">:</span> 50px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.container div</span> <span class="token punctuation">{</span> <span class="token property">background-color</span><span class="token punctuation">:</span> #80CFEC<span class="token punctuation">;</span> ... <span class="token punctuation">}</span></code></pre>
+<p> </p>
+<p><strong>Flex version</strong></p>
+<pre><code class="fenced-code-block language-css"><span class="token selector">.container</span> <span class="token punctuation">{</span> <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span> <span class="token property">flex-wrap</span><span class="token punctuation">:</span> wrap<span class="token punctuation">;</span> <span class="token punctuation">}</span>
+<span class="token selector">.container div</span> <span class="token punctuation">{</span> <span class="token property">flex</span><span class="token punctuation">:</span> 1 1 150px<span class="token punctuation">;</span> <span class="token punctuation">}</span></code></pre>
+<p>Elements inside a flexbox have a <strong>minimum size of 150px but grow to fit the container</strong>. Result: row 1 holds A, B, C; row 2 holds D and E, and D and E <strong>stretch to use all remaining space</strong>.</p>
+<p><strong>Grid version</strong></p>
+<pre><code class="fenced-code-block language-css"><span class="token selector">.container</span> <span class="token punctuation">{</span>
+   <span class="token property">display</span><span class="token punctuation">:</span> grid<span class="token punctuation">;</span>
+   <span class="token property">grid-template-columns</span><span class="token punctuation">:</span> <span class="token function">repeat</span><span class="token punctuation">(</span>3<span class="token punctuation">,</span> 1fr<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<p>Each row of the grid has <strong>three columns whose size is based on the space available in the container</strong>. A, B, C fill row 1, and D, E fill the first two cells of row 2, leaving the last cell <strong>empty</strong>. The widths are fixed and cells do <strong>not</strong> stretch to occupy leftover space. </p>
+<div class="plantuml"><img src="https://www.plantuml.com/plantuml/svg/~1U5wLaBjkmp0CHNTznMswf4E6TlHGfEaZIwTkHTE1i2X502KP4et8Vr_OI02ltKY0vrpYxgjIqJ6AkHiA-KWGclAeg96L4XbXfz2C4lnPOKFXNaDEnim39I-CpOTmEwMj3NKGcZeuuVQm0LMuXllFcJp8o6laAr_msE451xoUqhmzTNZ3ExPL2sj_PdipbAlYM9ZJsd4imQvZVGbNoDl_nlvm77JwNPxszXRvpIBvOenhsEsUuLf1Xw0SAyZIi1HJ1-hPUBjSp6W75nfRz5d6cAhPSx9Zb3--6tVq"></div>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Flexbox</th>
+<th>Grid</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Dimension</td>
+<td>One-dimensional (a row <strong>or</strong> a column)</td>
+<td>Two-dimensional (rows <strong>and</strong> columns)</td>
+</tr>
+<tr>
+<td>Item sizing</td>
+<td>Items <strong>grow/shrink</strong> to fill space</td>
+<td>Fixed track sizes, cells do not adapt</td>
+</tr>
+<tr>
+<td>Leftover space</td>
+<td>Absorbed by items</td>
+<td>May leave empty cells</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 class="atx" id="9-flexbox-in-detail">9. Flexbox in Detail</h2>
+<h3 class="atx" id="container-items-and-axes">Container, Items and Axes</h3>
+<p>A <strong>flex container</strong> holds <strong>flex items</strong>. Items are laid along the <strong>main axis</strong> (horizontal by default), and the <strong>cross axis</strong> runs perpendicular to it. <strong>Both block-level and inline elements become flex items</strong> (a <code>&lt;span&gt;</code> inside the container behaves like a <code>&lt;div&gt;</code> item).</p>
+<pre><code class="fenced-code-block language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>container<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">&gt;</span></span>flex item 1<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span><span class="token punctuation">&gt;</span></span>flex item 2<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">&gt;</span></span>flex item 3<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span></code></pre>
+<div class="plantuml"><img src="https://www.plantuml.com/plantuml/svg/~1U5w5pRyAmZ0Gn_4zJt7MkKEJpK6AYuilSQINUf0_aboWVNkfSR0ek1rVFZzkB89PQl3gyCWu1mIFQwe29P1WHEN92KY2pFDTOE9CLZX5fRO3u-m9EkTf0PkY84VA7M01P-5usoRNZEkNPQ40mmloy8ONN-atr0tglz0qQ3wXSXRw_hpzEK50Ze0B5yL3gtfVTQjcLqUAKmt-2VXBOS4"></div>
+<h3 class="atx" id="use-cases">Use Cases</h3>
+<ul>
+<li>A <strong>horizontal navigation bar</strong> — flex can <strong>distribute items evenly along a row</strong>.</li>
+<li><strong>Data-entry forms</strong> — flex is very helpful for <strong>aligning labels, input controls and buttons</strong>. For instance, "Name" (long) and "Class" (short) fields can be arranged so all of them end up with consistent alignment.</li>
+</ul>
+<h3 class="atx" id="key-properties">Key Properties</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>display: flex;</code></td>
+<td><strong>Necessary</strong> to use flexbox</td>
+</tr>
+<tr>
+<td><code>flex-direction: row</code></td>
+<td>Direction of the main axis; <strong>default is row</strong></td>
+</tr>
+<tr>
+<td><code>flex-direction: row-reverse</code></td>
+<td>Items placed right to left</td>
+</tr>
+<tr>
+<td><code>flex-direction: column</code></td>
+<td>Items stacked top to bottom</td>
+</tr>
+<tr>
+<td><code>flex-direction: column-reverse</code></td>
+<td>Items stacked bottom to top</td>
+</tr>
+<tr>
+<td><code>flex-wrap: wrap</code></td>
+<td>New lines are created if the container cannot hold all items</td>
+</tr>
+<tr>
+<td><code>flex-wrap: nowrap</code></td>
+<td>All items forced onto one line</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 class="atx" id="10-flex-and-grid-together">10. Flex and Grid Together</h2>
+<p>Most of the time you will use <strong>grid and flex together</strong>: grid for the <strong>outer structure</strong>, flex inside each grid cell.</p>
+<p>Example: a gallery of artist cards (image, name, caption, button).</p>
+<pre><code class="fenced-code-block language-css"><span class="token selector">.container</span> <span class="token punctuation">{</span>
+  <span class="token property">display</span><span class="token punctuation">:</span> grid<span class="token punctuation">;</span>
+  <span class="token property">grid-template-columns</span><span class="token punctuation">:</span> <span class="token function">repeat</span><span class="token punctuation">(</span>auto-fill<span class="token punctuation">,</span> ... <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<p>Grid creates the <strong>rows and columns</strong>. To lay out <strong>each individual grid cell</strong>, we use flexbox: </p>
+<pre><code class="fenced-code-block language-css"><span class="token selector">.cell</span> <span class="token punctuation">{</span>
+  <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
+  <span class="token property">flex-direction</span><span class="token punctuation">:</span> column<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.cell img</span> <span class="token punctuation">{</span>
+  <span class="token property">align-self</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.cell h2, .cell p</span> <span class="token punctuation">{</span>
+  <span class="token property">text-align</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.cell button</span> <span class="token punctuation">{</span>
+  <span class="token property">margin-top</span><span class="token punctuation">:</span> auto<span class="token punctuation">;</span>
+  <span class="token property">justify-self</span><span class="token punctuation">:</span> flex-end<span class="token punctuation">;</span>
+  <span class="token property">align-self</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<p> </p>
+<div class="plantuml"><img src="https://www.plantuml.com/plantuml/svg/~1U5w5pSrAGq4C1U3zF4Mi6uNRnRtBBgJOHJU-WE0cdObZC9DSPZ9u-_RI7w4WuYg7m_d8jZbMxqN2tLmn5mJ1etM7LiXHCRZDu0O7SxS2YIj5PzCGJW4r2y5gNpb1D7LafVgc3udRB7ZSGAwS7bU03JBSlt3-y6VfT6jt90BZhNaNMWQ89htenSRnYlULI7_fwHyz_QMvOAO1d5rEXnOVuD3TJSzlsQcqgtqb4ViA8SDw_GHn_0bJYEEvkemtq1pZ9oKmXOAiW0kti2LDlSWtbizx4W"></div>
+<p>This gives you the benefit of both: a clean structured grid outside and adaptive spacing inside each cell. </p>
+<hr>
+<h2 class="atx" id="11-responsive-design">11. Responsive Design</h2>
+<p>Your page will be rendered in different <strong>environments</strong>: not just different browsers (Internet Explorer, Mozilla, Chrome), but different <strong>resolutions and screen sizes</strong> — laptop, large display, tablet, mobile. A good design adapts to any screen size and gives a similar user experience, which includes how well the user can <strong>interpret</strong> information, how many <strong>scrolls</strong> and <strong>clicks</strong> are needed to browse it.</p>
+<p>In the early days, plain HTML pages loaded in mobile browsers gave a painful experience of scrolling and reading. Today this is largely solved.</p>
+<p>In a <strong>responsive design</strong>, the page "responds" to changes in browser size, going <strong>beyond simple percentage scaling of widths</strong>: <strong>smaller images are served and navigation elements are replaced</strong> as the window shrinks.</p>
+<table>
+<thead>
+<tr>
+<th>Device</th>
+<th>Width</th>
+<th>Layout</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Mobile</td>
+<td><code>&lt; 600px</code></td>
+<td>Single column</td>
+</tr>
+<tr>
+<td>Tablet</td>
+<td><code>600–1024px</code></td>
+<td>Two columns</td>
+</tr>
+<tr>
+<td>Desktop</td>
+<td><code>&gt; 1024px</code></td>
+<td>Three columns</td>
+</tr>
+</tbody></table>
+<div class="plantuml"><img src="https://www.plantuml.com/plantuml/svg/~1U5vLpasB0Z4C1k1xVqNKyq3zm8E8Y2piPVVcHPXBnebZCKs7DaNzzz91HM_9IvuaswGODNisepvYvn4Oxo4h94-AWeRffA01eklE2gsBT5GNn9XIe7HCCFuFZMEgPGrBQ_jRBLCu1ivUne09V6XWybVuZZDzkZqsJ5hBqjfgQcUBGcTFcWQh-BA_aKW-yG-bYuQ-bWsyxFpBjfGkpyC7OWvNOyehLRKPrgxWwbgIP4fJmc7-dMv9skpv0KmSOP0"></div>
+<p>The switch is done with <strong>media queries</strong>:</p>
+<pre><code class="fenced-code-block language-css"><span class="token atrule"><span class="token rule">@media</span> <span class="token punctuation">(</span><span class="token property">min-width</span><span class="token punctuation">:</span> 600px<span class="token punctuation">)</span></span>  <span class="token punctuation">{</span> ... <span class="token punctuation">}</span>
+<span class="token atrule"><span class="token rule">@media</span> <span class="token punctuation">(</span><span class="token property">min-width</span><span class="token punctuation">:</span> 1024px<span class="token punctuation">)</span></span> <span class="token punctuation">{</span> ... <span class="token punctuation">}</span></code></pre>
+<h3 class="atx" id="why-not-just-scale-down">Why Not Just Scale Down?</h3>
+<p>If a page designed for a large screen is merely scaled down to a mobile/tablet screen, everything technically fits, but text and elements <strong>shrink so much that they become practically unusable</strong> — the user experience deteriorates.</p>
+<h3 class="atx" id="the-viewport">The Viewport</h3>
+<p>The <strong>viewport</strong> is the part of the browser window that displays web content. Using a <code>meta</code> tag you tell the browser to scale the layout to the <strong>visible working screen width</strong> (for example it becomes <strong>320px</strong> on a small mobile browser), giving a similar experience across devices:</p>
+<pre><code class="fenced-code-block language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>viewport<span class="token punctuation">"</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>width=device-width, initial-scale=1<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span></code></pre>
+<blockquote>
+<p><strong>Note for Review</strong>
+Pro-Tip: Responsive design needs <strong>two ingredients</strong>: a correctly configured <strong>viewport meta tag</strong> and <strong>media queries</strong>. Forgetting the viewport tag makes mobile browsers pretend the screen is wide, and your media queries will not behave as expected.</p>
+</blockquote>
+<hr>
+<h2 class="atx" id="12-module-recap-html-and-css">12. Module Recap: HTML and CSS</h2>
+<ul>
+<li><strong>HTML's skeleton and vocabulary</strong> — doctype, <code>html</code>, <code>head</code>, <code>body</code>, semantic tags, headings, lists, links, tables and forms.</li>
+<li><strong>Links, tables and forms</strong> are the backbone of interactive pages, each with a defined, accessible structure; they carry the dynamic part, projecting up-to-date information when clients demand it.</li>
+<li><strong>Forms send data via GET (visible in the URL) or POST (hidden in the body)</strong> — the choice affects <strong>security and caching</strong>, and so performance.</li>
+<li><strong>CSS pairs a selector with <code>property: value</code> rules</strong>; best practice keeps it in an <strong>external style sheet, not inline</strong>.</li>
+<li><strong>Selectors range from simple</strong> (element, class, id) <strong>to precise</strong> (attribute, contextual/combinator).</li>
+<li><strong>Conflicting rules are resolved by the cascade</strong>: inheritance, specificity and source order.</li>
+<li><strong>The box model</strong>: an element's real size = content + padding + border + margin.</li>
+<li><strong>Flexbox handles one-dimensional alignment; Grid handles two-dimensional layouts.</strong></li>
+<li><strong>Responsive design</strong> adapts layout across screen sizes with media queries and a correctly configured viewport.</li>
+</ul>
+<hr>
+<h2 class="atx" id="13-module-3-begins-client-side-programming-with-javascript">13. Module 3 Begins: Client-Side Programming with JavaScript</h2>
+<h3 class="atx" id="what-this-module-covers">What This Module Covers</h3>
+<ul>
+<li>JavaScript background and how to add it to a page (client-side programming)</li>
+<li>Why it is needed</li>
+<li>Making decisions and repeating work: operators, conditionals, loops</li>
+<li>Functions and events (JavaScript is <strong>event-driven</strong>)</li>
+<li>The DOM and forms</li>
+<li>Async basics</li>
+</ul>
+<p>If you know C, C++ or Java you will have some advantage, since the basic programming constructs look familiar.</p>
+<h3 class="atx" id="the-big-question">The Big Question</h3>
+<p>What turns a page that just sits there into one that <strong>responds to every click, keystroke and timer</strong>? Whenever the user interacts with the page — clicking, typing and so on — that interaction is an <strong>event</strong>. On the occurrence of an event, some action must be initiated and <strong>automated</strong>. This is done with JavaScript.</p>
+<h3 class="atx" id="what-javascript-is">What JavaScript Is</h3>
+<p><strong>JavaScript is an object-oriented, lightweight, dynamically typed scripting language.</strong></p>
+<ul>
+<li>Why "scripting"? There is no separate compile step producing object code or byte code, as with C/C++ (compiler) or Java (compiler plus Java Virtual Machine). JavaScript is run by an <strong>interpreter</strong>.</li>
+<li>It is <strong>NOT related to Java</strong> other than by name and some syntactic similarities.</li>
+<li>It can be used to <strong>programmatically access</strong> and <strong>dynamically manipulate</strong> any aspect of an HTML document's appearance or content. That is: you can reach different objects through code (automating access, for instance by time or on an event) and change them on demand.</li>
+<li>It can <strong>animate, move, transition, hide and load</strong> content into parts of a page <strong>rather than refresh an entire page from the server</strong> — for example an element moving across the page as it loads.</li>
+<li>It was <strong>introduced by Netscape in their Navigator browser in 1996</strong>, originally called <strong>LiveScript</strong>.</li>
+<li>Mostly used for client-side programming (though it also works server-side; we will see that in a later module).</li>
+</ul>
+<h3 class="atx" id="what-it-is-used-for">What It Is Used For</h3>
+<ul>
+<li>Making web pages <strong>interactive</strong></li>
+<li>Inserting <strong>dynamic text</strong> into HTML (e.g. the user's name)</li>
+<li><strong>Reacting to events</strong> (e.g. page load, user click)</li>
+<li>Getting <strong>information about a user's computer</strong> (e.g. browser type)</li>
+<li>Performing <strong>calculations</strong> on the user's computer (e.g. form validation)</li>
+</ul>
+<hr>
+<h2 class="atx" id="14-where-javascript-is-used">14. Where JavaScript Is Used</h2>
+<p>JavaScript is not limited to the browser:</p>
+<table>
+<thead>
+<tr>
+<th>Area</th>
+<th>Examples</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Non-browser engines, via open-source projects</td>
+<td>Google <strong>V8</strong>, Mozilla <strong>SpiderMonkey</strong>, Microsoft <strong>Chakra</strong></td>
+</tr>
+<tr>
+<td>Server-side runtime</td>
+<td><strong>Node.js</strong> (covered in a later server-side module)</td>
+</tr>
+<tr>
+<td>Databases</td>
+<td>The query language of <strong>MongoDB</strong></td>
+</tr>
+<tr>
+<td>Desktop applications (end-user scripting)</td>
+<td><strong>Adobe Creative Suite</strong>, <strong>OpenOffice</strong></td>
+</tr>
+<tr>
+<td>Embedded / IoT</td>
+<td>JavaScript engine in the <strong>Oculus Rift</strong> headset (virtual reality); <strong>Arduino</strong> and <strong>Raspberry Pi</strong> microcontrollers</td>
+</tr>
+<tr>
+<td>Native apps</td>
+<td>Desktop or mobile applications authored with <strong>React Native</strong> or <strong>Electron</strong></td>
+</tr>
+</tbody></table>
+<hr>
+<h2 class="atx" id="15-client-side-scripting-architecture">15. Client-Side Scripting Architecture</h2>
+<p>The web is a <strong>client–server</strong> architecture: a web browser on the user's computer, a web server on the server computer.</p>
+<ol>
+<li><strong>GET</strong>: the browser, using a URL, requests the page <code>hello.php</code>.</li>
+<li>The server <strong>executes the PHP script</strong> (server-side code).</li>
+<li>The script generates <strong>HTML output</strong>, which is sent back to the browser.</li>
+<li>The browser renders it and <strong>executes the JavaScript</strong> embedded or referenced in the output.</li>
+</ol>
+<div class="plantuml"><img src="https://www.plantuml.com/plantuml/svg/~1U5vra4zB0p4KnE_xASRsO3rqmJ-dFKYfI8jKABGYGY_PxRExDPk4bvUjVdj9kagfU1kO-MNcPU95iOHMPnUErQvLqEhB1e5lIPHHcQPtWLXmiwi5suQfaiQQB8j2cPqc35wfn9JjmHDlpEZ54rzwFDZM1I6-6a1vb8pX8ZunrO7EsHLnbz2ZE4DzrwCp9ZAdx7A-XA-uSR8nevgqjhchtR7GrQx7tg9nEENcw-S5R10N96LhQVM_uIVLgLLVmi5uD0RbyTW4xps6AwNR-2SbOpo-X-zGu3h7x76DtrcPxvBfQfV5SL6duW8tEUYJgY3KdvCb8oPAHe7R76co9oCeLVNnKxJtA73tXvwGsOPMVmCHhA0l"></div>
+<p><strong>A natural doubt:</strong> PHP can already create dynamic pages, so why not let the server run all the logic and just send simple HTML? That would be a neat design, but client-side scripting brings real advantages.</p>
+<hr>
+<h2 class="atx" id="16-why-client-side-pros-and-cons">16. Why Client-Side? Pros and Cons</h2>
+<h3 class="atx" id="advantages">Advantages</h3>
+<ul>
+<li><strong>Usability</strong> — the page can be modified <strong>without a post-back to the server</strong>. An interactive design driven by the server needs many back-and-forth exchanges, each a <strong>round trip</strong> over GET/POST handshakes with a distant server, adding <strong>latency</strong>. Moving some logic to the client gives a faster, more responsive UI that does not depend heavily on connectivity.</li>
+<li><strong>Efficiency</strong> — it can make <strong>small, quick changes</strong> to a page <strong>without waiting for the server</strong>; on-demand customization happens locally.</li>
+<li><strong>Event-driven</strong> — it can respond to user actions like <strong>clicks and keystrokes</strong> immediately.</li>
+</ul>
+<h3 class="atx" id="disadvantages-on-the-con-side">Disadvantages (On the Con Side)</h3>
+<ul>
+<li><strong>No guarantee that the client has JavaScript enabled</strong>, so any required functionality must be <strong>implemented redundantly on the server</strong> — extra overhead.</li>
+<li><strong>JavaScript-heavy applications can be complicated to debug and maintain</strong>, compared with simple HTML/CSS pages.</li>
+<li><strong>JavaScript is not fault tolerant.</strong> Browsers cope with invalid HTML or CSS (e.g. showing alternate text if an image is missing, or an error message), but with invalid JavaScript the page <strong>simply stops execution at the invalid line</strong>.</li>
+<li>While JavaScript is <strong>universally supported in all contemporary browsers</strong>, the language and its APIs are <strong>continually expanding</strong>, so <strong>newer features may not be supported in all browsers</strong>. Backward compatibility can be tricky.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>Benefit</th>
+<th>Cost</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Speed</td>
+<td>No round trips for small changes</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Availability</td>
+<td>—</td>
+<td>Client may have JS disabled</td>
+</tr>
+<tr>
+<td>Errors</td>
+<td>—</td>
+<td>Execution halts at the bad line</td>
+</tr>
+<tr>
+<td>Maintenance</td>
+<td>—</td>
+<td>Harder debugging for JS-heavy apps</td>
+</tr>
+<tr>
+<td>Compatibility</td>
+<td>—</td>
+<td>Newer features not on all browsers</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 class="atx" id="17-contemporary-javascript-coding">17. Contemporary JavaScript Coding</h2>
+<p>In modern applications the work is split between a <strong>front end</strong> (browser) and a <strong>back end</strong> (servers and databases). Notice the trend from a <strong>thicker back end to a thinner back end</strong>, which gives the usability advantages above.</p>
+<div class="plantuml"><img src="https://www.plantuml.com/plantuml/svg/~1U5vTa4kF4p4GXE_pAufm0MaJYJVaW7PNFADTG0G98UNIC-vCB3pjeTjcDlyUsKa4uTQol-ggwajBf2aFeRatAlK38T0-vWGRE95G4tYRa2BKzxi4vvMxvACqJHb8-i2ONMkSZ7KZ3zvfb8ItuXxEG8PMSV-c2Az3vdyLtxd5clKtQ-KcEtBlbLd-1w--VAmKZVuCSvIe9MFCtXodYhdsIFtW4EBKDArYFdzTJ9PujC1N_fNP4hnX8CVDPFMxLIpnUFvaWLilVg20KMF7PbxwYuqefwnY-F3jzWQJJpkirb3Uih9qR6ScJ_-QhDRO-i1svl9iKSJr7OUzx4uBIiabdbU2xxZBYUq20_rasmZPNhgTHedPKEf33sMiARfImxLOuiK2Lrt9pWQhPvwNGxbImsBM4lWagBrVbiI7WdKj6LRhpvzEeIhpgcRgeYGlcKBO8u-E4Xj6whcvP75v27y0A7J3wW"></div>
+<p>Step by step:</p>
+<ol>
+<li>A <strong>request is made</strong> from the browser.</li>
+<li>The server performs <strong>minimal processing</strong> and returns HTML.</li>
+<li>The HTML arrives with <strong>JavaScript file references</strong>.</li>
+<li>The browser <strong>requests the JavaScript files</strong> (possibly from another server, or the same location).</li>
+<li>The <strong>JavaScript files</strong> are returned.</li>
+<li>JavaScript <strong>executes</strong>, then makes <strong>asynchronous requests</strong> for data from <strong>web APIs</strong> (which may be on the same or different servers).</li>
+<li>The <strong>web API accesses server-based resources</strong>, such as databases, for the most up-to-date data.</li>
+<li>Web APIs return the data in <strong>JSON format</strong>.</li>
+<li>JavaScript <strong>continually updates the page</strong> based on received data and user actions, yielding a dynamic page showing the latest information.</li>
+</ol>
+<hr>
+<h2 class="atx" id="18-where-javascript-lives-in-a-page">18. Where JavaScript Lives in a Page</h2>
+<p>There are three places to put JavaScript: <strong>inline</strong>, <strong>embedded</strong>, and <strong>external</strong>.</p>
+<pre><code class="fenced-code-block language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>en<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">&gt;</span></span>JavaScript placement possibilities<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+    <span class="token comment">/* A JavaScript Comment */</span>
+    <span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">"This will appear before any content"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>                                 <span class="token comment">&lt;!-- Embedded JavaScript --&gt;</span>
+
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>greeting.js<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>       <span class="token comment">&lt;!-- External JavaScript --&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span><span class="token punctuation">&gt;</span></span>Page Title<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>JavaScript:OpenWindow();<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>for more info<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>button<span class="token punctuation">"</span></span> <span class="token special-attr"><span class="token attr-name">onClick</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token value javascript language-javascript"><span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">'Are you sure?'</span><span class="token punctuation">)</span><span class="token punctuation">;</span></span><span class="token punctuation">"</span></span></span> <span class="token punctuation">/&gt;</span></span>
+                                            <span class="token comment">&lt;!-- Inline JavaScript --&gt;</span></code></pre>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>How it looks</th>
+<th>Verdict</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Inline</strong></td>
+<td>Written inside an HTML attribute: <code>href="JavaScript:OpenWindow();"</code>, or <code>onClick="alert('Are you sure?');"</code> (<code>onClick</code> is an <strong>event</strong>: on a mouse click, an alert is generated)</td>
+<td><strong>Not recommended</strong> — complicates debugging and error fixing</td>
+</tr>
+<tr>
+<td><strong>Embedded</strong></td>
+<td>Code between <code>&lt;script&gt;</code> and <code>&lt;/script&gt;</code> in the HTML file, like the alert above</td>
+<td><strong>Not preferable</strong>, same reason</td>
+</tr>
+<tr>
+<td><strong>External</strong></td>
+<td>A separate <code>.js</code> file referenced with <code>&lt;script src="greeting.js"&gt;&lt;/script&gt;</code></td>
+<td><strong>Recommended and most used</strong> — modular, like an external CSS file; helps segregate scope and makes debugging easier</td>
+</tr>
+</tbody></table>
+<p>Notes:</p>
+<ul>
+<li>Embedded JavaScript always carries its <strong>opening and closing <code>script</code> tags</strong>, just like HTML markup.</li>
+<li>The external option keeps the JavaScript in a separate file that is fetched whenever needed.</li>
+<li>In the example, the embedded alert appears <strong>before any content</strong> because the script sits in the <code>head</code>.</li>
+</ul>
+<hr>
+<h2 class="atx" id="19-declaring-variables">19. Declaring Variables</h2>
+<ul>
+<li><code>let</code> declares a variable you <strong>can reassign</strong>; <code>const</code> declares one you <strong>cannot</strong> (though an <strong>object or array it points to can still change internally</strong>).</li>
+<li><code>var</code> is the <strong>older way</strong> of declaring variables — <strong>function-scoped rather than block-scoped</strong>, which causes real bugs; <strong>avoid it in new code</strong>.</li>
+<li>JavaScript is <strong>dynamically typed</strong>: you <strong>never declare a type</strong>, and a variable can <strong>hold a different kind of value later in the script</strong>.</li>
+<li><code>typeof x</code> tells you <strong>what type a value currently holds, at runtime</strong>.</li>
+</ul>
+<pre><code class="fenced-code-block language-javascript"><span class="token keyword">let</span> count <span class="token operator">=</span> <span class="token number">5</span><span class="token punctuation">;</span>          <span class="token comment">// reassignable</span>
+count <span class="token operator">=</span> <span class="token number">6</span><span class="token punctuation">;</span>              <span class="token comment">// fine</span>
+
+<span class="token keyword">const</span> <span class="token constant">PI</span> <span class="token operator">=</span> <span class="token number">3.14159</span><span class="token punctuation">;</span>     <span class="token comment">// PI = 3; would cause an error</span>
+
+<span class="token keyword">const</span> scores <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">20</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+scores<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token number">30</span><span class="token punctuation">)</span><span class="token punctuation">;</span>        <span class="token comment">// allowed: the array's contents may change,</span>
+                        <span class="token comment">// only the binding is fixed</span>
+
+<span class="token keyword">let</span> x <span class="token operator">=</span> <span class="token number">42</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">typeof</span> x<span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// "number"</span>
+x <span class="token operator">=</span> <span class="token string">"now a string"</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">typeof</span> x<span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// "string"</span></code></pre>
+<blockquote>
+<p><strong>Note for Review</strong>
+Pro-Tip: <code>const</code> means "this <em>name</em> cannot be re-pointed", <strong>not</strong> "this value is frozen". Think of it as a label glued to a box: you cannot move the label to another box, but you can still change what is inside the box.</p>
+</blockquote>
+<p><strong>Coming next:</strong> the different data types supported, <code>for</code> and <code>while</code> loops and other control structures, functions, arrays and the DOM structure.</p>
+<hr>
+<h2 class="atx" id="20-practice-questions">20. Practice Questions</h2>
+<ol>
+<li><p>A designer writes <code>font-family: "Playfair Display", cursive;</code> for a page used by thousands of people on many different devices. Some users report the heading looks wildly different from device to device. Explain why this happens and how you would redesign the declaration so the page looks close to intended everywhere.</p>
+</li>
+<li><p>A <code>div</code> has <code>width: 300px; padding: 20px; border: 5px solid; margin: 10px;</code>. Two such <code>div</code>s are placed side by side inside a container as inline-blocks. What is the minimum container width needed so that they stay on the same line, and which layers of the box are responsible for the "extra" space you did not explicitly count in the 300px?</p>
+</li>
+<li><p>You are building a product page with a grid of 9 cards. Each card has an image, a title, a description of varying length, and a "Buy" button that must always sit at the bottom of the card, aligned across cards in the same row. Which layout tools (<code>grid</code>, <code>flex</code>, <code>float</code>, <code>position</code>) would you assign to which part of this page, and why would using only <code>float</code> be a poor choice?</p>
+</li>
+<li><p>A site looks perfect on your laptop. After you shrink the browser, the layout does not change at all, and on a phone the text is tiny and unreadable even though the page "fits". Identify at least two separate things that could be missing, and describe what each would fix.</p>
+</li>
+<li><p>Your page loads a feature using an external script, but a typo on line 12 of the script causes an error. Describe what the user will see, how this differs from a typo in the HTML or CSS, and what the server-side redundancy argument says about whether your page should still work if JavaScript is disabled.</p>
+</li>
+</ol>
+</article>
+</body>
+</html>

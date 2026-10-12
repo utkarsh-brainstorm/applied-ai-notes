@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BS Applied AI &amp; Data Science</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./BS Applied AI &amp; Data Science_files/style.css">
+</head>
+<body>
+
+  <!-- Minimal top-left theme switch button -->
+  <button class="theme-toggle-btn" id="themeToggleBtn" aria-label="Toggle theme">dark</button>
+
+  <div class="wrap">
+    <!-- Hero / Exact requested statement -->
+    <header class="hero">
+      <div class="manifesto">
+        All rights <span class="unreserved-stylised">UN RESERVED</span> and the content here belong to no one, use it throw it, gaze it nobody cares.
+      </div>
+    </header>
+
+    <!-- Semesters 1-4 -->
+    <main class="catalog" id="semestersList">
+      <div class="semester-block" data-id="1">
+        <button class="sem-btn">
+          <span class="sem-title">Semester 01</span>
+          <span class="sem-num">01</span>
+        </button>
+        <div class="sem-body">
+          <div class="empty-sem-container">
+            <span class="empty-sem-text">नहीं है मेरे पास</span>
+          </div>
+        </div>
+      </div>
+      <div class="semester-block" data-id="2">
+        <button class="sem-btn">
+          <span class="sem-title">Semester 02</span>
+          <span class="sem-num">02</span>
+        </button>
+        <div class="sem-body">
+          <div class="empty-sem-container">
+            <span class="empty-sem-text">नहीं है मेरे पास</span>
+          </div>
+        </div>
+      </div>
+      <div class="semester-block" data-id="3">
+        <button class="sem-btn">
+          <span class="sem-title">Semester 03</span>
+          <span class="sem-num">03</span>
+        </button>
+        <div class="sem-body">
+          <div class="empty-sem-container">
+            <span class="empty-sem-text">नहीं है मेरे पास</span>
+          </div>
+        </div>
+      </div>
+      <div class="semester-block" data-id="4">
+        <button class="sem-btn">
+          <span class="sem-title">Semester 04</span>
+          <span class="sem-num">04</span>
+        </button>
+        <div class="sem-body">
+          <div class="subjects-row">
+            <div class="subj-item" data-sem="4" data-id="ml2">
+              <div class="subj-code">ML-201</div>
+              <div class="subj-name">Machine Learning 2</div>
+            </div>
+            <div class="subj-item" data-sem="4" data-id="oop">
+              <div class="subj-code">CS-202</div>
+              <div class="subj-name">Object Oriented Programming</div>
+            </div>
+            <div class="subj-item" data-sem="4" data-id="bdm">
+              <div class="subj-code">DS-203</div>
+              <div class="subj-name">Basics of Data Mining</div>
+            </div>
+            <div class="subj-item" data-sem="4" data-id="itw">
+              <div class="subj-code">WT-204</div>
+              <div class="subj-name">Introduction to Web Technologies</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- Floating subpage -->
+  <div class="floating-subpage" id="floatingSubpage">
+    <div class="floating-card">
+      <div class="floating-header">
+        <div id="activeSubjectMeta" style="font-size: 0.85rem; color: var(--text-muted); font-family: var(--font-main);"></div>
+        <div class="floating-actions">
+          <button class="action-btn" id="pdfBtn" title="Download PDF notes">pdf</button>
+          <button class="action-btn close-btn" id="closeBtn" title="Close">esc</button>
+        </div>
+      </div>
+
+      <!-- Floating 4 subjects of that semester -->
+      <div class="floating-tabs" id="floatingTabs"></div>
+
+      <!-- Weeks & Plain HTML notes -->
+      <div class="floating-body">
+        <aside class="floating-sidebar" id="weeksList"></aside>
+        <div class="floating-content">
+          <div class="plain-html-content" id="notesTarget"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./BS Applied AI &amp; Data Science_files/curriculum.js"></script>
+  <script src="./BS Applied AI &amp; Data Science_files/app.js"></script>
+</body>
+</html>

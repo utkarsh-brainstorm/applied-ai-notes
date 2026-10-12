@@ -1,0 +1,595 @@
+
+<style id="libron-font-injection">
+@font-face {
+  font-family: 'Libron';
+  src: url('../../../../Libron_Web/Libron-Regular.woff2') format('woff2'),
+       url('../../../../Libron_Web/Libron-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Libron';
+  src: url('../../../../Libron_Web/Libron-Bold.woff2') format('woff2'),
+       url('../../../../Libron_Web/Libron-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Libron';
+  src: url('../../../../Libron_Web/Libron-Italic.woff2') format('woff2'),
+       url('../../../../Libron_Web/Libron-Italic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Libron';
+  src: url('../../../../Libron_Web/Libron-BoldItalic.woff2') format('woff2'),
+       url('../../../../Libron_Web/Libron-BoldItalic.ttf') format('truetype');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+html, body, .markdown-body, h1, h2, h3, h4, h5, h6, p, span, li, a, td, th {
+  font-family: 'Libron', serif, -apple-system, BlinkMacSystemFont !important;
+}
+
+body {
+  padding: 1.5rem 2rem !important;
+  max-width: 900px !important;
+  margin: 0 auto !important;
+}
+
+/* Dark mode theme styles inside iframe */
+[data-theme="dark"] html,
+[data-theme="dark"] body,
+[data-theme="dark"] .markdown-body {
+  background-color: #0a0a0a !important;
+  color: #ededed !important;
+}
+[data-theme="dark"] .markdown-body table tr {
+  background-color: #121212 !important;
+  border-color: #262626 !important;
+}
+[data-theme="dark"] .markdown-body table tr:nth-child(2n) {
+  background-color: #181818 !important;
+}
+[data-theme="dark"] .markdown-body table th,
+[data-theme="dark"] .markdown-body table td {
+  border-color: #2e2e2e !important;
+}
+[data-theme="dark"] .markdown-body pre,
+[data-theme="dark"] .markdown-body code {
+  background-color: #141414 !important;
+  color: #f0f0f0 !important;
+  border-color: #2a2a2a !important;
+}
+[data-theme="dark"] .markdown-body blockquote {
+  color: #999999 !important;
+  border-left-color: #444444 !important;
+}
+[data-theme="dark"] .markdown-body a {
+  color: #58a6ff !important;
+}
+[data-theme="dark"] .markdown-body hr {
+  background-color: #262626 !important;
+}
+</style>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <style>
+  @font-face {
+  font-family: octicons-link;
+  src: url(data:font/woff;charset=utf-8;base64,d09GRgABAAAAAAZwABAAAAAACFQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABEU0lHAAAGaAAAAAgAAAAIAAAAAUdTVUIAAAZcAAAACgAAAAoAAQAAT1MvMgAAAyQAAABJAAAAYFYEU3RjbWFwAAADcAAAAEUAAACAAJThvmN2dCAAAATkAAAABAAAAAQAAAAAZnBnbQAAA7gAAACyAAABCUM+8IhnYXNwAAAGTAAAABAAAAAQABoAI2dseWYAAAFsAAABPAAAAZwcEq9taGVhZAAAAsgAAAA0AAAANgh4a91oaGVhAAADCAAAABoAAAAkCA8DRGhtdHgAAAL8AAAADAAAAAwGAACfbG9jYQAAAsAAAAAIAAAACABiATBtYXhwAAACqAAAABgAAAAgAA8ASm5hbWUAAAToAAABQgAAAlXu73sOcG9zdAAABiwAAAAeAAAAME3QpOBwcmVwAAAEbAAAAHYAAAB/aFGpk3jaTY6xa8JAGMW/O62BDi0tJLYQincXEypYIiGJjSgHniQ6umTsUEyLm5BV6NDBP8Tpts6F0v+k/0an2i+itHDw3v2+9+DBKTzsJNnWJNTgHEy4BgG3EMI9DCEDOGEXzDADU5hBKMIgNPZqoD3SilVaXZCER3/I7AtxEJLtzzuZfI+VVkprxTlXShWKb3TBecG11rwoNlmmn1P2WYcJczl32etSpKnziC7lQyWe1smVPy/Lt7Kc+0vWY/gAgIIEqAN9we0pwKXreiMasxvabDQMM4riO+qxM2ogwDGOZTXxwxDiycQIcoYFBLj5K3EIaSctAq2kTYiw+ymhce7vwM9jSqO8JyVd5RH9gyTt2+J/yUmYlIR0s04n6+7Vm1ozezUeLEaUjhaDSuXHwVRgvLJn1tQ7xiuVv/ocTRF42mNgZGBgYGbwZOBiAAFGJBIMAAizAFoAAABiAGIAznjaY2BkYGAA4in8zwXi+W2+MjCzMIDApSwvXzC97Z4Ig8N/BxYGZgcgl52BCSQKAA3jCV8CAABfAAAAAAQAAEB42mNgZGBg4f3vACQZQABIMjKgAmYAKEgBXgAAeNpjYGY6wTiBgZWBg2kmUxoDA4MPhGZMYzBi1AHygVLYQUCaawqDA4PChxhmh/8ODDEsvAwHgMKMIDnGL0x7gJQCAwMAJd4MFwAAAHjaY2BgYGaA4DAGRgYQkAHyGMF8NgYrIM3JIAGVYYDT+AEjAwuDFpBmA9KMDEwMCh9i/v8H8sH0/4dQc1iAmAkALaUKLgAAAHjaTY9LDsIgEIbtgqHUPpDi3gPoBVyRTmTddOmqTXThEXqrob2gQ1FjwpDvfwCBdmdXC5AVKFu3e5MfNFJ29KTQT48Ob9/lqYwOGZxeUelN2U2R6+cArgtCJpauW7UQBqnFkUsjAY/kOU1cP+DAgvxwn1chZDwUbd6CFimGXwzwF6tPbFIcjEl+vvmM/byA48e6tWrKArm4ZJlCbdsrxksL1AwWn/yBSJKpYbq8AXaaTb8AAHja28jAwOC00ZrBeQNDQOWO//sdBBgYGRiYWYAEELEwMTE4uzo5Zzo5b2BxdnFOcALxNjA6b2ByTswC8jYwg0VlNuoCTWAMqNzMzsoK1rEhNqByEyerg5PMJlYuVueETKcd/89uBpnpvIEVomeHLoMsAAe1Id4AAAAAAAB42oWQT07CQBTGv0JBhagk7HQzKxca2sJCE1hDt4QF+9JOS0nbaaYDCQfwCJ7Au3AHj+LO13FMmm6cl7785vven0kBjHCBhfpYuNa5Ph1c0e2Xu3jEvWG7UdPDLZ4N92nOm+EBXuAbHmIMSRMs+4aUEd4Nd3CHD8NdvOLTsA2GL8M9PODbcL+hD7C1xoaHeLJSEao0FEW14ckxC+TU8TxvsY6X0eLPmRhry2WVioLpkrbp84LLQPGI7c6sOiUzpWIWS5GzlSgUzzLBSikOPFTOXqly7rqx0Z1Q5BAIoZBSFihQYQOOBEdkCOgXTOHA07HAGjGWiIjaPZNW13/+lm6S9FT7rLHFJ6fQbkATOG1j2OFMucKJJsxIVfQORl+9Jyda6Sl1dUYhSCm1dyClfoeDve4qMYdLEbfqHf3O/AdDumsjAAB42mNgYoAAZQYjBmyAGYQZmdhL8zLdDEydARfoAqIAAAABAAMABwAKABMAB///AA8AAQAAAAAAAAAAAAAAAAABAAAAAA==) format('woff');
+}
+
+.markdown-body .octicon {
+  display: inline-block;
+  fill: currentColor;
+  vertical-align: text-bottom;
+}
+
+.markdown-body .anchor {
+  float: left;
+  line-height: 1;
+  margin-left: -20px;
+  padding-right: 4px;
+}
+
+.markdown-body .anchor:focus {
+  outline: none;
+}
+
+.markdown-body h1 .octicon-link,
+.markdown-body h2 .octicon-link,
+.markdown-body h3 .octicon-link,
+.markdown-body h4 .octicon-link,
+.markdown-body h5 .octicon-link,
+.markdown-body h6 .octicon-link {
+  color: #1b1f23;
+  vertical-align: middle;
+  visibility: hidden;
+}
+
+.markdown-body h1:hover .anchor,
+.markdown-body h2:hover .anchor,
+.markdown-body h3:hover .anchor,
+.markdown-body h4:hover .anchor,
+.markdown-body h5:hover .anchor,
+.markdown-body h6:hover .anchor {
+  text-decoration: none;
+}
+
+.markdown-body h1:hover .anchor .octicon-link,
+.markdown-body h2:hover .anchor .octicon-link,
+.markdown-body h3:hover .anchor .octicon-link,
+.markdown-body h4:hover .anchor .octicon-link,
+.markdown-body h5:hover .anchor .octicon-link,
+.markdown-body h6:hover .anchor .octicon-link {
+  visibility: visible;
+}
+
+.markdown-body {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  color: #24292e;
+  line-height: 1.5;
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
+  font-size: 16px;
+  line-height: 1.5;
+  word-wrap: break-word;
+}
+
+.markdown-body .pl-c {
+  color: #6a737d;
+}
+
+.markdown-body .pl-c1,
+.markdown-body .pl-s .pl-v {
+  color: #005cc5;
+}
+
+.markdown-body .pl-e,
+.markdown-body .pl-en {
+  color: #6f42c1;
+}
+
+.markdown-body .pl-s .pl-s1,
+.markdown-body .pl-smi {
+  color: #24292e;
+}
+
+.markdown-body .pl-ent {
+  color: #22863a;
+}
+
+.markdown-body .pl-k {
+  color: #d73a49;
+}
+
+.markdown-body .pl-pds,
+.markdown-body .pl-s,
+.markdown-body .pl-s .pl-pse .pl-s1,
+.markdown-body .pl-sr,
+.markdown-body .pl-sr .pl-cce,
+.markdown-body .pl-sr .pl-sra,
+.markdown-body .pl-sr .pl-sre {
+  color: #032f62;
+}
+
+.markdown-body .pl-smw,
+.markdown-body .pl-v {
+  color: #e36209;
+}
+
+.markdown-body .pl-bu {
+  color: #b31d28;
+}
+
+.markdown-body .pl-ii {
+  background-color: #b31d28;
+  color: #fafbfc;
+}
+
+.markdown-body .pl-c2 {
+  background-color: #d73a49;
+  color: #fafbfc;
+}
+
+.markdown-body .pl-c2:before {
+  content: "</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span style="height:0.1944em;" class="vlist"><span></span></span></span></span></span></span></span></span>, statistics' most famous non-identical twins.</li>
+<li><a href="#quantifying-central-tendency-mean-median-mode">Quantifying Central Tendency: Mean, Median, Mode</a> — Three ways to answer "what's typical?", each with its own baggage.</li>
+<li><a href="#quantifying-spread-variance-and-standard-deviation">Quantifying Spread: Variance and Standard Deviation</a> — Because "typical" alone is a dangerously incomplete story.</li>
+<li><a href="#other-robust-summary-measures">Other Robust Summary Measures</a> — Range, dynamic range, percentiles, and quartiles show up to cover the mean/median/mode's blind spots.</li>
+<li><a href="#practice-questions">Practice Questions</a> — Five scenarios designed to make you actually use this vocabulary.</li>
+</ul>
+<hr>
+<h2 class="atx" id="recap-and-roadmap">Recap and Roadmap</h2>
+<p>This course is structured around four questions that recur throughout every topic we study. Knowing them by heart helps you place any new concept into context — whenever we introduce something new, it is almost always in service of answering one of these four questions. This lecture is devoted to the <strong>first</strong> question in detail, and then transitions into the <strong>second</strong>.</p>
+<p>The first question — <em>what are the attributes or features of the data</em> — is primarily about <strong>terminology</strong>. It doesn't carry deep conceptual weight on its own, but it establishes the vocabulary that every later discussion depends on. If a dataset is described as "a data object with attribute so-and-so," you need to know precisely what that means.</p>
+<hr>
+<h2 class="atx" id="anatomy-of-a-dataset-from-d-to-observations">Anatomy of a Dataset: From D to Observations</h2>
+<p>Every discussion starts with a dataset (or database), denoted <span class="katex"><span class="katex-mathml"></span><span aria-hidden="true" class="katex-html"><span class="base"><span style="height:0.6833em;" class="strut"></span><span style="margin-right:0.02778em;" class="mord mathnormal">D</span></span></span></span>. This is the all-encompassing unit — everything the analysis will ever touch lives inside it. From here, we peel back layers of abstraction one at a time.</p>
+<p><strong>Dataset <span class="katex"><span class="katex-mathml"></span><span aria-hidden="true" class="katex-html"><span class="base"><span style="height:0.6833em;" class="strut"></span><span style="margin-right:0.02778em;" class="mord mathnormal">D</span></span></span></span></strong> comprises <strong>data objects</strong>. A data object is simply an <em>entity</em> — a single entry recorded in the database. A database can (and usually does) contain many data objects.</p>
+<p>Consider a <strong>Sales Database</strong>. Its data objects could include:</p>
+<ul>
+<li><strong>Customer ID</strong> — identifying information for the person who made the purchase</li>
+<li><strong>Store item</strong> — the product being sold</li>
+<li><strong>Sales figure</strong> — the record of the sale itself</li>
+</ul>
+<p>The exact list of data objects depends entirely on context, requirements, and the kind of analysis being performed — there is no fixed universal list.</p>
+<p>A <strong>Hospital Database</strong> gives a second example. Here, each <strong>patient</strong> can be thought of as a data object, and a patient may be described through several such objects: patient history, current medication, treatment records, and so on.</p>
+<p>Going one level deeper: a data object is itself <strong>characterized by attributes</strong>. An <strong>attribute</strong> is a <em>data field</em> — a feature or characteristic of a data object. The value that an attribute takes for a specific data object is called an <strong>observation</strong>.</p>
+<p>Putting it together for a <strong>Customer</strong> data object: the attributes might be Customer-ID, Name, and Address. The specific values those attributes hold for one particular customer (e.g., ID = 4722, Name = "XYZ") are the observations.</p>
+<div class="plantuml"><img src="https://www.plantuml.com/plantuml/svg/~1U5vrKD5Amq0GVB-l6DkN5j88HH3w8Aq6HH1zK4J5byrbcwRDtPMzZL2_NYurA89lkyFCxEmiev9evrfpiXUg7Q6bG-WKqR6I9wDX3mqeWsfmg1fXgqtmngI1VDqoHWKfHLOK8r14WV5TKs_qiktuBmiFvPQjlli9vtKEmbKNDJYMQIyDvVOVyKfLch9JnYckcRGJ7am6YzbjaU6U76TOLPLmZ4TJKfLlrnjXzhypFPIHvOFIHuFTsVbydk7bzIq3bNR85J5-fDQbnmlCPXTzr0LiS7jf8aUJzeJtrnQm6nAooj9ySeNoO7hyA8nOG6d74H-KEZ8-A4DIPmZhH31FeMRTi6IWjat8a3Bs3C-c8gKKWgrY7SIXqOYVbfxPQX0peNoNKpvKXYCyDUmhfAl6BDbNdMk_02o7hpG"></div>
+<blockquote>
+<p><strong>Note for Review:</strong> Keep the hierarchy straight — <strong>Database → Data Object → Attribute → Observation</strong>. Almost every terminology confusion in this course traces back to mixing up which level of this hierarchy a term belongs to.</p>
+</blockquote>
+<hr>
+<h2 class="atx" id="the-many-aliases-of-an-attribute">The Many Aliases of an Attribute</h2>
+<p>The word "attribute" is not universal — the same underlying idea shows up under different names depending on which field you're standing in. This is purely a matter of disciplinary convention, but recognizing it prevents unnecessary confusion when switching between textbooks or communities.</p>
+<table>
+<thead>
+<tr>
+<th>Term</th>
+<th>Field Where It's the Popular Choice</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Attribute</strong></td>
+<td>Data Mining</td>
+</tr>
+<tr>
+<td><strong>Feature</strong> (or <em>feature vector</em>)</td>
+<td>Machine Learning</td>
+</tr>
+<tr>
+<td><strong>Dimension</strong></td>
+<td>Data Warehousing</td>
+</tr>
+<tr>
+<td><strong>Variable</strong></td>
+<td>Statistics</td>
+</tr>
+</tbody></table>
+<p>All four terms describe exactly the same thing: a characteristic of a data object. When you encounter any of them going forward, translate it mentally into "a describable property of the thing being recorded."</p>
+<hr>
+<h2 class="atx" id="attribute-vectors-the-heterogeneous-cousin-of-ml-feature-vectors">Attribute Vectors: The Heterogeneous Cousin of ML Feature Vectors</h2>
+<p>If we collect all the attributes of one data object into a single ordered list, we get an <strong>attribute vector</strong> (equivalently, a <em>feature vector</em> — the term you likely already know from ML).</p>
+<p>For the Customer data object, this vector might look like:</p>
+<span class="katex-display"><span class="katex"><span class="katex-mathml"></span><span aria-hidden="true" class="katex-html"><span class="base"><span style="height:0.6833em;" class="strut"></span><span class="mord text"><span class="mord">Customer</span></span><span style="margin-right:0.2778em;" class="mspace"></span><span class="mrel">=</span><span style="margin-right:0.2778em;" class="mspace"></span></span><span class="base"><span style="height:2.0841em;vertical-align:-1.3341em;" class="strut"></span><span class="mopen">{</span><span class="mord munder"><span class="vlist-t vlist-t2"><span class="vlist-r"><span style="height:0.6444em;" class="vlist"><span style="top:-1.6737em;"><span style="height:3em;" class="pstrut"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord text mtight"><span class="mord mtight">Customer-ID</span></span></span></span></span><span style="top:-3em;"><span style="height:3em;" class="pstrut"></span><span class="mord munder"><span class="vlist-t vlist-t2"><span class="vlist-r"><span style="height:0.6444em;" class="vlist"><span style="top:-2.352em;" class="svg-align"><span style="height:3em;" class="pstrut"></span><span style="height:0.548em;min-width:1.6em;" class="stretchy"><span style="height:0.548em;" class="brace-left"><svg preserveAspectRatio="xMinYMin slice" viewBox="0 0 400000 548" height="0.548em" width="400em" xmlns="http://www.w3.org/2000/svg"><path d="M0 6l6-6h17c12.688 0 19.313.3 20 1 4 4 7.313 8.3 10 13
+ 35.313 51.3 80.813 93.8 136.5 127.5 55.688 33.7 117.188 55.8 184.5 66.5.688
+ 0 2 .3 4 1 18.688 2.7 76 4.3 172 5h399450v120H429l-6-1c-124.688-8-235-61.7
+-331-161C60.687 138.7 32.312 99.3 7 54L0 41V6z"></path></svg></span><span style="height:0.548em;" class="brace-center"><svg preserveAspectRatio="xMidYMin slice" viewBox="0 0 400000 548" height="0.548em" width="400em" xmlns="http://www.w3.org/2000/svg"><path d="M199572 214
+c100.7 8.3 195.3 44 280 108 55.3 42 101.7 93 139 153l9 14c2.7-4 5.7-8.7 9-14
+ 53.3-86.7 123.7-153 211-199 66.7-36 137.3-56.3 212-62h199568v120H200432c-178.3
+ 11.7-311.7 78.3-403 201-6 8-9.7 12-11 12-.7.7-6.7 1-18 1s-17.3-.3-18-1c-1.3 0
+-5-4-11-12-44.7-59.3-101.3-106.3-170-141s-145.3-54.3-229-60H0V214z"></path></svg></span><span style="height:0.548em;" class="brace-right"><svg preserveAspectRatio="xMaxYMin slice" viewBox="0 0 400000 548" height="0.548em" width="400em" xmlns="http://www.w3.org/2000/svg"><path d="M399994 0l6 6v35l-6 11c-56 104-135.3 181.3-238 232-57.3
+ 28.7-117 45-179 50H-300V214h399897c43.3-7 81-15 113-26 100.7-33 179.7-91 237
+-174 2.7-5 6-9 10-13 .7-1 7.3-1 20-1h17z"></path></svg></span></span></span><span style="top:-3em;"><span style="height:3em;" class="pstrut"></span><span class="mord"><span class="mord">4722</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span style="height:0.648em;" class="vlist"><span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span style="height:1.3263em;" class="vlist"><span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace">&nbsp;</span><span style="margin-right:0.1667em;" class="mspace"></span><span class="mord munder"><span class="vlist-t vlist-t2"><span class="vlist-r"><span style="height:0.6833em;" class="vlist"><span style="top:-1.6737em;"><span style="height:3em;" class="pstrut"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord text mtight"><span class="mord mtight">Name</span></span></span></span></span><span style="top:-3em;"><span style="height:3em;" class="pstrut"></span><span class="mord munder"><span class="vlist-t vlist-t2"><span class="vlist-r"><span style="height:0.6833em;" class="vlist"><span style="top:-2.352em;" class="svg-align"><span style="height:3em;" class="pstrut"></span><span style="height:0.548em;min-width:1.6em;" class="stretchy"><span style="height:0.548em;" class="brace-left"><svg preserveAspectRatio="xMinYMin slice" viewBox="0 0 400000 548" height="0.548em" width="400em" xmlns="http://www.w3.org/2000/svg"><path d="M0 6l6-6h17c12.688 0 19.313.3 20 1 4 4 7.313 8.3 10 13
+ 35.313 51.3 80.813 93.8 136.5 127.5 55.688 33.7 117.188 55.8 184.5 66.5.688
+ 0 2 .3 4 1 18.688 2.7 76 4.3 172 5h399450v120H429l-6-1c-124.688-8-235-61.7
+-331-161C60.687 138.7 32.312 99.3 7 54L0 41V6z"></path></svg></span><span style="height:0.548em;" class="brace-center"><svg preserveAspectRatio="xMidYMin slice" viewBox="0 0 400000 548" height="0.548em" width="400em" xmlns="http://www.w3.org/2000/svg"><path d="M199572 214
+c100.7 8.3 195.3 44 280 108 55.3 42 101.7 93 139 153l9 14c2.7-4 5.7-8.7 9-14
+ 53.3-86.7 123.7-153 211-199 66.7-36 137.3-56.3 212-62h199568v120H200432c-178.3
+ 11.7-311.7 78.3-403 201-6 8-9.7 12-11 12-.7.7-6.7 1-18 1s-17.3-.3-18-1c-1.3 0
+-5-4-11-12-44.7-59.3-101.3-106.3-170-141s-145.3-54.3-229-60H0V214z"></path></svg></span><span style="height:0.548em;" class="brace-right"><svg preserveAspectRatio="xMaxYMin slice" viewBox="0 0 400000 548" height="0.548em" width="400em" xmlns="http://www.w3.org/2000/svg"><path d="M399994 0l6 6v35l-6 11c-56 104-135.3 181.3-238 232-57.3
+ 28.7-117 45-179 50H-300V214h399897c43.3-7 81-15 113-26 100.7-33 179.7-91 237
+-174 2.7-5 6-9 10-13 .7-1 7.3-1 20-1h17z"></path></svg></span></span></span><span style="top:-3em;"><span style="height:3em;" class="pstrut"></span><span class="mord"><span class="mord text"><span class="mord">XYZ</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span style="height:0.648em;" class="vlist"><span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span style="height:1.3263em;" class="vlist"><span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace">&nbsp;</span><span style="margin-right:0.1667em;" class="mspace"></span><span class="mord munder"><span class="vlist-t vlist-t2"><span class="vlist-r"><span style="height:0.6944em;" class="vlist"><span style="top:-1.6659em;"><span style="height:3em;" class="pstrut"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord text mtight"><span class="mord mtight">Address</span></span></span></span></span><span style="top:-3em;"><span style="height:3em;" class="pstrut"></span><span class="mord munder"><span class="vlist-t vlist-t2"><span class="vlist-r"><span style="height:0.6944em;" class="vlist"><span style="top:-2.352em;" class="svg-align"><span style="height:3em;" class="pstrut"></span><span style="height:0.548em;min-width:1.6em;" class="stretchy"><span style="height:0.548em;" class="brace-left"><svg preserveAspectRatio="xMinYMin slice" viewBox="0 0 400000 548" height="0.548em" width="400em" xmlns="http://www.w3.org/2000/svg"><path d="M0 6l6-6h17c12.688 0 19.313.3 20 1 4 4 7.313 8.3 10 13
+ 35.313 51.3 80.813 93.8 136.5 127.5 55.688 33.7 117.188 55.8 184.5 66.5.688
+ 0 2 .3 4 1 18.688 2.7 76 4.3 172 5h399450v120H429l-6-1c-124.688-8-235-61.7
+-331-161C60.687 138.7 32.312 99.3 7 54L0 41V6z"></path></svg></span><span style="height:0.548em;" class="brace-center"><svg preserveAspectRatio="xMidYMin slice" viewBox="0 0 400000 548" height="0.548em" width="400em" xmlns="http://www.w3.org/2000/svg"><path d="M199572 214
+c100.7 8.3 195.3 44 280 108 55.3 42 101.7 93 139 153l9 14c2.7-4 5.7-8.7 9-14
+ 53.3-86.7 123.7-153 211-199 66.7-36 137.3-56.3 212-62h199568v120H200432c-178.3
+ 11.7-311.7 78.3-403 201-6 8-9.7 12-11 12-.7.7-6.7 1-18 1s-17.3-.3-18-1c-1.3 0
+-5-4-11-12-44.7-59.3-101.3-106.3-170-141s-145.3-54.3-229-60H0V214z"></path></svg></span><span style="height:0.548em;" class="brace-right"><svg preserveAspectRatio="xMaxYMin slice" viewBox="0 0 400000 548" height="0.548em" width="400em" xmlns="http://www.w3.org/2000/svg"><path d="M399994 0l6 6v35l-6 11c-56 104-135.3 181.3-238 232-57.3
+ 28.7-117 45-179 50H-300V214h399897c43.3-7 81-15 113-26 100.7-33 179.7-91 237
+-174 2.7-5 6-9 10-13 .7-1 7.3-1 20-1h17z"></path></svg></span></span></span><span style="top:-3em;"><span style="height:3em;" class="pstrut"></span><span class="mord"><span class="mord text"><span class="mord">abc</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span style="height:0.648em;" class="vlist"><span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span style="height:1.3341em;" class="vlist"><span></span></span></span></span></span><span class="mclose">}</span></span></span></span></span><p>This is where data mining departs from the "clean" ML feature vector you may be used to. In machine learning, feature vectors are typically <strong>purely numeric</strong> — every entry is a number you can meaningfully interpret as big or small. Here, however, the vector mixes an ID, a name (text), and an address (text). This is called a <strong>heterogeneous vector</strong>: an attribute vector whose entries come from entirely different attribute types and cannot be meaningfully compared to one another (you cannot compare a name to an ID).</p>
+<blockquote>
+<p><strong>Note for Review:</strong> "Heterogeneous" is the key word examiners like to test. It doesn't mean the vector is disorganized — it means the entries are not mutually comparable because they represent fundamentally different kinds of attributes.</p>
+</blockquote>
+<hr>
+<h2 class="atx" id="types-of-attributes">Types of Attributes</h2>
+<p>Not all attributes behave the same way mathematically. Knowing an attribute's <em>type</em> tells you exactly what operations (comparison, averaging, subtraction) are actually meaningful to perform on it. There are four types worth knowing well.</p>
+<h3 class="atx" id="1-nominal-categorical-attributes">1. Nominal (Categorical) Attributes</h3>
+<p>Values are drawn from a fixed, predefined set of category names — nothing more. Examples:</p>
+<ul>
+<li><strong>Occupation</strong> = {doctor, driver, teacher, …}</li>
+<li><strong>Gender</strong> = {M, F, other}</li>
+<li><strong>Customer ID</strong> = 4722 (a system-generated label, not a "real" number)</li>
+</ul>
+<p>By definition, nominal attributes carry <strong>no quantitative meaning</strong>. Statements like "4722 &gt; 4615" or "the average customer ID is 3749.74" are technically computable but <strong>meaningless</strong> — customer IDs were never numbers in the arithmetic sense to begin with.</p>
+<p>Despite lacking quantitative meaning, nominal attributes are still extremely valuable for <strong>pattern discovery</strong> — e.g., noticing that customers with occupation "doctor" tend to buy a certain category of car.</p>
+<h3 class="atx" id="2-binary-attributes">2. Binary Attributes</h3>
+<p>A special case of nominal attributes restricted to exactly <strong>two</strong> categories:</p>
+<ul>
+<li>True / False</li>
+<li>1 / 0</li>
+<li>Positive / Negative (e.g., a malaria test result)</li>
+<li>Male / Female</li>
+</ul>
+<p>Binary attributes are still nominal in spirit — "1 &gt; 0" or "1 + 0 = 1" carries no real meaning here — but their two-valued structure makes them common and worth naming separately (e.g., married/unmarried fields in a database).</p>
+<h3 class="atx" id="3-ordinal-attributes">3. Ordinal Attributes</h3>
+<p>Unlike nominal attributes, ordinal attributes <strong>do carry numerical significance</strong> — you can meaningfully compare them — but the values are still restricted to a <strong>discrete</strong>, predefined set (no values are allowed "in between").</p>
+<p><strong>Example — Quality of Service rating:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Score</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>0</td>
+<td>Very dissatisfied</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Somewhat dissatisfied</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Neutral</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Satisfied</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Very satisfied</td>
+</tr>
+</tbody></table>
+<p>Notice that 1.5 or 3.7945 are not permitted — only the five discrete levels exist. Yet the ranking is meaningful: a rating of 3 genuinely indicates more satisfaction than a rating of 0.</p>
+<p><strong>Example — Letter Grades:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Grade</th>
+<th>Grade Point</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>A</td>
+<td>10</td>
+</tr>
+<tr>
+<td>A-</td>
+<td>9</td>
+</tr>
+<tr>
+<td>B</td>
+<td>8</td>
+</tr>
+<tr>
+<td>B-</td>
+<td>7</td>
+</tr>
+<tr>
+<td>C</td>
+<td>6</td>
+</tr>
+</tbody></table>
+<p>A grade of 7.5 is never awarded — only the discrete points on this scale are valid. Because the scale is numerically meaningful, it <em>can</em> be averaged — this is exactly what a <strong>CGPA</strong> is: the mean of several ordinal grade points (e.g., a CGPA of 6.79 vs. 7.54 for two different students).</p>
+<p>Restricting grades to discrete points (instead of allowing continuous values like 9.7945 vs. 9.7897) is a deliberate design choice: it <strong>reduces unnecessary variance</strong> in comparisons. If arbitrary decimal precision were allowed, instructors would end up making distinctions between students that are not really meaningful — the discreteness forces a clear threshold between "this is an A" and "this is an A-."</p>
+<h3 class="atx" id="4-continuous-attributes">4. Continuous Attributes</h3>
+<p>Any numeric value is permitted — 6.7943, 4, 9, or anything in between. Continuous attributes have full arithmetic meaning, but their physical interpretation can be less "clean" than an ordinal attribute's discrete, well-defined categories.</p>
+<h3 class="atx" id="summary-comparison">Summary Comparison</h3>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Quantitative meaning?</th>
+<th>Discrete or continuous?</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Nominal / Categorical</td>
+<td>No</td>
+<td>Discrete (labels)</td>
+<td>Occupation, Gender, Customer ID</td>
+</tr>
+<tr>
+<td>Binary</td>
+<td>No</td>
+<td>Discrete (2 values)</td>
+<td>True/False, 1/0</td>
+</tr>
+<tr>
+<td>Ordinal</td>
+<td>Yes (ranking)</td>
+<td>Discrete</td>
+<td>Service rating, Letter grades</td>
+</tr>
+<tr>
+<td>Continuous</td>
+<td>Yes (full arithmetic)</td>
+<td>Continuous</td>
+<td>Sales amount, Sensor reading</td>
+</tr>
+</tbody></table>
+<div class="plantuml"><img src="https://www.plantuml.com/plantuml/svg/~1U5vjZh5En30CGFTyXUajHUA4n0UWQpkme7PWxU9BJR4kSS1nJlJlKMa534pFWz-pJzbGhSJWRjuLvuWGS4d584So57I1NWqiWVByPZ2naZTEujmweCo1e6hCbC_5g0BCqC3XULrkGo5NCddC15MV8Wi6k8SEZUQax36CKak2Zu9YR6Xy9OY4mZBVVgVwFVMaHFBRQbbGbr5g-aHlOO47y7kKycQs_vk3JkiNezGJPwzaT0VdOg0e5vesTO332uQO_XpiaXXBIIMFKgCi82MIieShXaARrlrehe7ZyH7wdUtEOMVdt8baAZ5y0QpLVpW"></div>
+<p>This closes out Question 1. Nothing here is conceptually deep — but the vocabulary is exactly what you'll be expected to use fluently for the rest of the course.</p>
+<hr>
+<h2 class="atx" id="how-to-summarize-and-understand-data-better">How to Summarize and Understand Data Better</h2>
+<p>Real-world datasets are large — a sales database might have thousands of customers and objects running into lakhs or crores of transactions. Manually inspecting every row is infeasible, and usually unnecessary: what you actually want, as a first instinct, is a <strong>summary</strong>. A good summary can immediately tell you whether last month's sales deviated meaningfully from the trend, sparing you a deep dive unless something looks off.</p>
+<p>Before diving into specific summary measures, we need two foundational terms: <strong>population</strong> and <strong>sample</strong>.</p>
+<p><strong>Data</strong>, in this context, means a <em>set of measurements</em> — numbers collected during an experiment or investigation (e.g., blood pressure, heart rate, sales, profit). This is distinct from nominal attributes gathered through a survey or interview (like a customer's name); measurement implies you are recording a genuine numeric quantity.</p>
+<hr>
+<h2 class="atx" id="parameter-vs-statistic-the-unknown-truth-vs-your-best-guess">Parameter vs. Statistic: The Unknown Truth vs. Your Best Guess</h2>
+<ul>
+<li><strong>Parameter</strong>: a set of meaningful measurements corresponding to the <strong>entire collection of units</strong> — i.e., the <strong>population</strong>.</li>
+<li><strong>Statistic</strong>: a set of measurements collected on a <strong>randomly selected subset of units</strong> from that collection — i.e., the <strong>sample</strong>.</li>
+</ul>
+<p><strong>Worked example:</strong> Suppose the question is *"what is the average blood pressure of 25-year-old males?"* Implicit in this question is a reference to the <em>entire population</em> of 25-year-old males in the world. Measuring blood pressure for every single one of them and averaging the results gives you the <strong>parameter</strong>.</p>
+<p>In practice, measuring an entire population is essentially never possible. Instead, you take a <strong>sample</strong> — say, 35 randomly chosen individuals — measure their blood pressure, and average those values. That average is the <strong>statistic</strong>.</p>
+<div class="plantuml"><img src="https://www.plantuml.com/plantuml/svg/~1U5vTa35kmp0CHNUTuZTP7A2vG8OYwDAbGm2lNXYRSOHIb25HBTpJ5ugTekacYFyzVFAOZPAL8EvfIZG6Wj0SYo47Db9omXU3HIG_NWs3JzoRZ-fSVP2EmjYSubI4wdUd3QlvnEYZo195lA2ejxpRW39ESSBslTfUfV1VJKjX4kwqIQH3338ZStNmW5pEcMqHj1HMmLjYreSYb2YmSGAcJfkY7ng_z1cM2kEJfF3Q0TkM9CG7k3KodyttmBI_adNQh7XWoYNniC9Nib_UrNNs-nUSS40k8L3otppWFBlQypQf-V_3ErP31omB8zS3U1tT3RbRlLuuiVQCXhFvGCOxvuwiGmdo0_FBcTi"></div>
+<p>Conventionally, the parameter is written as <span class="katex"><span class="katex-mathml"></span><span aria-hidden="true" class="katex-html"><span class="base"><span style="height:0.625em;vertical-align:-0.1944em;" class="strut"></span><span class="mord mathnormal">p</span></span></span></span>, and the corresponding sample estimate is written with a "hat," <span class="katex"><span class="katex-mathml"></span><span aria-hidden="true" class="katex-html"><span class="base"><span style="height:0.8889em;vertical-align:-0.1944em;" class="strut"></span><span class="mord accent"><span class="vlist-t vlist-t2"><span class="vlist-r"><span style="height:0.6944em;" class="vlist"><span style="top:-3em;"><span style="height:3em;" class="pstrut"></span><span class="mord mathnormal">p</span></span><span style="top:-3em;"><span style="height:3em;" class="pstrut"></span><span style="left:-0.1667em;" class="accent-body"><span class="mord"></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span style="height:0.1944em;" class="vlist"><span></span></span></span></span></span></span></span></span></span><p>In practice, <span class="katex"><span class="katex-mathml"></span><span aria-hidden="true" class="katex-html"><span class="base"><span style="height:0.625em;vertical-align:-0.1944em;" class="strut"></span><span class="mord mathnormal">p</span></span></span></span> is <strong>always unknown</strong> — you can never measure the entire population — while <span class="katex"><span class="katex-mathml"></span><span aria-hidden="true" class="katex-html"><span class="base"><span style="height:0.8889em;vertical-align:-0.1944em;" class="strut"></span><span class="mord accent"><span class="vlist-t vlist-t2"><span class="vlist-r"><span style="height:0.6944em;" class="vlist"><span style="top:-3em;"><span style="height:3em;" class="pstrut"></span><span class="mord mathnormal">p</span></span><span style="top:-3em;"><span style="height:3em;" class="pstrut"></span><span style="left:-0.1667em;" class="accent-body"><span class="mord"></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span style="height:0.1944em;" class="vlist"><span></span></span></span></span></span></span></span></span>.</p>
+<p>This same idea underlies <strong>generalization</strong> in machine learning: you train a model on a sample (training set) and hope it performs well on the broader population it will eventually encounter (unseen test data).</p>
+<p>Questions like *"what percentage of school-going kids play computer games for more than one hour?"* or *"how many mobile phones currently in use are less than one year old?"* are implicitly <strong>population-level questions</strong> — no category or filter is specified. Since the full population can't be measured, the honest answer always comes from a sample, followed by an inference back to the population.</p>
+<blockquote>
+<p><strong>Note for Review:</strong> Whenever you report a summary statistic, ask yourself: <em>am I describing my sample accurately, and is that description going to be generalized (rightly or wrongly) to the population?</em> This single habit prevents most misleading data summaries.</p>
+</blockquote>
+<hr>
+<h2 class="atx" id="quantifying-central-tendency-mean-median-mode">Quantifying Central Tendency: Mean, Median, Mode</h2>
+<p>"Quantifying" a parameter or statistic usually means reducing a dataset to a <strong>single representative number</strong> — mean, median, mode, variance, correlation coefficient, max/min, and so on. These are the <strong>basic characteristics</strong> of any population or sample, and (mode aside) each one gives a <strong>unique</strong> description of the dataset.</p>
+<h3 class="atx" id="the-generalized-power-mean">The Generalized (Power) Mean</h3>
+<p>Many familiar "means" are special cases of one general formula:</p>
+<span class="katex-display"><span class="katex"><span class="katex-mathml"></span><span aria-hidden="true" class="katex-html"><span class="base"><span style="height:3.4499em;vertical-align:-1.2777em;" class="strut"></span><span class="minner"><span class="minner"><span style="top:0em;" class="mopen delimcenter"><span class="delimsizing size4">(</span></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span style="height:1.3214em;" class="vlist"><span style="top:-2.314em;"><span style="height:3em;" class="pstrut"></span><span class="mord"><span style="margin-right:0.10903em;" class="mord mathnormal">N</span></span></span><span style="top:-3.23em;"><span style="height:3em;" class="pstrut"></span><span style="border-bottom-width:0.04em;" class="frac-line"></span></span><span style="top:-3.677em;"><span style="height:3em;" class="pstrut"></span><span class="mord"><span class="mord">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span style="height:0.686em;" class="vlist"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span style="margin-right:0.1667em;" class="mspace"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span style="height:1.8283em;" class="vlist"><span style="top:-1.8723em;margin-left:0em;"><span style="height:3.05em;" class="pstrut"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">i</span><span class="mrel mtight">=</span><span class="mord mtight">1</span></span></span></span><span style="top:-3.05em;"><span style="height:3.05em;" class="pstrut"></span><span><span class="mop op-symbol large-op">∑</span></span></span><span style="top:-4.3em;margin-left:0em;"><span style="height:3.05em;" class="pstrut"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span style="margin-right:0.10903em;" class="mord mathnormal mtight">N</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span style="height:1.2777em;" class="vlist"><span></span></span></span></span></span><span style="margin-right:0.1667em;" class="mspace"></span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span style="height:0.8991em;" class="vlist"><span style="top:-2.453em;margin-left:0em;margin-right:0.05em;"><span style="height:2.7em;" class="pstrut"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span><span style="top:-3.113em;margin-right:0.05em;"><span style="height:2.7em;" class="pstrut"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">λ</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span style="height:0.247em;" class="vlist"><span></span></span></span></span></span></span><span style="top:0em;" class="mclose delimcenter"><span class="delimsizing size4">)</span></span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span style="height:2.1723em;" class="vlist"><span style="top:-4.5812em;margin-right:0.05em;"><span style="height:3em;" class="pstrut"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mopen nulldelimiter sizing reset-size3 size6"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span style="height:0.8443em;" class="vlist"><span style="top:-2.656em;"><span style="height:3em;" class="pstrut"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">λ</span></span></span></span><span style="top:-3.2255em;"><span style="height:3em;" class="pstrut"></span><span style="border-bottom-width:0.049em;" class="frac-line mtight"></span></span><span style="top:-3.384em;"><span style="height:3em;" class="pstrut"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span style="height:0.344em;" class="vlist"><span></span></span></span></span></span><span class="mclose nulldelimiter sizing reset-size3 size6"></span></span></span></span></span></span></span></span></span></span></span></span></span></span><table>
+<thead>
+<tr>
+<th><span class="katex"><span class="katex-mathml"></span><span aria-hidden="true" class="katex-html"><span class="base"><span style="height:0.6944em;" class="strut"></span><span class="mord mathnormal">λ</span></span></span></span></th>
+<th>Resulting Mean</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><span class="katex"><span class="katex-mathml"></span><span aria-hidden="true" class="katex-html"><span class="base"><span style="height:0.6444em;" class="strut"></span><span class="mord">1</span></span></span></span></td>
+<td>Arithmetic mean (the everyday "mean," and the most widely used)</td>
+</tr>
+<tr>
+<td><span class="katex"><span class="katex-mathml"></span><span aria-hidden="true" class="katex-html"><span class="base"><span style="height:0.7278em;vertical-align:-0.0833em;" class="strut"></span><span class="mord">−</span><span class="mord">1</span></span></span></span></td>
+<td>Harmonic mean</td>
+</tr>
+<tr>
+<td><span class="katex"><span class="katex-mathml"></span><span aria-hidden="true" class="katex-html"><span class="base"><span style="height:0.6444em;" class="strut"></span><span class="mord">2</span></span></span></span></td>
+<td>Quadratic mean (a.k.a. Minkowski summation / RMS)</td>
+</tr>
+</tbody></table>
+<h3 class="atx" id="the-mean--strengths-and-weaknesses">The Mean — Strengths and Weaknesses</h3>
+<p>The (arithmetic) mean is by far the <strong>most widely used</strong> summary statistic. <em>Why</em> it is so dominant is left as an open question worth exploring on your own — but its trade-offs are well documented:</p>
+<p><strong>Weaknesses:</strong></p>
+<ul>
+<li><strong>Sensitive to outliers / skewed data</strong> — a few extreme values can dominate the result.</li>
+<li><strong>Same mean, different distributions</strong> — two datasets can share an identical mean while having completely different shapes. The chart below shows two distributions that both have <span class="katex"><span class="katex-mathml"></span><span aria-hidden="true" class="katex-html"><span class="base"><span style="height:0.625em;vertical-align:-0.1944em;" class="strut"></span><span class="mord mathnormal">μ</span><span style="margin-right:0.2778em;" class="mspace"></span><span class="mrel">=</span><span style="margin-right:0.2778em;" class="mspace"></span></span><span class="base"><span style="height:0.6444em;" class="strut"></span><span class="mord">0.296</span></span></span></span>, despite looking nothing alike.</li>
+<li><strong>Not always interpretable / may not exist in the data.</strong> For instance, filling a missing value with the mean of its neighbors (e.g., inserting 3.5 between a 3 and a 4) produces a value that was <em>never actually observed</em>. Similarly, a statement like "there are 50.21 computers per sq. km in a city" is mathematically valid but physically strange.</li>
+</ul>
+<p><strong>Strengths:</strong></p>
+<ul>
+<li>Easy to compute and <strong>uses every data value</strong> (unlike median or mode, which ignore most of the dataset).</li>
+<li><strong>Self-correcting</strong> as the number of random samples increases.</li>
+</ul>
+<div class="vega-lite vega-embed" role="graphics-document" aria-roledescription="visualization" aria-label="Two histograms sharing the same mean (0.296) but very different shapes" style="cursor: default;"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="marks" width="839" height="271" viewBox="0 0 839 271" style="background-color: rgb(255, 255, 255);"><g fill="none" stroke-miterlimit="10" transform="translate(51,29)"><g class="mark-group role-frame root" role="graphics-object" aria-roledescription="group mark container"><g transform="translate(0,0)"><path class="background" aria-hidden="true" d="M0,0h0v0h0Z"></path><g><g class="mark-group role-row-header row_header" role="graphics-object" aria-roledescription="group mark container"><g transform="translate(-1,0)"><path class="background" aria-hidden="true" d="M0,0h0v200h0Z"></path><g><g class="mark-group role-axis" role="graphics-symbol" aria-roledescription="axis" aria-label="Y-axis titled 'Frequency' for a linear scale with values from 0 to 16,000"><g transform="translate(0.5,0.5)"><path class="background" aria-hidden="true" d="M0,0h0v0h0Z" pointer-events="none"></path><g><g class="mark-rule role-axis-tick" pointer-events="none"><line transform="translate(0,200)" x2="-2" y2="0" stroke="#888" stroke-width="1" opacity="1"></line><line transform="translate(0,138)" x2="-2" y2="0" stroke="#888" stroke-width="1" opacity="1"></line><line transform="translate(0,75)" x2="-2" y2="0" stroke="#888" stroke-width="1" opacity="1"></line><line transform="translate(0,13)" x2="-2" y2="0" stroke="#888" stroke-width="1" opacity="1"></line></g><g class="mark-text role-axis-label" pointer-events="none"><text text-anchor="end" transform="translate(-4,203)" font-family="Benton Gothic, sans-serif" font-size="11.5px" font-weight="normal" fill="#000" opacity="1">0</text><text text-anchor="end" transform="translate(-4,140.5)" font-family="Benton Gothic, sans-serif" font-size="11.5px" font-weight="normal" fill="#000" opacity="1">5,000</text><text text-anchor="end" transform="translate(-4,78)" font-family="Benton Gothic, sans-serif" font-size="11.5px" font-weight="normal" fill="#000" opacity="1">10,000</text><text text-anchor="end" transform="translate(-4,15.5)" font-family="Benton Gothic, sans-serif" font-size="11.5px" font-weight="normal" fill="#000" opacity="1">15,000</text></g><g class="mark-rule role-axis-domain" pointer-events="none"><line transform="translate(0,200)" x2="0" y2="-200" stroke="#888" stroke-width="1" opacity="1"></line></g><g class="mark-text role-axis-title" pointer-events="none"><text text-anchor="start" transform="translate(-45,-14)" font-family="Benton Gothic Bold, sans-serif" font-size="13px" font-weight="normal" fill="#000" opacity="1">Frequency</text></g></g><path class="foreground" aria-hidden="true" d="" pointer-events="none" display="none"></path></g></g></g><path class="foreground" aria-hidden="true" d="" display="none"></path></g></g><g class="mark-group role-column-header column_header" role="graphics-object" aria-roledescription="group mark container"><g transform="translate(0,-1)"><path class="background" aria-hidden="true" d="M0,0h380v0h-380Z"></path><g><g class="mark-group role-title"><g transform="translate(190,-20)"><path class="background" aria-hidden="true" d="M0,0h0v0h0Z" pointer-events="none"></path><g><g class="mark-text role-title-text" role="graphics-symbol" aria-roledescription="title" aria-label="Title text 'Distribution 1 (near-symmetric)'" pointer-events="none"><text text-anchor="middle" transform="translate(0,8)" font-family="sans-serif" font-size="10px" fill="#000" opacity="1">Distribution 1 (near-symmetric)</text></g></g><path class="foreground" aria-hidden="true" d="" pointer-events="none" display="none"></path></g></g></g><path class="foreground" aria-hidden="true" d="" display="none"></path></g><g transform="translate(402,-1)"><path class="background" aria-hidden="true" d="M0,0h380v0h-380Z"></path><g><g class="mark-group role-title"><g transform="translate(190,-20)"><path class="background" aria-hidden="true" d="M0,0h0v0h0Z" pointer-events="none"></path><g><g class="mark-text role-title-text" role="graphics-symbol" aria-roledescription="title" aria-label="Title text 'Distribution 2 (heavily skewed)'" pointer-events="none"><text text-anchor="middle" transform="translate(0,8)" font-family="sans-serif" font-size="10px" fill="#000" opacity="1">Distribution 2 (heavily skewed)</text></g></g><path class="foreground" aria-hidden="true" d="" pointer-events="none" display="none"></path></g></g></g><path class="foreground" aria-hidden="true" d="" display="none"></path></g></g><g class="mark-group role-column-footer column_footer" role="graphics-object" aria-roledescription="group mark container"><g transform="translate(0,201)"><path class="background" aria-hidden="true" d="M0,0h380v0h-380Z"></path><g><g class="mark-group role-axis" role="graphics-symbol" aria-roledescription="axis" aria-label="X-axis titled 'Value bin' for a discrete scale with 11 values: 0.0-0.1, 0.1-0.2, 0.2-0.3, 0.3-0.4, 0.4-0.5, ending with 2.0-3.0"><g transform="translate(0.5,0.5)"><path class="background" aria-hidden="true" d="M0,0h0v0h0Z" pointer-events="none"></path><g><g class="mark-rule role-axis-tick" pointer-events="none"><line transform="translate(17,0)" x2="0" y2="3" stroke="#888" stroke-width="1" opacity="1"></line><line transform="translate(51,0)" x2="0" y2="3" stroke="#888" stroke-width="1" opacity="1"></line><line transform="translate(86,0)" x2="0" y2="3" stroke="#888" stroke-width="1" opacity="1"></line><line transform="translate(120,0)" x2="0" y2="3" stroke="#888" stroke-width="1" opacity="1"></line><line transform="translate(155,0)" x2="0" y2="3" stroke="#888" stroke-width="1" opacity="1"></line><line transform="translate(190,0)" x2="0" y2="3" stroke="#888" stroke-width="1" opacity="1"></line><line transform="translate(224,0)" x2="0" y2="3" stroke="#888" stroke-width="1" opacity="1"></line><line transform="translate(259,0)" x2="0" y2="3" stroke="#888" stroke-width="1" opacity="1"></line><line transform="translate(293,0)" x2="0" y2="3" stroke="#888" stroke-width="1" opacity="1"></line><line transform="translate(328,0)" x2="0" y2="3" stroke="#888" stroke-width="1" opacity="1"></line><line transform="translate(362,0)" x2="0" y2="3" stroke="#888" stroke-width="1" opacity="1"></line></g><g class="mark-text role-axis-label" pointer-events="none"><text text-anchor="middle" transform="translate(16.772727272727266,16)" font-family="Benton Gothic, sans-serif" font-size="11.5px" font-weight="normal" fill="#000" opacity="1">0.0-0.1</text><text text-anchor="middle" transform="translate(51.31818181818181,16)" font-family="Benton Gothic, sans-serif" font-size="11.5px" font-weight="normal" fill="#000" opacity="1">0.1-0.2</text><text text-anchor="middle" transform="translate(85.86363636363636,16)" font-family="Benton Gothic, sans-serif" font-size="11.5px" font-weight="normal" fill="#000" opacity="1">0.2-0.3</text><text text-anchor="middle" transform="translate(120.4090909090909,16)" font-family="Benton Gothic, sans-serif" font-size="11.5px" font-weight="normal" fill="#000" opacity="1">0.3-0.4</text><text text-anchor="middle" transform="translate(154.95454545454544,16)" font-family="Benton Gothic, sans-serif" font-size="11.5px" font-weight="normal" fill="#000" opacity="1">0.4-0.5</text><text text-anchor="middle" transform="translate(189.5,16)" font-family="Benton Gothic, sans-serif" font-size="11.5px" font-weight="normal" fill="#000" opacity="1">0.5-0.6</text><text text-anchor="middle" transform="translate(224.04545454545456,16)" font-family="Benton Gothic, sans-serif" font-size="11.5px" font-weight="normal" fill="#000" opacity="1">0.0-0.5</text><text text-anchor="middle" transform="translate(258.59090909090907,16)" font-family="Benton Gothic, sans-serif" font-size="11.5px" font-weight="normal" fill="#000" opacity="1">0.5-1.0</text><text text-anchor="middle" transform="translate(293.1363636363637,16)" font-family="Benton Gothic, sans-serif" font-size="11.5px" font-weight="normal" fill="#000" opacity="1">1.0-1.5</text><text text-anchor="middle" transform="translate(327.6818181818182,16)" font-family="Benton Gothic, sans-serif" font-size="11.5px" font-weight="normal" fill="#000" opacity="1">1.5-2.0</text><text text-anchor="middle" transform="translate(362.2272727272728,16)" font-family="Benton Gothic, sans-serif" font-size="11.5px" font-weight="normal" fill="#000" opacity="1">2.0-3.0</text></g><g class="mark-rule role-axis-domain" pointer-events="none"><line transform="translate(0,0)" x2="380" y2="0" stroke="#888" stroke-width="1" opacity="1"></line></g><g class="mark-text role-axis-title" pointer-events="none"><text text-anchor="middle" transform="translate(190,32.5)" font-family="Benton Gothic Bold, sans-serif" font-size="13px" font-weight="normal" fill="#000" opacity="1">Value bin</text></g></g><path class="foreground" aria-hidden="true" d="" pointer-events="none" display="none"></path></g></g></g><path class="foreground" aria-hidden="true" d="" display="none"></path></g><g transform="translate(402,201)"><path class="background" aria-hidden="true" d="M0,0h380v0h-380Z"></path><g><g class="mark-group role-axis" role="graphics-symbol" aria-roledescription="axis" aria-label="X-axis titled 'Value bin' for a discrete scale with 11 values: 0.0-0.1, 0.1-0.2, 0.2-0.3, 0.3-0.4, 0.4-0.5, ending with 2.0-3.0"><g transform="translate(0.5,0.5)"><path class="background" aria-hidden="true" d="M0,0h0v0h0Z" pointer-events="none"></path><g><g class="mark-rule role-axis-tick" pointer-events="none"><line transform="translate(17,0)" x2="0" y2="3" stroke="#888" stroke-width="1" opacity="1"></line><line transform="translate(51,0)" x2="0" y2="3" stroke="#888" stroke-width="1" opacity="1"></line><line transform="translate(86,0)" x2="0" y2="3" stroke="#888" stroke-width="1" opacity="1"></line><line transform="translate(120,0)" x2="0" y2="3" stroke="#888" stroke-width="1" opacity="1"></line><line transform="translate(155,0)" x2="0" y2="3" stroke="#888" stroke-width="1" opacity="1"></line><line transform="translate(190,0)" x2="0" y2="3" stroke="#888" stroke-width="1" opacity="1"></line><line transform="translate(224,0)" x2="0" y2="3" stroke="#888" stroke-width="1" opacity="1"></line><line transform="translate(259,0)" x2="0" y2="3" stroke="#888" stroke-width="1" opacity="1"></line><line transform="translate(293,0)" x2="0" y2="3" stroke="#888" stroke-width="1" opacity="1"></line><line transform="translate(328,0)" x2="0" y2="3" stroke="#888" stroke-width="1" opacity="1"></line><line transform="translate(362,0)" x2="0" y2="3" stroke="#888" stroke-width="1" opacity="1"></line></g><g class="mark-text role-axis-label" pointer-events="none"><text text-anchor="middle" transform="translate(16.772727272727266,16)" font-family="Benton Gothic, sans-serif" font-size="11.5px" font-weight="normal" fill="#000" opacity="1">0.0-0.1</text><text text-anchor="middle" transform="translate(51.31818181818181,16)" font-family="Benton Gothic, sans-serif" font-size="11.5px" font-weight="normal" fill="#000" opacity="1">0.1-0.2</text><text text-anchor="middle" transform="translate(85.86363636363636,16)" font-family="Benton Gothic, sans-serif" font-size="11.5px" font-weight="normal" fill="#000" opacity="1">0.2-0.3</text><text text-anchor="middle" transform="translate(120.4090909090909,16)" font-family="Benton Gothic, sans-serif" font-size="11.5px" font-weight="normal" fill="#000" opacity="1">0.3-0.4</text><text text-anchor="middle" transform="translate(154.95454545454544,16)" font-family="Benton Gothic, sans-serif" font-size="11.5px" font-weight="normal" fill="#000" opacity="1">0.4-0.5</text><text text-anchor="middle" transform="translate(189.5,16)" font-family="Benton Gothic, sans-serif" font-size="11.5px" font-weight="normal" fill="#000" opacity="1">0.5-0.6</text><text text-anchor="middle" transform="translate(224.04545454545456,16)" font-family="Benton Gothic, sans-serif" font-size="11.5px" font-weight="normal" fill="#000" opacity="1">0.0-0.5</text><text text-anchor="middle" transform="translate(258.59090909090907,16)" font-family="Benton Gothic, sans-serif" font-size="11.5px" font-weight="normal" fill="#000" opacity="1">0.5-1.0</text><text text-anchor="middle" transform="translate(293.1363636363637,16)" font-family="Benton Gothic, sans-serif" font-size="11.5px" font-weight="normal" fill="#000" opacity="1">1.0-1.5</text><text text-anchor="middle" transform="translate(327.6818181818182,16)" font-family="Benton Gothic, sans-serif" font-size="11.5px" font-weight="normal" fill="#000" opacity="1">1.5-2.0</text><text text-anchor="middle" transform="translate(362.2272727272728,16)" font-family="Benton Gothic, sans-serif" font-size="11.5px" font-weight="normal" fill="#000" opacity="1">2.0-3.0</text></g><g class="mark-rule role-axis-domain" pointer-events="none"><line transform="translate(0,0)" x2="380" y2="0" stroke="#888" stroke-width="1" opacity="1"></line></g><g class="mark-text role-axis-title" pointer-events="none"><text text-anchor="middle" transform="translate(190,32.5)" font-family="Benton Gothic Bold, sans-serif" font-size="13px" font-weight="normal" fill="#000" opacity="1">Value bin</text></g></g><path class="foreground" aria-hidden="true" d="" pointer-events="none" display="none"></path></g></g></g><path class="foreground" aria-hidden="true" d="" display="none"></path></g></g><g class="mark-group role-scope cell" role="graphics-object" aria-roledescription="group mark container"><g transform="translate(0,0)"><path class="background" aria-hidden="true" d="M0.5,0.5h380v200h-380Z" fill="transparent" stroke="#ddd"></path><g><g class="mark-group role-axis" aria-hidden="true"><g transform="translate(0.5,0.5)"><path class="background" aria-hidden="true" d="M0,0h0v0h0Z" pointer-events="none"></path><g><g class="mark-rule role-axis-grid" pointer-events="none"><line transform="translate(0,200)" x2="380" y2="0" stroke="#ddd" stroke-width="1" opacity="1"></line><line transform="translate(0,138)" x2="380" y2="0" stroke="#ddd" stroke-width="1" opacity="1"></line><line transform="translate(0,75)" x2="380" y2="0" stroke="#ddd" stroke-width="1" opacity="1"></line><line transform="translate(0,13)" x2="380" y2="0" stroke="#ddd" stroke-width="1" opacity="1"></line></g></g><path class="foreground" aria-hidden="true" d="" pointer-events="none" display="none"></path></g></g><g class="mark-rect role-mark child_marks" role="graphics-object" aria-roledescription="rect mark container"><path aria-label="Value bin: 0.0-0.1; Frequency: 250; dataset: Distribution 1 (near-symmetric)" role="graphics-symbol" aria-roledescription="bar" d="M1.7272727272727195,196.875h31.090909090909093v3.125h-31.090909090909093Z" fill="#ec8431"></path><path aria-label="Value bin: 0.1-0.2; Frequency: 1050; dataset: Distribution 1 (near-symmetric)" role="graphics-symbol" aria-roledescription="bar" d="M36.272727272727266,186.875h31.090909090909093v13.125h-31.090909090909093Z" fill="#ec8431"></path><path aria-label="Value bin: 0.2-0.3; Frequency: 5800; dataset: Distribution 1 (near-symmetric)" role="graphics-symbol" aria-roledescription="bar" d="M70.81818181818181,127.49999999999999h31.090909090909093v72.50000000000001h-31.090909090909093Z" fill="#ec8431"></path><path aria-label="Value bin: 0.3-0.4; Frequency: 5000; dataset: Distribution 1 (near-symmetric)" role="graphics-symbol" aria-roledescription="bar" d="M105.36363636363636,137.5h31.090909090909093v62.5h-31.090909090909093Z" fill="#ec8431"></path><path aria-label="Value bin: 0.4-0.5; Frequency: 2400; dataset: Distribution 1 (near-symmetric)" role="graphics-symbol" aria-roledescription="bar" d="M139.9090909090909,170h31.090909090909093v30h-31.090909090909093Z" fill="#ec8431"></path><path aria-label="Value bin: 0.5-0.6; Frequency: 700; dataset: Distribution 1 (near-symmetric)" role="graphics-symbol" aria-roledescription="bar" d="M174.45454545454547,191.25h31.090909090909093v8.75h-31.090909090909093Z" fill="#ec8431"></path></g></g><path class="foreground" aria-hidden="true" d="" display="none"></path></g><g transform="translate(402,0)"><path class="background" aria-hidden="true" d="M0.5,0.5h380v200h-380Z" fill="transparent" stroke="#ddd"></path><g><g class="mark-group role-axis" aria-hidden="true"><g transform="translate(0.5,0.5)"><path class="background" aria-hidden="true" d="M0,0h0v0h0Z" pointer-events="none"></path><g><g class="mark-rule role-axis-grid" pointer-events="none"><line transform="translate(0,200)" x2="380" y2="0" stroke="#ddd" stroke-width="1" opacity="1"></line><line transform="translate(0,138)" x2="380" y2="0" stroke="#ddd" stroke-width="1" opacity="1"></line><line transform="translate(0,75)" x2="380" y2="0" stroke="#ddd" stroke-width="1" opacity="1"></line><line transform="translate(0,13)" x2="380" y2="0" stroke="#ddd" stroke-width="1" opacity="1"></line></g></g><path class="foreground" aria-hidden="true" d="" pointer-events="none" display="none"></path></g></g><g class="mark-rect role-mark child_marks" role="graphics-object" aria-roledescription="rect mark container"><path aria-label="Value bin: 0.0-0.5; Frequency: 15800; dataset: Distribution 2 (heavily skewed)" role="graphics-symbol" aria-roledescription="bar" d="M209,2.499999999999991h31.090909090909093v197.5h-31.090909090909093Z" fill="#829eb1"></path><path aria-label="Value bin: 0.5-1.0; Frequency: 5800; dataset: Distribution 2 (heavily skewed)" role="graphics-symbol" aria-roledescription="bar" d="M243.54545454545453,127.49999999999999h31.090909090909093v72.50000000000001h-31.090909090909093Z" fill="#829eb1"></path><path aria-label="Value bin: 1.0-1.5; Frequency: 2100; dataset: Distribution 2 (heavily skewed)" role="graphics-symbol" aria-roledescription="bar" d="M278.0909090909091,173.75h31.090909090909093v26.25h-31.090909090909093Z" fill="#829eb1"></path><path aria-label="Value bin: 1.5-2.0; Frequency: 700; dataset: Distribution 2 (heavily skewed)" role="graphics-symbol" aria-roledescription="bar" d="M312.6363636363636,191.25h31.090909090909093v8.75h-31.090909090909093Z" fill="#829eb1"></path><path aria-label="Value bin: 2.0-3.0; Frequency: 200; dataset: Distribution 2 (heavily skewed)" role="graphics-symbol" aria-roledescription="bar" d="M347.18181818181824,197.5h31.090909090909093v2.5h-31.090909090909093Z" fill="#829eb1"></path></g></g><path class="foreground" aria-hidden="true" d="" display="none"></path></g></g></g><path class="foreground" aria-hidden="true" d="" display="none"></path></g></g></g></svg><form class="vega-bindings"></form></div>
+<blockquote>
+<p><strong>Open question from the lecture:</strong> why is the mean so overwhelmingly popular despite these documented weaknesses? This is left as a genuine research question — try to work out the reasoning yourself before looking it up.</p>
+</blockquote>
+<h3 class="atx" id="the-median">The Median</h3>
+<p>The median is the <strong>central value</strong> of the data once arranged in numerical order.</p>
+<ul>
+<li><strong>Not affected by outliers</strong> — a small number of extreme values cannot drag it around the way they can the mean.</li>
+<li><strong>More useful for skewed data</strong>, precisely because it ignores the magnitude of extreme values.</li>
+</ul>
+<p>Despite these robustness advantages, the median is <strong>less popular than the mean</strong> in practice. This is posed as a genuine open question worth exploring: robustness alone doesn't guarantee popularity — what does the median lose that makes analysts reach for the mean instead?</p>
+<p><strong>Histogram skewness</strong> is directly relevant here: some distributions are symmetric (little to no skew), some are right-skewed (small values dominate in count), some are left-skewed (large values dominate in count), and some are roughly uniform (all bins have similar counts). Whenever your data is skewed, the median is generally the more representative "typical value."</p>
+<h3 class="atx" id="the-mode">The Mode</h3>
+<p>The mode is the value (or category) with the <strong>highest frequency</strong>.</p>
+<ul>
+<li><strong>Not necessarily unique</strong> — a dataset can have multiple modes, or none at all. Note carefully: *"no mode" does not imply the mode is zero* — it simply means no single value dominates.</li>
+<li><strong>Ignores a lot of information</strong> — it only looks at frequency, discarding everything else about the distribution.</li>
+<li><strong>Especially useful for nominal or qualitative data</strong>, where mean and median are not even mathematically valid (you cannot average "doctor" and "driver").</li>
+</ul>
+<h3 class="atx" id="why-having-all-three-isnand39t-always-enough">Why Having All Three Isn't Always Enough</h3>
+<p>Consider two datasets:</p>
+<ul>
+<li><strong>Set A:</strong> 99, 99, 100, 100, 100, 100, 100, 101, 101</li>
+<li><strong>Set B:</strong> 1, 1, 99, 100, 100, 100, 101, 199, 199</li>
+</ul>
+<p>Both sets share the <strong>exact same mean, median, and mode: 100.</strong> Yet they are visibly very different datasets — Set B has extreme values pulled far away on both ends, while Set A is tightly clustered.</p>
+<div class="vega-lite vega-embed" role="graphics-document" aria-roledescription="visualization" aria-label="Set A vs Set B — identical mean, median, and mode (100), but very different spread" style="cursor: default;"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="marks" width="456" height="186" viewBox="0 0 456 186" style="background-color: rgb(255, 255, 255);"><g fill="none" stroke-miterlimit="10" transform="translate(50,5)"><g class="mark-group role-frame root" role="graphics-object" aria-roledescription="group mark container"><g transform="translate(0,0)"><path class="background" aria-hidden="true" d="M0.5,0.5h400v140h-400Z" fill="transparent" stroke="#ddd"></path><g><g class="mark-group role-axis" aria-hidden="true"><g transform="translate(0.5,140.5)"><path class="background" aria-hidden="true" d="M0,0h0v0h0Z" pointer-events="none"></path><g><g class="mark-rule role-axis-grid" pointer-events="none"><line transform="translate(0,0)" x2="0" y2="-140" stroke="#ddd" stroke-width="1" opacity="1"></line><line transform="translate(40,0)" x2="0" y2="-140" stroke="#ddd" stroke-width="1" opacity="1"></line><line transform="translate(80,0)" x2="0" y2="-140" stroke="#ddd" stroke-width="1" opacity="1"></line><line transform="translate(120,0)" x2="0" y2="-140" stroke="#ddd" stroke-width="1" opacity="1"></line><line transform="translate(160,0)" x2="0" y2="-140" stroke="#ddd" stroke-width="1" opacity="1"></line><line transform="translate(200,0)" x2="0" y2="-140" stroke="#ddd" stroke-width="1" opacity="1"></line><line transform="translate(240,0)" x2="0" y2="-140" stroke="#ddd" stroke-width="1" opacity="1"></line><line transform="translate(280,0)" x2="0" y2="-140" stroke="#ddd" stroke-width="1" opacity="1"></line><line transform="translate(320,0)" x2="0" y2="-140" stroke="#ddd" stroke-width="1" opacity="1"></line><line transform="translate(360,0)" x2="0" y2="-140" stroke="#ddd" stroke-width="1" opacity="1"></line><line transform="translate(400,0)" x2="0" y2="-140" stroke="#ddd" stroke-width="1" opacity="1"></line></g></g><path class="foreground" aria-hidden="true" d="" pointer-events="none" display="none"></path></g></g><g class="mark-group role-axis" role="graphics-symbol" aria-roledescription="axis" aria-label="X-axis titled 'Value' for a linear scale with values from 0 to 200"><g transform="translate(0.5,140.5)"><path class="background" aria-hidden="true" d="M0,0h0v0h0Z" pointer-events="none"></path><g><g class="mark-rule role-axis-tick" pointer-events="none"><line transform="translate(0,0)" x2="0" y2="3" stroke="#888" stroke-width="1" opacity="1"></line><line transform="translate(40,0)" x2="0" y2="3" stroke="#888" stroke-width="1" opacity="1"></line><line transform="translate(80,0)" x2="0" y2="3" stroke="#888" stroke-width="1" opacity="1"></line><line transform="translate(120,0)" x2="0" y2="3" stroke="#888" stroke-width="1" opacity="1"></line><line transform="translate(160,0)" x2="0" y2="3" stroke="#888" stroke-width="1" opacity="1"></line><line transform="translate(200,0)" x2="0" y2="3" stroke="#888" stroke-width="1" opacity="1"></line><line transform="translate(240,0)" x2="0" y2="3" stroke="#888" stroke-width="1" opacity="1"></line><line transform="translate(280,0)" x2="0" y2="3" stroke="#888" stroke-width="1" opacity="1"></line><line transform="translate(320,0)" x2="0" y2="3" stroke="#888" stroke-width="1" opacity="1"></line><line transform="translate(360,0)" x2="0" y2="3" stroke="#888" stroke-width="1" opacity="1"></line><line transform="translate(400,0)" x2="0" y2="3" stroke="#888" stroke-width="1" opacity="1"></line></g><g class="mark-text role-axis-label" pointer-events="none"><text text-anchor="start" transform="translate(0,16)" font-family="Benton Gothic, sans-serif" font-size="11.5px" font-weight="normal" fill="#000" opacity="1">0</text><text text-anchor="middle" transform="translate(40,16)" font-family="Benton Gothic, sans-serif" font-size="11.5px" font-weight="normal" fill="#000" opacity="1">20</text><text text-anchor="middle" transform="translate(80,16)" font-family="Benton Gothic, sans-serif" font-size="11.5px" font-weight="normal" fill="#000" opacity="1">40</text><text text-anchor="middle" transform="translate(120,16)" font-family="Benton Gothic, sans-serif" font-size="11.5px" font-weight="normal" fill="#000" opacity="1">60</text><text text-anchor="middle" transform="translate(160,16)" font-family="Benton Gothic, sans-serif" font-size="11.5px" font-weight="normal" fill="#000" opacity="1">80</text><text text-anchor="middle" transform="translate(200,16)" font-family="Benton Gothic, sans-serif" font-size="11.5px" font-weight="normal" fill="#000" opacity="1">100</text><text text-anchor="middle" transform="translate(240,16)" font-family="Benton Gothic, sans-serif" font-size="11.5px" font-weight="normal" fill="#000" opacity="1">120</text><text text-anchor="middle" transform="translate(280,16)" font-family="Benton Gothic, sans-serif" font-size="11.5px" font-weight="normal" fill="#000" opacity="1">140</text><text text-anchor="middle" transform="translate(320,16)" font-family="Benton Gothic, sans-serif" font-size="11.5px" font-weight="normal" fill="#000" opacity="1">160</text><text text-anchor="middle" transform="translate(360,16)" font-family="Benton Gothic, sans-serif" font-size="11.5px" font-weight="normal" fill="#000" opacity="1">180</text><text text-anchor="end" transform="translate(400,16)" font-family="Benton Gothic, sans-serif" font-size="11.5px" font-weight="normal" fill="#000" opacity="1">200</text></g><g class="mark-rule role-axis-domain" pointer-events="none"><line transform="translate(0,0)" x2="400" y2="0" stroke="#888" stroke-width="1" opacity="1"></line></g><g class="mark-text role-axis-title" pointer-events="none"><text text-anchor="middle" transform="translate(200,32.5)" font-family="Benton Gothic Bold, sans-serif" font-size="13px" font-weight="normal" fill="#000" opacity="1">Value</text></g></g><path class="foreground" aria-hidden="true" d="" pointer-events="none" display="none"></path></g></g><g class="mark-group role-axis" role="graphics-symbol" aria-roledescription="axis" aria-label="Y-axis for a discrete scale with 2 values: Set A, Set B"><g transform="translate(0.5,0.5)"><path class="background" aria-hidden="true" d="M0,0h0v0h0Z" pointer-events="none"></path><g><g class="mark-rule role-axis-tick" pointer-events="none"><line transform="translate(0,35)" x2="-2" y2="0" stroke="#888" stroke-width="1" opacity="1"></line><line transform="translate(0,105)" x2="-2" y2="0" stroke="#888" stroke-width="1" opacity="1"></line></g><g class="mark-text role-axis-label" pointer-events="none"><text text-anchor="end" transform="translate(-4,38)" font-family="Benton Gothic, sans-serif" font-size="11.5px" font-weight="normal" fill="#000" opacity="1">Set A</text><text text-anchor="end" transform="translate(-4,108)" font-family="Benton Gothic, sans-serif" font-size="11.5px" font-weight="normal" fill="#000" opacity="1">Set B</text></g><g class="mark-rule role-axis-domain" pointer-events="none"><line transform="translate(0,0)" x2="0" y2="140" stroke="#888" stroke-width="1" opacity="1"></line></g></g><path class="foreground" aria-hidden="true" d="" pointer-events="none" display="none"></path></g></g><g class="mark-rect role-mark marks" role="graphics-object" aria-roledescription="rect mark container"><path aria-label="Value: 99; set: Set A" role="graphics-symbol" aria-roledescription="tick" d="M197,25h2v20h-2Z" fill="#ec8431" opacity="0.7"></path><path aria-label="Value: 99; set: Set A" role="graphics-symbol" aria-roledescription="tick" d="M197,25h2v20h-2Z" fill="#ec8431" opacity="0.7"></path><path aria-label="Value: 100; set: Set A" role="graphics-symbol" aria-roledescription="tick" d="M199,25h2v20h-2Z" fill="#ec8431" opacity="0.7"></path><path aria-label="Value: 100; set: Set A" role="graphics-symbol" aria-roledescription="tick" d="M199,25h2v20h-2Z" fill="#ec8431" opacity="0.7"></path><path aria-label="Value: 100; set: Set A" role="graphics-symbol" aria-roledescription="tick" d="M199,25h2v20h-2Z" fill="#ec8431" opacity="0.7"></path><path aria-label="Value: 100; set: Set A" role="graphics-symbol" aria-roledescription="tick" d="M199,25h2v20h-2Z" fill="#ec8431" opacity="0.7"></path><path aria-label="Value: 100; set: Set A" role="graphics-symbol" aria-roledescription="tick" d="M199,25h2v20h-2Z" fill="#ec8431" opacity="0.7"></path><path aria-label="Value: 101; set: Set A" role="graphics-symbol" aria-roledescription="tick" d="M201,25h2v20h-2Z" fill="#ec8431" opacity="0.7"></path><path aria-label="Value: 101; set: Set A" role="graphics-symbol" aria-roledescription="tick" d="M201,25h2v20h-2Z" fill="#ec8431" opacity="0.7"></path><path aria-label="Value: 1; set: Set B" role="graphics-symbol" aria-roledescription="tick" d="M1,95h2v20h-2Z" fill="#829eb1" opacity="0.7"></path><path aria-label="Value: 1; set: Set B" role="graphics-symbol" aria-roledescription="tick" d="M1,95h2v20h-2Z" fill="#829eb1" opacity="0.7"></path><path aria-label="Value: 99; set: Set B" role="graphics-symbol" aria-roledescription="tick" d="M197,95h2v20h-2Z" fill="#829eb1" opacity="0.7"></path><path aria-label="Value: 100; set: Set B" role="graphics-symbol" aria-roledescription="tick" d="M199,95h2v20h-2Z" fill="#829eb1" opacity="0.7"></path><path aria-label="Value: 100; set: Set B" role="graphics-symbol" aria-roledescription="tick" d="M199,95h2v20h-2Z" fill="#829eb1" opacity="0.7"></path><path aria-label="Value: 100; set: Set B" role="graphics-symbol" aria-roledescription="tick" d="M199,95h2v20h-2Z" fill="#829eb1" opacity="0.7"></path><path aria-label="Value: 101; set: Set B" role="graphics-symbol" aria-roledescription="tick" d="M201,95h2v20h-2Z" fill="#829eb1" opacity="0.7"></path><path aria-label="Value: 199; set: Set B" role="graphics-symbol" aria-roledescription="tick" d="M397,95h2v20h-2Z" fill="#829eb1" opacity="0.7"></path><path aria-label="Value: 199; set: Set B" role="graphics-symbol" aria-roledescription="tick" d="M397,95h2v20h-2Z" fill="#829eb1" opacity="0.7"></path></g></g><path class="foreground" aria-hidden="true" d="" display="none"></path></g></g></g></svg><form class="vega-bindings"></form></div>
+<p>This is the central lesson: <strong>mean, median, and mode can all agree while the underlying data is completely different.</strong> A single summary number is never the whole story — this is exactly why we also need measures of <em>spread</em>, discussed next.</p>
+<p>Two natural follow-up questions worth sitting with:</p>
+<ul>
+<li>When summarizing <strong>employee salaries</strong> in an organization, which of mean, median, or mode is more suitable — and why?</li>
+<li>Given two companies' share returns over the last five years, A (%) = {1.8, 1.9, 2.0, 2.1, 2.3} and B (%) = {1.0, 1.1, 1.0, 0.9, 1.3}, which would you invest in, and why? (Hint: mean and median alone won't fully answer this — you'll need spread too.)</li>
+</ul>
+<hr>
+<h2 class="atx" id="quantifying-spread-variance-and-standard-deviation">Quantifying Spread: Variance and Standard Deviation</h2>
+<p>A single "typical value" is never enough — you also need to know how spread out the data is around that value. Consider a second version of the share-return example: A (%) = {1.8, 1.9, 2.0, 2.1, 3.6} and B (%) = {1.0, 1.5, 2.0, 3.0, 3.9}. These now differ noticeably in spread even if their central tendency looks similar — which is exactly what <strong>variance</strong> is designed to capture.</p>
+<p><strong>Variance</strong> is the mean squared deviation from the population mean:</p>
+<span class="katex-display"><span class="katex"><span class="katex-mathml"></span><span aria-hidden="true" class="katex-html"><span class="base"><span style="height:0.8641em;" class="strut"></span><span class="mord"><span style="margin-right:0.03588em;" class="mord mathnormal">σ</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span style="height:0.8641em;" class="vlist"><span style="top:-3.113em;margin-right:0.05em;"><span style="height:2.7em;" class="pstrut"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span style="margin-right:0.2778em;" class="mspace"></span><span class="mrel">=</span><span style="margin-right:0.2778em;" class="mspace"></span></span><span class="base"><span style="height:2.3569em;vertical-align:-0.686em;" class="strut"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span style="height:1.6709em;" class="vlist"><span style="top:-2.314em;"><span style="height:3em;" class="pstrut"></span><span class="mord"><span style="margin-right:0.10903em;" class="mord mathnormal">N</span></span></span><span style="top:-3.23em;"><span style="height:3em;" class="pstrut"></span><span style="border-bottom-width:0.04em;" class="frac-line"></span></span><span style="top:-3.6897em;"><span style="height:3em;" class="pstrut"></span><span class="mord"><span class="mop"><span style="position:relative;top:0em;" class="mop op-symbol small-op">∑</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span style="height:0.9812em;" class="vlist"><span style="top:-2.4003em;margin-left:0em;margin-right:0.05em;"><span style="height:2.7em;" class="pstrut"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">i</span><span class="mrel mtight">=</span><span class="mord mtight">1</span></span></span></span><span style="top:-3.2029em;margin-right:0.05em;"><span style="height:2.7em;" class="pstrut"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span style="margin-right:0.10903em;" class="mord mathnormal mtight">N</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span style="height:0.2997em;" class="vlist"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span style="height:0.3117em;" class="vlist"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span style="height:2.7em;" class="pstrut"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span style="height:0.15em;" class="vlist"><span></span></span></span></span></span></span><span style="margin-right:0.2222em;" class="mspace"></span><span class="mbin">−</span><span style="margin-right:0.2222em;" class="mspace"></span><span class="mord mathnormal">μ</span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span style="height:0.8141em;" class="vlist"><span style="top:-3.063em;margin-right:0.05em;"><span style="height:2.7em;" class="pstrut"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span style="height:0.686em;" class="vlist"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span><p><strong>Standard deviation</strong> is simply the positive square root of the variance: <span class="katex"><span class="katex-mathml"></span><span aria-hidden="true" class="katex-html"><span class="base"><span style="height:0.4306em;" class="strut"></span><span style="margin-right:0.03588em;" class="mord mathnormal">σ</span><span style="margin-right:0.2778em;" class="mspace"></span><span class="mrel">=</span><span style="margin-right:0.2778em;" class="mspace"></span></span><span class="base"><span style="height:1.04em;vertical-align:-0.0849em;" class="strut"></span><span class="mord sqrt"><span class="vlist-t vlist-t2"><span class="vlist-r"><span style="height:0.9551em;" class="vlist"><span style="top:-3em;" class="svg-align"><span style="height:3em;" class="pstrut"></span><span style="padding-left:0.833em;" class="mord"><span class="mord"><span style="margin-right:0.03588em;" class="mord mathnormal">σ</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span style="height:0.7401em;" class="vlist"><span style="top:-2.989em;margin-right:0.05em;"><span style="height:2.7em;" class="pstrut"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span><span style="top:-2.9151em;"><span style="height:3em;" class="pstrut"></span><span style="min-width:0.853em;height:1.08em;" class="hide-tail"><svg preserveAspectRatio="xMinYMin slice" viewBox="0 0 400000 1080" height="1.08em" width="400em" xmlns="http://www.w3.org/2000/svg"><path d="M95,702
+c-2.7,0,-7.17,-2.7,-13.5,-8c-5.8,-5.3,-9.5,-10,-9.5,-14
+c0,-2,0.3,-3.3,1,-4c1.3,-2.7,23.83,-20.7,67.5,-54
+c44.2,-33.3,65.8,-50.3,66.5,-51c1.3,-1.3,3,-2,5,-2c4.7,0,8.7,3.3,12,10
+s173,378,173,378c0.7,0,35.3,-71,104,-213c68.7,-142,137.5,-285,206.5,-429
+c69,-144,104.5,-217.7,106.5,-221
+l0 -0
+c5.3,-9.3,12,-14,20,-14
+H400000v40H845.2724
+s-225.272,467,-225.272,467s-235,486,-235,486c-2.7,4.7,-9,7,-19,7
+c-6,0,-10,-1,-12,-3s-194,-422,-194,-422s-65,47,-65,47z
+M834 80h400000v40h-400000z"></path></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span style="height:0.0849em;" class="vlist"><span></span></span></span></span></span></span></span></span>.</p>
+<p>Two questions worth pondering on your own: <em>which of variance and standard deviation is more popular in practice, and do they really represent the same underlying idea, or are there meaningful differences in how each is used?</em></p>
+<blockquote>
+<p><strong>Note for Review:</strong> Mean, median, mode, variance, and standard deviation are measures you've likely used since school — but <em>popularity is not the same as suitability</em>. Always ask which measure is appropriate for the specific question you're answering, not just which one is most familiar.</p>
+</blockquote>
+<h3 class="atx" id="when-both-parameter-and-statistic-are-known">When Both Parameter and Statistic Are Known</h3>
+<p>Normally, the population parameter is unknown, which is precisely why we rely on a sample statistic. But in the rare case where <strong>both</strong> <span class="katex"><span class="katex-mathml"></span><span aria-hidden="true" class="katex-html"><span class="base"><span style="height:0.625em;vertical-align:-0.1944em;" class="strut"></span><span class="mord mathnormal">p</span></span></span></span> and <span class="katex"><span class="katex-mathml"></span><span aria-hidden="true" class="katex-html"><span class="base"><span style="height:0.8889em;vertical-align:-0.1944em;" class="strut"></span><span class="mord accent"><span class="vlist-t vlist-t2"><span class="vlist-r"><span style="height:0.6944em;" class="vlist"><span style="top:-3em;"><span style="height:3em;" class="pstrut"></span><span class="mord mathnormal">p</span></span><span style="top:-3em;"><span style="height:3em;" class="pstrut"></span><span style="left:-0.1667em;" class="accent-body"><span class="mord"></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span style="height:0.1944em;" class="vlist"><span></span></span></span></span></span><span style="margin-right:0.2778em;" class="mspace"></span><span class="mrel">=</span><span style="margin-right:0.2778em;" class="mspace"></span></span><span class="base"><span style="height:0.6444em;" class="strut"></span><span class="mord">3.1</span></span></span></span>, that deviation is a signal — perhaps the sampling procedure was flawed, or some subgroup was under-represented.</p>
+<hr>
+<h2 class="atx" id="other-robust-summary-measures">Other Robust Summary Measures</h2>
+<p>Beyond mean/median/mode and variance/standard deviation, a few additional measures are worth having in your toolkit — especially when robustness to outliers matters.</p>
+<h3 class="atx" id="range-and-dynamic-range">Range and Dynamic Range</h3>
+<span class="katex-display"><span class="katex"><span class="katex-mathml"></span><span aria-hidden="true" class="katex-html"><span class="base"><span style="height:0.8778em;vertical-align:-0.1944em;" class="strut"></span><span class="mord text"><span class="mord">Range</span></span><span style="margin-right:0.2778em;" class="mspace"></span><span class="mrel">=</span><span style="margin-right:0.2778em;" class="mspace"></span></span><span class="base"><span style="height:0.7512em;vertical-align:-0.0833em;" class="strut"></span><span class="mop">max</span><span style="margin-right:0.1667em;" class="mspace"></span><span class="mord">−</span><span style="margin-right:0.1667em;" class="mspace"></span><span class="mop">min</span></span></span></span></span><p>Range is simple and useful for quick comparisons, but it only ever looks at the two most extreme values in the entire dataset.</p>
+<p>A logarithmic variant, the <strong>dynamic range</strong>, is often more informative:</p>
+<span class="katex-display"><span class="katex"><span class="katex-mathml"></span><span aria-hidden="true" class="katex-html"><span class="base"><span style="height:0.8778em;vertical-align:-0.1944em;" class="strut"></span><span class="mord text"><span class="mord">Dynamic&nbsp;Range</span></span><span style="margin-right:0.2778em;" class="mspace"></span><span class="mrel">=</span><span style="margin-right:0.2778em;" class="mspace"></span></span><span class="base"><span style="height:1.836em;vertical-align:-0.686em;" class="strut"></span><span class="mop"><span class="mop">lo<span style="margin-right:0.01389em;">g</span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span style="height:0.207em;" class="vlist"><span style="top:-2.4559em;margin-right:0.05em;"><span style="height:2.7em;" class="pstrut"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">10</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span style="height:0.2441em;" class="vlist"><span></span></span></span></span></span></span><span style="margin-right:0.1667em;" class="mspace"></span><span class="minner"><span style="top:0em;" class="mopen delimcenter"><span class="delimsizing size2">(</span></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span style="height:1.1076em;" class="vlist"><span style="top:-2.314em;"><span style="height:3em;" class="pstrut"></span><span class="mord"><span class="mop">min</span></span></span><span style="top:-3.23em;"><span style="height:3em;" class="pstrut"></span><span style="border-bottom-width:0.04em;" class="frac-line"></span></span><span style="top:-3.677em;"><span style="height:3em;" class="pstrut"></span><span class="mord"><span class="mop">max</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span style="height:0.686em;" class="vlist"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span style="top:0em;" class="mclose delimcenter"><span class="delimsizing size2">)</span></span></span></span></span></span></span><p>This measure is widely used in <strong>digital photography</strong>, <strong>audio</strong>, and <strong>signal processing</strong>. In photography, a scene's dynamic range tells you how much contrast (brightness variation) it contains — a higher dynamic range means the scene contains both much brighter and much darker points together, rather than being relatively uniform.</p>
+<p><strong>Example — real-world luminance range:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Scene</th>
+<th>Luminance (cd/m²)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Moonless sky</td>
+<td><span class="katex"><span class="katex-mathml"></span><span aria-hidden="true" class="katex-html"><span class="base"><span style="height:0.7278em;vertical-align:-0.0833em;" class="strut"></span><span class="mord">3</span><span style="margin-right:0.2222em;" class="mspace"></span><span class="mbin">×</span><span style="margin-right:0.2222em;" class="mspace"></span></span><span class="base"><span style="height:0.8141em;" class="strut"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span style="height:0.8141em;" class="vlist"><span style="top:-3.063em;margin-right:0.05em;"><span style="height:2.7em;" class="pstrut"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mtight">5</span></span></span></span></span></span></span></span></span></span></span></span></td>
+</tr>
+<tr>
+<td>Full moon</td>
+<td><span class="katex"><span class="katex-mathml"></span><span aria-hidden="true" class="katex-html"><span class="base"><span style="height:0.7278em;vertical-align:-0.0833em;" class="strut"></span><span class="mord">6</span><span style="margin-right:0.2222em;" class="mspace"></span><span class="mbin">×</span><span style="margin-right:0.2222em;" class="mspace"></span></span><span class="base"><span style="height:0.8141em;" class="strut"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span style="height:0.8141em;" class="vlist"><span style="top:-3.063em;margin-right:0.05em;"><span style="height:2.7em;" class="pstrut"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">3</span></span></span></span></span></span></span></span></span></span></span></span></td>
+</tr>
+<tr>
+<td>Sun</td>
+<td><span class="katex"><span class="katex-mathml"></span><span aria-hidden="true" class="katex-html"><span class="base"><span style="height:0.7278em;vertical-align:-0.0833em;" class="strut"></span><span class="mord">2</span><span style="margin-right:0.2222em;" class="mspace"></span><span class="mbin">×</span><span style="margin-right:0.2222em;" class="mspace"></span></span><span class="base"><span style="height:0.8141em;" class="strut"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span style="height:0.8141em;" class="vlist"><span style="top:-3.063em;margin-right:0.05em;"><span style="height:2.7em;" class="pstrut"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">9</span></span></span></span></span></span></span></span></span></span></span></span></td>
+</tr>
+</tbody></table>
+<p>The luminance of real-world scenes spans roughly <strong>14 orders of magnitude</strong>, from moonless sky to direct sunlight — which is exactly why a <em>logarithmic</em> scale is necessary to make such numbers manageable, and why plain "range" would be a poor way to compare such extreme spreads.</p>
+<blockquote>
+<p><strong>Open question from the lecture:</strong> how robust are range and dynamic range as summary measures, really? Dynamic range is generally considered the more robust of the two — but think through why, and what specific weaknesses of plain "range" it fixes.</p>
+</blockquote>
+<h3 class="atx" id="percentiles-and-quartiles">Percentiles and Quartiles</h3>
+<p>For <span class="katex"><span class="katex-mathml"></span><span aria-hidden="true" class="katex-html"><span class="base"><span style="height:0.4306em;" class="strut"></span><span class="mord mathnormal">n</span></span></span></span> numerically ordered values (interpolating when there is an even number of observations):</p>
+<span class="katex-display"><span class="katex"><span class="katex-mathml"></span><span aria-hidden="true" class="katex-html"><span class="base"><span style="height:0.8778em;vertical-align:-0.1944em;" class="strut"></span><span class="mord"><span class="mord mathnormal">Q</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span style="height:0.3011em;" class="vlist"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span style="height:2.7em;" class="pstrut"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span style="height:0.15em;" class="vlist"><span></span></span></span></span></span></span><span style="margin-right:0.2778em;" class="mspace"></span><span class="mrel">=</span><span style="margin-right:0.2778em;" class="mspace"></span></span><span class="base"><span style="height:2.0074em;vertical-align:-0.686em;" class="strut"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span style="height:1.3214em;" class="vlist"><span style="top:-2.314em;"><span style="height:3em;" class="pstrut"></span><span class="mord"><span class="mord">4</span></span></span><span style="top:-3.23em;"><span style="height:3em;" class="pstrut"></span><span style="border-bottom-width:0.04em;" class="frac-line"></span></span><span style="top:-3.677em;"><span style="height:3em;" class="pstrut"></span><span class="mord"><span class="mord mathnormal">n</span><span style="margin-right:0.2222em;" class="mspace"></span><span class="mbin">+</span><span style="margin-right:0.2222em;" class="mspace"></span><span class="mord">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span style="height:0.686em;" class="vlist"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mpunct">,</span><span style="margin-right:2em;" class="mspace"></span><span style="margin-right:0.1667em;" class="mspace"></span><span class="mord"><span class="mord mathnormal">Q</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span style="height:0.3011em;" class="vlist"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span style="height:2.7em;" class="pstrut"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span style="height:0.15em;" class="vlist"><span></span></span></span></span></span></span><span style="margin-right:0.2778em;" class="mspace"></span><span class="mrel">=</span><span style="margin-right:0.2778em;" class="mspace"></span></span><span class="base"><span style="height:2.0074em;vertical-align:-0.686em;" class="strut"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span style="height:1.3214em;" class="vlist"><span style="top:-2.314em;"><span style="height:3em;" class="pstrut"></span><span class="mord"><span class="mord">2</span></span></span><span style="top:-3.23em;"><span style="height:3em;" class="pstrut"></span><span style="border-bottom-width:0.04em;" class="frac-line"></span></span><span style="top:-3.677em;"><span style="height:3em;" class="pstrut"></span><span class="mord"><span class="mord mathnormal">n</span><span style="margin-right:0.2222em;" class="mspace"></span><span class="mbin">+</span><span style="margin-right:0.2222em;" class="mspace"></span><span class="mord">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span style="height:0.686em;" class="vlist"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mpunct">,</span><span style="margin-right:2em;" class="mspace"></span><span style="margin-right:0.1667em;" class="mspace"></span><span class="mord"><span class="mord mathnormal">Q</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span style="height:0.3011em;" class="vlist"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span style="height:2.7em;" class="pstrut"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">3</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span style="height:0.15em;" class="vlist"><span></span></span></span></span></span></span><span style="margin-right:0.2778em;" class="mspace"></span><span class="mrel">=</span><span style="margin-right:0.2778em;" class="mspace"></span></span><span class="base"><span style="height:2.113em;vertical-align:-0.686em;" class="strut"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span style="height:1.427em;" class="vlist"><span style="top:-2.314em;"><span style="height:3em;" class="pstrut"></span><span class="mord"><span class="mord">4</span></span></span><span style="top:-3.23em;"><span style="height:3em;" class="pstrut"></span><span style="border-bottom-width:0.04em;" class="frac-line"></span></span><span style="top:-3.677em;"><span style="height:3em;" class="pstrut"></span><span class="mord"><span class="mord">3</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span style="margin-right:0.2222em;" class="mspace"></span><span class="mbin">+</span><span style="margin-right:0.2222em;" class="mspace"></span><span class="mord">1</span><span class="mclose">)</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span style="height:0.686em;" class="vlist"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span><p>where each formula gives the <strong>position</strong> (rank) in the ordered data at which that quartile lies. Note that:</p>
+<span class="katex-display"><span class="katex"><span class="katex-mathml"></span><span aria-hidden="true" class="katex-html"><span class="base"><span style="height:0.6944em;" class="strut"></span><span class="mord text"><span class="mord">median</span></span><span style="margin-right:0.2778em;" class="mspace"></span><span class="mrel">=</span><span style="margin-right:0.2778em;" class="mspace"></span></span><span class="base"><span style="height:0.8333em;vertical-align:-0.15em;" class="strut"></span><span class="mord"><span style="margin-right:0.13889em;" class="mord mathnormal">P</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span style="height:0.3011em;" class="vlist"><span style="top:-2.55em;margin-left:-0.1389em;margin-right:0.05em;"><span style="height:2.7em;" class="pstrut"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">50</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span style="height:0.15em;" class="vlist"><span></span></span></span></span></span></span><span style="margin-right:0.2778em;" class="mspace"></span><span class="mrel">=</span><span style="margin-right:0.2778em;" class="mspace"></span></span><span class="base"><span style="height:0.8778em;vertical-align:-0.1944em;" class="strut"></span><span class="mord"><span class="mord mathnormal">Q</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span style="height:0.3011em;" class="vlist"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span style="height:2.7em;" class="pstrut"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span style="height:0.15em;" class="vlist"><span></span></span></span></span></span></span></span></span></span></span><p>— the median is simply the 50th percentile, which is also the second quartile.</p>
+<h3 class="atx" id="inter-quartile-range-iqr">Inter-Quartile Range (IQR)</h3>
+<span class="katex-display"><span class="katex"><span class="katex-mathml"></span><span aria-hidden="true" class="katex-html"><span class="base"><span style="height:0.8778em;vertical-align:-0.1944em;" class="strut"></span><span class="mord text"><span class="mord">IQR</span></span><span style="margin-right:0.2778em;" class="mspace"></span><span class="mrel">=</span><span style="margin-right:0.2778em;" class="mspace"></span></span><span class="base"><span style="height:0.8778em;vertical-align:-0.1944em;" class="strut"></span><span class="mord"><span class="mord mathnormal">Q</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span style="height:0.3011em;" class="vlist"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span style="height:2.7em;" class="pstrut"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">3</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span style="height:0.15em;" class="vlist"><span></span></span></span></span></span></span><span style="margin-right:0.2222em;" class="mspace"></span><span class="mbin">−</span><span style="margin-right:0.2222em;" class="mspace"></span></span><span class="base"><span style="height:0.8778em;vertical-align:-0.1944em;" class="strut"></span><span class="mord"><span class="mord mathnormal">Q</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span style="height:0.3011em;" class="vlist"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span style="height:2.7em;" class="pstrut"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span style="height:0.15em;" class="vlist"><span></span></span></span></span></span></span></span></span></span></span><p>The IQR is a <strong>more robust</strong> alternative to the plain range, because it deliberately ignores the most extreme 25% of values on each end — exactly the values that make the plain range so sensitive to outliers.</p>
+<p><strong>Try it yourself:</strong> the battery life (in hours) of 12 sample units is:</p>
+<span class="katex-display"><span class="katex"><span class="katex-mathml"></span><span aria-hidden="true" class="katex-html"><span class="base"><span style="height:0.8389em;vertical-align:-0.1944em;" class="strut"></span><span class="mord">2</span><span class="mpunct">,</span><span class="mspace">&nbsp;</span><span style="margin-right:0.1667em;" class="mspace"></span><span class="mord">5</span><span class="mpunct">,</span><span class="mspace">&nbsp;</span><span style="margin-right:0.1667em;" class="mspace"></span><span class="mord">6</span><span class="mpunct">,</span><span class="mspace">&nbsp;</span><span style="margin-right:0.1667em;" class="mspace"></span><span class="mord">6</span><span class="mpunct">,</span><span class="mspace">&nbsp;</span><span style="margin-right:0.1667em;" class="mspace"></span><span class="mord">7</span><span class="mpunct">,</span><span class="mspace">&nbsp;</span><span style="margin-right:0.1667em;" class="mspace"></span><span class="mord">8</span><span class="mpunct">,</span><span class="mspace">&nbsp;</span><span style="margin-right:0.1667em;" class="mspace"></span><span class="mord">8</span><span class="mpunct">,</span><span class="mspace">&nbsp;</span><span style="margin-right:0.1667em;" class="mspace"></span><span class="mord">8</span><span class="mpunct">,</span><span class="mspace">&nbsp;</span><span style="margin-right:0.1667em;" class="mspace"></span><span class="mord">9</span><span class="mpunct">,</span><span class="mspace">&nbsp;</span><span style="margin-right:0.1667em;" class="mspace"></span><span class="mord">9</span><span class="mpunct">,</span><span class="mspace">&nbsp;</span><span style="margin-right:0.1667em;" class="mspace"></span><span class="mord">10</span><span class="mpunct">,</span><span class="mspace">&nbsp;</span><span style="margin-right:0.1667em;" class="mspace"></span><span class="mord">15</span></span></span></span></span><p>The range here is easy: <span class="katex"><span class="katex-mathml"></span><span aria-hidden="true" class="katex-html"><span class="base"><span style="height:0.6667em;vertical-align:-0.0833em;" class="strut"></span><span class="mord text"><span class="mord">max</span></span><span style="margin-right:0.2222em;" class="mspace"></span><span class="mbin">−</span><span style="margin-right:0.2222em;" class="mspace"></span></span><span class="base"><span style="height:0.6679em;" class="strut"></span><span class="mord text"><span class="mord">min</span></span><span style="margin-right:0.2778em;" class="mspace"></span><span class="mrel">=</span><span style="margin-right:0.2778em;" class="mspace"></span></span><span class="base"><span style="height:0.7278em;vertical-align:-0.0833em;" class="strut"></span><span class="mord">15</span><span style="margin-right:0.2222em;" class="mspace"></span><span class="mbin">−</span><span style="margin-right:0.2222em;" class="mspace"></span></span><span class="base"><span style="height:0.6444em;" class="strut"></span><span class="mord">2</span><span style="margin-right:0.2778em;" class="mspace"></span><span class="mrel">=</span><span style="margin-right:0.2778em;" class="mspace"></span></span><span class="base"><span style="height:0.6444em;" class="strut"></span><span class="mord">13</span></span></span></span>. Now order the data (it already is ordered), locate <span class="katex"><span class="katex-mathml"></span><span aria-hidden="true" class="katex-html"><span class="base"><span style="height:0.8778em;vertical-align:-0.1944em;" class="strut"></span><span class="mord"><span class="mord mathnormal">Q</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span style="height:0.3011em;" class="vlist"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span style="height:2.7em;" class="pstrut"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span style="height:0.15em;" class="vlist"><span></span></span></span></span></span></span></span></span></span> and <span class="katex"><span class="katex-mathml"></span><span aria-hidden="true" class="katex-html"><span class="base"><span style="height:0.8778em;vertical-align:-0.1944em;" class="strut"></span><span class="mord"><span class="mord mathnormal">Q</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span style="height:0.3011em;" class="vlist"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span style="height:2.7em;" class="pstrut"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">3</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span style="height:0.15em;" class="vlist"><span></span></span></span></span></span></span></span></span></span> using the formulas above, and compute the IQR. Compare the two numbers — the gap between them is exactly the kind of robustness difference this section has been building toward.</p>
+<blockquote>
+<p><strong>Note for Review:</strong> Range only "sees" two data points, no matter how large your dataset is. IQR "sees" the middle 50% of your entire dataset. When you suspect outliers are present, always prefer IQR over range — the same instinct that makes you prefer median over mean in skewed data.</p>
+</blockquote>
+<hr>
+<h2 class="atx" id="practice-questions">Practice Questions</h2>
+<p>The following questions are designed to make you actively apply this lecture's vocabulary and reasoning — think them through rather than searching for a one-line answer.</p>
+<ol>
+<li><p>A ride-sharing app records a <strong>"Trip Rating"</strong> (1 to 5 stars) and <strong>"Trip Distance"</strong> (in km) for every ride. Classify each attribute as nominal, ordinal, or continuous. If an analyst carelessly computed the <em>average</em> trip rating and reported "3.47 stars" as if it were a continuous measurement, what subtle interpretive mistake might they be making about what that number actually represents?</p>
+</li>
+<li><p>A startup has 40 employees, and the CEO's salary is roughly 20× the typical employee's salary. Which single summary statistic — mean, median, or mode — would you present to investors to describe "typical" pay at the company, and which would you present in a union negotiation arguing that wages are too low? Justify both choices using what you now know about sensitivity to outliers.</p>
+</li>
+<li><p>Two rooftop sensors log a city's daily temperature for a year. If you were told only the <strong>plain range</strong> (not the dynamic range) of each sensor's readings, could you always correctly judge which sensor recorded more extreme relative swings? Construct a small example dataset for each sensor where the ranges look similar but the dynamic ranges tell a very different story.</p>
+</li>
+<li><p>A hospital wants to know what fraction of <em>all</em> diabetic patients nationwide would respond well to a new drug, and tests it on 50 volunteer patients. Identify what plays the role of the <strong>parameter</strong> (<span class="katex"><span class="katex-mathml"></span><span aria-hidden="true" class="katex-html"><span class="base"><span style="height:0.625em;vertical-align:-0.1944em;" class="strut"></span><span class="mord mathnormal">p</span></span></span></span>) and what plays the role of the <strong>statistic</strong> (<span class="katex"><span class="katex-mathml"></span><span aria-hidden="true" class="katex-html"><span class="base"><span style="height:0.8889em;vertical-align:-0.1944em;" class="strut"></span><span class="mord accent"><span class="vlist-t vlist-t2"><span class="vlist-r"><span style="height:0.6944em;" class="vlist"><span style="top:-3em;"><span style="height:3em;" class="pstrut"></span><span class="mord mathnormal">p</span></span><span style="top:-3em;"><span style="height:3em;" class="pstrut"></span><span style="left:-0.1667em;" class="accent-body"><span class="mord">^</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span style="height:0.1944em;" class="vlist"><span></span></span></span></span></span></span></span></span>) in this scenario. Then describe one realistic reason the volunteer group might be a <em>biased</em> sample rather than a trustworthy stand-in for the full population.</p>
+</li>
+<li><p>Two batches of exam scores both have <strong>mean = 70, median = 70, and mode = 70</strong> — but Batch 1's scores all fall between 68 and 72, while Batch 2's scores range from 20 to 100. Explain why a teacher relying only on mean, median, and mode would be misled when comparing these batches, and name the additional summary statistic(s) from this lecture that would correctly reveal the difference. (You only need to identify and justify the right measure — you don't need to compute it.)</p>
+</li>
+</ol>
+</article>
+</body>
+</html>

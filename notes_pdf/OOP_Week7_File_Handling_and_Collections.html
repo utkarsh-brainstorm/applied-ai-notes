@@ -1,0 +1,3860 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <style>
+  @font-face {
+  font-family: octicons-link;
+  src: url(data:font/woff;charset=utf-8;base64,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) format('woff');
+}
+
+.markdown-body .octicon {
+  display: inline-block;
+  fill: currentColor;
+  vertical-align: text-bottom;
+}
+
+.markdown-body .anchor {
+  float: left;
+  line-height: 1;
+  margin-left: -20px;
+  padding-right: 4px;
+}
+
+.markdown-body .anchor:focus {
+  outline: none;
+}
+
+.markdown-body h1 .octicon-link,
+.markdown-body h2 .octicon-link,
+.markdown-body h3 .octicon-link,
+.markdown-body h4 .octicon-link,
+.markdown-body h5 .octicon-link,
+.markdown-body h6 .octicon-link {
+  color: #1b1f23;
+  vertical-align: middle;
+  visibility: hidden;
+}
+
+.markdown-body h1:hover .anchor,
+.markdown-body h2:hover .anchor,
+.markdown-body h3:hover .anchor,
+.markdown-body h4:hover .anchor,
+.markdown-body h5:hover .anchor,
+.markdown-body h6:hover .anchor {
+  text-decoration: none;
+}
+
+.markdown-body h1:hover .anchor .octicon-link,
+.markdown-body h2:hover .anchor .octicon-link,
+.markdown-body h3:hover .anchor .octicon-link,
+.markdown-body h4:hover .anchor .octicon-link,
+.markdown-body h5:hover .anchor .octicon-link,
+.markdown-body h6:hover .anchor .octicon-link {
+  visibility: visible;
+}
+
+.markdown-body {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  color: #24292e;
+  line-height: 1.5;
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
+  font-size: 16px;
+  line-height: 1.5;
+  word-wrap: break-word;
+}
+
+.markdown-body .pl-c {
+  color: #6a737d;
+}
+
+.markdown-body .pl-c1,
+.markdown-body .pl-s .pl-v {
+  color: #005cc5;
+}
+
+.markdown-body .pl-e,
+.markdown-body .pl-en {
+  color: #6f42c1;
+}
+
+.markdown-body .pl-s .pl-s1,
+.markdown-body .pl-smi {
+  color: #24292e;
+}
+
+.markdown-body .pl-ent {
+  color: #22863a;
+}
+
+.markdown-body .pl-k {
+  color: #d73a49;
+}
+
+.markdown-body .pl-pds,
+.markdown-body .pl-s,
+.markdown-body .pl-s .pl-pse .pl-s1,
+.markdown-body .pl-sr,
+.markdown-body .pl-sr .pl-cce,
+.markdown-body .pl-sr .pl-sra,
+.markdown-body .pl-sr .pl-sre {
+  color: #032f62;
+}
+
+.markdown-body .pl-smw,
+.markdown-body .pl-v {
+  color: #e36209;
+}
+
+.markdown-body .pl-bu {
+  color: #b31d28;
+}
+
+.markdown-body .pl-ii {
+  background-color: #b31d28;
+  color: #fafbfc;
+}
+
+.markdown-body .pl-c2 {
+  background-color: #d73a49;
+  color: #fafbfc;
+}
+
+.markdown-body .pl-c2:before {
+  content: "^M";
+}
+
+.markdown-body .pl-sr .pl-cce {
+  color: #22863a;
+  font-weight: 700;
+}
+
+.markdown-body .pl-ml {
+  color: #735c0f;
+}
+
+.markdown-body .pl-mh,
+.markdown-body .pl-mh .pl-en,
+.markdown-body .pl-ms {
+  color: #005cc5;
+  font-weight: 700;
+}
+
+.markdown-body .pl-mi {
+  color: #24292e;
+  font-style: italic;
+}
+
+.markdown-body .pl-mb {
+  color: #24292e;
+  font-weight: 700;
+}
+
+.markdown-body .pl-md {
+  background-color: #ffeef0;
+  color: #b31d28;
+}
+
+.markdown-body .pl-mi1 {
+  background-color: #f0fff4;
+  color: #22863a;
+}
+
+.markdown-body .pl-mc {
+  background-color: #ffebda;
+  color: #e36209;
+}
+
+.markdown-body .pl-mi2 {
+  background-color: #005cc5;
+  color: #f6f8fa;
+}
+
+.markdown-body .pl-mdr {
+  color: #6f42c1;
+  font-weight: 700;
+}
+
+.markdown-body .pl-ba {
+  color: #586069;
+}
+
+.markdown-body .pl-sg {
+  color: #959da5;
+}
+
+.markdown-body .pl-corl {
+  color: #032f62;
+  text-decoration: underline;
+}
+
+.markdown-body details {
+  display: block;
+}
+
+.markdown-body summary {
+  display: list-item;
+}
+
+.markdown-body a {
+  background-color: transparent;
+}
+
+.markdown-body a:active,
+.markdown-body a:hover {
+  outline-width: 0;
+}
+
+.markdown-body strong {
+  font-weight: inherit;
+  font-weight: bolder;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+  margin: .67em 0;
+}
+
+.markdown-body img {
+  border-style: none;
+}
+
+.markdown-body code,
+.markdown-body kbd,
+.markdown-body pre {
+  font-family: monospace,monospace;
+  font-size: 1em;
+}
+
+.markdown-body hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+}
+
+.markdown-body input {
+  font: inherit;
+  margin: 0;
+}
+
+.markdown-body input {
+  overflow: visible;
+}
+
+.markdown-body [type=checkbox] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.markdown-body * {
+  box-sizing: border-box;
+}
+
+.markdown-body input {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.markdown-body a {
+  color: #0366d6;
+  text-decoration: none;
+}
+
+.markdown-body a:hover {
+  text-decoration: underline;
+}
+
+.markdown-body strong {
+  font-weight: 600;
+}
+
+.markdown-body hr {
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #dfe2e5;
+  height: 0;
+  margin: 15px 0;
+  overflow: hidden;
+}
+
+.markdown-body hr:before {
+  content: "";
+  display: table;
+}
+
+.markdown-body hr:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.markdown-body table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.markdown-body td,
+.markdown-body th {
+  padding: 0;
+}
+
+.markdown-body details summary {
+  cursor: pointer;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.markdown-body h1 {
+  font-size: 32px;
+}
+
+.markdown-body h1,
+.markdown-body h2 {
+  font-weight: 600;
+}
+
+.markdown-body h2 {
+  font-size: 24px;
+}
+
+.markdown-body h3 {
+  font-size: 20px;
+}
+
+.markdown-body h3,
+.markdown-body h4 {
+  font-weight: 600;
+}
+
+.markdown-body h4 {
+  font-size: 16px;
+}
+
+.markdown-body h5 {
+  font-size: 14px;
+}
+
+.markdown-body h5,
+.markdown-body h6 {
+  font-weight: 600;
+}
+
+.markdown-body h6 {
+  font-size: 12px;
+}
+
+.markdown-body p {
+  margin-bottom: 10px;
+  margin-top: 0;
+}
+
+.markdown-body blockquote {
+  margin: 0;
+}
+
+.markdown-body ol,
+.markdown-body ul {
+  margin-bottom: 0;
+  margin-top: 0;
+  padding-left: 0;
+}
+
+.markdown-body ol ol,
+.markdown-body ul ol {
+  list-style-type: lower-roman;
+}
+
+.markdown-body ol ol ol,
+.markdown-body ol ul ol,
+.markdown-body ul ol ol,
+.markdown-body ul ul ol {
+  list-style-type: lower-alpha;
+}
+
+.markdown-body dd {
+  margin-left: 0;
+}
+
+.markdown-body code,
+.markdown-body pre {
+  font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;
+  font-size: 12px;
+}
+
+.markdown-body pre {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.markdown-body input::-webkit-inner-spin-button,
+.markdown-body input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+.markdown-body .border {
+  border: 1px solid #e1e4e8!important;
+}
+
+.markdown-body .border-0 {
+  border: 0!important;
+}
+
+.markdown-body .border-bottom {
+  border-bottom: 1px solid #e1e4e8!important;
+}
+
+.markdown-body .rounded-1 {
+  border-radius: 3px!important;
+}
+
+.markdown-body .bg-white {
+  background-color: #fff!important;
+}
+
+.markdown-body .bg-gray-light {
+  background-color: #fafbfc!important;
+}
+
+.markdown-body .text-gray-light {
+  color: #6a737d!important;
+}
+
+.markdown-body .mb-0 {
+  margin-bottom: 0!important;
+}
+
+.markdown-body .my-2 {
+  margin-bottom: 8px!important;
+  margin-top: 8px!important;
+}
+
+.markdown-body .pl-0 {
+  padding-left: 0!important;
+}
+
+.markdown-body .py-0 {
+  padding-bottom: 0!important;
+  padding-top: 0!important;
+}
+
+.markdown-body .pl-1 {
+  padding-left: 4px!important;
+}
+
+.markdown-body .pl-2 {
+  padding-left: 8px!important;
+}
+
+.markdown-body .py-2 {
+  padding-bottom: 8px!important;
+  padding-top: 8px!important;
+}
+
+.markdown-body .pl-3,
+.markdown-body .px-3 {
+  padding-left: 16px!important;
+}
+
+.markdown-body .px-3 {
+  padding-right: 16px!important;
+}
+
+.markdown-body .pl-4 {
+  padding-left: 24px!important;
+}
+
+.markdown-body .pl-5 {
+  padding-left: 32px!important;
+}
+
+.markdown-body .pl-6 {
+  padding-left: 40px!important;
+}
+
+.markdown-body .f6 {
+  font-size: 12px!important;
+}
+
+.markdown-body .lh-condensed {
+  line-height: 1.25!important;
+}
+
+.markdown-body .text-bold {
+  font-weight: 600!important;
+}
+
+.markdown-body:before {
+  content: "";
+  display: table;
+}
+
+.markdown-body:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.markdown-body>:first-child {
+  margin-top: 0!important;
+}
+
+.markdown-body>:last-child {
+  margin-bottom: 0!important;
+}
+
+.markdown-body a:not([href]) {
+  color: inherit;
+  text-decoration: none;
+}
+
+.markdown-body blockquote,
+.markdown-body dl,
+.markdown-body ol,
+.markdown-body p,
+.markdown-body pre,
+.markdown-body table,
+.markdown-body ul {
+  margin-bottom: 16px;
+  margin-top: 0;
+}
+
+.markdown-body hr {
+  background-color: #e1e4e8;
+  border: 0;
+  height: .25em;
+  margin: 24px 0;
+  padding: 0;
+}
+
+.markdown-body blockquote {
+  border-left: .25em solid #dfe2e5;
+  color: #6a737d;
+  padding: 0 1em;
+}
+
+.markdown-body blockquote>:first-child {
+  margin-top: 0;
+}
+
+.markdown-body blockquote>:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body kbd {
+  background-color: #fafbfc;
+  border: 1px solid #c6cbd1;
+  border-bottom-color: #959da5;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #959da5;
+  color: #444d56;
+  display: inline-block;
+  font-size: 11px;
+  line-height: 10px;
+  padding: 3px 5px;
+  vertical-align: middle;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  font-weight: 600;
+  line-height: 1.25;
+  margin-bottom: 16px;
+  margin-top: 24px;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+}
+
+.markdown-body h1,
+.markdown-body h2 {
+  border-bottom: 1px solid #eaecef;
+  padding-bottom: .3em;
+}
+
+.markdown-body h2 {
+  font-size: 1.5em;
+}
+
+.markdown-body h3 {
+  font-size: 1.25em;
+}
+
+.markdown-body h4 {
+  font-size: 1em;
+}
+
+.markdown-body h5 {
+  font-size: .875em;
+}
+
+.markdown-body h6 {
+  color: #6a737d;
+  font-size: .85em;
+}
+
+.markdown-body ol,
+.markdown-body ul {
+  padding-left: 2em;
+}
+
+.markdown-body ol ol,
+.markdown-body ol ul,
+.markdown-body ul ol,
+.markdown-body ul ul {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.markdown-body li {
+  word-wrap: break-all;
+}
+
+.markdown-body li>p {
+  margin-top: 16px;
+}
+
+.markdown-body li+li {
+  margin-top: .25em;
+}
+
+.markdown-body dl {
+  padding: 0;
+}
+
+.markdown-body dl dt {
+  font-size: 1em;
+  font-style: italic;
+  font-weight: 600;
+  margin-top: 16px;
+  padding: 0;
+}
+
+.markdown-body dl dd {
+  margin-bottom: 16px;
+  padding: 0 16px;
+}
+
+.markdown-body table {
+  display: block;
+  overflow: auto;
+  width: 100%;
+}
+
+.markdown-body table th {
+  font-weight: 600;
+}
+
+.markdown-body table td,
+.markdown-body table th {
+  border: 1px solid #dfe2e5;
+  padding: 6px 13px;
+}
+
+.markdown-body table tr {
+  background-color: #fff;
+  border-top: 1px solid #c6cbd1;
+}
+
+.markdown-body table tr:nth-child(2n) {
+  background-color: #f6f8fa;
+}
+
+.markdown-body img {
+  background-color: #fff;
+  box-sizing: content-box;
+  max-width: 100%;
+}
+
+.markdown-body img[align=right] {
+  padding-left: 20px;
+}
+
+.markdown-body img[align=left] {
+  padding-right: 20px;
+}
+
+.markdown-body code {
+  background-color: rgba(27,31,35,.05);
+  border-radius: 3px;
+  font-size: 85%;
+  margin: 0;
+  padding: .2em .4em;
+}
+
+.markdown-body pre {
+  word-wrap: normal;
+}
+
+.markdown-body pre>code {
+  background: transparent;
+  border: 0;
+  font-size: 100%;
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  word-break: normal;
+}
+
+.markdown-body .highlight {
+  margin-bottom: 16px;
+}
+
+.markdown-body .highlight pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+
+.markdown-body .highlight pre,
+.markdown-body pre {
+  background-color: #f6f8fa;
+  border-radius: 3px;
+  font-size: 85%;
+  line-height: 1.45;
+  overflow: auto;
+  padding: 16px;
+}
+
+.markdown-body pre code {
+  background-color: transparent;
+  border: 0;
+  display: inline;
+  line-height: inherit;
+  margin: 0;
+  max-width: auto;
+  overflow: visible;
+  padding: 0;
+  word-wrap: normal;
+}
+
+.markdown-body .commit-tease-sha {
+  color: #444d56;
+  display: inline-block;
+  font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;
+  font-size: 90%;
+}
+
+.markdown-body .blob-wrapper {
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.markdown-body .blob-wrapper-embedded {
+  max-height: 240px;
+  overflow-y: auto;
+}
+
+.markdown-body .blob-num {
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  color: rgba(27,31,35,.3);
+  cursor: pointer;
+  font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;
+  font-size: 12px;
+  line-height: 20px;
+  min-width: 50px;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-align: right;
+  user-select: none;
+  vertical-align: top;
+  white-space: nowrap;
+  width: 1%;
+}
+
+.markdown-body .blob-num:hover {
+  color: rgba(27,31,35,.6);
+}
+
+.markdown-body .blob-num:before {
+  content: attr(data-line-number);
+}
+
+.markdown-body .blob-code {
+  line-height: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  position: relative;
+  vertical-align: top;
+}
+
+.markdown-body .blob-code-inner {
+  color: #24292e;
+  font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;
+  font-size: 12px;
+  overflow: visible;
+  white-space: pre;
+  word-wrap: normal;
+}
+
+.markdown-body .pl-token.active,
+.markdown-body .pl-token:hover {
+  background: #ffea7f;
+  cursor: pointer;
+}
+
+.markdown-body kbd {
+  background-color: #fafbfc;
+  border: 1px solid #d1d5da;
+  border-bottom-color: #c6cbd1;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #c6cbd1;
+  color: #444d56;
+  display: inline-block;
+  font: 11px SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;
+  line-height: 10px;
+  padding: 3px 5px;
+  vertical-align: middle;
+}
+
+.markdown-body :checked+.radio-label {
+  border-color: #0366d6;
+  position: relative;
+  z-index: 1;
+}
+
+.markdown-body .tab-size[data-tab-size="1"] {
+  -moz-tab-size: 1;
+  tab-size: 1;
+}
+
+.markdown-body .tab-size[data-tab-size="2"] {
+  -moz-tab-size: 2;
+  tab-size: 2;
+}
+
+.markdown-body .tab-size[data-tab-size="3"] {
+  -moz-tab-size: 3;
+  tab-size: 3;
+}
+
+.markdown-body .tab-size[data-tab-size="4"] {
+  -moz-tab-size: 4;
+  tab-size: 4;
+}
+
+.markdown-body .tab-size[data-tab-size="5"] {
+  -moz-tab-size: 5;
+  tab-size: 5;
+}
+
+.markdown-body .tab-size[data-tab-size="6"] {
+  -moz-tab-size: 6;
+  tab-size: 6;
+}
+
+.markdown-body .tab-size[data-tab-size="7"] {
+  -moz-tab-size: 7;
+  tab-size: 7;
+}
+
+.markdown-body .tab-size[data-tab-size="8"] {
+  -moz-tab-size: 8;
+  tab-size: 8;
+}
+
+.markdown-body .tab-size[data-tab-size="9"] {
+  -moz-tab-size: 9;
+  tab-size: 9;
+}
+
+.markdown-body .tab-size[data-tab-size="10"] {
+  -moz-tab-size: 10;
+  tab-size: 10;
+}
+
+.markdown-body .tab-size[data-tab-size="11"] {
+  -moz-tab-size: 11;
+  tab-size: 11;
+}
+
+.markdown-body .tab-size[data-tab-size="12"] {
+  -moz-tab-size: 12;
+  tab-size: 12;
+}
+
+.markdown-body .task-list-item {
+  list-style-type: none;
+}
+
+.markdown-body .task-list-item+.task-list-item {
+  margin-top: 3px;
+}
+
+.markdown-body .task-list-item input {
+  margin: 0 .2em .25em -1.6em;
+  vertical-align: middle;
+}
+
+.markdown-body hr {
+  border-bottom-color: #eee;
+}
+
+.markdown-body .pl-0 {
+  padding-left: 0!important;
+}
+
+.markdown-body .pl-1 {
+  padding-left: 4px!important;
+}
+
+.markdown-body .pl-2 {
+  padding-left: 8px!important;
+}
+
+.markdown-body .pl-3 {
+  padding-left: 16px!important;
+}
+
+.markdown-body .pl-4 {
+  padding-left: 24px!important;
+}
+
+.markdown-body .pl-5 {
+  padding-left: 32px!important;
+}
+
+.markdown-body .pl-6 {
+  padding-left: 40px!important;
+}
+
+.markdown-body .pl-7 {
+  padding-left: 48px!important;
+}
+
+.markdown-body .pl-8 {
+  padding-left: 64px!important;
+}
+
+.markdown-body .pl-9 {
+  padding-left: 80px!important;
+}
+
+.markdown-body .pl-10 {
+  padding-left: 96px!important;
+}
+
+.markdown-body .pl-11 {
+  padding-left: 112px!important;
+}
+
+.markdown-body .pl-12 {
+  padding-left: 128px!important;
+}
+
+/*# sourceURL=webpack://./node_modules/github-markdown-css/github-markdown.css */
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL25vZGVfbW9kdWxlcy9naXRodWItbWFya2Rvd24tY3NzL2dpdGh1Yi1tYXJrZG93bi5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSwwQkFBMEI7RUFDMUIsMkRBQXF0RTtBQUN2dEU7O0FBRUE7RUFDRSxxQkFBcUI7RUFDckIsa0JBQWtCO0VBQ2xCLDJCQUEyQjtBQUM3Qjs7QUFFQTtFQUNFLFdBQVc7RUFDWCxjQUFjO0VBQ2Qsa0JBQWtCO0VBQ2xCLGtCQUFrQjtBQUNwQjs7QUFFQTtFQUNFLGFBQWE7QUFDZjs7QUFFQTs7Ozs7O0VBTUUsY0FBYztFQUNkLHNCQUFzQjtFQUN0QixrQkFBa0I7QUFDcEI7O0FBRUE7Ozs7OztFQU1FLHFCQUFxQjtBQUN2Qjs7QUFFQTs7Ozs7O0VBTUUsbUJBQW1CO0FBQ3JCOztBQUVBO0VBQ0UsMEJBQTBCO0VBQzFCLDhCQUE4QjtFQUM5QixjQUFjO0VBQ2QsZ0JBQWdCO0VBQ2hCLGtJQUFrSTtFQUNsSSxlQUFlO0VBQ2YsZ0JBQWdCO0VBQ2hCLHFCQUFxQjtBQUN2Qjs7QUFFQTtFQUNFLGNBQWM7QUFDaEI7O0FBRUE7O0VBRUUsY0FBYztBQUNoQjs7QUFFQTs7RUFFRSxjQUFjO0FBQ2hCOztBQUVBOztFQUVFLGNBQWM7QUFDaEI7O0FBRUE7RUFDRSxjQUFjO0FBQ2hCOztBQUVBO0VBQ0UsY0FBYztBQUNoQjs7QUFFQTs7Ozs7OztFQU9FLGNBQWM7QUFDaEI7O0FBRUE7O0VBRUUsY0FBYztBQUNoQjs7QUFFQTtFQUNFLGNBQWM7QUFDaEI7O0FBRUE7RUFDRSx5QkFBeUI7RUFDekIsY0FBYztBQUNoQjs7QUFFQTtFQUNFLHlCQUF5QjtFQUN6QixjQUFjO0FBQ2hCOztBQUVBO0VBQ0UsYUFBYTtBQUNmOztBQUVBO0VBQ0UsY0FBYztFQUNkLGdCQUFnQjtBQUNsQjs7QUFFQTtFQUNFLGNBQWM7QUFDaEI7O0FBRUE7OztFQUdFLGNBQWM7RUFDZCxnQkFBZ0I7QUFDbEI7O0FBRUE7RUFD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 */
+  </style>
+  <style>
+  /**
+ * prism.js default theme for JavaScript, CSS and HTML
+ * Based on dabblet (http://dabblet.com)
+ * @author Lea Verou
+ */
+
+code[class*="language-"],
+pre[class*="language-"] {
+	color: black;
+	background: none;
+	text-shadow: 0 1px white;
+	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	font-size: 1em;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	line-height: 1.5;
+
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+}
+
+pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
+code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-selection {
+	text-shadow: none;
+	background: #b3d4fc;
+}
+
+pre[class*="language-"]::selection, pre[class*="language-"] ::selection,
+code[class*="language-"]::selection, code[class*="language-"] ::selection {
+	text-shadow: none;
+	background: #b3d4fc;
+}
+
+@media print {
+	code[class*="language-"],
+	pre[class*="language-"] {
+		text-shadow: none;
+	}
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+	padding: 1em;
+	margin: .5em 0;
+	overflow: auto;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+	background: #f5f2f0;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+	padding: .1em;
+	border-radius: .3em;
+	white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: slategray;
+}
+
+.token.punctuation {
+	color: #999;
+}
+
+.token.namespace {
+	opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+	color: #905;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+	color: #690;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+	color: #9a6e3a;
+	/* This background color was intended by the author of this theme. */
+	background: hsla(0, 0%, 100%, .5);
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+	color: #07a;
+}
+
+.token.function,
+.token.class-name {
+	color: #DD4A68;
+}
+
+.token.regex,
+.token.important,
+.token.variable {
+	color: #e90;
+}
+
+.token.important,
+.token.bold {
+	font-weight: bold;
+}
+.token.italic {
+	font-style: italic;
+}
+
+.token.entity {
+	cursor: help;
+}
+
+/*# sourceURL=webpack://./node_modules/prismjs/themes/prism.css */
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL25vZGVfbW9kdWxlcy9wcmlzbWpzL3RoZW1lcy9wcmlzbS5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7Ozs7RUFJRTs7QUFFRjs7Q0FFQyxZQUFZO0NBQ1osZ0JBQWdCO0NBQ2hCLHdCQUF3QjtDQUN4QixzRUFBc0U7Q0FDdEUsY0FBYztDQUNkLGdCQUFnQjtDQUNoQixnQkFBZ0I7Q0FDaEIsb0JBQW9CO0NBQ3BCLGtCQUFrQjtDQUNsQixpQkFBaUI7Q0FDakIsZ0JBQWdCOztDQUVoQixnQkFBZ0I7Q0FDaEIsY0FBYztDQUNkLFdBQVc7O0NBRVgscUJBQXFCO0NBQ3JCLGtCQUFrQjtDQUNsQixpQkFBaUI7Q0FDakIsYUFBYTtBQUNkOztBQUVBOztDQUVDLGlCQUFpQjtDQUNqQixtQkFBbUI7QUFDcEI7O0FBRUE7O0NBRUMsaUJBQWlCO0NBQ2pCLG1CQUFtQjtBQUNwQjs7QUFFQTtDQUNDOztFQUVDLGlCQUFpQjtDQUNsQjtBQUNEOztBQUVBLGdCQUFnQjtBQUNoQjtDQUNDLFlBQVk7Q0FDWixjQUFjO0NBQ2QsY0FBYztBQUNmOztBQUVBOztDQUVDLG1CQUFtQjtBQUNwQjs7QUFFQSxnQkFBZ0I7QUFDaEI7Q0FDQyxhQUFhO0NBQ2IsbUJBQW1CO0NBQ25CLG1CQUFtQjtBQUNwQjs7QUFFQTs7OztDQUlDLGdCQUFnQjtBQUNqQjs7QUFFQTtDQUNDLFdBQVc7QUFDWjs7QUFFQTtDQUNDLFdBQVc7QUFDWjs7QUFFQTs7Ozs7OztDQU9DLFdBQVc7QUFDWjs7QUFFQTs7Ozs7O0NBTUMsV0FBVztBQUNaOztBQUVBOzs7OztDQUtDLGNBQWM7Q0FDZCxvRUFBb0U7Q0FDcEUsaUNBQWlDO0FBQ2xDOztBQUVBOzs7Q0FHQyxXQUFXO0FBQ1o7O0FBRUE7O0NBRUMsY0FBYztBQUNmOztBQUVBOzs7Q0FHQyxXQUFXO0FBQ1o7O0FBRUE7O0NBRUMsaUJBQWlCO0FBQ2xCO0FBQ0E7Q0FDQyxrQkFBa0I7QUFDbkI7O0FBRUE7Q0FDQyxZQUFZO0FBQ2IiLCJzb3VyY2VSb290IjoiIn0= */
+  </style>
+  <style>
+  /* stylelint-disable font-family-no-missing-generic-family-keyword */
+@font-face {
+  font-family: 'KaTeX_AMS';
+  src: url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_AMS-Regular.73ea273a.woff2) format('woff2'), url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_AMS-Regular.d562e886.woff) format('woff'), url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_AMS-Regular.853be924.ttf) format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'KaTeX_Caligraphic';
+  src: url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_Caligraphic-Bold.a1abf90d.woff2) format('woff2'), url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_Caligraphic-Bold.d757c535.woff) format('woff'), url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_Caligraphic-Bold.7489a2fb.ttf) format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'KaTeX_Caligraphic';
+  src: url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_Caligraphic-Regular.d6484fce.woff2) format('woff2'), url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_Caligraphic-Regular.db074fa2.woff) format('woff'), url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_Caligraphic-Regular.7e873d38.ttf) format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'KaTeX_Fraktur';
+  src: url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_Fraktur-Bold.931d67ea.woff2) format('woff2'), url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_Fraktur-Bold.354501ba.woff) format('woff'), url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_Fraktur-Bold.4c761b37.ttf) format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'KaTeX_Fraktur';
+  src: url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_Fraktur-Regular.172d3529.woff2) format('woff2'), url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_Fraktur-Regular.6fdf0ac5.woff) format('woff'), url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_Fraktur-Regular.ed305b54.ttf) format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'KaTeX_Main';
+  src: url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_Main-Bold.39890742.woff2) format('woff2'), url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_Main-Bold.0c3b8929.woff) format('woff'), url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_Main-Bold.8169508b.ttf) format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'KaTeX_Main';
+  src: url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_Main-BoldItalic.20f389c4.woff2) format('woff2'), url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_Main-BoldItalic.428978dc.woff) format('woff'), url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_Main-BoldItalic.828abcb2.ttf) format('truetype');
+  font-weight: bold;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'KaTeX_Main';
+  src: url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_Main-Italic.fe2176f7.woff2) format('woff2'), url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_Main-Italic.fd947498.woff) format('woff'), url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_Main-Italic.fa675e5e.ttf) format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'KaTeX_Main';
+  src: url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_Main-Regular.f650f111.woff2) format('woff2'), url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_Main-Regular.4f35fbcc.woff) format('woff'), url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_Main-Regular.9eba1d77.ttf) format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'KaTeX_Math';
+  src: url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_Math-BoldItalic.dcbcbd93.woff2) format('woff2'), url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_Math-BoldItalic.3f07ed67.woff) format('woff'), url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_Math-BoldItalic.bf2d440b.ttf) format('truetype');
+  font-weight: bold;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'KaTeX_Math';
+  src: url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_Math-Italic.6d3d25f4.woff2) format('woff2'), url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_Math-Italic.96759856.woff) format('woff'), url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_Math-Italic.8a5f9363.ttf) format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'KaTeX_SansSerif';
+  src: url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_SansSerif-Bold.95591a92.woff2) format('woff2'), url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_SansSerif-Bold.b9cd458a.woff) format('woff'), url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_SansSerif-Bold.5b49f499.ttf) format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'KaTeX_SansSerif';
+  src: url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_SansSerif-Italic.7d393d38.woff2) format('woff2'), url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_SansSerif-Italic.8d593cfa.woff) format('woff'), url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_SansSerif-Italic.b257a18c.ttf) format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'KaTeX_SansSerif';
+  src: url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_SansSerif-Regular.cd5e231e.woff2) format('woff2'), url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_SansSerif-Regular.02271ec5.woff) format('woff'), url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_SansSerif-Regular.2f7bc363.ttf) format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'KaTeX_Script';
+  src: url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_Script-Regular.c81d1b2a.woff2) format('woff2'), url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_Script-Regular.073b3402.woff) format('woff'), url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_Script-Regular.fc9ba524.ttf) format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'KaTeX_Size1';
+  src: url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_Size1-Regular.6eec866c.woff2) format('woff2'), url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_Size1-Regular.0108e89c.woff) format('woff'), url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_Size1-Regular.6de7d4b5.ttf) format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'KaTeX_Size2';
+  src: url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_Size2-Regular.2960900c.woff2) format('woff2'), url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_Size2-Regular.3a99e70a.woff) format('woff'), url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_Size2-Regular.57f5c183.ttf) format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'KaTeX_Size3';
+  src: url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_Size3-Regular.e1951519.woff2) format('woff2'), url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_Size3-Regular.7947224e.woff) format('woff'), url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_Size3-Regular.8d6b6822.ttf) format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'KaTeX_Size4';
+  src: url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_Size4-Regular.e418bf25.woff2) format('woff2'), url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_Size4-Regular.aeffd802.woff) format('woff'), url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_Size4-Regular.4ad7c7e8.ttf) format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'KaTeX_Typewriter';
+  src: url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_Typewriter-Regular.c295e7f7.woff2) format('woff2'), url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_Typewriter-Regular.4c6b94fd.woff) format('woff'), url(file:///opt/MarkText/resources/app.asar/dist/electron/fonts/KaTeX_Typewriter-Regular.c5c02d76.ttf) format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+.katex {
+  font: normal 1.21em KaTeX_Main, Times New Roman, serif;
+  line-height: 1.2;
+  text-indent: 0;
+  text-rendering: auto;
+}
+.katex * {
+  -ms-high-contrast-adjust: none !important;
+  border-color: currentColor;
+}
+.katex .katex-version::after {
+  content: "0.15.2";
+}
+.katex .katex-mathml {
+  /* Accessibility hack to only show to screen readers
+         Found at: http://a11yproject.com/posts/how-to-hide-content/ */
+  position: absolute;
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0;
+  border: 0;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
+.katex .katex-html {
+  /* \newline is an empty block at top level, between .base elements */
+}
+.katex .katex-html > .newline {
+  display: block;
+}
+.katex .base {
+  position: relative;
+  display: inline-block;
+  white-space: nowrap;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+}
+.katex .strut {
+  display: inline-block;
+}
+.katex .textbf {
+  font-weight: bold;
+}
+.katex .textit {
+  font-style: italic;
+}
+.katex .textrm {
+  font-family: KaTeX_Main;
+}
+.katex .textsf {
+  font-family: KaTeX_SansSerif;
+}
+.katex .texttt {
+  font-family: KaTeX_Typewriter;
+}
+.katex .mathnormal {
+  font-family: KaTeX_Math;
+  font-style: italic;
+}
+.katex .mathit {
+  font-family: KaTeX_Main;
+  font-style: italic;
+}
+.katex .mathrm {
+  font-style: normal;
+}
+.katex .mathbf {
+  font-family: KaTeX_Main;
+  font-weight: bold;
+}
+.katex .boldsymbol {
+  font-family: KaTeX_Math;
+  font-weight: bold;
+  font-style: italic;
+}
+.katex .amsrm {
+  font-family: KaTeX_AMS;
+}
+.katex .mathbb,
+.katex .textbb {
+  font-family: KaTeX_AMS;
+}
+.katex .mathcal {
+  font-family: KaTeX_Caligraphic;
+}
+.katex .mathfrak,
+.katex .textfrak {
+  font-family: KaTeX_Fraktur;
+}
+.katex .mathtt {
+  font-family: KaTeX_Typewriter;
+}
+.katex .mathscr,
+.katex .textscr {
+  font-family: KaTeX_Script;
+}
+.katex .mathsf,
+.katex .textsf {
+  font-family: KaTeX_SansSerif;
+}
+.katex .mathboldsf,
+.katex .textboldsf {
+  font-family: KaTeX_SansSerif;
+  font-weight: bold;
+}
+.katex .mathitsf,
+.katex .textitsf {
+  font-family: KaTeX_SansSerif;
+  font-style: italic;
+}
+.katex .mainrm {
+  font-family: KaTeX_Main;
+  font-style: normal;
+}
+.katex .vlist-t {
+  display: inline-table;
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+.katex .vlist-r {
+  display: table-row;
+}
+.katex .vlist {
+  display: table-cell;
+  vertical-align: bottom;
+  position: relative;
+}
+.katex .vlist > span {
+  display: block;
+  height: 0;
+  position: relative;
+}
+.katex .vlist > span > span {
+  display: inline-block;
+}
+.katex .vlist > span > .pstrut {
+  overflow: hidden;
+  width: 0;
+}
+.katex .vlist-t2 {
+  margin-right: -2px;
+}
+.katex .vlist-s {
+  display: table-cell;
+  vertical-align: bottom;
+  font-size: 1px;
+  width: 2px;
+  min-width: 2px;
+}
+.katex .vbox {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: baseline;
+}
+.katex .hbox {
+  display: inline-flex;
+  flex-direction: row;
+  width: 100%;
+}
+.katex .thinbox {
+  display: inline-flex;
+  flex-direction: row;
+  width: 0;
+  max-width: 0;
+}
+.katex .msupsub {
+  text-align: left;
+}
+.katex .mfrac > span > span {
+  text-align: center;
+}
+.katex .mfrac .frac-line {
+  display: inline-block;
+  width: 100%;
+  border-bottom-style: solid;
+}
+.katex .mfrac .frac-line,
+.katex .overline .overline-line,
+.katex .underline .underline-line,
+.katex .hline,
+.katex .hdashline,
+.katex .rule {
+  min-height: 1px;
+}
+.katex .mspace {
+  display: inline-block;
+}
+.katex .llap,
+.katex .rlap,
+.katex .clap {
+  width: 0;
+  position: relative;
+}
+.katex .llap > .inner,
+.katex .rlap > .inner,
+.katex .clap > .inner {
+  position: absolute;
+}
+.katex .llap > .fix,
+.katex .rlap > .fix,
+.katex .clap > .fix {
+  display: inline-block;
+}
+.katex .llap > .inner {
+  right: 0;
+}
+.katex .rlap > .inner,
+.katex .clap > .inner {
+  left: 0;
+}
+.katex .clap > .inner > span {
+  margin-left: -50%;
+  margin-right: 50%;
+}
+.katex .rule {
+  display: inline-block;
+  border: solid 0;
+  position: relative;
+}
+.katex .overline .overline-line,
+.katex .underline .underline-line,
+.katex .hline {
+  display: inline-block;
+  width: 100%;
+  border-bottom-style: solid;
+}
+.katex .hdashline {
+  display: inline-block;
+  width: 100%;
+  border-bottom-style: dashed;
+}
+.katex .sqrt > .root {
+  /* These values are taken from the definition of `\r@@t`,
+             `\mkern 5mu` and `\mkern -10mu`. */
+  margin-left: 0.27777778em;
+  margin-right: -0.55555556em;
+}
+.katex .sizing.reset-size1.size1,
+.katex .fontsize-ensurer.reset-size1.size1 {
+  font-size: 1em;
+}
+.katex .sizing.reset-size1.size2,
+.katex .fontsize-ensurer.reset-size1.size2 {
+  font-size: 1.2em;
+}
+.katex .sizing.reset-size1.size3,
+.katex .fontsize-ensurer.reset-size1.size3 {
+  font-size: 1.4em;
+}
+.katex .sizing.reset-size1.size4,
+.katex .fontsize-ensurer.reset-size1.size4 {
+  font-size: 1.6em;
+}
+.katex .sizing.reset-size1.size5,
+.katex .fontsize-ensurer.reset-size1.size5 {
+  font-size: 1.8em;
+}
+.katex .sizing.reset-size1.size6,
+.katex .fontsize-ensurer.reset-size1.size6 {
+  font-size: 2em;
+}
+.katex .sizing.reset-size1.size7,
+.katex .fontsize-ensurer.reset-size1.size7 {
+  font-size: 2.4em;
+}
+.katex .sizing.reset-size1.size8,
+.katex .fontsize-ensurer.reset-size1.size8 {
+  font-size: 2.88em;
+}
+.katex .sizing.reset-size1.size9,
+.katex .fontsize-ensurer.reset-size1.size9 {
+  font-size: 3.456em;
+}
+.katex .sizing.reset-size1.size10,
+.katex .fontsize-ensurer.reset-size1.size10 {
+  font-size: 4.148em;
+}
+.katex .sizing.reset-size1.size11,
+.katex .fontsize-ensurer.reset-size1.size11 {
+  font-size: 4.976em;
+}
+.katex .sizing.reset-size2.size1,
+.katex .fontsize-ensurer.reset-size2.size1 {
+  font-size: 0.83333333em;
+}
+.katex .sizing.reset-size2.size2,
+.katex .fontsize-ensurer.reset-size2.size2 {
+  font-size: 1em;
+}
+.katex .sizing.reset-size2.size3,
+.katex .fontsize-ensurer.reset-size2.size3 {
+  font-size: 1.16666667em;
+}
+.katex .sizing.reset-size2.size4,
+.katex .fontsize-ensurer.reset-size2.size4 {
+  font-size: 1.33333333em;
+}
+.katex .sizing.reset-size2.size5,
+.katex .fontsize-ensurer.reset-size2.size5 {
+  font-size: 1.5em;
+}
+.katex .sizing.reset-size2.size6,
+.katex .fontsize-ensurer.reset-size2.size6 {
+  font-size: 1.66666667em;
+}
+.katex .sizing.reset-size2.size7,
+.katex .fontsize-ensurer.reset-size2.size7 {
+  font-size: 2em;
+}
+.katex .sizing.reset-size2.size8,
+.katex .fontsize-ensurer.reset-size2.size8 {
+  font-size: 2.4em;
+}
+.katex .sizing.reset-size2.size9,
+.katex .fontsize-ensurer.reset-size2.size9 {
+  font-size: 2.88em;
+}
+.katex .sizing.reset-size2.size10,
+.katex .fontsize-ensurer.reset-size2.size10 {
+  font-size: 3.45666667em;
+}
+.katex .sizing.reset-size2.size11,
+.katex .fontsize-ensurer.reset-size2.size11 {
+  font-size: 4.14666667em;
+}
+.katex .sizing.reset-size3.size1,
+.katex .fontsize-ensurer.reset-size3.size1 {
+  font-size: 0.71428571em;
+}
+.katex .sizing.reset-size3.size2,
+.katex .fontsize-ensurer.reset-size3.size2 {
+  font-size: 0.85714286em;
+}
+.katex .sizing.reset-size3.size3,
+.katex .fontsize-ensurer.reset-size3.size3 {
+  font-size: 1em;
+}
+.katex .sizing.reset-size3.size4,
+.katex .fontsize-ensurer.reset-size3.size4 {
+  font-size: 1.14285714em;
+}
+.katex .sizing.reset-size3.size5,
+.katex .fontsize-ensurer.reset-size3.size5 {
+  font-size: 1.28571429em;
+}
+.katex .sizing.reset-size3.size6,
+.katex .fontsize-ensurer.reset-size3.size6 {
+  font-size: 1.42857143em;
+}
+.katex .sizing.reset-size3.size7,
+.katex .fontsize-ensurer.reset-size3.size7 {
+  font-size: 1.71428571em;
+}
+.katex .sizing.reset-size3.size8,
+.katex .fontsize-ensurer.reset-size3.size8 {
+  font-size: 2.05714286em;
+}
+.katex .sizing.reset-size3.size9,
+.katex .fontsize-ensurer.reset-size3.size9 {
+  font-size: 2.46857143em;
+}
+.katex .sizing.reset-size3.size10,
+.katex .fontsize-ensurer.reset-size3.size10 {
+  font-size: 2.96285714em;
+}
+.katex .sizing.reset-size3.size11,
+.katex .fontsize-ensurer.reset-size3.size11 {
+  font-size: 3.55428571em;
+}
+.katex .sizing.reset-size4.size1,
+.katex .fontsize-ensurer.reset-size4.size1 {
+  font-size: 0.625em;
+}
+.katex .sizing.reset-size4.size2,
+.katex .fontsize-ensurer.reset-size4.size2 {
+  font-size: 0.75em;
+}
+.katex .sizing.reset-size4.size3,
+.katex .fontsize-ensurer.reset-size4.size3 {
+  font-size: 0.875em;
+}
+.katex .sizing.reset-size4.size4,
+.katex .fontsize-ensurer.reset-size4.size4 {
+  font-size: 1em;
+}
+.katex .sizing.reset-size4.size5,
+.katex .fontsize-ensurer.reset-size4.size5 {
+  font-size: 1.125em;
+}
+.katex .sizing.reset-size4.size6,
+.katex .fontsize-ensurer.reset-size4.size6 {
+  font-size: 1.25em;
+}
+.katex .sizing.reset-size4.size7,
+.katex .fontsize-ensurer.reset-size4.size7 {
+  font-size: 1.5em;
+}
+.katex .sizing.reset-size4.size8,
+.katex .fontsize-ensurer.reset-size4.size8 {
+  font-size: 1.8em;
+}
+.katex .sizing.reset-size4.size9,
+.katex .fontsize-ensurer.reset-size4.size9 {
+  font-size: 2.16em;
+}
+.katex .sizing.reset-size4.size10,
+.katex .fontsize-ensurer.reset-size4.size10 {
+  font-size: 2.5925em;
+}
+.katex .sizing.reset-size4.size11,
+.katex .fontsize-ensurer.reset-size4.size11 {
+  font-size: 3.11em;
+}
+.katex .sizing.reset-size5.size1,
+.katex .fontsize-ensurer.reset-size5.size1 {
+  font-size: 0.55555556em;
+}
+.katex .sizing.reset-size5.size2,
+.katex .fontsize-ensurer.reset-size5.size2 {
+  font-size: 0.66666667em;
+}
+.katex .sizing.reset-size5.size3,
+.katex .fontsize-ensurer.reset-size5.size3 {
+  font-size: 0.77777778em;
+}
+.katex .sizing.reset-size5.size4,
+.katex .fontsize-ensurer.reset-size5.size4 {
+  font-size: 0.88888889em;
+}
+.katex .sizing.reset-size5.size5,
+.katex .fontsize-ensurer.reset-size5.size5 {
+  font-size: 1em;
+}
+.katex .sizing.reset-size5.size6,
+.katex .fontsize-ensurer.reset-size5.size6 {
+  font-size: 1.11111111em;
+}
+.katex .sizing.reset-size5.size7,
+.katex .fontsize-ensurer.reset-size5.size7 {
+  font-size: 1.33333333em;
+}
+.katex .sizing.reset-size5.size8,
+.katex .fontsize-ensurer.reset-size5.size8 {
+  font-size: 1.6em;
+}
+.katex .sizing.reset-size5.size9,
+.katex .fontsize-ensurer.reset-size5.size9 {
+  font-size: 1.92em;
+}
+.katex .sizing.reset-size5.size10,
+.katex .fontsize-ensurer.reset-size5.size10 {
+  font-size: 2.30444444em;
+}
+.katex .sizing.reset-size5.size11,
+.katex .fontsize-ensurer.reset-size5.size11 {
+  font-size: 2.76444444em;
+}
+.katex .sizing.reset-size6.size1,
+.katex .fontsize-ensurer.reset-size6.size1 {
+  font-size: 0.5em;
+}
+.katex .sizing.reset-size6.size2,
+.katex .fontsize-ensurer.reset-size6.size2 {
+  font-size: 0.6em;
+}
+.katex .sizing.reset-size6.size3,
+.katex .fontsize-ensurer.reset-size6.size3 {
+  font-size: 0.7em;
+}
+.katex .sizing.reset-size6.size4,
+.katex .fontsize-ensurer.reset-size6.size4 {
+  font-size: 0.8em;
+}
+.katex .sizing.reset-size6.size5,
+.katex .fontsize-ensurer.reset-size6.size5 {
+  font-size: 0.9em;
+}
+.katex .sizing.reset-size6.size6,
+.katex .fontsize-ensurer.reset-size6.size6 {
+  font-size: 1em;
+}
+.katex .sizing.reset-size6.size7,
+.katex .fontsize-ensurer.reset-size6.size7 {
+  font-size: 1.2em;
+}
+.katex .sizing.reset-size6.size8,
+.katex .fontsize-ensurer.reset-size6.size8 {
+  font-size: 1.44em;
+}
+.katex .sizing.reset-size6.size9,
+.katex .fontsize-ensurer.reset-size6.size9 {
+  font-size: 1.728em;
+}
+.katex .sizing.reset-size6.size10,
+.katex .fontsize-ensurer.reset-size6.size10 {
+  font-size: 2.074em;
+}
+.katex .sizing.reset-size6.size11,
+.katex .fontsize-ensurer.reset-size6.size11 {
+  font-size: 2.488em;
+}
+.katex .sizing.reset-size7.size1,
+.katex .fontsize-ensurer.reset-size7.size1 {
+  font-size: 0.41666667em;
+}
+.katex .sizing.reset-size7.size2,
+.katex .fontsize-ensurer.reset-size7.size2 {
+  font-size: 0.5em;
+}
+.katex .sizing.reset-size7.size3,
+.katex .fontsize-ensurer.reset-size7.size3 {
+  font-size: 0.58333333em;
+}
+.katex .sizing.reset-size7.size4,
+.katex .fontsize-ensurer.reset-size7.size4 {
+  font-size: 0.66666667em;
+}
+.katex .sizing.reset-size7.size5,
+.katex .fontsize-ensurer.reset-size7.size5 {
+  font-size: 0.75em;
+}
+.katex .sizing.reset-size7.size6,
+.katex .fontsize-ensurer.reset-size7.size6 {
+  font-size: 0.83333333em;
+}
+.katex .sizing.reset-size7.size7,
+.katex .fontsize-ensurer.reset-size7.size7 {
+  font-size: 1em;
+}
+.katex .sizing.reset-size7.size8,
+.katex .fontsize-ensurer.reset-size7.size8 {
+  font-size: 1.2em;
+}
+.katex .sizing.reset-size7.size9,
+.katex .fontsize-ensurer.reset-size7.size9 {
+  font-size: 1.44em;
+}
+.katex .sizing.reset-size7.size10,
+.katex .fontsize-ensurer.reset-size7.size10 {
+  font-size: 1.72833333em;
+}
+.katex .sizing.reset-size7.size11,
+.katex .fontsize-ensurer.reset-size7.size11 {
+  font-size: 2.07333333em;
+}
+.katex .sizing.reset-size8.size1,
+.katex .fontsize-ensurer.reset-size8.size1 {
+  font-size: 0.34722222em;
+}
+.katex .sizing.reset-size8.size2,
+.katex .fontsize-ensurer.reset-size8.size2 {
+  font-size: 0.41666667em;
+}
+.katex .sizing.reset-size8.size3,
+.katex .fontsize-ensurer.reset-size8.size3 {
+  font-size: 0.48611111em;
+}
+.katex .sizing.reset-size8.size4,
+.katex .fontsize-ensurer.reset-size8.size4 {
+  font-size: 0.55555556em;
+}
+.katex .sizing.reset-size8.size5,
+.katex .fontsize-ensurer.reset-size8.size5 {
+  font-size: 0.625em;
+}
+.katex .sizing.reset-size8.size6,
+.katex .fontsize-ensurer.reset-size8.size6 {
+  font-size: 0.69444444em;
+}
+.katex .sizing.reset-size8.size7,
+.katex .fontsize-ensurer.reset-size8.size7 {
+  font-size: 0.83333333em;
+}
+.katex .sizing.reset-size8.size8,
+.katex .fontsize-ensurer.reset-size8.size8 {
+  font-size: 1em;
+}
+.katex .sizing.reset-size8.size9,
+.katex .fontsize-ensurer.reset-size8.size9 {
+  font-size: 1.2em;
+}
+.katex .sizing.reset-size8.size10,
+.katex .fontsize-ensurer.reset-size8.size10 {
+  font-size: 1.44027778em;
+}
+.katex .sizing.reset-size8.size11,
+.katex .fontsize-ensurer.reset-size8.size11 {
+  font-size: 1.72777778em;
+}
+.katex .sizing.reset-size9.size1,
+.katex .fontsize-ensurer.reset-size9.size1 {
+  font-size: 0.28935185em;
+}
+.katex .sizing.reset-size9.size2,
+.katex .fontsize-ensurer.reset-size9.size2 {
+  font-size: 0.34722222em;
+}
+.katex .sizing.reset-size9.size3,
+.katex .fontsize-ensurer.reset-size9.size3 {
+  font-size: 0.40509259em;
+}
+.katex .sizing.reset-size9.size4,
+.katex .fontsize-ensurer.reset-size9.size4 {
+  font-size: 0.46296296em;
+}
+.katex .sizing.reset-size9.size5,
+.katex .fontsize-ensurer.reset-size9.size5 {
+  font-size: 0.52083333em;
+}
+.katex .sizing.reset-size9.size6,
+.katex .fontsize-ensurer.reset-size9.size6 {
+  font-size: 0.5787037em;
+}
+.katex .sizing.reset-size9.size7,
+.katex .fontsize-ensurer.reset-size9.size7 {
+  font-size: 0.69444444em;
+}
+.katex .sizing.reset-size9.size8,
+.katex .fontsize-ensurer.reset-size9.size8 {
+  font-size: 0.83333333em;
+}
+.katex .sizing.reset-size9.size9,
+.katex .fontsize-ensurer.reset-size9.size9 {
+  font-size: 1em;
+}
+.katex .sizing.reset-size9.size10,
+.katex .fontsize-ensurer.reset-size9.size10 {
+  font-size: 1.20023148em;
+}
+.katex .sizing.reset-size9.size11,
+.katex .fontsize-ensurer.reset-size9.size11 {
+  font-size: 1.43981481em;
+}
+.katex .sizing.reset-size10.size1,
+.katex .fontsize-ensurer.reset-size10.size1 {
+  font-size: 0.24108004em;
+}
+.katex .sizing.reset-size10.size2,
+.katex .fontsize-ensurer.reset-size10.size2 {
+  font-size: 0.28929605em;
+}
+.katex .sizing.reset-size10.size3,
+.katex .fontsize-ensurer.reset-size10.size3 {
+  font-size: 0.33751205em;
+}
+.katex .sizing.reset-size10.size4,
+.katex .fontsize-ensurer.reset-size10.size4 {
+  font-size: 0.38572806em;
+}
+.katex .sizing.reset-size10.size5,
+.katex .fontsize-ensurer.reset-size10.size5 {
+  font-size: 0.43394407em;
+}
+.katex .sizing.reset-size10.size6,
+.katex .fontsize-ensurer.reset-size10.size6 {
+  font-size: 0.48216008em;
+}
+.katex .sizing.reset-size10.size7,
+.katex .fontsize-ensurer.reset-size10.size7 {
+  font-size: 0.57859209em;
+}
+.katex .sizing.reset-size10.size8,
+.katex .fontsize-ensurer.reset-size10.size8 {
+  font-size: 0.69431051em;
+}
+.katex .sizing.reset-size10.size9,
+.katex .fontsize-ensurer.reset-size10.size9 {
+  font-size: 0.83317261em;
+}
+.katex .sizing.reset-size10.size10,
+.katex .fontsize-ensurer.reset-size10.size10 {
+  font-size: 1em;
+}
+.katex .sizing.reset-size10.size11,
+.katex .fontsize-ensurer.reset-size10.size11 {
+  font-size: 1.19961427em;
+}
+.katex .sizing.reset-size11.size1,
+.katex .fontsize-ensurer.reset-size11.size1 {
+  font-size: 0.20096463em;
+}
+.katex .sizing.reset-size11.size2,
+.katex .fontsize-ensurer.reset-size11.size2 {
+  font-size: 0.24115756em;
+}
+.katex .sizing.reset-size11.size3,
+.katex .fontsize-ensurer.reset-size11.size3 {
+  font-size: 0.28135048em;
+}
+.katex .sizing.reset-size11.size4,
+.katex .fontsize-ensurer.reset-size11.size4 {
+  font-size: 0.32154341em;
+}
+.katex .sizing.reset-size11.size5,
+.katex .fontsize-ensurer.reset-size11.size5 {
+  font-size: 0.36173633em;
+}
+.katex .sizing.reset-size11.size6,
+.katex .fontsize-ensurer.reset-size11.size6 {
+  font-size: 0.40192926em;
+}
+.katex .sizing.reset-size11.size7,
+.katex .fontsize-ensurer.reset-size11.size7 {
+  font-size: 0.48231511em;
+}
+.katex .sizing.reset-size11.size8,
+.katex .fontsize-ensurer.reset-size11.size8 {
+  font-size: 0.57877814em;
+}
+.katex .sizing.reset-size11.size9,
+.katex .fontsize-ensurer.reset-size11.size9 {
+  font-size: 0.69453376em;
+}
+.katex .sizing.reset-size11.size10,
+.katex .fontsize-ensurer.reset-size11.size10 {
+  font-size: 0.83360129em;
+}
+.katex .sizing.reset-size11.size11,
+.katex .fontsize-ensurer.reset-size11.size11 {
+  font-size: 1em;
+}
+.katex .delimsizing.size1 {
+  font-family: KaTeX_Size1;
+}
+.katex .delimsizing.size2 {
+  font-family: KaTeX_Size2;
+}
+.katex .delimsizing.size3 {
+  font-family: KaTeX_Size3;
+}
+.katex .delimsizing.size4 {
+  font-family: KaTeX_Size4;
+}
+.katex .delimsizing.mult .delim-size1 > span {
+  font-family: KaTeX_Size1;
+}
+.katex .delimsizing.mult .delim-size4 > span {
+  font-family: KaTeX_Size4;
+}
+.katex .nulldelimiter {
+  display: inline-block;
+  width: 0.12em;
+}
+.katex .delimcenter {
+  position: relative;
+}
+.katex .op-symbol {
+  position: relative;
+}
+.katex .op-symbol.small-op {
+  font-family: KaTeX_Size1;
+}
+.katex .op-symbol.large-op {
+  font-family: KaTeX_Size2;
+}
+.katex .op-limits > .vlist-t {
+  text-align: center;
+}
+.katex .accent > .vlist-t {
+  text-align: center;
+}
+.katex .accent .accent-body {
+  position: relative;
+}
+.katex .accent .accent-body:not(.accent-full) {
+  width: 0;
+}
+.katex .overlay {
+  display: block;
+}
+.katex .mtable .vertical-separator {
+  display: inline-block;
+  min-width: 1px;
+}
+.katex .mtable .arraycolsep {
+  display: inline-block;
+}
+.katex .mtable .col-align-c > .vlist-t {
+  text-align: center;
+}
+.katex .mtable .col-align-l > .vlist-t {
+  text-align: left;
+}
+.katex .mtable .col-align-r > .vlist-t {
+  text-align: right;
+}
+.katex .svg-align {
+  text-align: left;
+}
+.katex svg {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: inherit;
+  fill: currentColor;
+  stroke: currentColor;
+  fill-rule: nonzero;
+  fill-opacity: 1;
+  stroke-width: 1;
+  stroke-linecap: butt;
+  stroke-linejoin: miter;
+  stroke-miterlimit: 4;
+  stroke-dasharray: none;
+  stroke-dashoffset: 0;
+  stroke-opacity: 1;
+}
+.katex svg path {
+  stroke: none;
+}
+.katex img {
+  border-style: none;
+  min-width: 0;
+  min-height: 0;
+  max-width: none;
+  max-height: none;
+}
+.katex .stretchy {
+  width: 100%;
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+.katex .stretchy::before,
+.katex .stretchy::after {
+  content: "";
+}
+.katex .hide-tail {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.katex .halfarrow-left {
+  position: absolute;
+  left: 0;
+  width: 50.2%;
+  overflow: hidden;
+}
+.katex .halfarrow-right {
+  position: absolute;
+  right: 0;
+  width: 50.2%;
+  overflow: hidden;
+}
+.katex .brace-left {
+  position: absolute;
+  left: 0;
+  width: 25.1%;
+  overflow: hidden;
+}
+.katex .brace-center {
+  position: absolute;
+  left: 25%;
+  width: 50%;
+  overflow: hidden;
+}
+.katex .brace-right {
+  position: absolute;
+  right: 0;
+  width: 25.1%;
+  overflow: hidden;
+}
+.katex .x-arrow-pad {
+  padding: 0 0.5em;
+}
+.katex .cd-arrow-pad {
+  padding: 0 0.55556em 0 0.27778em;
+}
+.katex .x-arrow,
+.katex .mover,
+.katex .munder {
+  text-align: center;
+}
+.katex .boxpad {
+  padding: 0 0.3em;
+}
+.katex .fbox,
+.katex .fcolorbox {
+  box-sizing: border-box;
+  border: 0.04em solid;
+}
+.katex .cancel-pad {
+  padding: 0 0.2em;
+}
+.katex .cancel-lap {
+  margin-left: -0.2em;
+  margin-right: -0.2em;
+}
+.katex .sout {
+  border-bottom-style: solid;
+  border-bottom-width: 0.08em;
+}
+.katex .angl {
+  box-sizing: border-box;
+  border-top: 0.049em solid;
+  border-right: 0.049em solid;
+  margin-right: 0.03889em;
+}
+.katex .anglpad {
+  padding: 0 0.03889em;
+}
+.katex .eqn-num::before {
+  counter-increment: katexEqnNo;
+  content: "(" counter(katexEqnNo) ")";
+}
+.katex .mml-eqn-num::before {
+  counter-increment: mmlEqnNo;
+  content: "(" counter(mmlEqnNo) ")";
+}
+.katex .mtr-glue {
+  width: 50%;
+}
+.katex .cd-vert-arrow {
+  display: inline-block;
+  position: relative;
+}
+.katex .cd-label-left {
+  display: inline-block;
+  position: absolute;
+  right: calc(50% + 0.3em);
+  text-align: left;
+}
+.katex .cd-label-right {
+  display: inline-block;
+  position: absolute;
+  left: calc(50% + 0.3em);
+  text-align: right;
+}
+.katex-display {
+  display: block;
+  margin: 1em 0;
+  text-align: center;
+}
+.katex-display > .katex {
+  display: block;
+  text-align: center;
+  white-space: nowrap;
+}
+.katex-display > .katex > .katex-html {
+  display: block;
+  position: relative;
+}
+.katex-display > .katex > .katex-html > .tag {
+  position: absolute;
+  right: 0;
+}
+.katex-display.leqno > .katex > .katex-html > .tag {
+  left: 0;
+  right: auto;
+}
+.katex-display.fleqn > .katex {
+  text-align: left;
+  padding-left: 2em;
+}
+body {
+  counter-reset: katexEqnNo mmlEqnNo;
+}
+
+
+/*# sourceURL=webpack://./node_modules/katex/dist/katex.css */
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL25vZGVfbW9kdWxlcy9rYXRleC9kaXN0L2thdGV4LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSxvRUFBb0U7QUFDcEU7RUFDRSx3QkFBd0I7RUFDeEIsZ0xBQThKO0VBQzlKLG1CQUFtQjtFQUNuQixrQkFBa0I7QUFDcEI7QUFDQTtFQUNFLGdDQUFnQztFQUNoQyxnTEFBNks7RUFDN0ssaUJBQWlCO0VBQ2pCLGtCQUFrQjtBQUNwQjtBQUNBO0VBQ0UsZ0NBQWdDO0VBQ2hDLGdMQUFzTDtFQUN0TCxtQkFBbUI7RUFDbkIsa0JBQWtCO0FBQ3BCO0FBQ0E7RUFDRSw0QkFBNEI7RUFDNUIsa0xBQWlLO0VBQ2pLLGlCQUFpQjtFQUNqQixrQkFBa0I7QUFDcEI7QUFDQTtFQUNFLDRCQUE0QjtFQUM1QixtTEFBMEs7RUFDMUssbUJBQW1CO0VBQ25CLGtCQUFrQjtBQUNwQjtBQUNBO0VBQ0UseUJBQXlCO0VBQ3pCLG1MQUF3SjtFQUN4SixpQkFBaUI7RUFDakIsa0JBQWtCO0FBQ3BCO0FBQ0E7RUFDRSx5QkFBeUI7RUFDekIsbUxBQTBLO0VBQzFLLGlCQUFpQjtFQUNqQixrQkFBa0I7QUFDcEI7QUFDQTtFQUNFLHlCQUF5QjtFQUN6QixtTEFBOEo7RUFDOUosbUJBQW1CO0VBQ25CLGtCQUFrQjtBQUNwQjtBQUNBO0VBQ0UseUJBQXlCO0VBQ3pCLG1MQUFpSztFQUNqSyxtQkFBbUI7RUFDbkIsa0JBQWtCO0FBQ3BCO0FBQ0E7RUFDRSx5QkFBeUI7RUFDekIsbUxBQTBLO0VBQzFLLGlCQUFpQjtFQUNqQixrQkFBa0I7QUFDcEI7QUFDQTtFQUNFLHlCQUF5QjtFQUN6QixtTEFBOEo7RUFDOUosbUJBQW1CO0VBQ25CLGtCQUFrQjtBQUNwQjtBQUNBO0VBQ0UsOEJBQThCO0VBQzlCLG1MQUF1SztFQUN2SyxpQkFBaUI7RUFDakIsa0JBQWtCO0FBQ3BCO0FBQ0E7RUFDRSw4QkFBOEI7RUFDOUIsbUxBQTZLO0VBQzdLLG1CQUFtQjtFQUNu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 */
+  </style>
+  <style>
+    .markdown-body {
+      font-family: -apple-system,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
+      box-sizing: border-box;
+      min-width: 200px;
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 45px;
+    }
+
+    @media not print {
+      .markdown-body {
+        padding: 45px;
+      }
+
+      @media (max-width: 767px) {
+        .markdown-body {
+          padding: 15px;
+        }
+      }
+    }
+
+    .hf-container {
+      color: #24292e;
+      line-height: 1.3;
+    }
+
+    .markdown-body .highlight pre,
+    .markdown-body pre {
+      white-space: pre-wrap;
+    }
+    .markdown-body table {
+      display: table;
+    }
+    .markdown-body img[data-align="center"] {
+      display: block;
+      margin: 0 auto;
+    }
+    .markdown-body img[data-align="right"] {
+      display: block;
+      margin: 0 0 0 auto;
+    }
+    .markdown-body li.task-list-item {
+      list-style-type: none;
+    }
+    .markdown-body li > [type=checkbox] {
+      margin: 0 0 0 -1.3em;
+    }
+    .markdown-body input[type="checkbox"] ~ p {
+      margin-top: 0;
+      display: inline-block;
+    }
+    .markdown-body ol ol,
+    .markdown-body ul ol {
+      list-style-type: decimal;
+    }
+    .markdown-body ol ol ol,
+    .markdown-body ol ul ol,
+    .markdown-body ul ol ol,
+    .markdown-body ul ul ol {
+      list-style-type: decimal;
+    }
+  </style>
+  <style>.markdown-body a.footnote-ref {
+  text-decoration: none;
+}
+
+.footnotes {
+  font-size: .85em;
+  opacity: .8;
+}
+
+.footnotes li[role="doc-endnote"] {
+  position: relative;
+}
+
+.footnotes .footnote-back {
+  position: absolute;
+  font-family: initial;
+  top: .2em;
+  right: 1em;
+  text-decoration: none;
+}
+
+.inline-math.invalid,
+.multiple-math.invalid {
+  color: rgb(255, 105, 105);
+}
+
+.toc-container {
+  width: 100%;
+}
+
+.toc-container .toc-title {
+  font-weight: 700;
+  font-size: 1.2em;
+  margin-bottom: 0;
+}
+
+.toc-container li,
+.toc-container ul,
+.toc-container ul li {
+  list-style: none !important;
+}
+
+.toc-container > ul {
+  padding-left: 0;
+}
+
+.toc-container ul li span {
+  display : flex;
+}
+
+.toc-container ul li span a {
+  color: inherit;
+  text-decoration: none;
+}
+.toc-container ul li span a:hover {
+  color: inherit;
+  text-decoration: none;
+}
+
+.toc-container ul li span span.dots {
+  flex: 1;
+  height: 0.65em;
+  margin: 0 10px;
+  border-bottom: 2px dotted black;
+}
+
+/*# sourceURL=webpack://./src/muya/lib/assets/styles/exportStyle.css */
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9tdXlhL2xpYi9hc3NldHMvc3R5bGVzL2V4cG9ydFN0eWxlLmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLHFCQUFxQjtBQUN2Qjs7QUFFQTtFQUNFLGdCQUFnQjtFQUNoQixXQUFXO0FBQ2I7O0FBRUE7RUFDRSxrQkFBa0I7QUFDcEI7O0FBRUE7RUFDRSxrQkFBa0I7RUFDbEIsb0JBQW9CO0VBQ3BCLFNBQVM7RUFDVCxVQUFVO0VBQ1YscUJBQXFCO0FBQ3ZCOztBQUVBOztFQUVFLHlCQUF5QjtBQUMzQjs7QUFFQTtFQUNFLFdBQVc7QUFDYjs7QUFFQTtFQUNFLGdCQUFnQjtFQUNoQixnQkFBZ0I7RUFDaEIsZ0JBQWdCO0FBQ2xCOztBQUVBOzs7RUFHRSwyQkFBMkI7QUFDN0I7O0FBRUE7RUFDRSxlQUFlO0FBQ2pCOztBQUVBO0VBQ0UsY0FBYztBQUNoQjs7QUFFQTtFQUNFLGNBQWM7RUFDZCxxQkFBcUI7QUFDdkI7QUFDQTtFQUNFLGNBQWM7RUFDZCxxQkFBcUI7QUFDdkI7O0FBRUE7RUFDRSxPQUFPO0VBQ1AsY0FBYztFQUNkLGNBQWM7RUFDZCwrQkFBK0I7QUFDakMiLCJzb3VyY2VSb290IjoiIn0= */</style>
+  <style>.markdown-body{}pre.front-matter{display:none!important;}</style>
+</head>
+<body>
+  <article class="markdown-body"><h1 class="atx" id="file-handling-and-collections-in-java">File Handling and Collections in Java</h1>
+<h3 class="atx" id="object-oriented-programming-with-java--week-7">Object-Oriented Programming with Java — Week 7</h3>
+<h2 class="atx" id="index">Index</h2>
+<ol>
+<li><a href="#1-learning-objectives">Learning Objectives</a> — what you should be able to do before the exam stops being scary</li>
+<li><a href="#2-streams-data-on-the-move">Streams: Data on the Move</a> — the pipes between your program and the outside world</li>
+<li><a href="#3-file-handling-operations">File Handling Operations</a> — the five things you can do to a file (besides losing it)</li>
+<li><a href="#4-byte-streams-and-character-streams">Byte Streams and Character Streams</a> — raw bytes versus readable text</li>
+<li><a href="#5-writing-text-files-with-filewriter">Writing Text Files with FileWriter</a> — teaching your program to remember</li>
+<li><a href="#6-reading-text-files-with-filereader">Reading Text Files with FileReader</a> — getting the memories back, one character at a time</li>
+<li><a href="#7-buffered-streams">Buffered Streams</a> — carry the whole bag, not one apple at a time</li>
+<li><a href="#8-reading-and-writing-binary-files">Reading and Writing Binary Files</a> — for data that is not text</li>
+<li><a href="#9-serialization">Serialization</a> — flat-pack an object now, rebuild it later</li>
+<li><a href="#10-the-transient-keyword">The transient Keyword</a> — secrets that should stay out of the file</li>
+<li><a href="#11-file-handling-summary-and-exercises">File Handling Summary and Exercises</a> — cheat sheet plus homework</li>
+<li><a href="#12-why-we-need-collections">Why We Need Collections</a> — arrays hit a wall at index 100</li>
+<li><a href="#13-java-collections-framework">Java Collections Framework</a> — the family tree of data structures</li>
+<li><a href="#14-the-four-main-interfaces">The Four Main Interfaces</a> — List, Set, Queue, Map, and who gets to have duplicates</li>
+<li><a href="#15-generics">Generics</a> — teaching a list to say no to footballs</li>
+<li><a href="#16-collections-and-generics-summary">Collections and Generics Summary</a> — which container for which job</li>
+<li><a href="#practice-questions">Practice Questions</a> — five problems, zero solutions, full sympathy</li>
+</ol>
+<hr>
+<h2 class="atx" id="1-learning-objectives">1. Learning Objectives</h2>
+<p>By the end of these notes you should be able to:</p>
+<p><strong>File handling and input/output</strong></p>
+<ul>
+<li>Explain how Java handles files using <strong>streams</strong>. In C, files are handled through library functions; in Java, they are handled through predefined (system-defined) classes grouped in packages.</li>
+<li>Read and write <strong>text files</strong> and <strong>binary files</strong>.</li>
+<li>Store and retrieve <strong>objects</strong> using serialization and deserialization.</li>
+</ul>
+<p><strong>Collections and generics</strong></p>
+<ul>
+<li>Understand the Java Collections Framework and its architecture.</li>
+<li>Select appropriate collection classes based on application requirements.</li>
+<li>Use the <code>List</code>, <code>Set</code>, <code>Queue</code>, and <code>Map</code> interfaces.</li>
+<li>Implement <code>ArrayList</code>, <code>LinkedList</code>, <code>HashSet</code>, <code>TreeSet</code>, and <code>HashMap</code>.</li>
+<li>Traverse collections using iterators.</li>
+<li>Understand the importance of generics in type safety and code reuse.</li>
+<li>Work with wrapper classes for primitive data handling.</li>
+</ul>
+<blockquote>
+<p><strong>Note for Review:</strong> The last three collection objectives (iterators, wrapper classes, and hands-on implementation of each class) build on the architecture and interfaces covered here. These notes lay the foundation: what each interface promises, which classes implement it, and why generics exist.</p>
+</blockquote>
+<p>brucks</p>
+<hr>
+<h1 class="atx" id="part-a--file-inputoutput-and-file-handling">Part A — File Input/Output and File Handling</h1>
+<h2 class="atx" id="2-streams-data-on-the-move">2. Streams: Data on the Move</h2>
+<h3 class="atx" id="the-problem">The problem</h3>
+<p>A program's variables live in memory and vanish when the program ends. Suppose a program calculates the marks of every student. Unless it saves them somewhere, all results are lost at exit. The program also needs ways to <em>receive</em> data (keyboard, file, network) and to <em>send</em> data (screen, file, network).</p>
+<h3 class="atx" id="the-idea-and-the-analogy">The idea and the analogy</h3>
+<p>Think of a <strong>water pipe</strong>. Water (data) flows in one direction through a pipe between a tank (your program) and the outside world. One pipe brings water in; a different pipe carries it out.</p>
+<blockquote>
+<p>The analogy breaks down in one place: real pipes carry only one kind of liquid, but Java has two kinds of pipes (byte and character), chosen by what the data is.</p>
+</blockquote>
+<h3 class="atx" id="the-formal-concept">The formal concept</h3>
+<p>^tg1^A <strong>stream</strong> represents a flow of data between a program and an external source.</p>
+<ul>
+<li><strong>Input stream:</strong> carries data <strong>into</strong> the program from an <strong>input source</strong> (keyboard, file, network, another program).</li>
+<li><strong>Output stream:</strong> carries data <strong>out of</strong> the program to an <strong>output sink</strong> (console, file, network, another program).^/tg1^ ^fg1^</li>
+</ul>
+<div class="plantuml"><img src="https://www.plantuml.com/plantuml/svg/~1U5vza45B0q4CXU_pAsAzjD1Il8W8BSMBA89Y3oBi9RkRReUTIPPinj9_BxDRfO9wcpTvoVjuczvGBSNWBZh59Y84F4eow2CPCZgJ3aoW53E9K7kbohomS_c1t0I2oGDtoM0hIIigUDhIiHJKUWux7sWEJ7OGRUVGgJIASJO1xA7N2YwVVBEtkv3ebtEcX76mUkvFrdSAGGxdvaVyG7WP3nTSxL5X1LVNYz8RJ5y9Qr9Omfjw8vqLN1wDO0Ktutm0tmv1i8JdPDzoPCp0f-Hx9UBpuD4Du_RWbcH_StxPFRS5JolXNd8t_pRakJsloENA5elrqCSjr6W8ko27N93BVtcMaTt0dLL6SWDNLdq--6DHahaDSPrY-0HRuxH9"></div>
+<p>^/fg1^</p>
+<h3 class="atx" id="internal-and-external-data-formats">Internal and external data formats</h3>
+<p>Data looks different inside the program than outside it.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Formats</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Internal</strong> (inside the Java program)</td>
+<td>Text as <code>char</code> (the lecture calls this UCS-2), and primitive values such as <code>int</code>, <code>float</code>, <code>double</code></td>
+</tr>
+<tr>
+<td><strong>External</strong> (in files, networks, etc.)</td>
+<td>Text in various <strong>encodings</strong> (US-ASCII, ISO-8859-1, UCS-2, UTF-8, UTF-16, UTF-16BE, UTF-16LE), or <strong>binary</strong> (raw bytes)</td>
+</tr>
+</tbody></table>
+<p>^tg2^An <strong>encoding</strong> is the agreed rule for converting characters into bytes (and back). Streams perform this conversion for you when the data is text.</p>
+<blockquote>
+<p><strong>Note for Review:</strong> The lecture labels Java's internal <code>char</code> as UCS-2. Modern Java actually uses UTF-16, which matches UCS-2 for ordinary characters. For these notes the practical point is the same: a <code>char</code> is 16 bits wide.</p>
+</blockquote>
+<p>The two sizes that matter:</p>
+<span class="katex-display"><span class="katex"><span class="katex-mathml"></span><span aria-hidden="true" class="katex-html"><span class="base"><span style="height:1.0585em;vertical-align:-0.1944em;" class="strut"></span><span class="mord text"><span class="mord">byte:&nbsp;</span></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span style="height:0.8641em;" class="vlist"><span style="top:-3.113em;margin-right:0.05em;"><span style="height:2.7em;" class="pstrut"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">8</span></span></span></span></span></span></span></span></span><span style="margin-right:0.2778em;" class="mspace"></span><span class="mrel">=</span><span style="margin-right:0.2778em;" class="mspace"></span></span><span class="base"><span style="height:0.8641em;" class="strut"></span><span class="mord">256</span><span class="mord text"><span class="mord">&nbsp;values</span></span><span style="margin-right:2em;" class="mspace"></span><span class="mord text"><span class="mord">char:&nbsp;</span></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span style="height:0.8641em;" class="vlist"><span style="top:-3.113em;margin-right:0.05em;"><span style="height:2.7em;" class="pstrut"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">16</span></span></span></span></span></span></span></span></span><span style="margin-right:0.2778em;" class="mspace"></span><span class="mrel">=</span><span style="margin-right:0.2778em;" class="mspace"></span></span><span class="base"><span style="height:0.6944em;" class="strut"></span><span class="mord">65536</span><span class="mord text"><span class="mord">&nbsp;values</span></span></span></span></span></span><p>^/tg2^ ^fg2^</p>
+<h3 class="atx" id="two-families-of-streams">Two families of streams</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Character streams</th>
+<th>Byte streams</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Unit of data</strong></td>
+<td><code>char</code> (16-bit)</td>
+<td><code>byte</code> (8-bit)</td>
+</tr>
+<tr>
+<td><strong>Base classes</strong></td>
+<td><code>Reader</code> / <code>Writer</code></td>
+<td><code>InputStream</code> / <code>OutputStream</code></td>
+</tr>
+<tr>
+<td><strong>Used for</strong></td>
+<td>Text data</td>
+<td>Binary data</td>
+</tr>
+</tbody></table>
+<p>^/fg2^</p>
+<p>brucks</p>
+<hr>
+<h2 class="atx" id="3-file-handling-operations">3. File Handling Operations</h2>
+<p>^tg3^<strong>File handling</strong> lets a program work with files that outlive the program. A program can:</p>
+<table>
+<thead>
+<tr>
+<th>Operation</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Create</strong></td>
+<td>Make a new file</td>
+</tr>
+<tr>
+<td><strong>Read</strong></td>
+<td>Fetch data from a file (read-only; nothing changes)</td>
+</tr>
+<tr>
+<td><strong>Write</strong></td>
+<td>Put data into a file</td>
+</tr>
+<tr>
+<td><strong>Modify</strong></td>
+<td>Change what is already stored</td>
+</tr>
+<tr>
+<td><strong>Delete</strong></td>
+<td>Remove the file</td>
+</tr>
+</tbody></table>
+<p>^/tg3^ Java provides all of this through the <strong><code>java.io</code> package</strong> ("io" = input/output).^fg3^</p>
+<div class="plantuml"><img src="https://www.plantuml.com/plantuml/svg/~1U5vrpZ4EmZ0C1T0zfp3jp1LG1KWiiC2064rZIYGxgLnNKM-F6cNemlGzFFtlRZ9KcuNTRbGS185nIRF196GOqLaQmHAyaraIy46fjv2YS-k1SM22vgI4HWtW13sqrp1yxSWpRSbJGnMvYeiInIsv4_hIeV_4BVdmMOgHQbx4dFAsvanCTSf3-q2MzTiUzli3P9TBgjEIugIaTnr5Fml_0E2_MK0"></div>
+<p>^/fg3^ The order above is the <em>typical</em> life of a file. The operations depend on each other (you read only after something exists), but a program may use them in any sensible order.</p>
+<h3 class="atx" id="importing-the-package">Importing the package</h3>
+<pre><code class="fenced-code-block language-java"><span class="token keyword">import</span> <span class="token namespace">java<span class="token punctuation">.</span>io<span class="token punctuation">.</span></span><span class="token operator">*</span><span class="token punctuation">;</span></code></pre>
+<p><code>import</code> makes classes from another package usable by their short names. <code>java.io</code> is the package, and <code>*</code> means "all classes in it". Without this line, writing <code>FileWriter</code> would be an error because the compiler would not know where that class lives.</p>
+<p>Three packages appear repeatedly in Java:</p>
+<table>
+<thead>
+<tr>
+<th>Package</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>java.io</code></td>
+<td>Input and output (files, streams)</td>
+</tr>
+<tr>
+<td><code>java.lang</code></td>
+<td>Core language classes (imported automatically)</td>
+</tr>
+<tr>
+<td><code>java.util</code></td>
+<td>Utilities, including the Collections Framework (Part B)</td>
+</tr>
+</tbody></table>
+<h3 class="atx" id="supplementary-creating-and-deleting-with-the-file-class">Supplementary: creating and deleting with the <code>File</code> class</h3>
+<p>The lecture lists create and delete as operations. The class that represents a file <em>on disk</em> is <code>File</code>:^tg4^</p>
+<pre><code class="fenced-code-block language-java"><span class="token keyword">import</span> <span class="token namespace">java<span class="token punctuation">.</span>io<span class="token punctuation">.</span></span><span class="token operator">*</span><span class="token punctuation">;</span>
+
+<span class="token keyword">class</span> <span class="token class-name">FileOperations</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span> args<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token keyword">throws</span> <span class="token class-name">IOException</span> <span class="token punctuation">{</span>
+        <span class="token class-name">File</span> file <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">File</span><span class="token punctuation">(</span><span class="token string">"data.txt"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>file<span class="token punctuation">.</span><span class="token function">createNewFile</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"File created"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+            <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"File already exists"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        file<span class="token punctuation">.</span><span class="token function">delete</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<p>^/tg4^ ^fg4^</p>
+<ul>
+<li><code>new File("data.txt")</code> only creates a <strong>Java object that stands for the path</strong>. It does not create anything on disk.</li>
+<li><code>createNewFile()</code> creates the actual file. It returns <code>true</code> if the file was created and <code>false</code> if it already existed. It can throw <code>IOException</code>, so <code>main</code> declares <code>throws IOException</code>.</li>
+<li><code>delete()</code> removes the file. ^/fg4^</li>
+</ul>
+<hr>
+<h2 class="atx" id="4-byte-streams-and-character-streams">4. Byte Streams and Character Streams</h2>
+<h3 class="atx" id="byte-streams">Byte streams</h3>
+<ul>
+<li>Used for <strong>binary data</strong>: data stored as raw bytes.</li>
+<li>Classes: <strong><code>FileInputStream</code></strong> (reads bytes) and <strong><code>FileOutputStream</code></strong> (writes bytes).</li>
+<li>Examples: images, videos, audio files.</li>
+</ul>
+<h3 class="atx" id="character-streams">Character streams</h3>
+<ul>
+<li>Used for <strong>text data</strong>.</li>
+<li>Classes: <strong><code>FileReader</code></strong> (reads characters) and <strong><code>FileWriter</code></strong> (writes characters).</li>
+<li>Examples: text files, source code files.</li>
+</ul>
+<h3 class="atx" id="why-have-two-kinds">Why have two kinds?</h3>
+<p>Text is made of characters, and a character must be converted to bytes (using an encoding) when stored. Character streams do that conversion automatically. An image has no characters to convert, so a byte stream passes the bytes through untouched.</p>
+<blockquote>
+<p><strong>Note for Review:</strong> Using <code>FileReader</code>/<code>FileWriter</code> to copy an image can corrupt it, because the stream tries to interpret raw bytes as text. Rule of thumb: <strong>text → character streams, everything else → byte streams</strong></p>
+</blockquote>
+<p>brucks</p>
+<hr>
+<h2 class="atx" id="5-writing-text-files-with-filewriter">5. Writing Text Files with FileWriter</h2>
+<p>^tg5^</p>
+<h3 class="atx" id="the-problem-1">The problem</h3>
+<p>A billing program calculates a message or a result and must save it so it is still there tomorrow. We need to send text from the program into a file.</p>
+<h3 class="atx" id="the-general-pattern">The general pattern</h3>
+<pre><code class="fenced-code-block language-java"><span class="token keyword">try</span> <span class="token punctuation">{</span>
+    <span class="token class-name">FileWriter</span> variableName <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">FileWriter</span><span class="token punctuation">(</span><span class="token string">"fileName"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    variableName<span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span><span class="token string">"text to store"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    variableName<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">IOException</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// handle the problem</span>
+<span class="token punctuation">}</span></code></pre>
+<p>^/tg5^ ^fg5^</p>
+<h3 class="atx" id="the-example">The example</h3>
+<pre><code class="fenced-code-block language-java"><span class="token keyword">import</span> <span class="token namespace">java<span class="token punctuation">.</span>io<span class="token punctuation">.</span></span><span class="token operator">*</span><span class="token punctuation">;</span>
+
+<span class="token keyword">class</span> <span class="token class-name">WriteFile</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span> args<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">try</span> <span class="token punctuation">{</span>
+            <span class="token class-name">FileWriter</span> fw <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">FileWriter</span><span class="token punctuation">(</span><span class="token string">"data.txt"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            fw<span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span><span class="token string">"Java File Handling"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            fw<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"File Written"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">IOException</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<p>Output:</p>
+<pre><code class="fenced-code-block">File Written</code></pre>
+<p>^/fg5^</p>
+<p>The file <code>data.txt</code> now contains <code>Java File Handling</code>.</p>
+<blockquote>
+<p>The lecture's printed output reads "File Writen". The program as written prints <code>File Written</code>.</p>
+</blockquote>
+<h3 class="atx" id="syntax-breakdown">Syntax breakdown</h3>
+<table>
+<thead>
+<tr>
+<th>Part</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>import java.io.*;</code></td>
+<td>Makes <code>FileWriter</code> and <code>IOException</code> available</td>
+</tr>
+<tr>
+<td><code>class WriteFile</code></td>
+<td>The class that holds <code>main</code>. By convention the class name matches the file name (<code>WriteFile.java</code>); this is <em>mandatory</em> only for a <code>public</code> class</td>
+</tr>
+<tr>
+<td><code>public static void main(String args[])</code></td>
+<td>The entry point where execution starts</td>
+</tr>
+<tr>
+<td><code>try { ... }</code></td>
+<td>Marks code that might throw an exception</td>
+</tr>
+<tr>
+<td><code>FileWriter fw</code></td>
+<td><strong>Declares</strong> a reference variable <code>fw</code> (any valid name works)</td>
+</tr>
+<tr>
+<td><code>new FileWriter("data.txt")</code></td>
+<td><strong>Creates</strong> a <code>FileWriter</code> object connected to <code>data.txt</code>, and <code>=</code> stores its reference in <code>fw</code>. If the file does not exist it is created; if it exists, its old contents are replaced</td>
+</tr>
+<tr>
+<td><code>fw.write("...")</code></td>
+<td>Sends the text to the file</td>
+</tr>
+<tr>
+<td><code>fw.close()</code></td>
+<td>Finishes writing and releases the file</td>
+</tr>
+<tr>
+<td><code>catch (IOException e)</code></td>
+<td>Runs only if an <code>IOException</code> occurs inside <code>try</code>; <code>e</code> holds the details</td>
+</tr>
+</tbody></table>
+<p>Declaration and creation can also be separated, exactly like any object:</p>
+<pre><code class="fenced-code-block language-java"><span class="token class-name">FileWriter</span> fw<span class="token punctuation">;</span>
+fw <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">FileWriter</span><span class="token punctuation">(</span><span class="token string">"data.txt"</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<p>The first statement declares a reference variable; the second creates the object (running the constructor) and assigns its reference to <code>fw</code>.</p>
+<p>brucks</p>
+<h3 class="atx" id="execution-trace">Execution trace</h3>
+<table>
+<thead>
+<tr>
+<th>Step</th>
+<th>Operation</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td><code>new FileWriter("data.txt")</code></td>
+<td><code>data.txt</code> is opened for writing; <code>fw</code> refers to the writer</td>
+</tr>
+<tr>
+<td>2</td>
+<td><code>fw.write("Java File Handling")</code></td>
+<td>The text is handed to the writer</td>
+</tr>
+<tr>
+<td>3</td>
+<td><code>fw.close()</code></td>
+<td>The text is flushed into the file and the file is released</td>
+</tr>
+<tr>
+<td>4</td>
+<td><code>System.out.println("File Written")</code></td>
+<td>Message appears on the console</td>
+</tr>
+<tr>
+<td>5</td>
+<td>End of <code>try</code></td>
+<td><code>catch</code> block is skipped (no exception occurred)</td>
+</tr>
+</tbody></table>
+<p>If step 1 fails (for example, the folder does not exist), Java jumps <strong>directly</strong> to the <code>catch</code> block and skips the remaining <code>try</code> statements.</p>
+<h3 class="atx" id="common-mistakes">Common mistakes</h3>
+<ul>
+<li><strong>Forgetting <code>close()</code>.</strong> Every file you open must be closed when you finish. Without it, written text may never reach the file.</li>
+<li><strong>Forgetting the exception handling.</strong> <code>FileWriter</code>'s constructor can throw <code>IOException</code>, a <em>checked</em> exception. Code that neither catches it nor declares <code>throws</code> does not compile.</li>
+<li><strong>Forgetting <code>import java.io.*;</code>.</strong> The compiler cannot find <code>FileWriter</code>.</li>
+</ul>
+<h3 class="atx" id="supplementary-finally-and-appending">Supplementary: <code>finally</code> and appending</h3>
+<p>^tg6^<code>finally</code> runs whether or not an exception occurred, which makes it the right place for cleanup. It is optional in simple programs, but it guarantees <code>close()</code> runs even if <code>write</code> fails:</p>
+<ul>
+<li><code>fw</code> is declared <strong>outside</strong> <code>try</code> so that <code>finally</code> can see it (a variable declared inside <code>try</code> is local to that block).</li>
+<li><code>fw != null</code> guards against the case where the constructor itself failed and <code>fw</code> was never assigned.</li>
+<li><code>close()</code> can also throw <code>IOException</code>, hence the inner <code>try-catch</code>.</li>
+</ul>
+<p>To <strong>add</strong> to the end of a file instead of replacing it, pass <code>true</code> as a second argument: <code>new FileWriter("data.txt", true)</code>.^ ^/tg6^ ^fg6^</p>
+<pre><code class="fenced-code-block language-java"><span class="token keyword">import</span> <span class="token namespace">java<span class="token punctuation">.</span>io<span class="token punctuation">.</span></span><span class="token operator">*</span><span class="token punctuation">;</span>
+
+<span class="token keyword">class</span> <span class="token class-name">WriteWithFinally</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span> args<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">FileWriter</span> fw <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+        <span class="token keyword">try</span> <span class="token punctuation">{</span>
+            fw <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">FileWriter</span><span class="token punctuation">(</span><span class="token string">"data.txt"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            fw<span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span><span class="token string">"Java File Handling"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">IOException</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">finally</span> <span class="token punctuation">{</span>
+            <span class="token keyword">try</span> <span class="token punctuation">{</span>
+                <span class="token keyword">if</span> <span class="token punctuation">(</span>fw <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                    fw<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+            <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">IOException</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<p>^/fg6^</p>
+<hr>
+<h2 class="atx" id="6-reading-text-files-with-filereader">6. Reading Text Files with FileReader</h2>
+<h3 class="atx" id="the-problem-2">The problem</h3>
+<p>^tg7^ The text saved in <code>data.txt</code> must come back into the program. <code>FileReader</code> fetches it <strong>character by character</strong>.</p>
+<h3 class="atx" id="the-example-1">The example</h3>
+<pre><code class="fenced-code-block language-java"><span class="token keyword">import</span> <span class="token namespace">java<span class="token punctuation">.</span>io<span class="token punctuation">.</span></span><span class="token operator">*</span><span class="token punctuation">;</span>
+
+<span class="token keyword">class</span> <span class="token class-name">ReadFile</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span> args<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">try</span> <span class="token punctuation">{</span>
+            <span class="token class-name">FileReader</span> fr <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">FileReader</span><span class="token punctuation">(</span><span class="token string">"data.txt"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">int</span> ch<span class="token punctuation">;</span>
+            <span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>ch <span class="token operator">=</span> fr<span class="token punctuation">.</span><span class="token function">read</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">!=</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token keyword">char</span><span class="token punctuation">)</span> ch<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            fr<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">IOException</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<p>Output (when <code>data.txt</code> holds the text written earlier):</p>
+<pre><code class="fenced-code-block">Java File Handling</code></pre>
+<p>^/tg7^ ^fg7^</p>
+<h3 class="atx" id="syntax-breakdown-1">Syntax breakdown</h3>
+<table>
+<thead>
+<tr>
+<th>Part</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>new FileReader("data.txt")</code></td>
+<td>Opens <code>data.txt</code> for reading and returns a reader object stored in <code>fr</code></td>
+</tr>
+<tr>
+<td><code>int ch;</code></td>
+<td>A variable that holds each value returned by <code>read()</code></td>
+</tr>
+<tr>
+<td><code>fr.read()</code></td>
+<td>Reads <strong>one</strong> character and returns its numeric (Unicode) value, or <code>-1</code> when the file has ended</td>
+</tr>
+<tr>
+<td><code>(ch = fr.read()) != -1</code></td>
+<td><strong>Assigns first, then compares.</strong> The parentheses force the assignment to happen before <code>!=</code> is evaluated</td>
+</tr>
+<tr>
+<td><code>(char) ch</code></td>
+<td>A <strong>cast</strong> that turns the number back into a character</td>
+</tr>
+<tr>
+<td><code>System.out.print</code></td>
+<td>Prints without a newline, so characters appear side by side</td>
+</tr>
+</tbody></table>
+<p>^/fg7^</p>
+<p>brucks</p>
+<h3 class="atx" id="why-int-and-not-char">Why <code>int</code> and not <code>char</code>?</h3>
+<p><code>read()</code> must be able to return <strong>every</strong> valid character <em>and</em> a special end-of-file signal. A <code>char</code> has no room for a "none left" value, so <code>read()</code> returns an <code>int</code>: <code>0</code> to <code>65535</code> for characters, <code>-1</code> for the end.</p>
+<p>^tg8^ </p>
+<h3 class="atx" id="execution-trace-1">Execution trace</h3>
+<table>
+<thead>
+<tr>
+<th>Iteration</th>
+<th><code>fr.read()</code> returns</th>
+<th><code>(char) ch</code> printed</th>
+<th>Loop continues?</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>74</td>
+<td><code>J</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td>2</td>
+<td>97</td>
+<td><code>a</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td>3</td>
+<td>118</td>
+<td><code>v</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td>4</td>
+<td>97</td>
+<td><code>a</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+</tr>
+<tr>
+<td>last</td>
+<td>-1</td>
+<td>(nothing)</td>
+<td><strong>no</strong>, loop ends</td>
+</tr>
+</tbody></table>
+<p>^/tg8^ </p>
+<h3 class="atx" id="common-mistakes-1">Common mistakes</h3>
+<ul>
+<li><strong>Declaring <code>char ch</code> instead of <code>int ch</code>.</strong> Without a cast the code does not compile (an <code>int</code> cannot be stored in a <code>char</code> without a cast). With a cast, <code>-1</code> becomes <code>65535</code>, the <code>!= -1</code> test is always true, and the loop <strong>never ends</strong>.</li>
+<li><strong>Forgetting <code>close()</code>.</strong></li>
+<li><strong>Wrong file name or location.</strong> If <code>data.txt</code> does not exist, the constructor throws <code>FileNotFoundException</code> (a subclass of <code>IOException</code>), so the <code>catch (IOException e)</code> block handles it.</li>
+</ul>
+<p>^fg8^</p>
+<h3 class="atx" id="filewriter-versus-filereader">FileWriter versus FileReader</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th><code>FileWriter</code></th>
+<th><code>FileReader</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Direction</td>
+<td>Program → file</td>
+<td>File → program</td>
+</tr>
+<tr>
+<td>Main method</td>
+<td><code>write(...)</code></td>
+<td><code>read()</code></td>
+</tr>
+<tr>
+<td>Effect on the file</td>
+<td>Creates or replaces its contents</td>
+<td>Leaves the file unchanged</td>
+</tr>
+<tr>
+<td>Stream family</td>
+<td>Character stream</td>
+<td>Character stream</td>
+</tr>
+</tbody></table>
+<p>^/fg8^</p>
+<hr>
+<h2 class="atx" id="7-buffered-streams">7. Buffered Streams</h2>
+<h3 class="atx" id="the-problem-3">The problem</h3>
+<p>Reading one character at a time means the program keeps asking the disk for tiny pieces of data. Disk access is slow, so this wastes time.</p>
+<h3 class="atx" id="the-idea-and-the-analogy-1">The idea and the analogy</h3>
+<p>Carrying groceries from the car to the kitchen <strong>one item per trip</strong> is slow. Using a bag to carry many items per trip is faster. A <strong>buffer</strong> is that bag: an area of memory that collects data so the disk is accessed less often.</p>
+<blockquote>
+<p>The analogy stops at the "bag size": a buffer has a fixed capacity and is filled and emptied automatically, so you never manage individual items yourself.</p>
+</blockquote>
+<h3 class="atx" id="the-formal-concept-1">The formal concept</h3>
+<p><strong>Buffered streams</strong> improve performance by reducing direct disk access. The classes are:</p>
+<ul>
+<li><strong><code>BufferedReader</code></strong> (instead of reading directly with <code>FileReader</code>)</li>
+<li><strong><code>BufferedWriter</code></strong> (instead of writing directly with <code>FileWriter</code>)</li>
+</ul>
+<h3 class="atx" id="the-example-bufferedreader">The example: BufferedReader</h3>
+<p>^tg9^</p>
+<pre><code class="fenced-code-block language-java"><span class="token keyword">import</span> <span class="token namespace">java<span class="token punctuation">.</span>io<span class="token punctuation">.</span></span><span class="token operator">*</span><span class="token punctuation">;</span>
+
+<span class="token keyword">class</span> <span class="token class-name">Demo</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span> args<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token keyword">throws</span> <span class="token class-name">IOException</span> <span class="token punctuation">{</span>
+        <span class="token class-name">BufferedReader</span> br <span class="token operator">=</span>
+            <span class="token keyword">new</span> <span class="token class-name">BufferedReader</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">FileReader</span><span class="token punctuation">(</span><span class="token string">"data.txt"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">String</span> line<span class="token punctuation">;</span>
+        <span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>line <span class="token operator">=</span> br<span class="token punctuation">.</span><span class="token function">readLine</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>line<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        br<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<p>Output (for a file containing <code>Java File Handling</code>):</p>
+<pre><code class="fenced-code-block">Java File Handling</code></pre>
+<p>^/tg9^ ^fg9^</p>
+<h3 class="atx" id="syntax-breakdown-2">Syntax breakdown</h3>
+<table>
+<thead>
+<tr>
+<th>Part</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>new BufferedReader(new FileReader("data.txt"))</code></td>
+<td><strong>Wrapping.</strong> The inner <code>FileReader</code> opens the file; the outer <code>BufferedReader</code> adds a buffer on top of it</td>
+</tr>
+<tr>
+<td><code>String line;</code></td>
+<td>Holds one full line of text</td>
+</tr>
+<tr>
+<td><code>br.readLine()</code></td>
+<td>Reads an entire line (without the line-ending characters) and returns it as a <code>String</code></td>
+</tr>
+<tr>
+<td><code>!= null</code></td>
+<td><code>readLine()</code> returns <code>null</code> when there are no more lines</td>
+</tr>
+<tr>
+<td><code>System.out.println(line)</code></td>
+<td>Prints the line and moves to the next one</td>
+</tr>
+</tbody></table>
+<p>^/fg9^ ^tg10^</p>
+<h3 class="atx" id="read-versus-readline"><code>read()</code> versus <code>readLine()</code></h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th><code>read()</code> (FileReader)</th>
+<th><code>readLine()</code> (BufferedReader)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Returns</td>
+<td><code>int</code> (one character)</td>
+<td><code>String</code> (one line)</td>
+</tr>
+<tr>
+<td>End of file signalled by</td>
+<td><code>-1</code></td>
+<td><code>null</code></td>
+</tr>
+<tr>
+<td>Loop condition</td>
+<td><code>!= -1</code></td>
+<td><code>!= null</code></td>
+</tr>
+</tbody></table>
+<p>^/tg10^ ^fg10^</p>
+<h3 class="atx" id="try-catch-versus-throws"><code>try-catch</code> versus <code>throws</code></h3>
+<p>This program uses <code>throws IOException</code> on <code>main</code> instead of a <code>try-catch</code> block.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th><code>try-catch</code></th>
+<th><code>throws IOException</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Who handles the problem</td>
+<td>The method itself</td>
+<td>The caller (for <code>main</code>, the JVM)</td>
+</tr>
+<tr>
+<td>If an <code>IOException</code> happens</td>
+<td>The <code>catch</code> block runs and the program can continue</td>
+<td>The program stops and reports the exception</td>
+</tr>
+<tr>
+<td>Code size</td>
+<td>Longer</td>
+<td>Shorter</td>
+</tr>
+</tbody></table>
+<p>^/fg10^</p>
+<p>brucks</p>
+<h3 class="atx" id="supplementary-bufferedwriter">Supplementary: BufferedWriter</h3>
+<pre><code class="fenced-code-block language-java"><span class="token keyword">import</span> <span class="token namespace">java<span class="token punctuation">.</span>io<span class="token punctuation">.</span></span><span class="token operator">*</span><span class="token punctuation">;</span>
+
+<span class="token keyword">class</span> <span class="token class-name">BufferedWrite</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span> args<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token keyword">throws</span> <span class="token class-name">IOException</span> <span class="token punctuation">{</span>
+        <span class="token class-name">BufferedWriter</span> bw <span class="token operator">=</span>
+            <span class="token keyword">new</span> <span class="token class-name">BufferedWriter</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">FileWriter</span><span class="token punctuation">(</span><span class="token string">"data.txt"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        bw<span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span><span class="token string">"Java File Handling"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        bw<span class="token punctuation">.</span><span class="token function">newLine</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        bw<span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span><span class="token string">"Buffered streams"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        bw<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<p><code>newLine()</code> writes a line separator appropriate to the operating system. <code>close()</code> also empties the buffer into the file.</p>
+<hr>
+<h2 class="atx" id="8-reading-and-writing-binary-files">8. Reading and Writing Binary Files</h2>
+<h3 class="atx" id="the-problem-4">The problem</h3>
+<p>Not all data is text. Images, videos, and audio files are sequences of <strong>bytes</strong>, not characters. We need streams that move bytes without interpreting them.</p>
+<h3 class="atx" id="the-formal-concept-2">The formal concept</h3>
+<p><strong>Binary files store data in byte format.</strong> The classes are:</p>
+<ul>
+<li><strong><code>FileOutputStream</code></strong> for writing</li>
+<li><strong><code>FileInputStream</code></strong> for reading</li>
+</ul>
+<h3 class="atx" id="writing-binary-data">Writing binary data</h3>
+<p>^fg11^</p>
+<pre><code class="fenced-code-block language-java"><span class="token keyword">import</span> <span class="token namespace">java<span class="token punctuation">.</span>io<span class="token punctuation">.</span></span><span class="token operator">*</span><span class="token punctuation">;</span>
+
+<span class="token keyword">class</span> <span class="token class-name">BinaryWrite</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span> args<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token keyword">throws</span> <span class="token class-name">IOException</span> <span class="token punctuation">{</span>
+        <span class="token class-name">FileOutputStream</span> fos <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">FileOutputStream</span><span class="token punctuation">(</span><span class="token string">"data.dat"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">String</span> text <span class="token operator">=</span> <span class="token string">"Java"</span><span class="token punctuation">;</span>
+        <span class="token keyword">byte</span> b<span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token operator">=</span> text<span class="token punctuation">.</span><span class="token function">getBytes</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        fos<span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span>b<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        fos<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<p>^/fg11^ ^tg11^</p>
+<table>
+<thead>
+<tr>
+<th>Part</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>throws IOException</code></td>
+<td>Declares that this method may throw <code>IOException</code> instead of catching it</td>
+</tr>
+<tr>
+<td><code>new FileOutputStream("data.dat")</code></td>
+<td>Opens (or creates) the file <code>data.dat</code> for writing bytes</td>
+</tr>
+<tr>
+<td><code>text.getBytes()</code></td>
+<td>Converts the <code>String</code> into an <strong>array of bytes</strong></td>
+</tr>
+<tr>
+<td><code>byte b[]</code></td>
+<td>An array variable that holds those bytes</td>
+</tr>
+<tr>
+<td><code>fos.write(b)</code></td>
+<td>Writes the whole byte array to the file</td>
+</tr>
+<tr>
+<td><code>fos.close()</code></td>
+<td>Releases the file</td>
+</tr>
+</tbody></table>
+<p>The four characters become four bytes:</p>
+<table>
+<thead>
+<tr>
+<th>Character</th>
+<th><code>J</code></th>
+<th><code>a</code></th>
+<th><code>v</code></th>
+<th><code>a</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Byte value</td>
+<td>74</td>
+<td>97</td>
+<td>118</td>
+<td>97</td>
+</tr>
+<tr>
+<td>Binary</td>
+<td>01001010</td>
+<td>01100001</td>
+<td>01110110</td>
+<td>01100001</td>
+</tr>
+</tbody></table>
+<p>^/tg11^</p>
+<h3 class="atx" id="reading-binary-data">Reading binary data</h3>
+<p>^tg12^</p>
+<pre><code class="fenced-code-block language-java"><span class="token keyword">import</span> <span class="token namespace">java<span class="token punctuation">.</span>io<span class="token punctuation">.</span></span><span class="token operator">*</span><span class="token punctuation">;</span>
+
+<span class="token keyword">class</span> <span class="token class-name">BinaryRead</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span> args<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token keyword">throws</span> <span class="token class-name">IOException</span> <span class="token punctuation">{</span>
+        <span class="token class-name">FileInputStream</span> fis <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">FileInputStream</span><span class="token punctuation">(</span><span class="token string">"data.dat"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">int</span> i<span class="token punctuation">;</span>
+        <span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>i <span class="token operator">=</span> fis<span class="token punctuation">.</span><span class="token function">read</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">!=</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token keyword">char</span><span class="token punctuation">)</span> i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        fis<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<p>^/tg12^</p>
+<p>Output:</p>
+<pre><code class="fenced-code-block">Java</code></pre>
+<p>^fg12^<code>fis.read()</code> returns one <strong>byte</strong> as an <code>int</code> from <code>0</code> to <code>255</code>, or <code>-1</code> at the end of the file. The loop is the same pattern as <code>FileReader</code>, but here the values are raw bytes.</p>
+<blockquote>
+<p><strong>Note for Review:</strong> The lecture's printed output reads <code>JAVA</code>, but the file contains <code>Java</code> (written by <code>BinaryWrite</code>), so the program prints <code>Java</code>. <code>JAVA</code> would appear only if the stored text were uppercase.</p>
+</blockquote>
+<blockquote>
+<p><strong>Note for Review:</strong> Casting each byte with <code>(char)</code> reproduces the text only for single-byte characters such as ASCII. Characters that need several bytes would be printed incorrectly byte by byte. That is a good reason to use character streams for text.</p>
+</blockquote>
+<p>^/fg12^</p>
+<p>brucks</p>
+<h3 class="atx" id="text-files-versus-binary-files">Text files versus binary files</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Text file</th>
+<th>Binary file</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Classes</td>
+<td><code>FileReader</code>, <code>FileWriter</code></td>
+<td><code>FileInputStream</code>, <code>FileOutputStream</code></td>
+</tr>
+<tr>
+<td>Data unit</td>
+<td>Characters</td>
+<td>Bytes</td>
+</tr>
+<tr>
+<td>Typical contents</td>
+<td><code>.txt</code>, source code</td>
+<td>Images, video, audio</td>
+</tr>
+<tr>
+<td><code>read()</code> returns</td>
+<td>Character value, <code>-1</code> at end</td>
+<td>Byte value (0–255), <code>-1</code> at end</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 class="atx" id="9-serialization">9. Serialization</h2>
+<h3 class="atx" id="the-problem-5">The problem</h3>
+<p>A <code>Student</code> object has an <code>id</code> and a <code>name</code>. Writing each field to a file separately, and rebuilding the object by hand when reading it back, is tedious and error-prone. We want to save the <strong>whole object</strong> in one step. ^tg13^</p>
+<h3 class="atx" id="the-idea-and-the-analogy-2">The idea and the analogy</h3>
+<p>Flat-pack furniture is taken apart into pieces, stored or shipped in a box, and later assembled again. <strong>Serialization</strong> takes an object apart into a sequence of bytes. <strong>Deserialization</strong> assembles it again.</p>
+<blockquote>
+<p>The analogy has one important limit: assembling creates a <strong>new, separate object</strong> with the same data. It is a copy, not the original object.</p>
+</blockquote>
+<h3 class="atx" id="the-formal-concept-3">The formal concept</h3>
+<p><strong>Serialization</strong> is the process of converting an object into a byte stream so that it can be:</p>
+<ul>
+<li>stored in a file,</li>
+<li>sent over a network,</li>
+<li>reconstructed later.</li>
+</ul>
+<p>The reverse process is <strong>deserialization</strong>.</p>
+<h3 class="atx" id="the-serializable-interface">The Serializable interface</h3>
+<p>Java provides <code>java.io.Serializable</code>. It is a <strong>marker interface</strong>: it has <strong>no methods</strong>. Implementing it simply tags the class, telling Java "objects of this class may be serialized." ^/tg13^  ^fg13^</p>
+<div class="plantuml"><img src="https://www.plantuml.com/plantuml/svg/~1U5vza4rh0a4CXk_pArAzMAYbUXGiqaDBeI3KKs4lqOaQEpDPPZA8_VLbTXVTjjXRlfuaxxj8Yb6pT-QcZhZp20vFaXMI9yM0HgK65LYBgdYm76cZBC6O4c3OEOB1IhEbe23h0ssq2YEsC8V9m-GE0dg2ERpZFhlR0M0gGp1yuzrUdroc_ffbWo-prbbN6Wbz5OwHbTh6gECbTVm7EIV7_ePdTjJdcuFRVu3KVdwVA5PXj3uf9P00bjDdUstBZc2uGkSb_Bxq6iwFThFNFsibz8WgH4BxKnbVv_zO72cfHBAmaVfqTdRQMVCIYO8nnUln-1544imWKMHq_4McvALUh9b18zkKkAcn8zF8RhDajjnsX2_J9MvgwyCKPc3fidn1mMRllW7R2j01"></div>
+<p>^/fg13^</p>
+<h3 class="atx" id="creating-a-serializable-class">Creating a serializable class</h3>
+<p>^fg14^</p>
+<pre><code class="fenced-code-block language-java"><span class="token keyword">import</span> <span class="token namespace">java<span class="token punctuation">.</span>io<span class="token punctuation">.</span></span><span class="token operator">*</span><span class="token punctuation">;</span>
+
+<span class="token keyword">class</span> <span class="token class-name">Student</span> <span class="token keyword">implements</span> <span class="token class-name">Serializable</span> <span class="token punctuation">{</span>
+    <span class="token keyword">int</span> id<span class="token punctuation">;</span>
+    <span class="token class-name">String</span> name<span class="token punctuation">;</span>
+
+    <span class="token class-name">Student</span><span class="token punctuation">(</span><span class="token keyword">int</span> id<span class="token punctuation">,</span> <span class="token class-name">String</span> name<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>id <span class="token operator">=</span> id<span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> name<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<p>^/fg14^  ^tg14^</p>
+<table>
+<thead>
+<tr>
+<th>Part</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>implements Serializable</code></td>
+<td>The class <strong>implements an interface</strong>. (<code>extends</code> is for inheriting from a class; <code>implements</code> is for interfaces.) Because the interface has no methods, nothing else must be written</td>
+</tr>
+<tr>
+<td><code>int id; String name;</code></td>
+<td><strong>Fields</strong>: the state stored in each object</td>
+</tr>
+<tr>
+<td><code>Student(int id, String name)</code></td>
+<td>A <strong>constructor</strong>: same name as the class, <strong>no return type</strong>, runs when <code>new Student(...)</code> is executed. It takes two parameters</td>
+</tr>
+<tr>
+<td><code>this.id = id;</code></td>
+<td>Left side <code>this.id</code> is the <strong>field</strong>; right side <code>id</code> is the <strong>parameter</strong>. <code>this</code> removes the ambiguity when they share a name</td>
+</tr>
+</tbody></table>
+<p><code>import java.io.*;</code> already covers <code>Serializable</code>, so no extra import is needed. ^/tg14^</p>
+<p>brucks</p>
+<h3 class="atx" id="writing-an-object-to-a-file">Writing an object to a file</h3>
+<p>^tg15^</p>
+<pre><code class="fenced-code-block language-java"><span class="token keyword">class</span> <span class="token class-name">SerializeDemo</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span> args<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token keyword">throws</span> <span class="token class-name">Exception</span> <span class="token punctuation">{</span>
+        <span class="token class-name">Student</span> s <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Student</span><span class="token punctuation">(</span><span class="token number">101</span><span class="token punctuation">,</span> <span class="token string">"Rahul"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token class-name">FileOutputStream</span> fos <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">FileOutputStream</span><span class="token punctuation">(</span><span class="token string">"student.ser"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">ObjectOutputStream</span> out <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ObjectOutputStream</span><span class="token punctuation">(</span>fos<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        out<span class="token punctuation">.</span><span class="token function">writeObject</span><span class="token punctuation">(</span>s<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        out<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        fos<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Object Saved"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<p>(<code>import java.io.*;</code> is needed at the top of the file, as in the <code>Student</code> listing above.) ^/tg15^  ^fg15^</p>
+<table>
+<thead>
+<tr>
+<th>Part</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>new Student(101, "Rahul")</code></td>
+<td>Creates the object; the constructor sets <code>id</code> and <code>name</code>; <code>s</code> refers to it</td>
+</tr>
+<tr>
+<td><code>new FileOutputStream("student.ser")</code></td>
+<td>A byte stream connected to the file <code>student.ser</code> (<code>.ser</code> is the usual extension, not a rule)</td>
+</tr>
+<tr>
+<td><code>new ObjectOutputStream(fos)</code></td>
+<td><strong>Wraps</strong> the byte stream with a layer that knows how to turn an object into bytes</td>
+</tr>
+<tr>
+<td><code>out.writeObject(s)</code></td>
+<td>Serializes <code>s</code> and sends the bytes into the file</td>
+</tr>
+<tr>
+<td><code>out.close(); fos.close();</code></td>
+<td>Closes the streams, the outer one first</td>
+</tr>
+<tr>
+<td><code>throws Exception</code></td>
+<td>The common form used in this program so the exceptions need not be caught individually</td>
+</tr>
+</tbody></table>
+<p>^/fg15^</p>
+<p>Output:</p>
+<pre><code class="fenced-code-block">Object Saved</code></pre>
+<table>
+<thead>
+<tr>
+<th>Step</th>
+<th>Operation</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td><code>new Student(101, "Rahul")</code></td>
+<td>Object created with <code>id = 101</code>, <code>name = "Rahul"</code></td>
+</tr>
+<tr>
+<td>2</td>
+<td><code>new FileOutputStream("student.ser")</code></td>
+<td>File opened for writing bytes</td>
+</tr>
+<tr>
+<td>3</td>
+<td><code>new ObjectOutputStream(fos)</code></td>
+<td>Object-writing layer attached to the file stream</td>
+</tr>
+<tr>
+<td>4</td>
+<td><code>out.writeObject(s)</code></td>
+<td>Object converted to bytes and written</td>
+</tr>
+<tr>
+<td>5</td>
+<td><code>out.close()</code>, <code>fos.close()</code></td>
+<td>Streams closed</td>
+</tr>
+<tr>
+<td>6</td>
+<td><code>println("Object Saved")</code></td>
+<td>Message printed</td>
+</tr>
+</tbody></table>
+<h3 class="atx" id="reading-an-object-from-a-file">Reading an object from a file</h3>
+<p>^tg16^</p>
+<pre><code class="fenced-code-block language-java"><span class="token keyword">import</span> <span class="token namespace">java<span class="token punctuation">.</span>io<span class="token punctuation">.</span></span><span class="token operator">*</span><span class="token punctuation">;</span>
+
+<span class="token keyword">class</span> <span class="token class-name">DeserializeDemo</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span> args<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token keyword">throws</span> <span class="token class-name">Exception</span> <span class="token punctuation">{</span>
+        <span class="token class-name">ObjectInputStream</span> in <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ObjectInputStream</span><span class="token punctuation">(</span>
+            <span class="token keyword">new</span> <span class="token class-name">FileInputStream</span><span class="token punctuation">(</span><span class="token string">"student.ser"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token class-name">Student</span> s <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token class-name">Student</span><span class="token punctuation">)</span> in<span class="token punctuation">.</span><span class="token function">readObject</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>s<span class="token punctuation">.</span>id<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>s<span class="token punctuation">.</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        in<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<p>Output:</p>
+<pre><code class="fenced-code-block">101
+Rahul</code></pre>
+<p>^/tg16^  ^fg16^</p>
+<table>
+<thead>
+<tr>
+<th>Part</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>new ObjectInputStream(new FileInputStream("student.ser"))</code></td>
+<td>A byte stream from the file, wrapped by a layer that rebuilds objects</td>
+</tr>
+<tr>
+<td><code>in.readObject()</code></td>
+<td>Reads the bytes and reconstructs the object</td>
+</tr>
+<tr>
+<td><code>(Student)</code></td>
+<td>A <strong>cast</strong>. <code>readObject()</code> is declared to return <code>Object</code> (the compile-time type), while the object it actually returns is a <code>Student</code> (the runtime type). The cast tells the compiler to treat it as a <code>Student</code></td>
+</tr>
+<tr>
+<td><code>s.id</code>, <code>s.name</code></td>
+<td>The restored values</td>
+</tr>
+</tbody></table>
+<p>^/fg16^</p>
+<blockquote>
+<p><strong>Note for Review:</strong> <code>throws Exception</code> is used because reading an object can throw <code>IOException</code> <em>and</em> <code>ClassNotFoundException</code>. <code>Exception</code> is the parent of both, so one declaration covers them.</p>
+</blockquote>
+<blockquote>
+<p><strong>Note for Review:</strong> During deserialization the <code>Student</code> constructor is <strong>not</strong> run. The object is rebuilt directly from the stored bytes. Also, a class that does not implement <code>Serializable</code> cannot be written: <code>writeObject</code> throws <code>NotSerializableException</code>.</p>
+</blockquote>
+<p>brucks</p>
+<hr>
+<h2 class="atx" id="10-the-transient-keyword">10. The transient Keyword</h2>
+<h3 class="atx" id="the-problem-6">The problem</h3>
+<p>A <code>Student</code> object might hold a <code>password</code>. Saving it in a file is a security risk. We need a way to say "serialize everything <strong>except</strong> this field."</p>
+<h3 class="atx" id="the-formal-concept-4">The formal concept</h3>
+<p>The <strong><code>transient</code></strong> keyword prevents a variable from being serialized.</p>
+<pre><code class="fenced-code-block language-java"><span class="token keyword">class</span> <span class="token class-name">Student</span> <span class="token keyword">implements</span> <span class="token class-name">Serializable</span> <span class="token punctuation">{</span>
+    <span class="token keyword">int</span> id<span class="token punctuation">;</span>
+    <span class="token keyword">transient</span> <span class="token class-name">String</span> password<span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<p><code>password</code> will <strong>not</strong> be stored.</p>
+<h3 class="atx" id="syntax">Syntax</h3>
+<pre><code class="fenced-code-block language-java"><span class="token keyword">transient</span> dataType variableName<span class="token punctuation">;</span></code></pre>
+<p><code>transient</code> is a <strong>modifier</strong> placed before the type of the field.</p>
+<h3 class="atx" id="what-happens-on-reading-back">What happens on reading back</h3>
+<p>^tg17^ A transient field is not in the file, so after deserialization it receives its <strong>default value</strong>: <code>null</code> for object references such as <code>String</code>, <code>0</code> for numbers, <code>false</code> for <code>boolean</code>.</p>
+<p>Example variation (the same write and read programs as before, with this class and a constructor <code>Student(int id, String password)</code>):</p>
+<pre><code class="fenced-code-block language-java"><span class="token keyword">class</span> <span class="token class-name">Student</span> <span class="token keyword">implements</span> <span class="token class-name">Serializable</span> <span class="token punctuation">{</span>
+    <span class="token keyword">int</span> id<span class="token punctuation">;</span>
+    <span class="token keyword">transient</span> <span class="token class-name">String</span> password<span class="token punctuation">;</span>
+
+    <span class="token class-name">Student</span><span class="token punctuation">(</span><span class="token keyword">int</span> id<span class="token punctuation">,</span> <span class="token class-name">String</span> password<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>id <span class="token operator">=</span> id<span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>password <span class="token operator">=</span> password<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<p>^/tg17^  ^fg17 ^If <code>new Student(101, "secret123")</code> is written and then read back, printing the fields gives:</p>
+<pre><code class="fenced-code-block">101
+null</code></pre>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Before writing</th>
+<th>After reading back</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>id</code></td>
+<td>101</td>
+<td>101</td>
+</tr>
+<tr>
+<td><code>password</code> (transient)</td>
+<td><code>"secret123"</code></td>
+<td><code>null</code></td>
+</tr>
+</tbody></table>
+<p>^/fg17^</p>
+<hr>
+<h2 class="atx" id="11-file-handling-summary-and-exercises">11. File Handling Summary and Exercises</h2>
+<h3 class="atx" id="summary">Summary</h3>
+<ul>
+<li>Perform file operations using Java I/O streams.</li>
+<li>Read and write text and binary files.</li>
+<li>Serialize and deserialize Java objects.</li>
+</ul>
+<h3 class="atx" id="class-cheat-sheet">Class cheat sheet</h3>
+<table>
+<thead>
+<tr>
+<th>Kind</th>
+<th>Reads</th>
+<th>Writes</th>
+<th>Used for</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Character stream</td>
+<td><code>FileReader</code></td>
+<td><code>FileWriter</code></td>
+<td>Text</td>
+</tr>
+<tr>
+<td>Buffered character stream</td>
+<td><code>BufferedReader</code></td>
+<td><code>BufferedWriter</code></td>
+<td>Text, with fewer disk accesses</td>
+</tr>
+<tr>
+<td>Byte stream</td>
+<td><code>FileInputStream</code></td>
+<td><code>FileOutputStream</code></td>
+<td>Binary data</td>
+</tr>
+<tr>
+<td>Object stream</td>
+<td><code>ObjectInputStream</code></td>
+<td><code>ObjectOutputStream</code></td>
+<td>Whole objects (serialization)</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p><strong>Note for Review:</strong> Three habits appear in every program above: import <code>java.io.*</code>, handle or declare <code>IOException</code>, and <strong>close</strong> what you opened.</p>
+</blockquote>
+<h3 class="atx" id="exercises-assigned-in-the-lecture">Exercises assigned in the lecture</h3>
+<p>Work through the example programs first, then try these:</p>
+<ul>
+<li>Write a program to copy content from one text file to another.</li>
+<li>Create a program to store and retrieve student records using binary files.</li>
+<li>Develop a serialization program to save and restore employee objects.</li>
+<li>Demonstrate the use of the <code>finally</code> block for resource cleanup.</li>
+<li>Implement a file-based student management system using Java I/O.</li>
+</ul>
+<p>brucks</p>
+<hr>
+<h1 class="atx" id="part-b--collections-and-generics">Part B — Collections and Generics</h1>
+<h2 class="atx" id="12-why-we-need-collections">12. Why We Need Collections</h2>
+<h3 class="atx" id="the-problem-7">The problem</h3>
+<p>A college registration program must store student records, but nobody knows in advance how many students will register. Before the Collections Framework, the tool was the array:</p>
+<pre><code class="fenced-code-block language-java"><span class="token keyword">int</span> arr<span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token number">100</span><span class="token punctuation">]</span><span class="token punctuation">;</span></code></pre>
+<p>An array like this has three problems:</p>
+<table>
+<thead>
+<tr>
+<th>Problem</th>
+<th>What it means</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Fixed size</strong></td>
+<td>The size is set at creation. If 150 students register, 100 slots are not enough</td>
+</tr>
+<tr>
+<td><strong>One type only</strong></td>
+<td>This array stores only <code>int</code> values. It cannot hold objects of different types</td>
+</tr>
+<tr>
+<td><strong>No built-in searching or sorting methods</strong></td>
+<td>The array itself offers no ready-made operations for adding, removing, or searching</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p><strong>Note for Review:</strong> Arrays <em>can</em> hold objects (for example <code>String[]</code>) and the <code>java.util.Arrays</code> helper class offers some sorting and searching, so "cannot store different object types" refers to this typed array: each array is fixed to one element type. The central problem is that an array has a fixed size and no built-in data-structure behaviour.</p>
+</blockquote>
+<h3 class="atx" id="the-idea-and-the-analogy-3">The idea and the analogy</h3>
+<p>An array is a <strong>notebook with exactly 100 pages</strong>: when it is full, you cannot add a page. A collection is a <strong>ring binder</strong>: you add or remove pages freely.</p>
+<h3 class="atx" id="the-solution">The solution</h3>
+<p>Collections solve these problems by providing:</p>
+<ul>
+<li><strong>Dynamic size:</strong> they grow and shrink as needed.</li>
+<li><strong>Ready-made data structures:</strong> lists, sets, queues, and maps are already written.</li>
+<li><strong>Efficient operations:</strong> adding, removing, and searching are built in.</li>
+</ul>
+<hr>
+<h2 class="atx" id="13-java-collections-framework">13. Java Collections Framework</h2>
+<p>The <strong>Java Collections Framework (JCF)</strong> is a <strong>unified architecture for storing and manipulating groups of objects</strong>. It provides:</p>
+<ul>
+<li><strong>Interfaces:</strong> the <em>contracts</em> (which operations a kind of collection supports),</li>
+<li><strong>Implementation classes:</strong> the actual working code,</li>
+<li><strong>Algorithms:</strong> ready-made operations such as sorting and searching.</li>
+</ul>
+<p>It lives in the <strong><code>java.util</code></strong> package:</p>
+<pre><code class="fenced-code-block language-java"><span class="token keyword">import</span> <span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span><span class="token operator">*</span><span class="token punctuation">;</span></code></pre>
+<h3 class="atx" id="interface-versus-class">Interface versus class</h3>
+<p>An <strong>interface</strong> says <em>what</em> a collection can do. A <strong>class</strong> says <em>how</em> it does it. For example, <code>List</code> is an interface; <code>ArrayList</code> is a class that implements it.</p>
+<p>brucks</p>
+<h3 class="atx" id="reading-the-architecture-diagrams">Reading the architecture diagrams</h3>
+<ul>
+<li><strong>Green</strong> boxes are <strong>interfaces</strong>; <strong>orange</strong> boxes are <strong>classes</strong>.</li>
+<li>A <strong>solid</strong> arrow means <strong>extends</strong> (inheritance between interfaces, or between classes).</li>
+<li>A <strong>dotted</strong> arrow means <strong>implements</strong> (a class implementing an interface).</li>
+</ul>
+<h3 class="atx" id="the-collection-side">The Collection side</h3>
+<div class="plantuml"><img src="https://www.plantuml.com/plantuml/svg/~1U5vjaZ5Fmp0GXVVx5OUOQo4615A7GcW5KWTG4BkRNAbLEoxsPOZK7uzgcyHjFUQzyxrtdxBmB1ttHiFDmSaV8r7BmVQCtX3BJWBR0xB5ZMMs1blbg65bEzYfbf3CWGSqP3RaF83gcDnMDeJlJ4vkDE5jzRXyg9uogx9Qnnq5Swqy5-JFdlhIhffAqw_qMvwsZgdDtq2ZfVVux9mSOlHgjRnxkK_wMdLxQWl6DpLitSLqpRBPNsWVJbcdU4W7d6qFgQdhcV4c_IwqB9GfUr-EA7y18__vSJR32Jbaz8DrEkvA36slr9eOuXtXPMWEfzJmMV_31GZ0vaSX9h2PDa7Dn0WK4jUuy8Hp31G2prX213Ubn3gPckN4aa9WefTQ2u5nQ9J77oHC9wgmeAxjZVu38hK8k0"></div>
+<h3 class="atx" id="the-map-side-a-separate-hierarchy">The Map side (a separate hierarchy)</h3>
+<p><code>Map</code> does <strong>not</strong> extend <code>Collection</code>. It stores <strong>key-value pairs</strong>, so it forms its own hierarchy.</p>
+<div class="plantuml"><img src="https://www.plantuml.com/plantuml/svg/~1U5vjZx4Ama0CXlSyHSIv8WwYu22Aug2Jla3QYtfukIjtwL3muQMbQYkE-VxaIx9EIb4hSJ0g8zs4q54TAiKahEG9D9Ie0VEW6WIDZLoe3HxkrZ2ob5gZiEGS4u3rol5A1UE9IXnl5xlvTjcZvn2LJJ-3mb5AUA1qR_5-lvjkPXqzMlzWypzhg5Bk-6Vc4fdx9cYArNCoUU_uWe5-sDUQEvHb-BaRlX-qpcuRhDcRIjmBlYXioG"></div>
+<blockquote>
+<p><strong>Note for Review:</strong> The lecture's diagram simplifies two relationships. In real Java, <code>LinkedHashSet</code> extends <code>HashSet</code> and <code>LinkedHashMap</code> extends <code>HashMap</code>, so each is attached to its parent class rather than directly to the interface. The diagrams here follow the lecture's simplification.</p>
+</blockquote>
+<h3 class="atx" id="the-architecture-at-a-glance">The architecture at a glance</h3>
+<table>
+<thead>
+<tr>
+<th>Interface</th>
+<th>Key classes</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>Iterable</code> → <code>Collection</code></td>
+<td>The common root of all collections except <code>Map</code></td>
+</tr>
+<tr>
+<td><code>List</code></td>
+<td><code>ArrayList</code>, <code>LinkedList</code>, <code>Vector</code>, <code>Stack</code></td>
+</tr>
+<tr>
+<td><code>Set</code></td>
+<td><code>HashSet</code>, <code>LinkedHashSet</code>, <code>SortedSet</code> → <code>TreeSet</code></td>
+</tr>
+<tr>
+<td><code>Queue</code></td>
+<td><code>PriorityQueue</code>, <code>Deque</code> → <code>ArrayDeque</code>, <code>LinkedList</code></td>
+</tr>
+<tr>
+<td><code>Map</code></td>
+<td><code>HashMap</code>, <code>LinkedHashMap</code>, <code>Hashtable</code>, <code>SortedMap</code> → <code>TreeMap</code></td>
+</tr>
+</tbody></table>
+<p><code>LinkedList</code> appears under both <code>List</code> and <code>Queue</code>/<code>Deque</code> because it implements both.</p>
+<p>The simpler picture used earlier in the lecture shows the same idea in miniature: <code>Collection</code> splits into <code>Set</code> (with <code>HashSet</code>) and <code>List</code> (with <code>ArrayList</code> and <code>LinkedList</code>), while <code>Map</code> has <code>HashMap</code> and <code>TreeMap</code>.</p>
+<p>brucks</p>
+<hr>
+<h2 class="atx" id="14-the-four-main-interfaces">14. The Four Main Interfaces</h2>
+<p>Everything in the framework rests on four interfaces: <strong>List, Set, Queue, and Map</strong>.</p>
+<h3 class="atx" id="the-list-interface">The List interface</h3>
+<p>A list is like an <strong>attendance register</strong>: entries appear in the order written, the same value may appear twice, and you can ask for "entry number 3".</p>
+<p>A <code>List</code>:</p>
+<ul>
+<li><strong>maintains insertion order,</strong></li>
+<li><strong>allows duplicate elements,</strong></li>
+<li><strong>allows index-based access.</strong></li>
+</ul>
+<p>Examples: <code>ArrayList</code>, <code>LinkedList</code>, <code>Vector</code>, <code>Stack</code>.</p>
+<h3 class="atx" id="the-set-interface">The Set interface</h3>
+<p>A set is like the <strong>collection of registered roll numbers</strong>: every roll number must be unique.</p>
+<p>A <code>Set</code>:</p>
+<ul>
+<li><strong>does not allow duplicate elements,</strong></li>
+<li><strong>does not maintain insertion order</strong> (except <code>LinkedHashSet</code>),</li>
+<li>is useful for <strong>unique collections</strong>.</li>
+</ul>
+<p>Examples: <code>HashSet</code>, <code>TreeSet</code>.</p>
+<blockquote>
+<p><strong>Note for Review:</strong> <code>TreeSet</code> keeps its elements in <em>sorted</em> order, which is different from insertion order. <code>HashSet</code> makes no ordering promise at all.</p>
+</blockquote>
+<h3 class="atx" id="the-queue-interface">The Queue interface</h3>
+<p>A queue is the <strong>fee-payment counter</strong>: the first student to arrive is the first to be served.</p>
+<p>A <code>Queue</code> follows <strong>FIFO (First In First Out)</strong>.</p>
+<p>Examples: <code>PriorityQueue</code>, <code>LinkedList</code> (and the double-ended <code>Deque</code> family such as <code>ArrayDeque</code>).</p>
+<p>Used in:</p>
+<ul>
+<li><strong>Scheduling,</strong></li>
+<li><strong>Resource management.</strong></li>
+</ul>
+<blockquote>
+<p><strong>Note for Review:</strong> <code>PriorityQueue</code> serves elements by <strong>priority</strong>, not strictly by arrival. FIFO is the general rule of the interface; <code>PriorityQueue</code> is the special case where the "front" is the highest-priority element.</p>
+</blockquote>
+<h3 class="atx" id="the-map-interface">The Map interface</h3>
+<p>^tg18^ A map is like a <strong>register of roll numbers and names</strong>: you look up a student by roll number.</p>
+<p>A <code>Map</code> stores data as <strong>Key → Value</strong> pairs, written <code>(Key, Value)</code>:</p>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>A</td>
+</tr>
+<tr>
+<td>2</td>
+<td>B</td>
+</tr>
+<tr>
+<td>3</td>
+<td>C</td>
+</tr>
+</tbody></table>
+<p>^/tg18^  ^fg18^</p>
+<p>Properties:</p>
+<ul>
+<li><strong>Keys must be unique.</strong></li>
+<li><strong>Values can be duplicated.</strong></li>
+</ul>
+<p>Examples: <code>HashMap</code>, <code>TreeMap</code>.</p>
+<blockquote>
+<p><strong>Note for Review:</strong> Roll numbers (keys) must be unique, but two students may share the same name (values). <code>List</code>, <code>Set</code>, and <code>Queue</code> hold single values; only <code>Map</code> holds key-value pairs.</p>
+</blockquote>
+<p>^/fg18^</p>
+<h3 class="atx" id="comparison">Comparison</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Order</th>
+<th>Duplicates</th>
+<th>Accessed by</th>
+<th>Examples</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>List</strong></td>
+<td>Insertion order kept</td>
+<td>Allowed</td>
+<td>Index</td>
+<td><code>ArrayList</code>, <code>LinkedList</code>, <code>Vector</code>, <code>Stack</code></td>
+</tr>
+<tr>
+<td><strong>Set</strong></td>
+<td>Not kept (<code>LinkedHashSet</code> keeps it)</td>
+<td>Not allowed</td>
+<td>Membership</td>
+<td><code>HashSet</code>, <code>TreeSet</code></td>
+</tr>
+<tr>
+<td><strong>Queue</strong></td>
+<td>FIFO (or priority)</td>
+<td>Allowed</td>
+<td>Head of the queue</td>
+<td><code>PriorityQueue</code>, <code>LinkedList</code></td>
+</tr>
+<tr>
+<td><strong>Map</strong></td>
+<td>Depends on class</td>
+<td>Keys unique, values may repeat</td>
+<td>Key</td>
+<td><code>HashMap</code>, <code>TreeMap</code></td>
+</tr>
+</tbody></table>
+<p>brucks</p>
+<h3 class="atx" id="supplementary-declaration-syntax-preview">Supplementary: declaration syntax preview</h3>
+<pre><code class="fenced-code-block language-java"><span class="token keyword">import</span> <span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span><span class="token operator">*</span><span class="token punctuation">;</span>
+
+<span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">&gt;</span></span> names <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name">Set</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Integer</span><span class="token punctuation">&gt;</span></span> rollNumbers <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">HashSet</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Integer</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name">Queue</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">&gt;</span></span> feeCounter <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">LinkedList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name">Map</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Integer</span><span class="token punctuation">,</span> <span class="token class-name">String</span><span class="token punctuation">&gt;</span></span> students <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">HashMap</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Integer</span><span class="token punctuation">,</span> <span class="token class-name">String</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<p>Pattern: <code>InterfaceType&lt;ElementType&gt; variable = new ImplementationClass&lt;ElementType&gt;();</code></p>
+<ul>
+<li>The <strong>left side</strong> names the interface: what we want the collection to do.</li>
+<li>The <strong>right side</strong> names the class that does it, so changing from <code>ArrayList</code> to <code>LinkedList</code> changes only one word.</li>
+<li>The part in angle brackets is the <strong>generic type</strong>, explained next.</li>
+</ul>
+<hr>
+<h2 class="atx" id="15-generics">15. Generics</h2>
+<h3 class="atx" id="the-problem-8">The problem</h3>
+<p>Consider an <code>ArrayList</code> that is meant to hold only cars. Without any restriction it accepts <strong>anything</strong>: a car, a football, a scooter, a fish. Everything that goes in comes out as a plain <code>Object</code>, and the programmer must remember what each item really is.</p>
+<h3 class="atx" id="the-lectureand39s-picture">The lecture's picture</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Without generics</th>
+<th>With generics</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Going in</strong></td>
+<td>References to <code>Car</code>, <code>Football</code>, <code>Scooter</code>, <code>Fish</code> objects</td>
+<td>References to <strong>only</strong> <code>Car</code> objects</td>
+</tr>
+<tr>
+<td><strong>Coming out</strong></td>
+<td>References of type <code>Object</code></td>
+<td>References of type <code>Car</code></td>
+</tr>
+<tr>
+<td><strong>Declaration</strong></td>
+<td><code>ArrayList</code></td>
+<td><code>ArrayList&lt;Car&gt;</code></td>
+</tr>
+</tbody></table>
+<h3 class="atx" id="the-idea-and-the-analogy-4">The idea and the analogy</h3>
+<p>A generic collection is a <strong>labelled bin</strong>. A bin labelled "Cars" refuses a football at the door, and everything you pull out is guaranteed to be a car.</p>
+<h3 class="atx" id="without-generics">Without generics</h3>
+<pre><code class="fenced-code-block language-java"><span class="token keyword">import</span> <span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span><span class="token operator">*</span><span class="token punctuation">;</span>
+
+<span class="token keyword">class</span> <span class="token class-name">Car</span> <span class="token punctuation">{</span> <span class="token punctuation">}</span>
+<span class="token keyword">class</span> <span class="token class-name">Football</span> <span class="token punctuation">{</span> <span class="token punctuation">}</span>
+
+<span class="token keyword">class</span> <span class="token class-name">WithoutGenerics</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span> args<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">ArrayList</span> garage <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ArrayList</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        garage<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Car</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        garage<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Football</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token class-name">Car</span> first <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token class-name">Car</span><span class="token punctuation">)</span> garage<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">Car</span> second <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token class-name">Car</span><span class="token punctuation">)</span> garage<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<p>This <strong>compiles</strong> (with a warning about unchecked use), but the last line <strong>fails at runtime</strong> with a <code>ClassCastException</code>, because element <code>1</code> is a <code>Football</code>. The error is found only when the program runs.</p>
+<p>brucks</p>
+<h3 class="atx" id="with-generics">With generics</h3>
+<p>General syntax:</p>
+<pre><code class="fenced-code-block language-java"><span class="token class-name">ClassName</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Type</span><span class="token punctuation">&gt;</span></span> variable <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ClassName</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Type</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<pre><code class="fenced-code-block language-java"><span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Car</span><span class="token punctuation">&gt;</span></span> cars <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Car</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+cars<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Car</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+cars<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Football</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>   <span class="token comment">// INVALID: compile-time error</span>
+<span class="token class-name">Car</span> first <span class="token operator">=</span> cars<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token comment">// no cast needed</span></code></pre>
+<p>The invalid line is rejected <strong>before the program runs</strong>, because a <code>Football</code> is not a <code>Car</code>. And <code>get(0)</code> already returns a <code>Car</code>, so no cast is required.</p>
+<p>(<code>add(...)</code> places an element in the list; <code>get(index)</code> fetches the element at a position, using the index-based access that <code>List</code> provides.)</p>
+<h3 class="atx" id="what-generics-give-you">What generics give you</h3>
+<table>
+<thead>
+<tr>
+<th>Benefit</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Type safety</strong></td>
+<td>Wrong types are caught at compile time instead of crashing at runtime</td>
+</tr>
+<tr>
+<td><strong>No casting</strong></td>
+<td>Elements come out already typed</td>
+</tr>
+<tr>
+<td><strong>Code reuse</strong></td>
+<td>The same <code>ArrayList</code> class works for <code>Car</code>, <code>String</code>, <code>Student</code>, and so on, by changing the type in angle brackets</td>
+</tr>
+</tbody></table>
+<h3 class="atx" id="generics-and-primitive-types">Generics and primitive types</h3>
+<p>The type in angle brackets must be a <strong>class</strong>, not a primitive type:</p>
+<pre><code class="fenced-code-block language-java"><span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token keyword">int</span><span class="token punctuation">&gt;</span></span> marks <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token keyword">int</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>         <span class="token comment">// INVALID</span>
+<span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Integer</span><span class="token punctuation">&gt;</span></span> marks <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Integer</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// valid</span></code></pre>
+<p>Each primitive has a matching <strong>wrapper class</strong> (for example <code>int</code> ↔ <code>Integer</code>, <code>double</code> ↔ <code>Double</code>). Wrapper classes are how primitive data is handled inside collections, and they are one of the module's stated objectives.</p>
+<hr>
+<h2 class="atx" id="16-collections-and-generics-summary">16. Collections and Generics Summary</h2>
+<ul>
+<li>The Java Collections Framework is a <strong>unified architecture</strong> of interfaces, implementation classes, and algorithms, found in <strong><code>java.util</code></strong>.</li>
+<li>Collections give <strong>dynamic size</strong>, <strong>ready-made data structures</strong>, and <strong>efficient operations</strong>, which fixed-size arrays do not.</li>
+<li>The four main interfaces are <strong>List</strong> (ordered, duplicates, index), <strong>Set</strong> (unique), <strong>Queue</strong> (FIFO), and <strong>Map</strong> (key → value).</li>
+<li><strong>Generics</strong> make collections type-safe and reusable.</li>
+</ul>
+<p>brucks</p>
+<h3 class="atx" id="which-collection-for-which-job">Which collection for which job?</h3>
+<table>
+<thead>
+<tr>
+<th>If you need...</th>
+<th>Use</th>
+<th>Typical class</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Ordered items, duplicates allowed, access by position</td>
+<td><code>List</code></td>
+<td><code>ArrayList</code></td>
+</tr>
+<tr>
+<td>Only unique items</td>
+<td><code>Set</code></td>
+<td><code>HashSet</code> (or <code>TreeSet</code> for sorted)</td>
+</tr>
+<tr>
+<td>Items processed in arrival order (scheduling, resource management)</td>
+<td><code>Queue</code></td>
+<td><code>LinkedList</code>, <code>PriorityQueue</code></td>
+</tr>
+<tr>
+<td>Look up a value using a unique key</td>
+<td><code>Map</code></td>
+<td><code>HashMap</code> (or <code>TreeMap</code> for sorted keys)</td>
+</tr>
+</tbody></table>
+<h3 class="atx" id="package-map">Package map</h3>
+<table>
+<thead>
+<tr>
+<th>Package</th>
+<th>Used for</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>java.io</code></td>
+<td>Input and output</td>
+</tr>
+<tr>
+<td><code>java.lang</code></td>
+<td>Core language</td>
+</tr>
+<tr>
+<td><code>java.util</code></td>
+<td>Collections Framework</td>
+</tr>
+</tbody></table>
+<h3 class="atx" id="where-to-read-more">Where to read more</h3>
+<ul>
+<li><em>A Comprehensive Introduction to Object-Oriented Programming with Java</em></li>
+<li><em>Java: The Complete Reference</em></li>
+<li>NPTEL course material and open course material from universities; solve the exercises at the end of the relevant chapters.</li>
+</ul>
+<hr>
+<h2 class="atx" id="practice-questions">Practice Questions</h2>
+<ol>
+<li><p><strong>Find and fix the defects.</strong> The following program is meant to copy <code>source.txt</code> into <code>backup.txt</code>.</p>
+<pre><code class="fenced-code-block language-java"><span class="token keyword">import</span> <span class="token namespace">java<span class="token punctuation">.</span>io<span class="token punctuation">.</span></span><span class="token operator">*</span><span class="token punctuation">;</span>
+
+<span class="token keyword">class</span> <span class="token class-name">CopyFile</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span> args<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">FileReader</span> fr <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">FileReader</span><span class="token punctuation">(</span><span class="token string">"source.txt"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">FileWriter</span> fw <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">FileWriter</span><span class="token punctuation">(</span><span class="token string">"backup.txt"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">char</span> ch<span class="token punctuation">;</span>
+        <span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>ch <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">char</span><span class="token punctuation">)</span> fr<span class="token punctuation">.</span><span class="token function">read</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">!=</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            fw<span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span>ch<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<p>Identify every defect, classify each as a compile-time error, a runtime problem, or a logical problem, and explain what Java would do. Then write a corrected version that still copies the file character by character.</p>
+<p>brucks</p>
+</li>
+<li><p><strong>Trace the object state.</strong> Study this class and program.</p>
+<pre><code class="fenced-code-block language-java"><span class="token keyword">class</span> <span class="token class-name">Employee</span> <span class="token keyword">implements</span> <span class="token class-name">Serializable</span> <span class="token punctuation">{</span>
+    <span class="token keyword">int</span> empId<span class="token punctuation">;</span>
+    <span class="token class-name">String</span> name<span class="token punctuation">;</span>
+    <span class="token keyword">transient</span> <span class="token keyword">double</span> bonus<span class="token punctuation">;</span>
+    <span class="token keyword">transient</span> <span class="token class-name">String</span> pin<span class="token punctuation">;</span>
+
+    <span class="token class-name">Employee</span><span class="token punctuation">(</span><span class="token keyword">int</span> empId<span class="token punctuation">,</span> <span class="token class-name">String</span> name<span class="token punctuation">,</span> <span class="token keyword">double</span> bonus<span class="token punctuation">,</span> <span class="token class-name">String</span> pin<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>empId <span class="token operator">=</span> empId<span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> name<span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>bonus <span class="token operator">=</span> bonus<span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>pin <span class="token operator">=</span> pin<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<p>An <code>Employee</code> created as <code>new Employee(7, "Meera", 5000.0, "4321")</code> is written to <code>emp.ser</code> with <code>ObjectOutputStream</code> and then read back with <code>ObjectInputStream</code>. Predict the values of all four fields after reading, and explain why. Then explain what happens, and at which stage, if <code>implements Serializable</code> is removed from the class.</p>
+</li>
+<li><p><strong>Bytes in, bytes out.</strong> A program writes the text <code>"Hi!"</code> to <code>msg.dat</code> using <code>FileOutputStream</code> and <code>getBytes()</code>. A second program reads the file with <code>FileInputStream</code> and, for each byte read, prints the <code>int</code> value followed by the <code>(char)</code> cast on one line. Predict the exact output and the size of the file in bytes. Then explain why printing <code>(char)</code> for each byte could fail to reproduce the original text if the text contained a character that needs more than one byte, and which stream family you would use instead.</p>
+</li>
+<li><p><strong>Choose the right container.</strong> A college system needs: (a) enrolment numbers that can never be repeated; (b) students waiting at the fee counter, served in the order they arrive; (c) a way to find a student's name quickly from a roll number; (d) a list of exam marks where the same mark may occur many times and any mark can be fetched by its position. For each requirement, name the interface and one suitable implementation class, justify your choice from the properties of the interface, and write the generic declaration of the variable. Which requirement would make <code>ArrayList</code> a poor choice, and why?</p>
+</li>
+<li><p><strong>Raw list versus generic list.</strong> Examine this code.</p>
+<pre><code class="fenced-code-block language-java"><span class="token class-name">ArrayList</span> marks <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ArrayList</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+marks<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token number">72.5</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+marks<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token number">88.0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+marks<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token string">"91"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">double</span> total <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token class-name">Double</span><span class="token punctuation">)</span> marks<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span>
+             <span class="token operator">+</span> <span class="token punctuation">(</span><span class="token class-name">Double</span><span class="token punctuation">)</span> marks<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span>
+             <span class="token operator">+</span> <span class="token punctuation">(</span><span class="token class-name">Double</span><span class="token punctuation">)</span> marks<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<p>State whether the problem is detected at compile time or at runtime, which line causes it, and why. Rewrite the declaration using generics and explain exactly what changes about when and where the mistake is reported. Finally, explain why <code>ArrayList&lt;double&gt;</code> is not a valid alternative and what must be used instead.</p>
+</li>
+</ol>
+</article>
+</body>
+</html>

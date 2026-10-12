@@ -1,0 +1,1554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <style>
+  @font-face {
+  font-family: octicons-link;
+  src: url(data:font/woff;charset=utf-8;base64,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) format('woff');
+}
+
+.markdown-body .octicon {
+  display: inline-block;
+  fill: currentColor;
+  vertical-align: text-bottom;
+}
+
+.markdown-body .anchor {
+  float: left;
+  line-height: 1;
+  margin-left: -20px;
+  padding-right: 4px;
+}
+
+.markdown-body .anchor:focus {
+  outline: none;
+}
+
+.markdown-body h1 .octicon-link,
+.markdown-body h2 .octicon-link,
+.markdown-body h3 .octicon-link,
+.markdown-body h4 .octicon-link,
+.markdown-body h5 .octicon-link,
+.markdown-body h6 .octicon-link {
+  color: #1b1f23;
+  vertical-align: middle;
+  visibility: hidden;
+}
+
+.markdown-body h1:hover .anchor,
+.markdown-body h2:hover .anchor,
+.markdown-body h3:hover .anchor,
+.markdown-body h4:hover .anchor,
+.markdown-body h5:hover .anchor,
+.markdown-body h6:hover .anchor {
+  text-decoration: none;
+}
+
+.markdown-body h1:hover .anchor .octicon-link,
+.markdown-body h2:hover .anchor .octicon-link,
+.markdown-body h3:hover .anchor .octicon-link,
+.markdown-body h4:hover .anchor .octicon-link,
+.markdown-body h5:hover .anchor .octicon-link,
+.markdown-body h6:hover .anchor .octicon-link {
+  visibility: visible;
+}
+
+.markdown-body {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  color: #24292e;
+  line-height: 1.5;
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
+  font-size: 16px;
+  line-height: 1.5;
+  word-wrap: break-word;
+}
+
+.markdown-body .pl-c {
+  color: #6a737d;
+}
+
+.markdown-body .pl-c1,
+.markdown-body .pl-s .pl-v {
+  color: #005cc5;
+}
+
+.markdown-body .pl-e,
+.markdown-body .pl-en {
+  color: #6f42c1;
+}
+
+.markdown-body .pl-s .pl-s1,
+.markdown-body .pl-smi {
+  color: #24292e;
+}
+
+.markdown-body .pl-ent {
+  color: #22863a;
+}
+
+.markdown-body .pl-k {
+  color: #d73a49;
+}
+
+.markdown-body .pl-pds,
+.markdown-body .pl-s,
+.markdown-body .pl-s .pl-pse .pl-s1,
+.markdown-body .pl-sr,
+.markdown-body .pl-sr .pl-cce,
+.markdown-body .pl-sr .pl-sra,
+.markdown-body .pl-sr .pl-sre {
+  color: #032f62;
+}
+
+.markdown-body .pl-smw,
+.markdown-body .pl-v {
+  color: #e36209;
+}
+
+.markdown-body .pl-bu {
+  color: #b31d28;
+}
+
+.markdown-body .pl-ii {
+  background-color: #b31d28;
+  color: #fafbfc;
+}
+
+.markdown-body .pl-c2 {
+  background-color: #d73a49;
+  color: #fafbfc;
+}
+
+.markdown-body .pl-c2:before {
+  content: "^M";
+}
+
+.markdown-body .pl-sr .pl-cce {
+  color: #22863a;
+  font-weight: 700;
+}
+
+.markdown-body .pl-ml {
+  color: #735c0f;
+}
+
+.markdown-body .pl-mh,
+.markdown-body .pl-mh .pl-en,
+.markdown-body .pl-ms {
+  color: #005cc5;
+  font-weight: 700;
+}
+
+.markdown-body .pl-mi {
+  color: #24292e;
+  font-style: italic;
+}
+
+.markdown-body .pl-mb {
+  color: #24292e;
+  font-weight: 700;
+}
+
+.markdown-body .pl-md {
+  background-color: #ffeef0;
+  color: #b31d28;
+}
+
+.markdown-body .pl-mi1 {
+  background-color: #f0fff4;
+  color: #22863a;
+}
+
+.markdown-body .pl-mc {
+  background-color: #ffebda;
+  color: #e36209;
+}
+
+.markdown-body .pl-mi2 {
+  background-color: #005cc5;
+  color: #f6f8fa;
+}
+
+.markdown-body .pl-mdr {
+  color: #6f42c1;
+  font-weight: 700;
+}
+
+.markdown-body .pl-ba {
+  color: #586069;
+}
+
+.markdown-body .pl-sg {
+  color: #959da5;
+}
+
+.markdown-body .pl-corl {
+  color: #032f62;
+  text-decoration: underline;
+}
+
+.markdown-body details {
+  display: block;
+}
+
+.markdown-body summary {
+  display: list-item;
+}
+
+.markdown-body a {
+  background-color: transparent;
+}
+
+.markdown-body a:active,
+.markdown-body a:hover {
+  outline-width: 0;
+}
+
+.markdown-body strong {
+  font-weight: inherit;
+  font-weight: bolder;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+  margin: .67em 0;
+}
+
+.markdown-body img {
+  border-style: none;
+}
+
+.markdown-body code,
+.markdown-body kbd,
+.markdown-body pre {
+  font-family: monospace,monospace;
+  font-size: 1em;
+}
+
+.markdown-body hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+}
+
+.markdown-body input {
+  font: inherit;
+  margin: 0;
+}
+
+.markdown-body input {
+  overflow: visible;
+}
+
+.markdown-body [type=checkbox] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.markdown-body * {
+  box-sizing: border-box;
+}
+
+.markdown-body input {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.markdown-body a {
+  color: #0366d6;
+  text-decoration: none;
+}
+
+.markdown-body a:hover {
+  text-decoration: underline;
+}
+
+.markdown-body strong {
+  font-weight: 600;
+}
+
+.markdown-body hr {
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #dfe2e5;
+  height: 0;
+  margin: 15px 0;
+  overflow: hidden;
+}
+
+.markdown-body hr:before {
+  content: "";
+  display: table;
+}
+
+.markdown-body hr:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.markdown-body table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.markdown-body td,
+.markdown-body th {
+  padding: 0;
+}
+
+.markdown-body details summary {
+  cursor: pointer;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.markdown-body h1 {
+  font-size: 32px;
+}
+
+.markdown-body h1,
+.markdown-body h2 {
+  font-weight: 600;
+}
+
+.markdown-body h2 {
+  font-size: 24px;
+}
+
+.markdown-body h3 {
+  font-size: 20px;
+}
+
+.markdown-body h3,
+.markdown-body h4 {
+  font-weight: 600;
+}
+
+.markdown-body h4 {
+  font-size: 16px;
+}
+
+.markdown-body h5 {
+  font-size: 14px;
+}
+
+.markdown-body h5,
+.markdown-body h6 {
+  font-weight: 600;
+}
+
+.markdown-body h6 {
+  font-size: 12px;
+}
+
+.markdown-body p {
+  margin-bottom: 10px;
+  margin-top: 0;
+}
+
+.markdown-body blockquote {
+  margin: 0;
+}
+
+.markdown-body ol,
+.markdown-body ul {
+  margin-bottom: 0;
+  margin-top: 0;
+  padding-left: 0;
+}
+
+.markdown-body ol ol,
+.markdown-body ul ol {
+  list-style-type: lower-roman;
+}
+
+.markdown-body ol ol ol,
+.markdown-body ol ul ol,
+.markdown-body ul ol ol,
+.markdown-body ul ul ol {
+  list-style-type: lower-alpha;
+}
+
+.markdown-body dd {
+  margin-left: 0;
+}
+
+.markdown-body code,
+.markdown-body pre {
+  font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;
+  font-size: 12px;
+}
+
+.markdown-body pre {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.markdown-body input::-webkit-inner-spin-button,
+.markdown-body input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+.markdown-body .border {
+  border: 1px solid #e1e4e8!important;
+}
+
+.markdown-body .border-0 {
+  border: 0!important;
+}
+
+.markdown-body .border-bottom {
+  border-bottom: 1px solid #e1e4e8!important;
+}
+
+.markdown-body .rounded-1 {
+  border-radius: 3px!important;
+}
+
+.markdown-body .bg-white {
+  background-color: #fff!important;
+}
+
+.markdown-body .bg-gray-light {
+  background-color: #fafbfc!important;
+}
+
+.markdown-body .text-gray-light {
+  color: #6a737d!important;
+}
+
+.markdown-body .mb-0 {
+  margin-bottom: 0!important;
+}
+
+.markdown-body .my-2 {
+  margin-bottom: 8px!important;
+  margin-top: 8px!important;
+}
+
+.markdown-body .pl-0 {
+  padding-left: 0!important;
+}
+
+.markdown-body .py-0 {
+  padding-bottom: 0!important;
+  padding-top: 0!important;
+}
+
+.markdown-body .pl-1 {
+  padding-left: 4px!important;
+}
+
+.markdown-body .pl-2 {
+  padding-left: 8px!important;
+}
+
+.markdown-body .py-2 {
+  padding-bottom: 8px!important;
+  padding-top: 8px!important;
+}
+
+.markdown-body .pl-3,
+.markdown-body .px-3 {
+  padding-left: 16px!important;
+}
+
+.markdown-body .px-3 {
+  padding-right: 16px!important;
+}
+
+.markdown-body .pl-4 {
+  padding-left: 24px!important;
+}
+
+.markdown-body .pl-5 {
+  padding-left: 32px!important;
+}
+
+.markdown-body .pl-6 {
+  padding-left: 40px!important;
+}
+
+.markdown-body .f6 {
+  font-size: 12px!important;
+}
+
+.markdown-body .lh-condensed {
+  line-height: 1.25!important;
+}
+
+.markdown-body .text-bold {
+  font-weight: 600!important;
+}
+
+.markdown-body:before {
+  content: "";
+  display: table;
+}
+
+.markdown-body:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.markdown-body>:first-child {
+  margin-top: 0!important;
+}
+
+.markdown-body>:last-child {
+  margin-bottom: 0!important;
+}
+
+.markdown-body a:not([href]) {
+  color: inherit;
+  text-decoration: none;
+}
+
+.markdown-body blockquote,
+.markdown-body dl,
+.markdown-body ol,
+.markdown-body p,
+.markdown-body pre,
+.markdown-body table,
+.markdown-body ul {
+  margin-bottom: 16px;
+  margin-top: 0;
+}
+
+.markdown-body hr {
+  background-color: #e1e4e8;
+  border: 0;
+  height: .25em;
+  margin: 24px 0;
+  padding: 0;
+}
+
+.markdown-body blockquote {
+  border-left: .25em solid #dfe2e5;
+  color: #6a737d;
+  padding: 0 1em;
+}
+
+.markdown-body blockquote>:first-child {
+  margin-top: 0;
+}
+
+.markdown-body blockquote>:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body kbd {
+  background-color: #fafbfc;
+  border: 1px solid #c6cbd1;
+  border-bottom-color: #959da5;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #959da5;
+  color: #444d56;
+  display: inline-block;
+  font-size: 11px;
+  line-height: 10px;
+  padding: 3px 5px;
+  vertical-align: middle;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  font-weight: 600;
+  line-height: 1.25;
+  margin-bottom: 16px;
+  margin-top: 24px;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+}
+
+.markdown-body h1,
+.markdown-body h2 {
+  border-bottom: 1px solid #eaecef;
+  padding-bottom: .3em;
+}
+
+.markdown-body h2 {
+  font-size: 1.5em;
+}
+
+.markdown-body h3 {
+  font-size: 1.25em;
+}
+
+.markdown-body h4 {
+  font-size: 1em;
+}
+
+.markdown-body h5 {
+  font-size: .875em;
+}
+
+.markdown-body h6 {
+  color: #6a737d;
+  font-size: .85em;
+}
+
+.markdown-body ol,
+.markdown-body ul {
+  padding-left: 2em;
+}
+
+.markdown-body ol ol,
+.markdown-body ol ul,
+.markdown-body ul ol,
+.markdown-body ul ul {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.markdown-body li {
+  word-wrap: break-all;
+}
+
+.markdown-body li>p {
+  margin-top: 16px;
+}
+
+.markdown-body li+li {
+  margin-top: .25em;
+}
+
+.markdown-body dl {
+  padding: 0;
+}
+
+.markdown-body dl dt {
+  font-size: 1em;
+  font-style: italic;
+  font-weight: 600;
+  margin-top: 16px;
+  padding: 0;
+}
+
+.markdown-body dl dd {
+  margin-bottom: 16px;
+  padding: 0 16px;
+}
+
+.markdown-body table {
+  display: block;
+  overflow: auto;
+  width: 100%;
+}
+
+.markdown-body table th {
+  font-weight: 600;
+}
+
+.markdown-body table td,
+.markdown-body table th {
+  border: 1px solid #dfe2e5;
+  padding: 6px 13px;
+}
+
+.markdown-body table tr {
+  background-color: #fff;
+  border-top: 1px solid #c6cbd1;
+}
+
+.markdown-body table tr:nth-child(2n) {
+  background-color: #f6f8fa;
+}
+
+.markdown-body img {
+  background-color: #fff;
+  box-sizing: content-box;
+  max-width: 100%;
+}
+
+.markdown-body img[align=right] {
+  padding-left: 20px;
+}
+
+.markdown-body img[align=left] {
+  padding-right: 20px;
+}
+
+.markdown-body code {
+  background-color: rgba(27,31,35,.05);
+  border-radius: 3px;
+  font-size: 85%;
+  margin: 0;
+  padding: .2em .4em;
+}
+
+.markdown-body pre {
+  word-wrap: normal;
+}
+
+.markdown-body pre>code {
+  background: transparent;
+  border: 0;
+  font-size: 100%;
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  word-break: normal;
+}
+
+.markdown-body .highlight {
+  margin-bottom: 16px;
+}
+
+.markdown-body .highlight pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+
+.markdown-body .highlight pre,
+.markdown-body pre {
+  background-color: #f6f8fa;
+  border-radius: 3px;
+  font-size: 85%;
+  line-height: 1.45;
+  overflow: auto;
+  padding: 16px;
+}
+
+.markdown-body pre code {
+  background-color: transparent;
+  border: 0;
+  display: inline;
+  line-height: inherit;
+  margin: 0;
+  max-width: auto;
+  overflow: visible;
+  padding: 0;
+  word-wrap: normal;
+}
+
+.markdown-body .commit-tease-sha {
+  color: #444d56;
+  display: inline-block;
+  font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;
+  font-size: 90%;
+}
+
+.markdown-body .blob-wrapper {
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.markdown-body .blob-wrapper-embedded {
+  max-height: 240px;
+  overflow-y: auto;
+}
+
+.markdown-body .blob-num {
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  color: rgba(27,31,35,.3);
+  cursor: pointer;
+  font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;
+  font-size: 12px;
+  line-height: 20px;
+  min-width: 50px;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-align: right;
+  user-select: none;
+  vertical-align: top;
+  white-space: nowrap;
+  width: 1%;
+}
+
+.markdown-body .blob-num:hover {
+  color: rgba(27,31,35,.6);
+}
+
+.markdown-body .blob-num:before {
+  content: attr(data-line-number);
+}
+
+.markdown-body .blob-code {
+  line-height: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  position: relative;
+  vertical-align: top;
+}
+
+.markdown-body .blob-code-inner {
+  color: #24292e;
+  font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;
+  font-size: 12px;
+  overflow: visible;
+  white-space: pre;
+  word-wrap: normal;
+}
+
+.markdown-body .pl-token.active,
+.markdown-body .pl-token:hover {
+  background: #ffea7f;
+  cursor: pointer;
+}
+
+.markdown-body kbd {
+  background-color: #fafbfc;
+  border: 1px solid #d1d5da;
+  border-bottom-color: #c6cbd1;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #c6cbd1;
+  color: #444d56;
+  display: inline-block;
+  font: 11px SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;
+  line-height: 10px;
+  padding: 3px 5px;
+  vertical-align: middle;
+}
+
+.markdown-body :checked+.radio-label {
+  border-color: #0366d6;
+  position: relative;
+  z-index: 1;
+}
+
+.markdown-body .tab-size[data-tab-size="1"] {
+  -moz-tab-size: 1;
+  tab-size: 1;
+}
+
+.markdown-body .tab-size[data-tab-size="2"] {
+  -moz-tab-size: 2;
+  tab-size: 2;
+}
+
+.markdown-body .tab-size[data-tab-size="3"] {
+  -moz-tab-size: 3;
+  tab-size: 3;
+}
+
+.markdown-body .tab-size[data-tab-size="4"] {
+  -moz-tab-size: 4;
+  tab-size: 4;
+}
+
+.markdown-body .tab-size[data-tab-size="5"] {
+  -moz-tab-size: 5;
+  tab-size: 5;
+}
+
+.markdown-body .tab-size[data-tab-size="6"] {
+  -moz-tab-size: 6;
+  tab-size: 6;
+}
+
+.markdown-body .tab-size[data-tab-size="7"] {
+  -moz-tab-size: 7;
+  tab-size: 7;
+}
+
+.markdown-body .tab-size[data-tab-size="8"] {
+  -moz-tab-size: 8;
+  tab-size: 8;
+}
+
+.markdown-body .tab-size[data-tab-size="9"] {
+  -moz-tab-size: 9;
+  tab-size: 9;
+}
+
+.markdown-body .tab-size[data-tab-size="10"] {
+  -moz-tab-size: 10;
+  tab-size: 10;
+}
+
+.markdown-body .tab-size[data-tab-size="11"] {
+  -moz-tab-size: 11;
+  tab-size: 11;
+}
+
+.markdown-body .tab-size[data-tab-size="12"] {
+  -moz-tab-size: 12;
+  tab-size: 12;
+}
+
+.markdown-body .task-list-item {
+  list-style-type: none;
+}
+
+.markdown-body .task-list-item+.task-list-item {
+  margin-top: 3px;
+}
+
+.markdown-body .task-list-item input {
+  margin: 0 .2em .25em -1.6em;
+  vertical-align: middle;
+}
+
+.markdown-body hr {
+  border-bottom-color: #eee;
+}
+
+.markdown-body .pl-0 {
+  padding-left: 0!important;
+}
+
+.markdown-body .pl-1 {
+  padding-left: 4px!important;
+}
+
+.markdown-body .pl-2 {
+  padding-left: 8px!important;
+}
+
+.markdown-body .pl-3 {
+  padding-left: 16px!important;
+}
+
+.markdown-body .pl-4 {
+  padding-left: 24px!important;
+}
+
+.markdown-body .pl-5 {
+  padding-left: 32px!important;
+}
+
+.markdown-body .pl-6 {
+  padding-left: 40px!important;
+}
+
+.markdown-body .pl-7 {
+  padding-left: 48px!important;
+}
+
+.markdown-body .pl-8 {
+  padding-left: 64px!important;
+}
+
+.markdown-body .pl-9 {
+  padding-left: 80px!important;
+}
+
+.markdown-body .pl-10 {
+  padding-left: 96px!important;
+}
+
+.markdown-body .pl-11 {
+  padding-left: 112px!important;
+}
+
+.markdown-body .pl-12 {
+  padding-left: 128px!important;
+}
+
+/*# sourceURL=webpack://./node_modules/github-markdown-css/github-markdown.css */
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL25vZGVfbW9kdWxlcy9naXRodWItbWFya2Rvd24tY3NzL2dpdGh1Yi1tYXJrZG93bi5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSwwQkFBMEI7RUFDMUIsMkRBQXF0RTtBQUN2dEU7O0FBRUE7RUFDRSxxQkFBcUI7RUFDckIsa0JBQWtCO0VBQ2xCLDJCQUEyQjtBQUM3Qjs7QUFFQTtFQUNFLFdBQVc7RUFDWCxjQUFjO0VBQ2Qsa0JBQWtCO0VBQ2xCLGtCQUFrQjtBQUNwQjs7QUFFQTtFQUNFLGFBQWE7QUFDZjs7QUFFQTs7Ozs7O0VBTUUsY0FBYztFQUNkLHNCQUFzQjtFQUN0QixrQkFBa0I7QUFDcEI7O0FBRUE7Ozs7OztFQU1FLHFCQUFxQjtBQUN2Qjs7QUFFQTs7Ozs7O0VBTUUsbUJBQW1CO0FBQ3JCOztBQUVBO0VBQ0UsMEJBQTBCO0VBQzFCLDhCQUE4QjtFQUM5QixjQUFjO0VBQ2QsZ0JBQWdCO0VBQ2hCLGtJQUFrSTtFQUNsSSxlQUFlO0VBQ2YsZ0JBQWdCO0VBQ2hCLHFCQUFxQjtBQUN2Qjs7QUFFQTtFQUNFLGNBQWM7QUFDaEI7O0FBRUE7O0VBRUUsY0FBYztBQUNoQjs7QUFFQTs7RUFFRSxjQUFjO0FBQ2hCOztBQUVBOztFQUVFLGNBQWM7QUFDaEI7O0FBRUE7RUFDRSxjQUFjO0FBQ2hCOztBQUVBO0VBQ0UsY0FBYztBQUNoQjs7QUFFQTs7Ozs7OztFQU9FLGNBQWM7QUFDaEI7O0FBRUE7O0VBRUUsY0FBYztBQUNoQjs7QUFFQTtFQUNFLGNBQWM7QUFDaEI7O0FBRUE7RUFDRSx5QkFBeUI7RUFDekIsY0FBYztBQUNoQjs7QUFFQTtFQUNFLHlCQUF5QjtFQUN6QixjQUFjO0FBQ2hCOztBQUVBO0VBQ0UsYUFBYTtBQUNmOztBQUVBO0VBQ0UsY0FBYztFQUNkLGdCQUFnQjtBQUNsQjs7QUFFQTtFQUNFLGNBQWM7QUFDaEI7O0FBRUE7OztFQUdFLGNBQWM7RUFDZCxnQkFBZ0I7QUFDbEI7O0FBRUE7RUFD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 */
+  </style>
+  <style>
+  /**
+ * prism.js default theme for JavaScript, CSS and HTML
+ * Based on dabblet (http://dabblet.com)
+ * @author Lea Verou
+ */
+
+code[class*="language-"],
+pre[class*="language-"] {
+	color: black;
+	background: none;
+	text-shadow: 0 1px white;
+	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	font-size: 1em;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	line-height: 1.5;
+
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+}
+
+pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
+code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-selection {
+	text-shadow: none;
+	background: #b3d4fc;
+}
+
+pre[class*="language-"]::selection, pre[class*="language-"] ::selection,
+code[class*="language-"]::selection, code[class*="language-"] ::selection {
+	text-shadow: none;
+	background: #b3d4fc;
+}
+
+@media print {
+	code[class*="language-"],
+	pre[class*="language-"] {
+		text-shadow: none;
+	}
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+	padding: 1em;
+	margin: .5em 0;
+	overflow: auto;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+	background: #f5f2f0;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+	padding: .1em;
+	border-radius: .3em;
+	white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: slategray;
+}
+
+.token.punctuation {
+	color: #999;
+}
+
+.token.namespace {
+	opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+	color: #905;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+	color: #690;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+	color: #9a6e3a;
+	/* This background color was intended by the author of this theme. */
+	background: hsla(0, 0%, 100%, .5);
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+	color: #07a;
+}
+
+.token.function,
+.token.class-name {
+	color: #DD4A68;
+}
+
+.token.regex,
+.token.important,
+.token.variable {
+	color: #e90;
+}
+
+.token.important,
+.token.bold {
+	font-weight: bold;
+}
+.token.italic {
+	font-style: italic;
+}
+
+.token.entity {
+	cursor: help;
+}
+
+/*# sourceURL=webpack://./node_modules/prismjs/themes/prism.css */
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL25vZGVfbW9kdWxlcy9wcmlzbWpzL3RoZW1lcy9wcmlzbS5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7Ozs7RUFJRTs7QUFFRjs7Q0FFQyxZQUFZO0NBQ1osZ0JBQWdCO0NBQ2hCLHdCQUF3QjtDQUN4QixzRUFBc0U7Q0FDdEUsY0FBYztDQUNkLGdCQUFnQjtDQUNoQixnQkFBZ0I7Q0FDaEIsb0JBQW9CO0NBQ3BCLGtCQUFrQjtDQUNsQixpQkFBaUI7Q0FDakIsZ0JBQWdCOztDQUVoQixnQkFBZ0I7Q0FDaEIsY0FBYztDQUNkLFdBQVc7O0NBRVgscUJBQXFCO0NBQ3JCLGtCQUFrQjtDQUNsQixpQkFBaUI7Q0FDakIsYUFBYTtBQUNkOztBQUVBOztDQUVDLGlCQUFpQjtDQUNqQixtQkFBbUI7QUFDcEI7O0FBRUE7O0NBRUMsaUJBQWlCO0NBQ2pCLG1CQUFtQjtBQUNwQjs7QUFFQTtDQUNDOztFQUVDLGlCQUFpQjtDQUNsQjtBQUNEOztBQUVBLGdCQUFnQjtBQUNoQjtDQUNDLFlBQVk7Q0FDWixjQUFjO0NBQ2QsY0FBYztBQUNmOztBQUVBOztDQUVDLG1CQUFtQjtBQUNwQjs7QUFFQSxnQkFBZ0I7QUFDaEI7Q0FDQyxhQUFhO0NBQ2IsbUJBQW1CO0NBQ25CLG1CQUFtQjtBQUNwQjs7QUFFQTs7OztDQUlDLGdCQUFnQjtBQUNqQjs7QUFFQTtDQUNDLFdBQVc7QUFDWjs7QUFFQTtDQUNDLFdBQVc7QUFDWjs7QUFFQTs7Ozs7OztDQU9DLFdBQVc7QUFDWjs7QUFFQTs7Ozs7O0NBTUMsV0FBVztBQUNaOztBQUVBOzs7OztDQUtDLGNBQWM7Q0FDZCxvRUFBb0U7Q0FDcEUsaUNBQWlDO0FBQ2xDOztBQUVBOzs7Q0FHQyxXQUFXO0FBQ1o7O0FBRUE7O0NBRUMsY0FBYztBQUNmOztBQUVBOzs7Q0FHQyxXQUFXO0FBQ1o7O0FBRUE7O0NBRUMsaUJBQWlCO0FBQ2xCO0FBQ0E7Q0FDQyxrQkFBa0I7QUFDbkI7O0FBRUE7Q0FDQyxZQUFZO0FBQ2IiLCJzb3VyY2VSb290IjoiIn0= */
+  </style>
+  <style>
+  
+  </style>
+  <style>
+    .markdown-body {
+      font-family: -apple-system,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
+      box-sizing: border-box;
+      min-width: 200px;
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 45px;
+    }
+
+    @media not print {
+      .markdown-body {
+        padding: 45px;
+      }
+
+      @media (max-width: 767px) {
+        .markdown-body {
+          padding: 15px;
+        }
+      }
+    }
+
+    .hf-container {
+      color: #24292e;
+      line-height: 1.3;
+    }
+
+    .markdown-body .highlight pre,
+    .markdown-body pre {
+      white-space: pre-wrap;
+    }
+    .markdown-body table {
+      display: table;
+    }
+    .markdown-body img[data-align="center"] {
+      display: block;
+      margin: 0 auto;
+    }
+    .markdown-body img[data-align="right"] {
+      display: block;
+      margin: 0 0 0 auto;
+    }
+    .markdown-body li.task-list-item {
+      list-style-type: none;
+    }
+    .markdown-body li > [type=checkbox] {
+      margin: 0 0 0 -1.3em;
+    }
+    .markdown-body input[type="checkbox"] ~ p {
+      margin-top: 0;
+      display: inline-block;
+    }
+    .markdown-body ol ol,
+    .markdown-body ul ol {
+      list-style-type: decimal;
+    }
+    .markdown-body ol ol ol,
+    .markdown-body ol ul ol,
+    .markdown-body ul ol ol,
+    .markdown-body ul ul ol {
+      list-style-type: decimal;
+    }
+  </style>
+  <style>.markdown-body a.footnote-ref {
+  text-decoration: none;
+}
+
+.footnotes {
+  font-size: .85em;
+  opacity: .8;
+}
+
+.footnotes li[role="doc-endnote"] {
+  position: relative;
+}
+
+.footnotes .footnote-back {
+  position: absolute;
+  font-family: initial;
+  top: .2em;
+  right: 1em;
+  text-decoration: none;
+}
+
+.inline-math.invalid,
+.multiple-math.invalid {
+  color: rgb(255, 105, 105);
+}
+
+.toc-container {
+  width: 100%;
+}
+
+.toc-container .toc-title {
+  font-weight: 700;
+  font-size: 1.2em;
+  margin-bottom: 0;
+}
+
+.toc-container li,
+.toc-container ul,
+.toc-container ul li {
+  list-style: none !important;
+}
+
+.toc-container > ul {
+  padding-left: 0;
+}
+
+.toc-container ul li span {
+  display : flex;
+}
+
+.toc-container ul li span a {
+  color: inherit;
+  text-decoration: none;
+}
+.toc-container ul li span a:hover {
+  color: inherit;
+  text-decoration: none;
+}
+
+.toc-container ul li span span.dots {
+  flex: 1;
+  height: 0.65em;
+  margin: 0 10px;
+  border-bottom: 2px dotted black;
+}
+
+/*# sourceURL=webpack://./src/muya/lib/assets/styles/exportStyle.css */
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9tdXlhL2xpYi9hc3NldHMvc3R5bGVzL2V4cG9ydFN0eWxlLmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLHFCQUFxQjtBQUN2Qjs7QUFFQTtFQUNFLGdCQUFnQjtFQUNoQixXQUFXO0FBQ2I7O0FBRUE7RUFDRSxrQkFBa0I7QUFDcEI7O0FBRUE7RUFDRSxrQkFBa0I7RUFDbEIsb0JBQW9CO0VBQ3BCLFNBQVM7RUFDVCxVQUFVO0VBQ1YscUJBQXFCO0FBQ3ZCOztBQUVBOztFQUVFLHlCQUF5QjtBQUMzQjs7QUFFQTtFQUNFLFdBQVc7QUFDYjs7QUFFQTtFQUNFLGdCQUFnQjtFQUNoQixnQkFBZ0I7RUFDaEIsZ0JBQWdCO0FBQ2xCOztBQUVBOzs7RUFHRSwyQkFBMkI7QUFDN0I7O0FBRUE7RUFDRSxlQUFlO0FBQ2pCOztBQUVBO0VBQ0UsY0FBYztBQUNoQjs7QUFFQTtFQUNFLGNBQWM7RUFDZCxxQkFBcUI7QUFDdkI7QUFDQTtFQUNFLGNBQWM7RUFDZCxxQkFBcUI7QUFDdkI7O0FBRUE7RUFDRSxPQUFPO0VBQ1AsY0FBYztFQUNkLGNBQWM7RUFDZCwrQkFBK0I7QUFDakMiLCJzb3VyY2VSb290IjoiIn0= */</style>
+  <style>.markdown-body{}pre.front-matter{display:none!important;}</style>
+</head>
+<body>
+  <article class="markdown-body"><h1 class="atx" id="http-state-management-and-the-web-application-stack">HTTP, State Management, and the Web Application Stack</h1>
+<h3 class="atx" id="introduction-to-web-technology--week-3">Introduction to Web Technology — Week 3</h3>
+<p>This module continues directly from the previous discussion on the internet's architecture, the evolution of the web, and the Domain Name System. Having established <em>how</em> a client locates a server, we now turn to <em>what happens once the connection is made</em> — the HTTP protocol itself, how the web fakes memory using cookies, how HTTPS keeps that conversation private, and how browsers and servers actually assemble the pages you see.</p>
+<hr>
+<h2 class="atx" id="index">Index</h2>
+<ul>
+<li><a href="#get-vs-post-method-in-http">GET vs. POST — Asking Nicely vs. Handing Over a Package</a></li>
+<li><a href="#the-http-request-message">Anatomy of an HTTP Request Message</a></li>
+<li><a href="#seeing-raw-http-netcat-and-curl">Seeing HTTP With Your Own Eyes: netcat and curl</a></li>
+<li><a href="#https-encrypts-http-with-tls">HTTPS — Wrapping HTTP in a Trench Coat of Encryption</a></li>
+<li><a href="#the-statelessness-problem">HTTP's Amnesia Problem, and Why It Matters</a></li>
+<li><a href="#maintaining-userserver-state-cookies">Cookies — The Web's Sticky Notes</a></li>
+<li><a href="#http-cookies-comments">What Cookies Are (Legitimately) Used For</a></li>
+<li><a href="#cookies-tracking-a-users-browsing-behavior">First-Party vs. Third-Party Cookies — Being Watched Without an Invitation</a></li>
+<li><a href="#browser-rendering">Browser Rendering — From Tags to Pixels</a></li>
+<li><a href="#web-cache">Web Caches — Letting Someone Else Do the Fetching</a></li>
+<li><a href="#static-sites-serve-files-dynamic-sites-build-pages">Static vs. Dynamic Websites</a></li>
+<li><a href="#putting-it-together-the-web-app-workflow">Putting It All Together: The Web App Workflow</a></li>
+<li><a href="#recap">Recap</a></li>
+<li><a href="#think-about-it-questions">Think-About-It Questions</a></li>
+</ul>
+<hr>
+<h2 class="atx" id="get-vs-post-method-in-http">GET vs. POST method in HTTP</h2>
+<p>HTTP communication is built entirely on a <strong>client–server model</strong>: the client (browser) sends an <strong>HTTP request message</strong>, and the server replies with an <strong>HTTP response message</strong> carrying the requested content. Every request message carries several fields, but the very first thing it announces is <em>what kind of operation</em> it wants — most commonly <strong>GET</strong> or <strong>POST</strong>.</p>
+<ul>
+<li><strong>GET</strong> — used to <em>fetch</em> data. Clicking a hyperlink, for instance, triggers a GET request for the target page.</li>
+<li><strong>POST</strong> — used to <em>send/upload</em> data to the server. Filling out a form, submitting a comment on a blog, or uploading information all require POST, because data has to travel <em>to</em> the server rather than just being read <em>from</em> it.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>GET</th>
+<th>POST</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Purpose</td>
+<td>Fetch/read a resource</td>
+<td>Send/upload data</td>
+</tr>
+<tr>
+<td>Typical trigger</td>
+<td>Clicking a hyperlink</td>
+<td>Submitting a form</td>
+</tr>
+<tr>
+<td>Data location</td>
+<td>Encoded in the URL</td>
+<td>Sent in the request body</td>
+</tr>
+<tr>
+<td>Example</td>
+<td><code>GET /somePage.html HTTP/1.1</code></td>
+<td><code>&lt;form method="POST" action="FormProcess.php"&gt;</code></td>
+</tr>
+</tbody></table>
+<p>For example, a form with <code>method="POST"</code> and <code>action="FormProcess.php"</code> will, the moment the <strong>Submit</strong> button is pressed, package up the form fields (say, <em>Title</em> and <em>Country</em>) and send them to <code>FormProcess.php</code> using HTTP/1.1. A hyperlink, by contrast, simply issues a GET for the linked page and renders whatever comes back.</p>
+<blockquote>
+<p><strong>Pro-Tip:</strong> A very common exam trap is assuming GET can safely be used for actions that change server-side data (like placing an order). It shouldn't be — <strong>GET requests should never be used for state-changing actions</strong>, since GET requests are often cached, pre-fetched, or repeated by browsers and proxies without warning.</p>
+</blockquote>
+<p>brucks</p>
+<hr>
+<h2 class="atx" id="the-http-request-message">The HTTP Request Message</h2>
+<p>An HTTP request message is plain ASCII text — genuinely human-readable. It has three parts:</p>
+<ol>
+<li><strong>Request line</strong> — the method (GET/POST/HEAD), the resource path, and the protocol version.</li>
+<li><strong>Header lines</strong> — metadata about the client and what it's willing to accept.</li>
+<li><strong>A blank line</strong> (<code>\r\n</code>) — a carriage-return/line-feed pair that marks the end of the headers.</li>
+</ol>
+<pre><code class="fenced-code-block">GET /index.html HTTP/1.1\r\n
+Host: www-net.cs.umass.edu\r\n
+User-Agent: Firefox/3.6.10\r\n
+Accept: text/html,application/xhtml+xml\r\n
+Accept-Language: en-us,en;q=0.5\r\n
+Accept-Encoding: gzip,deflate\r\n
+Accept-Charset: ISO-8859-1,utf-8;q=0.7\r\n
+Keep-Alive: 115\r\n
+Connection: keep-alive\r\n
+\r\n</code></pre>
+<p>The carriage-return and line-feed characters (<code>\r\n</code>) terminate every line, and a lone <code>\r\n</code> at the very end signals "headers are done — no more fields are coming."</p>
+<hr>
+<h2 class="atx" id="seeing-raw-http-netcat-and-curl">Seeing raw HTTP: netcat and curl</h2>
+<p>You don't need a browser to talk HTTP — you can do it by hand:</p>
+<ol>
+<li><p><strong>Open a raw TCP connection to port 80</strong> (the default HTTP port) using <code>netcat</code>:</p>
+<ul>
+<li>macOS: <code>nc -c -v gaia.cs.umass.edu 80</code></li>
+<li>Windows: <code>ncat -C gaia.cs.umass.edu 80</code></li>
+</ul>
+</li>
+<li><p><strong>Type a GET request manually</strong> and hit Enter twice (the blank line matters — it's what tells the server the request is complete):</p>
+<pre><code class="fenced-code-block">GET /kurose_ross/interactive/index.php HTTPS/1.1
+Host: gaia.cs.umass.edu</code></pre>
+</li>
+<li><p><strong>Read the response</strong> the server sends back — or capture it in Wireshark to see the raw request/response exchange.</p>
+</li>
+</ol>
+<p>Alternatively, <code>curl</code> does the same job with far less typing, and conveniently sidesteps some of the manual TLS handling that raw GET-over-port-80 requires for HTTPS:</p>
+<pre><code class="fenced-code-block">curl -L https://gaia.cs.umass.edu/kurose_ross/interactive/index.php</code></pre>
+<p>Running this returns the page's raw <strong>HTML</strong> — you can see the <code>&lt;head&gt;</code> section (containing the page title, e.g. *"Interactive Problems: Computer Networking, A Top-Down Approach"*) and the <code>&lt;body&gt;</code> section containing the actual content and hyperlinks. The same underlying HTML can be inspected in any browser's <strong>Developer Tools</strong>: hovering over an element highlights the corresponding line of markup, which is a handy way to learn how a page is structured before HTML/CSS is covered in detail in the next module.</p>
+<hr>
+<h2 class="atx" id="https-encrypts-http-with-tls">HTTPS Encrypts HTTP with TLS</h2>
+<p>Plain HTTP has no built-in protection: an attacker sitting "in the middle" could modify the data in transit, steal credentials, or silently reroute traffic through themselves before it ever reaches the real server. <strong>HTTPS</strong> solves this by wrapping HTTP inside the <strong>Transport Layer Security (TLS)</strong> protocol.</p>
+<p>TLS relies on <strong>public-key cryptography</strong>: every host (client or server) can hold a <em>key pair</em> — a <strong>private key</strong>, kept completely secret, and a <strong>public key</strong>, freely announced to anyone who wants to communicate securely with that host. The public key lets others verify "this is really who they claim to be," while the private key is what lets the host <em>prove</em> it.</p>
+<div class="plantuml"><img src="https://www.plantuml.com/plantuml/svg/~1U5vja3rEmq0GXNkVuX4aI4HYYRyc1Og0WY9T45MQpNfiZxBUjMPdWznn24x8IP1Z8mKftPDstZVVx2gg4KsDoovQCLLZu4mNaY8sfCQRJ4CB3TW5rT2WO26h77oMzS7uoX4cBux9wmGcmXuZBjTSrVhi4ftERKWE9CUvU8odSzbONIoU_bwNkCqnmD_8kO1fJ6qRHAd0-tg30qdau2EkOBcjIH0JAyLPDk9xreXTuYx7832mRc19b4ksHWdJeN4TqQQTOuizTREpIlSvFaYux4xxSrJaINfIfDXBzO3vrfEtqhKALdoorkDb_zQSbNt8yKf3zGI85DbNQ8KF_QezTMSL7tDiQYDK_EjILBDp76igyFFrlVN6EPH9jFyu5LEMR16xfY4LjiQv3gCz5Lcs8b-anlq2HrB5d0"></div>
+<p>Step by step:</p>
+<ol>
+<li>The client sends a <strong>ClientHello</strong>, announcing which TLS versions and cipher suites it supports.</li>
+<li>The server replies with a <strong>ServerHello</strong> plus its <strong>certificate</strong>, which discloses its public key for the first time.</li>
+<li>The client verifies the certificate, generates a <strong>session key</strong> — a shared secret valid only for this session — and encrypts everything it sends (including the actual GET/POST request) using the server's public key.</li>
+<li>Because only the server holds the matching private key, only the server can decrypt that message and recover the session key.</li>
+<li>From this point on, both sides share the same session key, and every message between them is encrypted with it. The underlying transport is still TCP (already reliable), but TLS layers in confidentiality and integrity on top, making HTTPS far more resilient to tampering or eavesdropping.</li>
+</ol>
+<p>brucks</p>
+<hr>
+<h2 class="atx" id="the-statelessness-problem">The Statelessness Problem</h2>
+<p>HTTP is, by design, a <strong>stateless protocol</strong> — neither the client nor the server is required to remember anything about previous requests. This has advantages (simplicity, no need to track multi-step exchanges, no complicated recovery from a half-finished transaction), but it also creates a real problem.</p>
+<p>Consider a server holding a shared variable <code>X</code> — an account balance, or the number of seats left on a flight. Suppose the correct behavior requires the client to make <strong>two changes to X, or none at all</strong> (atomicity). The natural way to protect this is locking:</p>
+<div class="plantuml"><img src="https://www.plantuml.com/plantuml/svg/~1U5wDZy5Emq0CHE_x5KCvj1NA3_HGLOKRI1ouv6fsJHAnkuwyNgJ-FKe8eeT6ucRPysOyfsAaLbDqTwDIbmYHBb8D9R5H9cSomWJlOYO9OL3sDaXsRXeeTv6nUOm3Pzk02lmyulvbw7exnyhNkZVMBrOyuEcCNRkVWVApkmBSuj4qnz_h0L7y9m8PGTcB1hHk8IVPGXpm-doJhcCWOxHeZcYtQsGMO-ZqEEJZpzChbHw9BX3lgw9dPUnik_z7r6hMhOurporNcxaJvr1J_0QTMuuR"></div>
+<p>Locking can be <strong>shared</strong> (multiple clients may read, none may write) or <strong>exclusive</strong> (no other client may read or write at all) — the right granularity depends on the application, and will be explored further when database transactions are covered.</p>
+<p>The dangerous scenario: if the <strong>client crashes</strong> right after the first update (at time <em>t′</em>) but before unlocking, it wakes up with no memory of having already applied one change — because HTTP itself remembers nothing. If it naively restarts and performs two more updates, <code>X</code> ends up updated <strong>three times</strong> instead of the required two, silently corrupting the data. This is exactly the failure mode that statelessness invites, and it's the motivating reason the web needed a way to remember things across otherwise-independent requests — enter cookies.</p>
+<hr>
+<h2 class="atx" id="maintaining-userserver-state-cookies">Maintaining user/server state: cookies</h2>
+<p>A <strong>cookie</strong> is the mechanism websites and browsers use to fake memory on top of a stateless protocol. It rests on <strong>four components</strong>:</p>
+<ol>
+<li>A <strong>cookie header line</strong> in the HTTP <em>response</em> message (<code>Set-Cookie: ...</code>).</li>
+<li>A <strong>cookie header line</strong> in the next HTTP <em>request</em> message (<code>Cookie: ...</code>).</li>
+<li>A <strong>cookie file</strong> kept on the user's host, managed by the browser.</li>
+<li>A <strong>back-end database</strong> entry at the website.</li>
+</ol>
+<p><strong>Worked example — Susan visits an e-commerce site:</strong></p>
+<div class="plantuml"><img src="https://www.plantuml.com/plantuml/svg/~1U5wLaRrEmq0GXFjxYY4K918kQ02bG2590H85Kj8WfLcVD-6K-p6tQw9GyH0y8K-2x1Wfea3GhLRVxDpSJ4GfQnEyEQapRGB1qpur2Wci5Cbegg49PL9D0PNBRDMbQ4mxKDnunc3c7KV5SD48nT409B27rUc3spphr3TypDy6UaiH2ywld3jSkl4OhqYf964CfcIt72lC-qqdgCeUVcBlqywOth0eRhwFZT58Gnvto-KZChyqB8eW6zERjMYl-e5AdQBmAYvOYrbAMyTZN5nUNHyhgn9ZsCoa38wQzrYdZFlv0Vp7SrRnTulElv2QhLix2-g-7qEobaL6VmtJ1JSnAIEtbI2j-_0cHSQEUGjFoXcVxnyG2cpiKN8uWQZp7i9HpusuzX073YLdGLVycS1ILjDsrHePC-5ODS5_0RkTq5W"></div>
+<p>On Susan's <strong>very first visit</strong>, no cookie exists yet — it can only be generated after the first successful request/response exchange. When that initial request arrives, the server creates a <strong>unique ID</strong> and an accompanying entry in its backend database, then returns that ID via <code>Set-Cookie</code> in the response. The browser stores it, and every subsequent request to that same site includes <code>Cookie: &lt;ID&gt;</code> — this is exactly how the site recognizes "this is Susan again," even without a login, and can remember her shopping cart a week later, purely because the same browser sends the same cookie value.</p>
+<blockquote>
+<p><strong>Pro-Tip:</strong> Remember that the cookie ID itself carries no meaning to the browser — it's an opaque token. All the actual personalization (cart contents, preferences, browsing history) lives in the <strong>server's database</strong>, keyed by that ID. The cookie is just the lookup key.</p>
+</blockquote>
+<p>brucks</p>
+<hr>
+<h2 class="atx" id="http-cookies-comments">HTTP Cookies: Comments</h2>
+<p><strong>What cookies enable:</strong></p>
+<ul>
+<li>Authorization (recognizing a returning, logged-in user)</li>
+<li>Shopping carts</li>
+<li>Recommendations (based on browsing/purchase history)</li>
+<li>Session state (e.g., staying logged into webmail)</li>
+</ul>
+<p><strong>Where state is actually kept</strong>, given that HTTP itself has none:</p>
+<ul>
+<li><em>At protocol endpoints:</em> state is maintained at the sender/receiver across multiple transactions.</li>
+<li><em>In messages:</em> the cookie header lines carry that state information along with each HTTP message.</li>
+</ul>
+<blockquote>
+<p><strong>Aside — Cookies and privacy:</strong> Cookies let a site learn a great deal about a visitor's activity on <em>that</em> site. The real concern is <strong>third-party persistent (tracking) cookies</strong>, which let a single identity be tracked across <em>many</em> different websites — something explored in detail next.</p>
+</blockquote>
+<hr>
+<h2 class="atx" id="cookies-tracking-a-userand39s-browsing-behavior">Cookies: Tracking a user's browsing behavior</h2>
+<p>Consider loading a New York Times page that also embeds an advertisement:</p>
+<div class="plantuml"><img src="https://www.plantuml.com/plantuml/svg/~1U5vLaCjA0q4GHVVz5TTauGmQHL64B2GQ944Y29c5YsmgqvMPnduCtJN4-Nlf-8gxeklSUugU9Q4elRFgf8lKE8Ab8VI2v5Z8axAy4qX0D4qhq2PoBIPufV90lh6CqTmQze9YtiRWk1o14kglj_4gvnvjpyS1FuXnd2xgu0wm7tx8HMJsn-Y3Vll5I7zWl2RhilzRC9dS7-9J55Sb5ayLjfGOo-fbXPsnhF8oGz_y5CLrYMLLlI9oPuVZdjm_HN5J5hSbTYnr2z8eg9VWI5YVRxn4qpGSMMCxeAE6JnF2tkDvVPcLfSeT_tIaKGSl-JFEK8VmRlZO-NVMNGbjKcTfG1rS5nBhWs7ZzqPQiDkorgn1MgaPUzqx-mb3DPC0"></div>
+<p>Loading the ad is <strong>not</strong> something the user consciously chose to do — it's triggered automatically by code embedded in the page (JavaScript/HTML placeholders that the browser fills in on the fly). In the process, the browser also exchanges cookie information with the ad network.</p>
+<p><strong>First-party cookie</strong> — set by nytimes.com, the site the user <em>deliberately</em> visited:</p>
+<div class="plantuml"><img src="https://www.plantuml.com/plantuml/svg/~1U5vDaBzEmq0CX_Tx2fCkCAGI0Z5qG2qTO610QWU6B4VY92VkxCXsW6my14_8aw1BG7JxoVe-_zkgUR4nHNSsYE-IX-Wd7WqqeNdoBc9hO0mIkjwW2OAr1IRdSl3KHOI29Wi9TLrpWdCTM4ml2l0AD1ci7hDvBuXqwknZG39u4NvNb9ckbz8YtCKHJ_bTyvpxpw1lFc1ry37bFVACihpzipVmS3m-WU0GfueEQ6ND_1fm0vStLzUEsF3t5cx_dQ8DeWQ35viAM0pu_logg1LEO3s21iCvZ8fIKTspOdxCMz1WpcsHcZ757yx6TUC"></div>
+<p><strong>Third-party cookie</strong> — set by AdX.com, a site the user <em>never chose</em> to visit at all, purely as a side effect of the ad being embedded on nytimes.com:</p>
+<div class="plantuml"><img src="https://www.plantuml.com/plantuml/svg/~1U5vDZp5En30GHNkVufDje0WD8CGMgmKQ2WH8cu8YpM1F4WlR4zaJ81s7u8IS16LN2Bhve_T6yxT5AUiKWpaQC_MH46YMIL4YAoKoWJk52hBl1uNpcQrwISOi0wK-CAhRu3afNhAy5yuLgC0ULglxHRi94__dhztpgPMu1ybzOBMZ49URIwZhpQ-znl752UwQvWcPnp2tQSTQMv5NpsjSdb-TcIJAsFyetPzMwU2pmqXPvme70T-VNstgiaGGYbU63eofS8RphaqFZmti859ugVlcYrTZjfpS5CCFnvLbbG"></div>
+<p><strong>One day later</strong>, the same browser visits an unrelated site, <code>socks.com</code>, which <em>also</em> happens to use AdX.com for its ads. Because the browser already carries AdX's cookie (<code>7493</code>) from the NYT visit, AdX recognizes the same browser and can link the two visits:</p>
+<div class="plantuml"><img src="https://www.plantuml.com/plantuml/svg/~1U5vzaKzF0Z4GnU_z5CDoWGCIK2JkmQ0Uz62C4GwOS1cs0pRqpzhEglljJLkMSD5RE_szUM-cYy3ekJ5Qz6gFUuEWiNKDGp34Q55esZ6m0w_s7mnIUQfOEIj4FA3TQu8YkEeGBYfd2i00wGRzvoXuz4Js7BKjAqC9XW5w3iEaiIt_fNZGYYp3rhllG3xHLIvbYtlTa938kCL0KDp9TMhULP80vG_qbwXD37vKZqQtoRQ4BnKKXnm7GfvlU8xbYKvWe1ezCkbMv9VOAbgKG6PBKf84bE3fiw708fhyJqHj98x9IXZCXl2qMhs2frgt6xia7bNE7HILCB-wkTpOuesuyJOxxPpFM-yLekkLyqIuX9VtLLmwXDh54QVZoMnZyzFfwsBrkgjsWhIHwNWo5s91LZP6_m967Rf9"></div>
+<p>The next time the client visits nytimes.com, AdX — now recognizing cookie <code>7493</code> and its accumulated browsing history — serves a <strong>targeted ad for socks</strong>, even though the user never told either site about their sock-shopping interest. This is the essence of cross-site tracking: <strong>AdX can reconstruct a browsing profile spanning multiple unrelated sites</strong>, purely from a cookie the user never explicitly agreed to at either of those sites</p>
+<p>brucks</p>
+<p><strong>Why this matters:</strong></p>
+<ul>
+<li>First-party cookies track behavior <em>on a single site</em>.</li>
+<li>Third-party cookies track behavior <em>across many sites</em>, without the user ever knowingly visiting the tracker.</li>
+<li>Tracking can be entirely <strong>invisible</strong> — rather than a visible ad, it could just as easily be an invisible tracking pixel/link.</li>
+<li>Because of this, <strong>Firefox and Safari disable third-party cookies by default</strong>, and Chrome moved to disable them as well.</li>
+<li>Once a cookie can identify an individual, it legally counts as <strong>personal data</strong>, bringing it under regulations like <strong>GDPR</strong> — which is why so many sites now prompt for cookie consent.</li>
+</ul>
+<hr>
+<h2 class="atx" id="browser-rendering">Browser Rendering</h2>
+<p><strong>Rendering</strong> is the umbrella term for everything a browser does to turn a fetched HTML file into an interactive page on screen: downloading, parsing, laying out, fetching additional assets (images, scripts, video, audio), and finally painting pixels.</p>
+<div class="plantuml"><img src="https://www.plantuml.com/plantuml/svg/~1U5vrpxiEWa0GXU5-dcB4ce9hQOYQQ06H22ymaH4tMPRDNWhVtk1YOaFt5z-SP2hho3W_ITXfG-D4AEazUuTsOaUAGFBJePlHYF7bS1267qxC2c09KgDaZAvzKsDBnWerHaWMTOBxUZauIi__ydnh0aWtmAdhVYJR87TM0nli3NFOoZTW_Vqac6B3j2JKIigLN0op0j09nl41TGew3PM1paBbeFDG1UWYL0bGiHhy93y7fclg"></div>
+<p>For every additional resource <em>referenced inside</em> the HTML — a stylesheet, a script, an image — the browser fires off <strong>separate requests</strong> back to the web server as it parses:</p>
+<pre><code class="fenced-code-block">1. GET /vacation.html   →  2. HTML returned
+3. (parsing begins)
+4. GET /chart.js        →  5. JS returned
+6. GET /mountain.jpg    →  7. Image returned
+8. Once all resources have arrived, the browser lays out and displays the page</code></pre>
+<p>Static pages, whose content rarely changes, generally have a simpler rendering path. Dynamic pages — where content must reflect the <em>current</em> value of something (ticket availability, live prices) — require a considerably more involved rendering and data-fetching process, since correctness depends on showing consistently up-to-date information across many simultaneous visitors.</p>
+<hr>
+<h2 class="atx" id="web-cache">Web Cache</h2>
+<p><strong>Goal:</strong> satisfy client requests <em>without</em> involving the origin server every single time.</p>
+<div class="plantuml"><img src="https://www.plantuml.com/plantuml/svg/~1U5wDZZ5h0a4GXVlz5I_QcCBYhhG8easAG0I5O3bPntDXTjVipXhoxyDvYoIeO3VCVE_DDyzAIOiNytHCr7c2q4yiYknPAP0HtYiq8hdkeDYvn5PT3CRq0uLE6AEbE0wAPWJAi0t6RpsyaC8tg7QWsZlK1tzYIVR00zPFbTooIFp-s_YUNES2rfnEdCvy73RZDOdl9Ms3wVIbripmkjciaFYhS5OpT9_F3IwtV8mXix7jGy7sEdXfhIx_ls8IGzNnBkTdKwaRbjN4p3diYfTVPaoAy0"></div>
+<p>The user configures their browser to point at a <strong>local web cache</strong> (also called a <strong>proxy server</strong>), and every request routes through it first:</p>
+<ul>
+<li><strong>If the object is already in the cache</strong> → the cache returns it directly to the client.</li>
+<li><strong>Otherwise</strong> → the cache fetches the object from the origin server, stores a copy, <em>then</em> returns it to the client.</li>
+</ul>
+<p>A web cache is unusual in that it plays <strong>both roles at once</strong>: it's a <em>server</em> to the original requesting client, and simultaneously a <em>client</em> to the origin server.</p>
+<p><strong>Why bother caching?</strong></p>
+<ul>
+<li><strong>Reduces response time</strong> — the cache is physically/network-wise closer to the client than the origin server.</li>
+<li><strong>Reduces traffic on an institution's access link</strong> — fewer requests have to leave the local network entirely.</li>
+<li><strong>The internet is dense with caches</strong>, which in practice lets even smaller, less resource-rich content providers deliver content effectively, since intermediate caches absorb repeat load.</li>
+</ul>
+<p>The server controls caching behavior via response headers:</p>
+<pre><code class="fenced-code-block">Cache-Control: max-age=&lt;seconds&gt;
+Cache-Control: no-cache</code></pre>
+<blockquote>
+<p><strong>Pro-Tip:</strong> Caching is a performance win for static content but a genuine liability for dynamic content — a cached page can go <strong>stale</strong>, silently serving outdated ticket prices or seat availability unless the server explicitly limits how long it may be cached (<code>max-age</code>) or forbids caching altogether (<code>no-cache</code>).</p>
+</blockquote>
+<p>brucks</p>
+<hr>
+<h2 class="atx" id="static-sites-serve-files-dynamic-sites-build-pages">Static Sites Serve Files; Dynamic Sites Build Pages</h2>
+<div class="plantuml"><img src="https://www.plantuml.com/plantuml/svg/~1U5vzaB5gmq0GHFlxYetT9107hD95i8qXJReK9f1cJnfB1tSdvNPbeRyF9mjYcv1kcPqPUBCLvQHzyEQXIrm79izZsoj9W79aut5IqfQIgnkboYMKwjfeJ3uurXwq-51MLz80Aqwn81QIYxHypx6zxt7jtwTs4AJ9QDUqF3PERmn7M1AaCz9NV3mv3v9H5E5fYWoodelV4X2DNTDgzJh96qhuxY5ABuq6RxAMVpQ_X0CejpqJpaWZgGku0JcCaSCTIJLh_wBGXQNuWsNNTRyilgrTUQ5WAMuehlOyx2T7bVkc0J_XVJiOMqmmB8N9wNnNjZ3PTw_RWZRKSGsolVDA7T9gdiQOBMBL1_y3AnsdnG"></div>
+<ul>
+<li><strong>Static:</strong> the <em>same</em> HTML file is returned to every visitor — fast, simple, no server-side logic involved.</li>
+<li><strong>Dynamic:</strong> the server runs code (frequently querying a database) to build a <strong>custom response for every single request</strong>.</li>
+</ul>
+<p>The same conceptual page can be produced either way:</p>
+<pre><code class="fenced-code-block">Static — about.html (fixed file)          Dynamic — about.ejs (server-rendered)
+&lt;html&gt;                                     &lt;html&gt;
+  &lt;body&gt;                                     &lt;body&gt;
+    &lt;h1&gt;About Us&lt;/h1&gt;                          &lt;h1&gt;&lt;%= company.name %&gt;&lt;/h1&gt;
+    &lt;p&gt;Founded in 2020.&lt;/p&gt;                     &lt;p&gt;Founded in &lt;%= company.year %&gt;.&lt;/p&gt;
+  &lt;/body&gt;                                       &lt;p&gt;Visitor #&lt;%= visitCount %&gt;&lt;/p&gt;
+&lt;/html&gt;                                       &lt;/body&gt;
+                                             &lt;/html&gt;</code></pre>
+<p>Booking a flight is a good real-world example of why dynamic pages exist at all: prices and seat availability genuinely differ visit to visit, because many clients are competing for the same underlying data, and the server must keep that data accurate and current in real time — not just render a fixed template.</p>
+<hr>
+<h2 class="atx" id="putting-it-together-the-web-app-workflow">Putting It Together: The Web App Workflow</h2>
+<div class="plantuml"><img src="https://www.plantuml.com/plantuml/svg/~1U5vLZq5Fmp0CXU_v5MQxZCFKUmze7I0O6Z3KIGXf5xSr9PARP8b3jt-FqdNJa7Amu--zPo-2e9VOiRfn7jiEWV5eeq3eID2WOleM40jUjpy2ZVPKYxP6gLIWQPbWSi-QZEpCREbj7yXdXNEt4y00zJ21wJgfbnpfMlP95GJol-G7jWyZz-I9p3LOECUwnfIxCoS5pDYskZwbe7F_f0qALXW89WzZDM1DDL9Vn6pxwuJ7Wv0to3jJR5PPYj0rXK551u5fYTobeyTxvlExj6uEpzljfWHF-qX1L1yWJKOeJL_NsNrPPY_flR-TWRHl3jv6eG1YLUelbfv2PBdyDHNaK7wiOH_97rLJ3UJPeGzdpxHc3iLc1JKogzHUB5CsU0hEca1ABSWqiUC_Ca2deW"></div>
+<p><strong>Typical flow:</strong> the browser sends an HTTPS request → the web server routes it to application logic → that logic queries a database and/or calls external APIs → the server assembles a response → the browser renders it.</p>
+<p>A static, simple website design rarely needs any of this — but a real application with a back end, multiple concurrent clients, and continuously changing data needs application-server logic that talks to a database <em>and</em> potentially calls out to other services/APIs to fetch what it needs.</p>
+<p><strong>Popular application stacks:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Stack</th>
+<th>OS</th>
+<th>Web Server</th>
+<th>Database</th>
+<th>Scripting/Framework</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>LAMP</strong></td>
+<td>Linux</td>
+<td>Apache</td>
+<td>MySQL</td>
+<td>PHP</td>
+</tr>
+<tr>
+<td><strong>MERN</strong></td>
+<td>—</td>
+<td>Node.js (server &amp; runtime)</td>
+<td>MongoDB</td>
+<td>Express + React (JavaScript)</td>
+</tr>
+<tr>
+<td><strong>WISA</strong></td>
+<td>Windows</td>
+<td>IIS</td>
+<td>SQL Server</td>
+<td>ASP.NET</td>
+</tr>
+<tr>
+<td><strong>JAM</strong></td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>JavaScript, APIs, Markup</td>
+</tr>
+</tbody></table>
+<p>The choice of stack depends heavily on developer preference and application requirements — MERN, for instance, pairs a graph-oriented NoSQL database (MongoDB) with a JavaScript-everywhere approach (React front end, Node.js/Express back end), while LAMP and WISA represent more traditional relational, server-rendered approaches on Linux and Windows respectively.</p>
+<p>brucks</p>
+<hr>
+<h2 class="atx" id="recap">Recap</h2>
+<ul>
+<li><strong>Internet</strong> = the global network; <strong>Web</strong> = the content layer running on top of it, primarily via HTTP.</li>
+<li>The web evolved: static <strong>Web 1.0</strong> → interactive <strong>Web 2.0</strong> → API-driven, cloud-native <strong>Web 3.0</strong>.</li>
+<li>Client (browser) requests, server responds — the <strong>client–server model</strong>.</li>
+<li>Browsers render pages through a <strong>parse → layout → paint</strong> pipeline.</li>
+<li><strong>URLs</strong> identify resources; <strong>DNS</strong> resolves domain names to IP addresses.</li>
+<li><strong>HTTP</strong> carries requests/responses (GET/POST); <strong>HTTPS</strong> adds <strong>TLS encryption</strong> on top.</li>
+<li><strong>Cookies</strong> fake statefulness on top of a stateless protocol — useful for carts and logins, but a privacy concern when used by third parties to track users across sites.</li>
+<li><strong>Web caches/proxies</strong> reduce latency and bandwidth by serving repeat requests locally.</li>
+<li><strong>Static sites</strong> serve fixed files; <strong>dynamic sites</strong> build a page per request using app-server logic and a database.</li>
+</ul>
+<hr>
+<h2 class="atx" id="think-about-it-questions">Think-About-It Questions</h2>
+<ol>
+<li><p>HTTP is deliberately stateless, yet the lecture's locking example (<code>X → X′ → X″</code>) shows real harm when a client crashes mid-transaction. If cookies solve "who is this client," do they, by themselves, also solve the atomicity problem from that locking example? Why or why not — and what additional mechanism would actually be needed?</p>
+</li>
+<li><p>Third-party tracking cookies rely on the <em>same</em> ad network being embedded on multiple unrelated sites. If a browser blocked all third-party cookies by default (as Safari and Firefox do), could a site like AdX still track a user across nytimes.com and socks.com using some other technique? Think beyond cookies specifically.</p>
+</li>
+<li><p>A web cache sitting between the client and origin server is described as acting as "both client and server." Suppose the cached page is for a flight-booking dynamic site. Walk through what could go wrong if the cache serves a stale <code>Cache-Control: max-age=3600</code> response for seat availability — and propose how the server-side headers could be designed differently to avoid it.</p>
+</li>
+<li><p>During the TLS handshake, the server's public key is sent to the client <em>before</em> any encryption is in place. If an attacker on the network path could swap the server's real certificate for their own (with their own public key) during that exchange, what would break — and at which exact step of the handshake would the client actually have a chance to detect the substitution?</p>
+</li>
+<li><p>The lecture contrasts a LAMP-style stack (Apache + MySQL + PHP) with a MERN-style stack (Node.js + MongoDB + React). Beyond "personal preference," what property of an application's <em>data</em> (structure, consistency needs, read/write patterns) might make a relational database (as in LAMP/WISA) a better fit than a document/graph database (as in MERN) — or vice versa?</p>
+</li>
+</ol>
+</article>
+</body>
+</html>
