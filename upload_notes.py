@@ -197,6 +197,20 @@ def save_curriculum(data):
     with open(CURRICULUM_JS_FILES, 'w', encoding='utf-8') as f:
         f.write(js_content)
 
+    # Bust browser cache in HTML entry points
+    ts = int(time.time())
+    for html_file in [INDEX_HTML, BS_HTML]:
+        if os.path.exists(html_file):
+            try:
+                with open(html_file, 'r', encoding='utf-8') as f:
+                    content = f.read()
+                content = re.sub(r'curriculum\.js(?:\?v=\d+)?', f'curriculum.js?v={ts}', content)
+                content = re.sub(r'app\.js(?:\?v=\d+)?', f'app.js?v={ts}', content)
+                with open(html_file, 'w', encoding='utf-8') as f:
+                    f.write(content)
+            except Exception as e:
+                print(f"[Warning] Could not update cache-buster in {html_file}: {e}")
+
 
 def ensure_subject_in_sem4(curriculum, sub_id, code, name):
     sem4 = None

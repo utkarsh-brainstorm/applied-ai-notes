@@ -1,6 +1,7 @@
 let activeSemesterId = null;
 let activeSubjectId = null;
 let currentActiveWeek = null;
+let curriculumData = (typeof CURRICULUM !== 'undefined') ? CURRICULUM : null;
 
 const semestersList = document.getElementById('semestersList');
 const floatingSubpage = document.getElementById('floatingSubpage');
@@ -12,6 +13,10 @@ const closeBtn = document.getElementById('closeBtn');
 const pdfBtn = document.getElementById('pdfBtn');
 const themeToggleBtn = document.getElementById('themeToggleBtn');
 
+function getCurriculum() {
+  return curriculumData || (typeof CURRICULUM !== 'undefined' ? CURRICULUM : { semesters: [] });
+}
+
 function getSubjectPrefix(subjectId) {
   const map = {
     'itw': 'IWT',
@@ -22,10 +27,34 @@ function getSubjectPrefix(subjectId) {
   return map[subjectId] || (subjectId ? subjectId.toUpperCase() : 'SUB');
 }
 
-function init() {
+async function init() {
   initTheme();
   renderSemesters();
   bindEvents();
+  await loadFreshCurriculum();
+}
+
+async function loadFreshCurriculum() {
+  try {
+    const res = await fetch(`./curriculum.json?_t=${Date.now()}`, { cache: 'no-store' });
+    if (res.ok) {
+      const freshData = await res.json();
+      if (JSON.stringify(freshData) !== JSON.stringify(curriculumData)) {
+        curriculumData = freshData;
+        renderSemesters();
+        if (activeSemesterId && floatingSubpage.classList.contains('active')) {
+          const sem = getCurriculum().semesters.find(s => s.id === activeSemesterId);
+          if (sem) {
+            const subj = sem.subjects.find(s => s.id === activeSubjectId) || sem.subjects[0];
+            renderTabs(sem);
+            renderSubject(subj);
+          }
+        }
+      }
+    }
+  } catch (e) {
+    // Fallback to static CURRICULUM
+  }
 }
 
 function initTheme() {
@@ -64,8 +93,9 @@ function toggleTheme() {
 
 function renderSemesters() {
   semestersList.innerHTML = '';
+  const curr = getCurriculum();
 
-  CURRICULUM.semesters.forEach(sem => {
+  curr.semesters.forEach(sem => {
     const block = document.createElement('div');
     block.className = 'semester-block';
     block.dataset.id = sem.id;
@@ -126,7 +156,7 @@ function renderSemesters() {
 }
 
 function openFloatingSubpage(semId, subjectId) {
-  const sem = CURRICULUM.semesters.find(s => s.id === semId);
+  const sem = getCurriculum().semesters.find(s => s.id === semId);
   if (!sem || !sem.subjects || sem.subjects.length === 0) return;
 
   activeSemesterId = semId;
@@ -165,7 +195,7 @@ function renderSubject(subj) {
     subj.weeks.forEach((w, idx) => {
       const btn = document.createElement('button');
       btn.className = `week-btn ${idx === 0 ? 'active' : ''}`;
-      btn.textContent = `Week 0${w.week}`;
+      btn.textContent = `Week ${String(w.week).padStart(2, '0')}`;
       btn.addEventListener('click', () => {
         if (currentActiveWeek && currentActiveWeek.week === w.week) return;
         weeksList.querySelectorAll('.week-btn').forEach(b => b.classList.remove('active'));
@@ -207,7 +237,7 @@ function renderWeekContent(week) {
       <div class="note-viewer-wrapper">
         <div class="note-loading-indicator" id="noteLoader">
           <div class="loader-spinner"></div>
-          <span>Loading ${prefix} Week 0${week.week}...</span>
+          <span>Loading ${prefix} Week ${String(week.week).padStart(2, '0')}...</span>
         </div>
         <iframe class="notes-frame" id="activeNoteIframe" src="${week.htmlPath}" title="${week.title || 'Notes'}"></iframe>
       </div>
