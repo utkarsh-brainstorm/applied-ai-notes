@@ -68,6 +68,12 @@
               "title": "SVM Dual Formulation & Kernel Trick",
               "htmlPath": "notes/html/sem4/ml2/week7.html",
               "pdfPath": "notes/pdf/sem4/ml2/ML2_Week7.pdf"
+            },
+            {
+              "week": 8,
+              "title": "Machine Learning 2 - Week 8",
+              "htmlPath": "notes/html/sem4/ml2/week8.html",
+              "pdfPath": "notes/pdf/sem4/ml2/ML2_Week8.pdf"
             }
           ]
         },
@@ -117,6 +123,12 @@
               "title": "File Handling & Collections",
               "htmlPath": "notes/html/sem4/oop/week7.html",
               "pdfPath": "notes/pdf/sem4/oop/OOP_Week7.pdf"
+            },
+            {
+              "week": 8,
+              "title": "Object Oriented Programming - Week 8",
+              "htmlPath": "notes/html/sem4/oop/week8.html",
+              "pdfPath": "notes/pdf/sem4/oop/OOP_Week8.pdf"
             }
           ]
         },
@@ -166,6 +178,12 @@
               "title": "Clustering vs Classification & K-Means",
               "htmlPath": "notes/html/sem4/bdm/week7.html",
               "pdfPath": "notes/pdf/sem4/bdm/BDM_Week7.pdf"
+            },
+            {
+              "week": 8,
+              "title": "Basics of Data Mining - Week 8",
+              "htmlPath": "notes/html/sem4/bdm/week8.html",
+              "pdfPath": "notes/pdf/sem4/bdm/BDM_Week8.pdf"
             }
           ]
         },
@@ -215,6 +233,12 @@
               "title": "CSS Layouts: Flexbox & Grid",
               "htmlPath": "notes/html/sem4/itw/week7.html",
               "pdfPath": "notes/pdf/sem4/itw/IWT_Week7.pdf"
+            },
+            {
+              "week": 8,
+              "title": "Introduction to Web Technologies - Week 8",
+              "htmlPath": "notes/html/sem4/itw/week8.html",
+              "pdfPath": "notes/pdf/sem4/itw/IWT_Week8.pdf"
             }
           ]
         }
