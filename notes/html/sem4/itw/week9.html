@@ -1,0 +1,1873 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <style>
+  @font-face {
+  font-family: octicons-link;
+  src: url(data:font/woff;charset=utf-8;base64,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) format('woff');
+}
+
+.markdown-body .octicon {
+  display: inline-block;
+  fill: currentColor;
+  vertical-align: text-bottom;
+}
+
+.markdown-body .anchor {
+  float: left;
+  line-height: 1;
+  margin-left: -20px;
+  padding-right: 4px;
+}
+
+.markdown-body .anchor:focus {
+  outline: none;
+}
+
+.markdown-body h1 .octicon-link,
+.markdown-body h2 .octicon-link,
+.markdown-body h3 .octicon-link,
+.markdown-body h4 .octicon-link,
+.markdown-body h5 .octicon-link,
+.markdown-body h6 .octicon-link {
+  color: #1b1f23;
+  vertical-align: middle;
+  visibility: hidden;
+}
+
+.markdown-body h1:hover .anchor,
+.markdown-body h2:hover .anchor,
+.markdown-body h3:hover .anchor,
+.markdown-body h4:hover .anchor,
+.markdown-body h5:hover .anchor,
+.markdown-body h6:hover .anchor {
+  text-decoration: none;
+}
+
+.markdown-body h1:hover .anchor .octicon-link,
+.markdown-body h2:hover .anchor .octicon-link,
+.markdown-body h3:hover .anchor .octicon-link,
+.markdown-body h4:hover .anchor .octicon-link,
+.markdown-body h5:hover .anchor .octicon-link,
+.markdown-body h6:hover .anchor .octicon-link {
+  visibility: visible;
+}
+
+.markdown-body {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  color: #24292e;
+  line-height: 1.5;
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
+  font-size: 16px;
+  line-height: 1.5;
+  word-wrap: break-word;
+}
+
+.markdown-body .pl-c {
+  color: #6a737d;
+}
+
+.markdown-body .pl-c1,
+.markdown-body .pl-s .pl-v {
+  color: #005cc5;
+}
+
+.markdown-body .pl-e,
+.markdown-body .pl-en {
+  color: #6f42c1;
+}
+
+.markdown-body .pl-s .pl-s1,
+.markdown-body .pl-smi {
+  color: #24292e;
+}
+
+.markdown-body .pl-ent {
+  color: #22863a;
+}
+
+.markdown-body .pl-k {
+  color: #d73a49;
+}
+
+.markdown-body .pl-pds,
+.markdown-body .pl-s,
+.markdown-body .pl-s .pl-pse .pl-s1,
+.markdown-body .pl-sr,
+.markdown-body .pl-sr .pl-cce,
+.markdown-body .pl-sr .pl-sra,
+.markdown-body .pl-sr .pl-sre {
+  color: #032f62;
+}
+
+.markdown-body .pl-smw,
+.markdown-body .pl-v {
+  color: #e36209;
+}
+
+.markdown-body .pl-bu {
+  color: #b31d28;
+}
+
+.markdown-body .pl-ii {
+  background-color: #b31d28;
+  color: #fafbfc;
+}
+
+.markdown-body .pl-c2 {
+  background-color: #d73a49;
+  color: #fafbfc;
+}
+
+.markdown-body .pl-c2:before {
+  content: "^M";
+}
+
+.markdown-body .pl-sr .pl-cce {
+  color: #22863a;
+  font-weight: 700;
+}
+
+.markdown-body .pl-ml {
+  color: #735c0f;
+}
+
+.markdown-body .pl-mh,
+.markdown-body .pl-mh .pl-en,
+.markdown-body .pl-ms {
+  color: #005cc5;
+  font-weight: 700;
+}
+
+.markdown-body .pl-mi {
+  color: #24292e;
+  font-style: italic;
+}
+
+.markdown-body .pl-mb {
+  color: #24292e;
+  font-weight: 700;
+}
+
+.markdown-body .pl-md {
+  background-color: #ffeef0;
+  color: #b31d28;
+}
+
+.markdown-body .pl-mi1 {
+  background-color: #f0fff4;
+  color: #22863a;
+}
+
+.markdown-body .pl-mc {
+  background-color: #ffebda;
+  color: #e36209;
+}
+
+.markdown-body .pl-mi2 {
+  background-color: #005cc5;
+  color: #f6f8fa;
+}
+
+.markdown-body .pl-mdr {
+  color: #6f42c1;
+  font-weight: 700;
+}
+
+.markdown-body .pl-ba {
+  color: #586069;
+}
+
+.markdown-body .pl-sg {
+  color: #959da5;
+}
+
+.markdown-body .pl-corl {
+  color: #032f62;
+  text-decoration: underline;
+}
+
+.markdown-body details {
+  display: block;
+}
+
+.markdown-body summary {
+  display: list-item;
+}
+
+.markdown-body a {
+  background-color: transparent;
+}
+
+.markdown-body a:active,
+.markdown-body a:hover {
+  outline-width: 0;
+}
+
+.markdown-body strong {
+  font-weight: inherit;
+  font-weight: bolder;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+  margin: .67em 0;
+}
+
+.markdown-body img {
+  border-style: none;
+}
+
+.markdown-body code,
+.markdown-body kbd,
+.markdown-body pre {
+  font-family: monospace,monospace;
+  font-size: 1em;
+}
+
+.markdown-body hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+}
+
+.markdown-body input {
+  font: inherit;
+  margin: 0;
+}
+
+.markdown-body input {
+  overflow: visible;
+}
+
+.markdown-body [type=checkbox] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.markdown-body * {
+  box-sizing: border-box;
+}
+
+.markdown-body input {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.markdown-body a {
+  color: #0366d6;
+  text-decoration: none;
+}
+
+.markdown-body a:hover {
+  text-decoration: underline;
+}
+
+.markdown-body strong {
+  font-weight: 600;
+}
+
+.markdown-body hr {
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #dfe2e5;
+  height: 0;
+  margin: 15px 0;
+  overflow: hidden;
+}
+
+.markdown-body hr:before {
+  content: "";
+  display: table;
+}
+
+.markdown-body hr:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.markdown-body table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.markdown-body td,
+.markdown-body th {
+  padding: 0;
+}
+
+.markdown-body details summary {
+  cursor: pointer;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.markdown-body h1 {
+  font-size: 32px;
+}
+
+.markdown-body h1,
+.markdown-body h2 {
+  font-weight: 600;
+}
+
+.markdown-body h2 {
+  font-size: 24px;
+}
+
+.markdown-body h3 {
+  font-size: 20px;
+}
+
+.markdown-body h3,
+.markdown-body h4 {
+  font-weight: 600;
+}
+
+.markdown-body h4 {
+  font-size: 16px;
+}
+
+.markdown-body h5 {
+  font-size: 14px;
+}
+
+.markdown-body h5,
+.markdown-body h6 {
+  font-weight: 600;
+}
+
+.markdown-body h6 {
+  font-size: 12px;
+}
+
+.markdown-body p {
+  margin-bottom: 10px;
+  margin-top: 0;
+}
+
+.markdown-body blockquote {
+  margin: 0;
+}
+
+.markdown-body ol,
+.markdown-body ul {
+  margin-bottom: 0;
+  margin-top: 0;
+  padding-left: 0;
+}
+
+.markdown-body ol ol,
+.markdown-body ul ol {
+  list-style-type: lower-roman;
+}
+
+.markdown-body ol ol ol,
+.markdown-body ol ul ol,
+.markdown-body ul ol ol,
+.markdown-body ul ul ol {
+  list-style-type: lower-alpha;
+}
+
+.markdown-body dd {
+  margin-left: 0;
+}
+
+.markdown-body code,
+.markdown-body pre {
+  font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;
+  font-size: 12px;
+}
+
+.markdown-body pre {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.markdown-body input::-webkit-inner-spin-button,
+.markdown-body input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+.markdown-body .border {
+  border: 1px solid #e1e4e8!important;
+}
+
+.markdown-body .border-0 {
+  border: 0!important;
+}
+
+.markdown-body .border-bottom {
+  border-bottom: 1px solid #e1e4e8!important;
+}
+
+.markdown-body .rounded-1 {
+  border-radius: 3px!important;
+}
+
+.markdown-body .bg-white {
+  background-color: #fff!important;
+}
+
+.markdown-body .bg-gray-light {
+  background-color: #fafbfc!important;
+}
+
+.markdown-body .text-gray-light {
+  color: #6a737d!important;
+}
+
+.markdown-body .mb-0 {
+  margin-bottom: 0!important;
+}
+
+.markdown-body .my-2 {
+  margin-bottom: 8px!important;
+  margin-top: 8px!important;
+}
+
+.markdown-body .pl-0 {
+  padding-left: 0!important;
+}
+
+.markdown-body .py-0 {
+  padding-bottom: 0!important;
+  padding-top: 0!important;
+}
+
+.markdown-body .pl-1 {
+  padding-left: 4px!important;
+}
+
+.markdown-body .pl-2 {
+  padding-left: 8px!important;
+}
+
+.markdown-body .py-2 {
+  padding-bottom: 8px!important;
+  padding-top: 8px!important;
+}
+
+.markdown-body .pl-3,
+.markdown-body .px-3 {
+  padding-left: 16px!important;
+}
+
+.markdown-body .px-3 {
+  padding-right: 16px!important;
+}
+
+.markdown-body .pl-4 {
+  padding-left: 24px!important;
+}
+
+.markdown-body .pl-5 {
+  padding-left: 32px!important;
+}
+
+.markdown-body .pl-6 {
+  padding-left: 40px!important;
+}
+
+.markdown-body .f6 {
+  font-size: 12px!important;
+}
+
+.markdown-body .lh-condensed {
+  line-height: 1.25!important;
+}
+
+.markdown-body .text-bold {
+  font-weight: 600!important;
+}
+
+.markdown-body:before {
+  content: "";
+  display: table;
+}
+
+.markdown-body:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.markdown-body>:first-child {
+  margin-top: 0!important;
+}
+
+.markdown-body>:last-child {
+  margin-bottom: 0!important;
+}
+
+.markdown-body a:not([href]) {
+  color: inherit;
+  text-decoration: none;
+}
+
+.markdown-body blockquote,
+.markdown-body dl,
+.markdown-body ol,
+.markdown-body p,
+.markdown-body pre,
+.markdown-body table,
+.markdown-body ul {
+  margin-bottom: 16px;
+  margin-top: 0;
+}
+
+.markdown-body hr {
+  background-color: #e1e4e8;
+  border: 0;
+  height: .25em;
+  margin: 24px 0;
+  padding: 0;
+}
+
+.markdown-body blockquote {
+  border-left: .25em solid #dfe2e5;
+  color: #6a737d;
+  padding: 0 1em;
+}
+
+.markdown-body blockquote>:first-child {
+  margin-top: 0;
+}
+
+.markdown-body blockquote>:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body kbd {
+  background-color: #fafbfc;
+  border: 1px solid #c6cbd1;
+  border-bottom-color: #959da5;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #959da5;
+  color: #444d56;
+  display: inline-block;
+  font-size: 11px;
+  line-height: 10px;
+  padding: 3px 5px;
+  vertical-align: middle;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  font-weight: 600;
+  line-height: 1.25;
+  margin-bottom: 16px;
+  margin-top: 24px;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+}
+
+.markdown-body h1,
+.markdown-body h2 {
+  border-bottom: 1px solid #eaecef;
+  padding-bottom: .3em;
+}
+
+.markdown-body h2 {
+  font-size: 1.5em;
+}
+
+.markdown-body h3 {
+  font-size: 1.25em;
+}
+
+.markdown-body h4 {
+  font-size: 1em;
+}
+
+.markdown-body h5 {
+  font-size: .875em;
+}
+
+.markdown-body h6 {
+  color: #6a737d;
+  font-size: .85em;
+}
+
+.markdown-body ol,
+.markdown-body ul {
+  padding-left: 2em;
+}
+
+.markdown-body ol ol,
+.markdown-body ol ul,
+.markdown-body ul ol,
+.markdown-body ul ul {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.markdown-body li {
+  word-wrap: break-all;
+}
+
+.markdown-body li>p {
+  margin-top: 16px;
+}
+
+.markdown-body li+li {
+  margin-top: .25em;
+}
+
+.markdown-body dl {
+  padding: 0;
+}
+
+.markdown-body dl dt {
+  font-size: 1em;
+  font-style: italic;
+  font-weight: 600;
+  margin-top: 16px;
+  padding: 0;
+}
+
+.markdown-body dl dd {
+  margin-bottom: 16px;
+  padding: 0 16px;
+}
+
+.markdown-body table {
+  display: block;
+  overflow: auto;
+  width: 100%;
+}
+
+.markdown-body table th {
+  font-weight: 600;
+}
+
+.markdown-body table td,
+.markdown-body table th {
+  border: 1px solid #dfe2e5;
+  padding: 6px 13px;
+}
+
+.markdown-body table tr {
+  background-color: #fff;
+  border-top: 1px solid #c6cbd1;
+}
+
+.markdown-body table tr:nth-child(2n) {
+  background-color: #f6f8fa;
+}
+
+.markdown-body img {
+  background-color: #fff;
+  box-sizing: content-box;
+  max-width: 100%;
+}
+
+.markdown-body img[align=right] {
+  padding-left: 20px;
+}
+
+.markdown-body img[align=left] {
+  padding-right: 20px;
+}
+
+.markdown-body code {
+  background-color: rgba(27,31,35,.05);
+  border-radius: 3px;
+  font-size: 85%;
+  margin: 0;
+  padding: .2em .4em;
+}
+
+.markdown-body pre {
+  word-wrap: normal;
+}
+
+.markdown-body pre>code {
+  background: transparent;
+  border: 0;
+  font-size: 100%;
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  word-break: normal;
+}
+
+.markdown-body .highlight {
+  margin-bottom: 16px;
+}
+
+.markdown-body .highlight pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+
+.markdown-body .highlight pre,
+.markdown-body pre {
+  background-color: #f6f8fa;
+  border-radius: 3px;
+  font-size: 85%;
+  line-height: 1.45;
+  overflow: auto;
+  padding: 16px;
+}
+
+.markdown-body pre code {
+  background-color: transparent;
+  border: 0;
+  display: inline;
+  line-height: inherit;
+  margin: 0;
+  max-width: auto;
+  overflow: visible;
+  padding: 0;
+  word-wrap: normal;
+}
+
+.markdown-body .commit-tease-sha {
+  color: #444d56;
+  display: inline-block;
+  font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;
+  font-size: 90%;
+}
+
+.markdown-body .blob-wrapper {
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.markdown-body .blob-wrapper-embedded {
+  max-height: 240px;
+  overflow-y: auto;
+}
+
+.markdown-body .blob-num {
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  color: rgba(27,31,35,.3);
+  cursor: pointer;
+  font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;
+  font-size: 12px;
+  line-height: 20px;
+  min-width: 50px;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-align: right;
+  user-select: none;
+  vertical-align: top;
+  white-space: nowrap;
+  width: 1%;
+}
+
+.markdown-body .blob-num:hover {
+  color: rgba(27,31,35,.6);
+}
+
+.markdown-body .blob-num:before {
+  content: attr(data-line-number);
+}
+
+.markdown-body .blob-code {
+  line-height: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  position: relative;
+  vertical-align: top;
+}
+
+.markdown-body .blob-code-inner {
+  color: #24292e;
+  font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;
+  font-size: 12px;
+  overflow: visible;
+  white-space: pre;
+  word-wrap: normal;
+}
+
+.markdown-body .pl-token.active,
+.markdown-body .pl-token:hover {
+  background: #ffea7f;
+  cursor: pointer;
+}
+
+.markdown-body kbd {
+  background-color: #fafbfc;
+  border: 1px solid #d1d5da;
+  border-bottom-color: #c6cbd1;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #c6cbd1;
+  color: #444d56;
+  display: inline-block;
+  font: 11px SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;
+  line-height: 10px;
+  padding: 3px 5px;
+  vertical-align: middle;
+}
+
+.markdown-body :checked+.radio-label {
+  border-color: #0366d6;
+  position: relative;
+  z-index: 1;
+}
+
+.markdown-body .tab-size[data-tab-size="1"] {
+  -moz-tab-size: 1;
+  tab-size: 1;
+}
+
+.markdown-body .tab-size[data-tab-size="2"] {
+  -moz-tab-size: 2;
+  tab-size: 2;
+}
+
+.markdown-body .tab-size[data-tab-size="3"] {
+  -moz-tab-size: 3;
+  tab-size: 3;
+}
+
+.markdown-body .tab-size[data-tab-size="4"] {
+  -moz-tab-size: 4;
+  tab-size: 4;
+}
+
+.markdown-body .tab-size[data-tab-size="5"] {
+  -moz-tab-size: 5;
+  tab-size: 5;
+}
+
+.markdown-body .tab-size[data-tab-size="6"] {
+  -moz-tab-size: 6;
+  tab-size: 6;
+}
+
+.markdown-body .tab-size[data-tab-size="7"] {
+  -moz-tab-size: 7;
+  tab-size: 7;
+}
+
+.markdown-body .tab-size[data-tab-size="8"] {
+  -moz-tab-size: 8;
+  tab-size: 8;
+}
+
+.markdown-body .tab-size[data-tab-size="9"] {
+  -moz-tab-size: 9;
+  tab-size: 9;
+}
+
+.markdown-body .tab-size[data-tab-size="10"] {
+  -moz-tab-size: 10;
+  tab-size: 10;
+}
+
+.markdown-body .tab-size[data-tab-size="11"] {
+  -moz-tab-size: 11;
+  tab-size: 11;
+}
+
+.markdown-body .tab-size[data-tab-size="12"] {
+  -moz-tab-size: 12;
+  tab-size: 12;
+}
+
+.markdown-body .task-list-item {
+  list-style-type: none;
+}
+
+.markdown-body .task-list-item+.task-list-item {
+  margin-top: 3px;
+}
+
+.markdown-body .task-list-item input {
+  margin: 0 .2em .25em -1.6em;
+  vertical-align: middle;
+}
+
+.markdown-body hr {
+  border-bottom-color: #eee;
+}
+
+.markdown-body .pl-0 {
+  padding-left: 0!important;
+}
+
+.markdown-body .pl-1 {
+  padding-left: 4px!important;
+}
+
+.markdown-body .pl-2 {
+  padding-left: 8px!important;
+}
+
+.markdown-body .pl-3 {
+  padding-left: 16px!important;
+}
+
+.markdown-body .pl-4 {
+  padding-left: 24px!important;
+}
+
+.markdown-body .pl-5 {
+  padding-left: 32px!important;
+}
+
+.markdown-body .pl-6 {
+  padding-left: 40px!important;
+}
+
+.markdown-body .pl-7 {
+  padding-left: 48px!important;
+}
+
+.markdown-body .pl-8 {
+  padding-left: 64px!important;
+}
+
+.markdown-body .pl-9 {
+  padding-left: 80px!important;
+}
+
+.markdown-body .pl-10 {
+  padding-left: 96px!important;
+}
+
+.markdown-body .pl-11 {
+  padding-left: 112px!important;
+}
+
+.markdown-body .pl-12 {
+  padding-left: 128px!important;
+}
+
+/*# sourceURL=webpack://./node_modules/github-markdown-css/github-markdown.css */
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL25vZGVfbW9kdWxlcy9naXRodWItbWFya2Rvd24tY3NzL2dpdGh1Yi1tYXJrZG93bi5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSwwQkFBMEI7RUFDMUIsMkRBQXF0RTtBQUN2dEU7O0FBRUE7RUFDRSxxQkFBcUI7RUFDckIsa0JBQWtCO0VBQ2xCLDJCQUEyQjtBQUM3Qjs7QUFFQTtFQUNFLFdBQVc7RUFDWCxjQUFjO0VBQ2Qsa0JBQWtCO0VBQ2xCLGtCQUFrQjtBQUNwQjs7QUFFQTtFQUNFLGFBQWE7QUFDZjs7QUFFQTs7Ozs7O0VBTUUsY0FBYztFQUNkLHNCQUFzQjtFQUN0QixrQkFBa0I7QUFDcEI7O0FBRUE7Ozs7OztFQU1FLHFCQUFxQjtBQUN2Qjs7QUFFQTs7Ozs7O0VBTUUsbUJBQW1CO0FBQ3JCOztBQUVBO0VBQ0UsMEJBQTBCO0VBQzFCLDhCQUE4QjtFQUM5QixjQUFjO0VBQ2QsZ0JBQWdCO0VBQ2hCLGtJQUFrSTtFQUNsSSxlQUFlO0VBQ2YsZ0JBQWdCO0VBQ2hCLHFCQUFxQjtBQUN2Qjs7QUFFQTtFQUNFLGNBQWM7QUFDaEI7O0FBRUE7O0VBRUUsY0FBYztBQUNoQjs7QUFFQTs7RUFFRSxjQUFjO0FBQ2hCOztBQUVBOztFQUVFLGNBQWM7QUFDaEI7O0FBRUE7RUFDRSxjQUFjO0FBQ2hCOztBQUVBO0VBQ0UsY0FBYztBQUNoQjs7QUFFQTs7Ozs7OztFQU9FLGNBQWM7QUFDaEI7O0FBRUE7O0VBRUUsY0FBYztBQUNoQjs7QUFFQTtFQUNFLGNBQWM7QUFDaEI7O0FBRUE7RUFDRSx5QkFBeUI7RUFDekIsY0FBYztBQUNoQjs7QUFFQTtFQUNFLHlCQUF5QjtFQUN6QixjQUFjO0FBQ2hCOztBQUVBO0VBQ0UsYUFBYTtBQUNmOztBQUVBO0VBQ0UsY0FBYztFQUNkLGdCQUFnQjtBQUNsQjs7QUFFQTtFQUNFLGNBQWM7QUFDaEI7O0FBRUE7OztFQUdFLGNBQWM7RUFDZCxnQkFBZ0I7QUFDbEI7O0FBRUE7RUFD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 */
+  </style>
+  <style>
+  /**
+ * prism.js default theme for JavaScript, CSS and HTML
+ * Based on dabblet (http://dabblet.com)
+ * @author Lea Verou
+ */
+
+code[class*="language-"],
+pre[class*="language-"] {
+	color: black;
+	background: none;
+	text-shadow: 0 1px white;
+	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	font-size: 1em;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	line-height: 1.5;
+
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+}
+
+pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
+code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-selection {
+	text-shadow: none;
+	background: #b3d4fc;
+}
+
+pre[class*="language-"]::selection, pre[class*="language-"] ::selection,
+code[class*="language-"]::selection, code[class*="language-"] ::selection {
+	text-shadow: none;
+	background: #b3d4fc;
+}
+
+@media print {
+	code[class*="language-"],
+	pre[class*="language-"] {
+		text-shadow: none;
+	}
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+	padding: 1em;
+	margin: .5em 0;
+	overflow: auto;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+	background: #f5f2f0;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+	padding: .1em;
+	border-radius: .3em;
+	white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: slategray;
+}
+
+.token.punctuation {
+	color: #999;
+}
+
+.token.namespace {
+	opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+	color: #905;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+	color: #690;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+	color: #9a6e3a;
+	/* This background color was intended by the author of this theme. */
+	background: hsla(0, 0%, 100%, .5);
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+	color: #07a;
+}
+
+.token.function,
+.token.class-name {
+	color: #DD4A68;
+}
+
+.token.regex,
+.token.important,
+.token.variable {
+	color: #e90;
+}
+
+.token.important,
+.token.bold {
+	font-weight: bold;
+}
+.token.italic {
+	font-style: italic;
+}
+
+.token.entity {
+	cursor: help;
+}
+
+/*# sourceURL=webpack://./node_modules/prismjs/themes/prism.css */
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL25vZGVfbW9kdWxlcy9wcmlzbWpzL3RoZW1lcy9wcmlzbS5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7Ozs7RUFJRTs7QUFFRjs7Q0FFQyxZQUFZO0NBQ1osZ0JBQWdCO0NBQ2hCLHdCQUF3QjtDQUN4QixzRUFBc0U7Q0FDdEUsY0FBYztDQUNkLGdCQUFnQjtDQUNoQixnQkFBZ0I7Q0FDaEIsb0JBQW9CO0NBQ3BCLGtCQUFrQjtDQUNsQixpQkFBaUI7Q0FDakIsZ0JBQWdCOztDQUVoQixnQkFBZ0I7Q0FDaEIsY0FBYztDQUNkLFdBQVc7O0NBRVgscUJBQXFCO0NBQ3JCLGtCQUFrQjtDQUNsQixpQkFBaUI7Q0FDakIsYUFBYTtBQUNkOztBQUVBOztDQUVDLGlCQUFpQjtDQUNqQixtQkFBbUI7QUFDcEI7O0FBRUE7O0NBRUMsaUJBQWlCO0NBQ2pCLG1CQUFtQjtBQUNwQjs7QUFFQTtDQUNDOztFQUVDLGlCQUFpQjtDQUNsQjtBQUNEOztBQUVBLGdCQUFnQjtBQUNoQjtDQUNDLFlBQVk7Q0FDWixjQUFjO0NBQ2QsY0FBYztBQUNmOztBQUVBOztDQUVDLG1CQUFtQjtBQUNwQjs7QUFFQSxnQkFBZ0I7QUFDaEI7Q0FDQyxhQUFhO0NBQ2IsbUJBQW1CO0NBQ25CLG1CQUFtQjtBQUNwQjs7QUFFQTs7OztDQUlDLGdCQUFnQjtBQUNqQjs7QUFFQTtDQUNDLFdBQVc7QUFDWjs7QUFFQTtDQUNDLFdBQVc7QUFDWjs7QUFFQTs7Ozs7OztDQU9DLFdBQVc7QUFDWjs7QUFFQTs7Ozs7O0NBTUMsV0FBVztBQUNaOztBQUVBOzs7OztDQUtDLGNBQWM7Q0FDZCxvRUFBb0U7Q0FDcEUsaUNBQWlDO0FBQ2xDOztBQUVBOzs7Q0FHQyxXQUFXO0FBQ1o7O0FBRUE7O0NBRUMsY0FBYztBQUNmOztBQUVBOzs7Q0FHQyxXQUFXO0FBQ1o7O0FBRUE7O0NBRUMsaUJBQWlCO0FBQ2xCO0FBQ0E7Q0FDQyxrQkFBa0I7QUFDbkI7O0FBRUE7Q0FDQyxZQUFZO0FBQ2IiLCJzb3VyY2VSb290IjoiIn0= */
+  </style>
+  <style>
+  
+  </style>
+  <style>
+    .markdown-body {
+      font-family: -apple-system,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
+      box-sizing: border-box;
+      min-width: 200px;
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 45px;
+    }
+
+    @media not print {
+      .markdown-body {
+        padding: 45px;
+      }
+
+      @media (max-width: 767px) {
+        .markdown-body {
+          padding: 15px;
+        }
+      }
+    }
+
+    .hf-container {
+      color: #24292e;
+      line-height: 1.3;
+    }
+
+    .markdown-body .highlight pre,
+    .markdown-body pre {
+      white-space: pre-wrap;
+    }
+    .markdown-body table {
+      display: table;
+    }
+    .markdown-body img[data-align="center"] {
+      display: block;
+      margin: 0 auto;
+    }
+    .markdown-body img[data-align="right"] {
+      display: block;
+      margin: 0 0 0 auto;
+    }
+    .markdown-body li.task-list-item {
+      list-style-type: none;
+    }
+    .markdown-body li > [type=checkbox] {
+      margin: 0 0 0 -1.3em;
+    }
+    .markdown-body input[type="checkbox"] ~ p {
+      margin-top: 0;
+      display: inline-block;
+    }
+    .markdown-body ol ol,
+    .markdown-body ul ol {
+      list-style-type: decimal;
+    }
+    .markdown-body ol ol ol,
+    .markdown-body ol ul ol,
+    .markdown-body ul ol ol,
+    .markdown-body ul ul ol {
+      list-style-type: decimal;
+    }
+  </style>
+  <style>.markdown-body a.footnote-ref {
+  text-decoration: none;
+}
+
+.footnotes {
+  font-size: .85em;
+  opacity: .8;
+}
+
+.footnotes li[role="doc-endnote"] {
+  position: relative;
+}
+
+.footnotes .footnote-back {
+  position: absolute;
+  font-family: initial;
+  top: .2em;
+  right: 1em;
+  text-decoration: none;
+}
+
+.inline-math.invalid,
+.multiple-math.invalid {
+  color: rgb(255, 105, 105);
+}
+
+.toc-container {
+  width: 100%;
+}
+
+.toc-container .toc-title {
+  font-weight: 700;
+  font-size: 1.2em;
+  margin-bottom: 0;
+}
+
+.toc-container li,
+.toc-container ul,
+.toc-container ul li {
+  list-style: none !important;
+}
+
+.toc-container > ul {
+  padding-left: 0;
+}
+
+.toc-container ul li span {
+  display : flex;
+}
+
+.toc-container ul li span a {
+  color: inherit;
+  text-decoration: none;
+}
+.toc-container ul li span a:hover {
+  color: inherit;
+  text-decoration: none;
+}
+
+.toc-container ul li span span.dots {
+  flex: 1;
+  height: 0.65em;
+  margin: 0 10px;
+  border-bottom: 2px dotted black;
+}
+
+/*# sourceURL=webpack://./src/muya/lib/assets/styles/exportStyle.css */
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9tdXlhL2xpYi9hc3NldHMvc3R5bGVzL2V4cG9ydFN0eWxlLmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLHFCQUFxQjtBQUN2Qjs7QUFFQTtFQUNFLGdCQUFnQjtFQUNoQixXQUFXO0FBQ2I7O0FBRUE7RUFDRSxrQkFBa0I7QUFDcEI7O0FBRUE7RUFDRSxrQkFBa0I7RUFDbEIsb0JBQW9CO0VBQ3BCLFNBQVM7RUFDVCxVQUFVO0VBQ1YscUJBQXFCO0FBQ3ZCOztBQUVBOztFQUVFLHlCQUF5QjtBQUMzQjs7QUFFQTtFQUNFLFdBQVc7QUFDYjs7QUFFQTtFQUNFLGdCQUFnQjtFQUNoQixnQkFBZ0I7RUFDaEIsZ0JBQWdCO0FBQ2xCOztBQUVBOzs7RUFHRSwyQkFBMkI7QUFDN0I7O0FBRUE7RUFDRSxlQUFlO0FBQ2pCOztBQUVBO0VBQ0UsY0FBYztBQUNoQjs7QUFFQTtFQUNFLGNBQWM7RUFDZCxxQkFBcUI7QUFDdkI7QUFDQTtFQUNFLGNBQWM7RUFDZCxxQkFBcUI7QUFDdkI7O0FBRUE7RUFDRSxPQUFPO0VBQ1AsY0FBYztFQUNkLGNBQWM7RUFDZCwrQkFBK0I7QUFDakMiLCJzb3VyY2VSb290IjoiIn0= */</style>
+  <style>.markdown-body{}pre.front-matter{display:none!important;}</style>
+
+<style id="libron-font-injection">
+@font-face {
+  font-family: 'Libron';
+  src: url('../../../../Libron_Web/Libron-Regular.woff2') format('woff2'),
+       url('../../../../Libron_Web/Libron-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Libron';
+  src: url('../../../../Libron_Web/Libron-Bold.woff2') format('woff2'),
+       url('../../../../Libron_Web/Libron-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Libron';
+  src: url('../../../../Libron_Web/Libron-Italic.woff2') format('woff2'),
+       url('../../../../Libron_Web/Libron-Italic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Libron';
+  src: url('../../../../Libron_Web/Libron-BoldItalic.woff2') format('woff2'),
+       url('../../../../Libron_Web/Libron-BoldItalic.ttf') format('truetype');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+html, body, .markdown-body, h1, h2, h3, h4, h5, h6, p, span, li, a, td, th {
+  font-family: 'Libron', serif, -apple-system, BlinkMacSystemFont !important;
+}
+
+body {
+  padding: 1.5rem 2rem !important;
+  max-width: 900px !important;
+  margin: 0 auto !important;
+}
+
+/* Dark mode theme styles inside iframe */
+[data-theme="dark"] html,
+[data-theme="dark"] body,
+[data-theme="dark"] .markdown-body {
+  background-color: #0a0a0a !important;
+  color: #ededed !important;
+}
+[data-theme="dark"] .markdown-body table tr {
+  background-color: #121212 !important;
+  border-color: #262626 !important;
+}
+[data-theme="dark"] .markdown-body table tr:nth-child(2n) {
+  background-color: #181818 !important;
+}
+[data-theme="dark"] .markdown-body table th,
+[data-theme="dark"] .markdown-body table td {
+  border-color: #2e2e2e !important;
+}
+[data-theme="dark"] .markdown-body pre,
+[data-theme="dark"] .markdown-body code {
+  background-color: #141414 !important;
+  color: #f0f0f0 !important;
+  border-color: #2a2a2a !important;
+}
+[data-theme="dark"] .markdown-body blockquote {
+  color: #999999 !important;
+  border-left-color: #444444 !important;
+}
+[data-theme="dark"] .markdown-body a {
+  color: #58a6ff !important;
+}
+[data-theme="dark"] .markdown-body hr {
+  background-color: #262626 !important;
+}
+</style>
+
+</head>
+<body>
+  <article class="markdown-body"><h1 class="atx" id="web-application-architecture-mvc-and-the-separation-of-concerns">Web Application Architecture: MVC and the Separation of Concerns</h1>
+<h3 class="atx" id="introduction-to-web-technology--week-9">Introduction to Web Technology — Week 9</h3>
+<hr>
+<h2 class="atx" id="index">Index</h2>
+<ol>
+<li><a href="#the-hook-one-click-three-roles">The Hook: One Click, Three Roles</a> — Why pressing "Add to Cart" is secretly a three-person team effort.</li>
+<li><a href="#what-is-mvc">What Is MVC?</a> — A 1970s idea that refuses to retire.</li>
+<li><a href="#how-the-three-parts-connect">How the Three Parts Connect</a> — Office gossip rules: nobody talks except through the Controller.</li>
+<li><a href="#the-model">The Model</a> — The workhorse who knows everything and shows nothing.</li>
+<li><a href="#the-view-presentation-layer">The View: Presentation Layer</a> — The pretty face that only speaks when spoken to.</li>
+<li><a href="#the-controller">The Controller</a> — The middle manager who delegates everything.</li>
+<li><a href="#worked-example-a-to-do-list">Worked Example: A To-Do List</a> — Buying milk, one architectural layer at a time.</li>
+<li><a href="#real-world-example-online-shopping">Real-World Example: Online Shopping</a> — The same trio, now with a credit card.</li>
+<li><a href="#separation-of-concerns">Separation of Concerns</a> — Why designers and database engineers can share an office without bloodshed.</li>
+<li><a href="#frontend-and-backend">Frontend and Backend</a> — Who lives in the browser and who lives behind the curtain.</li>
+<li><a href="#the-browser-and-server-split">The Browser and Server Split</a> — A border wall with an HTTP checkpoint.</li>
+<li><a href="#mvc-in-a-real-framework">MVC in a Real Framework</a> — Spot the trio hiding in three humble files.</li>
+<li><a href="#workflow-of-a-modern-web-application">Workflow of a Modern Web Application</a> — A page load is just a short, polite conversation.</li>
+<li><a href="#anatomy-of-a-request">Anatomy of a Request</a> — Eight hops from click to pixels.</li>
+<li><a href="#practical-example-tracing-a-request">Practical Example: Tracing a Request</a> — Following student 42's profile click under the microscope.</li>
+<li><a href="#discussion-alternatives-trends-and-limits">Discussion: Alternatives, Trends and Limits</a> — MVC's rivals, its heirs, and its bad habits.</li>
+<li><a href="#recap">Recap</a> — The whole chapter on one coffee break.</li>
+<li><a href="#practice-questions">Practice Questions</a> — Five problems that will not be solved by memorising.</li>
+</ol>
+<hr>
+<h2 class="atx" id="mvc-architecture-one-click-three-roles">MVC Architecture: One Click, Three Roles</h2>
+<p>Clicking <strong>Add to Cart</strong> changes the cart count through three cooperating components:</p>
+<ul>
+<li><p><strong>Model:</strong> Manages data and business logic (e.g., stock and cart updates).</p>
+</li>
+<li><p><strong>View:</strong> Displays the interface and updates the cart badge.</p>
+</li>
+<li><p><strong>Controller:</strong> Handles user events and coordinates the Model and View.</p>
+</li>
+</ul>
+<h3 class="atx" id="context">Context</h3>
+<p>The <strong>client–server paradigm</strong> separates the front end and back end, communicating through HTTP request–response. <strong>MVC</strong> organises an application's internal structure by separating data, presentation, and coordination.</p>
+<h3 class="atx" id="events-andamp-scalability">Events &amp; Scalability</h3>
+<p>Typing, ticking a checkbox, or clicking a button generates an <strong>event</strong>, triggering effects such as displaying a page, executing logic, or modifying database records. Modular architecture and <strong>separation of concerns</strong> make large applications easier to maintain and scale for multiple clients.</p>
+<h3 class="atx" id="learning-objectives">Learning Objectives</h3>
+<ul>
+<li><p>Understand MVC, the View, and the Controller.</p>
+</li>
+<li><p>Learn separation of concerns and its benefits.</p>
+</li>
+<li><p>Explore alternative architectures and emerging approaches.</p>
+</li>
+<li><p>Understand the complete request workflow, from user event to resulting effect.</p>
+</li>
+</ul>
+<h3 class="atx" id="restaurant-analogy">Restaurant Analogy</h3>
+<p><strong>Customer = User | Waiter = Controller | Kitchen = Model | Presentation = View.</strong> The waiter coordinates, the kitchen manages data and rules, and the presentation displays the result—each has a distinct responsibility.</p>
+<hr>
+<h2 class="atx" id="what-is-mvc">What Is MVC?</h2>
+<p><strong>MVC</strong>, short for <strong>Model–View–Controller</strong>, is a way of splitting a program into <strong>three cooperating parts, each with one job</strong>. The three compartments are distinct, do not overlap, and have clear demarcations of responsibility, yet they cooperate to make one application work.  </p>
+<table>
+<thead>
+<tr>
+<th>Part</th>
+<th>Its one job</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Model</strong></td>
+<td>Owns the data and the rules for working with it</td>
+</tr>
+<tr>
+<td><strong>View</strong></td>
+<td>Shows results to the user; it only cares about display, not where the data came from</td>
+</tr>
+<tr>
+<td><strong>Controller</strong></td>
+<td>Takes input from the user and tells the Model what to do and the View what to show</td>
+</tr>
+</tbody></table>
+<p></p>
+<h3 class="atx" id="the-three-parts-in-a-little-more-detail">The Three Parts in a Little More Detail</h3>
+<ul>
+<li><strong>Model.</strong> Think of the database where your entire data is stored. Inserting new data, deleting outdated data, and querying or retrieving data all fall under the Model's scope.</li>
+<li><strong>View.</strong> This is the presentation. Whether the output appears on a phone or a laptop depends on screen size, and that is handled by how you design the front end with HTML, CSS and JavaScript. <em>View</em> is the architectural name for the compartment that keeps all presentation concerns in one place.</li>
+<li><strong>Controller.</strong> It takes input from the user, tells the Model what to do, and tells the View what to show. In short, it <strong>coordinates</strong> between the Model and the View.</li>
+</ul>
+<h3 class="atx" id="history-and-present-use">History and Present Use</h3>
+<p>The pattern dates back to <strong>Smalltalk-80 at Xerox PARC in the late 1970s</strong>, where it was advocated for large-scale solutions, and it <strong>still shapes how most web frameworks are organized today</strong>.</p>
+<table>
+<thead>
+<tr>
+<th>Framework</th>
+<th>Well-known users / domains</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Ruby on Rails</strong></td>
+<td>GitHub, Shopify, Airbnb</td>
+</tr>
+<tr>
+<td><strong>Django</strong></td>
+<td>Instagram, Disqus</td>
+</tr>
+<tr>
+<td><strong>Spring MVC</strong> (Java-based)</td>
+<td>Broad usage in banking, insurance, e-commerce platforms and large corporate applications</td>
+</tr>
+<tr>
+<td><strong>ASP.NET MVC</strong></td>
+<td>Broad usage in banking, insurance, e-commerce platforms and large corporate applications</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 class="atx" id="how-the-three-parts-connect">How the Three Parts Connect</h2>
+<p> Every user action travels a loop with five steps. <strong>(1)</strong> The user <em>acts</em> on some UI element: a click, typed text, or even a voice command if a speech API is used. This triggers the <strong>Controller</strong> first, which takes the input and decides what happens next. <strong>(2)</strong> The Controller <em>tells the Model what to do</em>. The Model owns the data and the methods (the business logic), so it alone decides how to perform the request, for example how to query or retrieve data. <strong>(3)</strong> Once the work is done, the Model <em>notifies the Controller of the change</em>. Note that it does not ship the data back by itself; it only reports that the task is complete. <strong>(4)</strong> The Controller then <em>tells the View what to display</em>, which is where presentation begins. <strong>(5)</strong> The user <em>sees the result</em>. </p>
+<p></p>
+<div class="plantuml"><img src="https://www.plantuml.com/plantuml/svg/~1U5vjahrkt30GX7i-nUHI9hx0-Mck28ouS1EN2H10pLhQamYlTWNkofTx-u3K0NT5IfApCz-GVF2W4kiiwTrIQ9m9GcTR0pvpa58AMn265ukm6KCkt4SsJOdwi8BTB-Uo0pbMvvBgAUaeZDsZQHGJuT9fq2ixiYvhVCJ0VHxOEprD59XeMLWTod-Z-VHH1Ez_vd6A7xBohUMp3IoT3XI43tXPFIkxGspCVPkTg-0o_5IOzNRwT-PJfqjXPmsg9V3f0X4JDtuuipUdjyodYz4V5h5JIarmT_Tz8ppWVW_gmrDRrlqj_O3FUrpB8rZ4EstiQ9N3C5ZQr3T-N_ROH6gHZxdUq8sD7L4f-ubqv6jcuppWw_yYQ-5hOlP5w9pQG4rjTGxujhysHs5V9L9I2qQfJm0xjhvfGoCTK6sJyXiN1CdhvK_8ER4EbPrJUc0Trbd-0V-sqkK"></div>
+<p></p>
+<p>The golden rule is that <strong>the Model and the View never talk directly</strong>. Every communication between them is routed through the Controller: user → Controller → Model → Controller → View → user. In a responsive web application this loop repeats for <em>every</em> change, because the Controller is the main brain that routes traffic back and forth and controls how the user interacts with the application.</p>
+<p>Splitting a program this way keeps each part focused on one job. MDN calls this a <strong>"separation of concerns"</strong>:</p>
+<ul>
+<li>the Model deals with the <strong>data and its processing</strong>,</li>
+<li>the View deals with <strong>presentation</strong>: the styling and design of how the output of the logic reaches the user,</li>
+<li>the Controller <strong>routes</strong> the communication between them.</li>
+</ul>
+<blockquote>
+<p><strong>Note for Review — Pro-Tip:</strong> Exams love the question "which component talks to which?" Remember that the Model <em>notifies</em> the Controller (it does not push data to the View), and the Model and View have <strong>no direct link</strong>. In the original Smalltalk-style MVC the View may observe the Model directly; the web-style variant taught here sends everything through the Controller, so answer in that variant.</p>
+</blockquote>
+<hr>
+<h2 class="atx" id="the-model">The Model</h2>
+<p>The Model is the part of the program that actually does the work. In MDN's phrase, it is <strong>the workhorse</strong>.</p>
+<ul>
+<li><strong>Owns the data:</strong> in-memory objects, files, or records fetched from a database. Anything that is data in your application lives here.</li>
+<li><strong>Owns the rules:</strong> validation, calculations, and whatever logic defines <em>correct behavior</em>. The entire business logic is part of the Model.</li>
+<li>A well-built Model <strong>does not know or care how its data will be displayed, or by whom</strong>. It only deals with data and logic, and who presents the output in what format is none of its concern.</li>
+</ul>
+<p><strong>Shopping-cart illustration.</strong> In an app such as Amazon, Flipkart or Myntra, the Model knows <em>which items are in the cart</em> and <em>what they cost</em>. Each item has an associated price (data). Summing up the total, applying a coupon, and adding shipping charges are calculations (rules). All of it belongs to the Model. How the cart list is drawn on screen, whether with check boxes, radio buttons or anything else, is nothing the Model knows about.</p>
+<blockquote>
+<p><strong>Note for Review — Pro-Tip:</strong> Validation (for example "quantity must be at least 1") belongs to the <strong>Model</strong>, not to the Controller or the View. Remember that the Model defines what <em>correct</em> means.</p>
+</blockquote>
+<hr>
+<h2 class="atx" id="the-view-presentation-layer">The View: Presentation Layer</h2>
+<p>The View is responsible for <strong>one thing: showing the current state to the user</strong>. The current state is whatever the logic has produced around the data, and the View presents it.</p>
+<ul>
+<li><strong>Reads, never writes:</strong> a well-designed View displays data but does not change it directly. Changing data is the Model's job.</li>
+<li><strong>HTML shaped by CSS:</strong> on the web, the View is usually HTML shaped by CSS, the structure and style the browser renders. HTML provides the template, and CSS provides the styling flexibility to present the data in whatever fashion you want.</li>
+<li><strong>Passive by design:</strong> the View waits to be told what to display; it does not decide when to update itself.</li>
+<li><strong>Many Views, one Model:</strong> a mobile app screen and a web page can present the <strong>exact same Model</strong> without either one touching the other's code. Consider Amazon on an Android phone and Amazon in a browser: both draw from the same Model, but their Views differ greatly because of screen size, resolution and other factors we met in HTML and CSS.</li>
+</ul>
+<blockquote>
+<p><strong>Note for Review — Pro-Tip:</strong> "Passive" does not mean "useless". It means the View never initiates a change. An exam answer such as "the View updates itself when the data changes" is <strong>wrong</strong> in this architecture; the Controller tells it to update.</p>
+</blockquote>
+<hr>
+<h2 class="atx" id="the-controller">The Controller</h2>
+<p>The Controller is the <strong>go-between</strong>: it takes input from the user and decides what happens next.</p>
+<ul>
+<li><strong>Reads input:</strong> a click, a form submission, a keystroke.</li>
+<li><strong>Updates the Model:</strong> by calling its methods, <strong>never by reaching into its data directly</strong>. The scope of updating data belongs to the Model.</li>
+<li><strong>Updates the View:</strong> once the Model has changed, it tells the View what to display.</li>
+<li>The Controller <strong>does not implement business rules itself</strong> and <strong>does not decide how something looks</strong>. It only <strong>routes</strong>.</li>
+</ul>
+<p>Updating is a continuous process, not a one-time event. Suppose you add five items to a cart: every addition changes the Model, and every time the Controller tells the View to refresh. If you remove an item, the same loop runs again, so the screen always reflects the latest state. It is a very interactive process.  </p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Reads / Writes</th>
+<th>Must <strong>not</strong> know about</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Model</strong></td>
+<td>Reads and writes the data</td>
+<td>How the data is displayed, or by whom</td>
+</tr>
+<tr>
+<td><strong>View</strong></td>
+<td>Reads the data, never writes it</td>
+<td>Where the data came from</td>
+</tr>
+<tr>
+<td><strong>Controller</strong></td>
+<td>Calls Model methods, tells View what to show</td>
+<td>Business rules; how something looks</td>
+</tr>
+</tbody></table>
+<p></p>
+<hr>
+<h2 class="atx" id="worked-example-a-to-do-list">Worked Example: A To-Do List</h2>
+<p>Consider a simple task-management application, the kind that many of us use daily to remember what to do. Your phone almost certainly has one by default (a notes app) and you can install fancier ones that link to a calendar or email. Here we study the simplest version.</p>
+<p> The screen shows a heading, <strong>My to-do list</strong>, with a counter saying <em>2 of 5 tasks done</em>. Below it is a text box labelled "Add a new task" with an <strong>Add</strong> button. Under that is the list of tasks, each with a check box and a delete button: two are ticked and struck through (Buy milk, Submit assignment), and three are pending (Read chapter 5, Book dentist appointment, Reply to project email). Everything you <em>see</em> here is the <strong>View</strong>. Behind it, a data store keeps the list of tasks and a Boolean "done" flag for each one, which gets toggled when you tick a task. </p>
+<p></p>
+<div class="plantuml"><img src="https://www.plantuml.com/plantuml/svg/~1U5vza35F0a4GXVlz5KzizCp5n8J6689OqqYY1Lmni0EtiZjpsPqByk_DeHYry5MJl6--uasBKRO-HNVHPTebGgIZzeQIs4Z8cNOmnLhDDC67p1iBAiuD1yakCaPLDJ_2jFQA68fLrKhke5kCOLJs1Lw5LrBNTRsI9Hwz1q7uS6hHOCWIDwUY-URU6poKoQm_8eMuVxWjanFuArUU8njVhsJvYI_wTGe6AYNi9B7O-Uy7YGRFJ1wRbZhZZF4_LZIOgUxXMImK0tMT1h713FnrTd5O0LtMDzuOE568N-upEW8Lz06NhsqmNYJTitEYnkU1TOi-E6iPBu4FzyWiddF1eIM3jUoUL2nhZ9pHKIbS40pRh6beCLVFqR5u35BdfYo-J_43DJsSFW"></div>
+<p></p>
+<h3 class="atx" id="the-three-roles-in-this-app">The Three Roles in This App</h3>
+<table>
+<thead>
+<tr>
+<th>Role</th>
+<th>What it holds or does</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Model</strong></td>
+<td><code>tasks = [{text: "Buy milk", done: false}]</code>, plus the methods <code>addTask(text)</code> and <code>toggleTask(id)</code></td>
+</tr>
+<tr>
+<td><strong>View</strong></td>
+<td>Renders a <code>&lt;ul&gt;</code> with one <code>&lt;li&gt;</code> + checkbox per task in the array: <code>render(tasks)</code></td>
+</tr>
+<tr>
+<td><strong>Controller</strong></td>
+<td>Listens for the Add button and checkbox clicks; calls Model methods, then <code>View.render()</code></td>
+</tr>
+</tbody></table>
+<h3 class="atx" id="step-by-step-adding-andquotbuy-milkandquot">Step by Step: Adding "Buy milk"</h3>
+<p> The user types <strong>Buy milk</strong> and clicks <strong>Add</strong>. The Controller, which works as an <em>event handler</em> listening for the Add button and checkbox clicks, reads the input and calls <code>Model.addTask()</code>. Inside the Model the task is defined as a key–value pair (typically JSON-like): <code>text</code> is the key and "Buy milk" is the value, and <code>done</code> starts as <code>false</code> because a newly typed task is not done yet. The Model pushes the new task into its array. The Controller then calls <code>View.render(model.tasks)</code>, which is a status update saying "the data has changed, please present it accordingly". The View redraws the <code>&lt;ul&gt;</code> and "Buy milk" now appears in the list. </p>
+<p></p>
+<div class="plantuml"><img src="https://www.plantuml.com/plantuml/svg/~1U5vra45Bmq0GHk_xAyRsq8esj4bw4IcrHRpepIf2BcDtQ9PiTiFEB27_Nj8jQ0_Utc6-nsEsB1WajbRTT05FBOB5mKS1RadGeHBVWNZuzYA-1Mq27SLufzG8w4wMOBBAuC0KG8QE66QxE41hR3ExhzpHccF3yAJr1921Lp3zh8tGttcUmTux2TvQ2X08DOFK1CPrKKO7MilmvZNP3BL-HsxcjqcNm_JLd6hPsNYbBB9q3rtacfBEKG-2t5JEEF5WX053m26PYelf9H2vltNbLTsvfN8VXleiaDCKvkqvR3JpfQhyfsgTmJY4G3fWdweU3tVBPR7VH9leUVDGkTyNWlCzODSH1awXwulyYwprlLAyWiLY0vmhpXCLYej4fU8oqLgfBJaTM_i3zd6ahG"></div>
+<p></p>
+<h3 class="atx" id="which-decisions-live-where">Which Decisions Live Where</h3>
+<ul>
+<li><strong>The task text.</strong> In this app the user may type <em>any</em> text, because everybody's life is different. Another design could offer a drop-down menu with a finite set of tasks to choose from, or give every item a priority state such as <em>low</em> or <em>medium</em>. All of these choices (what data exists, what the user is allowed to do with it) are <strong>Model</strong> logic.</li>
+<li><strong>The data structure.</strong> The Model above uses an array, but it could use a list, a linked list or a database. Because the rest of the app only calls Model methods, this choice stays hidden.</li>
+<li><strong>The look.</strong> A check box for "done", the Add button on the right-hand side, the list layout: all of this is the <strong>View</strong>. The button could just as well have been placed elsewhere.</li>
+<li><strong>The routing.</strong> Listening for events and sequencing "update Model, then refresh View" is the <strong>Controller</strong>.</li>
+</ul>
+<blockquote>
+<p><strong>Same three roles as any MVC app. Only the data and the markup change with the domain.</strong></p>
+</blockquote>
+<hr>
+<h2 class="atx" id="real-world-example-online-shopping">Real-World Example: Online Shopping</h2>
+<p>Back to the hook: clicking <strong>Add to Cart</strong> on any shopping site fires all three roles at once. Compare the earlier to-do list, where the Model handled data and rules, the View handled presentation, and the Controller mediated. In every interaction the Model updates the data and the View presents it then and there, in a cycle.</p>
+<ul>
+<li><strong>The View</strong> is the product page itself: the photo, title, price, rating, and the button you clicked. It also shows the current state of the cart, such as a badge saying <em>Cart (2)</em>.</li>
+<li><strong>The Model</strong> is the store's database: how many are in stock, what this item costs, what is already in your cart (and other product data such as ratings).</li>
+<li><strong>The Controller</strong> is the code behind the button. It <strong>checks the Model</strong> (is the item in stock?), <strong>updates it</strong> (adds the item to the cart), and <strong>tells the View what changed</strong>. If no stock is available, the button can be disabled so the item cannot be added.</li>
+</ul>
+<p> In the diagram, the click on <strong>Add to Cart</strong> is the event that reaches the Controller. The Controller asks the Model to check the stock, the Model reports that the cart was updated, and the Controller finally tells the View to update the cart badge. The Model and View never exchange a message. Swap "shopping cart" for a <strong>playlist</strong> (a music player such as Spotify), an <strong>inbox</strong> or a <strong>timeline</strong>, and the same three-way split still applies. </p>
+<p></p>
+<div class="plantuml"><img src="https://www.plantuml.com/plantuml/svg/~1U5vraS5kr30GXkz-Yg4WqKPfH9T5Q7D0XGK1KWktLgZfmMiFYRMJSMHFjkgDX-09UH9aEofxuJRwnpF_Dxyle-WWyqZgsHHqFseW_UXdWJYYQDPA_0JYOUT5_0ZM1JJYF2kL2iqz8PnKrStNJxSjo80m1Mzd8p3f7gkguxidOV3Yxpk-TG49OuGlgEqqUCO8VtxzXc_UHOIjPeD4ZlkENxpTD9jDnslmF-4D9D9OmqMzUhM6eCLn7pk-W_VM9iAj3WBt9w0Z71m-mFChrm_o0udymp5iVdUwEkluTATjZsTv99V_dQcghMS9dWX3Ekex7xksO0Oq-mXHlDc3unp4jRT8TSVQsfW59pZMgM8G92hYJK8L3_DajM16CH9e8Vb0CoghHUzqp3ddfOdWuoAsJu5R5EqerWi5uG4f9d-s88EB40S_JHXUHZ0f0kDPa2Lcpp7jNKm_1qHMAeTuVlwkyBHmqO0XP_Q01sHHMKtjCjh2gYan57zLvAFvrqtnBPVQVmjAz2sicwLNFaEfIsGxZ_GNLyVbom"></div>
+<p></p>
+<blockquote>
+<p><strong>Same three roles as the abstract diagram.</strong> Model, View and Controller are just organised around a shopping cart instead of a to-do list.</p>
+</blockquote>
+<hr>
+<h2 class="atx" id="separation-of-concerns">Separation of Concerns</h2>
+<p>MVC is one instance of a bigger idea: <strong>separation of concerns</strong>, which means keeping each part of a system focused on a single job so that parts do not overlap or interfere with each other. Data and logic live in one place, presentation in another. Two properties describe how well this is done. </p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Meaning</th>
+<th>Goal</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Cohesion</strong></td>
+<td>Each component should serve one clear purpose</td>
+<td><strong>High</strong> cohesion inside each part</td>
+</tr>
+<tr>
+<td><strong>Coupling</strong></td>
+<td>Components should depend on each other as little as possible</td>
+<td><strong>Low</strong> coupling between parts</td>
+</tr>
+</tbody></table>
+<p> Cohesion does not mean the parts are unrelated. They are cohesive in the sense that they all serve one application's common purpose, while each keeps a non-overlapping scope. They cannot be completely independent, since the Controller connects them, but how you encode the scope of each box should not create dependencies between the boxes.</p>
+<h3 class="atx" id="why-it-pays-off">Why It Pays Off</h3>
+<p>When concerns are separated well, <strong>a change to how something looks should not force a change to how it is calculated</strong>. This is what gives you a scalable solution that survives growth from a small business to a very large enterprise, since complex logic can be encoded efficiently and each part can evolve alone.</p>
+<ul>
+<li>A <strong>designer can redesign</strong> the page's HTML and CSS, adopt new technology, change colours, add animation, or even move to a VR presentation, while a <strong>backend engineer rewrites a database query</strong>, <strong>on the same day, without stepping on each other</strong>.</li>
+<li>You can change the database technology: from a relational database to MongoDB, or adopt a graph database such as Neo4j, or an object database. You can deploy to a new server as the business grows. If concerns are separated, none of this changes anything in the presentation.</li>
+</ul>
+<blockquote>
+<p><strong>Note for Review — Pro-Tip:</strong> Memorise the pair as <strong>high cohesion, low coupling</strong>. A common wrong answer is "the parts must be completely independent". They cooperate, but they must not <em>depend on each other's internals</em>.</p>
+</blockquote>
+<hr>
+<h2 class="atx" id="frontend-and-backend">Frontend and Backend</h2>
+<p>MVC maps onto the client–server world, though not perfectly.</p>
+<ul>
+<li>The user has no direct control over the backend; the application logic and business rules run there.</li>
+<li>The two communicate over <strong>HTTP</strong>: the frontend <em>asks</em>, the backend <em>answers</em>.</li>
+<li>The mapping is not as straightforward as it looks: <strong>modern apps split some Controller logic across both</strong> sides. Depending on the scale and logic of your application, you decide how to divide work between client and server. </li>
+</ul>
+<table>
+<thead>
+<tr>
+<th></th>
+<th><strong>Frontend</strong></th>
+<th><strong>Backend</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Runs</strong></td>
+<td>In the browser</td>
+<td>On the server</td>
+</tr>
+<tr>
+<td><strong>Made of</strong></td>
+<td>HTML, CSS and JavaScript that the user directly sees and touches</td>
+<td>Application logic, business rules, and the database</td>
+</tr>
+<tr>
+<td><strong>MVC role</strong></td>
+<td>Roughly the <strong>View</strong></td>
+<td>Usually houses the <strong>Model</strong> and <strong>Controller</strong></td>
+</tr>
+<tr>
+<td><strong>Typical tools</strong></td>
+<td>Plain HTML, or a JavaScript framework like React</td>
+<td>Frameworks like Express, Django and Ruby on Rails</td>
+</tr>
+</tbody></table>
+<p></p>
+<hr>
+<h2 class="atx" id="the-browser-and-server-split">The Browser and Server Split</h2>
+<p> In the browser, <strong>HTML</strong> decides the structure, <strong>CSS</strong> deals with presentation, and <strong>JavaScript</strong> deals with behavior. Together they form the View, the presentation layer: what the user sees and interacts with directly. When any UI interaction occurs, an <strong>HTTP request</strong> goes to the server, and the Controller is the first interface it meets. The Controller in turn invokes the Model, which means the application logic and the database, where business rules and data are held. Finally, with the Controller's help, the View is updated through the <strong>HTTP response</strong>. The server decides what the data means and keeps it safe. Because the presentation layer and the data/business-logic layer sit on different sides of this boundary, <strong>they can change independently</strong>. </p>
+<p></p>
+<div class="plantuml"><img src="https://www.plantuml.com/plantuml/svg/~1U5vjaarlr40CXk_pAyps0gfMt3bKfKLGeLP2sXK8aHwS6PDCE_44szceGltlQ9AmR55k8_jz_V5uBjLGREYIUzKBDXr2mgSy66X7XepESW-MeSvckOCGXRp5pCwL1tAJ23PNaaSbWTSV9RCHXpSRG8Lw2P_TngQrxvHI7k6t0pYntkplRYjMay7R83JvMkiId7rhez5ByVLkLt4lfCI6POf9xbLNrP_nW3iliRUAQshn4BDCXeTrlRK4NoEDy1PEUnGW91MFBHeKpL1MLI85v51nP2D1RmfZj7OXb9wcJeV9-tUwvnVGTYI7mkmA_UCHcSx1cTWd8UB_WRtl-nJzj3sat4HVyLqEbE0ShZERv9H8mESmivma__04DAnH2JOVbbV5FOb6DMA3aWQrBDZCzb2legq7ZKog84CYXVFPYDwJQiM1V0oaS2GsPJj2regH0pmIzGhHGF7dt6UkizpysRdf2sn_j344ulljnKBIbLklX1zMe_Fkf_AfZGlrIj2L6jkB1TWxkDdllu3Ghu7Kt3nUIIyNFUQrpwpat2Ln6Bhq1nKn9Wm"></div>
+<p></p>
+<hr>
+<h2 class="atx" id="mvc-in-a-real-framework">MVC in a Real Framework</h2>
+<p>Real frameworks implement the same split, just under different names. Our to-do app looks like this in a typical Python web framework:</p>
+<table>
+<thead>
+<tr>
+<th>MVC role</th>
+<th>File</th>
+<th>What it is</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Model</strong></td>
+<td><code>models.py</code></td>
+<td>A data class</td>
+</tr>
+<tr>
+<td><strong>Controller</strong></td>
+<td><code>routes.py</code></td>
+<td>A route handler</td>
+</tr>
+<tr>
+<td><strong>View</strong></td>
+<td><code>tasks.html</code></td>
+<td>A template</td>
+</tr>
+</tbody></table>
+<p> <strong><code>models.py</code> is the Model.</strong> It defines what a task <em>is</em>: a <code>Task</code> class with a <code>text</code> field (a character field) and a <code>done</code> field (a Boolean that defaults to <code>False</code>). It talks only about data and the rules for the data, and nothing about screens or clicks. </p>
+<p></p>
+<pre><code class="fenced-code-block language-python"><span class="token keyword">class</span> <span class="token class-name">Task</span><span class="token punctuation">(</span>Model<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    text <span class="token operator">=</span> CharField<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    done <span class="token operator">=</span> BooleanField<span class="token punctuation">(</span>default<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">)</span></code></pre>
+<p></p>
+<p> <strong><code>routes.py</code> is the Controller.</strong> The decorator <code>@app.route("/tasks/add")</code> ties a URL path to the function <code>add_task</code>. The handler reads the submitted text from the request form, calls the Model's <code>Task.create(...)</code> to store it, and then asks the framework to render <code>tasks.html</code>. It decides <em>when</em> to call the Model and <em>which</em> View to show; it does not implement the rules or the look itself. </p>
+<p></p>
+<pre><code class="fenced-code-block language-python"><span class="token decorator annotation punctuation">@app<span class="token punctuation">.</span>route</span><span class="token punctuation">(</span><span class="token string">"/tasks/add"</span><span class="token punctuation">)</span>
+<span class="token keyword">def</span> <span class="token function">add_task</span><span class="token punctuation">(</span>request<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    Task<span class="token punctuation">.</span>create<span class="token punctuation">(</span>text<span class="token operator">=</span>request<span class="token punctuation">.</span>form<span class="token punctuation">[</span><span class="token string">"text"</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+    <span class="token keyword">return</span> render<span class="token punctuation">(</span><span class="token string">"tasks.html"</span><span class="token punctuation">)</span></code></pre>
+<p></p>
+<p> <strong><code>tasks.html</code> is the View.</strong> It is a template: a <code>&lt;ul&gt;</code> list in which the loop <code>{% for t in tasks %}</code> produces one <code>&lt;li&gt;</code> per task, and <code>{{ t.text }}</code> is a placeholder filled with the task's text. It only displays what it is handed. </p>
+<p></p>
+<pre><code class="fenced-code-block language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span><span class="token punctuation">&gt;</span></span>
+{% for t in tasks %}
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">&gt;</span></span>{{ t.text }}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+{% endfor %}
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ul</span><span class="token punctuation">&gt;</span></span></code></pre>
+<p></p>
+<p>Most frameworks never say "Model", "View" or "Controller" out loud, <strong>but the split is there</strong>: a <strong>data class</strong>, a <strong>route handler</strong>, and a <strong>template</strong>.</p>
+<blockquote>
+<p><strong>Note for Review — Pro-Tip:</strong> Naming can mislead you. Django, for example, calls its pieces <em>Model–Template–View</em>, and its function called a "view" plays the role of the <strong>Controller</strong>. Always identify a component by the <em>job it does</em>, not by its name.</p>
+</blockquote>
+<hr>
+<h2 class="atx" id="workflow-of-a-modern-web-application">Workflow of a Modern Web Application</h2>
+<p>Every dynamic page load is a <strong>short conversation between the browser and one or more servers</strong>. A <em>dynamic</em> page is one that interacts with the user and changes to reflect updates. "One or more" servers, because for scalability and fault tolerance, big players such as Amazon and Google do not keep all data on one server.</p>
+<ul>
+<li><strong>It starts with a request:</strong> the browser sends an HTTP request for a URL, often carrying query parameters or form data.</li>
+<li><strong>The server decides what's dynamic:</strong> it hands the request to the web application rather than just returning a file. Not everything is dynamic: the page template stays the same, and only the parts that depend on the current state of the data are computed by the logic.</li>
+<li><strong>The application does the work:</strong> querying a database if needed, then merging the results into an HTML template.</li>
+<li><strong>The response comes back:</strong> as HTML, with a status code, <strong>200</strong> for success and <strong>404</strong> if nothing matched.</li>
+<li><strong>The browser then requests any CSS or JavaScript</strong> the HTML references, usually served as <strong>static files</strong>.</li>
+</ul>
+<hr>
+<h2 class="atx" id="anatomy-of-a-request">Anatomy of a Request</h2>
+<p> Here the architecture is split across four separate actors, not one server: the <strong>web server</strong>, the <strong>web application</strong> (which is effectively the Controller and Model), and the <strong>database</strong>. The browser sends a GET request, the web server recognises that it is dynamic and forwards it to the application, and only the Model part of the application touches the database. A <em>read</em> operation fetches information (for example, which book); a <em>write</em> operation updates it (for example, a cart update). The data is merged into an HTML template, the finished page returns with its status code, and the browser parses it and asks for the linked CSS and JS. </p>
+<p></p>
+<div class="plantuml"><img src="https://www.plantuml.com/plantuml/svg/~1U5vTaLrB6q4KXk_dLxoDDqfrJTFOba1RgorAKH0IaCBUp6RE9eEpvwndPbtoxsKs6v7U3SFpdFTyNCPaDNLDC1zQjPl68jYTT0cneMJPcYGjag2IbAI1yqhhv8MDoG_Bcq2ONAdqaNG26r4fZkxyPfl-KGZIlySUgSAIz6Ka-uYZnwrFj6paYVu7VxLjy6kRiqe-lXPEAY6GuYFknL4u6T9isuvnLw4ZusoobOs4oU_nDL2k6g4R9M9ZAiNPsG_q4GjyAd3pPuNpLgNsWNvwztq-A_duThLwWD9pHp6Tc3uEHevRO5R0xTWsVdq0Igv5UwkEN5vMsb96JSQpvYeiyBd0SqUwGosQYPAPA0jAQr4NZQlUPSoBmp-KKgTCxgtSqFUN0hLd7xVaSBkwlpkqF9jEJo6A-NGENuCbePQEtTiCbMA1hyKWmL7mBwJaIXxxhlQtD8Ob4JHV4bAFaryKo2j6GxeX1yz9IhQyhvMeQODDj3S3rOCun7qhCDP5QpLI78pJaiS5HmJFJ-HmlLoU_rqQSqdikYQy0cp8tXW"></div>
+<p></p>
+<table>
+<thead>
+<tr>
+<th>Step</th>
+<th>What happens</th>
+<th>MVC link</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>Browser sends <code>GET /profile?id=42</code> (HTTP request)</td>
+<td>User action reaches the system</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Dynamic request is forwarded to the app</td>
+<td>Hand-off to the Controller</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Application queries the database for the needed records</td>
+<td>Model accesses data</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Records are returned</td>
+<td>Model result</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Data is merged into an HTML template</td>
+<td>Controller and Model cooperate; View template is filled</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Finished HTML returns (HTTP 200, or 404 if not found)</td>
+<td>Response status chosen</td>
+</tr>
+<tr>
+<td>7</td>
+<td>HTML is delivered to the browser</td>
+<td>View reaches the user's side</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Browser parses the HTML and requests linked CSS/JS</td>
+<td>Assets fetched</td>
+</tr>
+</tbody></table>
+<p><strong>Static files</strong> (CSS, JS, images) are typically served directly by the web server, <strong>without touching the app or the database</strong>.</p>
+<hr>
+<h2 class="atx" id="practical-example-tracing-a-request">Practical Example: Tracing a Request</h2>
+<p>Say a student clicks <strong>View Profile</strong> on a course portal. Here is what happens in under a second:</p>
+<ul>
+<li><strong>Request:</strong> the browser sends <code>GET /profile?id=42</code>.</li>
+<li><strong>Routing:</strong> the web server sees that this is not a static file and hands it to the web application.</li>
+<li><strong>Data:</strong> the application looks up student 42 in the database and merges the record into a template.</li>
+<li><strong>Response:</strong> the finished HTML comes back with a <strong>200 OK</strong>, and the browser renders it.</li>
+<li><strong>Assets:</strong> the page then requests <code>style.css</code> and <code>profile.js</code>, served directly by the web server.</li>
+<li><strong>If the student does not exist:</strong> had student 42 not existed, the application would send back a <strong>404 page</strong> instead of a profile.</li>
+</ul>
+<blockquote>
+<p><strong>Before you code:</strong> first think through the workflow, then segregate the concerns. Decide where the View, Model and Controller will reside. You may keep the Model and Controller on the server and only the View in the client, or keep some Controller logic in the client itself. This is a design decision to take <em>before</em> implementation, so take an example (for an assignment or project) and practise separating its concerns and modelling its workflow first.</p>
+</blockquote>
+<hr>
+<h2 class="atx" id="discussion-alternatives-trends-and-limits">Discussion: Alternatives, Trends and Limits</h2>
+<h3 class="atx" id="other-alternatives">Other Alternatives</h3>
+<p>MVC is not the only option. Several architectures can work as alternatives or complements.</p>
+<table>
+<thead>
+<tr>
+<th>Alternative</th>
+<th>Side</th>
+<th>Idea</th>
+<th>Where you see it</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>MVVM</strong> (Model–View–ViewModel)</td>
+<td>Client</td>
+<td>The Controller is replaced by a ViewModel; aims for a thin, "dumb" presentation layer that just presents what it is given</td>
+<td>Vue, Angular</td>
+</tr>
+<tr>
+<td><strong>MVP</strong> (Model–View–Presenter)</td>
+<td>Client</td>
+<td>Similar to View plus Presenter; earlier Android apps used it</td>
+<td>Desktop GUI frameworks</td>
+</tr>
+<tr>
+<td><strong>Component-based architecture</strong></td>
+<td>Client</td>
+<td>The app is broken into disjoint components; each owns its own slice of Model, View and update logic (a mini-MVC inside each)</td>
+<td>React</td>
+</tr>
+<tr>
+<td><strong>MVI</strong> (Model–View–Intent)</td>
+<td>Client</td>
+<td>The "Intent" models how the user interacts with UI elements and replaces the Controller's role</td>
+<td>Android and reactive JS codebases</td>
+</tr>
+<tr>
+<td><strong>Microservices</strong></td>
+<td>Server</td>
+<td>Many small services, each offering one specific function and interacting via APIs, often coordinated behind an <strong>API gateway</strong></td>
+<td>Large-scale back ends</td>
+</tr>
+<tr>
+<td><strong>Clean Architecture</strong> and <strong>Hexagonal Architecture</strong> (ports and adapters)</td>
+<td>Server</td>
+<td>Used within a single microservice to keep its core logic isolated</td>
+<td>Newer service designs</td>
+</tr>
+<tr>
+<td><strong>CQRS</strong> (Command Query Responsibility Segregation)</td>
+<td>Server</td>
+<td>Separates commands (writes) from queries (reads)</td>
+<td>Selected high-scale systems</td>
+</tr>
+</tbody></table>
+<h3 class="atx" id="where-things-are-heading">Where Things Are Heading</h3>
+<p><strong>React Server Components</strong>, <strong>API-first</strong> and <strong>serverless</strong> architectures, and <strong>event-driven</strong> architectures. This does <strong>not</strong> make MVC obsolete: it is still very much present and dominant in web applications. These are simply current trends in how the View and the Model/logic are segregated.</p>
+<h3 class="atx" id="limitations-of-mvc">Limitations of MVC</h3>
+<ul>
+<li><strong>The Controller tends to become a dumping ground.</strong> All back-and-forth traffic between Model and View passes through it, which creates heavy overhead and pressure on it. This is one reason event-driven and serverless styles are gaining ground.</li>
+<li><strong>It adds real overhead for small applications</strong>, where the separation is not earning its keep.</li>
+<li><strong>It does not map cleanly onto highly interactive, reactive UIs.</strong> Routing every communication through the Controller adds latency, which hurts responsiveness in such setups.</li>
+</ul>
+<blockquote>
+<p><strong>Note for Review — Pro-Tip:</strong> If asked "when is MVC a <em>bad</em> choice?", answer with the trade-off: separation costs overhead, so it is worth it as an application grows and is a poor fit for tiny apps and highly reactive UIs.</p>
+</blockquote>
+<hr>
+<h2 class="atx" id="recap">Recap</h2>
+<ul>
+<li>MVC splits an application into a <strong>Model (data + rules)</strong>, a <strong>View (display)</strong>, and a <strong>Controller (routes input to the other two)</strong>.</li>
+<li>Keeping these three separate is <strong>separation of concerns</strong>: <strong>high cohesion within each part, low coupling between them</strong>.</li>
+<li>On the web, the frontend (HTML/CSS/JS in the browser) is mostly the <strong>View</strong>; the backend (server + database) usually holds the <strong>Model</strong> and much of the <strong>Controller</strong>. How you divide them depends on your application's scale and logic.</li>
+<li>A dynamic request is a conversation: browser to server, server to application, application to database, and back again as an HTML response.</li>
+<li>Most real frameworks such as Django, Rails and Express implement this pattern even when they never say "Model", "View" or "Controller" out loud, because it is deeply rooted in their architectural philosophy.</li>
+</ul>
+<hr>
+<h2 class="atx" id="practice-questions">Practice Questions</h2>
+<ol>
+<li><p><strong>The greyed-out button.</strong> An online store adds this requirement: *"An item with zero stock cannot be added to the cart, and its Add to Cart button must look greyed out."* Break the requirement into its parts and assign each part to Model, View or Controller. Then explain what would go wrong later if the stock check were written only inside the page's JavaScript, once the company also launches a mobile app on the same data.</p>
+</li>
+<li><p><strong>The 2,000-line Controller.</strong> A teammate's controller file contains coupon calculations, hand-built HTML strings, and database queries. Diagnose which principles (cohesion, coupling, the roles of Model and View) are violated. Describe how you would refactor it, and name two concrete benefits the team would see on the day a designer redesigns the page <em>and</em> a database engineer changes the storage technology.</p>
+</li>
+<li><p><strong>Tracing the failure.</strong> A browser requests <code>GET /profile?id=9999</code>, a student who does not exist. Walk through every component the request touches, say which one decides that the answer is a 404, and say whether the database is involved. Then, if the page's stylesheet link is broken, explain which component answers the CSS request and whether the application or database is involved. What would still work if the application crashed but the web server stayed alive?</p>
+</li>
+<li><p><strong>Live whiteboard.</strong> You are building a collaborative whiteboard where every pen stroke must appear on all users' screens almost instantly. Argue whether strict Controller-mediated MVC (View → Controller → Model → Controller → View for each stroke) is a good fit. Identify which stated limitation matters most, then choose one alternative architecture from this chapter and justify what it gives you and what you would give up.</p>
+</li>
+<li><p><strong>Swapping the foundations.</strong> A company moves from a relational database to a graph database and, at the same time, adds a VR front end alongside its web site. Which parts of the application should need <em>no</em> changes, if the concerns were separated well? What interface between the layers must stay stable for this to work? Give one realistic mistake (such as database logic leaking into a template) that would force changes on both sides, and explain why it breaks low coupling.</p>
+</li>
+</ol>
+</article>
+</body>
+</html>

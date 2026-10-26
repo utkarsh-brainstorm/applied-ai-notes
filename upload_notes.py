@@ -7,12 +7,15 @@ BS Applied AI & Data Science
 import os
 import sys
 import re
+import time
 import json
 import shutil
 import argparse
 import subprocess
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+INDEX_HTML = os.path.join(BASE_DIR, 'index.html')
+BS_HTML = os.path.join(BASE_DIR, 'BS Applied AI & Data Science.html')
 CURRICULUM_JSON = os.path.join(BASE_DIR, 'curriculum.json')
 CURRICULUM_JS = os.path.join(BASE_DIR, 'curriculum.js')
 CURRICULUM_JS_FILES = os.path.join(BASE_DIR, 'BS Applied AI & Data Science_files', 'curriculum.js')
